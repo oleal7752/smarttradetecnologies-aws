@@ -1,0 +1,123 @@
+Propuesta Ejecutiva: Plataforma Profesional de Simulación y Entrenamiento para Trading Binario en Tiempo Real
+Resumen Ejecutivo
+Proponemos el desarrollo de una plataforma innovadora y motivacional para entrenamiento y simulación de trading binario, orientada a usuarios que desean practicar, mejorar su psicotrading y prepararse para operar con brokers reales. La solución estará conectada en tiempo real a fuentes de mercado (MT5 y derivados), permitiendo operar con señales vivas, gestionar riesgos, practicar estrategias con Gales (martingala) y recibir coaching personalizado de IA.
+
+Objetivo y Descripción General
+El objetivo es ofrecer un entorno de simulación realista y profesional, donde los usuarios puedan:
+
+Practicar operaciones binarias (M5) con señales en tiempo real, usando datos de mercado reales.
+Elegir entre modo manual (deciden si operar cada señal) o automático (el sistema ejecuta según la estrategia).
+Gestionar su riesgo y psicotrading mediante límites diarios configurables y feedback motivacional.
+Analizar su desempeño con métricas avanzadas, historial detallado, ranking y exportación de datos.
+Recibir orientación de un coach IA que adapta mensajes y consejos según el historial y estado emocional del usuario.
+Prepararse para operar en brokers reales, con la opción de copiar manualmente las señales o, a futuro, integración por API.
+Flujo de Usuario Propuesto
+Registro y Autenticación
+
+Registro con email/usuario (integración Google y validación de correo en versiones avanzadas).
+Recuperación de contraseña y validación de identidad.
+Opción de cuenta demo (saldo $10,000 simulado) y cuenta real-simulada (depósito simulado por el usuario).
+Configuración Inicial
+
+Definir balance, límites de pérdida/ganancia diaria, monto por operación, número máximo de Gales.
+Escoge modo de operación: Manual (el usuario decide) o Automático (el sistema opera según configuración).
+Pantalla Principal
+
+Gráfico real de velas M5 con señales vivas (triángulos de compra/venta) y cronómetro regresivo para la próxima entrada.
+Panel de operaciones abiertas y recientes.
+Panel de señales pasadas (“Si hubieras operado todas...”).
+Estadísticas en tiempo real: ganancias, pérdidas, % acierto, drawdown, gales usados, etc.
+Panel de psicotrading: progreso a meta, estado emocional, mensajes motivacionales IA.
+Interacción con Señales
+
+El usuario puede aceptar o ignorar la señal (en manual) o dejar que el sistema opere (en automático).
+El sistema calcula y ejecuta la progresión de gales (hasta el máximo permitido) según resultado de la operación.
+Si se alcanza el límite diario, el sistema bloquea (auto) u ofrece advertencia (manual).
+Feedback y Motivación
+
+Mensajes animados, sonidos, popups y voz (futuro) para nuevas señales, operaciones ganadas/perdidas, logros y metas.
+Coach IA que adapta su discurso según el rendimiento y emociones detectadas.
+Historial y Ranking
+
+Registro de operaciones tomadas y no tomadas, gales usados, balance diario/semanal/mensual.
+Ranking público/privado entre usuarios (el usuario decide visibilidad).
+Opción de exportar historial en CSV, PDF, etc.
+Reset del simulador con advertencia de pérdida de historial.
+Configuraciones
+
+Cambiar nombre, idioma, límites, voz, modo de notificaciones.
+Alcance y Beneficios
+Alcance
+Multiusuario, escalable, con paneles y módulos independientes.
+API para integración futura con brokers.
+Sistema de entrenamiento y motivación adaptable a cualquier perfil de usuario.
+Compatible con dispositivos de escritorio y móviles.
+Arquitectura modular para añadir funcionalidades futuras (voz, IA avanzada, integración brokers, badges, etc).
+Beneficios
+Plataforma única en el mercado hispano (y global) que combina entrenamiento técnico, gestión emocional y simulación realista.
+Mejora la disciplina y psicotrading del usuario, reduciendo pérdidas por emociones y sobreoperación.
+Fomenta la confianza y la preparación antes de invertir en real.
+Permite comparar estrategias y progresos entre usuarios, estimulando la competencia sana.
+Facilita el onboarding de nuevos traders para brokers asociados.
+Análisis de Mercado y Diferenciación
+Existen simuladores básicos y plataformas educativas, pero no hay soluciones que combinen:
+Operativa en tiempo real con datos de mercado reales y señales automáticas/manuales.
+Gestión de gales en simulación adaptativa.
+Psicotrading con feedback motivacional y coach IA.
+Ranking, historial detallado y exportación profesional de datos.
+Paneles de glassmorphism/3D para una experiencia UI moderna y atractiva.
+Ventajas: Diferenciación por experiencia de usuario, motivación, profundidad analítica y realismo.
+Desventajas: Requiere integración y mantenimiento de fuentes de datos reales, desarrollo de IA coach y control de multiusuario seguro.
+Arquitectura Técnica Sugerida
+Frontend
+Framework: React.js (recomendado por escalabilidad, pero viable con Vue.js/Angular si se prefiere).
+Diseño/UI: Glassmorphism + 3D (TailwindCSS, Styled Components o CSS puro).
+Gráficos: TradingView Lightweight Charts o ApexCharts.
+Websockets: Para recibir señales y datos en tiempo real.
+Animaciones y sonido: Lottie, Howler.js, Web Speech API (futuro para voz).
+Backend
+Lenguaje: Python (FastAPI o Flask para API REST y websockets), Node.js (alternativa).
+Base de Datos: PostgreSQL (recomendada), MySQL o MongoDB (alternativas).
+Módulos:
+Usuarios (autenticación, configuración, privacidad)
+Señales y cálculo de gales (motor estratégico)
+Gestión de balance (simulado y demo/real)
+Historial y estadísticas (operaciones, gales, drawdown, etc)
+Ranking y logros
+Notificaciones y eventos
+Exportación de datos
+IA Coach (módulo propio, adaptable a servicios externos)
+Integraciones:
+MT5: Recepción de datos en tiempo real (API propia).
+Brokers: API para integración futura.
+Infraestructura:
+Despliegue en cloud (AWS/GCP/Azure, o DigitalOcean).
+Escalabilidad horizontal (Docker/Kubernetes).
+Seguridad y privacidad de datos (GDPR/LOPD compliance).
+Flujo General de Funcionamiento
+El usuario inicia sesión y configura sus parámetros (balance, riesgo, gales, modo).
+El sistema recibe datos y señales del backend (vía websocket o polling).
+Se muestran las señales y el usuario interactúa (manual o automático).
+El motor de gales y balance simulado calcula resultados y actualiza el historial.
+El panel de psicotrading y el coach IA ofrecen feedback personalizado.
+El usuario puede consultar estadísticas, ranking, exportar datos o resetear el simulador.
+(Futuro) El usuario podrá copiar operaciones a broker real con un clic.
+Conclusión
+La solución propuesta es disruptiva para el sector de trading binario y formación financiera, integrando entrenamiento técnico, gestión emocional y experiencia de usuario gamificada.
+El enfoque motivacional y la gestión de riesgo en ambiente simulado preparan al usuario para el éxito en real, diferenciándose ampliamente de lo que existe hoy en el mercado.
+
+Recomendamos avanzar con la Fase MVP y testeo cerrado con usuarios clave, asegurando flexibilidad para escalar y adaptarse a integraciones futuras.
+
+Prompt Técnico para Desarrollo
+Crea una plataforma web de simulación y entrenamiento para trading binario en tiempo real, multiusuario, con las siguientes características:
+
+Frontend: React.js, TailwindCSS (o Styled Components), TradingView Lightweight Charts, Websockets, animaciones y glassmorphism.
+Backend: Python (FastAPI preferido), PostgreSQL, Websockets, autentificación básica por email/usuario, módulos para usuarios, señales, motor de gales, historial, ranking y estadísticas.
+IA Coach: Módulo adaptable con feedback motivacional basado en el historial y resultados diarios del usuario.
+Funcionalidad: Registro/login, configuración de balance y riesgo, modo manual/automático, simulador de operaciones con cálculo de gales, panel de señales en vivo, estadísticas, historial, ranking, exportación de datos, y reset de simulador.
+Integración: MT5 como fuente de datos y señales reales, arquitectura preparada para integración futura con brokers reales vía API.
+Escalabilidad: Despliegue en Docker/Kubernetes, cloud-ready, privacidad y cumplimiento legal.
+Requisitos clave: Experiencia UI moderna y motivacional, gestión estricta de gales y riesgo, soporte para multiusuario, enfoque en psicotrading, y paneles motivadores con feedback inmediato.
+
+¿Listo para presentar a inversores o para comenzar el MVP?
+¿Deseas wireframes visuales, roadmap o desglose de costos/recursos?

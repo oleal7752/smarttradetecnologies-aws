@@ -1,0 +1,289 @@
+The source list for the Content Security Policy directive 'default-src' contains an invalid source: ''unsafe-dynamic''. It will be ignored.
+The source list for the Content Security Policy directive 'default-src' contains an invalid source: ''unsafe-dynamic''. It will be ignored.
+The source list for the Content Security Policy directive 'default-src' contains an invalid source: ''unsafe-dynamic''. It will be ignored.
+The source list for the Content Security Policy directive 'default-src' contains an invalid source: ''unsafe-dynamic''. It will be ignored.
+The source list for the Content Security Policy directive 'default-src' contains an invalid source: ''unsafe-dynamic''. It will be ignored.
+The source list for the Content Security Policy directive 'default-src' contains an invalid source: ''unsafe-dynamic''. It will be ignored.
+The source list for the Content Security Policy directive 'default-src' contains an invalid source: ''unsafe-dynamic''. It will be ignored.
+The source list for the Content Security Policy directive 'default-src' contains an invalid source: ''unsafe-dynamic''. It will be ignored.
+The source list for the Content Security Policy directive 'default-src' contains an invalid source: ''unsafe-dynamic''. It will be ignored.
+The source list for the Content Security Policy directive 'default-src' contains an invalid source: ''unsafe-dynamic''. It will be ignored.
+The Content-Security-Policy directive 'default-src' contains 'report-uri' as a source expression. Did you want to add it as a directive and forget a semicolon?
+The Content-Security-Policy directive 'default-src' contains 'report-uri' as a source expression. Did you want to add it as a directive and forget a semicolon?
+The Content-Security-Policy directive 'default-src' contains 'report-uri' as a source expression. Did you want to add it as a directive and forget a semicolon?
+The Content-Security-Policy directive 'default-src' contains 'report-uri' as a source expression. Did you want to add it as a directive and forget a semicolon?
+The Content-Security-Policy directive 'default-src' contains 'report-uri' as a source expression. Did you want to add it as a directive and forget a semicolon?
+The Content-Security-Policy directive 'default-src' contains 'report-uri' as a source expression. Did you want to add it as a directive and forget a semicolon?
+The Content-Security-Policy directive 'default-src' contains 'report-uri' as a source expression. Did you want to add it as a directive and forget a semicolon?
+The Content-Security-Policy directive 'default-src' contains 'report-uri' as a source expression. Did you want to add it as a directive and forget a semicolon?
+The Content-Security-Policy directive 'default-src' contains 'report-uri' as a source expression. Did you want to add it as a directive and forget a semicolon?
+The Content-Security-Policy directive 'default-src' contains 'report-uri' as a source expression. Did you want to add it as a directive and forget a semicolon?
+The source list for Content Security Policy directive 'default-src' contains a source with an invalid path: '/api/4509669501698048/security/?sentry_key=7eb3d90eb4660416caf507087367e67e'. The query component, including the '?', will be ignored.
+The source list for Content Security Policy directive 'default-src' contains a source with an invalid path: '/api/4509669501698048/security/?sentry_key=7eb3d90eb4660416caf507087367e67e'. The query component, including the '?', will be ignored.
+The source list for Content Security Policy directive 'default-src' contains a source with an invalid path: '/api/4509669501698048/security/?sentry_key=7eb3d90eb4660416caf507087367e67e'. The query component, including the '?', will be ignored.
+The source list for Content Security Policy directive 'default-src' contains a source with an invalid path: '/api/4509669501698048/security/?sentry_key=7eb3d90eb4660416caf507087367e67e'. The query component, including the '?', will be ignored.
+The source list for Content Security Policy directive 'default-src' contains a source with an invalid path: '/api/4509669501698048/security/?sentry_key=7eb3d90eb4660416caf507087367e67e'. The query component, including the '?', will be ignored.
+The source list for Content Security Policy directive 'default-src' contains a source with an invalid path: '/api/4509669501698048/security/?sentry_key=7eb3d90eb4660416caf507087367e67e'. The query component, including the '?', will be ignored.
+The source list for Content Security Policy directive 'default-src' contains a source with an invalid path: '/api/4509669501698048/security/?sentry_key=7eb3d90eb4660416caf507087367e67e'. The query component, including the '?', will be ignored.
+The source list for Content Security Policy directive 'default-src' contains a source with an invalid path: '/api/4509669501698048/security/?sentry_key=7eb3d90eb4660416caf507087367e67e'. The query component, including the '?', will be ignored.
+The source list for Content Security Policy directive 'default-src' contains a source with an invalid path: '/api/4509669501698048/security/?sentry_key=7eb3d90eb4660416caf507087367e67e'. The query component, including the '?', will be ignored.
+The source list for Content Security Policy directive 'default-src' contains a source with an invalid path: '/api/4509669501698048/security/?sentry_key=7eb3d90eb4660416caf507087367e67e'. The query component, including the '?', will be ignored.
+The source list for the Content Security Policy directive 'default-src' contains an invalid source: ''unsafe-dynamic''. It will be ignored.
+The Content-Security-Policy directive 'default-src' contains 'report-uri' as a source expression. Did you want to add it as a directive and forget a semicolon?
+The source list for Content Security Policy directive 'default-src' contains a source with an invalid path: '/api/4509669501698048/security/?sentry_key=7eb3d90eb4660416caf507087367e67e'. The query component, including the '?', will be ignored.
+SmartTradeAcademy:1 The source list for the Content Security Policy directive 'default-src' contains an invalid source: ''unsafe-dynamic''. It will be ignored.
+SmartTradeAcademy:1 The Content-Security-Policy directive 'default-src' contains 'report-uri' as a source expression. Did you want to add it as a directive and forget a semicolon?
+SmartTradeAcademy:1 The source list for Content Security Policy directive 'default-src' contains a source with an invalid path: '/api/4509669501698048/security/?sentry_key=7eb3d90eb4660416caf507087367e67e'. The query component, including the '?', will be ignored.
+_app-8703c078616db858.js:34 
+      /////////////////////
+   ///////////////////////////
+  ////////@@@@@@@//////////////
+  ////////@@@@@@@//////////////
+  ////////@@@@@@@//////////////        Curious and driven?
+  ///////////////@@@@@@@///////        Work with us!
+  ///////////////@@@@@@@///////
+  ///////////////@@@@@@@///////        https://join.replit.com/hack.with.us
+  ////////@@@@@@@//////////////
+  ////////@@@@@@@//////////////
+  ////////@@@@@@#//////////////
+   ///////////////////////////
+      /////////////////////
+      
+_app-8703c078616db858.js:34 [LaunchDarkly] LaunchDarkly client initialized
+framework-3abd175b6916fd8c.js:1 Error while parsing the 'sandbox' attribute: 'allow-downloads-without-user-activation' is an invalid sandbox flag.
+_ @ framework-3abd175b6916fd8c.js:1
+(anonymous) @ framework-3abd175b6916fd8c.js:1
+uD @ framework-3abd175b6916fd8c.js:1
+uI @ framework-3abd175b6916fd8c.js:1
+uM @ framework-3abd175b6916fd8c.js:1
+uS @ framework-3abd175b6916fd8c.js:1
+C @ framework-3abd175b6916fd8c.js:1
+z @ framework-3abd175b6916fd8c.js:1
+framework-3abd175b6916fd8c.js:1 Unrecognized feature: 'ambient-light-sensor'.
+_ @ framework-3abd175b6916fd8c.js:1
+(anonymous) @ framework-3abd175b6916fd8c.js:1
+uD @ framework-3abd175b6916fd8c.js:1
+uI @ framework-3abd175b6916fd8c.js:1
+uM @ framework-3abd175b6916fd8c.js:1
+uS @ framework-3abd175b6916fd8c.js:1
+C @ framework-3abd175b6916fd8c.js:1
+z @ framework-3abd175b6916fd8c.js:1
+framework-3abd175b6916fd8c.js:1 Unrecognized feature: 'battery'.
+_ @ framework-3abd175b6916fd8c.js:1
+(anonymous) @ framework-3abd175b6916fd8c.js:1
+uD @ framework-3abd175b6916fd8c.js:1
+uI @ framework-3abd175b6916fd8c.js:1
+uM @ framework-3abd175b6916fd8c.js:1
+uS @ framework-3abd175b6916fd8c.js:1
+C @ framework-3abd175b6916fd8c.js:1
+z @ framework-3abd175b6916fd8c.js:1
+framework-3abd175b6916fd8c.js:1 Unrecognized feature: 'execution-while-not-rendered'.
+_ @ framework-3abd175b6916fd8c.js:1
+(anonymous) @ framework-3abd175b6916fd8c.js:1
+uD @ framework-3abd175b6916fd8c.js:1
+uI @ framework-3abd175b6916fd8c.js:1
+uM @ framework-3abd175b6916fd8c.js:1
+uS @ framework-3abd175b6916fd8c.js:1
+C @ framework-3abd175b6916fd8c.js:1
+z @ framework-3abd175b6916fd8c.js:1
+framework-3abd175b6916fd8c.js:1 Unrecognized feature: 'execution-while-out-of-viewport'.
+_ @ framework-3abd175b6916fd8c.js:1
+(anonymous) @ framework-3abd175b6916fd8c.js:1
+uD @ framework-3abd175b6916fd8c.js:1
+uI @ framework-3abd175b6916fd8c.js:1
+uM @ framework-3abd175b6916fd8c.js:1
+uS @ framework-3abd175b6916fd8c.js:1
+C @ framework-3abd175b6916fd8c.js:1
+z @ framework-3abd175b6916fd8c.js:1
+framework-3abd175b6916fd8c.js:1 Unrecognized feature: 'layout-animations'.
+_ @ framework-3abd175b6916fd8c.js:1
+(anonymous) @ framework-3abd175b6916fd8c.js:1
+uD @ framework-3abd175b6916fd8c.js:1
+uI @ framework-3abd175b6916fd8c.js:1
+uM @ framework-3abd175b6916fd8c.js:1
+uS @ framework-3abd175b6916fd8c.js:1
+C @ framework-3abd175b6916fd8c.js:1
+z @ framework-3abd175b6916fd8c.js:1
+framework-3abd175b6916fd8c.js:1 Unrecognized feature: 'legacy-image-formats'.
+_ @ framework-3abd175b6916fd8c.js:1
+(anonymous) @ framework-3abd175b6916fd8c.js:1
+uD @ framework-3abd175b6916fd8c.js:1
+uI @ framework-3abd175b6916fd8c.js:1
+uM @ framework-3abd175b6916fd8c.js:1
+uS @ framework-3abd175b6916fd8c.js:1
+C @ framework-3abd175b6916fd8c.js:1
+z @ framework-3abd175b6916fd8c.js:1
+framework-3abd175b6916fd8c.js:1 Unrecognized feature: 'navigation-override'.
+_ @ framework-3abd175b6916fd8c.js:1
+(anonymous) @ framework-3abd175b6916fd8c.js:1
+uD @ framework-3abd175b6916fd8c.js:1
+uI @ framework-3abd175b6916fd8c.js:1
+uM @ framework-3abd175b6916fd8c.js:1
+uS @ framework-3abd175b6916fd8c.js:1
+C @ framework-3abd175b6916fd8c.js:1
+z @ framework-3abd175b6916fd8c.js:1
+framework-3abd175b6916fd8c.js:1 Unrecognized feature: 'oversized-images'.
+_ @ framework-3abd175b6916fd8c.js:1
+(anonymous) @ framework-3abd175b6916fd8c.js:1
+uD @ framework-3abd175b6916fd8c.js:1
+uI @ framework-3abd175b6916fd8c.js:1
+uM @ framework-3abd175b6916fd8c.js:1
+uS @ framework-3abd175b6916fd8c.js:1
+C @ framework-3abd175b6916fd8c.js:1
+z @ framework-3abd175b6916fd8c.js:1
+framework-3abd175b6916fd8c.js:1 Unrecognized feature: 'publickey-credentials'.
+_ @ framework-3abd175b6916fd8c.js:1
+(anonymous) @ framework-3abd175b6916fd8c.js:1
+uD @ framework-3abd175b6916fd8c.js:1
+uI @ framework-3abd175b6916fd8c.js:1
+uM @ framework-3abd175b6916fd8c.js:1
+uS @ framework-3abd175b6916fd8c.js:1
+C @ framework-3abd175b6916fd8c.js:1
+z @ framework-3abd175b6916fd8c.js:1
+framework-3abd175b6916fd8c.js:1 Unrecognized feature: 'speaker-selection'.
+_ @ framework-3abd175b6916fd8c.js:1
+(anonymous) @ framework-3abd175b6916fd8c.js:1
+uD @ framework-3abd175b6916fd8c.js:1
+uI @ framework-3abd175b6916fd8c.js:1
+uM @ framework-3abd175b6916fd8c.js:1
+uS @ framework-3abd175b6916fd8c.js:1
+C @ framework-3abd175b6916fd8c.js:1
+z @ framework-3abd175b6916fd8c.js:1
+framework-3abd175b6916fd8c.js:1 Unrecognized feature: 'unoptimized-images'.
+_ @ framework-3abd175b6916fd8c.js:1
+(anonymous) @ framework-3abd175b6916fd8c.js:1
+uD @ framework-3abd175b6916fd8c.js:1
+uI @ framework-3abd175b6916fd8c.js:1
+uM @ framework-3abd175b6916fd8c.js:1
+uS @ framework-3abd175b6916fd8c.js:1
+C @ framework-3abd175b6916fd8c.js:1
+z @ framework-3abd175b6916fd8c.js:1
+framework-3abd175b6916fd8c.js:1 Unrecognized feature: 'unsized-media'.
+_ @ framework-3abd175b6916fd8c.js:1
+(anonymous) @ framework-3abd175b6916fd8c.js:1
+uD @ framework-3abd175b6916fd8c.js:1
+uI @ framework-3abd175b6916fd8c.js:1
+uM @ framework-3abd175b6916fd8c.js:1
+uS @ framework-3abd175b6916fd8c.js:1
+C @ framework-3abd175b6916fd8c.js:1
+z @ framework-3abd175b6916fd8c.js:1
+framework-3abd175b6916fd8c.js:1 Unrecognized feature: 'pointer-lock'.
+_ @ framework-3abd175b6916fd8c.js:1
+(anonymous) @ framework-3abd175b6916fd8c.js:1
+uD @ framework-3abd175b6916fd8c.js:1
+uI @ framework-3abd175b6916fd8c.js:1
+uM @ framework-3abd175b6916fd8c.js:1
+uS @ framework-3abd175b6916fd8c.js:1
+C @ framework-3abd175b6916fd8c.js:1
+z @ framework-3abd175b6916fd8c.js:1
+framework-3abd175b6916fd8c.js:1 Allow attribute will take precedence over 'allowfullscreen'.
+_ @ framework-3abd175b6916fd8c.js:1
+(anonymous) @ framework-3abd175b6916fd8c.js:1
+uD @ framework-3abd175b6916fd8c.js:1
+uI @ framework-3abd175b6916fd8c.js:1
+uM @ framework-3abd175b6916fd8c.js:1
+uS @ framework-3abd175b6916fd8c.js:1
+C @ framework-3abd175b6916fd8c.js:1
+z @ framework-3abd175b6916fd8c.js:1
+framework-3abd175b6916fd8c.js:1 Allow attribute will take precedence over 'allowpaymentrequest'.
+_ @ framework-3abd175b6916fd8c.js:1
+(anonymous) @ framework-3abd175b6916fd8c.js:1
+uD @ framework-3abd175b6916fd8c.js:1
+uI @ framework-3abd175b6916fd8c.js:1
+uM @ framework-3abd175b6916fd8c.js:1
+uS @ framework-3abd175b6916fd8c.js:1
+C @ framework-3abd175b6916fd8c.js:1
+z @ framework-3abd175b6916fd8c.js:1
+workspace_iframe.html?initialPath=%2F&id=%3Ar1e%3A:32 Error while parsing the 'sandbox' attribute: 'allow-downloads-without-user-activation' is an invalid sandbox flag.
+workspace_iframe.html?initialPath=%2F&id=%3Ar1e%3A:32 Unrecognized feature: 'ambient-light-sensor'.
+workspace_iframe.html?initialPath=%2F&id=%3Ar1e%3A:32 Unrecognized feature: 'battery'.
+workspace_iframe.html?initialPath=%2F&id=%3Ar1e%3A:32 Unrecognized feature: 'execution-while-not-rendered'.
+workspace_iframe.html?initialPath=%2F&id=%3Ar1e%3A:32 Unrecognized feature: 'execution-while-out-of-viewport'.
+workspace_iframe.html?initialPath=%2F&id=%3Ar1e%3A:32 Unrecognized feature: 'layout-animations'.
+workspace_iframe.html?initialPath=%2F&id=%3Ar1e%3A:32 Unrecognized feature: 'legacy-image-formats'.
+workspace_iframe.html?initialPath=%2F&id=%3Ar1e%3A:32 Unrecognized feature: 'navigation-override'.
+workspace_iframe.html?initialPath=%2F&id=%3Ar1e%3A:32 Unrecognized feature: 'oversized-images'.
+workspace_iframe.html?initialPath=%2F&id=%3Ar1e%3A:32 Unrecognized feature: 'publickey-credentials'.
+workspace_iframe.html?initialPath=%2F&id=%3Ar1e%3A:32 Unrecognized feature: 'speaker-selection'.
+workspace_iframe.html?initialPath=%2F&id=%3Ar1e%3A:32 Unrecognized feature: 'unoptimized-images'.
+workspace_iframe.html?initialPath=%2F&id=%3Ar1e%3A:32 Unrecognized feature: 'unsized-media'.
+workspace_iframe.html?initialPath=%2F&id=%3Ar1e%3A:32 Allow attribute will take precedence over 'allowfullscreen'.
+workspace_iframe.html?initialPath=%2F&id=%3Ar1e%3A:32 Allow attribute will take precedence over 'allowpaymentrequest'.
+SmartTradeAcademy:1 Banner not shown: beforeinstallpromptevent.preventDefault() called. The page must call beforeinstallpromptevent.prompt() to show the banner.
+Console.js:61 📋 STC Trading Dashboard script cargado
+Console.js:61 🌐 DOM cargado, iniciando aplicación...
+Console.js:61 🚀 STC Trading System - gráficos automáticos activos
+Console.js:61 🚀 Iniciando STC Chart Manager...
+Console.js:61 ✅ STC Chart Manager - usando STCChartFix automático
+Console.js:61 🚀 Iniciando STC Trading Dashboard...
+Console.js:61 ✅ Gráfico inicializado correctamente
+Console.js:61 🎛️ Event handlers configurados
+Console.js:61 🔄 Auto-update iniciado
+Console.js:61 ✅ Dashboard inicializado
+Console.js:61 📊 Cargando velas para EURUSD-OTC (M5)...
+Console.js:61 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+Console.js:61 ✅ 34 señales agregadas al gráfico
+Console.js:61 ✅ 34 señales Tablero cargadas
+Console.js:61 📊 Cargando velas para EURUSD-OTC (M5)...
+Console.js:61 🆕 Nueva vela detectada en 6:17:46 p.m.
+Console.js:61 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+Console.js:61 🔔 Señal de COMPRA detectada (AUDIO SILENCIADO): {confidence: 0.52, direction: 'CALL', gale_level: 1, is_gale: true, pattern: 'Alcista', …}
+Console.js:61 ✅ 50 señales agregadas al gráfico
+Console.js:61 ✅ 50 señales Tablero cargadas
+Console.js:61 📊 Cargando velas para EURUSD-OTC (M5)...
+Console.js:61 💰 Balance: $0.00 (PRACTICE)
+Console.js:61 🆕 Nueva vela detectada en 6:17:50 p.m.
+Console.js:61 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+Console.js:61 ✅ 50 señales agregadas al gráfico
+Console.js:61 ✅ 50 señales Tablero cargadas
+Console.js:61 📊 Cargando velas para EURUSD-OTC (M5)...
+Console.js:61 🆕 Nueva vela detectada en 6:17:55 p.m.
+Console.js:61 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+Console.js:61 ✅ 50 señales agregadas al gráfico
+Console.js:61 ✅ 50 señales Tablero cargadas
+Console.js:61 📊 Cargando velas para EURUSD-OTC (M5)...
+Console.js:61 🆕 Nueva vela detectada en 6:18:01 p.m.
+Console.js:61 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+Console.js:61 🔔 Señal de VENTA detectada (AUDIO SILENCIADO): {confidence: 0.5, direction: 'PUT', gale_level: 7, is_gale: true, pattern: 'Bajista', …}
+Console.js:61 ✅ 50 señales agregadas al gráfico
+Console.js:61 ✅ 50 señales Tablero cargadas
+Console.js:61 📊 Cargando velas para EURUSD-OTC (M5)...
+Console.js:61 💰 Balance: $0.00 (PRACTICE)
+Console.js:61 🆕 Nueva vela detectada en 6:18:06 p.m.
+Console.js:61 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+Console.js:61 🔔 Señal de COMPRA detectada (AUDIO SILENCIADO): {confidence: 0.53, direction: 'CALL', gale_level: 1, is_gale: true, pattern: 'Alcista', …}
+Console.js:61 ✅ 50 señales agregadas al gráfico
+Console.js:61 ✅ 50 señales Tablero cargadas
+Console.js:61 📊 Cargando velas para EURUSD-OTC (M5)...
+Console.js:61 🆕 Nueva vela detectada en 6:18:10 p.m.
+Console.js:61 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+Console.js:61 ✅ 50 señales agregadas al gráfico
+Console.js:61 ✅ 50 señales Tablero cargadas
+injected.js:278  POST https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/login 503 (Service Unavailable)
+window.fetch @ Network.js:219
+apply @ injected.js:278
+loginIQ @ dashboard:1840
+(anonymous) @ dashboard:1640
+Console.js:61 📊 Cargando velas para EURUSD-OTC (M5)...
+Console.js:61 🆕 Nueva vela detectada en 6:18:16 p.m.
+Console.js:61 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+Console.js:61 ✅ 50 señales agregadas al gráfico
+Console.js:61 ✅ 50 señales Tablero cargadas
+Console.js:61 📊 Cargando velas para EURUSD-OTC (M5)...
+Console.js:61 💰 Balance: $0.00 (PRACTICE)
+Console.js:61 🆕 Nueva vela detectada en 6:18:21 p.m.
+Console.js:61 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+Console.js:61 🔔 Señal de COMPRA detectada (AUDIO SILENCIADO): {confidence: 0.5, direction: 'CALL', gale_level: 0, is_gale: false, pattern: 'Alcista', …}
+Console.js:61 ✅ 49 señales agregadas al gráfico
+Console.js:61 ✅ 49 señales Tablero cargadas
+Console.js:61 📊 Cargando velas para EURUSD-OTC (M5)...
+Console.js:61 🆕 Nueva vela detectada en 6:18:26 p.m.
+Console.js:61 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+Console.js:61 🔔 Señal de COMPRA detectada (AUDIO SILENCIADO): {confidence: 0.51, direction: 'CALL', gale_level: 0, is_gale: false, pattern: 'Alcista', …}
+Console.js:61 ✅ 50 señales agregadas al gráfico
+Console.js:61 ✅ 50 señales Tablero cargadas
+Console.js:61 📊 Cargando velas para EURUSD-OTC (M5)...
+Console.js:61 🆕 Nueva vela detectada en 6:18:30 p.m.
+Console.js:61 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+Console.js:61 ✅ 50 señales agregadas al gráfico
+Console.js:61 ✅ 50 señales Tablero cargadas

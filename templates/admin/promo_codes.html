@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Códigos Promocionales - Admin</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Courier New', Consolas, Monaco, monospace;
+            background: #000000;
+            color: #00ffff;
+            min-height: 100vh;
+            perspective: 1500px;
+            padding: 40px;
+        }
+
+        .container {
+            max-width: 1800px;
+            margin: 0 auto;
+        }
+
+        .header {
+            background: rgba(0, 255, 255, 0.03);
+            border: 2px solid rgba(0, 255, 255, 0.2);
+            border-radius: 20px;
+            padding: 30px;
+            backdrop-filter: blur(40px);
+            transform: translateZ(30px);
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .title {
+            font-size: 1.8rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+
+        .back-btn {
+            background: rgba(0, 255, 255, 0.1);
+            border: 2px solid rgba(0, 255, 255, 0.3);
+            color: #00ffff;
+            padding: 12px 30px;
+            border-radius: 50px;
+            cursor: pointer;
+            text-decoration: none;
+            font-family: 'Courier New', Consolas, Monaco, monospace;
+            text-transform: uppercase;
+            transition: all 0.3s;
+        }
+
+        .create-section {
+            background: rgba(0, 255, 255, 0.02);
+            border: 2px solid rgba(0, 255, 255, 0.2);
+            border-radius: 20px;
+            padding: 30px;
+            backdrop-filter: blur(40px);
+            margin-bottom: 30px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 8px;
+            color: rgba(0, 255, 255, 0.8);
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            letter-spacing: 1px;
+        }
+
+        .form-input, .form-select {
+            width: 100%;
+            max-width: 400px;
+            background: rgba(0, 255, 255, 0.05);
+            border: 1px solid rgba(0, 255, 255, 0.3);
+            color: #00ffff;
+            padding: 12px 20px;
+            border-radius: 10px;
+            font-family: 'Courier New', Consolas, Monaco, monospace;
+        }
+
+        .form-input:focus, .form-select:focus {
+            outline: none;
+            border-color: #00ffff;
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+        }
+
+        .btn-create {
+            background: linear-gradient(135deg, #00ffff 0%, #0099ff 100%);
+            color: #000;
+            border: none;
+            padding: 15px 40px;
+            border-radius: 10px;
+            font-weight: 700;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-family: 'Courier New', Consolas, Monaco, monospace;
+            transition: all 0.3s;
+        }
+
+        .btn-create:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(0, 255, 255, 0.4);
+        }
+
+        .table-container {
+            background: rgba(0, 255, 255, 0.02);
+            border: 2px solid rgba(0, 255, 255, 0.2);
+            border-radius: 20px;
+            padding: 30px;
+            backdrop-filter: blur(40px);
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th {
+            text-align: left;
+            padding: 15px;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            border-bottom: 2px solid rgba(0, 255, 255, 0.3);
+        }
+
+        td {
+            padding: 15px;
+            border-bottom: 1px solid rgba(0, 255, 255, 0.1);
+        }
+
+        tr:hover {
+            background: rgba(0, 255, 255, 0.05);
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+        }
+
+        .badge-active {
+            background: rgba(0, 255, 100, 0.1);
+            border: 1px solid rgba(0, 255, 100, 0.3);
+            color: #00ff64;
+        }
+
+        .badge-used {
+            background: rgba(255, 200, 0, 0.1);
+            border: 1px solid rgba(255, 200, 0, 0.3);
+            color: #ffc800;
+        }
+
+        .code-display {
+            font-family: 'Courier New', Consolas, Monaco, monospace;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #00ffff;
+            text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+            letter-spacing: 2px;
+        }
+
+        .btn-delete {
+            padding: 8px 15px;
+            border-radius: 8px;
+            border: 1px solid rgba(255, 50, 50, 0.4);
+            background: transparent;
+            color: #ff3232;
+            cursor: pointer;
+            font-family: 'Courier New', Consolas, Monaco, monospace;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            transition: all 0.3s;
+        }
+
+        .btn-delete:hover {
+            background: rgba(255, 50, 50, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="title">🎟️ CÓDIGOS PROMOCIONALES</div>
+            <a href="/admin" class="back-btn">⬅ VOLVER</a>
+        </div>
+
+        <div class="create-section">
+            <h3 style="margin-bottom: 20px; color: #00ffff;">CREAR CÓDIGO</h3>
+            <div class="form-group">
+                <label class="form-label">Tipo de Código</label>
+                <select id="promo-type" class="form-select">
+                    <option value="revendedor">Revendedor</option>
+                    <option value="agente">Agente</option>
+                    <option value="cortesia">Cortesía 24h</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label class="form-label">Duración (horas)</label>
+                <input type="number" id="promo-duration" class="form-input" value="24" min="1">
+            </div>
+            <button class="btn-create" onclick="createCode()">GENERAR CÓDIGO</button>
+        </div>
+
+        <div class="table-container">
+            <div id="content">Cargando códigos...</div>
+        </div>
+    </div>
+
+    <script>
+        async function loadCodes() {
+            try {
+                const response = await fetch('/api/admin/promo/list');
+                const data = await response.json();
+
+                if (data.success && data.promo_codes.length > 0) {
+                    const tableHTML = `
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Código</th>
+                                    <th>Tipo</th>
+                                    <th>Duración</th>
+                                    <th>Creado</th>
+                                    <th>Activado</th>
+                                    <th>Expira</th>
+                                    <th>Usuario</th>
+                                    <th>Estado</th>
+                                    <th>Acción</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                ${data.promo_codes.map(code => `
+                                    <tr>
+                                        <td><span class="code-display">${code.code}</span></td>
+                                        <td>${code.type.toUpperCase()}</td>
+                                        <td>${code.duration_hours}h</td>
+                                        <td>${new Date(code.created_at).toLocaleDateString('es-ES')}</td>
+                                        <td>${code.activated_at ? new Date(code.activated_at).toLocaleDateString('es-ES') : '-'}</td>
+                                        <td>${code.expires_at ? new Date(code.expires_at).toLocaleDateString('es-ES') : '-'}</td>
+                                        <td>${code.assigned_to || '-'}</td>
+                                        <td>
+                                            ${code.is_used ? '<span class="badge badge-used">USADO</span>' : '<span class="badge badge-active">DISPONIBLE</span>'}
+                                        </td>
+                                        <td>
+                                            <button class="btn-delete" onclick="deleteCode('${code.id}')">ELIMINAR</button>
+                                        </td>
+                                    </tr>
+                                `).join('')}
+                            </tbody>
+                        </table>
+                    `;
+                    document.getElementById('content').innerHTML = tableHTML;
+                } else {
+                    document.getElementById('content').innerHTML = '<div style="text-align:center;padding:40px;color:rgba(0,255,255,0.4)">No hay códigos creados</div>';
+                }
+            } catch (error) {
+                console.error('Error:', error);
+            }
+        }
+
+        async function createCode() {
+            const type = document.getElementById('promo-type').value;
+            const duration = parseInt(document.getElementById('promo-duration').value);
+
+            if (!duration || duration < 1) {
+                alert('Duración inválida');
+                return;
+            }
+
+            try {
+                const response = await fetch('/api/admin/promo/create', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ type, duration_hours: duration })
+                });
+
+                const data = await response.json();
+
+                if (data.success) {
+                    alert(`Código creado: ${data.promo_code.code}`);
+                    loadCodes();
+                } else {
+                    alert('Error: ' + data.error);
+                }
+            } catch (error) {
+                alert('Error de conexión');
+            }
+        }
+
+        async function deleteCode(id) {
+            if (!confirm('¿Eliminar este código?')) return;
+
+            try {
+                const response = await fetch(`/api/admin/promo/delete/${id}`, {
+                    method: 'DELETE'
+                });
+
+                const data = await response.json();
+
+                if (data.success) {
+                    alert('Código eliminado');
+                    loadCodes();
+                } else {
+                    alert('Error: ' + data.error);
+                }
+            } catch (error) {
+                alert('Error de conexión');
+            }
+        }
+
+        loadCodes();
+        setInterval(loadCodes, 30000);
+    </script>
+</body>
+</html>

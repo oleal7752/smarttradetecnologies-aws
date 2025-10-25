@@ -1,0 +1,105 @@
+framework-215da93fa84a5ee9.js:1 Unrecognized feature: 'ambient-light-sensor'.
+_ @ framework-215da93fa84a5ee9.js:1
+framework-215da93fa84a5ee9.js:1 Unrecognized feature: 'battery'.
+_ @ framework-215da93fa84a5ee9.js:1
+framework-215da93fa84a5ee9.js:1 Unrecognized feature: 'execution-while-not-rendered'.
+_ @ framework-215da93fa84a5ee9.js:1
+framework-215da93fa84a5ee9.js:1 Unrecognized feature: 'execution-while-out-of-viewport'.
+_ @ framework-215da93fa84a5ee9.js:1
+framework-215da93fa84a5ee9.js:1 Unrecognized feature: 'layout-animations'.
+_ @ framework-215da93fa84a5ee9.js:1
+framework-215da93fa84a5ee9.js:1 Unrecognized feature: 'legacy-image-formats'.
+_ @ framework-215da93fa84a5ee9.js:1
+framework-215da93fa84a5ee9.js:1 Unrecognized feature: 'navigation-override'.
+_ @ framework-215da93fa84a5ee9.js:1
+framework-215da93fa84a5ee9.js:1 Unrecognized feature: 'oversized-images'.
+_ @ framework-215da93fa84a5ee9.js:1
+framework-215da93fa84a5ee9.js:1 Unrecognized feature: 'publickey-credentials'.
+_ @ framework-215da93fa84a5ee9.js:1
+framework-215da93fa84a5ee9.js:1 Unrecognized feature: 'speaker-selection'.
+_ @ framework-215da93fa84a5ee9.js:1
+framework-215da93fa84a5ee9.js:1 Unrecognized feature: 'unoptimized-images'.
+_ @ framework-215da93fa84a5ee9.js:1
+framework-215da93fa84a5ee9.js:1 Unrecognized feature: 'unsized-media'.
+_ @ framework-215da93fa84a5ee9.js:1
+framework-215da93fa84a5ee9.js:1 Unrecognized feature: 'pointer-lock'.
+_ @ framework-215da93fa84a5ee9.js:1
+framework-215da93fa84a5ee9.js:1 Allow attribute will take precedence over 'allowfullscreen'.
+_ @ framework-215da93fa84a5ee9.js:1
+framework-215da93fa84a5ee9.js:1 Allow attribute will take precedence over 'allowpaymentrequest'.
+_ @ framework-215da93fa84a5ee9.js:1
+_app-c8dba492780c8967.js:34 [Coframe] Error initializing SDK Error: Timeout waiting for command after 3600000ms for:
+e=>!("pageHydrated"!==e.emit)
+    at cf.js?config=%257B%2522projectId%2522%253A%252268c9ad4d4cddb58cf3a1f93d%2522%252C%2522startTime%2522%253A1759706565469%252C%2522timeoutMs%2522%253A1000%252C%2522currentUrl%2522%253A%2522https%253A%252F%252Freplit.com%252F%2540oleal7752%252FSmartTradeAcademy%2522%252C%2522waitForHydration%2522%253Atrue%252C%2522trackingOnly%2522%253Atrue%257D:10:2345
+(anonymous) @ _app-c8dba492780c8967.js:34
+The source list for the Content Security Policy directive 'default-src' contains an invalid source: ''unsafe-dynamic''. It will be ignored.
+The source list for the Content Security Policy directive 'default-src' contains an invalid source: ''unsafe-dynamic''. It will be ignored.
+The source list for the Content Security Policy directive 'default-src' contains an invalid source: ''unsafe-dynamic''. It will be ignored.
+The source list for the Content Security Policy directive 'default-src' contains an invalid source: ''unsafe-dynamic''. It will be ignored.
+The source list for the Content Security Policy directive 'default-src' contains an invalid source: ''unsafe-dynamic''. It will be ignored.
+The source list for the Content Security Policy directive 'default-src' contains an invalid source: ''unsafe-dynamic''. It will be ignored.
+The Content-Security-Policy directive 'default-src' contains 'report-uri' as a source expression. Did you want to add it as a directive and forget a semicolon?
+The Content-Security-Policy directive 'default-src' contains 'report-uri' as a source expression. Did you want to add it as a directive and forget a semicolon?
+The Content-Security-Policy directive 'default-src' contains 'report-uri' as a source expression. Did you want to add it as a directive and forget a semicolon?
+The Content-Security-Policy directive 'default-src' contains 'report-uri' as a source expression. Did you want to add it as a directive and forget a semicolon?
+The Content-Security-Policy directive 'default-src' contains 'report-uri' as a source expression. Did you want to add it as a directive and forget a semicolon?
+The Content-Security-Policy directive 'default-src' contains 'report-uri' as a source expression. Did you want to add it as a directive and forget a semicolon?
+The source list for Content Security Policy directive 'default-src' contains a source with an invalid path: '/api/4509669501698048/security/?sentry_key=7eb3d90eb4660416caf507087367e67e'. The query component, including the '?', will be ignored.
+The source list for Content Security Policy directive 'default-src' contains a source with an invalid path: '/api/4509669501698048/security/?sentry_key=7eb3d90eb4660416caf507087367e67e'. The query component, including the '?', will be ignored.
+The source list for Content Security Policy directive 'default-src' contains a source with an invalid path: '/api/4509669501698048/security/?sentry_key=7eb3d90eb4660416caf507087367e67e'. The query component, including the '?', will be ignored.
+The source list for Content Security Policy directive 'default-src' contains a source with an invalid path: '/api/4509669501698048/security/?sentry_key=7eb3d90eb4660416caf507087367e67e'. The query component, including the '?', will be ignored.
+The source list for Content Security Policy directive 'default-src' contains a source with an invalid path: '/api/4509669501698048/security/?sentry_key=7eb3d90eb4660416caf507087367e67e'. The query component, including the '?', will be ignored.
+The source list for Content Security Policy directive 'default-src' contains a source with an invalid path: '/api/4509669501698048/security/?sentry_key=7eb3d90eb4660416caf507087367e67e'. The query component, including the '?', will be ignored.
+framework-215da93fa84a5ee9.js:1 Error while parsing the 'sandbox' attribute: 'allow-downloads-without-user-activation' is an invalid sandbox flag.
+_ @ framework-215da93fa84a5ee9.js:1
+framework-215da93fa84a5ee9.js:1 Error while parsing the 'sandbox' attribute: 'allow-downloads-without-user-activation' is an invalid sandbox flag.
+_ @ framework-215da93fa84a5ee9.js:1
+framework-215da93fa84a5ee9.js:1 Error while parsing the 'sandbox' attribute: 'allow-downloads-without-user-activation' is an invalid sandbox flag.
+_ @ framework-215da93fa84a5ee9.js:1
+workspace_iframe.html?initialPath=%2F&id=%3Arqo%3A:32 Error while parsing the 'sandbox' attribute: 'allow-downloads-without-user-activation' is an invalid sandbox flag.
+workspace_iframe.html?initialPath=%2F&id=%3Arqo%3A:32 Unrecognized feature: 'ambient-light-sensor'.
+workspace_iframe.html?initialPath=%2F&id=%3Arqo%3A:32 Unrecognized feature: 'battery'.
+workspace_iframe.html?initialPath=%2F&id=%3Arqo%3A:32 Unrecognized feature: 'execution-while-not-rendered'.
+workspace_iframe.html?initialPath=%2F&id=%3Arqo%3A:32 Unrecognized feature: 'execution-while-out-of-viewport'.
+workspace_iframe.html?initialPath=%2F&id=%3Arqo%3A:32 Unrecognized feature: 'layout-animations'.
+workspace_iframe.html?initialPath=%2F&id=%3Arqo%3A:32 Unrecognized feature: 'legacy-image-formats'.
+workspace_iframe.html?initialPath=%2F&id=%3Arqo%3A:32 Unrecognized feature: 'navigation-override'.
+workspace_iframe.html?initialPath=%2F&id=%3Arqo%3A:32 Unrecognized feature: 'oversized-images'.
+workspace_iframe.html?initialPath=%2F&id=%3Arqo%3A:32 Unrecognized feature: 'publickey-credentials'.
+workspace_iframe.html?initialPath=%2F&id=%3Arqo%3A:32 Unrecognized feature: 'speaker-selection'.
+workspace_iframe.html?initialPath=%2F&id=%3Arqo%3A:32 Unrecognized feature: 'unoptimized-images'.
+workspace_iframe.html?initialPath=%2F&id=%3Arqo%3A:32 Unrecognized feature: 'unsized-media'.
+workspace_iframe.html?initialPath=%2F&id=%3Arqo%3A:32 Allow attribute will take precedence over 'allowfullscreen'.
+workspace_iframe.html?initialPath=%2F&id=%3Arqo%3A:32 Allow attribute will take precedence over 'allowpaymentrequest'.
+cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css:1  Failed to load resource: net::ERR_CACHE_READ_FAILURE
+images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=800&auto=format&fit=crop:1  Failed to load resource: net::ERR_CACHE_READ_FAILURE
+cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js:1  Failed to load resource: net::ERR_CACHE_READ_FAILURE
+cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/fonts/bootstrap-icons.woff2?2820a3852bdb9a5832199cc61cec4e65:1  Failed to load resource: net::ERR_CACHE_READ_FAILURE
+lightweight-charts.standalone.production.js:1  Failed to load resource: net::ERR_CACHE_READ_FAILURE
+Console.js:61 📋 IQ Option Dashboard iniciado
+Console.js:61 ✅ Dashboard IQ Option inicializado
+Console.js:61 🎯 Inicializando gráfico IQ Option...
+Console.js:61 🎯 Inicializando STCChartFix con config: Object
+stc_chart_fix.js?v=5:48 Uncaught ReferenceError: LightweightCharts is not defined
+    at initChart (stc_chart_fix.js?v=5:48:9)
+    at Object.init (stc_chart_fix.js?v=5:32:9)
+    at HTMLDocument.<anonymous> (iqoption:171:21)
+initChart @ stc_chart_fix.js?v=5:48
+init @ stc_chart_fix.js?v=5:32
+(anonymous) @ iqoption:171
+Console.js:61 🔐 Intentando auto-conectar usando secrets...
+Console.js:61 ✅ Cargados 4 símbolos permitidos (3 abiertos, 1 cerrados)
+Console.js:61 🔄 Recargando velas después de conectar...
+Console.js:61 🔄 Refrescando datos del gráfico...
+Console.js:61 📊 Cargando datos iniciales desde: /api/iq/candles?symbol=EURUSD-OTC&timeframe=M5&limit=200
+Console.js:61 📈 Datos recibidos: Array(200)
+Console.js:61 ⚠️ Serie no inicializada o datos inválidos
+Mt.forEach.n.<computed> @ Console.js:61
+await in Mt.forEach.n.<computed>
+refresh @ stc_chart_fix.js?v=5:398
+reloadCandles @ iqoption:373
+(anonymous) @ iqoption:229
+Console.js:61 ✅ Cargadas 200 velas iniciales
+iqoption:189 Uncaught (in promise) TypeError: notify.warning is not a function
+    at HTMLButtonElement.<anonymous> (iqoption:189:16)
+(anonymous) @ iqoption:189

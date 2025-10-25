@@ -1,0 +1,121 @@
+INFORMACIÓN QUE NECESITO DEL PROYECTO REPLIT:
+1️⃣ ARQUITECTURA Y FUNCIONALIDAD:
+Code
+📌 ¿Qué hace el proyecto?
+   - ¿Es un bot de trading?
+   - ¿Qué tipo de operaciones realiza?
+   - ¿Qué estrategias usa?
+
+📌 ¿Qué datos procesa?
+   - ¿De dónde obtiene datos? (APIs, websockets, etc.)
+   - ¿Qué pares/activos opera?
+   - ¿Qué timeframes usa?
+
+📌 ¿Cómo genera señales?
+   - ¿Qué indicadores usa?
+   - ¿Tiene lógica de entrada/salida?
+   - ¿Usa machine learning o reglas fijas?
+2️⃣ ESTRUCTURA DE ARCHIVOS:
+Code
+📁 Lista de archivos principales:
+   - main.py / app.py / index.js (archivo principal)
+   - requirements.txt / package.json (dependencias)
+   - config.py / .env (configuración)
+   - Otros archivos importantes
+
+📁 ¿Tiene carpetas específicas?
+   - /data
+   - /models
+   - /strategies
+   - /utils
+3️⃣ DEPENDENCIAS Y SERVICIOS:
+Code
+🔧 Lenguaje principal:
+   - Python / Node.js / Otro
+
+🔧 Librerías principales:
+   - pandas, numpy, ta-lib
+   - ccxt, python-binance
+   - tensorflow, sklearn
+   - requests, websockets
+
+🔧 APIs que usa:
+   - Binance / Bybit / IQ Option
+   - Twelve Data / Alpha Vantage
+   - Telegram Bot / Discord
+4️⃣ BASE DE DATOS:
+Code
+💾 ¿Usa base de datos?
+   - SQLite / PostgreSQL / MongoDB
+   - Archivos CSV / JSON
+
+💾 ¿Qué almacena?
+   - Datos históricos
+   - Señales generadas
+   - Resultados de trades
+   - Configuración
+5️⃣ AUTOMATIZACIÓN:
+Code
+⏰ ¿Cómo se ejecuta?
+   - Cron jobs
+   - Loop infinito
+   - Webhooks
+   - Triggers específicos
+
+⏰ ¿Cada cuánto se ejecuta?
+   - Cada 1 minuto / 5 minutos / en tiempo real
+🎯 DAME ESTA INFORMACIÓN:
+OPCIÓN A - RESUMEN RÁPIDO:
+Code
+Ejemplo:
+"Es un bot que obtiene datos de EUR/USD cada 5 minutos de 
+Twelve Data, calcula RSI, MACD y EMA, genera señales CALL/PUT, 
+y las envía por Telegram. Usa Python con pandas y ta-lib. 
+Guarda señales en SQLite."
+OPCIÓN B - ARCHIVOS:
+Pega aquí:
+
+Contenido de main.py o archivo principal
+Contenido de requirements.txt o package.json
+Contenido de .env o archivo de configuración (sin API keys sensibles)
+Estructura de carpetas (si hay varias)
+OPCIÓN C - Repositorio:
+Si lo tienes en GitHub/GitLab:
+
+Code
+Dame el link del repo
+🚀 CON ESA INFORMACIÓN VOY A:
+Code
+✅ Diseñar la arquitectura en n8n
+✅ Crear los workflows necesarios
+✅ Migrar la lógica a nodos n8n
+✅ Configurar la base de datos PostgreSQL
+✅ Programar la automatización
+✅ Conectar APIs (Twelve Data, Telegram, etc.)
+✅ Optimizar para AWS
+📊 VENTAJAS DE MIGRAR A n8n:
+Code
+🔥 Visual workflow (sin código)
+🔥 Integración nativa con 400+ servicios
+🔥 PostgreSQL en lugar de SQLite
+🔥 Servidor dedicado AWS (mejor que Replit)
+🔥 Latencia ultra-baja (0.5-2ms)
+🔥 Escalable y robusto
+🔥 Webhooks nativos
+🔥 Logs y debugging visual
+🎯 EMPIEZA ASÍ:
+Dime:
+
+¿Qué hace tu bot en 2-3 líneas?
+
+¿Qué lenguaje usa? (Python / Node.js / otro)
+
+¿Qué API principal usa? (Twelve Data / Binance / IQ Option / otra)
+
+¿Puedes pegarme el archivo principal? (main.py o index.js)
+
+O simplemente pega aquí:
+
+✅ El código principal
+✅ El requirements.txt
+✅ Una descripción de qué hace

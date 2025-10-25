@@ -1,0 +1,34 @@
+17:44:35.525 Uncaught Error: Value is null
+    f https://unpkg.com/lightweight-charts@4.1.0/dist/lightweight-charts.standalone.production.js:7
+    Candlestick https://unpkg.com/lightweight-charts@4.1.0/dist/lightweight-charts.standalone.production.js:7
+    Hs https://unpkg.com/lightweight-charts@4.1.0/dist/lightweight-charts.standalone.production.js:7
+    ne https://unpkg.com/lightweight-charts@4.1.0/dist/lightweight-charts.standalone.production.js:7
+    zs https://unpkg.com/lightweight-charts@4.1.0/dist/lightweight-charts.standalone.production.js:7
+    qs https://unpkg.com/lightweight-charts@4.1.0/dist/lightweight-charts.standalone.production.js:7
+    Fs https://unpkg.com/lightweight-charts@4.1.0/dist/lightweight-charts.standalone.production.js:7
+    xt https://unpkg.com/lightweight-charts@4.1.0/dist/lightweight-charts.standalone.production.js:7
+    Ss https://unpkg.com/lightweight-charts@4.1.0/dist/lightweight-charts.standalone.production.js:7
+    br https://unpkg.com/lightweight-charts@4.1.0/dist/lightweight-charts.standalone.production.js:7
+    br https://unpkg.com/lightweight-charts@4.1.0/dist/lightweight-charts.standalone.production.js:7
+    Vf https://unpkg.com/lightweight-charts@4.1.0/dist/lightweight-charts.standalone.production.js:7
+    kf https://unpkg.com/lightweight-charts@4.1.0/dist/lightweight-charts.standalone.production.js:7
+    Af https://unpkg.com/lightweight-charts@4.1.0/dist/lightweight-charts.standalone.production.js:7
+    Of https://unpkg.com/lightweight-charts@4.1.0/dist/lightweight-charts.standalone.production.js:7
+18 lightweight-charts.standalone.production.js:7:2213
+17:44:36.644 Uncaught Error: Value is null
+    f https://unpkg.com/lightweight-charts@4.1.0/dist/lightweight-charts.standalone.production.js:7
+    Candlestick https://unpkg.com/lightweight-charts@4.1.0/dist/lightweight-charts.standalone.production.js:7
+    Hs https://unpkg.com/lightweight-charts@4.1.0/dist/lightweight-charts.standalone.production.js:7
+    ne https://unpkg.com/lightweight-charts@4.1.0/dist/lightweight-charts.standalone.production.js:7
+    zs https://unpkg.com/lightweight-charts@4.1.0/dist/lightweight-charts.standalone.production.js:7
+    qs https://unpkg.com/lightweight-charts@4.1.0/dist/lightweight-charts.standalone.production.js:7
+    Fs https://unpkg.com/lightweight-charts@4.1.0/dist/lightweight-charts.standalone.production.js:7
+    xt https://unpkg.com/lightweight-charts@4.1.0/dist/lightweight-charts.standalone.production.js:7
+    Ss https://unpkg.com/lightweight-charts@4.1.0/dist/lightweight-charts.standalone.production.js:7
+    br https://unpkg.com/lightweight-charts@4.1.0/dist/lightweight-charts.standalone.production.js:7
+    br https://unpkg.com/lightweight-charts@4.1.0/dist/lightweight-charts.standalone.production.js:7
+    Vf https://unpkg.com/lightweight-charts@4.1.0/dist/lightweight-charts.standalone.production.js:7
+    kf https://unpkg.com/lightweight-charts@4.1.0/dist/lightweight-charts.standalone.production.js:7
+    Af https://unpkg.com/lightweight-charts@4.1.0/dist/lightweight-charts.standalone.production.js:7
+    Of https://unpkg.com/lightweight-charts@4.1.0/dist/lightweight-charts.standalone.production.js:7
+5 lightweight-charts.standalone.production.js:7:2213

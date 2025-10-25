@@ -1,0 +1,230 @@
+1. Conversión de Timezone y Formateo de Timestamps
+El problema principal parecer estar en la conversión de timezone y en se formatean los timestamps en el tickMarkFormatter. . En tu código, estaciones prácticas una corrección de la zona horaria Manual:
+JavaScript
+Copia
+
+const UTC_OFFSET = -4; // UTC-4 para el mercado
+
+¡Luega, en el tickMarkFormatter, estás ajustando el timestamp Unix para mostrarlo en UTC-4:
+JavaScript
+Copia
+
+const utcMinus4 = new Date(date.getTime() + (UTC_OFFSET * 60 * 60 * 1000));
+
+Este sábano para predicar problema si los datos originales están ya en el timezone correcto o si hay hay seandiás discrepancia en la conversión.
+2. Verificación de los Datos de la API
+de que los datos JSON Deportes por la API en están en el formato correcto y que los timestamps estáns endenidades en alquiler enzamientos enzismante ascendente. Pass verificador esto inspeccionando la respuesta de la API en el navegador o uso una herramienta como Postman.
+3. Limpieza de Caché del Navegador
+Azi ya tienes headers no-cache en Flask, queque el navegador no sete una use experiencia de cámara del HTML/JavaScript. Pustas añadir un parámetro de cache-busting a tus estudios estudios:
+HTML
+Vista previa
+Copia
+
+<script src="https://unpkg.com/lightweight-charts@4.1.1/dist/lightweight-charts.standalone.production.js?_t=${Date.now()}"></script>
+
+4. Implementación de tickMarkFormatter
+La implementación real del  tickMarkFormatterpuede ser. En lugar de aplicación una corrección manual de corrección de timezone, asegúrate de que los timestamps en están el formato correcto desde el backend. Si los datos ya están en UTC, no es corrección necesaria aplicación una adicional.
+Aquís tienes versión una simplificada del  tickMarkFormatterquequisis que los timestamps estánt en UTC:
+JavaScript
+Copia
+
+tickMarkFormatter: (time) => {
+    const date = new Date(time * 1000);
+    const hours = String(date.getUTCHours()).padStart(2, '0');
+    const minutes = String(date.getUTCMinutes()).padStart(2, '0');
+    return `${hours}:${minutes}`;
+},
+
+5. Verificación de los Datos en el Frontend
+de que los datos que se al están en gigante en el formato correcto. En la función loadCandles, estás conversidos los timestamps de las velas:
+JavaScript
+Copia
+
+const timestamp = Math.floor(new Date(dateStr).getTime() / 1000);
+
+de que estos timestams en el formato correcto y que están coordenadasmente antes de delos envío al gráfico.
+6. Refresco de Datos en Tiempo Real
+En la función updateLiveCandle, estás actualesdo la vela real en tiempo real. de que los timestamps de las actualizaciones en están en el formato correcto y que no causen desorden en el eje X.
+Código Corregido
+Aquí tieness una versión corregida del  tickMarkFormattery algunas en las mejoras en la lógica de carga y actualización de datos:
+JavaScript
+Copia
+
+function createChart() {
+    const chartContainer = document.getElementById('chart');
+    
+    chart = LightweightCharts.createChart(chartContainer, {
+        layout: {
+            background: { color: '#131722' },
+            textColor: '#787b86',
+        },
+        grid: {
+            vertLines: { color: '#1e222d' },
+            horzLines: { color: '#1e222d' },
+        },
+        crosshair: {
+            mode: LightweightCharts.CrosshairMode.Normal,
+            vertLine: {
+                color: '#758696',
+                width: 1,
+                style: LightweightCharts.LineStyle.Dashed,
+            },
+            horzLine: {
+                color: '#758696',
+                width: 1,
+                style: LightweightCharts.LineStyle.Dashed,
+            },
+        },
+        rightPriceScale: {
+            borderColor: '#2a2e39',
+            scaleMargins: {
+                top: 0.1,
+                bottom: 0.1,
+            },
+        },
+        timeScale: {
+            borderColor: '#2a2e39',
+            timeVisible: true,
+            secondsVisible: false,
+            tickMarkFormatter: (time) => {
+                const date = new Date(time * 1000);
+                const hours = String(date.getUTCHours()).padStart(2, '0');
+                const minutes = String(date.getUTCMinutes()).padStart(2, '0');
+                return `${hours}:${minutes}`;
+            },
+        },
+        handleScroll: {
+            mouseWheel: true,
+            pressedMouseMove: true,
+        },
+        handleScale: {
+            axisPressedMouseMove: true,
+            mouseWheel: true,
+            pinch: true,
+        },
+    });
+
+    candlestickSeries = chart.addCandlestickSeries({
+        upColor: '#26a69a',
+        downColor: '#ef5350',
+        borderUpColor: '#26a69a',
+        borderDownColor: '#ef5350',
+        wickUpColor: '#26a69a',
+        wickDownColor: '#ef5350',
+        priceFormat: {
+            type: 'price',
+            precision: 6,
+            minMove: 0.000001
+        }
+    });
+
+    // Auto-resize
+    const resizeObserver = new ResizeObserver(entries => {
+        if (entries.length === 0 || entries[0].target !== chartContainer) {
+            return;
+        }
+        const newRect = entries[0].contentRect;
+        chart.applyOptions({ 
+            width: newRect.width, 
+            height: newRect.height 
+        });
+    });
+
+    resizeObserver.observe(chartContainer);
+}
+
+async function loadCandles() {
+    try {
+        const response = await fetch(`${TWELVE_DATA_ENDPOINT}?symbol=EUR/USD&interval=5min&outputsize=100`);
+        
+        if (!response.ok) {
+            throw new Error(`HTTP ${response.status}`);
+        }
+        
+        const data = await response.json();
+        
+        if (!data.values || data.values.length === 0) {
+            throw new Error('No hay datos disponibles');
+        }
+        
+        const now = Date.now();
+        
+        const candles = data.values.map((candle) => {
+            const dateStr = candle.datetime.replace(' ', 'T') + 'Z';
+            const timestamp = Math.floor(new Date(dateStr).getTime() / 1000);
+            
+            return {
+                time: timestamp,
+                open: parseFloat(candle.open),
+                high: parseFloat(candle.high),
+                low: parseFloat(candle.low),
+                close: parseFloat(candle.close)
+            };
+        });
+        
+        candles.sort((a, b) => a.time - b.time);
+        
+        console.log('📊 Primera vela:', candles[0]);
+        console.log('📊 Última vela:', candles[candles.length - 1]);
+        
+        candlesData = candles;
+        
+        if (candlestickSeries) {
+            candlestickSeries.setData(candles);
+            lastCandleData = {...candles[candles.length - 1]};
+            generateSignals(candles);
+        }
+        
+        const latestCandle = candles[candles.length - 1];
+        const twelveDataPrice = latestCandle.close;
+        const marketAdjustment = 0.00236;
+        const realMarketPrice = twelveDataPrice + marketAdjustment;
+        
+        document.getElementById('currentPrice').textContent = realMarketPrice.toFixed(6);
+        
+        if (candles.length > 1) {
+            const prevCandle = candles[candles.length - 2];
+            const change = realMarketPrice - (prevCandle.close + marketAdjustment);
+            const changePercent = ((change / (prevCandle.close + marketAdjustment)) * 100).toFixed(2);
+            const changeEl = document.getElementById('priceChange');
+            changeEl.textContent = `${change >= 0 ? '+' : ''}${change.toFixed(6)} (${changePercent}%)`;
+            changeEl.className = `price-change ${change >= 0 ? 'up' : 'down'}`;
+            
+            const priceEl = document.getElementById('currentPrice');
+            priceEl.style.color = change >= 0 ? '#26a69a' : '#ef5350';
+        }
+        
+        const updateTime = new Date();
+        const utcMinus4 = new Date(updateTime.getTime() - (4 * 60 * 60 * 1000));
+        const hours = String(utcMinus4.getUTCHours()).padStart(2, '0');
+        const minutes
+
+Copia
+Compartir
+= String(utcMinus4.getUTCMinutes()).padStart(2, '0');
+Const segundos = String(utcMinus4.getUTCSeconds()).padStart(2, '0');
+document.getElementById('updateTime').textContent =
+Actualizado: ${hours}:${minutes}:${seconds} (UTC-4);
+Copia
+
+    console.log(`✅ ${candles.length} velas cargadas - Precio real: ${realMarketPrice.toFixed(6)} (Twelve Data: ${twelveDataPrice.toFixed(6)})`);
+    
+    return candles;
+    
+} catch (error) {
+    console.error('❌ Error:', error);
+    document.getElementById('statusText').textContent = 'Error de conexión';
+    return [];
+}
+
+}
+Copia
+
+
+### Conclusiones
+1. **Corrección de Timezone**: Asegúrate de que los timestamps estén en el formato correcto desde el backend y evita correcciones manuales en el frontend.
+2. **Limpieza de Caché**: Pide al usuario que limpie la caché del navegador y añade parámetros de cache-busting a tus recursos estáticos.
+3. **Verificación de Datos**: Asegúrate de que los datos JSON devueltos por la API estén en el formato correcto y que los timestamps estén ordenados ascendentemente.
+4. **Formateo de Timestamps**: Simplifica el `tickMarkFormatter` para evitar problemas de conversión de timezone.
+
+Con estas mejoras, deberías poder resolver el problema de los timestamps desordenados en el eje X del gráfico de trading.

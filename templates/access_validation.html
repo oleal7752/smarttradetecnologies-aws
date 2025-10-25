@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validación de Acceso - Smart Trade Academy</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Courier New', Consolas, Monaco, monospace;
+            background: #000000;
+            color: #00ffff;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            perspective: 1500px;
+            overflow-x: hidden;
+        }
+
+        .container {
+            width: 95%;
+            max-width: 1400px;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 50px;
+            transform: translateZ(50px);
+        }
+
+        .logo {
+            font-size: 3rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #00ffff 0%, #0099ff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 0 30px rgba(0, 255, 255, 0.5);
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            color: rgba(0, 255, 255, 0.6);
+            letter-spacing: 2px;
+        }
+
+        .plans-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .plan-card {
+            background: rgba(0, 255, 255, 0.02);
+            border: 1px solid rgba(0, 255, 255, 0.15);
+            border-radius: 20px;
+            padding: 30px;
+            backdrop-filter: blur(40px);
+            transform-style: preserve-3d;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .plan-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(0, 255, 255, 0.1) 0%, rgba(0, 153, 255, 0.1) 100%);
+            opacity: 0;
+            transition: opacity 0.4s;
+            pointer-events: none;
+        }
+
+        .plan-card:hover {
+            transform: translateZ(30px) scale(1.05);
+            border-color: #00ffff;
+            box-shadow: 
+                0 0 60px rgba(0, 255, 255, 0.3),
+                inset 0 0 30px rgba(0, 255, 255, 0.1);
+        }
+
+        .plan-card:hover::before {
+            opacity: 1;
+        }
+
+        .plan-card.popular {
+            border-color: #00ffff;
+            box-shadow: 0 0 40px rgba(0, 255, 255, 0.2);
+        }
+
+        .popular-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: linear-gradient(135deg, #00ffff 0%, #0099ff 100%);
+            color: #000;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .plan-name {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #00ffff;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .plan-price {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #0099ff;
+            margin-bottom: 5px;
+            text-shadow: 0 0 20px rgba(0, 153, 255, 0.5);
+        }
+
+        .plan-period {
+            color: rgba(0, 255, 255, 0.5);
+            margin-bottom: 25px;
+            font-size: 0.9rem;
+        }
+
+        .features-list {
+            list-style: none;
+            margin-bottom: 25px;
+        }
+
+        .features-list li {
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(0, 255, 255, 0.1);
+            color: rgba(0, 255, 255, 0.8);
+            font-size: 0.9rem;
+        }
+
+        .features-list li::before {
+            content: '✓';
+            color: #00ffff;
+            margin-right: 10px;
+            font-weight: bold;
+        }
+
+        .btn-select {
+            background: linear-gradient(135deg, #00ffff 0%, #0099ff 100%);
+            color: #000;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-weight: 700;
+            cursor: pointer;
+            width: 100%;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s;
+            font-family: 'Courier New', Consolas, Monaco, monospace;
+        }
+
+        .btn-select:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(0, 255, 255, 0.4);
+        }
+
+        .promo-section {
+            background: rgba(0, 255, 255, 0.03);
+            border: 1px solid rgba(0, 255, 255, 0.2);
+            border-radius: 15px;
+            padding: 40px;
+            backdrop-filter: blur(40px);
+            text-align: center;
+            transform: translateZ(20px);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .promo-title {
+            font-size: 1.5rem;
+            color: #00ffff;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .promo-input-group {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .promo-input {
+            flex: 1;
+            background: rgba(0, 255, 255, 0.05);
+            border: 1px solid rgba(0, 255, 255, 0.3);
+            color: #00ffff;
+            padding: 15px 20px;
+            border-radius: 10px;
+            font-family: 'Courier New', Consolas, Monaco, monospace;
+            font-size: 1rem;
+            transition: all 0.3s;
+        }
+
+        .promo-input:focus {
+            outline: none;
+            border-color: #00ffff;
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+        }
+
+        .promo-input::placeholder {
+            color: rgba(0, 255, 255, 0.3);
+        }
+
+        .btn-validate {
+            background: linear-gradient(135deg, #00ffff 0%, #0099ff 100%);
+            color: #000;
+            border: none;
+            padding: 15px 40px;
+            border-radius: 10px;
+            font-weight: 700;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s;
+            font-family: 'Courier New', Consolas, Monaco, monospace;
+        }
+
+        .btn-validate:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(0, 255, 255, 0.4);
+        }
+
+        .alert {
+            padding: 20px 30px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            backdrop-filter: blur(40px);
+            border: 2px solid;
+            text-align: center;
+            transform: translateZ(40px);
+            animation: slideDown 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            font-size: 1rem;
+            letter-spacing: 1px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateZ(40px) translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateZ(40px) translateY(0);
+            }
+        }
+
+        .alert-success {
+            background: rgba(0, 255, 100, 0.05);
+            border-color: rgba(0, 255, 100, 0.4);
+            color: #00ff64;
+            box-shadow: 
+                0 0 30px rgba(0, 255, 100, 0.2),
+                inset 0 0 20px rgba(0, 255, 100, 0.1);
+        }
+
+        .alert-error {
+            background: rgba(255, 50, 50, 0.05);
+            border-color: rgba(255, 50, 50, 0.4);
+            color: #ff3232;
+            box-shadow: 
+                0 0 30px rgba(255, 50, 50, 0.2),
+                inset 0 0 20px rgba(255, 50, 50, 0.1);
+        }
+
+        .alert-icon {
+            font-size: 1.8rem;
+            filter: drop-shadow(0 0 10px currentColor);
+        }
+
+        .logout-btn {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: rgba(255, 0, 100, 0.1);
+            border: 1px solid rgba(255, 0, 100, 0.3);
+            color: #ff0064;
+            padding: 10px 25px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-family: 'Courier New', Consolas, Monaco, monospace;
+            transition: all 0.3s;
+        }
+
+        .logout-btn:hover {
+            background: rgba(255, 0, 100, 0.2);
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            .plans-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .promo-input-group {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <button class="logout-btn" onclick="logout()">CERRAR SESIÓN</button>
+
+    <div class="container">
+        <div class="header">
+            <div class="logo">SMART TRADE ACADEMY</div>
+            <div class="subtitle">ACTIVA TU ACCESO AL SISTEMA</div>
+        </div>
+
+        <div id="alert-container"></div>
+
+        <div class="plans-grid">
+            <div class="plan-card">
+                <div class="plan-name">Mensual</div>
+                <div class="plan-price">$200</div>
+                <div class="plan-period">por mes</div>
+                <ul class="features-list">
+                    <li>3 Bots activos</li>
+                    <li>8 Estrategias</li>
+                    <li>Sistema Dual-Gale</li>
+                    <li>Dashboard personal</li>
+                    <li>Soporte 24/7</li>
+                </ul>
+                <button class="btn-select" onclick="selectPlan('MONTHLY', 200)">SELECCIONAR</button>
+            </div>
+
+            <div class="plan-card">
+                <div class="plan-name">Trimestral</div>
+                <div class="plan-price">$500</div>
+                <div class="plan-period">3 meses</div>
+                <ul class="features-list">
+                    <li>3 Bots activos</li>
+                    <li>8 Estrategias</li>
+                    <li>Sistema Dual-Gale</li>
+                    <li>Dashboard personal</li>
+                    <li>Soporte prioritario</li>
+                </ul>
+                <button class="btn-select" onclick="selectPlan('QUARTERLY', 500)">SELECCIONAR</button>
+            </div>
+
+            <div class="plan-card popular">
+                <div class="popular-badge">MÁS POPULAR</div>
+                <div class="plan-name">Semestral</div>
+                <div class="plan-price">$999</div>
+                <div class="plan-period">6 meses</div>
+                <ul class="features-list">
+                    <li>3 Bots activos</li>
+                    <li>8 Estrategias</li>
+                    <li>Sistema Dual-Gale</li>
+                    <li>Dashboard personal</li>
+                    <li>Asesoría 1-1</li>
+                </ul>
+                <button class="btn-select" onclick="selectPlan('BIANNUAL', 999)">SELECCIONAR</button>
+            </div>
+
+            <div class="plan-card">
+                <div class="plan-name">Anual</div>
+                <div class="plan-price">$1,999</div>
+                <div class="plan-period">12 meses</div>
+                <ul class="features-list">
+                    <li>3 Bots activos</li>
+                    <li>8 Estrategias</li>
+                    <li>Sistema Dual-Gale</li>
+                    <li>Dashboard personal</li>
+                    <li>Asesoría VIP</li>
+                </ul>
+                <button class="btn-select" onclick="selectPlan('ANNUAL', 1999)">SELECCIONAR</button>
+            </div>
+        </div>
+
+        <div class="promo-section">
+            <div class="promo-title">¿TIENES UN CÓDIGO PROMOCIONAL?</div>
+            <p style="color: rgba(0, 255, 255, 0.6); margin-bottom: 20px;">
+                Ingresa tu código para activar acceso inmediato
+            </p>
+            <div class="promo-input-group">
+                <input type="text" class="promo-input" id="promo-code" placeholder="INGRESA TU CÓDIGO" maxlength="20">
+                <button class="btn-validate" onclick="validatePromoCode()">VALIDAR</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        async function selectPlan(plan, amount) {
+            try {
+                const response = await fetch('/api/subscriptions/purchase', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ plan, amount })
+                });
+
+                const data = await response.json();
+
+                if (data.success) {
+                    showAlert('success', '¡Pago procesado exitosamente! Redirigiendo...');
+                    setTimeout(() => {
+                        window.location.href = '/welcome';
+                    }, 1500);
+                } else {
+                    showAlert('error', data.error || 'Error al procesar el pago');
+                }
+            } catch (error) {
+                showAlert('error', 'Error de conexión: ' + error.message);
+            }
+        }
+
+        async function validatePromoCode() {
+            const code = document.getElementById('promo-code').value.trim().toUpperCase();
+            
+            if (!code) {
+                showAlert('error', 'Por favor ingresa un código promocional');
+                return;
+            }
+
+            try {
+                const response = await fetch('/api/promo/activate', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ code })
+                });
+
+                const data = await response.json();
+
+                if (data.success) {
+                    showAlert('success', '¡Código válido! Redirigiendo...');
+                    setTimeout(() => {
+                        window.location.href = '/welcome';
+                    }, 1500);
+                } else {
+                    showAlert('error', data.error || 'Código inválido o expirado');
+                }
+            } catch (error) {
+                showAlert('error', 'Error de conexión: ' + error.message);
+            }
+        }
+
+        function showAlert(type, message) {
+            const container = document.getElementById('alert-container');
+            const alertClass = type === 'success' ? 'alert-success' : 'alert-error';
+            const icon = type === 'success' ? '✓' : '🔒';
+            
+            container.innerHTML = `
+                <div class="alert ${alertClass}">
+                    <span class="alert-icon">${icon}</span>
+                    <span>${message}</span>
+                </div>
+            `;
+            
+            setTimeout(() => {
+                container.innerHTML = '';
+            }, 5000);
+        }
+
+        async function logout() {
+            try {
+                await fetch('/api/auth/logout', { method: 'POST' });
+                window.location.href = '/auth/login';
+            } catch (error) {
+                console.error('Error al cerrar sesión:', error);
+            }
+        }
+
+        // Verificar si ya tiene acceso
+        async function checkAccess() {
+            try {
+                const response = await fetch('/api/auth/check-access');
+                const data = await response.json();
+
+                if (data.has_access) {
+                    // Ya tiene acceso, redirigir al dashboard
+                    window.location.href = '/welcome';
+                }
+            } catch (error) {
+                console.error('Error verificando acceso:', error);
+            }
+        }
+
+        // Verificar acceso al cargar
+        checkAccess();
+    </script>
+</body>
+</html>

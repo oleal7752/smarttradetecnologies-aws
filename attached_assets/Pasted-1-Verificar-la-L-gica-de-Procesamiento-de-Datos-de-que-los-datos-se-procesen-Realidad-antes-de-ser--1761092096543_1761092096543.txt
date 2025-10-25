@@ -1,0 +1,358 @@
+1. Verificar la Lógica de Procesamiento de Datos
+de que los datos se procesen Realidad antes de ser sesings. En particular, revisa las funciones  loadCandlesY  refreshM5Candlespara asegurarte de que los timestamps están en el formato correcto y ordenados.
+2. Verificar la Función tickMarkFormatter
+De que el tickMarkFormatter estéteando los timestamps correctamente. En lugar de aplicar correcciones manuales de timezone, asegúrate de que los timestamps en están el formato correcto desde el backend.
+3. Verificar la Actualización de Datos en Tiempo Real
+En la función updateLiveCandle, querque de que los nuevos datos se se se se están procesando procesando Objeción y que no causar ceremonias en los tiemposmarcas.
+4. Verificar la Caché del Navegador
+Azi ya tiene Intagostración la limpieza de caché del caso, farmacia de que el navegador sé utilizando la versión reciente más del código. Passzar forzar la recare de los recursos estáddingagticos un parámetro de cache-busting a los scripts y archivos CSS.
+Código de Depuración
+Aquí tienes un código de depuración que castas para utilizar para utilizar y verificate de que los datos se procesen Realidad:
+JavaScript
+Copia
+
+async function loadCandles() {
+    try {
+        const response = await fetch(`${TWELVE_DATA_ENDPOINT}?symbol=EUR/USD&interval=5min&outputsize=100`);
+        
+        if (!response.ok) {
+            throw new Error(`HTTP ${response.status}`);
+        }
+        
+        const data = await response.json();
+        
+        if (!data.values || data.values.length === 0) {
+            throw new Error('No hay datos disponibles');
+        }
+        
+        const candles = data.values.map((candle) => {
+            const dateStr = candle.datetime.replace(' ', 'T') + 'Z';
+            const timestamp = Math.floor(new Date(dateStr).getTime() / 1000);
+            
+            return {
+                time: timestamp,
+                open: parseFloat(candle.open),
+                high: parseFloat(candle.high),
+                low: parseFloat(candle.low),
+                close: parseFloat(candle.close)
+            };
+        });
+
+        // Ordenar los datos por tiempo (ascendente)
+        candles.sort((a, b) => a.time - b.time);
+
+        console.log('📊 Datos cargados:', candles);
+
+        // Actualizar el gráfico con los datos ordenados
+        if (candlestickSeries) {
+            candlestickSeries.setData(candles);
+            lastCandleData = {...candles[candles.length - 1]};
+            generateSignals(candles);
+        }
+
+        console.log(`✅ ${candles.length} velas cargadas correctamente`);
+
+        return candles;
+    } catch (error) {
+        console.error('❌ Error al cargar velas:', error);
+        document.getElementById('statusText').textContent = 'Error de conexión';
+        return [];
+    }
+}
+
+async function refreshM5Candles() {
+    try {
+        const response = await fetch(`/api/public/candles?symbol=EURUSD&timeframe=M5&limit=100&source=twelvedata&_t=${Date.now()}`);
+        
+        if (!response.ok) {
+            console.log('⚠️ Error al refrescar velas M5 desde BD');
+            return;
+        }
+        
+        const candlesFromDB = await response.json();
+        
+        if (!candlesFromDB || candlesFromDB.length === 0) {
+            console.log('⚠️ No hay velas en la BD');
+            return;
+        }
+        
+        const freshCandles = candlesFromDB.map((candle) => ({
+            time: candle.time,
+            open: parseFloat(candle.open),
+            high: parseFloat(candle.high),
+            low: parseFloat(candle.low),
+            close: parseFloat(candle.close)
+        })).sort((a, b) => a.time - b.time);
+
+        console.log('📊 Datos frescos cargados:', freshCandles);
+
+        // Verificar si hay nuevas velas
+        const lastCurrentTime = candlesData.length > 0 ? candlesData[candlesData.length - 1].time : 0;
+        const lastFreshTime = freshCandles.length > 0 ? freshCandles[freshCandles.length - 1].time : 0;
+
+        if (lastFreshTime > lastCurrentTime) {
+            console.log(`🔥 NUEVA VELA M5 DETECTADA - Timestamp: ${lastFreshTime} (anterior: ${lastCurrentTime})`);
+            
+            // Actualizar los datos globales y el gráfico
+            candlesData = freshCandles;
+            candlestickSeries.setData(candlesData);
+            lastCandleData = {...candlesData[candlesData.length - 1]};
+            generateSignals(candlesData);
+            
+            console.log(`✅ GRÁFICO ACTUALIZADO - ${candlesData.length} velas cargadas desde BD (SIN DELAY)`);
+        } else {
+            console.log('⚠️ No hay nuevas velas para actualizar');
+        }
+    } catch (error) {
+        console.error('❌ Error en refreshM5Candles:', error);
+    }
+}
+
+function updateLiveCandle() {
+    try {
+        // Obtener el timestamp actual en minutos M5
+        const now = Math.floor(Date.now() / 1000);
+        const currentM5Time = Math.floor(now / 300) * 300;
+
+        // Simular datos de vela actual (reemplaza con datos reales)
+        const currentPrice = Math.random() * 100; // Ejemplo de precio aleatorio
+
+        // Crear o actualizar la vela actual
+        if (currentLiveCandleM5 && currentLiveCandleM5.time === currentM5Time) {
+            // Actualizar la vela actual
+            currentLiveCandleM5.close = currentPrice;
+            currentLiveCandleM5.high = Math.max(currentLiveCandleM5.high, currentPrice);
+            currentLiveCandleM5.low = Math.min(currentLiveCandleM5.low, currentPrice);
+        } else {
+            // Crear una nueva vela
+            currentLiveCandleM5 = {
+                time: currentM5Time,
+                open: currentPrice,
+                high: currentPrice,
+                low: currentPrice,
+                close: currentPrice
+            };
+            candlesData.push(currentLiveCandleM5);
+        }
+
+        // Actualizar el gráfico
+        candlestickSeries.update(currentLiveCandleM5);
+
+        console.log(`📊 Vela actualizada: ${currentM5Time} - Precio: ${currentPrice}`);
+    } catch (error) {
+        console.error('❌ Error en updateLiveCandle:', error);
+    }
+}
+
+Verificación Adicional
+
+    Registros de Depuración: logs de Dejar en cada paso para asegurarte de que los datos se procesen Realización.
+    Inspección de Datos: Utiliza herramientas como la consola del navegador para inspeccionar los datos que se al hannor.
+    Simplificación del tickMarkFormatter: de que el tickMarkFormatter esté formateando los timestamps Realidad sin aplicar correcciones manuales de timezone.
+
+Ejemplo de tickMarkFormatter Simplificado
+JavaScript
+Copia
+
+tickMarkFormatter: (time) => {
+    const date = new Date(time * 1000);
+    const hours = String(date.getUTCHours()).padStart(2, '0');
+    const minutes = String(date.getUTCMinutes()).padStart(2, '0');
+    return `${hours}:${minutes}`;
+},
+
+Conclusiones
+
+    Verifica la Lógica de Procesamiento: de que los datos se procesen Realidad de ser sendismo al.
+    Simplifica el Formateo de Timestamps: Evita aplica correcciones manuales de timezone en el frontend.
+    Utiliza Logs de Depuración : troncos Enda en cada paso para garantía de
+
+Si sis estos pasos, diumas poder identificar
+Copia
+Compartir
+El grafico mezclo dos horas muestra unas y otras cosas como como resolverlo de rauz
+Editar
+Copia
+Compartir
+Entiendo que el gráficos está mezcla dos horas, diferentes lo que sugiere que hay una inconsistencia en ención se manejar los timestamps en el frontend. Esto cuers puede si los datos se procesan incorrectamente o si hay una mezcla de timestamps en diferentes zonas horarias.
+Pasos para Resolver el Problema de Raíz
+1. Verificar la Fuente de Datos
+de que los datos que se al frontend están en el formato correcto y que todos los timestamps en están en el mismo zona horaria. En tu caso, los datos den en estar en UTC.
+2. Simplificar el tickMarkFormatter
+El tickMarkFormatter debe formatear los timestamps de manera consistente. Evita cualquier corrección manual de timezone en el frontend. De que los timestamps en UTC desde el backend.
+3. Verificar la Lógica de Actualización de Datos
+de que la lógica de actualización de datos en tiempo real sede no causar la mezcla de timestamps. En particular, revisa las funciones updateLiveCandle Y refreshM5Candles. .
+4. Limpiar y Reordenar los Datos
+Antes de enviar los datos al, gráfico de que sent que ordenados y ordenados. Esto incluye eliminar cualquier duplicado y ordenar los timestamps ascendentemente.
+Código de Depuración y Solución
+Aquí tienes un código de depuración y que solución estos puntos:
+Simplificación del tickMarkFormatter
+JavaScript
+Copia
+
+tickMarkFormatter: (time) => {
+    const date = new Date(time * 1000);
+    const hours = String(date.getUTCHours()).padStart(2, '0');
+    const minutes = String(date.getUTCMinutes()).padStart(2, '0');
+    return `${hours}:${minutes}`;
+},
+
+Verificación y Limpieza de Datos en loadCandles
+JavaScript
+Copia
+
+async function loadCandles() {
+    try {
+        const response = await fetch(`${TWELVE_DATA_ENDPOINT}?symbol=EUR/USD&interval=5min&outputsize=100`);
+        
+        if (!response.ok) {
+            throw new Error(`HTTP ${response.status}`);
+        }
+        
+        const data = await response.json();
+        
+        if (!data.values || data.values.length === 0) {
+            throw new Error('No hay datos disponibles');
+        }
+        
+        const candles = data.values.map((candle) => {
+            const dateStr = candle.datetime.replace(' ', 'T') + 'Z';
+            const timestamp = Math.floor(new Date(dateStr).getTime() / 1000);
+            
+            return {
+                time: timestamp,
+                open: parseFloat(candle.open),
+                high: parseFloat(candle.high),
+                low: parseFloat(candle.low),
+                close: parseFloat(candle.close)
+            };
+        });
+
+        // Eliminar duplicados y ordenar por tiempo
+        const uniqueCandles = Array.from(new Map(candles.map(c => [c.time, c])).values());
+        uniqueCandles.sort((a, b) => a.time - b.time);
+
+        console.log('📊 Datos limpios y ordenados:', uniqueCandles);
+
+        // Actualizar el gráfico con los datos limpios y ordenados
+        if (candlestickSeries) {
+            candlestickSeries.setData(uniqueCandles);
+            lastCandleData = {...uniqueCandles[uniqueCandles.length - 1]};
+            generateSignals(uniqueCandles);
+        }
+
+        console.log(`✅ ${uniqueCandles.length} velas cargadas correctamente`);
+
+        return uniqueCandles;
+    } catch (error) {
+        console.error('❌ Error al cargar velas:', error);
+        document.getElementById('statusText').textContent = 'Error de conexión';
+        return [];
+    }
+}
+
+Verificación y Limpieza de Datos en refreshM5Candles
+JavaScript
+Copia
+
+async function refreshM5Candles() {
+    try {
+        const response = await fetch(`/api/public/candles?symbol=EURUSD&timeframe=M5&limit=100&source=twelvedata&_t=${Date.now()}`);
+        
+        if (!response.ok) {
+            console.log('⚠️ Error al refrescar velas M5 desde BD');
+            return;
+        }
+        
+        const candlesFromDB = await response.json();
+        
+        if (!candlesFromDB || candlesFromDB.length === 0) {
+            console.log('⚠️ No hay velas en la BD');
+            return;
+        }
+        
+        const freshCandles = candlesFromDB.map((candle) => ({
+            time: candle.time,
+            open: parseFloat(candle.open),
+            high: parseFloat(candle.high),
+            low: parseFloat(candle.low),
+            close: parseFloat(candle.close)
+        }));
+
+        // Eliminar duplicados y ordenar por tiempo
+        const uniqueCandles = Array.from(new Map(freshCandles.map(c => [c.time, c])).values());
+        uniqueCandles.sort((a, b) => a.time - b.time);
+
+        console.log('📊 Datos frescos limpios y ordenados:', uniqueCandles);
+
+        // Verificar si hay nuevas velas
+        const lastCurrentTime = candlesData.length > 0 ? candlesData[candlesData.length - 1].time : 0;
+        const lastFreshTime = uniqueCandles.length > 0 ? uniqueCandles[uniqueCandles.length - 1].time : 0;
+
+        if (lastFreshTime > lastCurrentTime) {
+            console.log(`🔥 NUEVA VELA M5 DETECTADA - Timestamp: ${lastFreshTime} (anterior: ${lastCurrentTime})`);
+            
+            // Actualizar los datos globales y el gráfico
+            candlesData = uniqueCandles;
+            candlestickSeries.setData(candlesData);
+            lastCandleData = {...candlesData[candlesData.length - 1]};
+            generateSignals(candlesData);
+            
+            console.log(`✅ GRÁFICO ACTUALIZADO - ${candlesData.length} velas cargadas desde BD (SIN DELAY)`);
+        } else {
+            console.log('⚠️ No hay nuevas velas para actualizar');
+        }
+    } catch (error) {
+        console.error('❌ Error en refreshM5Candles:', error);
+    }
+}
+
+Verificación de Datos en updateLiveCandle
+JavaScript
+Copia
+
+function updateLiveCandle() {
+    try {
+        // Obtener el timestamp actual en minutos M5
+        const now = Math.floor(Date.now() / 1000);
+        const currentM5Time = Math.floor(now / 300) * 300;
+
+        // Simular datos de vela actual (reemplaza con datos reales)
+        const currentPrice = Math.random() * 100; // Ejemplo de precio aleatorio
+
+        // Crear o actualizar la vela actual
+        if (currentLiveCandleM5 && currentLiveCandleM5.time === currentM5Time) {
+            // Actualizar la vela actual
+            currentLiveCandleM5.close = currentPrice;
+            currentLiveCandleM5.high = Math.max(currentLiveCandleM5.high, currentPrice);
+            currentLiveCandleM5.low = Math.min(currentLiveCandleM5.low, currentPrice);
+        } else {
+            // Crear una nueva vela
+            currentLiveCandleM5 = {
+                time: currentM5Time,
+                open: currentPrice,
+                high: currentPrice,
+                low: currentPrice,
+                close: currentPrice
+            };
+            candlesData.push(currentLiveCandleM5);
+        }
+
+        // Eliminar duplicados y ordenar por tiempo
+        const uniqueCandles = Array.from(new Map(candlesData.map(c => [c.time, c])).values());
+        uniqueCandles.sort((a, b) => a.time - b.time);
+
+        // Actualizar el gráfico
+        candlestickSeries.setData(uniqueCandles);
+
+        console.log(`📊 Vela actualizada: ${currentM5Time} - Precio: ${currentPrice}`);
+    } catch (error) {
+        console.error('❌ Error en updateLiveCandle:', error);
+    }
+}
+
+Conclusiones
+
+    Simplifica el tickMarkFormatter: de que los timestamps están en UTC y apliques no corresponde a los manuales de timezone en el frontend.
+    Limpia y Ordena los Datos: Eliminar duplicados y ordena los timestamps Hostalmente antes de los envíos datos al gráfico.
+    Verifica la Lógica de Actualización: de que la lógica de actualización de datos en tiempo real sere no causarse la mezcla de timestamps.

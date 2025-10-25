@@ -1,0 +1,40 @@
+workspace_iframe.html?initialPath=%2F&id=%3Arr1%3A:1 Unrecognized feature: 'ambient-light-sensor'.
+workspace_iframe.html?initialPath=%2F&id=%3Arr1%3A:1 Unrecognized feature: 'battery'.
+workspace_iframe.html?initialPath=%2F&id=%3Arr1%3A:1 Unrecognized feature: 'execution-while-not-rendered'.
+workspace_iframe.html?initialPath=%2F&id=%3Arr1%3A:1 Unrecognized feature: 'execution-while-out-of-viewport'.
+workspace_iframe.html?initialPath=%2F&id=%3Arr1%3A:1 Unrecognized feature: 'layout-animations'.
+workspace_iframe.html?initialPath=%2F&id=%3Arr1%3A:1 Unrecognized feature: 'legacy-image-formats'.
+workspace_iframe.html?initialPath=%2F&id=%3Arr1%3A:1 Unrecognized feature: 'navigation-override'.
+workspace_iframe.html?initialPath=%2F&id=%3Arr1%3A:1 Unrecognized feature: 'oversized-images'.
+workspace_iframe.html?initialPath=%2F&id=%3Arr1%3A:1 Unrecognized feature: 'publickey-credentials'.
+workspace_iframe.html?initialPath=%2F&id=%3Arr1%3A:1 Unrecognized feature: 'speaker-selection'.
+workspace_iframe.html?initialPath=%2F&id=%3Arr1%3A:1 Unrecognized feature: 'unoptimized-images'.
+workspace_iframe.html?initialPath=%2F&id=%3Arr1%3A:1 Unrecognized feature: 'unsized-media'.
+workspace_iframe.html?initialPath=%2F&id=%3Arr1%3A:1 Allow attribute will take precedence over 'allowfullscreen'.
+workspace_iframe.html?initialPath=%2F&id=%3Arr1%3A:1 Allow attribute will take precedence over 'allowpaymentrequest'.
+Console.js:61 📋 IQ Option Dashboard iniciado
+Console.js:61 🎯 Inicializando STCChartFix con config: {containerId: 'chart', endpoint: '/api/iq/candles?symbol=EURUSD-OTC&timeframe=M5&limit=200', timeframe: 'M5', pollMs: 3000, max: 200}
+Console.js:61 ✅ Gráfico LightweightCharts inicializado
+Console.js:61 📊 Cargando datos iniciales desde: /api/iq/candles?symbol=EURUSD-OTC&timeframe=M5&limit=200
+Console.js:61 🔄 Polling iniciado cada 3000ms
+Console.js:61 ✅ Dashboard IQ Option inicializado
+Console.js:61 🎯 DOM listo, inicializando STC Charts...
+Console.js:61 🎯 Inicializando gráfico con fuente: finnhub
+Console.js:61 🎯 Inicializando STCChartFix con config: {containerId: 'chart', endpoint: '/api/finnhub/candles?symbol=BTCUSD&timeframe=M5&limit=200', timeframe: 'M5', pollMs: 2000, max: 200}
+Console.js:61 ✅ Gráfico LightweightCharts inicializado
+Console.js:61 📊 Cargando datos iniciales desde: /api/finnhub/candles?symbol=BTCUSD&timeframe=M5&limit=200
+Console.js:61 🔄 Polling iniciado cada 2000ms
+Console.js:61 📈 Datos recibidos: []
+Console.js:61 ⚠️ No hay datos de velas disponibles
+Mt.forEach.n.<computed> @ Console.js:61
+loadInitialData @ stc_chart_fix.js:112
+await in loadInitialData
+init @ stc_chart_fix.js:31
+(anonymous) @ iqoption:172
+Console.js:61 📈 Datos recibidos: []
+Console.js:61 ⚠️ No hay datos de velas disponibles
+Mt.forEach.n.<computed> @ Console.js:61
+loadInitialData @ stc_chart_fix.js:112
+await in loadInitialData
+init @ stc_chart_fix.js:31
+(anonymous) @ stc_chart_fix.js:290

@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <title>smarttradetecnologies-ar - Sistema de Trading Automatizado</title>
+    
+    <!-- PWA Tags -->
+    <link rel="manifest" href="/static/manifest.json">
+    <meta name="theme-color" content="#00ffff">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="STC-AR">
+    <link rel="apple-touch-icon" href="/static/icons/icon-192x192.png">
+    <meta name="description" content="💰 Tecnología que multiplica capital - Sistema de trading profesional con señales en tiempo real">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <style>
+        :root {
+            --primary-color: #0066ff;
+            --secondary-color: #00d4ff;
+            --dark-bg: #000000;
+            --card-bg: rgba(10, 20, 40, 0.4);
+            --text-primary: #ffffff;
+            --text-secondary: #b0b8c1;
+            --glass-border: rgba(0, 212, 255, 0.3);
+            --neon-cyan: #00d4ff;
+            --neon-blue: #0066ff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: radial-gradient(circle at 50% 50%, rgba(0, 102, 255, 0.15) 0%, #000000 70%);
+            color: var(--text-primary);
+            line-height: 1.6;
+        }
+
+        /* Navbar */
+        .navbar-custom {
+            background: linear-gradient(135deg, rgba(0, 102, 255, 0.1) 0%, rgba(0, 0, 0, 0.6) 100%);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--glass-border);
+            padding: 1rem 0;
+            box-shadow: 0 4px 20px rgba(0, 102, 255, 0.2);
+        }
+
+        .navbar-brand {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-primary) !important;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .navbar-brand i {
+            color: var(--secondary-color);
+        }
+
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(135deg, rgba(0, 102, 255, 0.05) 0%, rgba(0, 0, 0, 0.8) 100%);
+            padding: 100px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 30% 50%, rgba(0, 102, 255, 0.2) 0%, transparent 50%),
+                        radial-gradient(circle at 70% 80%, rgba(0, 212, 255, 0.15) 0%, transparent 50%);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, #ffffff 0%, var(--neon-cyan) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 0 0 30px rgba(0, 212, 255, 0.3);
+        }
+
+        .hero-subtitle {
+            font-size: 1.3rem;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--neon-cyan);
+            text-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
+        }
+
+        .stat-label {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Features Section */
+        .features-section {
+            padding: 80px 0;
+            background: var(--dark-bg);
+        }
+
+        .feature-card {
+            background: linear-gradient(135deg, rgba(0, 102, 255, 0.1) 0%, rgba(0, 0, 0, 0.4) 100%);
+            border-radius: 20px;
+            padding: 2rem;
+            height: 100%;
+            border: 1px solid var(--glass-border);
+            backdrop-filter: blur(15px);
+            transition: all 0.3s;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 40px rgba(0, 212, 255, 0.4), inset 0 0 30px rgba(0, 102, 255, 0.1);
+            border-color: var(--neon-cyan);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            color: var(--neon-cyan);
+            margin-bottom: 1rem;
+            text-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
+        }
+
+        .feature-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        /* Pricing Section */
+        .pricing-section {
+            padding: 80px 0;
+            background: linear-gradient(180deg, var(--dark-bg) 0%, var(--card-bg) 100%);
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 3rem;
+        }
+
+        .pricing-card {
+            background: linear-gradient(135deg, rgba(0, 102, 255, 0.15) 0%, rgba(0, 0, 0, 0.5) 100%);
+            border-radius: 20px;
+            padding: 2.5rem;
+            border: 2px solid var(--glass-border);
+            backdrop-filter: blur(20px);
+            transition: all 0.3s;
+            height: 100%;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .pricing-card:hover {
+            border-color: var(--neon-cyan);
+            transform: scale(1.05);
+            box-shadow: 0 20px 50px rgba(0, 212, 255, 0.4), inset 0 0 40px rgba(0, 102, 255, 0.15);
+        }
+
+        .pricing-card.featured {
+            border-color: var(--neon-cyan);
+            position: relative;
+            box-shadow: 0 10px 40px rgba(0, 212, 255, 0.3);
+        }
+
+        .featured-badge {
+            position: absolute;
+            top: -15px;
+            right: 20px;
+            background: linear-gradient(135deg, var(--neon-blue) 0%, var(--neon-cyan) 100%);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            box-shadow: 0 4px 15px rgba(0, 212, 255, 0.5);
+        }
+
+        .plan-name {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .plan-price {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--neon-cyan);
+            margin-bottom: 0.5rem;
+            text-shadow: 0 0 20px rgba(0, 212, 255, 0.6);
+        }
+
+        .plan-period {
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+        }
+
+        .plan-features {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+
+        .plan-features li {
+            padding: 0.8rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .plan-features li i {
+            color: var(--neon-cyan);
+            margin-right: 10px;
+        }
+
+        .btn-primary-custom {
+            background: linear-gradient(135deg, var(--neon-blue) 0%, var(--neon-cyan) 100%);
+            border: none;
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s;
+            width: 100%;
+            box-shadow: 0 4px 15px rgba(0, 102, 255, 0.3);
+        }
+
+        .btn-primary-custom:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(0, 212, 255, 0.6);
+        }
+
+        /* Register Section */
+        .register-section {
+            padding: 80px 0;
+            background: var(--dark-bg);
+        }
+
+        .register-card {
+            background: linear-gradient(135deg, rgba(0, 102, 255, 0.15) 0%, rgba(0, 0, 0, 0.5) 100%);
+            border-radius: 20px;
+            padding: 3rem;
+            border: 1px solid var(--glass-border);
+            backdrop-filter: blur(20px);
+            max-width: 800px;
+            margin: 0 auto;
+            box-shadow: 0 10px 40px rgba(0, 102, 255, 0.3);
+        }
+
+        .form-control-custom {
+            background: rgba(0, 102, 255, 0.05);
+            border: 1px solid var(--glass-border);
+            color: var(--text-primary);
+            padding: 12px 20px;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+        }
+
+        .form-control-custom:focus {
+            background: rgba(0, 102, 255, 0.1);
+            border-color: var(--neon-cyan);
+            color: var(--text-primary);
+            box-shadow: 0 0 0 0.2rem rgba(0, 212, 255, 0.25), 0 0 15px rgba(0, 212, 255, 0.3);
+        }
+
+        .form-control-custom::placeholder {
+            color: var(--text-secondary);
+        }
+
+        .form-select-custom {
+            background: rgba(0, 102, 255, 0.05);
+            border: 1px solid var(--glass-border);
+            color: var(--text-primary);
+            padding: 12px 20px;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+        }
+
+        .form-select-custom:focus {
+            background: rgba(0, 102, 255, 0.1);
+            border-color: var(--neon-cyan);
+            color: var(--text-primary);
+            box-shadow: 0 0 0 0.2rem rgba(0, 212, 255, 0.25), 0 0 15px rgba(0, 212, 255, 0.3);
+        }
+
+        .form-select-custom option {
+            background: rgba(10, 20, 40, 0.95);
+            color: var(--text-primary);
+        }
+
+        .alert-custom {
+            border-radius: 10px;
+            border: none;
+        }
+
+        /* Footer */
+        .footer {
+            background: linear-gradient(135deg, rgba(0, 102, 255, 0.05) 0%, rgba(0, 0, 0, 0.8) 100%);
+            backdrop-filter: blur(20px);
+            padding: 3rem 0 1rem;
+            border-top: 1px solid var(--glass-border);
+        }
+
+        .footer-link {
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-link:hover {
+            color: var(--neon-cyan);
+            text-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
+        }
+
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            
+            .hero-stats {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="bi bi-graph-up-arrow"></i>
+                smarttradetecnologies-ar
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#features">Características</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#pricing">Planes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#register">Registro</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/auth/login">Iniciar Sesión</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 hero-content">
+                    <h1 class="hero-title">Sistema de Trading Automatizado</h1>
+                    <p style="font-size: 1.5rem; color: rgba(0, 255, 255, 0.9); margin-bottom: 1rem; letter-spacing: 1px; text-shadow: 0 0 20px rgba(0, 212, 255, 0.5);">
+                        💰 Tecnología que multiplica capital
+                    </p>
+                    <p class="hero-subtitle">
+                        Accede a estrategias de trading profesionales con bots automatizados. 
+                        8 estrategias avanzadas, sistema Dual-Gale y gestión de riesgo integrada.
+                    </p>
+                    <a href="#register" class="btn btn-primary-custom btn-lg">
+                        <i class="bi bi-rocket-takeoff me-2"></i>
+                        Comenzar Ahora
+                    </a>
+                    
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">87%</div>
+                            <div class="stat-label">Win Rate</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">8</div>
+                            <div class="stat-label">Estrategias</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">24/7</div>
+                            <div class="stat-label">Automatizado</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <img src="/static/trading-signals-preview.png" 
+                         alt="Señales de Trading en Tiempo Real" class="img-fluid rounded" style="border-radius: 20px; border: 2px solid rgba(0, 255, 255, 0.3);">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features-section">
+        <div class="container">
+            <h2 class="section-title">Características Profesionales</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <i class="bi bi-cpu feature-icon"></i>
+                        <h3 class="feature-title">8 Estrategias Avanzadas</h3>
+                        <p class="text-secondary">
+                            RSI, MACD, Bollinger, Probabilidad+Gale, Kolmogorov-Markov, 
+                            Complejidad, SmartTrade y Tablero Binarias.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <i class="bi bi-shield-check feature-icon"></i>
+                        <h3 class="feature-title">Sistema Dual-Gale</h3>
+                        <p class="text-secondary">
+                            Gestión de riesgo avanzada con Martingale independiente para 
+                            CALL y PUT. Optimizado matemáticamente para 87% payout.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <i class="bi bi-graph-up feature-icon"></i>
+                        <h3 class="feature-title">Dashboard Profesional</h3>
+                        <p class="text-secondary">
+                            Monitoreo en tiempo real, gráficas de rendimiento, 
+                            estadísticas personalizadas y track record individual.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <i class="bi bi-lightning-charge feature-icon"></i>
+                        <h3 class="feature-title">Ejecución Instantánea</h3>
+                        <p class="text-secondary">
+                            Detección de velas por timestamp con delay de 0-1 segundo. 
+                            Integración directa con IQ Option API.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <i class="bi bi-gear feature-icon"></i>
+                        <h3 class="feature-title">Configuración Personalizada</h3>
+                        <p class="text-secondary">
+                            Ajusta monto, par, ciclos de Gale, pérdida máxima diaria 
+                            y máximo de trades por día según tu perfil.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <i class="bi bi-clock-history feature-icon"></i>
+                        <h3 class="feature-title">Backtesting Integrado</h3>
+                        <p class="text-secondary">
+                            Prueba estrategias con datos históricos. Métricas completas: 
+                            win rate, profit factor, Sharpe ratio y drawdown.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing-section">
+        <div class="container">
+            <h2 class="section-title">Planes de Suscripción</h2>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="pricing-card">
+                        <div class="plan-name">Mensual</div>
+                        <div class="plan-price">$200</div>
+                        <div class="plan-period">por mes</div>
+                        <ul class="plan-features">
+                            <li><i class="bi bi-check-circle-fill"></i> 3 Bots activos</li>
+                            <li><i class="bi bi-check-circle-fill"></i> 8 Estrategias</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Sistema Dual-Gale</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Dashboard personal</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Soporte 24/7</li>
+                        </ul>
+                        <button class="btn btn-primary-custom" onclick="scrollToRegister()">
+                            Seleccionar Plan
+                        </button>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="pricing-card">
+                        <div class="plan-name">Trimestral</div>
+                        <div class="plan-price">$500</div>
+                        <div class="plan-period">3 meses</div>
+                        <ul class="plan-features">
+                            <li><i class="bi bi-check-circle-fill"></i> 3 Bots activos</li>
+                            <li><i class="bi bi-check-circle-fill"></i> 8 Estrategias</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Sistema Dual-Gale</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Dashboard personal</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Soporte prioritario</li>
+                        </ul>
+                        <button class="btn btn-primary-custom" onclick="scrollToRegister()">
+                            Seleccionar Plan
+                        </button>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="pricing-card featured">
+                        <div class="featured-badge">MÁS POPULAR</div>
+                        <div class="plan-name">Semestral</div>
+                        <div class="plan-price">$999</div>
+                        <div class="plan-period">6 meses</div>
+                        <ul class="plan-features">
+                            <li><i class="bi bi-check-circle-fill"></i> 3 Bots activos</li>
+                            <li><i class="bi bi-check-circle-fill"></i> 8 Estrategias</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Sistema Dual-Gale</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Dashboard personal</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Asesoría 1-1</li>
+                        </ul>
+                        <button class="btn btn-primary-custom" onclick="scrollToRegister()">
+                            Seleccionar Plan
+                        </button>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="pricing-card">
+                        <div class="plan-name">Anual</div>
+                        <div class="plan-price">$1,999</div>
+                        <div class="plan-period">12 meses</div>
+                        <ul class="plan-features">
+                            <li><i class="bi bi-check-circle-fill"></i> 3 Bots activos</li>
+                            <li><i class="bi bi-check-circle-fill"></i> 8 Estrategias</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Sistema Dual-Gale</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Dashboard personal</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Asesoría VIP</li>
+                        </ul>
+                        <button class="btn btn-primary-custom" onclick="scrollToRegister()">
+                            Seleccionar Plan
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Register Section -->
+    <section id="register" class="register-section">
+        <div class="container">
+            <div class="register-card">
+                <h2 class="text-center mb-4">Crear Cuenta</h2>
+                
+                <div id="alert-container"></div>
+
+                <form id="registerForm">
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <label class="form-label">Nombre</label>
+                            <input type="text" class="form-control form-control-custom" name="first_name" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">Apellido</label>
+                            <input type="text" class="form-control form-control-custom" name="last_name" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">Email</label>
+                            <input type="email" class="form-control form-control-custom" name="email" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">Teléfono</label>
+                            <input type="tel" class="form-control form-control-custom" name="phone" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">DNI / Cédula</label>
+                            <input type="text" class="form-control form-control-custom" name="dni" 
+                                   placeholder="Ej: 12345678-9" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">País</label>
+                            <select class="form-select form-select-custom" name="country" required>
+                                <option value="">Selecciona tu país</option>
+                                <option value="Argentina">Argentina</option>
+                                <option value="Bolivia">Bolivia</option>
+                                <option value="Brasil">Brasil</option>
+                                <option value="Chile">Chile</option>
+                                <option value="Colombia">Colombia</option>
+                                <option value="Costa Rica">Costa Rica</option>
+                                <option value="Cuba">Cuba</option>
+                                <option value="Ecuador">Ecuador</option>
+                                <option value="El Salvador">El Salvador</option>
+                                <option value="España">España</option>
+                                <option value="Estados Unidos">Estados Unidos</option>
+                                <option value="Guatemala">Guatemala</option>
+                                <option value="Honduras">Honduras</option>
+                                <option value="México">México</option>
+                                <option value="Nicaragua">Nicaragua</option>
+                                <option value="Panamá">Panamá</option>
+                                <option value="Paraguay">Paraguay</option>
+                                <option value="Perú">Perú</option>
+                                <option value="Puerto Rico">Puerto Rico</option>
+                                <option value="República Dominicana">República Dominicana</option>
+                                <option value="Uruguay">Uruguay</option>
+                                <option value="Venezuela">Venezuela</option>
+                                <option disabled>───────────────</option>
+                                <option value="Alemania">Alemania</option>
+                                <option value="Arabia Saudita">Arabia Saudita</option>
+                                <option value="Australia">Australia</option>
+                                <option value="Bélgica">Bélgica</option>
+                                <option value="Canadá">Canadá</option>
+                                <option value="China">China</option>
+                                <option value="Corea del Sur">Corea del Sur</option>
+                                <option value="Emiratos Árabes Unidos">Emiratos Árabes Unidos</option>
+                                <option value="Francia">Francia</option>
+                                <option value="India">India</option>
+                                <option value="Indonesia">Indonesia</option>
+                                <option value="Italia">Italia</option>
+                                <option value="Japón">Japón</option>
+                                <option value="Países Bajos">Países Bajos</option>
+                                <option value="Portugal">Portugal</option>
+                                <option value="Reino Unido">Reino Unido</option>
+                                <option value="Rusia">Rusia</option>
+                                <option value="Singapur">Singapur</option>
+                                <option value="Sudáfrica">Sudáfrica</option>
+                                <option value="Suiza">Suiza</option>
+                                <option value="Tailandia">Tailandia</option>
+                                <option value="Turquía">Turquía</option>
+                                <option value="Otro">Otro</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">Fecha de Nacimiento</label>
+                            <input type="date" class="form-control form-control-custom" name="birthdate" required>
+                        </div>
+                        <div class="col-12">
+                            <label class="form-label">Broker</label>
+                            <select class="form-select form-select-custom" name="broker_type" required>
+                                <option value="">Selecciona tu broker</option>
+                                <option value="exnova">Exnova</option>
+                                <option value="iqoption">IQ Option</option>
+                                <option value="olymptrade">OlympTrade</option>
+                                <option value="quotex">Quotex</option>
+                            </select>
+                        </div>
+                        <div class="col-12">
+                            <label class="form-label">ID de Cuenta del Broker</label>
+                            <input type="text" class="form-control form-control-custom" name="broker_account_id" 
+                                   placeholder="Ej: 12345678" required>
+                            <small class="text-secondary">Encontrarás tu ID en la configuración de tu cuenta de broker</small>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">Contraseña</label>
+                            <input type="password" class="form-control form-control-custom" name="password" 
+                                   minlength="8" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">Confirmar Contraseña</label>
+                            <input type="password" class="form-control form-control-custom" name="password_confirm" 
+                                   minlength="8" required>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="terms" required>
+                                <label class="form-check-label" for="terms">
+                                    Acepto los <a href="#" class="footer-link">términos y condiciones</a>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <button type="submit" class="btn btn-primary-custom">
+                                <i class="bi bi-person-plus me-2"></i>
+                                Crear Cuenta
+                            </button>
+                        </div>
+                        <div class="col-12 text-center">
+                            <p class="text-secondary mb-0">
+                                ¿Ya tienes cuenta? 
+                                <a href="/auth/login" class="footer-link">Inicia sesión aquí</a>
+                            </p>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5 class="mb-3">Smart Trade Academy</h5>
+                    <p class="text-secondary">
+                        Plataforma profesional de trading automatizado con estrategias 
+                        avanzadas y gestión de riesgo integrada.
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <h5 class="mb-3">Enlaces</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#features" class="footer-link">Características</a></li>
+                        <li><a href="#pricing" class="footer-link">Planes</a></li>
+                        <li><a href="#register" class="footer-link">Registro</a></li>
+                        <li><a href="/auth/login" class="footer-link">Iniciar Sesión</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5 class="mb-3">Contacto</h5>
+                    <p class="text-secondary">
+                        <i class="bi bi-envelope me-2"></i> soporte@smarttradeacademy.com<br>
+                        <i class="bi bi-telegram me-2"></i> @SmartTradeSupport
+                    </p>
+                </div>
+            </div>
+            <hr class="my-4" style="border-color: rgba(255,255,255,0.1)">
+            <div class="text-center text-secondary">
+                <p>&copy; 2024 Smart Trade Academy. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function scrollToRegister() {
+            document.getElementById('register').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        document.getElementById('registerForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData.entries());
+            
+            // Mapear birthdate a birth_date para el backend
+            data.birth_date = data.birthdate;
+            delete data.birthdate;
+            
+            // Validar contraseñas
+            if (data.password !== data.password_confirm) {
+                showAlert('Las contraseñas no coinciden', 'danger');
+                return;
+            }
+
+            // Validar edad (18+)
+            const birthDate = new Date(data.birth_date);
+            const today = new Date();
+            const age = today.getFullYear() - birthDate.getFullYear();
+            if (age < 18) {
+                showAlert('Debes ser mayor de 18 años para registrarte', 'danger');
+                return;
+            }
+
+            try {
+                const response = await fetch('/api/auth/register', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(data)
+                });
+
+                const result = await response.json();
+
+                if (result.success) {
+                    showAlert('¡Cuenta creada exitosamente! Revisa tu email para verificar tu cuenta.', 'success');
+                    setTimeout(() => {
+                        window.location.href = '/auth/login';
+                    }, 2000);
+                } else {
+                    showAlert(result.error || 'Error al crear cuenta', 'danger');
+                }
+            } catch (error) {
+                showAlert('Error de conexión. Intenta de nuevo.', 'danger');
+            }
+        });
+
+        function showAlert(message, type) {
+            const alertContainer = document.getElementById('alert-container');
+            alertContainer.innerHTML = `
+                <div class="alert alert-${type} alert-custom alert-dismissible fade show" role="alert">
+                    ${message}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                </div>
+            `;
+        }
+
+        // Smooth scroll for navbar links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
+    
+    <!-- PWA Service Worker Registration con Auto-Update -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/static/sw.js')
+                    .then(registration => {
+                        console.log('✅ PWA: Service Worker registrado', registration.scope);
+                        
+                        // Auto-update: Verificar actualizaciones cada 60 segundos
+                        setInterval(() => {
+                            registration.update();
+                        }, 60000);
+                        
+                        // Detectar nueva versión y recargar automáticamente
+                        registration.addEventListener('updatefound', () => {
+                            const newWorker = registration.installing;
+                            newWorker.addEventListener('statechange', () => {
+                                if (newWorker.state === 'activated') {
+                                    console.log('🔄 Nueva versión detectada, recargando...');
+                                    window.location.reload();
+                                }
+                            });
+                        });
+                    })
+                    .catch(error => {
+                        console.log('❌ PWA: Error al registrar Service Worker', error);
+                    });
+            });
+        }
+    </script>
+</body>
+</html>

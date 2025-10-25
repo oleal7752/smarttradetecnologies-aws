@@ -1,0 +1,264 @@
+Lista de causas probables específicas basadas en tu traza.
+Plan de verificación rápido (instrumentación).
+Código de saneo para aislar la vela corrupta.
+Refactor para evitar usar setData en cada tick.
+Validaciones de tiempo y orden.
+Cómo capturar y mostrar el primer objeto inválido.
+Después me pasas los logs y, si quieres, te ayudo con la corrección final.
+
+1. Causas probables (orden de probabilidad)
+Estás reconstruyendo todo el array de velas (setData) cada tick y en algún punto una vela nueva se crea con alguna propiedad undefined (por ejemplo low o open) antes de inicializarla, o se rellena condicionalmente.
+Map/destructuring que renombra: const { o, h, l, c } = candle y luego produces {open:o, high:h, ...} pero alguno viene undefined.
+Viene un valor como string vacío ("") o espacio y haces parseFloat("") → NaN; internamente la librería lo trata como inválido y termina en el flujo que produce el mensaje. (Aunque el mensaje dice “Value is null”, internamente un check previo puede convertirlo a null).
+time no es entero seconds sino un string, un Date, o lo divides mal y queda NaN.
+Mutación accidental: guardas referencia a la vela agregada en un array y luego, al crear la siguiente, reasignas sus campos dejando algún campo anterior a null (por ejemplo haces candle.open = null como parte de lógica de reinicio, o delete candle.volume).
+Mezclas velas con datos de otro tipo (tick parcial que no tiene high/low).
+Orden no ascendente + uso de setData repetido: generas una “vela futura” y luego un update con una vieja que contiene valores incompletos (menos común para este error concreto).
+Diferencia en nombre: usas closePrice y luego al map hacer c.close (que no existe → undefined).
+2. Instrumentación mínima inmediata
+Añade ANTES de cualquier setData o series.update:
+
+JavaScript
+function assertValidCandle(c) {
+  const required = ["time","open","high","low","close"];
+  for (const k of required) {
+    if (c[k] == null || Number.isNaN(c[k])) {
+      console.error("CANDLE INVALIDA", k, c);
+      throw new Error("Candle inválida antes de enviar al chart");
+    }
+  }
+  if (!Number.isInteger(c.time)) {
+    console.error("TIME NO ES ENTERO (segundos)", c.time, c);
+    throw new Error("time inválido");
+  }
+  if (!(c.high >= c.low && c.high >= c.open && c.high >= c.close && c.low <= c.open && c.low <= c.close)) {
+    console.warn("Inconsistencia OHLC (no rompe siempre, pero revisa):", c);
+  }
+}
+Para dataset completo (cuando haces setData):
+
+JavaScript
+function assertDataArray(arr) {
+  if (!Array.isArray(arr)) throw new Error("setData no recibe un array");
+  let lastTime = -Infinity;
+  for (let i=0;i<arr.length;i++){
+    const c = arr[i];
+    assertValidCandle(c);
+    if (c.time <= lastTime) {
+      console.warn("Orden no ascendente en índice", i, c.time, "prev", lastTime);
+    }
+    lastTime = c.time;
+  }
+}
+Luego:
+
+JavaScript
+// En tu updateChart (donde llamas setData):
+assertDataArray(candlesArray);
+candleSeries.setData(candlesArray);
+Si quieres sólo detectar sin abortar, cambia los throw por return.
+
+3. Capturar el primer fallo sin spamear
+JavaScript
+let firstInvalidLogged = false;
+
+function safeSetData(data){
+  try {
+    assertDataArray(data);
+    candleSeries.setData(data);
+  } catch (e) {
+    if (!firstInvalidLogged) {
+      console.group("ERROR setData - primer evento");
+      console.error(e);
+      console.log("Dataset (primeros 5):", data.slice(0,5));
+      console.log("Dataset (últimos 5):", data.slice(-5));
+      // Busca candela con campo null:
+      data.forEach((c,idx)=>{
+        ["open","high","low","close","time"].forEach(f=>{
+          if (c[f]==null || Number.isNaN(c[f])) {
+            console.error("Indice", idx, "campo", f, "valor", c[f], "obj", c);
+          }
+        });
+      });
+      console.groupEnd();
+      firstInvalidLogged = true;
+    }
+  }
+}
+
+function safeUpdate(c){
+  try {
+    assertValidCandle(c);
+    candleSeries.update(c);
+  } catch(e) {
+    if (!firstInvalidLogged){
+      console.error("ERROR update", e, c);
+      firstInvalidLogged = true;
+    }
+  }
+}
+4. Refactor recomendado: dejar de usar setData por tick
+Patrón:
+
+JavaScript
+let bootstrapped = false;
+let lastTime = null;
+
+async function bootstrap() {
+  const res = await fetch('/candles?symbol=EUR/USD&limit=500');
+  const { candles } = await res.json();
+  const arr = candles
+    .map(c => ({
+      time: Number(c.time),
+      open: Number(c.open),
+      high: Number(c.high),
+      low: Number(c.low),
+      close: Number(c.close),
+    }))
+    .filter(c => c.time && !Object.values(c).some(v=>v==null || Number.isNaN(v)));
+  arr.sort((a,b)=>a.time-b.time);
+  assertDataArray(arr);
+  candleSeries.setData(arr);
+  lastTime = arr.length ? arr[arr.length-1].time : null;
+  bootstrapped = true;
+}
+
+function handleIncomingCandle(raw) {
+  if (!bootstrapped) return;
+  const c = {
+    time: Number(raw.time),
+    open: Number(raw.open),
+    high: Number(raw.high),
+    low: Number(raw.low),
+    close: Number(raw.close),
+  };
+  if (Object.values(c).some(v => v==null || Number.isNaN(v))){
+    console.warn("Descartando vela con null/NaN", raw);
+    return;
+  }
+  if (lastTime !== null && c.time < lastTime) {
+    console.warn("Vela fuera de orden, ignorada", c);
+    return;
+  }
+  // update añade o actualiza automáticamente la última si time coincide
+  safeUpdate(c);
+  lastTime = c.time;
+}
+5. Verifica cómo construyes la vela parcial
+Cuando llega el primer tick de una nueva vela debes asignar:
+
+JavaScript
+open = high = low = close = price;
+No hagas:
+
+JavaScript
+let candle = { time: bucketTime };
+candle.open = candle.open || price; // si open no existe está undefined (ok) pero asegúrate que precio existe
+candle.high = Math.max(candle.high, price); // si candle.high es undefined -> Math.max(undefined, price) = NaN
+Ese patrón produce NaN que después puede convertirse a null internamente. Debe ser:
+
+JavaScript
+if(!candle){
+  candle = {time: bucketTime, open: price, high: price, low: price, close: price, volume: 0};
+}else{
+  if(price > candle.high) candle.high = price;
+  if(price < candle.low) candle.low = price;
+  candle.close = price;
+}
+6. Chequeo de tipos de datos (strings numéricos)
+Si backend envía:
+
+JSON
+{"time": 1728323456, "open": "1.07543", "high":"1.07560", "low":"1.07510", "close":"1.07555"}
+Convierte a número al recibir:
+
+JavaScript
+["open","high","low","close"].forEach(k => c[k] = Number(c[k]));
+7. Confirmar formato de time
+Debe ser epoch seconds (ej. 1728323456).
+Si estás enviando milisegundos (13 dígitos) podrías continuar, pero es mejor normalizar a seconds:
+
+JavaScript
+if (c.time > 2e10) c.time = Math.floor(c.time / 1000);
+8. Ejemplo final integrando todo
+JavaScript
+let candleSeries;
+let bootstrapped = false;
+let lastTime = null;
+
+function isFiniteNumber(x){ return typeof x === 'number' && Number.isFinite(x); }
+function isValidCandle(c){
+  return c && Number.isInteger(c.time) &&
+    isFiniteNumber(c.open) &&
+    isFiniteNumber(c.high) &&
+    isFiniteNumber(c.low) &&
+    isFiniteNumber(c.close);
+}
+
+function sanitizeCandle(raw){
+  const c = {
+    time: Number(raw.time),
+    open: Number(raw.open),
+    high: Number(raw.high),
+    low: Number(raw.low),
+    close: Number(raw.close)
+  };
+  if (!Number.isInteger(c.time)) c.time = Math.floor(c.time);
+  return c;
+}
+
+async function bootstrap(){
+  const r = await fetch('/candles?symbol=EUR/USD&limit=500');
+  const { candles } = await r.json();
+  const dataset = candles.map(sanitizeCandle).filter(isValidCandle)
+                     .sort((a,b)=>a.time-b.time);
+  assertDataArray(dataset);
+  candleSeries.setData(dataset);
+  lastTime = dataset.length ? dataset.at(-1).time : null;
+  bootstrapped = true;
+}
+
+function processCandle(raw){
+  if(!bootstrapped) return;
+  const c = sanitizeCandle(raw);
+  if(!isValidCandle(c)){
+    console.warn("Candle descartada", raw, c);
+    return;
+  }
+  if(lastTime !== null && c.time < lastTime){
+    console.warn("Fuera de orden", c.time, "<", lastTime);
+    return;
+  }
+  safeUpdate(c);
+  lastTime = c.time;
+}
+
+function connectWS(){
+  const proto = location.protocol === 'https:' ? 'wss':'ws';
+  const ws = new WebSocket(`${proto}://${location.host}/ws`);
+  ws.onmessage = ev => {
+    const msg = JSON.parse(ev.data);
+    if(msg.type === 'candle' && msg.symbol === 'EUR/USD'){
+      processCandle(msg.data);
+    }
+  };
+  ws.onclose = ()=> setTimeout(connectWS, 2000);
+}
+
+bootstrap().then(connectWS);
+9. Qué necesito de ti si sigue fallando
+Copia y pega (anonimizado si quieres) el primer log de “CANDLE INVALIDA” que salga con el instrumento. Eso nos dirá exactamente cuál campo está cayendo a null/undefined.
+
+Ejemplo deseado de log:
+
+Code
+CANDLE INVALIDA close {time:1728323500, open:1.0754, high:1.0756, low:1.0752, close: undefined, volume:0}
+Con eso te doy el fix definitivo.
+
+10. Resumen rápido de acciones
+Deja de usar setData en cada tick.
+Añade assertDataArray + assertValidCandle.
+Sanear números (Number(...)).
+Asegúrate de inicializar todos los campos al crear una vela.
+Verifica que no haces Math.max/Math.min sobre undefined.
+Loguea el primer caso inválido y compártelo.

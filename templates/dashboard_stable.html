@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STC Trading Dashboard - Versión Estable</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <!-- Chart.js - Más confiable que LightweightCharts -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.3.0/dist/chart.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: #fff;
+            min-height: 100vh;
+        }
+
+        .header {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 1rem 2rem;
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .main-container {
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr;
+            gap: 20px;
+            padding: 20px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .panel {
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 15px;
+            padding: 20px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .chart-container {
+            height: 400px;
+            margin: 20px 0;
+        }
+
+        .trading-controls {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .btn {
+            padding: 15px 25px;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+        }
+
+        .btn-call {
+            background: linear-gradient(135deg, #00ff88, #00cc6a);
+            color: #000;
+        }
+
+        .btn-put {
+            background: linear-gradient(135deg, #ff4444, #cc3333);
+            color: #fff;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+
+        .status-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            margin-right: 8px;
+        }
+
+        .connected { background: #00ff88; }
+        .disconnected { background: #ff4444; }
+
+        .symbol-item {
+            padding: 10px;
+            margin: 5px 0;
+            background: rgba(255,255,255,0.1);
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .symbol-item:hover, .symbol-item.active {
+            background: rgba(0,212,255,0.3);
+            transform: translateX(5px);
+        }
+
+        .investment-input {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            background: rgba(0,0,0,0.3);
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 8px;
+            color: #fff;
+            font-size: 16px;
+        }
+
+        .balance-display {
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            color: #00ff88;
+            margin: 15px 0;
+        }
+
+        .alert {
+            position: fixed;
+            top: 80px;
+            right: 20px;
+            padding: 15px 20px;
+            border-radius: 8px;
+            color: #fff;
+            z-index: 1000;
+            animation: slideIn 0.3s ease;
+        }
+
+        .alert-success { background: rgba(0, 255, 136, 0.9); }
+        .alert-error { background: rgba(255, 68, 68, 0.9); }
+        .alert-info { background: rgba(0, 212, 255, 0.9); }
+
+        @keyframes slideIn {
+            from { transform: translateX(100%); }
+            to { transform: translateX(0); }
+        }
+
+        .loading {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 200px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+            <div>
+                <h1><i class="fas fa-chart-line"></i> STC Trading Dashboard</h1>
+            </div>
+            <div style="display: flex; gap: 20px; align-items: center;">
+                <div><span class="status-dot connected" id="iqStatus"></span>IQ Option</div>
+                <div class="balance-display" id="balanceDisplay">$0.00</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-container">
+        <!-- Panel Izquierdo: Símbolos -->
+        <div class="panel">
+            <h3><i class="fas fa-list"></i> Símbolos</h3>
+            <div id="symbolsList">
+                <div class="loading">Cargando símbolos...</div>
+            </div>
+        </div>
+
+        <!-- Panel Central: Gráfico -->
+        <div class="panel">
+            <h3><i class="fas fa-chart-bar"></i> Gráfico de Velas M5</h3>
+            <div class="chart-container">
+                <canvas id="priceChart"></canvas>
+            </div>
+            
+            <!-- Controles de Trading -->
+            <div class="trading-controls">
+                <button class="btn btn-call" onclick="executeTrade('CALL')">
+                    <i class="fas fa-arrow-up"></i> CALL (Subida)
+                </button>
+                <button class="btn btn-put" onclick="executeTrade('PUT')">
+                    <i class="fas fa-arrow-down"></i> PUT (Bajada)
+                </button>
+            </div>
+            
+            <input type="number" class="investment-input" id="investmentAmount" value="1" min="1" max="1000" placeholder="Monto de inversión ($)">
+        </div>
+
+        <!-- Panel Derecho: Estados -->
+        <div class="panel">
+            <h3><i class="fas fa-info-circle"></i> Estado del Sistema</h3>
+            <div style="margin: 20px 0;">
+                <h4>Conexiones:</h4>
+                <div style="margin: 10px 0;"><span class="status-dot" id="iqStatus2"></span>IQ Option API</div>
+                <div style="margin: 10px 0;"><span class="status-dot" id="dashStatus"></span>Dashboard</div>
+            </div>
+            
+            <div style="margin: 20px 0;">
+                <h4>Trading:</h4>
+                <div id="lastTrade">Sin operaciones</div>
+            </div>
+            
+            <div style="margin: 20px 0;">
+                <h4>Símbolo Activo:</h4>
+                <div id="currentSymbol">EURUSD-OTC</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Configuración global
+        const CONFIG = {
+            API_BASE_URL: '',
+            REFRESH_INTERVAL: 5000,
+            MAX_CANDLES: 50
+        };
+
+        // Estado global
+        const state = {
+            currentSymbol: 'EURUSD-OTC',
+            isConnected: false,
+            chart: null,
+            balance: 0
+        };
+
+        // Gestor de alertas
+        class AlertManager {
+            static show(message, type = 'info') {
+                const alert = document.createElement('div');
+                alert.className = `alert alert-${type}`;
+                alert.textContent = message;
+                document.body.appendChild(alert);
+                
+                setTimeout(() => {
+                    alert.remove();
+                }, 5000);
+            }
+            
+            static success(message) { this.show(message, 'success'); }
+            static error(message) { this.show(message, 'error'); }
+            static info(message) { this.show(message, 'info'); }
+        }
+
+        // Gestor del gráfico con Chart.js
+        class ChartManager {
+            constructor() {
+                this.chart = null;
+                this.initChart();
+            }
+
+            initChart() {
+                try {
+                    const ctx = document.getElementById('priceChart').getContext('2d');
+                    
+                    this.chart = new Chart(ctx, {
+                        type: 'line',
+                        data: {
+                            labels: [],
+                            datasets: [{
+                                label: 'Precio de Cierre',
+                                data: [],
+                                borderColor: '#00d4ff',
+                                backgroundColor: 'rgba(0, 212, 255, 0.1)',
+                                borderWidth: 2,
+                                fill: true,
+                                tension: 0.4
+                            }]
+                        },
+                        options: {
+                            responsive: true,
+                            maintainAspectRatio: false,
+                            plugins: {
+                                legend: {
+                                    labels: { color: '#fff' }
+                                }
+                            },
+                            scales: {
+                                x: {
+                                    ticks: { color: '#fff' },
+                                    grid: { color: 'rgba(255,255,255,0.1)' }
+                                },
+                                y: {
+                                    ticks: { color: '#fff' },
+                                    grid: { color: 'rgba(255,255,255,0.1)' }
+                                }
+                            }
+                        }
+                    });
+
+                    console.log('📊 Gráfico Chart.js inicializado correctamente');
+                    AlertManager.success('📊 Gráfico inicializado correctamente');
+                    
+                } catch (error) {
+                    console.error('❌ Error inicializando gráfico:', error);
+                    AlertManager.error('❌ Error inicializando gráfico: ' + error.message);
+                }
+            }
+
+            updateCandles(candles) {
+                if (!this.chart || !candles || candles.length === 0) return;
+
+                try {
+                    const labels = candles.map(c => new Date(c.time).toLocaleTimeString());
+                    const prices = candles.map(c => c.close);
+
+                    this.chart.data.labels = labels;
+                    this.chart.data.datasets[0].data = prices;
+                    this.chart.update('none');
+                    
+                } catch (error) {
+                    console.error('❌ Error actualizando gráfico:', error);
+                }
+            }
+        }
+
+        // API Manager
+        class APIManager {
+            static async request(endpoint, options = {}) {
+                const url = `${CONFIG.API_BASE_URL}${endpoint}`;
+                
+                try {
+                    const response = await fetch(url, {
+                        headers: { 'Content-Type': 'application/json', ...options.headers },
+                        ...options
+                    });
+                    
+                    if (!response.ok) throw new Error(`HTTP ${response.status}`);
+                    return await response.json();
+                    
+                } catch (error) {
+                    console.error(`❌ Error en ${endpoint}:`, error);
+                    throw error;
+                }
+            }
+
+            static async getBalance() {
+                try {
+                    const data = await this.request('/api/iq/balance');
+                    return data.balance || 0;
+                } catch (error) {
+                    return 0;
+                }
+            }
+
+            static async getSymbols() {
+                try {
+                    const data = await this.request('/api/iq/symbols');
+                    return data.symbols || [];
+                } catch (error) {
+                    return [
+                        { symbol: 'EURUSD-OTC', displayName: 'EUR/USD OTC' },
+                        { symbol: 'GBPUSD-OTC', displayName: 'GBP/USD OTC' },
+                        { symbol: 'USDJPY-OTC', displayName: 'USD/JPY OTC' },
+                        { symbol: 'EURJPY-OTC', displayName: 'EUR/JPY OTC' }
+                    ];
+                }
+            }
+
+            static async placeTrade(symbol, direction, amount) {
+                try {
+                    const data = await this.request('/api/iq/trade', {
+                        method: 'POST',
+                        body: JSON.stringify({ symbol, direction: direction.toLowerCase(), amount, expiration: 1 })
+                    });
+                    return data;
+                } catch (error) {
+                    throw error;
+                }
+            }
+        }
+
+        // Funciones principales
+        async function initializeApp() {
+            console.log('🚀 Inicializando STC Dashboard...');
+            
+            try {
+                // Inicializar gráfico
+                state.chart = new ChartManager();
+                
+                // Cargar datos
+                await loadSymbols();
+                await updateBalance();
+                await loadMockCandles();
+                
+                // Iniciar actualizaciones
+                setInterval(updateBalance, 10000);
+                setInterval(loadMockCandles, 30000);
+                
+                AlertManager.success('✅ Dashboard iniciado correctamente');
+                
+            } catch (error) {
+                console.error('❌ Error inicializando:', error);
+                AlertManager.error('❌ Error inicializando dashboard');
+            }
+        }
+
+        async function loadSymbols() {
+            try {
+                const symbols = await APIManager.getSymbols();
+                const container = document.getElementById('symbolsList');
+                
+                container.innerHTML = symbols.map(symbol => `
+                    <div class="symbol-item ${symbol.symbol === state.currentSymbol ? 'active' : ''}" 
+                         onclick="selectSymbol('${symbol.symbol}')">
+                        ${symbol.displayName || symbol.symbol}
+                    </div>
+                `).join('');
+                
+            } catch (error) {
+                console.error('Error cargando símbolos:', error);
+            }
+        }
+
+        async function updateBalance() {
+            try {
+                const balance = await APIManager.getBalance();
+                state.balance = balance;
+                document.getElementById('balanceDisplay').textContent = `$${balance.toFixed(2)}`;
+                
+                // Actualizar estado de conexión
+                const dots = document.querySelectorAll('#iqStatus, #iqStatus2');
+                dots.forEach(dot => {
+                    dot.className = `status-dot ${balance > 0 ? 'connected' : 'disconnected'}`;
+                });
+                
+                document.getElementById('dashStatus').className = 'status-dot connected';
+                
+            } catch (error) {
+                console.error('Error actualizando balance:', error);
+            }
+        }
+
+        async function loadMockCandles() {
+            // Generar velas simuladas para demostración
+            const candles = [];
+            const now = Date.now();
+            const fiveMinutes = 5 * 60 * 1000;
+            
+            for (let i = 50; i >= 0; i--) {
+                const time = now - (i * fiveMinutes);
+                const basePrice = 1.1000 + Math.random() * 0.01;
+                const close = basePrice + (Math.random() - 0.5) * 0.0005;
+                
+                candles.push({ time, close });
+            }
+            
+            if (state.chart) {
+                state.chart.updateCandles(candles);
+            }
+        }
+
+        function selectSymbol(symbolName) {
+            state.currentSymbol = symbolName;
+            document.getElementById('currentSymbol').textContent = symbolName;
+            
+            // Actualizar UI
+            document.querySelectorAll('.symbol-item').forEach(item => {
+                item.classList.remove('active');
+            });
+            event.target.classList.add('active');
+            
+            loadMockCandles();
+            AlertManager.info(`📊 Símbolo cambiado a ${symbolName}`);
+        }
+
+        async function executeTrade(direction) {
+            const amount = parseFloat(document.getElementById('investmentAmount').value);
+            
+            if (!amount || amount <= 0) {
+                AlertManager.error('❌ Monto de inversión inválido');
+                return;
+            }
+            
+            if (amount > state.balance) {
+                AlertManager.error('❌ Balance insuficiente');
+                return;
+            }
+            
+            try {
+                AlertManager.info(`🔄 Ejecutando operación ${direction}...`);
+                
+                const result = await APIManager.placeTrade(state.currentSymbol, direction, amount);
+                
+                if (result.success) {
+                    AlertManager.success(`✅ Operación ${direction} ejecutada - ID: ${result.trade_id}`);
+                    document.getElementById('lastTrade').innerHTML = `
+                        <strong>${direction}</strong> ${state.currentSymbol}<br>
+                        $${amount} - ID: ${result.trade_id}
+                    `;
+                    await updateBalance();
+                } else {
+                    AlertManager.error(`❌ Error: ${result.message}`);
+                }
+                
+            } catch (error) {
+                AlertManager.error(`❌ Error ejecutando operación: ${error.message}`);
+            }
+        }
+
+        // Inicializar cuando el DOM esté listo
+        document.addEventListener('DOMContentLoaded', initializeApp);
+
+        console.log('📋 STC Dashboard Estable cargado');
+    </script>
+</body>
+</html>

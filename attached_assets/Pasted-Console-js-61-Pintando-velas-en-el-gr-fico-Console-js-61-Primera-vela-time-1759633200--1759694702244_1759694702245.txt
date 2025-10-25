@@ -1,0 +1,1477 @@
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://pkt.name&size=32:1  GET https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://pkt.name&size=32 404 (Not Found)
+faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://pkt.name/&size=32:1  GET https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://pkt.name/&size=32 404 (Not Found)
+Image
+oY @ framework-23cfcc29806aebfa.js:1
+e @ framework-23cfcc29806aebfa.js:1
+(anonymous) @ framework-23cfcc29806aebfa.js:1
+uO @ framework-23cfcc29806aebfa.js:1
+u_ @ framework-23cfcc29806aebfa.js:1
+r6 @ framework-23cfcc29806aebfa.js:1
+(anonymous) @ framework-23cfcc29806aebfa.js:1
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+injected.js:278  GET https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/balance 503 (Service Unavailable)
+window.fetch @ Network.js:219
+apply @ injected.js:278
+updateBalance @ iqoption:320
+setInterval
+(anonymous) @ iqoption:488
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+injected.js:278  POST https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/connect 503 (Service Unavailable)
+window.fetch @ Network.js:219
+apply @ injected.js:278
+(anonymous) @ iqoption:206
+Console.js:61 ❌ Error de conexión: Error: Error al conectar
+    at HTMLButtonElement.<anonymous> (iqoption:246:17)
+Mt.forEach.n.<computed> @ Console.js:61
+(anonymous) @ iqoption:249
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+injected.js:278  GET https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/balance 503 (Service Unavailable)
+window.fetch @ Network.js:219
+apply @ injected.js:278
+updateBalance @ iqoption:320
+setInterval
+(anonymous) @ iqoption:488
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+injected.js:278  GET https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/balance 503 (Service Unavailable)
+window.fetch @ Network.js:219
+apply @ injected.js:278
+updateBalance @ iqoption:320
+setInterval
+(anonymous) @ iqoption:488
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+injected.js:278  GET https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/balance 503 (Service Unavailable)
+window.fetch @ Network.js:219
+apply @ injected.js:278
+updateBalance @ iqoption:320
+setInterval
+(anonymous) @ iqoption:488
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+injected.js:278  GET https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/balance 503 (Service Unavailable)
+window.fetch @ Network.js:219
+apply @ injected.js:278
+updateBalance @ iqoption:320
+setInterval
+(anonymous) @ iqoption:488
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+injected.js:278  GET https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/balance 503 (Service Unavailable)
+window.fetch @ Network.js:219
+apply @ injected.js:278
+updateBalance @ iqoption:320
+setInterval
+(anonymous) @ iqoption:488
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+injected.js:278  GET https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/balance 503 (Service Unavailable)
+window.fetch @ Network.js:219
+apply @ injected.js:278
+updateBalance @ iqoption:320
+setInterval
+(anonymous) @ iqoption:488
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+injected.js:278  GET https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/balance 503 (Service Unavailable)
+window.fetch @ Network.js:219
+apply @ injected.js:278
+updateBalance @ iqoption:320
+setInterval
+(anonymous) @ iqoption:488
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+injected.js:278  GET https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/balance 503 (Service Unavailable)
+window.fetch @ Network.js:219
+apply @ injected.js:278
+updateBalance @ iqoption:320
+setInterval
+(anonymous) @ iqoption:488
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+injected.js:278  GET https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/balance 503 (Service Unavailable)
+window.fetch @ Network.js:219
+apply @ injected.js:278
+updateBalance @ iqoption:320
+setInterval
+(anonymous) @ iqoption:488
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+injected.js:278  GET https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/balance 503 (Service Unavailable)
+window.fetch @ Network.js:219
+apply @ injected.js:278
+updateBalance @ iqoption:320
+setInterval
+(anonymous) @ iqoption:488
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+injected.js:278  GET https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/balance 503 (Service Unavailable)
+window.fetch @ Network.js:219
+apply @ injected.js:278
+updateBalance @ iqoption:320
+setInterval
+(anonymous) @ iqoption:488
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+injected.js:278  GET https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/balance 503 (Service Unavailable)
+window.fetch @ Network.js:219
+apply @ injected.js:278
+updateBalance @ iqoption:320
+setInterval
+(anonymous) @ iqoption:488
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+injected.js:278  GET https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/balance 503 (Service Unavailable)
+window.fetch @ Network.js:219
+apply @ injected.js:278
+updateBalance @ iqoption:320
+setInterval
+(anonymous) @ iqoption:488
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+injected.js:278  GET https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/balance 503 (Service Unavailable)
+window.fetch @ Network.js:219
+apply @ injected.js:278
+updateBalance @ iqoption:320
+setInterval
+(anonymous) @ iqoption:488
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+injected.js:278  GET https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/balance 503 (Service Unavailable)
+window.fetch @ Network.js:219
+apply @ injected.js:278
+updateBalance @ iqoption:320
+setInterval
+(anonymous) @ iqoption:488
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+injected.js:278  GET https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/balance 503 (Service Unavailable)
+window.fetch @ Network.js:219
+apply @ injected.js:278
+updateBalance @ iqoption:320
+setInterval
+(anonymous) @ iqoption:488
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+injected.js:278  GET https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/balance 503 (Service Unavailable)
+window.fetch @ Network.js:219
+apply @ injected.js:278
+updateBalance @ iqoption:320
+setInterval
+(anonymous) @ iqoption:488
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+injected.js:278  GET https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/balance 503 (Service Unavailable)
+window.fetch @ Network.js:219
+apply @ injected.js:278
+updateBalance @ iqoption:320
+setInterval
+(anonymous) @ iqoption:488
+injected.js:278  GET https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/balance 503 (Service Unavailable)
+window.fetch @ Network.js:219
+apply @ injected.js:278
+updateBalance @ iqoption:320
+setInterval
+(anonymous) @ iqoption:488
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+injected.js:278  GET https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/balance 503 (Service Unavailable)
+window.fetch @ Network.js:219
+apply @ injected.js:278
+updateBalance @ iqoption:320
+setInterval
+(anonymous) @ iqoption:488
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+injected.js:278  GET https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/balance 503 (Service Unavailable)
+window.fetch @ Network.js:219
+apply @ injected.js:278
+updateBalance @ iqoption:320
+setInterval
+(anonymous) @ iqoption:488
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+injected.js:278  GET https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/balance 503 (Service Unavailable)
+window.fetch @ Network.js:219
+apply @ injected.js:278
+updateBalance @ iqoption:320
+setInterval
+(anonymous) @ iqoption:488
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+injected.js:278  GET https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/balance 503 (Service Unavailable)
+window.fetch @ Network.js:219
+apply @ injected.js:278
+updateBalance @ iqoption:320
+setInterval
+(anonymous) @ iqoption:488
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+injected.js:278  GET https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/balance 503 (Service Unavailable)
+window.fetch @ Network.js:219
+apply @ injected.js:278
+updateBalance @ iqoption:320
+setInterval
+(anonymous) @ iqoption:488
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+injected.js:278  GET https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/balance 503 (Service Unavailable)
+window.fetch @ Network.js:219
+apply @ injected.js:278
+updateBalance @ iqoption:320
+setInterval
+(anonymous) @ iqoption:488
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+injected.js:278  GET https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/balance 503 (Service Unavailable)
+window.fetch @ Network.js:219
+apply @ injected.js:278
+updateBalance @ iqoption:320
+setInterval
+(anonymous) @ iqoption:488
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+injected.js:278  GET https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/balance 503 (Service Unavailable)
+window.fetch @ Network.js:219
+apply @ injected.js:278
+updateBalance @ iqoption:320
+setInterval
+(anonymous) @ iqoption:488
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+injected.js:278  GET https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/balance 503 (Service Unavailable)
+window.fetch @ Network.js:219
+apply @ injected.js:278
+updateBalance @ iqoption:320
+setInterval
+(anonymous) @ iqoption:488
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+injected.js:278  GET https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/balance 503 (Service Unavailable)
+window.fetch @ Network.js:219
+apply @ injected.js:278
+updateBalance @ iqoption:320
+setInterval
+(anonymous) @ iqoption:488
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+injected.js:278  GET https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/balance 503 (Service Unavailable)
+window.fetch @ Network.js:219
+apply @ injected.js:278
+updateBalance @ iqoption:320
+setInterval
+(anonymous) @ iqoption:488
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+injected.js:278  GET https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/balance 503 (Service Unavailable)
+window.fetch @ Network.js:219
+apply @ injected.js:278
+updateBalance @ iqoption:320
+setInterval
+(anonymous) @ iqoption:488
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+injected.js:278  GET https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/balance 503 (Service Unavailable)
+window.fetch @ Network.js:219
+apply @ injected.js:278
+updateBalance @ iqoption:320
+setInterval
+(anonymous) @ iqoption:488
+injected.js:278  GET https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/balance 503 (Service Unavailable)
+window.fetch @ Network.js:219
+apply @ injected.js:278
+updateBalance @ iqoption:320
+setInterval
+(anonymous) @ iqoption:488
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+injected.js:278  GET https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/balance 503 (Service Unavailable)
+window.fetch @ Network.js:219
+apply @ injected.js:278
+updateBalance @ iqoption:320
+setInterval
+(anonymous) @ iqoption:488
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+injected.js:278  GET https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/balance 503 (Service Unavailable)
+window.fetch @ Network.js:219
+apply @ injected.js:278
+updateBalance @ iqoption:320
+setInterval
+(anonymous) @ iqoption:488
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+injected.js:278  GET https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/balance 503 (Service Unavailable)
+window.fetch @ Network.js:219
+apply @ injected.js:278
+updateBalance @ iqoption:320
+setInterval
+(anonymous) @ iqoption:488
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+injected.js:278  GET https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/balance 503 (Service Unavailable)
+window.fetch @ Network.js:219
+apply @ injected.js:278
+updateBalance @ iqoption:320
+setInterval
+(anonymous) @ iqoption:488
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+injected.js:278  GET https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/balance 503 (Service Unavailable)
+window.fetch @ Network.js:219
+apply @ injected.js:278
+updateBalance @ iqoption:320
+setInterval
+(anonymous) @ iqoption:488
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+injected.js:278  GET https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/balance 503 (Service Unavailable)
+window.fetch @ Network.js:219
+apply @ injected.js:278
+updateBalance @ iqoption:320
+setInterval
+(anonymous) @ iqoption:488
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+injected.js:278  GET https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/balance 503 (Service Unavailable)
+window.fetch @ Network.js:219
+apply @ injected.js:278
+updateBalance @ iqoption:320
+setInterval
+(anonymous) @ iqoption:488
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+injected.js:278  GET https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/balance 503 (Service Unavailable)
+window.fetch @ Network.js:219
+apply @ injected.js:278
+updateBalance @ iqoption:320
+setInterval
+(anonymous) @ iqoption:488
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+injected.js:278  GET https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/balance 503 (Service Unavailable)
+window.fetch @ Network.js:219
+apply @ injected.js:278
+updateBalance @ iqoption:320
+setInterval
+(anonymous) @ iqoption:488
+injected.js:278  GET https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/balance 503 (Service Unavailable)
+window.fetch @ Network.js:219
+apply @ injected.js:278
+updateBalance @ iqoption:320
+setInterval
+(anonymous) @ iqoption:488
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+injected.js:278  GET https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/balance 503 (Service Unavailable)
+window.fetch @ Network.js:219
+apply @ injected.js:278
+updateBalance @ iqoption:320
+setInterval
+(anonymous) @ iqoption:488
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+injected.js:278  GET https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/balance 503 (Service Unavailable)
+window.fetch @ Network.js:219
+apply @ injected.js:278
+updateBalance @ iqoption:320
+setInterval
+(anonymous) @ iqoption:488
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+injected.js:278  GET https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/balance 503 (Service Unavailable)
+window.fetch @ Network.js:219
+apply @ injected.js:278
+updateBalance @ iqoption:320
+setInterval
+(anonymous) @ iqoption:488
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+injected.js:278  GET https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/balance 503 (Service Unavailable)
+window.fetch @ Network.js:219
+apply @ injected.js:278
+updateBalance @ iqoption:320
+setInterval
+(anonymous) @ iqoption:488
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+injected.js:278  GET https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/balance 503 (Service Unavailable)
+window.fetch @ Network.js:219
+apply @ injected.js:278
+updateBalance @ iqoption:320
+setInterval
+(anonymous) @ iqoption:488
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759633200, open: 1.188365, high: 1.190725, low: 1.188125, close: 1.190725}
+Console.js:61 📊 Última vela: {time: 1759693200, open: 1.170115, high: 1.170115, low: 1.170005, close: 1.170045}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas

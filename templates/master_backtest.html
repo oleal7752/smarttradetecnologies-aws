@@ -1,0 +1,1060 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <title>STC Trading • Backtests Inteligentes</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0"></script>
+  <style>
+    :root {
+      --bg: #000000; --text: #e0e7ff; --muted: #94a3b8;
+      --ok: #10b981; --warn: #f59e0b; --err: #ef4444; 
+      --primary: #0066ff;
+      --neon-blue: #0066ff; --neon-cyan: #00d4ff;
+      --glass: rgba(255, 255, 255, 0.02);
+      --glass-border: rgba(0, 212, 255, 0.15);
+      
+      /* Slider ruler variables */
+      --min: 10; --val: 100; --max: 1000;
+    }
+    html, body { 
+      height: 100%; margin: 0; 
+      background: #000000; 
+      color: var(--text); 
+      font-family: 'Courier New', 'Consolas', 'Monaco', monospace;
+      perspective: 1500px;
+    }
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 20px;
+      display: grid;
+      grid-template-columns: 380px 1fr;
+      gap: 20px;
+      min-height: 100vh;
+    }
+    
+    .panel {
+      background: linear-gradient(135deg, 
+        rgba(0, 212, 255, 0.04) 0%, 
+        rgba(0, 102, 255, 0.02) 50%,
+        rgba(138, 43, 226, 0.03) 100%);
+      border: 1px solid rgba(0, 212, 255, 0.2); 
+      border-radius: 28px; 
+      padding: 24px;
+      backdrop-filter: blur(60px) saturate(180%); 
+      box-shadow: 
+        0 8px 32px rgba(0, 0, 0, 0.4),
+        0 4px 16px rgba(0, 212, 255, 0.1),
+        inset 0 1px 1px rgba(255, 255, 255, 0.08),
+        inset 0 -1px 1px rgba(0, 0, 0, 0.4);
+      transition: all 0.3s ease;
+      position: relative;
+    }
+    
+    .panel::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      border-radius: 28px;
+      background: linear-gradient(135deg, 
+        rgba(255, 255, 255, 0.08) 0%, 
+        transparent 40%,
+        rgba(0, 212, 255, 0.05) 100%);
+      pointer-events: none;
+    }
+    
+    .panel:hover {
+      transform: translateY(-2px);
+      box-shadow: 
+        0 12px 48px rgba(0, 0, 0, 0.5),
+        0 6px 24px rgba(0, 212, 255, 0.2),
+        inset 0 1px 1px rgba(255, 255, 255, 0.12),
+        inset 0 -1px 1px rgba(0, 0, 0, 0.4);
+      border-color: rgba(0, 212, 255, 0.3);
+    }
+    
+    h1, h2, h3 {
+      margin: 0 0 20px 0;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: 700;
+    }
+    h1 { font-size: 20px; }
+    h2 { font-size: 16px; color: var(--neon-cyan); }
+    h3 { font-size: 14px; margin-bottom: 12px; }
+    
+    .form-group {
+      margin-bottom: 20px;
+    }
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--muted);
+    }
+    select, input[type="date"], input[type="number"] {
+      width: 100%;
+      background: rgba(0, 0, 0, 0.05);
+      color: var(--text); 
+      border: 1px solid rgba(0, 212, 255, 0.08); 
+      padding: 10px 12px; 
+      border-radius: 12px; 
+      backdrop-filter: blur(40px) saturate(120%); 
+      transition: all 0.3s; 
+      font-family: inherit;
+      font-size: 13px;
+      box-sizing: border-box;
+      box-shadow: 
+        0 0 0 1px rgba(0, 212, 255, 0.03) inset,
+        0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    select {
+      background: rgba(10, 10, 15, 0.85);
+      backdrop-filter: blur(50px) saturate(150%);
+      appearance: auto;
+      -webkit-appearance: menulist;
+      -moz-appearance: menulist;
+      color: var(--text);
+      padding-right: 35px;
+    }
+    
+    select option {
+      background: rgba(10, 10, 15, 0.95);
+      color: var(--text);
+      padding: 12px 14px;
+      font-family: 'Courier New', monospace;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.3px;
+    }
+    
+    select option:hover {
+      background: rgba(0, 212, 255, 0.25);
+      color: var(--neon-cyan);
+    }
+    
+    select option:checked,
+    select option:focus {
+      background: rgba(0, 212, 255, 0.35);
+      color: var(--neon-cyan);
+      font-weight: 700;
+    }
+    
+    select:focus, input:focus {
+      outline: none; 
+      border-color: rgba(0, 212, 255, 0.3); 
+      background: rgba(0, 212, 255, 0.03);
+      box-shadow: 
+        0 0 20px rgba(0, 212, 255, 0.3), 
+        0 0 0 1px rgba(0, 212, 255, 0.15) inset,
+        0 4px 12px rgba(0, 0, 0, 0.2); 
+      transform: translateY(-1px);
+    }
+    
+    select:hover {
+      background: rgba(0, 212, 255, 0.02);
+      border-color: rgba(0, 212, 255, 0.15);
+    }
+    
+    /* ===== ADVANCED VERTICAL SLIDER WITH RULER ===== */
+    .slider-wrap {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      margin: 30px auto;
+      padding: 20px 0;
+      min-height: 350px;
+    }
+    
+    /* Ruler marks container */
+    .ruler-container {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 300px;
+      margin-right: 10px;
+    }
+    
+    .ruler-mark {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      opacity: 0.4;
+      transition: all 0.3s ease;
+      font-size: 11px;
+      color: var(--neon-cyan);
+      font-weight: 600;
+    }
+    
+    .ruler-mark.major {
+      opacity: 0.8;
+      font-size: 13px;
+    }
+    
+    .ruler-mark.active {
+      opacity: 1;
+      text-shadow: 0 0 10px var(--neon-cyan);
+      transform: translateX(5px);
+    }
+    
+    .ruler-mark::after {
+      content: '';
+      width: 8px;
+      height: 2px;
+      background: var(--neon-cyan);
+      box-shadow: 0 0 5px var(--neon-cyan);
+    }
+    
+    .ruler-mark.major::after {
+      width: 12px;
+      height: 2px;
+    }
+    
+    /* Vertical slider container */
+    .slider-container-vertical {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+    
+    /* The range input */
+    input[type="range"].vertical-slider {
+      -webkit-appearance: none;
+      writing-mode: bt-lr; /* IE */
+      -webkit-appearance: slider-vertical; /* WebKit */
+      width: 8px;
+      height: 300px;
+      padding: 0;
+      background: linear-gradient(to top, 
+        rgba(0, 212, 255, 0.1) 0%, 
+        rgba(0, 212, 255, 0.05) 100%);
+      border: 1px solid var(--glass-border);
+      border-radius: 10px;
+      outline: none;
+      transition: all 0.3s;
+      box-shadow: 
+        inset 0 0 20px rgba(0, 212, 255, 0.1),
+        0 0 30px rgba(0, 212, 255, 0.2);
+    }
+    
+    input[type="range"].vertical-slider:hover {
+      box-shadow: 
+        inset 0 0 20px rgba(0, 212, 255, 0.2),
+        0 0 40px rgba(0, 212, 255, 0.4);
+    }
+    
+    input[type="range"].vertical-slider:focus {
+      box-shadow: 
+        inset 0 0 20px rgba(0, 212, 255, 0.3),
+        0 0 50px rgba(0, 212, 255, 0.6);
+    }
+    
+    /* WebKit thumb */
+    input[type="range"].vertical-slider::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 30% 30%, 
+        rgba(0, 212, 255, 0.8) 0%,
+        rgba(0, 102, 255, 0.6) 50%,
+        #000 100%);
+      border: 2px solid var(--neon-cyan);
+      cursor: pointer;
+      box-shadow: 
+        0 0 20px rgba(0, 212, 255, 0.8),
+        inset 0 0 10px rgba(0, 212, 255, 0.3),
+        0 5px 15px rgba(0, 0, 0, 0.5);
+      transition: all 0.3s;
+      position: relative;
+    }
+    
+    input[type="range"].vertical-slider::-webkit-slider-thumb:hover {
+      transform: scale(1.15);
+      box-shadow: 
+        0 0 30px rgba(0, 212, 255, 1),
+        inset 0 0 15px rgba(0, 212, 255, 0.5),
+        0 8px 20px rgba(0, 0, 0, 0.6);
+    }
+    
+    input[type="range"].vertical-slider::-webkit-slider-thumb:active {
+      transform: scale(1.05);
+    }
+    
+    /* Firefox thumb */
+    input[type="range"].vertical-slider::-moz-range-thumb {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 30% 30%, 
+        rgba(0, 212, 255, 0.8) 0%,
+        rgba(0, 102, 255, 0.6) 50%,
+        #000 100%);
+      border: 2px solid var(--neon-cyan);
+      cursor: pointer;
+      box-shadow: 
+        0 0 20px rgba(0, 212, 255, 0.8),
+        inset 0 0 10px rgba(0, 212, 255, 0.3),
+        0 5px 15px rgba(0, 0, 0, 0.5);
+      transition: all 0.3s;
+    }
+    
+    input[type="range"].vertical-slider::-moz-range-thumb:hover {
+      transform: scale(1.15);
+      box-shadow: 
+        0 0 30px rgba(0, 212, 255, 1),
+        inset 0 0 15px rgba(0, 212, 255, 0.5),
+        0 8px 20px rgba(0, 0, 0, 0.6);
+    }
+    
+    /* Value display */
+    .slider-value-display {
+      font-size: 48px;
+      font-weight: 700;
+      color: var(--neon-cyan);
+      text-shadow: 
+        0 0 30px rgba(0, 212, 255, 0.8),
+        0 0 60px rgba(0, 212, 255, 0.4);
+      text-align: center;
+      min-width: 150px;
+      animation: pulse 2s ease-in-out infinite;
+    }
+    
+    @keyframes pulse {
+      0%, 100% { text-shadow: 0 0 30px rgba(0, 212, 255, 0.8), 0 0 60px rgba(0, 212, 255, 0.4); }
+      50% { text-shadow: 0 0 40px rgba(0, 212, 255, 1), 0 0 80px rgba(0, 212, 255, 0.6); }
+    }
+    
+    button {
+      width: 100%;
+      background: rgba(0, 102, 255, 0.15); 
+      color: var(--text); 
+      border: 1px solid var(--neon-cyan); 
+      padding: 14px 20px; 
+      border-radius: 12px; 
+      cursor: pointer; 
+      transition: all 0.3s; 
+      backdrop-filter: blur(30px); 
+      font-family: inherit;
+      font-weight: 600;
+      text-transform: uppercase;
+      font-size: 13px;
+      letter-spacing: 1px;
+      box-shadow: 
+        0 4px 20px rgba(0, 102, 255, 0.3),
+        0 0 0 1px rgba(0, 212, 255, 0.1) inset;
+    }
+    button:hover {
+      transform: translateY(-3px) translateZ(5px); 
+      box-shadow: 
+        0 8px 30px rgba(0, 212, 255, 0.5),
+        0 0 0 1px rgba(0, 212, 255, 0.3) inset;
+    }
+    button:disabled {
+      opacity: 0.4;
+      cursor: not-allowed;
+      transform: none;
+    }
+    
+    .metrics-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      margin-top: 20px;
+    }
+    .metric {
+      background: linear-gradient(135deg, 
+        rgba(0, 212, 255, 0.08) 0%, 
+        rgba(138, 43, 226, 0.05) 100%);
+      border: 1px solid rgba(0, 212, 255, 0.25);
+      border-radius: 20px;
+      padding: 16px;
+      text-align: center;
+      backdrop-filter: blur(40px) saturate(160%);
+      box-shadow: 
+        0 4px 16px rgba(0, 0, 0, 0.3),
+        0 2px 8px rgba(0, 212, 255, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1),
+        inset 0 -1px 0 rgba(0, 0, 0, 0.3);
+      transition: all 0.3s ease;
+      position: relative;
+    }
+    
+    .metric::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(135deg, 
+        rgba(255, 255, 255, 0.08) 0%, 
+        transparent 50%);
+      pointer-events: none;
+      border-radius: 20px;
+    }
+    
+    .metric:hover {
+      transform: translateY(-2px);
+      box-shadow: 
+        0 6px 24px rgba(0, 0, 0, 0.4),
+        0 3px 12px rgba(0, 212, 255, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.15),
+        inset 0 -1px 0 rgba(0, 0, 0, 0.3);
+      border-color: rgba(0, 212, 255, 0.35);
+    }
+    
+    .metric-label {
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--muted);
+      margin-bottom: 8px;
+      position: relative;
+      z-index: 1;
+    }
+    .metric-value {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--neon-cyan);
+      text-shadow: 0 0 15px rgba(0, 212, 255, 0.6);
+      position: relative;
+      z-index: 1;
+    }
+    .metric-value.positive { 
+      color: var(--ok);
+      text-shadow: 0 0 15px rgba(0, 255, 128, 0.6);
+    }
+    .metric-value.negative { 
+      color: var(--err);
+      text-shadow: 0 0 15px rgba(255, 64, 129, 0.6);
+    }
+    
+    .chart-container {
+      background: linear-gradient(135deg, 
+        rgba(0, 212, 255, 0.04) 0%, 
+        rgba(0, 102, 255, 0.02) 50%,
+        rgba(138, 43, 226, 0.03) 100%);
+      border: 1px solid rgba(0, 212, 255, 0.2);
+      border-radius: 28px;
+      padding: 20px;
+      height: 500px;
+      margin-top: 20px;
+      backdrop-filter: blur(60px) saturate(180%);
+      box-shadow: 
+        0 8px 32px rgba(0, 0, 0, 0.4),
+        0 4px 16px rgba(0, 212, 255, 0.1),
+        inset 0 1px 1px rgba(255, 255, 255, 0.08),
+        inset 0 -1px 1px rgba(0, 0, 0, 0.4);
+      transition: all 0.3s ease;
+      position: relative;
+    }
+    
+    .chart-container::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      border-radius: 28px;
+      background: linear-gradient(135deg, 
+        rgba(255, 255, 255, 0.08) 0%, 
+        transparent 40%,
+        rgba(0, 212, 255, 0.05) 100%);
+      pointer-events: none;
+    }
+    
+    .chart-container:hover {
+      transform: translateY(-2px);
+      box-shadow: 
+        0 12px 48px rgba(0, 0, 0, 0.5),
+        0 6px 24px rgba(0, 212, 255, 0.2),
+        inset 0 1px 1px rgba(255, 255, 255, 0.12),
+        inset 0 -1px 1px rgba(0, 0, 0, 0.4);
+      border-color: rgba(0, 212, 255, 0.3);
+    }
+    
+    .loading {
+      text-align: center;
+      padding: 40px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .loading::after {
+      content: '...';
+      animation: dots 1.5s infinite;
+    }
+    @keyframes dots {
+      0%, 20% { content: '.'; }
+      40% { content: '..'; }
+      60%, 100% { content: '...'; }
+    }
+    
+    .info-box {
+      background: rgba(0, 102, 255, 0.1);
+      border: 1px solid rgba(0, 212, 255, 0.3);
+      border-radius: 12px;
+      padding: 16px;
+      margin-bottom: 20px;
+      font-size: 12px;
+      line-height: 1.6;
+    }
+    
+    /* ===== CUSTOM DROPDOWN GLASSMORPHISM 3D ===== */
+    .custom-select-wrapper {
+      position: relative;
+      width: 100%;
+    }
+    
+    .custom-select-wrapper.open .custom-options {
+      opacity: 1;
+      transform: translateY(0) translateZ(0);
+      pointer-events: auto;
+      visibility: visible;
+    }
+    
+    .custom-options {
+      position: absolute;
+      top: calc(100% + 8px);
+      left: 0;
+      right: 0;
+      max-height: 450px;
+      overflow-y: auto;
+      z-index: 1000;
+      opacity: 0;
+      transform: translateY(-20px) translateZ(-50px);
+      pointer-events: none;
+      visibility: hidden;
+      transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+      padding: 8px;
+      background: rgba(0, 0, 0, 0.5);
+      border-radius: 20px;
+      backdrop-filter: blur(40px);
+      border: 1px solid rgba(0, 212, 255, 0.15);
+      box-shadow: 
+        0 20px 60px rgba(0, 0, 0, 0.8),
+        0 8px 24px rgba(0, 212, 255, 0.2);
+    }
+    
+    .custom-option {
+      background: linear-gradient(135deg, 
+        rgba(0, 212, 255, 0.08) 0%, 
+        rgba(0, 102, 255, 0.05) 50%,
+        rgba(138, 43, 226, 0.06) 100%);
+      border: 1px solid rgba(0, 212, 255, 0.15);
+      border-radius: 16px;
+      padding: 14px 16px;
+      margin: 6px 0;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-family: 'Courier New', monospace;
+      font-size: 11px;
+      color: var(--text);
+      letter-spacing: 0.3px;
+      backdrop-filter: blur(30px) saturate(140%);
+      box-shadow: 
+        0 2px 8px rgba(0, 0, 0, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.05);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .custom-option::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(135deg, 
+        rgba(255, 255, 255, 0.08) 0%, 
+        transparent 50%);
+      pointer-events: none;
+      border-radius: 16px;
+    }
+    
+    .custom-option:hover {
+      background: linear-gradient(135deg, 
+        rgba(0, 212, 255, 0.2) 0%, 
+        rgba(0, 102, 255, 0.15) 50%,
+        rgba(138, 43, 226, 0.18) 100%);
+      border-color: rgba(0, 212, 255, 0.4);
+      transform: translateY(-1px);
+      box-shadow: 
+        0 4px 16px rgba(0, 0, 0, 0.4),
+        0 2px 8px rgba(0, 212, 255, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+      color: var(--neon-cyan);
+      text-shadow: 0 0 10px rgba(0, 212, 255, 0.6);
+    }
+    
+    .custom-option.selected {
+      background: linear-gradient(135deg, 
+        rgba(0, 212, 255, 0.28) 0%, 
+        rgba(0, 102, 255, 0.22) 50%,
+        rgba(138, 43, 226, 0.25) 100%);
+      border-color: rgba(0, 212, 255, 0.5);
+      color: var(--neon-cyan);
+      font-weight: 700;
+      text-shadow: 0 0 15px rgba(0, 212, 255, 0.8);
+    }
+    
+    .custom-option-text {
+      position: relative;
+      z-index: 1;
+      line-height: 1.5;
+    }
+    
+    /* Scrollbar para las opciones */
+    .custom-options::-webkit-scrollbar {
+      width: 8px;
+    }
+    
+    .custom-options::-webkit-scrollbar-track {
+      background: rgba(0, 0, 0, 0.2);
+      border-radius: 10px;
+    }
+    
+    .custom-options::-webkit-scrollbar-thumb {
+      background: rgba(0, 212, 255, 0.3);
+      border-radius: 10px;
+    }
+    
+    .custom-options::-webkit-scrollbar-thumb:hover {
+      background: rgba(0, 212, 255, 0.5);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Panel de Controles -->
+    <div>
+      <div class="panel">
+        <h1>🚀 BACKTESTS INTELIGENTES</h1>
+        
+        <div class="info-box">
+          ✨ SIMULACIONES CON 10,000+ OPERACIONES REALES. AJUSTA TU MONTO Y LAS GRÁFICAS SE ACTUALIZAN INSTANTÁNEAMENTE
+        </div>
+        
+        <div class="form-group">
+          <label>📊 ESTRATEGIA</label>
+          <div class="custom-select-wrapper" id="customSelectWrapper">
+            <select id="strategySelect" style="display: block;">
+              <option value="">Selecciona una estrategia</option>
+            </select>
+            <div class="custom-options" id="customOptions">
+              <!-- Opciones se generan dinámicamente -->
+            </div>
+          </div>
+        </div>
+        
+        <div class="form-group">
+          <label>💰 MONTO POR OPERACIÓN</label>
+          <div class="slider-wrap">
+            <div class="ruler-container" id="rulerContainer">
+              <!-- Ruler marks generated by JS -->
+            </div>
+            <div class="slider-container-vertical">
+              <input type="range" class="vertical-slider" id="amountSlider" min="10" max="1000" step="10" value="100" orient="vertical">
+            </div>
+            <div class="slider-value-display">$<span id="amountValue">100</span></div>
+          </div>
+        </div>
+        
+        <div class="form-group">
+          <label>📈 PAYOUT (%)</label>
+          <input type="number" id="payoutInput" value="85" min="50" max="100" step="1">
+        </div>
+        
+        <div class="form-group">
+          <label>📅 FECHA DESDE</label>
+          <input type="date" id="dateFrom">
+        </div>
+        
+        <div class="form-group">
+          <label>📅 FECHA HASTA</label>
+          <input type="date" id="dateTo">
+        </div>
+        
+        <button id="loadBtn">🔥 CARGAR BACKTEST</button>
+      </div>
+      
+      <!-- Métricas -->
+      <div class="panel" style="margin-top: 20px;" id="metricsPanel" hidden>
+        <h3>📊 MÉTRICAS DE RENDIMIENTO</h3>
+        <div class="metrics-grid">
+          <div class="metric">
+            <div class="metric-label">WIN RATE</div>
+            <div class="metric-value" id="winRate">-</div>
+          </div>
+          <div class="metric">
+            <div class="metric-label">TOTAL TRADES</div>
+            <div class="metric-value" id="totalTrades">-</div>
+          </div>
+          <div class="metric">
+            <div class="metric-label">PROFIT FACTOR</div>
+            <div class="metric-value" id="profitFactor">-</div>
+          </div>
+          <div class="metric">
+            <div class="metric-label">NET PROFIT</div>
+            <div class="metric-value" id="netProfit">-</div>
+          </div>
+          <div class="metric">
+            <div class="metric-label">MAX DRAWDOWN</div>
+            <div class="metric-value negative" id="maxDrawdown">-</div>
+          </div>
+          <div class="metric">
+            <div class="metric-label">RETURN %</div>
+            <div class="metric-value" id="returnPercent">-</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Gráfico -->
+    <div class="panel">
+      <h2>📈 EQUITY CURVE • EVOLUCIÓN DEL BALANCE</h2>
+      <div id="loadingMsg" class="loading">Selecciona una estrategia para comenzar</div>
+      <div class="chart-container" id="chartContainer" hidden>
+        <canvas id="equityChart"></canvas>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    let chart = null;
+    let currentMasterBacktestId = null;
+    
+    const strategySelect = document.getElementById('strategySelect');
+    const amountSlider = document.getElementById('amountSlider');
+    const amountValue = document.getElementById('amountValue');
+    const payoutInput = document.getElementById('payoutInput');
+    const dateFrom = document.getElementById('dateFrom');
+    const dateTo = document.getElementById('dateTo');
+    const loadBtn = document.getElementById('loadBtn');
+    const loadingMsg = document.getElementById('loadingMsg');
+    const chartContainer = document.getElementById('chartContainer');
+    const metricsPanel = document.getElementById('metricsPanel');
+    const rulerContainer = document.getElementById('rulerContainer');
+    
+    // Generate ruler marks (every $100)
+    function generateRuler() {
+      const min = parseInt(amountSlider.min);
+      const max = parseInt(amountSlider.max);
+      const majorStep = 100;
+      const marks = [];
+      
+      for (let i = max; i >= min; i -= majorStep) {
+        marks.push(i);
+      }
+      
+      rulerContainer.innerHTML = marks.map(val => 
+        `<div class="ruler-mark major" data-value="${val}">$${val}</div>`
+      ).join('');
+    }
+    
+    generateRuler();
+    
+    // Update ruler highlighting based on slider value
+    function updateRuler() {
+      const currentValue = parseInt(amountSlider.value);
+      const marks = rulerContainer.querySelectorAll('.ruler-mark');
+      
+      marks.forEach(mark => {
+        const markValue = parseInt(mark.dataset.value);
+        const distance = Math.abs(currentValue - markValue);
+        
+        if (distance < 150) {
+          mark.classList.add('active');
+        } else {
+          mark.classList.remove('active');
+        }
+      });
+    }
+    
+    // Update slider value and ruler
+    amountSlider.addEventListener('input', (e) => {
+      const val = e.target.value;
+      amountValue.textContent = val;
+      updateRuler();
+      
+      if (currentMasterBacktestId) {
+        loadBacktest(currentMasterBacktestId);
+      }
+    });
+    
+    // Initialize ruler
+    updateRuler();
+    
+    payoutInput.addEventListener('change', () => {
+      if (currentMasterBacktestId) {
+        loadBacktest(currentMasterBacktestId);
+      }
+    });
+    
+    dateFrom.addEventListener('change', () => {
+      if (currentMasterBacktestId) {
+        loadBacktest(currentMasterBacktestId);
+      }
+    });
+    
+    dateTo.addEventListener('change', () => {
+      if (currentMasterBacktestId) {
+        loadBacktest(currentMasterBacktestId);
+      }
+    });
+    
+    // Custom dropdown elements
+    const customSelectWrapper = document.getElementById('customSelectWrapper');
+    const customOptions = document.getElementById('customOptions');
+    let masterBacktests = [];
+    
+    async function loadStrategies() {
+      try {
+        const response = await fetch('/api/backtest/master/list');
+        const data = await response.json();
+        
+        if (data.success && data.master_backtests.length > 0) {
+          masterBacktests = data.master_backtests;
+          
+          // Update native select (mantener como fallback)
+          strategySelect.innerHTML = '<option value="">Selecciona una estrategia</option>';
+          data.master_backtests.forEach(bt => {
+            const option = document.createElement('option');
+            option.value = bt.id;
+            option.textContent = `${bt.strategy_name} • ${bt.symbol} • ${bt.timeframe} • ${bt.total_signals} señales • ${bt.win_rate}% WR`;
+            strategySelect.appendChild(option);
+          });
+          
+          // Populate custom options with glassmorphism cards
+          populateCustomOptions(data.master_backtests);
+        } else {
+          strategySelect.innerHTML = '<option value="">No hay backtests disponibles</option>';
+        }
+      } catch (error) {
+        console.error('Error cargando estrategias:', error);
+        strategySelect.innerHTML = '<option value="">Error cargando estrategias</option>';
+      }
+    }
+    
+    function populateCustomOptions(backtests) {
+      customOptions.innerHTML = '';
+      backtests.forEach(bt => {
+        const optionDiv = document.createElement('div');
+        optionDiv.className = 'custom-option';
+        optionDiv.dataset.value = bt.id;
+        optionDiv.innerHTML = `
+          <div class="custom-option-text">
+            ${bt.strategy_name} • ${bt.symbol} • ${bt.timeframe} • ${bt.total_signals} señales • ${bt.win_rate}% WR
+          </div>
+        `;
+        
+        optionDiv.addEventListener('click', () => {
+          selectCustomOption(bt.id, optionDiv);
+        });
+        
+        customOptions.appendChild(optionDiv);
+      });
+    }
+    
+    function selectCustomOption(value, optionElement) {
+      // Update native select
+      strategySelect.value = value;
+      
+      // Update visual selection
+      document.querySelectorAll('.custom-option').forEach(opt => {
+        opt.classList.remove('selected');
+      });
+      optionElement.classList.add('selected');
+      
+      // Close dropdown
+      customSelectWrapper.classList.remove('open');
+    }
+    
+    // Toggle custom dropdown on select click
+    strategySelect.addEventListener('click', (e) => {
+      e.preventDefault();
+      customSelectWrapper.classList.toggle('open');
+    });
+    
+    // Close dropdown when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!customSelectWrapper.contains(e.target)) {
+        customSelectWrapper.classList.remove('open');
+      }
+    });
+    
+    // Prevent closing when clicking inside custom options
+    customOptions.addEventListener('click', (e) => {
+      e.stopPropagation();
+    });
+    
+    loadBtn.addEventListener('click', async () => {
+      const selectedId = strategySelect.value;
+      if (!selectedId) {
+        alert('Selecciona una estrategia primero');
+        return;
+      }
+      
+      currentMasterBacktestId = selectedId;
+      await loadBacktest(selectedId);
+    });
+    
+    async function loadBacktest(backtestId) {
+      try {
+        loadingMsg.textContent = 'Cargando datos...';
+        loadingMsg.hidden = false;
+        chartContainer.hidden = true;
+        metricsPanel.hidden = true;
+        
+        const amount = amountSlider.value;
+        const payout = payoutInput.value;
+        const params = new URLSearchParams({
+          amount: amount,
+          payout: payout
+        });
+        
+        if (dateFrom.value) params.append('date_from', dateFrom.value);
+        if (dateTo.value) params.append('date_to', dateTo.value);
+        
+        const response = await fetch(`/api/backtest/master/${backtestId}?${params}`);
+        const data = await response.json();
+        
+        if (data.success) {
+          updateMetrics(data.metrics);
+          updateChart(data.equity_curve);
+          metricsPanel.hidden = false;
+          chartContainer.hidden = false;
+          loadingMsg.hidden = true;
+        } else {
+          loadingMsg.textContent = `Error: ${data.error}`;
+        }
+      } catch (error) {
+        console.error('Error cargando backtest:', error);
+        loadingMsg.textContent = 'Error cargando backtest';
+      }
+    }
+    
+    function updateMetrics(metrics) {
+      document.getElementById('winRate').textContent = `${metrics.win_rate}%`;
+      document.getElementById('totalTrades').textContent = metrics.total_trades;
+      document.getElementById('profitFactor').textContent = metrics.profit_factor;
+      
+      const netProfit = metrics.net_profit;
+      const netProfitEl = document.getElementById('netProfit');
+      netProfitEl.textContent = `$${netProfit.toFixed(2)}`;
+      netProfitEl.className = netProfit >= 0 ? 'metric-value positive' : 'metric-value negative';
+      
+      document.getElementById('maxDrawdown').textContent = `$${metrics.max_drawdown.toFixed(2)} (${metrics.max_drawdown_percent.toFixed(2)}%)`;
+      
+      const returnPercent = metrics.return_percent;
+      const returnEl = document.getElementById('returnPercent');
+      returnEl.textContent = `${returnPercent >= 0 ? '+' : ''}${returnPercent.toFixed(2)}%`;
+      returnEl.className = returnPercent >= 0 ? 'metric-value positive' : 'metric-value negative';
+    }
+    
+    function updateChart(equityCurve) {
+      const ctx = document.getElementById('equityChart').getContext('2d');
+      
+      if (chart) {
+        chart.destroy();
+      }
+      
+      chart = new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: equityCurve.map((_, i) => i),
+          datasets: [{
+            label: 'Balance',
+            data: equityCurve,
+            borderColor: '#00d4ff',
+            backgroundColor: 'rgba(0, 212, 255, 0.1)',
+            borderWidth: 2,
+            fill: true,
+            tension: 0.4,
+            pointRadius: 0,
+            pointHoverRadius: 5,
+            pointHoverBackgroundColor: '#00d4ff',
+            pointHoverBorderColor: '#fff',
+            pointHoverBorderWidth: 2
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: {
+              display: false
+            },
+            tooltip: {
+              mode: 'index',
+              intersect: false,
+              backgroundColor: 'rgba(0, 0, 0, 0.8)',
+              titleColor: '#00d4ff',
+              bodyColor: '#e0e7ff',
+              borderColor: '#00d4ff',
+              borderWidth: 1,
+              padding: 12,
+              displayColors: false,
+              callbacks: {
+                title: (items) => `Trade #${items[0].dataIndex}`,
+                label: (item) => `Balance: $${item.parsed.y.toFixed(2)}`
+              }
+            }
+          },
+          scales: {
+            x: {
+              grid: {
+                color: 'rgba(0, 212, 255, 0.05)',
+                lineWidth: 1
+              },
+              ticks: {
+                color: '#94a3b8',
+                font: {
+                  family: "'Courier New', monospace",
+                  size: 10
+                }
+              }
+            },
+            y: {
+              grid: {
+                color: 'rgba(0, 212, 255, 0.05)',
+                lineWidth: 1
+              },
+              ticks: {
+                color: '#94a3b8',
+                font: {
+                  family: "'Courier New', monospace",
+                  size: 10
+                },
+                callback: (value) => `$${value.toFixed(0)}`
+              }
+            }
+          },
+          interaction: {
+            mode: 'nearest',
+            axis: 'x',
+            intersect: false
+          }
+        }
+      });
+    }
+    
+    loadStrategies();
+  </script>
+</body>
+</html>

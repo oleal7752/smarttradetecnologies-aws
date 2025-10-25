@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estrategias - Admin</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Courier New', Consolas, Monaco, monospace;
+            background: #000000;
+            color: #00ffff;
+            min-height: 100vh;
+            perspective: 1500px;
+            padding: 40px;
+        }
+
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+        .header {
+            background: rgba(0, 255, 255, 0.03);
+            border: 2px solid rgba(0, 255, 255, 0.2);
+            border-radius: 20px;
+            padding: 30px;
+            backdrop-filter: blur(40px);
+            transform: translateZ(30px);
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .title {
+            font-size: 1.8rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+
+        .back-btn {
+            background: rgba(0, 255, 255, 0.1);
+            border: 2px solid rgba(0, 255, 255, 0.3);
+            color: #00ffff;
+            padding: 12px 30px;
+            border-radius: 50px;
+            cursor: pointer;
+            text-decoration: none;
+            font-family: 'Courier New', Consolas, Monaco, monospace;
+            text-transform: uppercase;
+            transition: all 0.3s;
+        }
+
+        .strategies-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 25px;
+        }
+
+        .strategy-card {
+            background: rgba(0, 255, 255, 0.02);
+            border: 2px solid rgba(0, 255, 255, 0.2);
+            border-radius: 20px;
+            padding: 30px;
+            backdrop-filter: blur(40px);
+            transform: translateZ(20px);
+            transition: all 0.3s;
+        }
+
+        .strategy-card:hover {
+            transform: translateZ(30px);
+            border-color: rgba(0, 255, 255, 0.4);
+            box-shadow: 0 0 40px rgba(0, 255, 255, 0.2);
+        }
+
+        .strategy-name {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: #00ffff;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .strategy-desc {
+            color: rgba(0, 255, 255, 0.6);
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .params-title {
+            font-size: 0.9rem;
+            color: rgba(0, 255, 255, 0.8);
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .param-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 0;
+            border-bottom: 1px solid rgba(0, 255, 255, 0.1);
+        }
+
+        .param-key {
+            color: rgba(0, 255, 255, 0.6);
+        }
+
+        .param-value {
+            color: #00ffff;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="title">📊 ESTRATEGIAS DISPONIBLES</div>
+            <a href="/admin" class="back-btn">⬅ VOLVER</a>
+        </div>
+
+        <div id="content" class="strategies-grid">Cargando estrategias...</div>
+    </div>
+
+    <script>
+        async function loadStrategies() {
+            try {
+                const response = await fetch('/api/admin/strategies/list');
+                const data = await response.json();
+
+                if (data.success && data.strategies.length > 0) {
+                    const strategiesHTML = data.strategies.map(strategy => `
+                        <div class="strategy-card">
+                            <div class="strategy-name">${strategy.name}</div>
+                            <div class="strategy-desc">${strategy.description}</div>
+                            <div class="params-title">Parámetros:</div>
+                            ${Object.entries(strategy.params).map(([key, value]) => `
+                                <div class="param-item">
+                                    <span class="param-key">${key}</span>
+                                    <span class="param-value">${value}</span>
+                                </div>
+                            `).join('')}
+                        </div>
+                    `).join('');
+
+                    document.getElementById('content').innerHTML = `<div class="strategies-grid">${strategiesHTML}</div>`;
+                } else {
+                    document.getElementById('content').innerHTML = '<div style="text-align:center;padding:40px;color:rgba(0,255,255,0.4)">No hay estrategias disponibles</div>';
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                document.getElementById('content').innerHTML = '<div style="text-align:center;padding:40px;color:rgba(0,255,255,0.4)">Error al cargar estrategias</div>';
+            }
+        }
+
+        loadStrategies();
+    </script>
+</body>
+</html>

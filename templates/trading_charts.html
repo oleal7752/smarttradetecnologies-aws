@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <title>Zona de Operaciones - smarttradetecnologies-ar</title>
+    
+    <!-- PWA Tags -->
+    <link rel="manifest" href="/static/manifest.json">
+    <meta name="theme-color" content="#00ffff">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="apple-touch-icon" href="/static/icons/icon-192x192.png">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Courier New', Consolas, Monaco, monospace;
+            background: #000000;
+            color: #00ffff;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            perspective: 1500px;
+            overflow: hidden;
+        }
+
+        .container {
+            background: rgba(0, 0, 0, 0.01);
+            border: 3px solid rgba(0, 255, 255, 0.3);
+            border-radius: 50px;
+            padding: 80px 70px;
+            backdrop-filter: blur(40px);
+            transform-style: preserve-3d;
+            transform: translateZ(80px);
+            text-align: center;
+            max-width: 1200px;
+            width: 90%;
+            animation: fadeInScale 0.9s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 
+                0 8px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        @keyframes fadeInScale {
+            from {
+                opacity: 0;
+                transform: translateZ(0px) scale(0.8);
+            }
+            to {
+                opacity: 1;
+                transform: translateZ(80px) scale(1);
+            }
+        }
+
+        /* Bandera de Venezuela - CLICKEABLE (SIN fondo de luz) */
+        .venezuela-flag {
+            width: 650px;
+            height: 433px;
+            margin: 0 auto 40px;
+            background-image: url('/static/venezuela-flag.jpg');
+            background-size: cover;
+            background-position: center;
+            border: 5px solid rgba(255, 215, 0, 0.7);
+            border-radius: 30px;
+            cursor: pointer;
+            box-shadow: 
+                0 8px 25px rgba(0, 0, 0, 0.5);
+            transform: translateZ(120px);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+        }
+
+        .venezuela-flag:hover {
+            transform: translateZ(150px) scale(1.05);
+            border-color: rgba(255, 215, 0, 1);
+            box-shadow: 
+                0 12px 35px rgba(0, 0, 0, 0.6);
+        }
+
+        .venezuela-flag:active {
+            transform: translateZ(140px) scale(1.02);
+        }
+
+        .flag-label {
+            font-size: 1.05rem;
+            color: rgba(255, 215, 0, 0.9);
+            margin-bottom: 25px;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            font-weight: 700;
+            text-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
+        }
+
+        .welcome-title {
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: #00ffff;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            text-shadow: 
+                0 0 25px rgba(0, 255, 255, 0.7),
+                0 0 50px rgba(0, 255, 255, 0.4);
+        }
+
+        .welcome-subtitle {
+            font-size: 1.3rem;
+            color: rgba(0, 255, 255, 0.8);
+            margin-bottom: 40px;
+            letter-spacing: 2.5px;
+        }
+
+        /* Input de código */
+        .code-section {
+            margin-bottom: 30px;
+        }
+
+        .code-label {
+            font-size: 0.95rem;
+            color: rgba(0, 255, 255, 0.8);
+            margin-bottom: 12px;
+            letter-spacing: 1px;
+        }
+
+        .code-input {
+            width: 100%;
+            max-width: 400px;
+            padding: 15px 20px;
+            background: rgba(0, 255, 255, 0.03);
+            border: 2px solid rgba(0, 255, 255, 0.3);
+            border-radius: 15px;
+            color: #00ffff;
+            font-size: 1.1rem;
+            font-family: 'Courier New', Consolas, Monaco, monospace;
+            text-align: center;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            backdrop-filter: blur(20px);
+            transition: all 0.3s;
+            outline: none;
+        }
+
+        .code-input::placeholder {
+            color: rgba(0, 255, 255, 0.4);
+            letter-spacing: 2px;
+        }
+
+        .code-input:focus {
+            border-color: rgba(0, 255, 255, 0.7);
+            background: rgba(0, 255, 255, 0.05);
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+        }
+
+        .code-input.valid {
+            border-color: rgba(0, 255, 100, 0.7);
+            background: rgba(0, 255, 100, 0.05);
+        }
+
+        .code-input.invalid {
+            border-color: rgba(255, 0, 100, 0.7);
+            background: rgba(255, 0, 100, 0.05);
+        }
+
+        .message {
+            margin-top: 15px;
+            font-size: 0.9rem;
+            min-height: 20px;
+        }
+
+        .message.success {
+            color: #00ff64;
+        }
+
+        .message.error {
+            color: #ff0064;
+        }
+
+        .message.info {
+            color: rgba(0, 255, 255, 0.8);
+        }
+
+        /* Responsive móvil */
+        @media (max-width: 768px) {
+            .container {
+                padding: 50px 30px;
+                width: 95%;
+            }
+
+            .venezuela-flag {
+                width: 450px;
+                height: 300px;
+            }
+
+            .welcome-title {
+                font-size: 2rem;
+                letter-spacing: 3px;
+            }
+
+            .welcome-subtitle {
+                font-size: 1.1rem;
+            }
+
+            .code-input {
+                font-size: 1rem;
+                padding: 12px 18px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 40px 25px;
+                width: 95%;
+            }
+
+            .venezuela-flag {
+                width: 320px;
+                height: 213px;
+            }
+
+            .welcome-title {
+                font-size: 1.6rem;
+                letter-spacing: 2px;
+            }
+
+            .welcome-subtitle {
+                font-size: 0.95rem;
+                margin-bottom: 30px;
+            }
+
+            .code-input {
+                font-size: 0.95rem;
+                padding: 12px 16px;
+            }
+
+            .flag-label {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    {% set action = "logout" %}
+    {% set label = "SALIR" %}
+    {% include "partials/floating_menu_button.html" %}
+
+    <div class="container">
+        <!-- Bandera de Venezuela - CLICKEABLE -->
+        <div class="venezuela-flag" onclick="handleFlagClick()" id="flagButton"></div>
+        
+        <div class="flag-label">👆 PRESIONA LA BANDERA PARA ACCEDER</div>
+
+        <h1 class="welcome-title">smarttradetecnologies-ar</h1>
+        <div style="font-size: 1.4rem; color: rgba(0, 255, 255, 0.85); margin-bottom: 10px; letter-spacing: 2px; text-shadow: 0 0 20px rgba(0, 255, 255, 0.6);">
+            💰 Tecnología que multiplica capital
+        </div>
+        <div class="welcome-subtitle">Sistema Profesional de Trading</div>
+
+        <!-- Campo de Código (solo visible si no tiene acceso) -->
+        <div class="code-section" id="codeSection" style="display: none;">
+            <div class="code-label">CÓDIGO PROMOCIONAL</div>
+            <input 
+                type="text" 
+                id="codeInput" 
+                class="code-input" 
+                placeholder="INGRESE SU CÓDIGO"
+                maxlength="20"
+            />
+            <div class="message" id="message"></div>
+        </div>
+    </div>
+
+    <script>
+        let hasAccess = false;
+        let codeValidated = false;
+        let audioCtx = null;
+
+        function initAudio() {
+            if (!audioCtx) {
+                audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+            }
+        }
+
+        // Sonido tipo iPhone - Click suave
+        function playClickSound() {
+            initAudio();
+            const oscillator = audioCtx.createOscillator();
+            const gainNode = audioCtx.createGain();
+            
+            oscillator.connect(gainNode);
+            gainNode.connect(audioCtx.destination);
+            
+            oscillator.frequency.setValueAtTime(1400, audioCtx.currentTime);
+            
+            gainNode.gain.setValueAtTime(0, audioCtx.currentTime);
+            gainNode.gain.linearRampToValueAtTime(0.15, audioCtx.currentTime + 0.001);
+            gainNode.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.03);
+            
+            oscillator.type = 'sine';
+            oscillator.start(audioCtx.currentTime);
+            oscillator.stop(audioCtx.currentTime + 0.03);
+        }
+
+        // Verificar acceso al cargar
+        async function checkAccess() {
+            try {
+                const response = await fetch('/api/auth/check-access');
+                const data = await response.json();
+
+                if (data.has_access) {
+                    // Usuario tiene acceso activo
+                    hasAccess = true;
+                    document.getElementById('codeSection').style.display = 'none';
+                    document.querySelector('.flag-label').textContent = '✅ ACCESO ACTIVO - PRESIONA LA BANDERA';
+                    document.querySelector('.flag-label').style.color = 'rgba(0, 255, 100, 0.9)';
+                } else {
+                    // Usuario NO tiene acceso - mostrar input
+                    hasAccess = false;
+                    document.getElementById('codeSection').style.display = 'block';
+                    document.querySelector('.flag-label').textContent = '⚠️ INGRESA TU CÓDIGO Y PRESIONA LA BANDERA';
+                    document.querySelector('.flag-label').style.color = 'rgba(255, 215, 0, 0.8)';
+                }
+            } catch (error) {
+                console.error('Error verificando acceso:', error);
+                // Mostrar input por seguridad
+                document.getElementById('codeSection').style.display = 'block';
+            }
+        }
+
+        // Validar código en tiempo real
+        document.getElementById('codeInput')?.addEventListener('input', async (e) => {
+            const code = e.target.value.trim().toUpperCase();
+            const input = e.target;
+            const message = document.getElementById('message');
+
+            if (code.length < 3) {
+                input.classList.remove('valid', 'invalid');
+                message.textContent = '';
+                message.className = 'message';
+                codeValidated = false;
+                return;
+            }
+
+            // Validar código
+            try {
+                const response = await fetch('/api/auth/validate-promo-code', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ code: code })
+                });
+
+                const data = await response.json();
+
+                if (data.success) {
+                    input.classList.remove('invalid');
+                    input.classList.add('valid');
+                    message.textContent = '✅ CÓDIGO VÁLIDO - PRESIONA LA BANDERA';
+                    message.className = 'message success';
+                    codeValidated = true;
+                } else {
+                    input.classList.remove('valid');
+                    input.classList.add('invalid');
+                    message.textContent = '❌ ' + (data.error || 'Código inválido');
+                    message.className = 'message error';
+                    codeValidated = false;
+                }
+            } catch (error) {
+                console.error('Error validando código:', error);
+                input.classList.remove('valid');
+                input.classList.add('invalid');
+                message.textContent = '❌ Error al validar código';
+                message.className = 'message error';
+                codeValidated = false;
+            }
+        });
+
+        // Manejar click en bandera
+        async function handleFlagClick() {
+            playClickSound();
+
+            // Si tiene acceso activo, pasa directo
+            if (hasAccess) {
+                window.location.href = '/charts';
+                return;
+            }
+
+            // Si no tiene acceso, verificar código
+            if (!codeValidated) {
+                const message = document.getElementById('message');
+                message.textContent = '⚠️ Debes ingresar un código válido primero';
+                message.className = 'message error';
+                document.getElementById('codeInput').focus();
+                return;
+            }
+
+            // Código validado - activar y pasar
+            const code = document.getElementById('codeInput').value.trim().toUpperCase();
+            
+            try {
+                const response = await fetch('/api/auth/activate-promo-code', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ code: code })
+                });
+
+                const data = await response.json();
+
+                if (data.success) {
+                    // Código activado exitosamente
+                    window.location.href = '/charts';
+                } else {
+                    const message = document.getElementById('message');
+                    message.textContent = '❌ ' + (data.error || 'Error al activar código');
+                    message.className = 'message error';
+                }
+            } catch (error) {
+                console.error('Error activando código:', error);
+                const message = document.getElementById('message');
+                message.textContent = '❌ Error al procesar código';
+                message.className = 'message error';
+            }
+        }
+
+        // Verificar acceso al cargar
+        checkAccess();
+    </script>
+    
+    <!-- PWA Service Worker -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/static/sw.js')
+                .then(reg => console.log('✅ PWA Activo'))
+                .catch(err => console.log('❌ PWA Error', err));
+        }
+    </script>
+</body>
+</html>

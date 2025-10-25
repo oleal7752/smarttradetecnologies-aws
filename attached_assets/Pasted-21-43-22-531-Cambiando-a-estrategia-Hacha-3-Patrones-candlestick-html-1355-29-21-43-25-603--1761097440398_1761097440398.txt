@@ -1,0 +1,139 @@
+21:43:22.531 🔄 Cambiando a estrategia: 🪓 Hacha (3 Patrones) candlestick.html:1355:29
+21:43:25.603 🔄 Cambiando a EUR/JPY... candlestick.html:1384:29
+21:43:25.604 🔄 Cargando velas de EUR/JPY... candlestick.html:864:25
+21:43:25.908 🔍 Primeras 3 velas: 
+Array(3) [ 1761107100, 1761107400, 1761107700 ]
+candlestick.html:851:25
+21:43:25.909 🔍 Últimas 3 velas: 
+Array(3) [ 1761136200, 1761136500, 1761136800 ]
+candlestick.html:852:25
+21:43:26.082 🔍 Primeras 3 velas: 
+Array(3) [ 1761107100, 1761107400, 1761107700 ]
+candlestick.html:851:25
+21:43:26.082 🔍 Últimas 3 velas: 
+Array(3) [ 1761136200, 1761136500, 1761136800 ]
+candlestick.html:852:25
+21:43:26.082 ✅ 100 velas históricas + 0 velas actuales candlestick.html:924:25
+21:43:26.082 📊 Primera vela: 
+Object { time: 1761107100, open: 176.306, high: 176.32001, low: 176.285, close: 176.306 }
+candlestick.html:925:25
+21:43:26.082 📊 Última vela (ACTUAL): 
+Object { time: 1761136800, open: 175.989, high: 176.0059967, low: 175.96899, close: 175.99699 }
+candlestick.html:926:25
+21:43:26.084 ✅ 100 velas cargadas - Precio real: 175.999350 (Twelve Data: 175.996990) candlestick.html:982:25
+21:43:36.470 🔄 Cambiando a estrategia: 📊 Probabilidades candlestick.html:1355:29
+21:43:36.471 🎯 25 señales CALL/PUT generadas (Estrategia: Análisis de Probabilidades) candlestick.html:1246:21
+21:43:37.724 🔄 Cambiando a estrategia: 🪓 Hacha (3 Patrones) candlestick.html:1355:29
+21:43:42.811 🔄 Cambiando a estrategia: 🪓 Hacha (3 Patrones) candlestick.html:1355:29
+21:43:43.531 🔄 Cambiando a EUR/USD... candlestick.html:1384:29
+21:43:43.532 🔄 Cargando velas de EUR/USD... candlestick.html:864:25
+21:43:43.777 🔍 Primeras 3 velas: 
+Array(3) [ 1761107100, 1761107400, 1761107700 ]
+candlestick.html:851:25
+21:43:43.778 🔍 Últimas 3 velas: 
+Array(3) [ 1761136200, 1761136500, 1761136800 ]
+candlestick.html:852:25
+21:43:44.055 🔍 Primeras 3 velas: 
+Array(3) [ 1761107100, 1761107400, 1761107700 ]
+candlestick.html:851:25
+21:43:44.056 🔍 Últimas 3 velas: 
+Array(3) [ 1761136200, 1761136500, 1761136800 ]
+candlestick.html:852:25
+21:43:44.056 ✅ 100 velas históricas + 0 velas actuales candlestick.html:924:25
+21:43:44.056 📊 Primera vela: 
+Object { time: 1761107100, open: 1.1605, high: 1.16059, low: 1.16033, close: 1.16034 }
+candlestick.html:925:25
+21:43:44.056 📊 Última vela (ACTUAL): 
+Object { time: 1761136800, open: 1.1602, high: 1.16024, low: 1.16013, close: 1.16022 }
+candlestick.html:926:25
+21:43:44.056 ✅ 100 velas cargadas - Precio real: 1.162580 (Twelve Data: 1.160220) candlestick.html:982:25
+21:43:44.086 🔄 Cambiando a EUR/JPY... candlestick.html:1384:29
+21:43:44.086 🔄 Cargando velas de EUR/JPY... candlestick.html:864:25
+21:43:44.295 🔍 Primeras 3 velas: 
+Array(3) [ 1761107100, 1761107400, 1761107700 ]
+candlestick.html:851:25
+21:43:44.295 🔍 Últimas 3 velas: 
+Array(3) [ 1761136200, 1761136500, 1761136800 ]
+candlestick.html:852:25
+21:43:44.482 🔍 Primeras 3 velas: 
+Array(3) [ 1761107100, 1761107400, 1761107700 ]
+candlestick.html:851:25
+21:43:44.483 🔍 Últimas 3 velas: 
+Array(3) [ 1761136200, 1761136500, 1761136800 ]
+candlestick.html:852:25
+21:43:44.483 ✅ 100 velas históricas + 0 velas actuales candlestick.html:924:25
+21:43:44.483 📊 Primera vela: 
+Object { time: 1761107100, open: 176.306, high: 176.32001, low: 176.285, close: 176.306 }
+candlestick.html:925:25
+21:43:44.483 📊 Última vela (ACTUAL): 
+Object { time: 1761136800, open: 175.989, high: 176.0059967, low: 175.96899, close: 175.99699 }
+candlestick.html:926:25
+21:43:44.483 ✅ 100 velas cargadas - Precio real: 175.999350 (Twelve Data: 175.996990) candlestick.html:982:25
+21:43:44.641
+🔥 NUEVA VELA M5 → 1761097200 (anterior: 0) candlestick.html:759:29
+21:43:44.642 ❌ Error en updateLiveCandle: Error: Cannot update oldest data, last time=[object Object], new time=[object Object]
+    Ib https://unpkg.com/lightweight-charts@4.1.1/dist/lightweight-charts.standalone.production.js:7
+    Qb https://unpkg.com/lightweight-charts@4.1.1/dist/lightweight-charts.standalone.production.js:7
+    update https://unpkg.com/lightweight-charts@4.1.1/dist/lightweight-charts.standalone.production.js:7
+    updateLiveCandle https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/static/demo/candlestick.html:775
+    init https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/static/demo/candlestick.html:1313
+    setInterval handler*init https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/static/demo/candlestick.html:1310
+    async* https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/static/demo/candlestick.html:1452
+candlestick.html:812:25
+21:43:46.763 ❌ Error en updateLiveCandle: Error: Cannot update oldest data, last time=[object Object], new time=[object Object]
+    Ib https://unpkg.com/lightweight-charts@4.1.1/dist/lightweight-charts.standalone.production.js:7
+    Qb https://unpkg.com/lightweight-charts@4.1.1/dist/lightweight-charts.standalone.production.js:7
+    update https://unpkg.com/lightweight-charts@4.1.1/dist/lightweight-charts.standalone.production.js:7
+    updateLiveCandle https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/static/demo/candlestick.html:788
+    init https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/static/demo/candlestick.html:1313
+    setInterval handler*init https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/static/demo/candlestick.html:1310
+    async* https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/static/demo/candlestick.html:1452
+candlestick.html:812:25
+21:43:48.687 ❌ Error en updateLiveCandle: Error: Cannot update oldest data, last time=[object Object], new time=[object Object]
+    Ib https://unpkg.com/lightweight-charts@4.1.1/dist/lightweight-charts.standalone.production.js:7
+    Qb https://unpkg.com/lightweight-charts@4.1.1/dist/lightweight-charts.standalone.production.js:7
+    update https://unpkg.com/lightweight-charts@4.1.1/dist/lightweight-charts.standalone.production.js:7
+    updateLiveCandle https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/static/demo/candlestick.html:788
+    init https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/static/demo/candlestick.html:1313
+    setInterval handler*init https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/static/demo/candlestick.html:1310
+    async* https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/static/demo/candlestick.html:1452
+candlestick.html:812:25
+21:43:50.695 ❌ Error en updateLiveCandle: Error: Cannot update oldest data, last time=[object Object], new time=[object Object]
+    Ib https://unpkg.com/lightweight-charts@4.1.1/dist/lightweight-charts.standalone.production.js:7
+    Qb https://unpkg.com/lightweight-charts@4.1.1/dist/lightweight-charts.standalone.production.js:7
+    update https://unpkg.com/lightweight-charts@4.1.1/dist/lightweight-charts.standalone.production.js:7
+    updateLiveCandle https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/static/demo/candlestick.html:788
+    init https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/static/demo/candlestick.html:1313
+    setInterval handler*init https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/static/demo/candlestick.html:1310
+    async* https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/static/demo/candlestick.html:1452
+candlestick.html:812:25
+21:43:50.757 🔄 Cambiando a estrategia: 📊 Probabilidades candlestick.html:1355:29
+21:43:50.757 🎯 25 señales CALL/PUT generadas (Estrategia: Análisis de Probabilidades) candlestick.html:1246:21
+21:43:51.067 🔄 Cambiando a estrategia: 🪓 Hacha (3 Patrones) candlestick.html:1355:29
+21:43:51.587 🔄 Cambiando a estrategia: 📊 Probabilidades candlestick.html:1355:29
+21:43:51.588 🎯 25 señales CALL/PUT generadas (Estrategia: Análisis de Probabilidades) candlestick.html:1246:21
+21:43:51.867 🔄 Cambiando a estrategia: 🪓 Hacha (3 Patrones) candlestick.html:1355:29
+21:43:52.163 🔄 Cambiando a estrategia: 📊 Probabilidades candlestick.html:1355:29
+21:43:52.164 🎯 25 señales CALL/PUT generadas (Estrategia: Análisis de Probabilidades) candlestick.html:1246:21
+21:43:52.453 🔄 Cambiando a estrategia: 🪓 Hacha (3 Patrones) candlestick.html:1355:29
+21:43:52.716 🔄 Cambiando a estrategia: 📊 Probabilidades candlestick.html:1355:29
+21:43:52.717 🎯 25 señales CALL/PUT generadas (Estrategia: Análisis de Probabilidades) candlestick.html:1246:21
+21:43:52.784 ❌ Error en updateLiveCandle: Error: Cannot update oldest data, last time=[object Object], new time=[object Object]
+    Ib https://unpkg.com/lightweight-charts@4.1.1/dist/lightweight-charts.standalone.production.js:7
+    Qb https://unpkg.com/lightweight-charts@4.1.1/dist/lightweight-charts.standalone.production.js:7
+    update https://unpkg.com/lightweight-charts@4.1.1/dist/lightweight-charts.standalone.production.js:7
+    updateLiveCandle https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/static/demo/candlestick.html:788
+    init https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/static/demo/candlestick.html:1313
+    setInterval handler*init https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/static/demo/candlestick.html:1310
+    async* https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/static/demo/candlestick.html:1452
+candlestick.html:812:25
+21:43:52.924 🔄 Cambiando a estrategia: 🪓 Hacha (3 Patrones) candlestick.html:1355:29
+21:43:54.677 ❌ Error en updateLiveCandle: Error: Cannot update oldest data, last time=[object Object], new time=[object Object]
+    Ib https://unpkg.com/lightweight-charts@4.1.1/dist/lightweight-charts.standalone.production.js:7
+    Qb https://unpkg.com/lightweight-charts@4.1.1/dist/lightweight-charts.standalone.production.js:7
+    update https://unpkg.com/lightweight-charts@4.1.1/dist/lightweight-charts.standalone.production.js:7
+    updateLiveCandle https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/static/demo/candlestick.html:788
+    init https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/static/demo/candlestick.html:1313
+    setInterval handler*init https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/static/demo/candlestick.html:1310
+    async* https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/static/demo/candlestick.html:1452
+candlestick.html:812:25

@@ -1,0 +1,381 @@
+//@version=5
+indicator("Tablero Binarias + $ por Gale + Balance Profesional", overlay=true, max_bars_back=800)
+
+cantidad_velas = input.int(100, "Cantidad velas para cálculo", minval=10, maxval=700)
+max_gale = 7  // Gale 0 a Gale 7 (8 intentos en total)
+entrada_inicial = input.float(2.0, "Monto entrada principal ($)", minval=0.1)
+cuenta_inicial = input.float(1000.0, "Balance inicial ($)", minval=0)
+payout = input.float(0.8, "Payout (%)", minval=0.5, maxval=1.0)
+
+alcistas = 0
+bajistas = 0
+neutras  = 0
+martillos = 0
+racha_alcista = 0
+
+for i = 0 to cantidad_velas - 1
+    is_alcista = close[i] > open[i] ? 1 : 0
+    is_bajista = close[i] < open[i] ? 1 : 0
+    is_neutra  = close[i] == open[i] ? 1 : 0
+    alcistas += is_alcista
+    bajistas += is_bajista
+    neutras  += is_neutra
+
+    cuerpo = math.abs(close[i] - open[i])
+    mecha_inf = math.min(open[i], close[i]) - low[i]
+    mecha_sup = high[i] - math.max(open[i], close[i])
+    es_martillo = cuerpo < (high[i] - low[i]) * 0.3 and mecha_inf > cuerpo * 2 and mecha_sup < cuerpo
+    martillos += es_martillo ? 1 : 0
+
+    if i >= 2
+        racha = (close[i] > open[i] and close[i-1] > open[i-1] and close[i-2] > open[i-2]) ? 1 : 0
+        racha_alcista += racha
+
+p_alcista   = alcistas / cantidad_velas
+p_bajista   = bajistas / cantidad_velas
+p_neutra    = neutras  / cantidad_velas
+p_martillo  = martillos / cantidad_velas
+p_racha_alcista = racha_alcista / (cantidad_velas > 2 ? cantidad_velas - 2 : 1)
+
+probs = array.new_float()
+names = array.new_string()
+array.push(probs, p_alcista)
+array.push(probs, p_bajista)
+array.push(probs, p_neutra)
+array.push(probs, p_martillo)
+array.push(probs, p_racha_alcista)
+array.push(names, "Alcista")
+array.push(names, "Bajista")
+array.push(names, "Neutra")
+array.push(names, "Martillo")
+array.push(names, "Racha Alcista x3")
+
+max_val = array.get(probs, 0)
+max_name = array.get(names, 0)
+for i = 1 to array.size(probs)-1
+    if array.get(probs, i) > max_val
+        max_val := array.get(probs, i)
+        max_name := array.get(names, i)
+
+compra = max_name == "Alcista" and close > open
+venta  = max_name == "Bajista" and close < open
+
+plotshape(compra, title="Compra", style=shape.triangleup, location=location.belowbar, color=color.green, size=size.small, text="BUY")
+plotshape(venta, title="Venta", style=shape.triangledown, location=location.abovebar, color=color.red, size=size.small, text="SELL")
+
+// ---- [Estadísticas con 7 Gales (COMPRA)] ----
+var int total_ops_buy = 0
+var int ganadas_buy = 0
+var int perdidas_buy = 0
+var int win_gale_0_buy = 0
+var int win_gale_1_buy = 0
+var int win_gale_2_buy = 0
+var int win_gale_3_buy = 0
+var int win_gale_4_buy = 0
+var int win_gale_5_buy = 0
+var int win_gale_6_buy = 0
+var int win_gale_7_buy = 0
+var int lost_gale_8_buy = 0
+
+// ---- [Montos por Gale COMPRA] ----
+var float money_gale_0_buy = 0.0
+var float money_gale_1_buy = 0.0
+var float money_gale_2_buy = 0.0
+var float money_gale_3_buy = 0.0
+var float money_gale_4_buy = 0.0
+var float money_gale_5_buy = 0.0
+var float money_gale_6_buy = 0.0
+var float money_gale_7_buy = 0.0
+var float money_lost_gale_8_buy = 0.0
+
+// ---- [Estadísticas con 7 Gales (VENTA)] ----
+var int total_ops_sell = 0
+var int ganadas_sell = 0
+var int perdidas_sell = 0
+var int win_gale_0_sell = 0
+var int win_gale_1_sell = 0
+var int win_gale_2_sell = 0
+var int win_gale_3_sell = 0
+var int win_gale_4_sell = 0
+var int win_gale_5_sell = 0
+var int win_gale_6_sell = 0
+var int win_gale_7_sell = 0
+var int lost_gale_8_sell = 0
+
+// ---- [Montos por Gale VENTA] ----
+var float money_gale_0_sell = 0.0
+var float money_gale_1_sell = 0.0
+var float money_gale_2_sell = 0.0
+var float money_gale_3_sell = 0.0
+var float money_gale_4_sell = 0.0
+var float money_gale_5_sell = 0.0
+var float money_gale_6_sell = 0.0
+var float money_gale_7_sell = 0.0
+var float money_lost_gale_8_sell = 0.0
+
+// ---- [Balance de la cuenta] ----
+var float balance = na
+if bar_index == 0
+    balance := cuenta_inicial
+
+var float profit_total_buy = 0.0
+var float loss_total_buy = 0.0
+var float profit_total_sell = 0.0
+var float loss_total_sell = 0.0
+
+// Gale Money Management
+f_gale_amount(index) =>
+    entrada_inicial * math.pow(2, index)  // Martingala clásica
+
+if bar_index > max_gale + 1
+    // Señal de compra
+    if compra
+        total_ops_buy += 1
+        gano = false
+        monto_perdido = 0.0
+        for g = 0 to max_gale
+            idx = g + 1
+            monto_gale = f_gale_amount(g)
+            monto_perdido += monto_gale
+            if bar_index > idx
+                if close[idx] > open[idx]
+                    profit = monto_gale * payout
+                    profit_total_buy += profit
+                    loss_total_buy += (monto_perdido - monto_gale)
+                    balance := balance + profit - monto_perdido + monto_gale
+                    if g == 0
+                        win_gale_0_buy += 1
+                        money_gale_0_buy += profit
+                    else if g == 1
+                        win_gale_1_buy += 1
+                        money_gale_1_buy += profit
+                    else if g == 2
+                        win_gale_2_buy += 1
+                        money_gale_2_buy += profit
+                    else if g == 3
+                        win_gale_3_buy += 1
+                        money_gale_3_buy += profit
+                    else if g == 4
+                        win_gale_4_buy += 1
+                        money_gale_4_buy += profit
+                    else if g == 5
+                        win_gale_5_buy += 1
+                        money_gale_5_buy += profit
+                    else if g == 6
+                        win_gale_6_buy += 1
+                        money_gale_6_buy += profit
+                    else if g == 7
+                        win_gale_7_buy += 1
+                        money_gale_7_buy += profit
+                    ganadas_buy += 1
+                    gano := true
+                    break
+        if not gano
+            perdidas_buy += 1
+            lost_gale_8_buy += 1
+            loss_total_buy += monto_perdido
+            balance := balance - monto_perdido
+            money_lost_gale_8_buy += monto_perdido
+    
+    // Señal de venta
+    if venta
+        total_ops_sell += 1
+        gano = false
+        monto_perdido = 0.0
+        for g = 0 to max_gale
+            idx = g + 1
+            monto_gale = f_gale_amount(g)
+            monto_perdido += monto_gale
+            if bar_index > idx
+                if close[idx] < open[idx]
+                    profit = monto_gale * payout
+                    profit_total_sell += profit
+                    loss_total_sell += (monto_perdido - monto_gale)
+                    balance := balance + profit - monto_perdido + monto_gale
+                    if g == 0
+                        win_gale_0_sell += 1
+                        money_gale_0_sell += profit
+                    else if g == 1
+                        win_gale_1_sell += 1
+                        money_gale_1_sell += profit
+                    else if g == 2
+                        win_gale_2_sell += 1
+                        money_gale_2_sell += profit
+                    else if g == 3
+                        win_gale_3_sell += 1
+                        money_gale_3_sell += profit
+                    else if g == 4
+                        win_gale_4_sell += 1
+                        money_gale_4_sell += profit
+                    else if g == 5
+                        win_gale_5_sell += 1
+                        money_gale_5_sell += profit
+                    else if g == 6
+                        win_gale_6_sell += 1
+                        money_gale_6_sell += profit
+                    else if g == 7
+                        win_gale_7_sell += 1
+                        money_gale_7_sell += profit
+                    ganadas_sell += 1
+                    gano := true
+                    break
+        if not gano
+            perdidas_sell += 1
+            lost_gale_8_sell += 1
+            loss_total_sell += monto_perdido
+            balance := balance - monto_perdido
+            money_lost_gale_8_sell += monto_perdido
+
+porcentaje_buy = total_ops_buy > 0 ? ganadas_buy / total_ops_buy * 100 : na
+porcentaje_sell = total_ops_sell > 0 ? ganadas_sell / total_ops_sell * 100 : na
+
+// ---- [Tablero visual PROFESIONAL] ----
+var table tablero = table.new(position.top_right, 6, 29, border_width=1)
+if bar_index % 1 == 0
+    // Headers
+    table.cell(tablero, 0, 0, "Situación", bgcolor=color.yellow, text_color=color.black)
+    table.cell(tablero, 1, 0, "Probabilidad", bgcolor=color.yellow, text_color=color.black)
+    table.cell(tablero, 0, 1, "Alcista",    bgcolor=max_name=="Alcista"?color.lime:na)
+    table.cell(tablero, 1, 1, str.tostring(p_alcista * 100, "#.##") + "%", bgcolor=max_name=="Alcista"?color.lime:na)
+    table.cell(tablero, 0, 2, "Bajista",    bgcolor=max_name=="Bajista"?color.red:na)
+    table.cell(tablero, 1, 2, str.tostring(p_bajista * 100, "#.##") + "%", bgcolor=max_name=="Bajista"?color.red:na)
+    table.cell(tablero, 0, 3, "Neutra",     bgcolor=max_name=="Neutra"?color.gray:na)
+    table.cell(tablero, 1, 3, str.tostring(p_neutra * 100, "#.##") + "%", bgcolor=max_name=="Neutra"?color.gray:na)
+    table.cell(tablero, 0, 4, "Martillo",   bgcolor=max_name=="Martillo"?color.aqua:na)
+    table.cell(tablero, 1, 4, str.tostring(p_martillo * 100, "#.##") + "%", bgcolor=max_name=="Martillo"?color.aqua:na)
+    table.cell(tablero, 0, 5, "Racha Alcista x3", bgcolor=max_name=="Racha Alcista x3"?color.orange:na)
+    table.cell(tablero, 1, 5, str.tostring(p_racha_alcista * 100, "#.##") + "%", bgcolor=max_name=="Racha Alcista x3"?color.orange:na)
+    table.cell(tablero, 0, 6, "MAYOR", bgcolor=color.yellow, text_color=color.black)
+    table.cell(tablero, 1, 6, max_name + " (" + str.tostring(max_val * 100, "#.##") + "%)", bgcolor=color.yellow, text_color=color.black)
+    
+    // Headers de datos
+    table.cell(tablero, 0, 7, "COMPRA", bgcolor=color.green, text_color=color.white)
+    table.cell(tablero, 1, 7, "Ops", bgcolor=color.green, text_color=color.white)
+    table.cell(tablero, 2, 7, "Monto $", bgcolor=color.green, text_color=color.white)
+    table.cell(tablero, 3, 7, "VENTA", bgcolor=color.red, text_color=color.white)
+    table.cell(tablero, 4, 7, "Ops", bgcolor=color.red, text_color=color.white)
+    table.cell(tablero, 5, 7, "Monto $", bgcolor=color.red, text_color=color.white)
+    
+    // Datos COMPRA vs VENTA
+    table.cell(tablero, 0, 8, "Win Gale 0", bgcolor=color.green)
+    table.cell(tablero, 1, 8, str.tostring(win_gale_0_buy), bgcolor=color.green)
+    table.cell(tablero, 2, 8, "$" + str.tostring(money_gale_0_buy, "#.##"), bgcolor=color.green)
+    table.cell(tablero, 3, 8, "Win Gale 0", bgcolor=color.green)
+    table.cell(tablero, 4, 8, str.tostring(win_gale_0_sell), bgcolor=color.green)
+    table.cell(tablero, 5, 8, "$" + str.tostring(money_gale_0_sell, "#.##"), bgcolor=color.green)
+    
+    table.cell(tablero, 0, 9, "Win Gale 1", bgcolor=color.new(color.green, 40))
+    table.cell(tablero, 1, 9, str.tostring(win_gale_1_buy), bgcolor=color.new(color.green, 40))
+    table.cell(tablero, 2, 9, "$" + str.tostring(money_gale_1_buy, "#.##"), bgcolor=color.new(color.green, 40))
+    table.cell(tablero, 3, 9, "Win Gale 1", bgcolor=color.new(color.green, 40))
+    table.cell(tablero, 4, 9, str.tostring(win_gale_1_sell), bgcolor=color.new(color.green, 40))
+    table.cell(tablero, 5, 9, "$" + str.tostring(money_gale_1_sell, "#.##"), bgcolor=color.new(color.green, 40))
+    
+    table.cell(tablero, 0, 10, "Win Gale 2", bgcolor=color.new(color.green, 60))
+    table.cell(tablero, 1, 10, str.tostring(win_gale_2_buy), bgcolor=color.new(color.green, 60))
+    table.cell(tablero, 2, 10, "$" + str.tostring(money_gale_2_buy, "#.##"), bgcolor=color.new(color.green, 60))
+    table.cell(tablero, 3, 10, "Win Gale 2", bgcolor=color.new(color.green, 60))
+    table.cell(tablero, 4, 10, str.tostring(win_gale_2_sell), bgcolor=color.new(color.green, 60))
+    table.cell(tablero, 5, 10, "$" + str.tostring(money_gale_2_sell, "#.##"), bgcolor=color.new(color.green, 60))
+    
+    table.cell(tablero, 0, 11, "Win Gale 3", bgcolor=color.new(color.green, 80))
+    table.cell(tablero, 1, 11, str.tostring(win_gale_3_buy), bgcolor=color.new(color.green, 80))
+    table.cell(tablero, 2, 11, "$" + str.tostring(money_gale_3_buy, "#.##"), bgcolor=color.new(color.green, 80))
+    table.cell(tablero, 3, 11, "Win Gale 3", bgcolor=color.new(color.green, 80))
+    table.cell(tablero, 4, 11, str.tostring(win_gale_3_sell), bgcolor=color.new(color.green, 80))
+    table.cell(tablero, 5, 11, "$" + str.tostring(money_gale_3_sell, "#.##"), bgcolor=color.new(color.green, 80))
+    
+    table.cell(tablero, 0, 12, "Win Gale 4", bgcolor=color.new(color.green, 90))
+    table.cell(tablero, 1, 12, str.tostring(win_gale_4_buy), bgcolor=color.new(color.green, 90))
+    table.cell(tablero, 2, 12, "$" + str.tostring(money_gale_4_buy, "#.##"), bgcolor=color.new(color.green, 90))
+    table.cell(tablero, 3, 12, "Win Gale 4", bgcolor=color.new(color.green, 90))
+    table.cell(tablero, 4, 12, str.tostring(win_gale_4_sell), bgcolor=color.new(color.green, 90))
+    table.cell(tablero, 5, 12, "$" + str.tostring(money_gale_4_sell, "#.##"), bgcolor=color.new(color.green, 90))
+    
+    table.cell(tablero, 0, 13, "Win Gale 5", bgcolor=color.new(color.yellow, 20))
+    table.cell(tablero, 1, 13, str.tostring(win_gale_5_buy), bgcolor=color.new(color.yellow, 20))
+    table.cell(tablero, 2, 13, "$" + str.tostring(money_gale_5_buy, "#.##"), bgcolor=color.new(color.yellow, 20))
+    table.cell(tablero, 3, 13, "Win Gale 5", bgcolor=color.new(color.yellow, 20))
+    table.cell(tablero, 4, 13, str.tostring(win_gale_5_sell), bgcolor=color.new(color.yellow, 20))
+    table.cell(tablero, 5, 13, "$" + str.tostring(money_gale_5_sell, "#.##"), bgcolor=color.new(color.yellow, 20))
+    
+    table.cell(tablero, 0, 14, "Win Gale 6", bgcolor=color.new(color.orange, 30))
+    table.cell(tablero, 1, 14, str.tostring(win_gale_6_buy), bgcolor=color.new(color.orange, 30))
+    table.cell(tablero, 2, 14, "$" + str.tostring(money_gale_6_buy, "#.##"), bgcolor=color.new(color.orange, 30))
+    table.cell(tablero, 3, 14, "Win Gale 6", bgcolor=color.new(color.orange, 30))
+    table.cell(tablero, 4, 14, str.tostring(win_gale_6_sell), bgcolor=color.new(color.orange, 30))
+    table.cell(tablero, 5, 14, "$" + str.tostring(money_gale_6_sell, "#.##"), bgcolor=color.new(color.orange, 30))
+    
+    table.cell(tablero, 0, 15, "Win Gale 7", bgcolor=color.new(color.red, 40))
+    table.cell(tablero, 1, 15, str.tostring(win_gale_7_buy), bgcolor=color.new(color.red, 40))
+    table.cell(tablero, 2, 15, "$" + str.tostring(money_gale_7_buy, "#.##"), bgcolor=color.new(color.red, 40))
+    table.cell(tablero, 3, 15, "Win Gale 7", bgcolor=color.new(color.red, 40))
+    table.cell(tablero, 4, 15, str.tostring(win_gale_7_sell), bgcolor=color.new(color.red, 40))
+    table.cell(tablero, 5, 15, "$" + str.tostring(money_gale_7_sell, "#.##"), bgcolor=color.new(color.red, 40))
+    
+    table.cell(tablero, 0, 16, "Perdidas G8", bgcolor=color.red)
+    table.cell(tablero, 1, 16, str.tostring(lost_gale_8_buy), bgcolor=color.red)
+    table.cell(tablero, 2, 16, "-$" + str.tostring(money_lost_gale_8_buy, "#.##"), bgcolor=color.red)
+    table.cell(tablero, 3, 16, "Perdidas G8", bgcolor=color.red)
+    table.cell(tablero, 4, 16, str.tostring(lost_gale_8_sell), bgcolor=color.red)
+    table.cell(tablero, 5, 16, "-$" + str.tostring(money_lost_gale_8_sell, "#.##"), bgcolor=color.red)
+    
+    // Separador
+    table.cell(tablero, 0, 17, "───────", bgcolor=color.gray)
+    table.cell(tablero, 1, 17, "───────", bgcolor=color.gray)
+    table.cell(tablero, 2, 17, "───────", bgcolor=color.gray)
+    table.cell(tablero, 3, 17, "───────", bgcolor=color.gray)
+    table.cell(tablero, 4, 17, "───────", bgcolor=color.gray)
+    table.cell(tablero, 5, 17, "───────", bgcolor=color.gray)
+    
+    // Totales
+    table.cell(tablero, 0, 18, "TOTALES", bgcolor=color.blue, text_color=color.white)
+    table.cell(tablero, 1, 18, "", bgcolor=color.blue)
+    table.cell(tablero, 2, 18, "", bgcolor=color.blue)
+    table.cell(tablero, 3, 18, "TOTALES", bgcolor=color.blue, text_color=color.white)
+    table.cell(tablero, 4, 18, "", bgcolor=color.blue)
+    table.cell(tablero, 5, 18, "", bgcolor=color.blue)
+    
+    table.cell(tablero, 0, 19, "Ganadas", bgcolor=color.green)
+    table.cell(tablero, 1, 19, str.tostring(ganadas_buy), bgcolor=color.green)
+    table.cell(tablero, 2, 19, "$" + str.tostring(profit_total_buy, "#.##"), bgcolor=color.green)
+    table.cell(tablero, 3, 19, "Ganadas", bgcolor=color.green)
+    table.cell(tablero, 4, 19, str.tostring(ganadas_sell), bgcolor=color.green)
+    table.cell(tablero, 5, 19, "$" + str.tostring(profit_total_sell, "#.##"), bgcolor=color.green)
+    
+    table.cell(tablero, 0, 20, "Perdidas", bgcolor=color.red)
+    table.cell(tablero, 1, 20, str.tostring(perdidas_buy), bgcolor=color.red)
+    table.cell(tablero, 2, 20, "-$" + str.tostring(loss_total_buy, "#.##"), bgcolor=color.red)
+    table.cell(tablero, 3, 20, "Perdidas", bgcolor=color.red)
+    table.cell(tablero, 4, 20, str.tostring(perdidas_sell), bgcolor=color.red)
+    table.cell(tablero, 5, 20, "-$" + str.tostring(loss_total_sell, "#.##"), bgcolor=color.red)
+    
+    table.cell(tablero, 0, 21, "Win Rate", bgcolor=color.teal)
+    table.cell(tablero, 1, 21, str.tostring(porcentaje_buy, "#.##") + "%", bgcolor=color.teal)
+    table.cell(tablero, 2, 21, "", bgcolor=color.teal)
+    table.cell(tablero, 3, 21, "Win Rate", bgcolor=color.teal)
+    table.cell(tablero, 4, 21, str.tostring(porcentaje_sell, "#.##") + "%", bgcolor=color.teal)
+    table.cell(tablero, 5, 21, "", bgcolor=color.teal)
+    
+    table.cell(tablero, 0, 22, "Total Ops", bgcolor=color.orange)
+    table.cell(tablero, 1, 22, str.tostring(total_ops_buy), bgcolor=color.orange)
+    table.cell(tablero, 2, 22, "", bgcolor=color.orange)
+    table.cell(tablero, 3, 22, "Total Ops", bgcolor=color.orange)
+    table.cell(tablero, 4, 22, str.tostring(total_ops_sell), bgcolor=color.orange)
+    table.cell(tablero, 5, 22, "", bgcolor=color.orange)
+    
+    // Balance Final
+    table.cell(tablero, 0, 24, "BALANCE FINAL", bgcolor=color.blue, text_color=color.white)
+    table.cell(tablero, 1, 24, "$" + str.tostring(balance, "#.##"), bgcolor=color.blue, text_color=color.white)
+    table.cell(tablero, 2, 24, "", bgcolor=color.blue)
+    table.cell(tablero, 3, 24, "NET PROFIT", bgcolor=color.blue, text_color=color.white)
+    table.cell(tablero, 4, 24, "$" + str.tostring(balance - cuenta_inicial, "#.##"), bgcolor=color.blue, text_color=color.white)
+    table.cell(tablero, 5, 24, "", bgcolor=color.blue)
+    
+    // Firma
+    table.cell(tablero, 0, 26, "VERSIÓN PRO", bgcolor=color.purple, text_color=color.white)
+    table.cell(tablero, 1, 26, "por oleal7752", bgcolor=color.purple, text_color=color.white)
+    table.cell(tablero, 2, 26, "31/08/2025", bgcolor=color.purple, text_color=color.white)
+    table.cell(tablero, 3, 26, "GALES 0-7", bgcolor=color.purple, text_color=color.white)
+    table.cell(tablero, 4, 26, "CON $ DETAIL", bgcolor=color.purple, text_color=color.white)
+    table.cell(tablero, 5, 26, "PROFESIONAL", bgcolor=color.purple, text_color=color.white)

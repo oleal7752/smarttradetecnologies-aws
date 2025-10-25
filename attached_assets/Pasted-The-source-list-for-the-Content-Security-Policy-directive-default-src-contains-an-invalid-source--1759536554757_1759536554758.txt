@@ -1,0 +1,2207 @@
+The source list for the Content Security Policy directive 'default-src' contains an invalid source: ''unsafe-dynamic''. It will be ignored.
+The source list for the Content Security Policy directive 'default-src' contains an invalid source: ''unsafe-dynamic''. It will be ignored.
+The source list for the Content Security Policy directive 'default-src' contains an invalid source: ''unsafe-dynamic''. It will be ignored.
+The source list for the Content Security Policy directive 'default-src' contains an invalid source: ''unsafe-dynamic''. It will be ignored.
+The source list for the Content Security Policy directive 'default-src' contains an invalid source: ''unsafe-dynamic''. It will be ignored.
+The source list for the Content Security Policy directive 'default-src' contains an invalid source: ''unsafe-dynamic''. It will be ignored.
+The source list for the Content Security Policy directive 'default-src' contains an invalid source: ''unsafe-dynamic''. It will be ignored.
+The source list for the Content Security Policy directive 'default-src' contains an invalid source: ''unsafe-dynamic''. It will be ignored.
+The source list for the Content Security Policy directive 'default-src' contains an invalid source: ''unsafe-dynamic''. It will be ignored.
+The source list for the Content Security Policy directive 'default-src' contains an invalid source: ''unsafe-dynamic''. It will be ignored.
+The source list for the Content Security Policy directive 'default-src' contains an invalid source: ''unsafe-dynamic''. It will be ignored.
+The source list for the Content Security Policy directive 'default-src' contains an invalid source: ''unsafe-dynamic''. It will be ignored.
+The source list for the Content Security Policy directive 'default-src' contains an invalid source: ''unsafe-dynamic''. It will be ignored.
+The source list for the Content Security Policy directive 'default-src' contains an invalid source: ''unsafe-dynamic''. It will be ignored.
+The source list for the Content Security Policy directive 'default-src' contains an invalid source: ''unsafe-dynamic''. It will be ignored.
+The source list for the Content Security Policy directive 'default-src' contains an invalid source: ''unsafe-dynamic''. It will be ignored.
+The Content-Security-Policy directive 'default-src' contains 'report-uri' as a source expression. Did you want to add it as a directive and forget a semicolon?
+The Content-Security-Policy directive 'default-src' contains 'report-uri' as a source expression. Did you want to add it as a directive and forget a semicolon?
+The Content-Security-Policy directive 'default-src' contains 'report-uri' as a source expression. Did you want to add it as a directive and forget a semicolon?
+The Content-Security-Policy directive 'default-src' contains 'report-uri' as a source expression. Did you want to add it as a directive and forget a semicolon?
+The Content-Security-Policy directive 'default-src' contains 'report-uri' as a source expression. Did you want to add it as a directive and forget a semicolon?
+The Content-Security-Policy directive 'default-src' contains 'report-uri' as a source expression. Did you want to add it as a directive and forget a semicolon?
+The Content-Security-Policy directive 'default-src' contains 'report-uri' as a source expression. Did you want to add it as a directive and forget a semicolon?
+The Content-Security-Policy directive 'default-src' contains 'report-uri' as a source expression. Did you want to add it as a directive and forget a semicolon?
+The Content-Security-Policy directive 'default-src' contains 'report-uri' as a source expression. Did you want to add it as a directive and forget a semicolon?
+The Content-Security-Policy directive 'default-src' contains 'report-uri' as a source expression. Did you want to add it as a directive and forget a semicolon?
+The Content-Security-Policy directive 'default-src' contains 'report-uri' as a source expression. Did you want to add it as a directive and forget a semicolon?
+The Content-Security-Policy directive 'default-src' contains 'report-uri' as a source expression. Did you want to add it as a directive and forget a semicolon?
+The Content-Security-Policy directive 'default-src' contains 'report-uri' as a source expression. Did you want to add it as a directive and forget a semicolon?
+The Content-Security-Policy directive 'default-src' contains 'report-uri' as a source expression. Did you want to add it as a directive and forget a semicolon?
+The Content-Security-Policy directive 'default-src' contains 'report-uri' as a source expression. Did you want to add it as a directive and forget a semicolon?
+The Content-Security-Policy directive 'default-src' contains 'report-uri' as a source expression. Did you want to add it as a directive and forget a semicolon?
+The source list for Content Security Policy directive 'default-src' contains a source with an invalid path: '/api/4509669501698048/security/?sentry_key=7eb3d90eb4660416caf507087367e67e'. The query component, including the '?', will be ignored.
+The source list for Content Security Policy directive 'default-src' contains a source with an invalid path: '/api/4509669501698048/security/?sentry_key=7eb3d90eb4660416caf507087367e67e'. The query component, including the '?', will be ignored.
+The source list for Content Security Policy directive 'default-src' contains a source with an invalid path: '/api/4509669501698048/security/?sentry_key=7eb3d90eb4660416caf507087367e67e'. The query component, including the '?', will be ignored.
+The source list for Content Security Policy directive 'default-src' contains a source with an invalid path: '/api/4509669501698048/security/?sentry_key=7eb3d90eb4660416caf507087367e67e'. The query component, including the '?', will be ignored.
+The source list for Content Security Policy directive 'default-src' contains a source with an invalid path: '/api/4509669501698048/security/?sentry_key=7eb3d90eb4660416caf507087367e67e'. The query component, including the '?', will be ignored.
+The source list for Content Security Policy directive 'default-src' contains a source with an invalid path: '/api/4509669501698048/security/?sentry_key=7eb3d90eb4660416caf507087367e67e'. The query component, including the '?', will be ignored.
+The source list for Content Security Policy directive 'default-src' contains a source with an invalid path: '/api/4509669501698048/security/?sentry_key=7eb3d90eb4660416caf507087367e67e'. The query component, including the '?', will be ignored.
+The source list for Content Security Policy directive 'default-src' contains a source with an invalid path: '/api/4509669501698048/security/?sentry_key=7eb3d90eb4660416caf507087367e67e'. The query component, including the '?', will be ignored.
+The source list for Content Security Policy directive 'default-src' contains a source with an invalid path: '/api/4509669501698048/security/?sentry_key=7eb3d90eb4660416caf507087367e67e'. The query component, including the '?', will be ignored.
+The source list for Content Security Policy directive 'default-src' contains a source with an invalid path: '/api/4509669501698048/security/?sentry_key=7eb3d90eb4660416caf507087367e67e'. The query component, including the '?', will be ignored.
+The source list for Content Security Policy directive 'default-src' contains a source with an invalid path: '/api/4509669501698048/security/?sentry_key=7eb3d90eb4660416caf507087367e67e'. The query component, including the '?', will be ignored.
+The source list for Content Security Policy directive 'default-src' contains a source with an invalid path: '/api/4509669501698048/security/?sentry_key=7eb3d90eb4660416caf507087367e67e'. The query component, including the '?', will be ignored.
+The source list for Content Security Policy directive 'default-src' contains a source with an invalid path: '/api/4509669501698048/security/?sentry_key=7eb3d90eb4660416caf507087367e67e'. The query component, including the '?', will be ignored.
+The source list for Content Security Policy directive 'default-src' contains a source with an invalid path: '/api/4509669501698048/security/?sentry_key=7eb3d90eb4660416caf507087367e67e'. The query component, including the '?', will be ignored.
+The source list for Content Security Policy directive 'default-src' contains a source with an invalid path: '/api/4509669501698048/security/?sentry_key=7eb3d90eb4660416caf507087367e67e'. The query component, including the '?', will be ignored.
+The source list for Content Security Policy directive 'default-src' contains a source with an invalid path: '/api/4509669501698048/security/?sentry_key=7eb3d90eb4660416caf507087367e67e'. The query component, including the '?', will be ignored.
+The source list for the Content Security Policy directive 'default-src' contains an invalid source: ''unsafe-dynamic''. It will be ignored.
+The Content-Security-Policy directive 'default-src' contains 'report-uri' as a source expression. Did you want to add it as a directive and forget a semicolon?
+The source list for Content Security Policy directive 'default-src' contains a source with an invalid path: '/api/4509669501698048/security/?sentry_key=7eb3d90eb4660416caf507087367e67e'. The query component, including the '?', will be ignored.
+SmartTradeAcademy:1 The source list for the Content Security Policy directive 'default-src' contains an invalid source: ''unsafe-dynamic''. It will be ignored.
+SmartTradeAcademy:1 The Content-Security-Policy directive 'default-src' contains 'report-uri' as a source expression. Did you want to add it as a directive and forget a semicolon?
+SmartTradeAcademy:1 The source list for Content Security Policy directive 'default-src' contains a source with an invalid path: '/api/4509669501698048/security/?sentry_key=7eb3d90eb4660416caf507087367e67e'. The query component, including the '?', will be ignored.
+_app-8703c078616db858.js:34 
+      /////////////////////
+   ///////////////////////////
+  ////////@@@@@@@//////////////
+  ////////@@@@@@@//////////////
+  ////////@@@@@@@//////////////        Curious and driven?
+  ///////////////@@@@@@@///////        Work with us!
+  ///////////////@@@@@@@///////
+  ///////////////@@@@@@@///////        https://join.replit.com/hack.with.us
+  ////////@@@@@@@//////////////
+  ////////@@@@@@@//////////////
+  ////////@@@@@@#//////////////
+   ///////////////////////////
+      /////////////////////
+      
+_app-8703c078616db858.js:34 [LaunchDarkly] LaunchDarkly client initialized
+framework-3abd175b6916fd8c.js:1 Error while parsing the 'sandbox' attribute: 'allow-downloads-without-user-activation' is an invalid sandbox flag.
+_ @ framework-3abd175b6916fd8c.js:1
+(anonymous) @ framework-3abd175b6916fd8c.js:1
+uD @ framework-3abd175b6916fd8c.js:1
+uI @ framework-3abd175b6916fd8c.js:1
+uM @ framework-3abd175b6916fd8c.js:1
+uS @ framework-3abd175b6916fd8c.js:1
+C @ framework-3abd175b6916fd8c.js:1
+z @ framework-3abd175b6916fd8c.js:1
+framework-3abd175b6916fd8c.js:1 Unrecognized feature: 'ambient-light-sensor'.
+_ @ framework-3abd175b6916fd8c.js:1
+(anonymous) @ framework-3abd175b6916fd8c.js:1
+uD @ framework-3abd175b6916fd8c.js:1
+uI @ framework-3abd175b6916fd8c.js:1
+uM @ framework-3abd175b6916fd8c.js:1
+uS @ framework-3abd175b6916fd8c.js:1
+C @ framework-3abd175b6916fd8c.js:1
+z @ framework-3abd175b6916fd8c.js:1
+framework-3abd175b6916fd8c.js:1 Unrecognized feature: 'battery'.
+_ @ framework-3abd175b6916fd8c.js:1
+(anonymous) @ framework-3abd175b6916fd8c.js:1
+uD @ framework-3abd175b6916fd8c.js:1
+uI @ framework-3abd175b6916fd8c.js:1
+uM @ framework-3abd175b6916fd8c.js:1
+uS @ framework-3abd175b6916fd8c.js:1
+C @ framework-3abd175b6916fd8c.js:1
+z @ framework-3abd175b6916fd8c.js:1
+framework-3abd175b6916fd8c.js:1 Unrecognized feature: 'execution-while-not-rendered'.
+_ @ framework-3abd175b6916fd8c.js:1
+(anonymous) @ framework-3abd175b6916fd8c.js:1
+uD @ framework-3abd175b6916fd8c.js:1
+uI @ framework-3abd175b6916fd8c.js:1
+uM @ framework-3abd175b6916fd8c.js:1
+uS @ framework-3abd175b6916fd8c.js:1
+C @ framework-3abd175b6916fd8c.js:1
+z @ framework-3abd175b6916fd8c.js:1
+framework-3abd175b6916fd8c.js:1 Unrecognized feature: 'execution-while-out-of-viewport'.
+_ @ framework-3abd175b6916fd8c.js:1
+(anonymous) @ framework-3abd175b6916fd8c.js:1
+uD @ framework-3abd175b6916fd8c.js:1
+uI @ framework-3abd175b6916fd8c.js:1
+uM @ framework-3abd175b6916fd8c.js:1
+uS @ framework-3abd175b6916fd8c.js:1
+C @ framework-3abd175b6916fd8c.js:1
+z @ framework-3abd175b6916fd8c.js:1
+framework-3abd175b6916fd8c.js:1 Unrecognized feature: 'layout-animations'.
+_ @ framework-3abd175b6916fd8c.js:1
+(anonymous) @ framework-3abd175b6916fd8c.js:1
+uD @ framework-3abd175b6916fd8c.js:1
+uI @ framework-3abd175b6916fd8c.js:1
+uM @ framework-3abd175b6916fd8c.js:1
+uS @ framework-3abd175b6916fd8c.js:1
+C @ framework-3abd175b6916fd8c.js:1
+z @ framework-3abd175b6916fd8c.js:1
+framework-3abd175b6916fd8c.js:1 Unrecognized feature: 'legacy-image-formats'.
+_ @ framework-3abd175b6916fd8c.js:1
+(anonymous) @ framework-3abd175b6916fd8c.js:1
+uD @ framework-3abd175b6916fd8c.js:1
+uI @ framework-3abd175b6916fd8c.js:1
+uM @ framework-3abd175b6916fd8c.js:1
+uS @ framework-3abd175b6916fd8c.js:1
+C @ framework-3abd175b6916fd8c.js:1
+z @ framework-3abd175b6916fd8c.js:1
+framework-3abd175b6916fd8c.js:1 Unrecognized feature: 'navigation-override'.
+_ @ framework-3abd175b6916fd8c.js:1
+(anonymous) @ framework-3abd175b6916fd8c.js:1
+uD @ framework-3abd175b6916fd8c.js:1
+uI @ framework-3abd175b6916fd8c.js:1
+uM @ framework-3abd175b6916fd8c.js:1
+uS @ framework-3abd175b6916fd8c.js:1
+C @ framework-3abd175b6916fd8c.js:1
+z @ framework-3abd175b6916fd8c.js:1
+framework-3abd175b6916fd8c.js:1 Unrecognized feature: 'oversized-images'.
+_ @ framework-3abd175b6916fd8c.js:1
+(anonymous) @ framework-3abd175b6916fd8c.js:1
+uD @ framework-3abd175b6916fd8c.js:1
+uI @ framework-3abd175b6916fd8c.js:1
+uM @ framework-3abd175b6916fd8c.js:1
+uS @ framework-3abd175b6916fd8c.js:1
+C @ framework-3abd175b6916fd8c.js:1
+z @ framework-3abd175b6916fd8c.js:1
+framework-3abd175b6916fd8c.js:1 Unrecognized feature: 'publickey-credentials'.
+_ @ framework-3abd175b6916fd8c.js:1
+(anonymous) @ framework-3abd175b6916fd8c.js:1
+uD @ framework-3abd175b6916fd8c.js:1
+uI @ framework-3abd175b6916fd8c.js:1
+uM @ framework-3abd175b6916fd8c.js:1
+uS @ framework-3abd175b6916fd8c.js:1
+C @ framework-3abd175b6916fd8c.js:1
+z @ framework-3abd175b6916fd8c.js:1
+framework-3abd175b6916fd8c.js:1 Unrecognized feature: 'speaker-selection'.
+_ @ framework-3abd175b6916fd8c.js:1
+(anonymous) @ framework-3abd175b6916fd8c.js:1
+uD @ framework-3abd175b6916fd8c.js:1
+uI @ framework-3abd175b6916fd8c.js:1
+uM @ framework-3abd175b6916fd8c.js:1
+uS @ framework-3abd175b6916fd8c.js:1
+C @ framework-3abd175b6916fd8c.js:1
+z @ framework-3abd175b6916fd8c.js:1
+framework-3abd175b6916fd8c.js:1 Unrecognized feature: 'unoptimized-images'.
+_ @ framework-3abd175b6916fd8c.js:1
+(anonymous) @ framework-3abd175b6916fd8c.js:1
+uD @ framework-3abd175b6916fd8c.js:1
+uI @ framework-3abd175b6916fd8c.js:1
+uM @ framework-3abd175b6916fd8c.js:1
+uS @ framework-3abd175b6916fd8c.js:1
+C @ framework-3abd175b6916fd8c.js:1
+z @ framework-3abd175b6916fd8c.js:1
+framework-3abd175b6916fd8c.js:1 Unrecognized feature: 'unsized-media'.
+_ @ framework-3abd175b6916fd8c.js:1
+(anonymous) @ framework-3abd175b6916fd8c.js:1
+uD @ framework-3abd175b6916fd8c.js:1
+uI @ framework-3abd175b6916fd8c.js:1
+uM @ framework-3abd175b6916fd8c.js:1
+uS @ framework-3abd175b6916fd8c.js:1
+C @ framework-3abd175b6916fd8c.js:1
+z @ framework-3abd175b6916fd8c.js:1
+framework-3abd175b6916fd8c.js:1 Unrecognized feature: 'pointer-lock'.
+_ @ framework-3abd175b6916fd8c.js:1
+(anonymous) @ framework-3abd175b6916fd8c.js:1
+uD @ framework-3abd175b6916fd8c.js:1
+uI @ framework-3abd175b6916fd8c.js:1
+uM @ framework-3abd175b6916fd8c.js:1
+uS @ framework-3abd175b6916fd8c.js:1
+C @ framework-3abd175b6916fd8c.js:1
+z @ framework-3abd175b6916fd8c.js:1
+framework-3abd175b6916fd8c.js:1 Allow attribute will take precedence over 'allowfullscreen'.
+_ @ framework-3abd175b6916fd8c.js:1
+(anonymous) @ framework-3abd175b6916fd8c.js:1
+uD @ framework-3abd175b6916fd8c.js:1
+uI @ framework-3abd175b6916fd8c.js:1
+uM @ framework-3abd175b6916fd8c.js:1
+uS @ framework-3abd175b6916fd8c.js:1
+C @ framework-3abd175b6916fd8c.js:1
+z @ framework-3abd175b6916fd8c.js:1
+framework-3abd175b6916fd8c.js:1 Allow attribute will take precedence over 'allowpaymentrequest'.
+_ @ framework-3abd175b6916fd8c.js:1
+(anonymous) @ framework-3abd175b6916fd8c.js:1
+uD @ framework-3abd175b6916fd8c.js:1
+uI @ framework-3abd175b6916fd8c.js:1
+uM @ framework-3abd175b6916fd8c.js:1
+uS @ framework-3abd175b6916fd8c.js:1
+C @ framework-3abd175b6916fd8c.js:1
+z @ framework-3abd175b6916fd8c.js:1
+Error while parsing the 'sandbox' attribute: 'allow-downloads-without-user-activation' is an invalid sandbox flag.
+Error while parsing the 'sandbox' attribute: 'allow-downloads-without-user-activation' is an invalid sandbox flag.
+Error while parsing the 'sandbox' attribute: 'allow-downloads-without-user-activation' is an invalid sandbox flag.
+Error while parsing the 'sandbox' attribute: 'allow-downloads-without-user-activation' is an invalid sandbox flag.
+Error while parsing the 'sandbox' attribute: 'allow-downloads-without-user-activation' is an invalid sandbox flag.
+Error while parsing the 'sandbox' attribute: 'allow-downloads-without-user-activation' is an invalid sandbox flag.
+Error while parsing the 'sandbox' attribute: 'allow-downloads-without-user-activation' is an invalid sandbox flag.
+Error while parsing the 'sandbox' attribute: 'allow-downloads-without-user-activation' is an invalid sandbox flag.
+Error while parsing the 'sandbox' attribute: 'allow-downloads-without-user-activation' is an invalid sandbox flag.
+Error while parsing the 'sandbox' attribute: 'allow-downloads-without-user-activation' is an invalid sandbox flag.
+Error while parsing the 'sandbox' attribute: 'allow-downloads-without-user-activation' is an invalid sandbox flag.
+Error while parsing the 'sandbox' attribute: 'allow-downloads-without-user-activation' is an invalid sandbox flag.
+Error while parsing the 'sandbox' attribute: 'allow-downloads-without-user-activation' is an invalid sandbox flag.
+Error while parsing the 'sandbox' attribute: 'allow-downloads-without-user-activation' is an invalid sandbox flag.
+Error while parsing the 'sandbox' attribute: 'allow-downloads-without-user-activation' is an invalid sandbox flag.
+Unrecognized feature: 'ambient-light-sensor'.
+Unrecognized feature: 'ambient-light-sensor'.
+Unrecognized feature: 'ambient-light-sensor'.
+Unrecognized feature: 'ambient-light-sensor'.
+Unrecognized feature: 'ambient-light-sensor'.
+Unrecognized feature: 'ambient-light-sensor'.
+Unrecognized feature: 'ambient-light-sensor'.
+Unrecognized feature: 'ambient-light-sensor'.
+Unrecognized feature: 'battery'.
+Unrecognized feature: 'battery'.
+Unrecognized feature: 'battery'.
+Unrecognized feature: 'battery'.
+Unrecognized feature: 'battery'.
+Unrecognized feature: 'battery'.
+Unrecognized feature: 'battery'.
+Unrecognized feature: 'battery'.
+Unrecognized feature: 'execution-while-not-rendered'.
+Unrecognized feature: 'execution-while-not-rendered'.
+Unrecognized feature: 'execution-while-not-rendered'.
+Unrecognized feature: 'execution-while-not-rendered'.
+Unrecognized feature: 'execution-while-not-rendered'.
+Unrecognized feature: 'execution-while-not-rendered'.
+Unrecognized feature: 'execution-while-not-rendered'.
+Unrecognized feature: 'execution-while-not-rendered'.
+Unrecognized feature: 'execution-while-out-of-viewport'.
+Unrecognized feature: 'execution-while-out-of-viewport'.
+Unrecognized feature: 'execution-while-out-of-viewport'.
+Unrecognized feature: 'execution-while-out-of-viewport'.
+Unrecognized feature: 'execution-while-out-of-viewport'.
+Unrecognized feature: 'execution-while-out-of-viewport'.
+Unrecognized feature: 'execution-while-out-of-viewport'.
+Unrecognized feature: 'execution-while-out-of-viewport'.
+Unrecognized feature: 'layout-animations'.
+Unrecognized feature: 'layout-animations'.
+Unrecognized feature: 'layout-animations'.
+Unrecognized feature: 'layout-animations'.
+Unrecognized feature: 'layout-animations'.
+Unrecognized feature: 'layout-animations'.
+Unrecognized feature: 'layout-animations'.
+Unrecognized feature: 'layout-animations'.
+Unrecognized feature: 'legacy-image-formats'.
+Unrecognized feature: 'legacy-image-formats'.
+Unrecognized feature: 'legacy-image-formats'.
+Unrecognized feature: 'legacy-image-formats'.
+Unrecognized feature: 'legacy-image-formats'.
+Unrecognized feature: 'legacy-image-formats'.
+Unrecognized feature: 'legacy-image-formats'.
+Unrecognized feature: 'legacy-image-formats'.
+Unrecognized feature: 'navigation-override'.
+Unrecognized feature: 'navigation-override'.
+Unrecognized feature: 'navigation-override'.
+Unrecognized feature: 'navigation-override'.
+Unrecognized feature: 'navigation-override'.
+Unrecognized feature: 'navigation-override'.
+Unrecognized feature: 'navigation-override'.
+Unrecognized feature: 'navigation-override'.
+Unrecognized feature: 'oversized-images'.
+Unrecognized feature: 'oversized-images'.
+Unrecognized feature: 'oversized-images'.
+Unrecognized feature: 'oversized-images'.
+Unrecognized feature: 'oversized-images'.
+Unrecognized feature: 'oversized-images'.
+Unrecognized feature: 'oversized-images'.
+Unrecognized feature: 'oversized-images'.
+Unrecognized feature: 'publickey-credentials'.
+Unrecognized feature: 'publickey-credentials'.
+Unrecognized feature: 'publickey-credentials'.
+Unrecognized feature: 'publickey-credentials'.
+Unrecognized feature: 'publickey-credentials'.
+Unrecognized feature: 'publickey-credentials'.
+Unrecognized feature: 'publickey-credentials'.
+Unrecognized feature: 'publickey-credentials'.
+Unrecognized feature: 'speaker-selection'.
+Unrecognized feature: 'speaker-selection'.
+Unrecognized feature: 'speaker-selection'.
+Unrecognized feature: 'speaker-selection'.
+Unrecognized feature: 'speaker-selection'.
+Unrecognized feature: 'speaker-selection'.
+Unrecognized feature: 'speaker-selection'.
+Unrecognized feature: 'speaker-selection'.
+Unrecognized feature: 'unoptimized-images'.
+Unrecognized feature: 'unoptimized-images'.
+Unrecognized feature: 'unoptimized-images'.
+Unrecognized feature: 'unoptimized-images'.
+Unrecognized feature: 'unoptimized-images'.
+Unrecognized feature: 'unoptimized-images'.
+Unrecognized feature: 'unoptimized-images'.
+Unrecognized feature: 'unoptimized-images'.
+Unrecognized feature: 'unsized-media'.
+Unrecognized feature: 'unsized-media'.
+Unrecognized feature: 'unsized-media'.
+Unrecognized feature: 'unsized-media'.
+Unrecognized feature: 'unsized-media'.
+Unrecognized feature: 'unsized-media'.
+Unrecognized feature: 'unsized-media'.
+Unrecognized feature: 'unsized-media'.
+Allow attribute will take precedence over 'allowfullscreen'.
+Allow attribute will take precedence over 'allowfullscreen'.
+Allow attribute will take precedence over 'allowfullscreen'.
+Allow attribute will take precedence over 'allowfullscreen'.
+Allow attribute will take precedence over 'allowfullscreen'.
+Allow attribute will take precedence over 'allowfullscreen'.
+Allow attribute will take precedence over 'allowfullscreen'.
+Allow attribute will take precedence over 'allowfullscreen'.
+Allow attribute will take precedence over 'allowpaymentrequest'.
+Allow attribute will take precedence over 'allowpaymentrequest'.
+Allow attribute will take precedence over 'allowpaymentrequest'.
+Allow attribute will take precedence over 'allowpaymentrequest'.
+Allow attribute will take precedence over 'allowpaymentrequest'.
+Allow attribute will take precedence over 'allowpaymentrequest'.
+Allow attribute will take precedence over 'allowpaymentrequest'.
+Allow attribute will take precedence over 'allowpaymentrequest'.
+SmartTradeAcademy:1 Banner not shown: beforeinstallpromptevent.preventDefault() called. The page must call beforeinstallpromptevent.prompt() to show the banner.
+eruda.js:2 📋 STC Trading Dashboard script cargado
+eruda.js:2 🌐 DOM cargado, iniciando aplicación...
+eruda.js:2 🚀 STC Trading System - gráficos automáticos activos
+eruda.js:2 🚀 Iniciando STC Chart Manager...
+eruda.js:2 ✅ STC Chart Manager - usando STCChartFix automático
+eruda.js:2 🚀 Iniciando STC Trading Dashboard...
+eruda.js:2 ✅ Gráfico inicializado correctamente
+eruda.js:2 🎛️ Event handlers configurados
+eruda.js:2 🔄 Auto-update iniciado
+eruda.js:2 ✅ Dashboard inicializado
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 ✅ 34 señales agregadas al gráfico
+eruda.js:2 ✅ 34 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 🆕 Nueva vela detectada en 6:17:46 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 🔔 Señal de COMPRA detectada (AUDIO SILENCIADO): {confidence: 0.52, direction: 'CALL', gale_level: 1, is_gale: true, pattern: 'Alcista', …}
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 🆕 Nueva vela detectada en 6:17:50 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 🆕 Nueva vela detectada en 6:17:55 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 🆕 Nueva vela detectada en 6:18:01 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 🔔 Señal de VENTA detectada (AUDIO SILENCIADO): {confidence: 0.5, direction: 'PUT', gale_level: 7, is_gale: true, pattern: 'Bajista', …}
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 🆕 Nueva vela detectada en 6:18:06 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 🔔 Señal de COMPRA detectada (AUDIO SILENCIADO): {confidence: 0.53, direction: 'CALL', gale_level: 1, is_gale: true, pattern: 'Alcista', …}
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 🆕 Nueva vela detectada en 6:18:10 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2  POST https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/login 503 (Service Unavailable)
+window.fetch @ VM1573 eruda.js:2
+apply @ VM1574 injected.js:278
+loginIQ @ VM1595 dashboard:23
+(anonymous) @ VM1593 dashboard:975
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 🆕 Nueva vela detectada en 6:18:16 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 🆕 Nueva vela detectada en 6:18:21 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 🔔 Señal de COMPRA detectada (AUDIO SILENCIADO): {confidence: 0.5, direction: 'CALL', gale_level: 0, is_gale: false, pattern: 'Alcista', …}
+eruda.js:2 ✅ 49 señales agregadas al gráfico
+eruda.js:2 ✅ 49 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 🆕 Nueva vela detectada en 6:18:26 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 🔔 Señal de COMPRA detectada (AUDIO SILENCIADO): {confidence: 0.51, direction: 'CALL', gale_level: 0, is_gale: false, pattern: 'Alcista', …}
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 🆕 Nueva vela detectada en 6:18:30 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 🆕 Nueva vela detectada en 6:18:36 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 🔔 Señal de COMPRA detectada (AUDIO SILENCIADO): {confidence: 0.53, direction: 'CALL', gale_level: 1, is_gale: true, pattern: 'Alcista', …}
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 🆕 Nueva vela detectada en 6:18:41 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 🔔 Señal de VENTA detectada (AUDIO SILENCIADO): {confidence: 0.56, direction: 'PUT', gale_level: 0, is_gale: false, pattern: 'Bajista', …}
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 🆕 Nueva vela detectada en 6:18:46 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 🔔 Señal de COMPRA detectada (AUDIO SILENCIADO): {confidence: 0.5, direction: 'CALL', gale_level: 0, is_gale: false, pattern: 'Alcista', …}
+eruda.js:2 ✅ 46 señales agregadas al gráfico
+eruda.js:2 ✅ 46 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 🆕 Nueva vela detectada en 6:18:51 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 🔔 Señal de VENTA detectada (AUDIO SILENCIADO): {confidence: 0.53, direction: 'PUT', gale_level: 0, is_gale: false, pattern: 'Bajista', …}
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 🆕 Nueva vela detectada en 6:18:55 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 🆕 Nueva vela detectada en 6:19:00 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 ✅ 46 señales agregadas al gráfico
+eruda.js:2 ✅ 46 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 🆕 Nueva vela detectada en 6:19:05 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 🆕 Nueva vela detectada en 6:19:11 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 🔔 Señal de COMPRA detectada (AUDIO SILENCIADO): {confidence: 0.58, direction: 'CALL', gale_level: 1, is_gale: true, pattern: 'Alcista', …}
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 🆕 Nueva vela detectada en 6:19:15 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 ✅ 34 señales agregadas al gráfico
+eruda.js:2 ✅ 34 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 🆕 Nueva vela detectada en 6:19:20 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 🆕 Nueva vela detectada en 6:19:25 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 🆕 Nueva vela detectada en 6:19:30 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 ✅ 48 señales agregadas al gráfico
+eruda.js:2 ✅ 48 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 🆕 Nueva vela detectada en 6:19:35 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 🆕 Nueva vela detectada en 6:19:40 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 🆕 Nueva vela detectada en 6:19:45 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 🆕 Nueva vela detectada en 6:19:50 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 🆕 Nueva vela detectada en 6:19:55 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 🆕 Nueva vela detectada en 6:20:00 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 🆕 Nueva vela detectada en 6:20:05 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 ✅ 39 señales agregadas al gráfico
+eruda.js:2 ✅ 39 señales Tablero cargadas
+framework-3abd175b6916fd8c.js:1 Error while parsing the 'sandbox' attribute: 'allow-downloads-without-user-activation' is an invalid sandbox flag.
+_ @ framework-3abd175b6916fd8c.js:1
+(anonymous) @ framework-3abd175b6916fd8c.js:1
+uD @ framework-3abd175b6916fd8c.js:1
+uI @ framework-3abd175b6916fd8c.js:1
+uM @ framework-3abd175b6916fd8c.js:1
+uS @ framework-3abd175b6916fd8c.js:1
+C @ framework-3abd175b6916fd8c.js:1
+z @ framework-3abd175b6916fd8c.js:1
+eruda.js:2 📋 STC Trading Dashboard script cargado
+eruda.js:2 🌐 DOM cargado, iniciando aplicación...
+eruda.js:2 🚀 STC Trading System - gráficos automáticos activos
+eruda.js:2 🚀 Iniciando STC Chart Manager...
+eruda.js:2 ✅ STC Chart Manager - usando STCChartFix automático
+eruda.js:2 🚀 Iniciando STC Trading Dashboard...
+eruda.js:2 ✅ Gráfico inicializado correctamente
+eruda.js:2 🎛️ Event handlers configurados
+eruda.js:2 🔄 Auto-update iniciado
+eruda.js:2 ✅ Dashboard inicializado
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 🔔 Señal de VENTA detectada (AUDIO SILENCIADO): {confidence: 0.51, direction: 'PUT', gale_level: 2, is_gale: true, pattern: 'Bajista', …}
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 🆕 Nueva vela detectada en 6:20:56 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 🔔 Señal de VENTA detectada (AUDIO SILENCIADO): {confidence: 0.53, direction: 'PUT', gale_level: 1, is_gale: true, pattern: 'Bajista', …}
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 🆕 Nueva vela detectada en 6:21:01 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 🔔 Señal de VENTA detectada (AUDIO SILENCIADO): {confidence: 0.57, direction: 'PUT', gale_level: 0, is_gale: false, pattern: 'Bajista', …}
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 ✅ Cargados 3 pares OTC y 3 pares REAL
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 🆕 Nueva vela detectada en 6:21:06 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 🔔 Señal de COMPRA detectada (AUDIO SILENCIADO): {confidence: 0.5, direction: 'CALL', gale_level: 0, is_gale: false, pattern: 'Alcista', …}
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURJPY-OTC (M5)...
+eruda.js:2 🆕 Nueva vela detectada en 6:21:07 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURJPY-OTC (M5)...
+eruda.js:2 🔔 Señal de COMPRA detectada (AUDIO SILENCIADO): {confidence: 0.53, direction: 'CALL', gale_level: 2, is_gale: true, pattern: 'Alcista', …}
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURJPY-OTC (M5)...
+eruda.js:2 🆕 Nueva vela detectada en 6:21:11 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURJPY-OTC (M5)...
+eruda.js:2 🔔 Señal de VENTA detectada (AUDIO SILENCIADO): {confidence: 0.59, direction: 'PUT', gale_level: 2, is_gale: true, pattern: 'Bajista', …}
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 ✅ Cargados 3 pares OTC y 3 pares REAL
+eruda.js:2 📊 Cargando velas para EURJPY-OTC (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 🆕 Nueva vela detectada en 6:21:16 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURJPY-OTC (M5)...
+eruda.js:2 🔔 Señal de COMPRA detectada (AUDIO SILENCIADO): {confidence: 0.56, direction: 'CALL', gale_level: 0, is_gale: false, pattern: 'Alcista', …}
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURJPY-OTC (M5)...
+eruda.js:2 🆕 Nueva vela detectada en 6:21:21 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURJPY-OTC (M5)...
+eruda.js:2 🔔 Señal de VENTA detectada (AUDIO SILENCIADO): {confidence: 0.52, direction: 'PUT', gale_level: 3, is_gale: true, pattern: 'Bajista', …}
+eruda.js:2 ✅ 49 señales agregadas al gráfico
+eruda.js:2 ✅ 49 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURJPY-OTC (M5)...
+eruda.js:2 🆕 Nueva vela detectada en 6:21:26 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURJPY-OTC (M5)...
+eruda.js:2 🔔 Señal de VENTA detectada (AUDIO SILENCIADO): {confidence: 0.51, direction: 'PUT', gale_level: 0, is_gale: false, pattern: 'Bajista', …}
+eruda.js:2 ✅ 41 señales agregadas al gráfico
+eruda.js:2 ✅ 41 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURJPY-OTC (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 🆕 Nueva vela detectada en 6:21:31 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURJPY-OTC (M5)...
+eruda.js:2 🔔 Señal de VENTA detectada (AUDIO SILENCIADO): {confidence: 0.53, direction: 'PUT', gale_level: 0, is_gale: false, pattern: 'Bajista', …}
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURJPY-OTC (M1)...
+eruda.js:2 🆕 Nueva vela detectada en 6:21:33 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURJPY-OTC (M1)...
+eruda.js:2 🔔 Señal de COMPRA detectada (AUDIO SILENCIADO): {confidence: 0.58, direction: 'CALL', gale_level: 1, is_gale: true, pattern: 'Alcista', …}
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 ⏱️ Timeframe cambiado a M1
+eruda.js:2 📊 Cargando velas para EURJPY-OTC (M15)...
+eruda.js:2 🆕 Nueva vela detectada en 6:21:36 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURJPY-OTC (M15)...
+eruda.js:2 📊 Cargando velas para EURJPY-OTC (M15)...
+eruda.js:2 🔔 Señal de COMPRA detectada (AUDIO SILENCIADO): {confidence: 0.56, direction: 'CALL', gale_level: 1, is_gale: true, pattern: 'Alcista', …}
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 ⏱️ Timeframe cambiado a M15
+eruda.js:2 🎯 Cargando señales Tablero para EURJPY-OTC (M15)...
+eruda.js:2 🔔 Señal de VENTA detectada (AUDIO SILENCIADO): {confidence: 0.52, direction: 'PUT', gale_level: 0, is_gale: false, pattern: 'Bajista', …}
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURJPY-OTC (M30)...
+eruda.js:2 🆕 Nueva vela detectada en 6:21:37 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURJPY-OTC (M30)...
+eruda.js:2 🔔 Señal de VENTA detectada (AUDIO SILENCIADO): {confidence: 0.58, direction: 'PUT', gale_level: 1, is_gale: true, pattern: 'Bajista', …}
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 ⏱️ Timeframe cambiado a M30
+eruda.js:2 📊 Cargando velas para EURJPY-OTC (H1)...
+eruda.js:2 🆕 Nueva vela detectada en 6:21:38 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURJPY-OTC (H1)...
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 ⏱️ Timeframe cambiado a H1
+eruda.js:2 📊 Cargando velas para EURJPY-OTC (H1)...
+eruda.js:2 🆕 Nueva vela detectada en 6:21:41 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURJPY-OTC (H1)...
+eruda.js:2 🔔 Señal de VENTA detectada (AUDIO SILENCIADO): {confidence: 0.5, direction: 'PUT', gale_level: 1, is_gale: true, pattern: 'Bajista', …}
+eruda.js:2 ✅ 41 señales agregadas al gráfico
+eruda.js:2 ✅ 41 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURJPY-OTC (H1)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 🆕 Nueva vela detectada en 6:21:46 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURJPY-OTC (H1)...
+eruda.js:2 🔔 Señal de VENTA detectada (AUDIO SILENCIADO): {confidence: 0.52, direction: 'PUT', gale_level: 2, is_gale: true, pattern: 'Bajista', …}
+eruda.js:2 ✅ 36 señales agregadas al gráfico
+eruda.js:2 ✅ 36 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURJPY-OTC (H1)...
+eruda.js:2 🆕 Nueva vela detectada en 6:21:51 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURJPY-OTC (H1)...
+eruda.js:2 🔔 Señal de COMPRA detectada (AUDIO SILENCIADO): {confidence: 0.52, direction: 'CALL', gale_level: 0, is_gale: false, pattern: 'Alcista', …}
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURJPY-OTC (H1)...
+eruda.js:2 🆕 Nueva vela detectada en 6:21:56 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURJPY-OTC (H1)...
+eruda.js:2 🔔 Señal de COMPRA detectada (AUDIO SILENCIADO): {confidence: 0.52, direction: 'CALL', gale_level: 1, is_gale: true, pattern: 'Alcista', …}
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURJPY-OTC (H1)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 🆕 Nueva vela detectada en 6:22:01 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURJPY-OTC (H1)...
+eruda.js:2 🔔 Señal de COMPRA detectada (AUDIO SILENCIADO): {confidence: 0.57, direction: 'CALL', gale_level: 0, is_gale: false, pattern: 'Alcista', …}
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURJPY-OTC (H1)...
+eruda.js:2 🆕 Nueva vela detectada en 6:22:06 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURJPY-OTC (H1)...
+eruda.js:2 🔔 Señal de COMPRA detectada (AUDIO SILENCIADO): {confidence: 0.54, direction: 'CALL', gale_level: 0, is_gale: false, pattern: 'Alcista', …}
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURJPY-OTC (H1)...
+eruda.js:2 🆕 Nueva vela detectada en 6:22:11 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURJPY-OTC (H1)...
+eruda.js:2 🔔 Señal de VENTA detectada (AUDIO SILENCIADO): {confidence: 0.52, direction: 'PUT', gale_level: 0, is_gale: false, pattern: 'Bajista', …}
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURJPY-OTC (H1)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 🆕 Nueva vela detectada en 6:22:16 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURJPY-OTC (H1)...
+eruda.js:2 🔔 Señal de COMPRA detectada (AUDIO SILENCIADO): {confidence: 0.5, direction: 'CALL', gale_level: 0, is_gale: false, pattern: 'Alcista', …}
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURJPY-OTC (H1)...
+eruda.js:2 🆕 Nueva vela detectada en 6:22:21 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURJPY-OTC (H1)...
+eruda.js:2 🔔 Señal de VENTA detectada (AUDIO SILENCIADO): {confidence: 0.59, direction: 'PUT', gale_level: 0, is_gale: false, pattern: 'Bajista', …}
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURJPY-OTC (H1)...
+eruda.js:2 🆕 Nueva vela detectada en 6:22:26 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURJPY-OTC (H1)...
+eruda.js:2 🔔 Señal de VENTA detectada (AUDIO SILENCIADO): {confidence: 0.51, direction: 'PUT', gale_level: 0, is_gale: false, pattern: 'Bajista', …}
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURJPY-OTC (M30)...
+eruda.js:2 🆕 Nueva vela detectada en 6:22:28 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURJPY-OTC (M30)...
+eruda.js:2 🔔 Señal de VENTA detectada (AUDIO SILENCIADO): {confidence: 0.53, direction: 'PUT', gale_level: 0, is_gale: false, pattern: 'Bajista', …}
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 ⏱️ Timeframe cambiado a M30
+eruda.js:2 📊 Cargando velas para EURJPY-OTC (M15)...
+eruda.js:2 🆕 Nueva vela detectada en 6:22:30 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURJPY-OTC (M15)...
+eruda.js:2 ✅ 19 señales agregadas al gráfico
+eruda.js:2 ✅ 19 señales Tablero cargadas
+eruda.js:2 ⏱️ Timeframe cambiado a M15
+eruda.js:2 📊 Cargando velas para EURJPY-OTC (M15)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 🆕 Nueva vela detectada en 6:22:31 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURJPY-OTC (M15)...
+eruda.js:2 🔔 Señal de COMPRA detectada (AUDIO SILENCIADO): {confidence: 0.52, direction: 'CALL', gale_level: 2, is_gale: true, pattern: 'Alcista', …}
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURJPY-OTC (M5)...
+eruda.js:2 🆕 Nueva vela detectada en 6:22:32 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURJPY-OTC (M5)...
+eruda.js:2 🔔 Señal de COMPRA detectada (AUDIO SILENCIADO): {confidence: 0.5, direction: 'CALL', gale_level: 2, is_gale: true, pattern: 'Alcista', …}
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 ⏱️ Timeframe cambiado a M5
+eruda.js:2 📊 Cargando velas para EURJPY-OTC (M1)...
+eruda.js:2 🆕 Nueva vela detectada en 6:22:34 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURJPY-OTC (M1)...
+eruda.js:2 🔔 Señal de VENTA detectada (AUDIO SILENCIADO): {confidence: 0.51, direction: 'PUT', gale_level: 1, is_gale: true, pattern: 'Bajista', …}
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 ⏱️ Timeframe cambiado a M1
+eruda.js:2 📊 Cargando velas para EURJPY-OTC (M1)...
+eruda.js:2 🆕 Nueva vela detectada en 6:22:36 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURJPY-OTC (M1)...
+eruda.js:2 🔔 Señal de COMPRA detectada (AUDIO SILENCIADO): {confidence: 0.51, direction: 'CALL', gale_level: 0, is_gale: false, pattern: 'Alcista', …}
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURJPY-OTC (M5)...
+eruda.js:2 🎯 Cargando señales Tablero para EURJPY-OTC (M5)...
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 ⏱️ Timeframe cambiado a M5
+eruda.js:2 📊 Cargando velas para EURJPY-OTC (M15)...
+eruda.js:2 🆕 Nueva vela detectada en 6:22:39 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURJPY-OTC (M15)...
+eruda.js:2 🔔 Señal de VENTA detectada (AUDIO SILENCIADO): {confidence: 0.5, direction: 'PUT', gale_level: 1, is_gale: true, pattern: 'Bajista', …}
+eruda.js:2 ✅ 39 señales agregadas al gráfico
+eruda.js:2 ✅ 39 señales Tablero cargadas
+eruda.js:2 ⏱️ Timeframe cambiado a M15
+eruda.js:2 📊 Cargando velas para EURJPY-OTC (M15)...
+eruda.js:2 📊 Cargando velas para EURJPY-OTC (M5)...
+eruda.js:2 🆕 Nueva vela detectada en 6:22:41 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURJPY-OTC (M15)...
+eruda.js:2 🔔 Señal de VENTA detectada (AUDIO SILENCIADO): {confidence: 0.52, direction: 'PUT', gale_level: 0, is_gale: false, pattern: 'Bajista', …}
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 🎯 Cargando señales Tablero para EURJPY-OTC (M5)...
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 ⏱️ Timeframe cambiado a M5
+eruda.js:2 📊 Cargando velas para EURJPY-OTC (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 🆕 Nueva vela detectada en 6:22:46 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURJPY-OTC (M5)...
+eruda.js:2 🔔 Señal de COMPRA detectada (AUDIO SILENCIADO): {confidence: 0.59, direction: 'CALL', gale_level: 0, is_gale: false, pattern: 'Alcista', …}
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURJPY-OTC (M5)...
+eruda.js:2 🆕 Nueva vela detectada en 6:22:51 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURJPY-OTC (M5)...
+eruda.js:2 🔔 Señal de VENTA detectada (AUDIO SILENCIADO): {confidence: 0.61, direction: 'PUT', gale_level: 0, is_gale: false, pattern: 'Bajista', …}
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURJPY-OTC (M5)...
+eruda.js:2 🆕 Nueva vela detectada en 6:22:56 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURJPY-OTC (M5)...
+eruda.js:2 🔔 Señal de VENTA detectada (AUDIO SILENCIADO): {confidence: 0.57, direction: 'PUT', gale_level: 1, is_gale: true, pattern: 'Bajista', …}
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURJPY-OTC (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 🆕 Nueva vela detectada en 6:23:01 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURJPY-OTC (M5)...
+eruda.js:2 🔔 Señal de VENTA detectada (AUDIO SILENCIADO): {confidence: 0.53, direction: 'PUT', gale_level: 4, is_gale: true, pattern: 'Bajista', …}
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURJPY-OTC (M5)...
+eruda.js:2 🆕 Nueva vela detectada en 6:23:06 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURJPY-OTC (M5)...
+eruda.js:2 🔔 Señal de COMPRA detectada (AUDIO SILENCIADO): {confidence: 0.5, direction: 'CALL', gale_level: 1, is_gale: true, pattern: 'Alcista', …}
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURJPY-OTC (M5)...
+eruda.js:2 🆕 Nueva vela detectada en 6:23:11 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURJPY-OTC (M5)...
+eruda.js:2 🔔 Señal de VENTA detectada (AUDIO SILENCIADO): {confidence: 0.55, direction: 'PUT', gale_level: 0, is_gale: false, pattern: 'Bajista', …}
+eruda.js:2 ✅ 45 señales agregadas al gráfico
+eruda.js:2 ✅ 45 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURJPY-OTC (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 🆕 Nueva vela detectada en 6:23:16 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURJPY-OTC (M5)...
+eruda.js:2 🔔 Señal de COMPRA detectada (AUDIO SILENCIADO): {confidence: 0.55, direction: 'CALL', gale_level: 0, is_gale: false, pattern: 'Alcista', …}
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURJPY-OTC (M5)...
+eruda.js:2 🆕 Nueva vela detectada en 6:23:21 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURJPY-OTC (M5)...
+eruda.js:2 🔔 Señal de VENTA detectada (AUDIO SILENCIADO): {confidence: 0.54, direction: 'PUT', gale_level: 0, is_gale: false, pattern: 'Bajista', …}
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURJPY-OTC (M5)...
+eruda.js:2 🆕 Nueva vela detectada en 6:23:26 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURJPY-OTC (M5)...
+eruda.js:2 🔔 Señal de COMPRA detectada (AUDIO SILENCIADO): {confidence: 0.54, direction: 'CALL', gale_level: 2, is_gale: true, pattern: 'Alcista', …}
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURJPY-OTC (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 🆕 Nueva vela detectada en 6:23:31 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURJPY-OTC (M5)...
+eruda.js:2 ✅ 45 señales agregadas al gráfico
+eruda.js:2 ✅ 45 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURJPY-OTC (M5)...
+eruda.js:2 🆕 Nueva vela detectada en 6:23:36 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURJPY-OTC (M5)...
+eruda.js:2 🔔 Señal de VENTA detectada (AUDIO SILENCIADO): {confidence: 0.52, direction: 'PUT', gale_level: 0, is_gale: false, pattern: 'Bajista', …}
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURJPY-OTC (M5)...
+eruda.js:2 🆕 Nueva vela detectada en 6:23:41 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURJPY-OTC (M5)...
+eruda.js:2 🔔 Señal de VENTA detectada (AUDIO SILENCIADO): {confidence: 0.51, direction: 'PUT', gale_level: 0, is_gale: false, pattern: 'Bajista', …}
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURJPY-OTC (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 🆕 Nueva vela detectada en 6:23:46 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURJPY-OTC (M5)...
+eruda.js:2 🔔 Señal de VENTA detectada (AUDIO SILENCIADO): {confidence: 0.6, direction: 'PUT', gale_level: 0, is_gale: false, pattern: 'Bajista', …}
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURJPY-OTC (M5)...
+eruda.js:2 🆕 Nueva vela detectada en 6:23:51 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURJPY-OTC (M5)...
+eruda.js:2 🔔 Señal de VENTA detectada (AUDIO SILENCIADO): {confidence: 0.54, direction: 'PUT', gale_level: 1, is_gale: true, pattern: 'Bajista', …}
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURJPY-OTC (M5)...
+eruda.js:2 🆕 Nueva vela detectada en 6:23:56 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURJPY-OTC (M5)...
+eruda.js:2 🔔 Señal de COMPRA detectada (AUDIO SILENCIADO): {confidence: 0.5, direction: 'CALL', gale_level: 1, is_gale: true, pattern: 'Alcista', …}
+eruda.js:2 ✅ 24 señales agregadas al gráfico
+eruda.js:2 ✅ 24 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURJPY-OTC (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 🆕 Nueva vela detectada en 6:24:01 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURJPY-OTC (M5)...
+eruda.js:2 🔔 Señal de VENTA detectada (AUDIO SILENCIADO): {confidence: 0.54, direction: 'PUT', gale_level: 0, is_gale: false, pattern: 'Bajista', …}
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURJPY-OTC (M5)...
+eruda.js:2 🆕 Nueva vela detectada en 6:24:06 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURJPY-OTC (M5)...
+eruda.js:2 🔔 Señal de VENTA detectada (AUDIO SILENCIADO): {confidence: 0.5, direction: 'PUT', gale_level: 0, is_gale: false, pattern: 'Bajista', …}
+eruda.js:2 ✅ 44 señales agregadas al gráfico
+eruda.js:2 ✅ 44 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURJPY-OTC (M5)...
+eruda.js:2 🆕 Nueva vela detectada en 6:24:11 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURJPY-OTC (M5)...
+eruda.js:2 🔔 Señal de COMPRA detectada (AUDIO SILENCIADO): {confidence: 0.53, direction: 'CALL', gale_level: 1, is_gale: true, pattern: 'Alcista', …}
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURJPY-OTC (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 🆕 Nueva vela detectada en 6:24:16 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURJPY-OTC (M5)...
+eruda.js:2 🔔 Señal de VENTA detectada (AUDIO SILENCIADO): {confidence: 0.57, direction: 'PUT', gale_level: 0, is_gale: false, pattern: 'Bajista', …}
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURJPY-OTC (M5)...
+eruda.js:2  POST https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/trade 400 (Bad Request)
+window.fetch @ eruda.js:2
+apply @ injected.js:278
+request @ dashboard:1156
+placeTrade @ dashboard:1198
+executeTrade @ dashboard:1450
+(anonymous) @ dashboard:1611
+eruda.js:2 ❌ API Error /api/iq/trade: HTTP 400: Bad Request
+Mt.forEach.n.<computed> @ eruda.js:2
+request @ dashboard:1171
+await in request
+placeTrade @ dashboard:1198
+executeTrade @ dashboard:1450
+(anonymous) @ dashboard:1611
+eruda.js:2 ❌ Trade Error: Error: Error ejecutando CALL: HTTP 400: Bad Request
+    at APIManager.placeTrade (dashboard:1209:17)
+    at async executeTrade (dashboard:1450:24)
+Mt.forEach.n.<computed> @ eruda.js:2
+executeTrade @ dashboard:1468
+await in executeTrade
+(anonymous) @ dashboard:1611
+eruda.js:2 🆕 Nueva vela detectada en 6:24:21 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURJPY-OTC (M5)...
+eruda.js:2 🔔 Señal de VENTA detectada (AUDIO SILENCIADO): {confidence: 0.6, direction: 'PUT', gale_level: 0, is_gale: false, pattern: 'Bajista', …}
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURJPY-OTC (M5)...
+eruda.js:2 🆕 Nueva vela detectada en 6:24:26 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURJPY-OTC (M5)...
+eruda.js:2 🔔 Señal de COMPRA detectada (AUDIO SILENCIADO): {confidence: 0.54, direction: 'CALL', gale_level: 2, is_gale: true, pattern: 'Alcista', …}
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURJPY-OTC (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 🆕 Nueva vela detectada en 6:24:31 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURJPY-OTC (M5)...
+eruda.js:2 🔔 Señal de COMPRA detectada (AUDIO SILENCIADO): {confidence: 0.57, direction: 'CALL', gale_level: 1, is_gale: true, pattern: 'Alcista', …}
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURJPY-OTC (M5)...
+eruda.js:2 🆕 Nueva vela detectada en 6:24:36 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURJPY-OTC (M5)...
+eruda.js:2 🔔 Señal de COMPRA detectada (AUDIO SILENCIADO): {confidence: 0.5, direction: 'CALL', gale_level: 2, is_gale: true, pattern: 'Alcista', …}
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURJPY-OTC (M5)...
+eruda.js:2 🆕 Nueva vela detectada en 6:24:41 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURJPY-OTC (M5)...
+eruda.js:2 🔔 Señal de VENTA detectada (AUDIO SILENCIADO): {confidence: 0.5, direction: 'PUT', gale_level: 1, is_gale: true, pattern: 'Bajista', …}
+eruda.js:2 ✅ 43 señales agregadas al gráfico
+eruda.js:2 ✅ 43 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURJPY-OTC (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 🆕 Nueva vela detectada en 6:24:46 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURJPY-OTC (M5)...
+eruda.js:2 🔔 Señal de COMPRA detectada (AUDIO SILENCIADO): {confidence: 0.51, direction: 'CALL', gale_level: 0, is_gale: false, pattern: 'Alcista', …}
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURJPY-OTC (M5)...
+eruda.js:2 🆕 Nueva vela detectada en 6:24:51 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURJPY-OTC (M5)...
+eruda.js:2 🔔 Señal de VENTA detectada (AUDIO SILENCIADO): {confidence: 0.53, direction: 'PUT', gale_level: 1, is_gale: true, pattern: 'Bajista', …}
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2  POST https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/login 503 (Service Unavailable)
+window.fetch @ eruda.js:2
+apply @ injected.js:278
+loginIQ @ dashboard:1848
+(anonymous) @ dashboard:1648
+eruda.js:2 📊 Cargando velas para EURJPY-OTC (M5)...
+eruda.js:2 🆕 Nueva vela detectada en 6:24:56 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURJPY-OTC (M5)...
+eruda.js:2 🔔 Señal de COMPRA detectada (AUDIO SILENCIADO): {confidence: 0.55, direction: 'CALL', gale_level: 0, is_gale: false, pattern: 'Alcista', …}
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURJPY-OTC (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 🆕 Nueva vela detectada en 6:25:01 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURJPY-OTC (M5)...
+eruda.js:2 🔔 Señal de COMPRA detectada (AUDIO SILENCIADO): {confidence: 0.53, direction: 'CALL', gale_level: 1, is_gale: true, pattern: 'Alcista', …}
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURJPY-OTC (M5)...
+eruda.js:2 🆕 Nueva vela detectada en 6:25:06 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURJPY-OTC (M5)...
+eruda.js:2 ✅ 41 señales agregadas al gráfico
+eruda.js:2 ✅ 41 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURJPY-OTC (M5)...
+eruda.js:2 🆕 Nueva vela detectada en 6:25:11 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURJPY-OTC (M5)...
+eruda.js:2 🔔 Señal de VENTA detectada (AUDIO SILENCIADO): {confidence: 0.51, direction: 'PUT', gale_level: 1, is_gale: true, pattern: 'Bajista', …}
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURJPY-OTC (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 🆕 Nueva vela detectada en 6:25:16 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURJPY-OTC (M5)...
+eruda.js:2 🔔 Señal de COMPRA detectada (AUDIO SILENCIADO): {confidence: 0.5, direction: 'CALL', gale_level: 0, is_gale: false, pattern: 'Alcista', …}
+eruda.js:2 ✅ 38 señales agregadas al gráfico
+eruda.js:2 ✅ 38 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURJPY-OTC (M5)...
+eruda.js:2 🆕 Nueva vela detectada en 6:25:21 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURJPY-OTC (M5)...
+eruda.js:2 🔔 Señal de COMPRA detectada (AUDIO SILENCIADO): {confidence: 0.56, direction: 'CALL', gale_level: 0, is_gale: false, pattern: 'Alcista', …}
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURJPY-OTC (M5)...
+eruda.js:2 🆕 Nueva vela detectada en 6:25:26 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURJPY-OTC (M5)...
+eruda.js:2 🔔 Señal de VENTA detectada (AUDIO SILENCIADO): {confidence: 0.64, direction: 'PUT', gale_level: 0, is_gale: false, pattern: 'Bajista', …}
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURJPY-OTC (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 🆕 Nueva vela detectada en 6:25:31 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURJPY-OTC (M5)...
+eruda.js:2 🔔 Señal de COMPRA detectada (AUDIO SILENCIADO): {confidence: 0.5, direction: 'CALL', gale_level: 7, is_gale: true, pattern: 'Alcista', …}
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURJPY-OTC (M5)...
+eruda.js:2 🆕 Nueva vela detectada en 6:25:36 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURJPY-OTC (M5)...
+eruda.js:2 🔔 Señal de VENTA detectada (AUDIO SILENCIADO): {confidence: 0.57, direction: 'PUT', gale_level: 0, is_gale: false, pattern: 'Bajista', …}
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURJPY-OTC (M5)...
+eruda.js:2 🆕 Nueva vela detectada en 6:25:41 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURJPY-OTC (M5)...
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURJPY-OTC (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 🆕 Nueva vela detectada en 6:25:46 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURJPY-OTC (M5)...
+eruda.js:2 🔔 Señal de VENTA detectada (AUDIO SILENCIADO): {confidence: 0.54, direction: 'PUT', gale_level: 2, is_gale: true, pattern: 'Bajista', …}
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURJPY-OTC (M5)...
+eruda.js:2 🆕 Nueva vela detectada en 6:25:51 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURJPY-OTC (M5)...
+eruda.js:2 🔔 Señal de COMPRA detectada (AUDIO SILENCIADO): {confidence: 0.51, direction: 'CALL', gale_level: 0, is_gale: false, pattern: 'Alcista', …}
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURJPY-OTC (M5)...
+eruda.js:2 🆕 Nueva vela detectada en 6:25:56 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURJPY-OTC (M5)...
+eruda.js:2 🔔 Señal de VENTA detectada (AUDIO SILENCIADO): {confidence: 0.51, direction: 'PUT', gale_level: 2, is_gale: true, pattern: 'Bajista', …}
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURJPY-OTC (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 🆕 Nueva vela detectada en 6:26:01 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURJPY-OTC (M5)...
+eruda.js:2 🔔 Señal de VENTA detectada (AUDIO SILENCIADO): {confidence: 0.52, direction: 'PUT', gale_level: 0, is_gale: false, pattern: 'Bajista', …}
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURJPY-OTC (M5)...
+eruda.js:2 🆕 Nueva vela detectada en 6:26:06 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURJPY-OTC (M5)...
+eruda.js:2 🔔 Señal de VENTA detectada (AUDIO SILENCIADO): {confidence: 0.53, direction: 'PUT', gale_level: 1, is_gale: true, pattern: 'Bajista', …}
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURJPY-OTC (M5)...
+eruda.js:2 🆕 Nueva vela detectada en 6:26:11 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURJPY-OTC (M5)...
+eruda.js:2 🔔 Señal de VENTA detectada (AUDIO SILENCIADO): {confidence: 0.52, direction: 'PUT', gale_level: 0, is_gale: false, pattern: 'Bajista', …}
+eruda.js:2 ✅ 23 señales agregadas al gráfico
+eruda.js:2 ✅ 23 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURJPY-OTC (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 🆕 Nueva vela detectada en 6:26:16 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURJPY-OTC (M5)...
+eruda.js:2 ✅ 48 señales agregadas al gráfico
+eruda.js:2 ✅ 48 señales Tablero cargadas
+framework-3abd175b6916fd8c.js:1 Error while parsing the 'sandbox' attribute: 'allow-downloads-without-user-activation' is an invalid sandbox flag.
+_ @ framework-3abd175b6916fd8c.js:1
+(anonymous) @ framework-3abd175b6916fd8c.js:1
+uD @ framework-3abd175b6916fd8c.js:1
+uI @ framework-3abd175b6916fd8c.js:1
+uM @ framework-3abd175b6916fd8c.js:1
+uS @ framework-3abd175b6916fd8c.js:1
+C @ framework-3abd175b6916fd8c.js:1
+z @ framework-3abd175b6916fd8c.js:1
+eruda.js:2 📋 STC Trading Dashboard script cargado
+eruda.js:2 🌐 DOM cargado, iniciando aplicación...
+eruda.js:2 🚀 STC Trading System - gráficos automáticos activos
+eruda.js:2 🚀 Iniciando STC Chart Manager...
+eruda.js:2 ✅ STC Chart Manager - usando STCChartFix automático
+eruda.js:2 🚀 Iniciando STC Trading Dashboard...
+eruda.js:2 ✅ Gráfico inicializado correctamente
+eruda.js:2 🎛️ Event handlers configurados
+eruda.js:2 🔄 Auto-update iniciado
+eruda.js:2 ✅ Dashboard inicializado
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M15)...
+eruda.js:2 🆕 Nueva vela detectada en 6:27:50 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M15)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 ✅ 20 señales agregadas al gráfico
+eruda.js:2 ✅ 20 señales Tablero cargadas
+eruda.js:2 ⏱️ Timeframe cambiado a M15
+eruda.js:2  POST https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/login 503 (Service Unavailable)
+window.fetch @ Network.js:219
+apply @ injected.js:278
+loginIQ @ dashboard:1848
+(anonymous) @ dashboard:1648
+eruda.js:2  POST https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/login 503 (Service Unavailable)
+window.fetch @ eruda.js:2
+apply @ injected.js:278
+loginIQ @ dashboard:1848
+(anonymous) @ dashboard:1648
+eruda.js:2  POST https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/login 503 (Service Unavailable)
+window.fetch @ Network.js:219
+apply @ injected.js:278
+loginIQ @ dashboard:1848
+(anonymous) @ dashboard:1648
+eruda.js:2  POST https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/login 503 (Service Unavailable)
+window.fetch @ eruda.js:2
+apply @ injected.js:278
+loginIQ @ dashboard:1848
+(anonymous) @ dashboard:1648
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M15)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 🆕 Nueva vela detectada en 6:28:06 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M15)...
+eruda.js:2 🔔 Señal de VENTA detectada (AUDIO SILENCIADO): {confidence: 0.54, direction: 'PUT', gale_level: 0, is_gale: false, pattern: 'Bajista', …}
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2  POST https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/login 503 (Service Unavailable)
+window.fetch @ Network.js:219
+apply @ injected.js:278
+loginIQ @ dashboard:1848
+(anonymous) @ dashboard:1648
+eruda.js:2  POST https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/login 503 (Service Unavailable)
+window.fetch @ eruda.js:2
+apply @ injected.js:278
+loginIQ @ dashboard:1848
+(anonymous) @ dashboard:1648
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 🆕 Nueva vela detectada en 6:28:24 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 🔔 Señal de VENTA detectada (AUDIO SILENCIADO): {confidence: 0.53, direction: 'PUT', gale_level: 3, is_gale: true, pattern: 'Bajista', …}
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 ⏱️ Timeframe cambiado a M5
+eruda.js:2 📊 Cargando velas para GBPUSD-OTC (M5)...
+eruda.js:2 🆕 Nueva vela detectada en 6:28:30 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para GBPUSD-OTC (M5)...
+eruda.js:2 🔔 Señal de COMPRA detectada (AUDIO SILENCIADO): {confidence: 0.57, direction: 'CALL', gale_level: 0, is_gale: false, pattern: 'Alcista', …}
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para GBPUSD-OTC (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 🆕 Nueva vela detectada en 6:28:35 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para GBPUSD-OTC (M5)...
+eruda.js:2 🔔 Señal de VENTA detectada (AUDIO SILENCIADO): {confidence: 0.52, direction: 'PUT', gale_level: 0, is_gale: false, pattern: 'Bajista', …}
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 ✅ Cargados 3 pares OTC y 3 pares REAL
+eruda.js:2 📊 Cargando velas para EURJPY-OTC (M5)...
+eruda.js:2 🆕 Nueva vela detectada en 6:28:40 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURJPY-OTC (M5)...
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 ✅ Cargados 3 pares OTC y 3 pares REAL
+eruda.js:2 📊 Cargando velas para USDJPY-OTC (M5)...
+eruda.js:2 🆕 Nueva vela detectada en 6:28:44 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para USDJPY-OTC (M5)...
+eruda.js:2 🔔 Señal de COMPRA detectada (AUDIO SILENCIADO): {confidence: 0.52, direction: 'CALL', gale_level: 1, is_gale: true, pattern: 'Alcista', …}
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2  POST https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/trade 400 (Bad Request)
+window.fetch @ Network.js:219
+apply @ injected.js:278
+request @ dashboard:1156
+placeTrade @ dashboard:1198
+executeTrade @ dashboard:1450
+(anonymous) @ dashboard:1611
+eruda.js:2  POST https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/trade 400 (Bad Request)
+window.fetch @ eruda.js:2
+apply @ injected.js:278
+request @ dashboard:1156
+placeTrade @ dashboard:1198
+executeTrade @ dashboard:1450
+(anonymous) @ dashboard:1611
+eruda.js:2 ❌ API Error /api/iq/trade: HTTP 400: Bad Request
+Mt.forEach.n.<computed> @ Console.js:61
+request @ dashboard:1171
+await in request
+placeTrade @ dashboard:1198
+executeTrade @ dashboard:1450
+(anonymous) @ dashboard:1611
+eruda.js:2 ❌ Trade Error: Error: Error ejecutando CALL: HTTP 400: Bad Request
+    at APIManager.placeTrade (dashboard:1209:17)
+    at async executeTrade (dashboard:1450:24)
+Mt.forEach.n.<computed> @ Console.js:61
+executeTrade @ dashboard:1468
+await in executeTrade
+(anonymous) @ dashboard:1611
+eruda.js:2 📊 Cargando velas para USDJPY-OTC (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 🆕 Nueva vela detectada en 6:29:05 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para USDJPY-OTC (M5)...
+eruda.js:2 🔔 Señal de COMPRA detectada (AUDIO SILENCIADO): {confidence: 0.51, direction: 'CALL', gale_level: 1, is_gale: true, pattern: 'Alcista', …}
+eruda.js:2 ✅ 45 señales agregadas al gráfico
+eruda.js:2 ✅ 45 señales Tablero cargadas
+eruda.js:2 ✅ Cargados 3 pares OTC y 3 pares REAL
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 🆕 Nueva vela detectada en 6:29:12 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 🔔 Señal de VENTA detectada (AUDIO SILENCIADO): {confidence: 0.56, direction: 'PUT', gale_level: 2, is_gale: true, pattern: 'Bajista', …}
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 ✅ Cargados 3 pares OTC y 3 pares REAL
+eruda.js:2 📊 Cargando velas para EURUSD (M5)...
+eruda.js:2 🆕 Nueva vela detectada en 6:29:15 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD (M5)...
+eruda.js:2 🔔 Señal de VENTA detectada (AUDIO SILENCIADO): {confidence: 0.56, direction: 'PUT', gale_level: 2, is_gale: true, pattern: 'Bajista', …}
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2  POST https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/trade 400 (Bad Request)
+window.fetch @ Network.js:219
+apply @ injected.js:278
+request @ dashboard:1156
+placeTrade @ dashboard:1198
+executeTrade @ dashboard:1450
+(anonymous) @ dashboard:1611
+eruda.js:2  POST https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/trade 400 (Bad Request)
+window.fetch @ eruda.js:2
+apply @ injected.js:278
+request @ dashboard:1156
+placeTrade @ dashboard:1198
+executeTrade @ dashboard:1450
+(anonymous) @ dashboard:1611
+eruda.js:2 ❌ API Error /api/iq/trade: HTTP 400: Bad Request
+Mt.forEach.n.<computed> @ Console.js:61
+request @ dashboard:1171
+await in request
+placeTrade @ dashboard:1198
+executeTrade @ dashboard:1450
+(anonymous) @ dashboard:1611
+eruda.js:2 ❌ Trade Error: Error: Error ejecutando CALL: HTTP 400: Bad Request
+    at APIManager.placeTrade (dashboard:1209:17)
+    at async executeTrade (dashboard:1450:24)
+Mt.forEach.n.<computed> @ Console.js:61
+executeTrade @ dashboard:1468
+await in executeTrade
+(anonymous) @ dashboard:1611
+eruda.js:2 ✅ Cargados 3 pares OTC y 3 pares REAL
+eruda.js:2 📊 Cargando velas para EURJPY (M5)...
+eruda.js:2 🆕 Nueva vela detectada en 6:29:25 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURJPY (M5)...
+eruda.js:2 🔔 Señal de VENTA detectada (AUDIO SILENCIADO): {confidence: 0.5, direction: 'PUT', gale_level: 1, is_gale: true, pattern: 'Bajista', …}
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2  POST https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/trade 400 (Bad Request)
+window.fetch @ Network.js:219
+apply @ injected.js:278
+request @ dashboard:1156
+placeTrade @ dashboard:1198
+executeTrade @ dashboard:1450
+(anonymous) @ dashboard:1612
+eruda.js:2  POST https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/trade 400 (Bad Request)
+window.fetch @ eruda.js:2
+apply @ injected.js:278
+request @ dashboard:1156
+placeTrade @ dashboard:1198
+executeTrade @ dashboard:1450
+(anonymous) @ dashboard:1612
+eruda.js:2 ❌ API Error /api/iq/trade: HTTP 400: Bad Request
+Mt.forEach.n.<computed> @ Console.js:61
+request @ dashboard:1171
+await in request
+placeTrade @ dashboard:1198
+executeTrade @ dashboard:1450
+(anonymous) @ dashboard:1612
+eruda.js:2 ❌ Trade Error: Error: Error ejecutando PUT: HTTP 400: Bad Request
+    at APIManager.placeTrade (dashboard:1209:17)
+    at async executeTrade (dashboard:1450:24)
+Mt.forEach.n.<computed> @ Console.js:61
+executeTrade @ dashboard:1468
+await in executeTrade
+(anonymous) @ dashboard:1612
+eruda.js:2 ✅ Cargados 3 pares OTC y 3 pares REAL
+eruda.js:2 📊 Cargando velas para USDJPY (M5)...
+eruda.js:2 🆕 Nueva vela detectada en 6:29:30 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para USDJPY (M5)...
+eruda.js:2 ✅ 46 señales agregadas al gráfico
+eruda.js:2 ✅ 46 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para USDJPY (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 🆕 Nueva vela detectada en 6:29:35 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para USDJPY (M5)...
+eruda.js:2 🔔 Señal de COMPRA detectada (AUDIO SILENCIADO): {confidence: 0.5, direction: 'CALL', gale_level: 2, is_gale: true, pattern: 'Alcista', …}
+eruda.js:2 ✅ 44 señales agregadas al gráfico
+eruda.js:2 ✅ 44 señales Tablero cargadas
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 📊 Cargando velas para USDJPY (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 🆕 Nueva vela detectada en 6:30:05 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para USDJPY (M5)...
+eruda.js:2 🔔 Señal de COMPRA detectada (AUDIO SILENCIADO): {confidence: 0.5, direction: 'CALL', gale_level: 0, is_gale: false, pattern: 'Alcista', …}
+eruda.js:2 ✅ 47 señales agregadas al gráfico
+eruda.js:2 ✅ 47 señales Tablero cargadas
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 📊 Cargando velas para USDJPY (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 🆕 Nueva vela detectada en 6:30:35 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para USDJPY (M5)...
+eruda.js:2 🔔 Señal de COMPRA detectada (AUDIO SILENCIADO): {confidence: 0.57, direction: 'CALL', gale_level: 1, is_gale: true, pattern: 'Alcista', …}
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 📊 Cargando velas para USDJPY (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 🆕 Nueva vela detectada en 6:31:05 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para USDJPY (M5)...
+eruda.js:2 🔔 Señal de COMPRA detectada (AUDIO SILENCIADO): {confidence: 0.51, direction: 'CALL', gale_level: 0, is_gale: false, pattern: 'Alcista', …}
+eruda.js:2 ✅ 43 señales agregadas al gráfico
+eruda.js:2 ✅ 43 señales Tablero cargadas
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 📊 Cargando velas para USDJPY (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 🆕 Nueva vela detectada en 6:31:35 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para USDJPY (M5)...
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 📊 Cargando velas para USDJPY (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 🆕 Nueva vela detectada en 6:32:05 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para USDJPY (M5)...
+eruda.js:2 🔔 Señal de VENTA detectada (AUDIO SILENCIADO): {confidence: 0.51, direction: 'PUT', gale_level: 2, is_gale: true, pattern: 'Bajista', …}
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 📊 Cargando velas para USDJPY (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 🆕 Nueva vela detectada en 6:32:35 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para USDJPY (M5)...
+eruda.js:2 🔔 Señal de VENTA detectada (AUDIO SILENCIADO): {confidence: 0.55, direction: 'PUT', gale_level: 0, is_gale: false, pattern: 'Bajista', …}
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 📊 Cargando velas para USDJPY (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 🆕 Nueva vela detectada en 6:33:05 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para USDJPY (M5)...
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 📊 Cargando velas para USDJPY (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 🆕 Nueva vela detectada en 6:33:35 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para USDJPY (M5)...
+eruda.js:2 🔔 Señal de COMPRA detectada (AUDIO SILENCIADO): {confidence: 0.61, direction: 'CALL', gale_level: 1, is_gale: true, pattern: 'Alcista', …}
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 📊 Cargando velas para USDJPY (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 🆕 Nueva vela detectada en 6:34:05 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para USDJPY (M5)...
+eruda.js:2 🔔 Señal de COMPRA detectada (AUDIO SILENCIADO): {confidence: 0.52, direction: 'CALL', gale_level: 0, is_gale: false, pattern: 'Alcista', …}
+eruda.js:2 ✅ 32 señales agregadas al gráfico
+eruda.js:2 ✅ 32 señales Tablero cargadas
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 📊 Cargando velas para USDJPY (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 🆕 Nueva vela detectada en 6:34:35 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para USDJPY (M5)...
+eruda.js:2 🔔 Señal de COMPRA detectada (AUDIO SILENCIADO): {confidence: 0.5, direction: 'CALL', gale_level: 0, is_gale: false, pattern: 'Alcista', …}
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 📊 Cargando velas para USDJPY (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 🆕 Nueva vela detectada en 6:35:05 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para USDJPY (M5)...
+eruda.js:2 🔔 Señal de COMPRA detectada (AUDIO SILENCIADO): {confidence: 0.5, direction: 'CALL', gale_level: 0, is_gale: false, pattern: 'Alcista', …}
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 📊 Cargando velas para USDJPY (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 🆕 Nueva vela detectada en 6:35:35 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para USDJPY (M5)...
+eruda.js:2 🔔 Señal de VENTA detectada (AUDIO SILENCIADO): {confidence: 0.5, direction: 'PUT', gale_level: 2, is_gale: true, pattern: 'Bajista', …}
+eruda.js:2 ✅ 38 señales agregadas al gráfico
+eruda.js:2 ✅ 38 señales Tablero cargadas
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 📊 Cargando velas para USDJPY (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 🆕 Nueva vela detectada en 6:36:05 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para USDJPY (M5)...
+eruda.js:2 🔔 Señal de COMPRA detectada (AUDIO SILENCIADO): {confidence: 0.5, direction: 'CALL', gale_level: 2, is_gale: true, pattern: 'Alcista', …}
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 📊 Cargando velas para USDJPY (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 🆕 Nueva vela detectada en 6:36:35 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para USDJPY (M5)...
+eruda.js:2 🔔 Señal de VENTA detectada (AUDIO SILENCIADO): {confidence: 0.54, direction: 'PUT', gale_level: 0, is_gale: false, pattern: 'Bajista', …}
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 📊 Cargando velas para USDJPY (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 🆕 Nueva vela detectada en 6:37:05 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para USDJPY (M5)...
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 📊 Cargando velas para USDJPY (M5)...
+eruda.js:2 🆕 Nueva vela detectada en 6:37:35 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para USDJPY (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para USDJPY (M5)...
+eruda.js:2 🆕 Nueva vela detectada en 6:38:12 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para USDJPY (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para USDJPY (M5)...
+eruda.js:2 🆕 Nueva vela detectada en 6:39:12 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para USDJPY (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para USDJPY (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 🆕 Nueva vela detectada en 6:40:12 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para USDJPY (M5)...
+eruda.js:2 ✅ 37 señales agregadas al gráfico
+eruda.js:2 ✅ 37 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para USDJPY (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 🆕 Nueva vela detectada en 6:41:12 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para USDJPY (M5)...
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para USDJPY (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 🆕 Nueva vela detectada en 6:42:12 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para USDJPY (M5)...
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para USDJPY (M5)...
+eruda.js:2 🆕 Nueva vela detectada en 6:43:12 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para USDJPY (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para USDJPY (M5)...
+eruda.js:2 🆕 Nueva vela detectada en 6:44:12 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para USDJPY (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para USDJPY (M5)...
+eruda.js:2 🆕 Nueva vela detectada en 6:45:12 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para USDJPY (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 ✅ 45 señales agregadas al gráfico
+eruda.js:2 ✅ 45 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para USDJPY (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 🆕 Nueva vela detectada en 6:46:12 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para USDJPY (M5)...
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para USDJPY (M5)...
+eruda.js:2 🆕 Nueva vela detectada en 6:47:12 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para USDJPY (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para USDJPY (M5)...
+eruda.js:2 🆕 Nueva vela detectada en 6:48:12 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para USDJPY (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para USDJPY (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 🆕 Nueva vela detectada en 6:49:12 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para USDJPY (M5)...
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para USDJPY (M5)...
+eruda.js:2 🆕 Nueva vela detectada en 6:50:13 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para USDJPY (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 🔔 Señal de VENTA detectada (AUDIO SILENCIADO): {confidence: 0.5, direction: 'PUT', gale_level: 1, is_gale: true, pattern: 'Bajista', …}
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para USDJPY (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 🆕 Nueva vela detectada en 6:51:13 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para USDJPY (M5)...
+eruda.js:2 🔔 Señal de COMPRA detectada (AUDIO SILENCIADO): {confidence: 0.56, direction: 'CALL', gale_level: 0, is_gale: false, pattern: 'Alcista', …}
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para USDJPY (M5)...
+eruda.js:2 🆕 Nueva vela detectada en 6:52:12 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para USDJPY (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para USDJPY (M5)...
+eruda.js:2 🆕 Nueva vela detectada en 6:53:12 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para USDJPY (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para USDJPY (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 🆕 Nueva vela detectada en 6:54:12 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para USDJPY (M5)...
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para USDJPY (M5)...
+eruda.js:2 🆕 Nueva vela detectada en 6:55:12 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para USDJPY (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para USDJPY (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 🆕 Nueva vela detectada en 6:56:12 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para USDJPY (M5)...
+eruda.js:2 ✅ 42 señales agregadas al gráfico
+eruda.js:2 ✅ 42 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para USDJPY (M5)...
+eruda.js:2 🆕 Nueva vela detectada en 6:57:12 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para USDJPY (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para USDJPY (M5)...
+eruda.js:2 🆕 Nueva vela detectada en 6:58:12 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para USDJPY (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 ✅ 49 señales agregadas al gráfico
+eruda.js:2 ✅ 49 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para USDJPY (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 🆕 Nueva vela detectada en 6:59:12 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para USDJPY (M5)...
+eruda.js:2 ✅ 42 señales agregadas al gráfico
+eruda.js:2 ✅ 42 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para USDJPY (M5)...
+eruda.js:2 🆕 Nueva vela detectada en 7:00:07 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para USDJPY (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 ✅ Cargados 3 pares OTC y 3 pares REAL
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 🆕 Nueva vela detectada en 7:00:29 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 🔔 Señal de VENTA detectada (AUDIO SILENCIADO): {confidence: 0.54, direction: 'PUT', gale_level: 1, is_gale: true, pattern: 'Bajista', …}
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 🆕 Nueva vela detectada en 7:00:35 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 🔔 Señal de VENTA detectada (AUDIO SILENCIADO): {confidence: 0.61, direction: 'PUT', gale_level: 1, is_gale: true, pattern: 'Bajista', …}
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M15)...
+eruda.js:2 🆕 Nueva vela detectada en 7:00:41 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M15)...
+eruda.js:2 🔔 Señal de COMPRA detectada (AUDIO SILENCIADO): {confidence: 0.52, direction: 'CALL', gale_level: 1, is_gale: true, pattern: 'Alcista', …}
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 ⏱️ Timeframe cambiado a M15
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 🆕 Nueva vela detectada en 7:00:42 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 🔔 Señal de VENTA detectada (AUDIO SILENCIADO): {confidence: 0.54, direction: 'PUT', gale_level: 0, is_gale: false, pattern: 'Bajista', …}
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 ⏱️ Timeframe cambiado a M5
+eruda.js:2  POST https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/login 503 (Service Unavailable)
+window.fetch @ Network.js:219
+apply @ injected.js:278
+loginIQ @ dashboard:1848
+(anonymous) @ dashboard:1648
+d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/__replco/static/devtools/eruda/3.2.3/eruda.js:2  POST https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/login 503 (Service Unavailable)
+window.fetch @ d833d481-97c2-49cd-9…da/3.2.3/eruda.js:2
+apply @ injected.js:278
+loginIQ @ dashboard:1848
+(anonymous) @ dashboard:1648
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 🆕 Nueva vela detectada en 7:01:05 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 📋 STC Trading Dashboard script cargado
+eruda.js:2 🌐 DOM cargado, iniciando aplicación...
+eruda.js:2 🚀 STC Trading System - gráficos automáticos activos
+eruda.js:2 🚀 Iniciando STC Chart Manager...
+eruda.js:2 ✅ STC Chart Manager - usando STCChartFix automático
+eruda.js:2 🚀 Iniciando STC Trading Dashboard...
+eruda.js:2 ✅ Gráfico inicializado correctamente
+eruda.js:2 🎛️ Event handlers configurados
+eruda.js:2 🔄 Auto-update iniciado
+eruda.js:2 ✅ Dashboard inicializado
+eruda.js:2 ✅ Cargados 3 pares OTC y 3 pares REAL
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 🔔 Señal de VENTA detectada (AUDIO SILENCIADO): {confidence: 0.5, direction: 'PUT', gale_level: 1, is_gale: true, pattern: 'Bajista', …}
+eruda.js:2 ✅ 48 señales agregadas al gráfico
+eruda.js:2 ✅ 48 señales Tablero cargadas
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 🆕 Nueva vela detectada en 7:01:56 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 🔔 Señal de COMPRA detectada (AUDIO SILENCIADO): {confidence: 0.57, direction: 'CALL', gale_level: 0, is_gale: false, pattern: 'Alcista', …}
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 🆕 Nueva vela detectada en 7:02:26 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 🔔 Señal de COMPRA detectada (AUDIO SILENCIADO): {confidence: 0.55, direction: 'CALL', gale_level: 1, is_gale: true, pattern: 'Alcista', …}
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 🆕 Nueva vela detectada en 7:02:56 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 🔔 Señal de COMPRA detectada (AUDIO SILENCIADO): {confidence: 0.52, direction: 'CALL', gale_level: 0, is_gale: false, pattern: 'Alcista', …}
+eruda.js:2 ✅ 46 señales agregadas al gráfico
+eruda.js:2 ✅ 46 señales Tablero cargadas
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 🆕 Nueva vela detectada en 7:03:26 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 🔔 Señal de VENTA detectada (AUDIO SILENCIADO): {confidence: 0.52, direction: 'PUT', gale_level: 0, is_gale: false, pattern: 'Bajista', …}
+eruda.js:2 ✅ 33 señales agregadas al gráfico
+eruda.js:2 ✅ 33 señales Tablero cargadas
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 🆕 Nueva vela detectada en 7:03:56 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 🆕 Nueva vela detectada en 7:04:26 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 🆕 Nueva vela detectada en 7:05:12 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 🆕 Nueva vela detectada en 7:06:12 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 🆕 Nueva vela detectada en 7:07:12 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 🆕 Nueva vela detectada en 7:08:12 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 🆕 Nueva vela detectada en 7:09:12 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 ✅ 42 señales agregadas al gráfico
+eruda.js:2 ✅ 42 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 🆕 Nueva vela detectada en 7:10:03 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 🔔 Señal de VENTA detectada (AUDIO SILENCIADO): {confidence: 0.57, direction: 'PUT', gale_level: 0, is_gale: false, pattern: 'Bajista', …}
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 🆕 Nueva vela detectada en 7:10:26 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 ✅ 47 señales agregadas al gráfico
+eruda.js:2 ✅ 47 señales Tablero cargadas
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 🆕 Nueva vela detectada en 7:10:56 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 🆕 Nueva vela detectada en 7:12:12 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 ✅ 48 señales agregadas al gráfico
+eruda.js:2 ✅ 48 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 🆕 Nueva vela detectada en 7:13:12 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 🆕 Nueva vela detectada en 7:14:12 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 🆕 Nueva vela detectada en 7:15:12 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 🆕 Nueva vela detectada en 7:15:38 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 🔔 Señal de VENTA detectada (AUDIO SILENCIADO): {confidence: 0.52, direction: 'PUT', gale_level: 0, is_gale: false, pattern: 'Bajista', …}
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 🆕 Nueva vela detectada en 7:15:56 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 🔔 Señal de VENTA detectada (AUDIO SILENCIADO): {confidence: 0.53, direction: 'PUT', gale_level: 0, is_gale: false, pattern: 'Bajista', …}
+eruda.js:2 ✅ 43 señales agregadas al gráfico
+eruda.js:2 ✅ 43 señales Tablero cargadas
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 🆕 Nueva vela detectada en 7:16:26 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 🔔 Señal de COMPRA detectada (AUDIO SILENCIADO): {confidence: 0.51, direction: 'CALL', gale_level: 0, is_gale: false, pattern: 'Alcista', …}
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 🆕 Nueva vela detectada en 7:16:56 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 🔔 Señal de COMPRA detectada (AUDIO SILENCIADO): {confidence: 0.51, direction: 'CALL', gale_level: 5, is_gale: true, pattern: 'Alcista', …}
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+_app-8703c078616db858.js:34 [Coframe] Error initializing SDK Error: Timeout waiting for command after 3600000ms for:
+e=>!("pageHydrated"!==e.emit)
+    at cf.js?config=%257B%2522projectId%2522%253A%252268c9ad4d4cddb58cf3a1f93d%2522%252C%2522startTime%2522%253A1759529919574%252C%2522timeoutMs%2522%253A1000%252C%2522currentUrl%2522%253A%2522https%253A%252F%252Freplit.com%252F%2540oleal7752%252FSmartTradeAcademy%2522%252C%2522waitForHydration%2522%253Atrue%252C%2522trackingOnly%2522%253Atrue%257D:10:2345
+(anonymous) @ _app-8703c078616db858.js:34
+(anonymous) @ cf.js?config=%257B%2522projectId%2522%253A%252268c9ad4d4cddb58cf3a1f93d%2522%252C%2522startTime%2522%253A1759529919574%252C%2522timeoutMs%2522%253A1000%252C%2522currentUrl%2522%253A%2522https%253A%252F%252Freplit.com%252F%2540oleal7752%252FSmartTradeAcademy%2522%252C%2522waitForHydration%2522%253Atrue%252C%2522trackingOnly%2522%253Atrue%257D:10
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 🆕 Nueva vela detectada en 7:17:36 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 🔔 Señal de COMPRA detectada (AUDIO SILENCIADO): {confidence: 0.52, direction: 'CALL', gale_level: 0, is_gale: false, pattern: 'Alcista', …}
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 🆕 Nueva vela detectada en 7:17:56 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 🔔 Señal de COMPRA detectada (AUDIO SILENCIADO): {confidence: 0.55, direction: 'CALL', gale_level: 3, is_gale: true, pattern: 'Alcista', …}
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 🆕 Nueva vela detectada en 7:18:26 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 🆕 Nueva vela detectada en 7:19:04 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 🔔 Señal de COMPRA detectada (AUDIO SILENCIADO): {confidence: 0.54, direction: 'CALL', gale_level: 0, is_gale: false, pattern: 'Alcista', …}
+eruda.js:2 ✅ 47 señales agregadas al gráfico
+eruda.js:2 ✅ 47 señales Tablero cargadas
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 🆕 Nueva vela detectada en 7:19:26 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 🔔 Señal de COMPRA detectada (AUDIO SILENCIADO): {confidence: 0.55, direction: 'CALL', gale_level: 0, is_gale: false, pattern: 'Alcista', …}
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 🆕 Nueva vela detectada en 7:19:56 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 🆕 Nueva vela detectada en 7:20:26 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 🆕 Nueva vela detectada en 7:21:12 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 ✅ 46 señales agregadas al gráfico
+eruda.js:2 ✅ 46 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 🆕 Nueva vela detectada en 7:22:12 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 🆕 Nueva vela detectada en 7:23:12 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 ✅ 31 señales agregadas al gráfico
+eruda.js:2 ✅ 31 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 🆕 Nueva vela detectada en 7:24:12 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 ✅ 33 señales agregadas al gráfico
+eruda.js:2 ✅ 33 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 🆕 Nueva vela detectada en 7:25:12 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 🔔 Señal de VENTA detectada (AUDIO SILENCIADO): {confidence: 0.51, direction: 'PUT', gale_level: 2, is_gale: true, pattern: 'Bajista', …}
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 🆕 Nueva vela detectada en 7:26:12 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 🆕 Nueva vela detectada en 7:27:12 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 ✅ 49 señales agregadas al gráfico
+eruda.js:2 ✅ 49 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 🆕 Nueva vela detectada en 7:28:12 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 🆕 Nueva vela detectada en 7:29:12 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 ✅ 49 señales agregadas al gráfico
+eruda.js:2 ✅ 49 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 🆕 Nueva vela detectada en 7:30:12 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 🆕 Nueva vela detectada en 7:31:12 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 🆕 Nueva vela detectada en 7:32:12 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 🆕 Nueva vela detectada en 7:33:12 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 🔔 Señal de COMPRA detectada (AUDIO SILENCIADO): {confidence: 0.5, direction: 'CALL', gale_level: 0, is_gale: false, pattern: 'Alcista', …}
+eruda.js:2 ✅ 47 señales agregadas al gráfico
+eruda.js:2 ✅ 47 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 🆕 Nueva vela detectada en 7:34:02 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 🔔 Señal de VENTA detectada (AUDIO SILENCIADO): {confidence: 0.52, direction: 'PUT', gale_level: 1, is_gale: true, pattern: 'Bajista', …}
+eruda.js:2 ✅ 43 señales agregadas al gráfico
+eruda.js:2 ✅ 43 señales Tablero cargadas
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 🆕 Nueva vela detectada en 7:34:26 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 🔔 Señal de COMPRA detectada (AUDIO SILENCIADO): {confidence: 0.55, direction: 'CALL', gale_level: 3, is_gale: true, pattern: 'Alcista', …}
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 🆕 Nueva vela detectada en 7:34:56 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 🔔 Señal de COMPRA detectada (AUDIO SILENCIADO): {confidence: 0.52, direction: 'CALL', gale_level: 0, is_gale: false, pattern: 'Alcista', …}
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 🆕 Nueva vela detectada en 7:35:26 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 🔔 Señal de COMPRA detectada (AUDIO SILENCIADO): {confidence: 0.5, direction: 'CALL', gale_level: 2, is_gale: true, pattern: 'Alcista', …}
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+content-all.js:1 Uncaught (in promise) Error: Could not establish connection. Receiving end does not exist.
+    at y (content-all.js:1:56614)
+y @ content-all.js:1
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 🆕 Nueva vela detectada en 7:35:56 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 🔔 Señal de VENTA detectada (AUDIO SILENCIADO): {confidence: 0.51, direction: 'PUT', gale_level: 0, is_gale: false, pattern: 'Bajista', …}
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 🆕 Nueva vela detectada en 7:36:26 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 🔔 Señal de COMPRA detectada (AUDIO SILENCIADO): {confidence: 0.51, direction: 'CALL', gale_level: 3, is_gale: true, pattern: 'Alcista', …}
+eruda.js:2 ✅ 48 señales agregadas al gráfico
+eruda.js:2 ✅ 48 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 🆕 Nueva vela detectada en 7:37:00 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 🔔 Señal de COMPRA detectada (AUDIO SILENCIADO): {confidence: 0.62, direction: 'CALL', gale_level: 0, is_gale: false, pattern: 'Alcista', …}
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 🆕 Nueva vela detectada en 7:37:26 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 🔔 Señal de VENTA detectada (AUDIO SILENCIADO): {confidence: 0.58, direction: 'PUT', gale_level: 4, is_gale: true, pattern: 'Bajista', …}
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 🆕 Nueva vela detectada en 7:37:56 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 🔔 Señal de COMPRA detectada (AUDIO SILENCIADO): {confidence: 0.5, direction: 'CALL', gale_level: 3, is_gale: true, pattern: 'Alcista', …}
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 🆕 Nueva vela detectada en 7:38:26 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 🔔 Señal de COMPRA detectada (AUDIO SILENCIADO): {confidence: 0.5, direction: 'CALL', gale_level: 0, is_gale: false, pattern: 'Alcista', …}
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 🆕 Nueva vela detectada en 7:38:56 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 🆕 Nueva vela detectada en 7:39:26 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 🔔 Señal de COMPRA detectada (AUDIO SILENCIADO): {confidence: 0.54, direction: 'CALL', gale_level: 2, is_gale: true, pattern: 'Alcista', …}
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 🆕 Nueva vela detectada en 7:39:56 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 🔔 Señal de VENTA detectada (AUDIO SILENCIADO): {confidence: 0.5, direction: 'PUT', gale_level: 0, is_gale: false, pattern: 'Bajista', …}
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 🆕 Nueva vela detectada en 7:40:26 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 🔔 Señal de VENTA detectada (AUDIO SILENCIADO): {confidence: 0.51, direction: 'PUT', gale_level: 0, is_gale: false, pattern: 'Bajista', …}
+eruda.js:2 ✅ 41 señales agregadas al gráfico
+eruda.js:2 ✅ 41 señales Tablero cargadas
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 🆕 Nueva vela detectada en 7:40:56 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 🔔 Señal de VENTA detectada (AUDIO SILENCIADO): {confidence: 0.56, direction: 'PUT', gale_level: 0, is_gale: false, pattern: 'Bajista', …}
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 🆕 Nueva vela detectada en 7:41:26 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 🔔 Señal de COMPRA detectada (AUDIO SILENCIADO): {confidence: 0.53, direction: 'CALL', gale_level: 1, is_gale: true, pattern: 'Alcista', …}
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 🆕 Nueva vela detectada en 7:41:56 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 🔔 Señal de VENTA detectada (AUDIO SILENCIADO): {confidence: 0.56, direction: 'PUT', gale_level: 0, is_gale: false, pattern: 'Bajista', …}
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 🆕 Nueva vela detectada en 7:42:26 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 🔔 Señal de VENTA detectada (AUDIO SILENCIADO): {confidence: 0.5, direction: 'PUT', gale_level: 0, is_gale: false, pattern: 'Bajista', …}
+eruda.js:2 ✅ 35 señales agregadas al gráfico
+eruda.js:2 ✅ 35 señales Tablero cargadas
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 🆕 Nueva vela detectada en 7:42:56 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 🔔 Señal de COMPRA detectada (AUDIO SILENCIADO): {confidence: 0.57, direction: 'CALL', gale_level: 1, is_gale: true, pattern: 'Alcista', …}
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 🆕 Nueva vela detectada en 7:43:26 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 🔔 Señal de VENTA detectada (AUDIO SILENCIADO): {confidence: 0.55, direction: 'PUT', gale_level: 2, is_gale: true, pattern: 'Bajista', …}
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 🆕 Nueva vela detectada en 7:43:56 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 🔔 Señal de COMPRA detectada (AUDIO SILENCIADO): {confidence: 0.53, direction: 'CALL', gale_level: 0, is_gale: false, pattern: 'Alcista', …}
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 🆕 Nueva vela detectada en 7:44:26 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 🔔 Señal de COMPRA detectada (AUDIO SILENCIADO): {confidence: 0.58, direction: 'CALL', gale_level: 1, is_gale: true, pattern: 'Alcista', …}
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 🆕 Nueva vela detectada en 7:44:56 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 🔔 Señal de COMPRA detectada (AUDIO SILENCIADO): {confidence: 0.5, direction: 'CALL', gale_level: 0, is_gale: false, pattern: 'Alcista', …}
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 🆕 Nueva vela detectada en 7:45:26 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 🔔 Señal de COMPRA detectada (AUDIO SILENCIADO): {confidence: 0.53, direction: 'CALL', gale_level: 0, is_gale: false, pattern: 'Alcista', …}
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 🆕 Nueva vela detectada en 7:45:56 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 🔔 Señal de COMPRA detectada (AUDIO SILENCIADO): {confidence: 0.51, direction: 'CALL', gale_level: 5, is_gale: true, pattern: 'Alcista', …}
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 🆕 Nueva vela detectada en 7:46:26 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 🔔 Señal de COMPRA detectada (AUDIO SILENCIADO): {confidence: 0.54, direction: 'CALL', gale_level: 0, is_gale: false, pattern: 'Alcista', …}
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 🆕 Nueva vela detectada en 7:46:56 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 🔔 Señal de COMPRA detectada (AUDIO SILENCIADO): {confidence: 0.53, direction: 'CALL', gale_level: 1, is_gale: true, pattern: 'Alcista', …}
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 🆕 Nueva vela detectada en 7:47:26 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 🔔 Señal de VENTA detectada (AUDIO SILENCIADO): {confidence: 0.54, direction: 'PUT', gale_level: 1, is_gale: true, pattern: 'Bajista', …}
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 🆕 Nueva vela detectada en 7:47:56 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 🔔 Señal de COMPRA detectada (AUDIO SILENCIADO): {confidence: 0.59, direction: 'CALL', gale_level: 0, is_gale: false, pattern: 'Alcista', …}
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 🆕 Nueva vela detectada en 7:48:26 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 🔔 Señal de COMPRA detectada (AUDIO SILENCIADO): {confidence: 0.51, direction: 'CALL', gale_level: 2, is_gale: true, pattern: 'Alcista', …}
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 🆕 Nueva vela detectada en 7:48:56 p.m.
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 🔔 Señal de COMPRA detectada (AUDIO SILENCIADO): {confidence: 0.52, direction: 'CALL', gale_level: 4, is_gale: true, pattern: 'Alcista', …}
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+framework-3abd175b6916fd8c.js:1 Error while parsing the 'sandbox' attribute: 'allow-downloads-without-user-activation' is an invalid sandbox flag.
+_ @ framework-3abd175b6916fd8c.js:1
+(anonymous) @ framework-3abd175b6916fd8c.js:1
+uD @ framework-3abd175b6916fd8c.js:1
+uI @ framework-3abd175b6916fd8c.js:1
+uM @ framework-3abd175b6916fd8c.js:1
+uS @ framework-3abd175b6916fd8c.js:1
+C @ framework-3abd175b6916fd8c.js:1
+z @ framework-3abd175b6916fd8c.js:1
+Console.js:61 📋 STC Trading Dashboard script cargado
+Console.js:61 🌐 DOM cargado, iniciando aplicación...
+Console.js:61 🚀 STC Trading System - gráficos automáticos activos
+Console.js:61 🚀 Iniciando STC Chart Manager...
+Console.js:61 ✅ STC Chart Manager - usando STCChartFix automático
+injected.js:278  GET https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/balance 503 (Service Unavailable)
+window.fetch @ Network.js:219
+apply @ injected.js:278
+updateRealBalance @ dashboard:1849
+(anonymous) @ dashboard:1843
+  GET https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/balance 503 (Service Unavailable)
+window.fetch @ d833d481-97c2-49cd-9…da/3.2.3/eruda.js:2
+apply @ d833d481-97c2-49cd-9…ols/injected.js:278
+updateRealBalance @ d833d481-97c2-49cd-9….dev/dashboard:1849
+(anonymous) @ d833d481-97c2-49cd-9….dev/dashboard:1843
+Console.js:61 🚀 Iniciando STC Trading Dashboard...
+Console.js:61 ✅ Gráfico inicializado correctamente
+Console.js:61 🎛️ Event handlers configurados
+Console.js:61 🔄 Auto-update iniciado
+Console.js:61 ✅ Dashboard inicializado
+Console.js:61 🔄 Cambiando fuente de datos a: iq
+Console.js:61 🔄 Cambiando fuente de datos a: finnhub
+Console.js:61 📋 STC Trading Dashboard script cargado
+Console.js:61 🌐 DOM cargado, iniciando aplicación...
+Console.js:61 🚀 STC Trading System - gráficos automáticos activos
+Console.js:61 🚀 Iniciando STC Chart Manager...
+Console.js:61 ✅ STC Chart Manager - usando STCChartFix automático
+injected.js:278  GET https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/balance 503 (Service Unavailable)
+window.fetch @ Network.js:219
+apply @ injected.js:278
+updateRealBalance @ dashboard:1849
+(anonymous) @ dashboard:1843
+Console.js:61 🚀 Iniciando STC Trading Dashboard...
+Console.js:61 ✅ Gráfico inicializado correctamente
+Console.js:61 🎛️ Event handlers configurados
+Console.js:61 🔄 Auto-update iniciado
+Console.js:61 ✅ Dashboard inicializado

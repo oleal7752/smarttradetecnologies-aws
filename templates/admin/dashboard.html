@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Administración - STC Trading</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Courier New', Consolas, Monaco, monospace;
+            background: #000000;
+            color: #00ffff;
+            min-height: 100vh;
+            perspective: 1500px;
+            overflow-x: hidden;
+        }
+
+        .admin-container {
+            padding: 40px;
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+        .admin-header {
+            background: rgba(0, 255, 255, 0.03);
+            border: 2px solid rgba(0, 255, 255, 0.2);
+            border-radius: 20px;
+            padding: 30px;
+            backdrop-filter: blur(40px);
+            transform: translateZ(30px);
+            margin-bottom: 40px;
+            box-shadow: 
+                0 0 40px rgba(0, 255, 255, 0.1),
+                inset 0 0 30px rgba(0, 255, 255, 0.05);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .admin-title {
+            font-size: 2rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            text-shadow: 
+                0 0 20px rgba(0, 255, 255, 0.5),
+                0 0 40px rgba(0, 255, 255, 0.3);
+        }
+
+        .admin-subtitle {
+            font-size: 0.9rem;
+            color: rgba(0, 255, 255, 0.6);
+            margin-top: 5px;
+            letter-spacing: 1px;
+        }
+
+        .logout-btn {
+            background: rgba(255, 50, 50, 0.1);
+            border: 2px solid rgba(255, 50, 50, 0.4);
+            color: #ff3232;
+            padding: 12px 30px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-family: 'Courier New', Consolas, Monaco, monospace;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s;
+            text-decoration: none;
+        }
+
+        .logout-btn:hover {
+            background: rgba(255, 50, 50, 0.2);
+            transform: translateY(-2px);
+            box-shadow: 0 0 30px rgba(255, 50, 50, 0.3);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+
+        .stat-card {
+            background: rgba(0, 255, 255, 0.02);
+            border: 2px solid rgba(0, 255, 255, 0.2);
+            border-radius: 15px;
+            padding: 25px;
+            backdrop-filter: blur(40px);
+            transform: translateZ(20px);
+            transition: all 0.3s;
+            box-shadow: 
+                0 0 30px rgba(0, 255, 255, 0.05),
+                inset 0 0 20px rgba(0, 255, 255, 0.02);
+        }
+
+        .stat-card:hover {
+            transform: translateZ(30px);
+            border-color: rgba(0, 255, 255, 0.4);
+            box-shadow: 0 0 40px rgba(0, 255, 255, 0.2);
+        }
+
+        .stat-label {
+            font-size: 0.8rem;
+            color: rgba(0, 255, 255, 0.6);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+
+        .stat-value {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #00ffff;
+            text-shadow: 0 0 20px rgba(0, 255, 255, 0.4);
+        }
+
+        .stat-subvalue {
+            font-size: 0.9rem;
+            color: rgba(0, 255, 255, 0.5);
+            margin-top: 5px;
+        }
+
+        .sections-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        .section-card {
+            background: rgba(0, 255, 255, 0.03);
+            border: 2px solid rgba(0, 255, 255, 0.2);
+            border-radius: 20px;
+            padding: 35px;
+            backdrop-filter: blur(40px);
+            transform: translateZ(25px);
+            transition: all 0.3s;
+            cursor: pointer;
+            text-decoration: none;
+            display: block;
+            box-shadow: 
+                0 0 30px rgba(0, 255, 255, 0.05),
+                inset 0 0 20px rgba(0, 255, 255, 0.02);
+        }
+
+        .section-card:hover {
+            transform: translateZ(40px) scale(1.02);
+            border-color: rgba(0, 255, 255, 0.5);
+            box-shadow: 0 0 50px rgba(0, 255, 255, 0.3);
+        }
+
+        .section-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            filter: drop-shadow(0 0 15px rgba(0, 255, 255, 0.5));
+        }
+
+        .section-title {
+            font-size: 1.4rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+            color: #00ffff;
+        }
+
+        .section-desc {
+            font-size: 0.9rem;
+            color: rgba(0, 255, 255, 0.6);
+            line-height: 1.6;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 40px;
+            font-size: 1.2rem;
+            color: rgba(0, 255, 255, 0.6);
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                opacity: 0.6;
+            }
+            50% {
+                opacity: 1;
+            }
+        }
+
+        .loading::after {
+            content: '...';
+            animation: pulse 1.5s infinite;
+        }
+
+        @media (max-width: 768px) {
+            .admin-container {
+                padding: 20px;
+            }
+
+            .admin-header {
+                flex-direction: column;
+                gap: 20px;
+                text-align: center;
+            }
+
+            .stats-grid,
+            .sections-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="admin-container">
+        <div class="admin-header">
+            <div>
+                <div class="admin-title">⚙️ PANEL DE ADMINISTRACIÓN</div>
+                <div class="admin-subtitle">SMART TRADE ACADEMY - CONTROL TOTAL</div>
+            </div>
+            <a href="/api/auth/logout" class="logout-btn" onclick="event.preventDefault(); logout()">
+                SALIR
+            </a>
+        </div>
+
+        <div id="stats-container" class="loading">
+            Cargando estadísticas
+        </div>
+
+        <div class="sections-grid">
+            <a href="/admin/users" class="section-card">
+                <div class="section-icon">👥</div>
+                <div class="section-title">Usuarios</div>
+                <div class="section-desc">
+                    Gestionar usuarios, activar/desactivar cuentas, asignar permisos de administrador
+                </div>
+            </a>
+
+            <a href="/admin/promo-codes" class="section-card">
+                <div class="section-icon">🎟️</div>
+                <div class="section-title">Códigos Promocionales</div>
+                <div class="section-desc">
+                    Crear, listar y eliminar códigos promocionales de acceso temporal
+                </div>
+            </a>
+
+            <a href="/bots" class="section-card">
+                <div class="section-icon">🤖</div>
+                <div class="section-title">Administrar Bots</div>
+                <div class="section-desc">
+                    Panel completo de control de bots: crear, backtest, gestionar estrategias
+                </div>
+            </a>
+
+            <a href="/admin/strategies" class="section-card">
+                <div class="section-icon">📊</div>
+                <div class="section-title">Estrategias</div>
+                <div class="section-desc">
+                    Ver estrategias disponibles, parámetros y configuraciones
+                </div>
+            </a>
+
+            <a href="/admin/pricing" class="section-card">
+                <div class="section-icon">💰</div>
+                <div class="section-title">Precios y Planes</div>
+                <div class="section-desc">
+                    Ver y gestionar precios de suscripciones y duraciones
+                </div>
+            </a>
+
+            <a href="/admin/payments" class="section-card">
+                <div class="section-icon">💳</div>
+                <div class="section-title">Pagos y Suscripciones</div>
+                <div class="section-desc">
+                    Revisar historial de pagos, ingresos y suscripciones activas
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <script>
+        async function loadStats() {
+            try {
+                const response = await fetch('/api/admin/stats');
+                const data = await response.json();
+
+                if (data.success) {
+                    const stats = data.stats;
+                    
+                    const statsHTML = `
+                        <div class="stats-grid">
+                            <div class="stat-card">
+                                <div class="stat-label">👥 Usuarios</div>
+                                <div class="stat-value">${stats.users.total}</div>
+                                <div class="stat-subvalue">
+                                    ${stats.users.active} activos • ${stats.users.admins} admins
+                                </div>
+                            </div>
+
+                            <div class="stat-card">
+                                <div class="stat-label">📅 Suscripciones</div>
+                                <div class="stat-value">${stats.subscriptions.active}</div>
+                                <div class="stat-subvalue">activas</div>
+                            </div>
+
+                            <div class="stat-card">
+                                <div class="stat-label">🤖 Bots</div>
+                                <div class="stat-value">${stats.bots.total}</div>
+                                <div class="stat-subvalue">
+                                    ${stats.bots.active} activos
+                                </div>
+                            </div>
+
+                            <div class="stat-card">
+                                <div class="stat-label">🎟️ Códigos Promo</div>
+                                <div class="stat-value">${stats.promo_codes.total}</div>
+                                <div class="stat-subvalue">
+                                    ${stats.promo_codes.used} utilizados
+                                </div>
+                            </div>
+
+                            <div class="stat-card">
+                                <div class="stat-label">💰 Ingresos Totales</div>
+                                <div class="stat-value">$${stats.revenue.total}</div>
+                                <div class="stat-subvalue">${stats.revenue.currency}</div>
+                            </div>
+                        </div>
+                    `;
+
+                    document.getElementById('stats-container').innerHTML = statsHTML;
+                }
+            } catch (error) {
+                console.error('Error cargando estadísticas:', error);
+                document.getElementById('stats-container').innerHTML = `
+                    <div class="stat-card">
+                        <div class="stat-label">Error</div>
+                        <div class="stat-subvalue">No se pudieron cargar las estadísticas</div>
+                    </div>
+                `;
+            }
+        }
+
+        async function logout() {
+            try {
+                await fetch('/api/auth/logout', { method: 'POST' });
+                window.location.href = '/auth/login';
+            } catch (error) {
+                console.error('Error al cerrar sesión:', error);
+            }
+        }
+
+        loadStats();
+        setInterval(loadStats, 30000);
+    </script>
+</body>
+</html>

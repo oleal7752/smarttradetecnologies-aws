@@ -1,0 +1,126 @@
+A continuación te dejo un módulo sencillo (HTML + CSS + JS) que:
+
+Detecta el inicio y fin exacto de cada vela de 5 minutos alineada a los múltiplos reales del reloj (00, 05, 10, 15, …).
+Muestra:
+Porcentaje restante y/o completado.
+Barra de progreso que se va “consumiendo” hasta llegar a 0.
+Countdown mm:ss hasta el cierre de la vela actual.
+Dispara un evento personalizado new-candle cuando arranca una nueva vela (para que enganches lógica: capturar OPEN, reset de estructuras, etc.).
+Permite cambiar el intervalo fácilmente (1, 3, 5, 15, etc. minutos).
+Permite configurar zona horaria e incluso ventanas de mercado (por ejemplo si quieres pausar fuera de horario).
+Puedes integrarlo en tu dashboard. He incluido dos estilos de barra (consumida o rellenándose). Escoge la que prefieras.
+
+Concepto clave
+Para sincronizar y evitar “desfase” NO restamos 1000 ms cada segundo; recalculamos siempre a partir del tiempo actual y los límites de bucket:
+
+Code
+intervalMs = N * 60 * 1000
+nowMs = Date.now()
+start = Math.floor(nowMs / intervalMs) * intervalMs
+end = start + intervalMs
+msLeft = end - nowMs
+progress = (intervalMs - msLeft) / intervalMs
+Esto corrige automáticamente cualquier pequeño drift del setInterval.
+
+Archivos
+1. HTML (demo)
+
+index.html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Barra Vela 5m Sincronizada</title>
+  <link rel="stylesheet" href="candle-progress.css" />
+2. CSS
+
+candle-progress.css
+body {
+  background:#0c0f14;
+  color:#eee;
+  font-family:system-ui, Arial, sans-serif;
+  padding:20px;
+}
+3. JavaScript (lógica principal)
+
+candle-progress.js
+/* Configuración */
+const INTERVAL_MINUTES = 5;                 // Cambia a 1, 3, 15, etc.
+const TIMEZONE = 'UTC';                     // 'UTC' o IANA (ej: 'America/New_York')
+const MARKET_SESSIONS = [
+  // Ejemplo: sesiones (hora inicial, hora final) en 24h de la TZ configurada.
+  // Si no quieres limitar, deja el array vacío.
+Cambiar comportamiento (barra que se LLENA en vez de consumirse)
+En el CSS tienes comentada la alternativa. O en JS simplemente cambia:
+
+JavaScript
+// Si quieres que se LLENE:
+progressFillEl.style.width = (percentConsumed).toFixed(4) + '%';
+progressTextEl.textContent = (percentConsumed).toFixed(1) + '%';
+Ajuste de sesión de mercado
+Si quieres limitar por ejemplo a 09:30–16:00 New York:
+
+JavaScript
+const TIMEZONE = 'America/New_York';
+const MARKET_SESSIONS = [
+  { start: '09:30', end: '16:00' }
+];
+Fuera de ese horario la barra se pone en OFF.
+
+Cambiar intervalo dinámicamente
+Puedes exponer una función:
+
+JavaScript
+export function setIntervalMinutes(n){
+  window.dispatchEvent(new CustomEvent('change-interval',{ detail:{ old: INTERVAL_MINUTES, next: n }}));
+  // Tendrías que volver a calcular, redefinir INTERVAL_MINUTES (en este caso es const, conviértelo a let)
+}
+Para demo lo dejé fijo.
+
+Integración con tu lógica de velas
+En tu listener de new-candle:
+
+JavaScript
+window.addEventListener('new-candle', async (e) => {
+  const { bucketStartEpoch } = e.detail;
+  // 1. Guarda open = último precio.
+  // 2. Reinicia acumuladores high/low.
+  // 3. Programa fetch de datos faltantes si hubo desconexión.
+});
+Puedes además coordinarlo con tu backend: cuando detectas new-candle mandas un mensaje por WebSocket solicitando confirmación o pides la vela cerrada anterior para persistir.
+
+Nota sobre drift
+Al recalcular cada frame (o cada ~60 FPS) estás alineado al reloj real. Si prefieres menos CPU, cambia requestAnimationFrame por:
+
+JavaScript
+setInterval(updateLoop, 250); // 4 veces por segundo
+y en updateLoop quita la llamada recursiva a requestAnimationFrame.
+
+Versión ultra compacta (sólo la lógica esencial)
+JavaScript
+const ivMin = 5;
+const bar = document.getElementById('fill');
+const txt = document.getElementById('txt');
+function loop(){
+  const now = Date.now();
+  const ivMs = ivMin*60000;
+  const start = Math.floor(now/ivMs)*ivMs;
+  const end = start+ivMs;
+  const left = end - now;
+  const remainingPct = left / ivMs * 100;
+  bar.style.width = remainingPct + '%';
+  txt.textContent = (remainingPct).toFixed(1)+'%  '+format(left);
+  requestAnimationFrame(loop);
+}
+function format(ms){
+  const s = Math.max(0, Math.floor(ms/1000));
+  return (Math.floor(s/60)) + ':' + String(s%60).padStart(2,'0');
+}
+loop();
+Próximos pasos
+Copia los 3 archivos, abre index.html.
+Verifica que la cuenta regresiva llega a 0 justo cuando el reloj pasa a un minuto múltiplo de 5 (ej.: 10:15:00, 10:20:00, etc.).
+Ajusta zona horaria y sesiones según tu necesidad.
+Si quieres luego que haga “flash” o animación al cerrar la vela, o soporte multi‑intervalo con un selector, dímelo y te preparo la extensión.
+
+¿Necesitas que además emita el tiempo restante como WebSocket al backend o que tu backend lo calcule y el frontend sólo escuche? Avísame y continuo.

@@ -1,0 +1,1175 @@
+The source list for the Content Security Policy directive 'default-src' contains an invalid source: ''unsafe-dynamic''. It will be ignored.
+The source list for the Content Security Policy directive 'default-src' contains an invalid source: ''unsafe-dynamic''. It will be ignored.
+The source list for the Content Security Policy directive 'default-src' contains an invalid source: ''unsafe-dynamic''. It will be ignored.
+The source list for the Content Security Policy directive 'default-src' contains an invalid source: ''unsafe-dynamic''. It will be ignored.
+The source list for the Content Security Policy directive 'default-src' contains an invalid source: ''unsafe-dynamic''. It will be ignored.
+The source list for the Content Security Policy directive 'default-src' contains an invalid source: ''unsafe-dynamic''. It will be ignored.
+The source list for the Content Security Policy directive 'default-src' contains an invalid source: ''unsafe-dynamic''. It will be ignored.
+The source list for the Content Security Policy directive 'default-src' contains an invalid source: ''unsafe-dynamic''. It will be ignored.
+The source list for the Content Security Policy directive 'default-src' contains an invalid source: ''unsafe-dynamic''. It will be ignored.
+The source list for the Content Security Policy directive 'default-src' contains an invalid source: ''unsafe-dynamic''. It will be ignored.
+The source list for the Content Security Policy directive 'default-src' contains an invalid source: ''unsafe-dynamic''. It will be ignored.
+The source list for the Content Security Policy directive 'default-src' contains an invalid source: ''unsafe-dynamic''. It will be ignored.
+The source list for the Content Security Policy directive 'default-src' contains an invalid source: ''unsafe-dynamic''. It will be ignored.
+The Content-Security-Policy directive 'default-src' contains 'report-uri' as a source expression. Did you want to add it as a directive and forget a semicolon?
+The Content-Security-Policy directive 'default-src' contains 'report-uri' as a source expression. Did you want to add it as a directive and forget a semicolon?
+The Content-Security-Policy directive 'default-src' contains 'report-uri' as a source expression. Did you want to add it as a directive and forget a semicolon?
+The Content-Security-Policy directive 'default-src' contains 'report-uri' as a source expression. Did you want to add it as a directive and forget a semicolon?
+The Content-Security-Policy directive 'default-src' contains 'report-uri' as a source expression. Did you want to add it as a directive and forget a semicolon?
+The Content-Security-Policy directive 'default-src' contains 'report-uri' as a source expression. Did you want to add it as a directive and forget a semicolon?
+The Content-Security-Policy directive 'default-src' contains 'report-uri' as a source expression. Did you want to add it as a directive and forget a semicolon?
+The Content-Security-Policy directive 'default-src' contains 'report-uri' as a source expression. Did you want to add it as a directive and forget a semicolon?
+The Content-Security-Policy directive 'default-src' contains 'report-uri' as a source expression. Did you want to add it as a directive and forget a semicolon?
+The Content-Security-Policy directive 'default-src' contains 'report-uri' as a source expression. Did you want to add it as a directive and forget a semicolon?
+The Content-Security-Policy directive 'default-src' contains 'report-uri' as a source expression. Did you want to add it as a directive and forget a semicolon?
+The Content-Security-Policy directive 'default-src' contains 'report-uri' as a source expression. Did you want to add it as a directive and forget a semicolon?
+The Content-Security-Policy directive 'default-src' contains 'report-uri' as a source expression. Did you want to add it as a directive and forget a semicolon?
+The source list for Content Security Policy directive 'default-src' contains a source with an invalid path: '/api/4509669501698048/security/?sentry_key=7eb3d90eb4660416caf507087367e67e'. The query component, including the '?', will be ignored.
+The source list for Content Security Policy directive 'default-src' contains a source with an invalid path: '/api/4509669501698048/security/?sentry_key=7eb3d90eb4660416caf507087367e67e'. The query component, including the '?', will be ignored.
+The source list for Content Security Policy directive 'default-src' contains a source with an invalid path: '/api/4509669501698048/security/?sentry_key=7eb3d90eb4660416caf507087367e67e'. The query component, including the '?', will be ignored.
+The source list for Content Security Policy directive 'default-src' contains a source with an invalid path: '/api/4509669501698048/security/?sentry_key=7eb3d90eb4660416caf507087367e67e'. The query component, including the '?', will be ignored.
+The source list for Content Security Policy directive 'default-src' contains a source with an invalid path: '/api/4509669501698048/security/?sentry_key=7eb3d90eb4660416caf507087367e67e'. The query component, including the '?', will be ignored.
+The source list for Content Security Policy directive 'default-src' contains a source with an invalid path: '/api/4509669501698048/security/?sentry_key=7eb3d90eb4660416caf507087367e67e'. The query component, including the '?', will be ignored.
+The source list for Content Security Policy directive 'default-src' contains a source with an invalid path: '/api/4509669501698048/security/?sentry_key=7eb3d90eb4660416caf507087367e67e'. The query component, including the '?', will be ignored.
+The source list for Content Security Policy directive 'default-src' contains a source with an invalid path: '/api/4509669501698048/security/?sentry_key=7eb3d90eb4660416caf507087367e67e'. The query component, including the '?', will be ignored.
+The source list for Content Security Policy directive 'default-src' contains a source with an invalid path: '/api/4509669501698048/security/?sentry_key=7eb3d90eb4660416caf507087367e67e'. The query component, including the '?', will be ignored.
+The source list for Content Security Policy directive 'default-src' contains a source with an invalid path: '/api/4509669501698048/security/?sentry_key=7eb3d90eb4660416caf507087367e67e'. The query component, including the '?', will be ignored.
+The source list for Content Security Policy directive 'default-src' contains a source with an invalid path: '/api/4509669501698048/security/?sentry_key=7eb3d90eb4660416caf507087367e67e'. The query component, including the '?', will be ignored.
+The source list for Content Security Policy directive 'default-src' contains a source with an invalid path: '/api/4509669501698048/security/?sentry_key=7eb3d90eb4660416caf507087367e67e'. The query component, including the '?', will be ignored.
+The source list for Content Security Policy directive 'default-src' contains a source with an invalid path: '/api/4509669501698048/security/?sentry_key=7eb3d90eb4660416caf507087367e67e'. The query component, including the '?', will be ignored.
+The source list for the Content Security Policy directive 'default-src' contains an invalid source: ''unsafe-dynamic''. It will be ignored.
+The Content-Security-Policy directive 'default-src' contains 'report-uri' as a source expression. Did you want to add it as a directive and forget a semicolon?
+The source list for Content Security Policy directive 'default-src' contains a source with an invalid path: '/api/4509669501698048/security/?sentry_key=7eb3d90eb4660416caf507087367e67e'. The query component, including the '?', will be ignored.
+SmartTradeAcademy:1 The source list for the Content Security Policy directive 'default-src' contains an invalid source: ''unsafe-dynamic''. It will be ignored.
+SmartTradeAcademy:1 The Content-Security-Policy directive 'default-src' contains 'report-uri' as a source expression. Did you want to add it as a directive and forget a semicolon?
+SmartTradeAcademy:1 The source list for Content Security Policy directive 'default-src' contains a source with an invalid path: '/api/4509669501698048/security/?sentry_key=7eb3d90eb4660416caf507087367e67e'. The query component, including the '?', will be ignored.
+_app-9bde717bf69fbb0b.js:34 
+      /////////////////////
+   ///////////////////////////
+  ////////@@@@@@@//////////////
+  ////////@@@@@@@//////////////
+  ////////@@@@@@@//////////////        Curious and driven?
+  ///////////////@@@@@@@///////        Work with us!
+  ///////////////@@@@@@@///////
+  ///////////////@@@@@@@///////        https://join.replit.com/hack.with.us
+  ////////@@@@@@@//////////////
+  ////////@@@@@@@//////////////
+  ////////@@@@@@#//////////////
+   ///////////////////////////
+      /////////////////////
+      
+_app-9bde717bf69fbb0b.js:34 [LaunchDarkly] LaunchDarkly client initialized
+framework-948003f217fb3673.js:1 Error while parsing the 'sandbox' attribute: 'allow-downloads-without-user-activation' is an invalid sandbox flag.
+_ @ framework-948003f217fb3673.js:1
+(anonymous) @ framework-948003f217fb3673.js:1
+uD @ framework-948003f217fb3673.js:1
+uI @ framework-948003f217fb3673.js:1
+uM @ framework-948003f217fb3673.js:1
+uS @ framework-948003f217fb3673.js:1
+C @ framework-948003f217fb3673.js:1
+z @ framework-948003f217fb3673.js:1
+framework-948003f217fb3673.js:1 Unrecognized feature: 'ambient-light-sensor'.
+_ @ framework-948003f217fb3673.js:1
+(anonymous) @ framework-948003f217fb3673.js:1
+uD @ framework-948003f217fb3673.js:1
+uI @ framework-948003f217fb3673.js:1
+uM @ framework-948003f217fb3673.js:1
+uS @ framework-948003f217fb3673.js:1
+C @ framework-948003f217fb3673.js:1
+z @ framework-948003f217fb3673.js:1
+framework-948003f217fb3673.js:1 Unrecognized feature: 'battery'.
+_ @ framework-948003f217fb3673.js:1
+(anonymous) @ framework-948003f217fb3673.js:1
+uD @ framework-948003f217fb3673.js:1
+uI @ framework-948003f217fb3673.js:1
+uM @ framework-948003f217fb3673.js:1
+uS @ framework-948003f217fb3673.js:1
+C @ framework-948003f217fb3673.js:1
+z @ framework-948003f217fb3673.js:1
+framework-948003f217fb3673.js:1 Unrecognized feature: 'execution-while-not-rendered'.
+_ @ framework-948003f217fb3673.js:1
+(anonymous) @ framework-948003f217fb3673.js:1
+uD @ framework-948003f217fb3673.js:1
+uI @ framework-948003f217fb3673.js:1
+uM @ framework-948003f217fb3673.js:1
+uS @ framework-948003f217fb3673.js:1
+C @ framework-948003f217fb3673.js:1
+z @ framework-948003f217fb3673.js:1
+framework-948003f217fb3673.js:1 Unrecognized feature: 'execution-while-out-of-viewport'.
+_ @ framework-948003f217fb3673.js:1
+(anonymous) @ framework-948003f217fb3673.js:1
+uD @ framework-948003f217fb3673.js:1
+uI @ framework-948003f217fb3673.js:1
+uM @ framework-948003f217fb3673.js:1
+uS @ framework-948003f217fb3673.js:1
+C @ framework-948003f217fb3673.js:1
+z @ framework-948003f217fb3673.js:1
+framework-948003f217fb3673.js:1 Unrecognized feature: 'layout-animations'.
+_ @ framework-948003f217fb3673.js:1
+(anonymous) @ framework-948003f217fb3673.js:1
+uD @ framework-948003f217fb3673.js:1
+uI @ framework-948003f217fb3673.js:1
+uM @ framework-948003f217fb3673.js:1
+uS @ framework-948003f217fb3673.js:1
+C @ framework-948003f217fb3673.js:1
+z @ framework-948003f217fb3673.js:1
+framework-948003f217fb3673.js:1 Unrecognized feature: 'legacy-image-formats'.
+_ @ framework-948003f217fb3673.js:1
+(anonymous) @ framework-948003f217fb3673.js:1
+uD @ framework-948003f217fb3673.js:1
+uI @ framework-948003f217fb3673.js:1
+uM @ framework-948003f217fb3673.js:1
+uS @ framework-948003f217fb3673.js:1
+C @ framework-948003f217fb3673.js:1
+z @ framework-948003f217fb3673.js:1
+framework-948003f217fb3673.js:1 Unrecognized feature: 'navigation-override'.
+_ @ framework-948003f217fb3673.js:1
+(anonymous) @ framework-948003f217fb3673.js:1
+uD @ framework-948003f217fb3673.js:1
+uI @ framework-948003f217fb3673.js:1
+uM @ framework-948003f217fb3673.js:1
+uS @ framework-948003f217fb3673.js:1
+C @ framework-948003f217fb3673.js:1
+z @ framework-948003f217fb3673.js:1
+framework-948003f217fb3673.js:1 Unrecognized feature: 'oversized-images'.
+_ @ framework-948003f217fb3673.js:1
+(anonymous) @ framework-948003f217fb3673.js:1
+uD @ framework-948003f217fb3673.js:1
+uI @ framework-948003f217fb3673.js:1
+uM @ framework-948003f217fb3673.js:1
+uS @ framework-948003f217fb3673.js:1
+C @ framework-948003f217fb3673.js:1
+z @ framework-948003f217fb3673.js:1
+framework-948003f217fb3673.js:1 Unrecognized feature: 'publickey-credentials'.
+_ @ framework-948003f217fb3673.js:1
+(anonymous) @ framework-948003f217fb3673.js:1
+uD @ framework-948003f217fb3673.js:1
+uI @ framework-948003f217fb3673.js:1
+uM @ framework-948003f217fb3673.js:1
+uS @ framework-948003f217fb3673.js:1
+C @ framework-948003f217fb3673.js:1
+z @ framework-948003f217fb3673.js:1
+framework-948003f217fb3673.js:1 Unrecognized feature: 'speaker-selection'.
+_ @ framework-948003f217fb3673.js:1
+(anonymous) @ framework-948003f217fb3673.js:1
+uD @ framework-948003f217fb3673.js:1
+uI @ framework-948003f217fb3673.js:1
+uM @ framework-948003f217fb3673.js:1
+uS @ framework-948003f217fb3673.js:1
+C @ framework-948003f217fb3673.js:1
+z @ framework-948003f217fb3673.js:1
+framework-948003f217fb3673.js:1 Unrecognized feature: 'unoptimized-images'.
+_ @ framework-948003f217fb3673.js:1
+(anonymous) @ framework-948003f217fb3673.js:1
+uD @ framework-948003f217fb3673.js:1
+uI @ framework-948003f217fb3673.js:1
+uM @ framework-948003f217fb3673.js:1
+uS @ framework-948003f217fb3673.js:1
+C @ framework-948003f217fb3673.js:1
+z @ framework-948003f217fb3673.js:1
+framework-948003f217fb3673.js:1 Unrecognized feature: 'unsized-media'.
+_ @ framework-948003f217fb3673.js:1
+(anonymous) @ framework-948003f217fb3673.js:1
+uD @ framework-948003f217fb3673.js:1
+uI @ framework-948003f217fb3673.js:1
+uM @ framework-948003f217fb3673.js:1
+uS @ framework-948003f217fb3673.js:1
+C @ framework-948003f217fb3673.js:1
+z @ framework-948003f217fb3673.js:1
+framework-948003f217fb3673.js:1 Unrecognized feature: 'pointer-lock'.
+_ @ framework-948003f217fb3673.js:1
+(anonymous) @ framework-948003f217fb3673.js:1
+uD @ framework-948003f217fb3673.js:1
+uI @ framework-948003f217fb3673.js:1
+uM @ framework-948003f217fb3673.js:1
+uS @ framework-948003f217fb3673.js:1
+C @ framework-948003f217fb3673.js:1
+z @ framework-948003f217fb3673.js:1
+framework-948003f217fb3673.js:1 Allow attribute will take precedence over 'allowfullscreen'.
+_ @ framework-948003f217fb3673.js:1
+(anonymous) @ framework-948003f217fb3673.js:1
+uD @ framework-948003f217fb3673.js:1
+uI @ framework-948003f217fb3673.js:1
+uM @ framework-948003f217fb3673.js:1
+uS @ framework-948003f217fb3673.js:1
+C @ framework-948003f217fb3673.js:1
+z @ framework-948003f217fb3673.js:1
+framework-948003f217fb3673.js:1 Allow attribute will take precedence over 'allowpaymentrequest'.
+_ @ framework-948003f217fb3673.js:1
+(anonymous) @ framework-948003f217fb3673.js:1
+uD @ framework-948003f217fb3673.js:1
+uI @ framework-948003f217fb3673.js:1
+uM @ framework-948003f217fb3673.js:1
+uS @ framework-948003f217fb3673.js:1
+C @ framework-948003f217fb3673.js:1
+z @ framework-948003f217fb3673.js:1
+Error while parsing the 'sandbox' attribute: 'allow-downloads-without-user-activation' is an invalid sandbox flag.
+Error while parsing the 'sandbox' attribute: 'allow-downloads-without-user-activation' is an invalid sandbox flag.
+Error while parsing the 'sandbox' attribute: 'allow-downloads-without-user-activation' is an invalid sandbox flag.
+Error while parsing the 'sandbox' attribute: 'allow-downloads-without-user-activation' is an invalid sandbox flag.
+Error while parsing the 'sandbox' attribute: 'allow-downloads-without-user-activation' is an invalid sandbox flag.
+Error while parsing the 'sandbox' attribute: 'allow-downloads-without-user-activation' is an invalid sandbox flag.
+Error while parsing the 'sandbox' attribute: 'allow-downloads-without-user-activation' is an invalid sandbox flag.
+Error while parsing the 'sandbox' attribute: 'allow-downloads-without-user-activation' is an invalid sandbox flag.
+Error while parsing the 'sandbox' attribute: 'allow-downloads-without-user-activation' is an invalid sandbox flag.
+Error while parsing the 'sandbox' attribute: 'allow-downloads-without-user-activation' is an invalid sandbox flag.
+Error while parsing the 'sandbox' attribute: 'allow-downloads-without-user-activation' is an invalid sandbox flag.
+Error while parsing the 'sandbox' attribute: 'allow-downloads-without-user-activation' is an invalid sandbox flag.
+Error while parsing the 'sandbox' attribute: 'allow-downloads-without-user-activation' is an invalid sandbox flag.
+Error while parsing the 'sandbox' attribute: 'allow-downloads-without-user-activation' is an invalid sandbox flag.
+Error while parsing the 'sandbox' attribute: 'allow-downloads-without-user-activation' is an invalid sandbox flag.
+Error while parsing the 'sandbox' attribute: 'allow-downloads-without-user-activation' is an invalid sandbox flag.
+Error while parsing the 'sandbox' attribute: 'allow-downloads-without-user-activation' is an invalid sandbox flag.
+Error while parsing the 'sandbox' attribute: 'allow-downloads-without-user-activation' is an invalid sandbox flag.
+Error while parsing the 'sandbox' attribute: 'allow-downloads-without-user-activation' is an invalid sandbox flag.
+Error while parsing the 'sandbox' attribute: 'allow-downloads-without-user-activation' is an invalid sandbox flag.
+Error while parsing the 'sandbox' attribute: 'allow-downloads-without-user-activation' is an invalid sandbox flag.
+Error while parsing the 'sandbox' attribute: 'allow-downloads-without-user-activation' is an invalid sandbox flag.
+Error while parsing the 'sandbox' attribute: 'allow-downloads-without-user-activation' is an invalid sandbox flag.
+Error while parsing the 'sandbox' attribute: 'allow-downloads-without-user-activation' is an invalid sandbox flag.
+Error while parsing the 'sandbox' attribute: 'allow-downloads-without-user-activation' is an invalid sandbox flag.
+Error while parsing the 'sandbox' attribute: 'allow-downloads-without-user-activation' is an invalid sandbox flag.
+Unrecognized feature: 'ambient-light-sensor'.
+Unrecognized feature: 'ambient-light-sensor'.
+Unrecognized feature: 'ambient-light-sensor'.
+Unrecognized feature: 'ambient-light-sensor'.
+Unrecognized feature: 'ambient-light-sensor'.
+Unrecognized feature: 'ambient-light-sensor'.
+Unrecognized feature: 'ambient-light-sensor'.
+Unrecognized feature: 'ambient-light-sensor'.
+Unrecognized feature: 'ambient-light-sensor'.
+Unrecognized feature: 'ambient-light-sensor'.
+Unrecognized feature: 'battery'.
+Unrecognized feature: 'battery'.
+Unrecognized feature: 'battery'.
+Unrecognized feature: 'battery'.
+Unrecognized feature: 'battery'.
+Unrecognized feature: 'battery'.
+Unrecognized feature: 'battery'.
+Unrecognized feature: 'battery'.
+Unrecognized feature: 'battery'.
+Unrecognized feature: 'battery'.
+Unrecognized feature: 'execution-while-not-rendered'.
+Unrecognized feature: 'execution-while-not-rendered'.
+Unrecognized feature: 'execution-while-not-rendered'.
+Unrecognized feature: 'execution-while-not-rendered'.
+Unrecognized feature: 'execution-while-not-rendered'.
+Unrecognized feature: 'execution-while-not-rendered'.
+Unrecognized feature: 'execution-while-not-rendered'.
+Unrecognized feature: 'execution-while-not-rendered'.
+Unrecognized feature: 'execution-while-not-rendered'.
+Unrecognized feature: 'execution-while-not-rendered'.
+Unrecognized feature: 'execution-while-out-of-viewport'.
+Unrecognized feature: 'execution-while-out-of-viewport'.
+Unrecognized feature: 'execution-while-out-of-viewport'.
+Unrecognized feature: 'execution-while-out-of-viewport'.
+Unrecognized feature: 'execution-while-out-of-viewport'.
+Unrecognized feature: 'execution-while-out-of-viewport'.
+Unrecognized feature: 'execution-while-out-of-viewport'.
+Unrecognized feature: 'execution-while-out-of-viewport'.
+Unrecognized feature: 'execution-while-out-of-viewport'.
+Unrecognized feature: 'execution-while-out-of-viewport'.
+Unrecognized feature: 'layout-animations'.
+Unrecognized feature: 'layout-animations'.
+Unrecognized feature: 'layout-animations'.
+Unrecognized feature: 'layout-animations'.
+Unrecognized feature: 'layout-animations'.
+Unrecognized feature: 'layout-animations'.
+Unrecognized feature: 'layout-animations'.
+Unrecognized feature: 'layout-animations'.
+Unrecognized feature: 'layout-animations'.
+Unrecognized feature: 'layout-animations'.
+Unrecognized feature: 'legacy-image-formats'.
+Unrecognized feature: 'legacy-image-formats'.
+Unrecognized feature: 'legacy-image-formats'.
+Unrecognized feature: 'legacy-image-formats'.
+Unrecognized feature: 'legacy-image-formats'.
+Unrecognized feature: 'legacy-image-formats'.
+Unrecognized feature: 'legacy-image-formats'.
+Unrecognized feature: 'legacy-image-formats'.
+Unrecognized feature: 'legacy-image-formats'.
+Unrecognized feature: 'legacy-image-formats'.
+Unrecognized feature: 'navigation-override'.
+Unrecognized feature: 'navigation-override'.
+Unrecognized feature: 'navigation-override'.
+Unrecognized feature: 'navigation-override'.
+Unrecognized feature: 'navigation-override'.
+Unrecognized feature: 'navigation-override'.
+Unrecognized feature: 'navigation-override'.
+Unrecognized feature: 'navigation-override'.
+Unrecognized feature: 'navigation-override'.
+Unrecognized feature: 'navigation-override'.
+Unrecognized feature: 'oversized-images'.
+Unrecognized feature: 'oversized-images'.
+Unrecognized feature: 'oversized-images'.
+Unrecognized feature: 'oversized-images'.
+Unrecognized feature: 'oversized-images'.
+Unrecognized feature: 'oversized-images'.
+Unrecognized feature: 'oversized-images'.
+Unrecognized feature: 'oversized-images'.
+Unrecognized feature: 'oversized-images'.
+Unrecognized feature: 'oversized-images'.
+Unrecognized feature: 'publickey-credentials'.
+Unrecognized feature: 'publickey-credentials'.
+Unrecognized feature: 'publickey-credentials'.
+Unrecognized feature: 'publickey-credentials'.
+Unrecognized feature: 'publickey-credentials'.
+Unrecognized feature: 'publickey-credentials'.
+Unrecognized feature: 'publickey-credentials'.
+Unrecognized feature: 'publickey-credentials'.
+Unrecognized feature: 'publickey-credentials'.
+Unrecognized feature: 'publickey-credentials'.
+Unrecognized feature: 'speaker-selection'.
+Unrecognized feature: 'speaker-selection'.
+Unrecognized feature: 'speaker-selection'.
+Unrecognized feature: 'speaker-selection'.
+Unrecognized feature: 'speaker-selection'.
+Unrecognized feature: 'speaker-selection'.
+Unrecognized feature: 'speaker-selection'.
+Unrecognized feature: 'speaker-selection'.
+Unrecognized feature: 'speaker-selection'.
+Unrecognized feature: 'speaker-selection'.
+Unrecognized feature: 'unoptimized-images'.
+Unrecognized feature: 'unoptimized-images'.
+Unrecognized feature: 'unoptimized-images'.
+Unrecognized feature: 'unoptimized-images'.
+Unrecognized feature: 'unoptimized-images'.
+Unrecognized feature: 'unoptimized-images'.
+Unrecognized feature: 'unoptimized-images'.
+Unrecognized feature: 'unoptimized-images'.
+Unrecognized feature: 'unoptimized-images'.
+Unrecognized feature: 'unoptimized-images'.
+Unrecognized feature: 'unsized-media'.
+Unrecognized feature: 'unsized-media'.
+Unrecognized feature: 'unsized-media'.
+Unrecognized feature: 'unsized-media'.
+Unrecognized feature: 'unsized-media'.
+Unrecognized feature: 'unsized-media'.
+Unrecognized feature: 'unsized-media'.
+Unrecognized feature: 'unsized-media'.
+Unrecognized feature: 'unsized-media'.
+Unrecognized feature: 'unsized-media'.
+Allow attribute will take precedence over 'allowfullscreen'.
+Allow attribute will take precedence over 'allowfullscreen'.
+Allow attribute will take precedence over 'allowfullscreen'.
+Allow attribute will take precedence over 'allowfullscreen'.
+Allow attribute will take precedence over 'allowfullscreen'.
+Allow attribute will take precedence over 'allowfullscreen'.
+Allow attribute will take precedence over 'allowfullscreen'.
+Allow attribute will take precedence over 'allowfullscreen'.
+Allow attribute will take precedence over 'allowfullscreen'.
+Allow attribute will take precedence over 'allowfullscreen'.
+Allow attribute will take precedence over 'allowpaymentrequest'.
+Allow attribute will take precedence over 'allowpaymentrequest'.
+Allow attribute will take precedence over 'allowpaymentrequest'.
+Allow attribute will take precedence over 'allowpaymentrequest'.
+Allow attribute will take precedence over 'allowpaymentrequest'.
+Allow attribute will take precedence over 'allowpaymentrequest'.
+Allow attribute will take precedence over 'allowpaymentrequest'.
+Allow attribute will take precedence over 'allowpaymentrequest'.
+Allow attribute will take precedence over 'allowpaymentrequest'.
+Allow attribute will take precedence over 'allowpaymentrequest'.
+SmartTradeAcademy:1 Banner not shown: beforeinstallpromptevent.preventDefault() called. The page must call beforeinstallpromptevent.prompt() to show the banner.
+eruda.js:2 📋 STC Trading Dashboard script cargado
+eruda.js:2 🌐 DOM cargado, iniciando aplicación...
+eruda.js:2 🚀 STC Trading System - gráficos automáticos activos
+eruda.js:2 🚀 Iniciando STC Chart Manager...
+eruda.js:2 ✅ STC Chart Manager - usando STCChartFix automático
+eruda.js:2 🚀 Iniciando STC Trading Dashboard...
+eruda.js:2 ✅ Gráfico inicializado correctamente
+eruda.js:2 🎛️ Event handlers configurados
+eruda.js:2 🔄 Auto-update iniciado
+eruda.js:2 ✅ Dashboard inicializado
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 🔔 Señal de COMPRA detectada (AUDIO SILENCIADO): {confidence: 0.5, direction: 'CALL', gale_level: 0, is_gale: false, pattern: 'Alcista', …}
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+framework-948003f217fb3673.js:1 Error while parsing the 'sandbox' attribute: 'allow-downloads-without-user-activation' is an invalid sandbox flag.
+_ @ framework-948003f217fb3673.js:1
+(anonymous) @ framework-948003f217fb3673.js:1
+uD @ framework-948003f217fb3673.js:1
+uI @ framework-948003f217fb3673.js:1
+uM @ framework-948003f217fb3673.js:1
+uS @ framework-948003f217fb3673.js:1
+C @ framework-948003f217fb3673.js:1
+z @ framework-948003f217fb3673.js:1
+VM713 eruda.js:2 📋 STC Trading Dashboard script cargado
+VM713 eruda.js:2 🌐 DOM cargado, iniciando aplicación...
+VM713 eruda.js:2 🚀 STC Trading System - gráficos automáticos activos
+VM713 eruda.js:2 🚀 Iniciando STC Chart Manager...
+VM713 eruda.js:2 ✅ STC Chart Manager - usando STCChartFix automático
+VM713 eruda.js:2 🚀 Iniciando STC Trading Dashboard...
+VM713 eruda.js:2 ✅ Gráfico inicializado correctamente
+VM713 eruda.js:2 🎛️ Event handlers configurados
+VM713 eruda.js:2 🔄 Auto-update iniciado
+VM713 eruda.js:2 ✅ Dashboard inicializado
+VM713 eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+VM713 eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+VM713 eruda.js:2 🔔 Señal de COMPRA detectada (AUDIO SILENCIADO): {confidence: 0.51, direction: 'CALL', gale_level: 2, is_gale: true, pattern: 'Alcista', …}
+VM713 eruda.js:2 ✅ 50 señales agregadas al gráfico
+VM713 eruda.js:2 ✅ 50 señales Tablero cargadas
+VM713 eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+VM713 eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+VM713 eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+VM713 eruda.js:2 ✅ 50 señales agregadas al gráfico
+VM713 eruda.js:2 ✅ 50 señales Tablero cargadas
+VM713 eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+VM713 eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+VM713 eruda.js:2 ✅ 50 señales agregadas al gráfico
+VM713 eruda.js:2 ✅ 50 señales Tablero cargadas
+VM713 eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+VM713 eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+VM713 eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+VM713 eruda.js:2 ✅ 50 señales agregadas al gráfico
+VM713 eruda.js:2 ✅ 50 señales Tablero cargadas
+VM713 eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+VM713 eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+VM713 eruda.js:2 ✅ 50 señales agregadas al gráfico
+VM713 eruda.js:2 ✅ 50 señales Tablero cargadas
+VM713 eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+VM713 eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+VM713 eruda.js:2 ✅ 50 señales agregadas al gráfico
+VM713 eruda.js:2 ✅ 50 señales Tablero cargadas
+VM713 eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+VM713 eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+VM713 eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+VM713 eruda.js:2 ✅ 50 señales agregadas al gráfico
+VM713 eruda.js:2 ✅ 50 señales Tablero cargadas
+VM713 eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+VM713 eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+VM713 eruda.js:2 ✅ 50 señales agregadas al gráfico
+VM713 eruda.js:2 ✅ 50 señales Tablero cargadas
+VM713 eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+VM713 eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+VM713 eruda.js:2 ✅ 50 señales agregadas al gráfico
+VM713 eruda.js:2 ✅ 50 señales Tablero cargadas
+VM713 eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+VM713 eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+VM713 eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+VM713 eruda.js:2 ✅ 50 señales agregadas al gráfico
+VM713 eruda.js:2 ✅ 50 señales Tablero cargadas
+VM713 eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+VM713 eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+VM713 eruda.js:2 ✅ 50 señales agregadas al gráfico
+VM713 eruda.js:2 ✅ 50 señales Tablero cargadas
+VM713 eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+VM713 eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+VM713 eruda.js:2 ✅ 50 señales agregadas al gráfico
+VM713 eruda.js:2 ✅ 50 señales Tablero cargadas
+VM713 eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+VM713 eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+VM713 eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+VM713 eruda.js:2 ✅ 50 señales agregadas al gráfico
+VM713 eruda.js:2 ✅ 50 señales Tablero cargadas
+VM713 eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+VM713 eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+VM713 eruda.js:2 ✅ 50 señales agregadas al gráfico
+VM713 eruda.js:2 ✅ 50 señales Tablero cargadas
+VM713 eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+VM713 eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+VM713 eruda.js:2 ✅ 50 señales agregadas al gráfico
+VM713 eruda.js:2 ✅ 50 señales Tablero cargadas
+VM713 eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+VM713 eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+VM713 eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+VM713 eruda.js:2 ✅ 50 señales agregadas al gráfico
+VM713 eruda.js:2 ✅ 50 señales Tablero cargadas
+VM713 eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+VM713 eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+VM713 eruda.js:2 ✅ 50 señales agregadas al gráfico
+VM713 eruda.js:2 ✅ 50 señales Tablero cargadas
+VM713 eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+VM713 eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+VM713 eruda.js:2 ✅ 50 señales agregadas al gráfico
+VM713 eruda.js:2 ✅ 50 señales Tablero cargadas
+VM713 eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+VM713 eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+VM713 eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+VM713 eruda.js:2 ✅ 50 señales agregadas al gráfico
+VM713 eruda.js:2 ✅ 50 señales Tablero cargadas
+VM850 eruda.js:2 📋 STC Trading Dashboard script cargado
+VM850 eruda.js:2 🌐 DOM cargado, iniciando aplicación...
+VM850 eruda.js:2 🚀 STC Trading System - gráficos automáticos activos
+VM850 eruda.js:2 🚀 Iniciando STC Chart Manager...
+VM850 eruda.js:2 ✅ STC Chart Manager - usando STCChartFix automático
+VM850 eruda.js:2 🚀 Iniciando STC Trading Dashboard...
+VM850 eruda.js:2 ✅ Gráfico inicializado correctamente
+VM850 eruda.js:2 🎛️ Event handlers configurados
+VM850 eruda.js:2 🔄 Auto-update iniciado
+VM850 eruda.js:2 ✅ Dashboard inicializado
+VM850 eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+VM850 eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+VM850 eruda.js:2 🔔 Señal de COMPRA detectada (AUDIO SILENCIADO): {confidence: 0.51, direction: 'CALL', gale_level: 2, is_gale: true, pattern: 'Alcista', …}
+VM850 eruda.js:2 ✅ 50 señales agregadas al gráfico
+VM850 eruda.js:2 ✅ 50 señales Tablero cargadas
+VM850 eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+VM850 eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+VM850 eruda.js:2 ✅ 50 señales agregadas al gráfico
+VM850 eruda.js:2 ✅ 50 señales Tablero cargadas
+VM850 eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+VM850 eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+VM850 eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+VM850 eruda.js:2 ✅ 50 señales agregadas al gráfico
+VM850 eruda.js:2 ✅ 50 señales Tablero cargadas
+VM850 eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+VM850 eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+VM850 eruda.js:2 ✅ 50 señales agregadas al gráfico
+VM850 eruda.js:2 ✅ 50 señales Tablero cargadas
+VM850 eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+VM850 eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+VM850 eruda.js:2 ✅ 50 señales agregadas al gráfico
+VM850 eruda.js:2 ✅ 50 señales Tablero cargadas
+VM850 eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+VM850 eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+VM850 eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+VM850 eruda.js:2 ✅ 50 señales agregadas al gráfico
+VM850 eruda.js:2 ✅ 50 señales Tablero cargadas
+VM850 eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+VM850 eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+VM850 eruda.js:2 ✅ 50 señales agregadas al gráfico
+VM850 eruda.js:2 ✅ 50 señales Tablero cargadas
+VM850 eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+VM850 eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+VM850 eruda.js:2 ✅ 50 señales agregadas al gráfico
+VM850 eruda.js:2 ✅ 50 señales Tablero cargadas
+VM850 eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+VM850 eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+VM850 eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+VM850 eruda.js:2 ✅ 50 señales agregadas al gráfico
+VM850 eruda.js:2 ✅ 50 señales Tablero cargadas
+VM850 eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+VM850 eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+VM850 eruda.js:2 ✅ 50 señales agregadas al gráfico
+VM850 eruda.js:2 ✅ 50 señales Tablero cargadas
+VM850 eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+VM850 eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+VM850 eruda.js:2 ✅ 50 señales agregadas al gráfico
+VM850 eruda.js:2 ✅ 50 señales Tablero cargadas
+VM850 eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+VM850 eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+VM850 eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+VM850 eruda.js:2 ✅ 50 señales agregadas al gráfico
+VM850 eruda.js:2 ✅ 50 señales Tablero cargadas
+VM850 eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+VM850 eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+VM850 eruda.js:2 ✅ 50 señales agregadas al gráfico
+VM850 eruda.js:2 ✅ 50 señales Tablero cargadas
+VM850 eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+VM850 eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+VM850 eruda.js:2 ✅ 50 señales agregadas al gráfico
+VM850 eruda.js:2 ✅ 50 señales Tablero cargadas
+VM850 eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+VM850 eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+VM850 eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+VM850 eruda.js:2 ✅ 50 señales agregadas al gráfico
+VM850 eruda.js:2 ✅ 50 señales Tablero cargadas
+VM850 eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+VM850 eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+VM850 eruda.js:2 ✅ 50 señales agregadas al gráfico
+VM850 eruda.js:2 ✅ 50 señales Tablero cargadas
+VM850 eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+VM850 eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+VM850 eruda.js:2 ✅ 50 señales agregadas al gráfico
+VM850 eruda.js:2 ✅ 50 señales Tablero cargadas
+VM850 eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+VM850 eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+VM850 eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+VM850 eruda.js:2 ✅ 50 señales agregadas al gráfico
+VM850 eruda.js:2 ✅ 50 señales Tablero cargadas
+VM850 eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+VM850 eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+VM850 eruda.js:2 ✅ 50 señales agregadas al gráfico
+VM850 eruda.js:2 ✅ 50 señales Tablero cargadas
+VM850 eruda.js:2  GET https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/server_time 502 (Bad Gateway)
+window.fetch @ VM850 eruda.js:2
+apply @ VM851 injected.js:278
+updateCandleCountdowns @ VM870 dashboard:250
+(anonymous) @ VM870 dashboard:235
+setInterval
+initCandleCountdown @ VM870 dashboard:233
+init @ VM870 dashboard:150
+ChartManager @ VM870 dashboard:63
+initApp @ VM870 dashboard:567
+setTimeout
+(anonymous) @ VM870 dashboard:1069
+framework-948003f217fb3673.js:1 Error while parsing the 'sandbox' attribute: 'allow-downloads-without-user-activation' is an invalid sandbox flag.
+_ @ framework-948003f217fb3673.js:1
+(anonymous) @ framework-948003f217fb3673.js:1
+uD @ framework-948003f217fb3673.js:1
+uI @ framework-948003f217fb3673.js:1
+uM @ framework-948003f217fb3673.js:1
+uS @ framework-948003f217fb3673.js:1
+C @ framework-948003f217fb3673.js:1
+z @ framework-948003f217fb3673.js:1
+VM969 eruda.js:2 📋 STC Trading Dashboard script cargado
+VM969 eruda.js:2 🌐 DOM cargado, iniciando aplicación...
+VM969 eruda.js:2 🚀 STC Trading System - gráficos automáticos activos
+VM969 eruda.js:2 🚀 Iniciando STC Chart Manager...
+VM969 eruda.js:2 ✅ STC Chart Manager - usando STCChartFix automático
+VM969 eruda.js:2 🚀 Iniciando STC Trading Dashboard...
+VM969 eruda.js:2 ✅ Gráfico inicializado correctamente
+VM969 eruda.js:2 🎛️ Event handlers configurados
+VM969 eruda.js:2 🔄 Auto-update iniciado
+VM969 eruda.js:2 ✅ Dashboard inicializado
+VM969 eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+VM969 eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+VM969 eruda.js:2 🔔 Señal de COMPRA detectada (AUDIO SILENCIADO): {confidence: 0.52, direction: 'CALL', gale_level: 0, is_gale: false, pattern: 'Alcista', …}
+VM969 eruda.js:2 ✅ 50 señales agregadas al gráfico
+VM969 eruda.js:2 ✅ 50 señales Tablero cargadas
+VM969 eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+VM969 eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+VM969 eruda.js:2 ✅ 50 señales agregadas al gráfico
+VM969 eruda.js:2 ✅ 50 señales Tablero cargadas
+VM969 eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+VM969 eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+VM969 eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+VM969 eruda.js:2 ✅ 50 señales agregadas al gráfico
+VM969 eruda.js:2 ✅ 50 señales Tablero cargadas
+VM969 eruda.js:2  POST https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/login 502 (Bad Gateway)
+window.fetch @ VM969 eruda.js:2
+apply @ VM971 injected.js:278
+loginIQ @ VM991 dashboard:23
+(anonymous) @ VM989 dashboard:985
+d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/__replco/static/devtools/eruda/3.2.3/eruda.js:2 SyntaxError: Failed to execute 'json' on 'Response': Unexpected token '<', "<!DOCTYPE "... is not valid JSON
+    at loginIQ (d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/dashboard:1695:33)
+    at async HTMLButtonElement.<anonymous> (d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/dashboard:1489:9)
+Mt.forEach.n.<computed> @ d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/__replco/static/devtools/eruda/3.2.3/eruda.js:2
+loginIQ @ d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/dashboard:1712
+await in loginIQ
+(anonymous) @ d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/dashboard:1489
+d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/__replco/static/devtools/eruda/3.2.3/eruda.js:2 Error actualizando balance: TypeError: Failed to fetch
+    at window.fetch (d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/__replco/static/devtools/eruda/3.2.3/eruda.js:2:218642)
+    at Object.apply (d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/__replco/static/devtools/injected.js:278:39)
+    at updateRealBalance (d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/dashboard:1596:5)
+Mt.forEach.n.<computed> @ d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/__replco/static/devtools/eruda/3.2.3/eruda.js:2
+(anonymous) @ d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/dashboard:1613
+Promise.catch
+updateRealBalance @ d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/dashboard:1613
+setInterval
+(anonymous) @ d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/dashboard:1591
+framework-948003f217fb3673.js:1 Error while parsing the 'sandbox' attribute: 'allow-downloads-without-user-activation' is an invalid sandbox flag.
+_ @ framework-948003f217fb3673.js:1
+(anonymous) @ framework-948003f217fb3673.js:1
+uD @ framework-948003f217fb3673.js:1
+uI @ framework-948003f217fb3673.js:1
+uM @ framework-948003f217fb3673.js:1
+uS @ framework-948003f217fb3673.js:1
+C @ framework-948003f217fb3673.js:1
+z @ framework-948003f217fb3673.js:1
+Console.js:61 📋 STC Trading Dashboard script cargado
+Console.js:61 🌐 DOM cargado, iniciando aplicación...
+Console.js:61 🚀 STC Trading System - gráficos automáticos activos
+Console.js:61 🚀 Iniciando STC Chart Manager...
+Console.js:61 ✅ STC Chart Manager - usando STCChartFix automático
+Console.js:61 🚀 Iniciando STC Trading Dashboard...
+Console.js:61 ✅ Gráfico inicializado correctamente
+Console.js:61 🎛️ Event handlers configurados
+Console.js:61 🔄 Auto-update iniciado
+Console.js:61 ✅ Dashboard inicializado
+Console.js:61 📊 Cargando velas para EURUSD-OTC (M5)...
+Console.js:61 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+Console.js:61 🔔 Señal de COMPRA detectada (AUDIO SILENCIADO): {confidence: 0.5, direction: 'CALL', gale_level: 0, is_gale: false, pattern: 'Alcista', …}
+Console.js:61 ✅ 50 señales agregadas al gráfico
+Console.js:61 ✅ 50 señales Tablero cargadas
+Console.js:61 📊 Cargando velas para EURUSD-OTC (M5)...
+Console.js:61 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+Console.js:61 ✅ 50 señales agregadas al gráfico
+Console.js:61 ✅ 50 señales Tablero cargadas
+Console.js:61 💰 Balance: $0.00 (PRACTICE)
+Console.js:61 📊 Cargando velas para EURUSD-OTC (M5)...
+Console.js:61 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+Console.js:61 ✅ 50 señales agregadas al gráfico
+Console.js:61 ✅ 50 señales Tablero cargadas
+Console.js:61 📊 Cargando velas para EURUSD-OTC (M5)...
+Console.js:61 💰 Balance: $0.00 (PRACTICE)
+Console.js:61 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+Console.js:61 ✅ 50 señales agregadas al gráfico
+Console.js:61 ✅ 50 señales Tablero cargadas
+Console.js:61 📊 Cargando velas para EURUSD-OTC (M5)...
+Console.js:61 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+Console.js:61 ✅ 50 señales agregadas al gráfico
+Console.js:61 ✅ 50 señales Tablero cargadas
+Console.js:61 📊 Cargando velas para EURUSD-OTC (M5)...
+Console.js:61 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+Console.js:61 ✅ 50 señales agregadas al gráfico
+Console.js:61 ✅ 50 señales Tablero cargadas
+Console.js:61 📊 Cargando velas para EURUSD-OTC (M5)...
+Console.js:61 💰 Balance: $0.00 (PRACTICE)
+Console.js:61 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+Console.js:61 ✅ 50 señales agregadas al gráfico
+Console.js:61 ✅ 50 señales Tablero cargadas
+Console.js:61 📊 Cargando velas para EURUSD-OTC (M5)...
+Console.js:61 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+Console.js:61 ✅ 50 señales agregadas al gráfico
+Console.js:61 ✅ 50 señales Tablero cargadas
+Console.js:61 📊 Cargando velas para EURUSD-OTC (M5)...
+Console.js:61 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+Console.js:61 ✅ 50 señales agregadas al gráfico
+Console.js:61 ✅ 50 señales Tablero cargadas
+Console.js:61 📊 Cargando velas para EURUSD-OTC (M5)...
+Console.js:61 💰 Balance: $0.00 (PRACTICE)
+Console.js:61 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+Console.js:61 ✅ 50 señales agregadas al gráfico
+Console.js:61 ✅ 50 señales Tablero cargadas
+Console.js:61 📊 Cargando velas para EURUSD-OTC (M5)...
+Console.js:61 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+Console.js:61 ✅ 50 señales agregadas al gráfico
+Console.js:61 ✅ 50 señales Tablero cargadas
+Console.js:61 💰 Balance: $0.00 (PRACTICE)
+Console.js:61 📊 Cargando velas para EURUSD-OTC (M5)...
+Console.js:61 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+Console.js:61 ✅ 50 señales agregadas al gráfico
+Console.js:61 ✅ 50 señales Tablero cargadas
+Console.js:61 📊 Cargando velas para EURUSD-OTC (M5)...
+Console.js:61 💰 Balance: $0.00 (PRACTICE)
+Console.js:61 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+Console.js:61 ✅ 50 señales agregadas al gráfico
+Console.js:61 ✅ 50 señales Tablero cargadas
+Console.js:61 ✅ Cargados 12 pares OTC y 10 pares REAL
+Console.js:61 📊 Cargando velas para EURUSD-OTC (M5)...
+Console.js:61 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+Console.js:61 ✅ 50 señales agregadas al gráfico
+Console.js:61 ✅ 50 señales Tablero cargadas
+Console.js:61 📊 Cargando velas para GBPUSD-OTC (M5)...
+Console.js:61 🎯 Cargando señales Tablero para GBPUSD-OTC (M5)...
+Console.js:61 🔔 Señal de VENTA detectada (AUDIO SILENCIADO): {confidence: 0.55, direction: 'PUT', gale_level: 1, is_gale: true, pattern: 'Bajista', …}
+Console.js:61 ✅ 50 señales agregadas al gráfico
+Console.js:61 ✅ 50 señales Tablero cargadas
+Console.js:61 📊 Cargando velas para GBPUSD-OTC (M5)...
+Console.js:61 🎯 Cargando señales Tablero para GBPUSD-OTC (M5)...
+Console.js:61 ✅ 50 señales agregadas al gráfico
+Console.js:61 ✅ 50 señales Tablero cargadas
+Console.js:61 ✅ Cargados 12 pares OTC y 10 pares REAL
+Console.js:61 📊 Cargando velas para GBPUSD-OTC (M5)...
+Console.js:61 💰 Balance: $0.00 (PRACTICE)
+Console.js:61 🎯 Cargando señales Tablero para GBPUSD-OTC (M5)...
+Console.js:61 ✅ 50 señales agregadas al gráfico
+Console.js:61 ✅ 50 señales Tablero cargadas
+Console.js:61 📊 Cargando velas para EURUSD (M5)...
+Console.js:61 🎯 Cargando señales Tablero para EURUSD (M5)...
+Console.js:61 ✅ 23 señales agregadas al gráfico
+Console.js:61 ✅ 23 señales Tablero cargadas
+Console.js:61 📊 Cargando velas para EURUSD (M5)...
+Console.js:61 🎯 Cargando señales Tablero para EURUSD (M5)...
+Console.js:61 ✅ 23 señales agregadas al gráfico
+Console.js:61 ✅ 23 señales Tablero cargadas
+Console.js:61 ✅ Cargados 12 pares OTC y 10 pares REAL
+Console.js:61 📊 Cargando velas para EURUSD (M5)...
+Console.js:61 🎯 Cargando señales Tablero para EURUSD (M5)...
+Console.js:61 ✅ 23 señales agregadas al gráfico
+Console.js:61 ✅ 23 señales Tablero cargadas
+Console.js:61 📊 Cargando velas para EURUSD (M5)...
+Console.js:61 💰 Balance: $0.00 (PRACTICE)
+Console.js:61 🎯 Cargando señales Tablero para EURUSD (M5)...
+Console.js:61 ✅ 23 señales agregadas al gráfico
+Console.js:61 ✅ 23 señales Tablero cargadas
+Console.js:61 📊 Cargando velas para USDJPY-OTC (M5)...
+Console.js:61 🎯 Cargando señales Tablero para USDJPY-OTC (M5)...
+Console.js:61 ✅ 50 señales agregadas al gráfico
+Console.js:61 ✅ 50 señales Tablero cargadas
+Console.js:61 📊 Cargando velas para USDJPY-OTC (M5)...
+Console.js:61 🎯 Cargando señales Tablero para USDJPY-OTC (M5)...
+Console.js:61 ✅ 50 señales agregadas al gráfico
+Console.js:61 ✅ 50 señales Tablero cargadas
+Console.js:61 ✅ Cargados 12 pares OTC y 10 pares REAL
+Console.js:61 📊 Cargando velas para EURJPY-OTC (M5)...
+Console.js:61 🎯 Cargando señales Tablero para EURJPY-OTC (M5)...
+Console.js:61 ✅ 50 señales agregadas al gráfico
+Console.js:61 ✅ 50 señales Tablero cargadas
+Console.js:61 📊 Cargando velas para EURJPY-OTC (M5)...
+Console.js:61 🎯 Cargando señales Tablero para EURJPY-OTC (M5)...
+Console.js:61 ✅ 50 señales agregadas al gráfico
+Console.js:61 ✅ 50 señales Tablero cargadas
+Console.js:61 📊 Cargando velas para EURJPY-OTC (M5)...
+Console.js:61 💰 Balance: $0.00 (PRACTICE)
+Console.js:61 🎯 Cargando señales Tablero para EURJPY-OTC (M5)...
+Console.js:61 ✅ 50 señales agregadas al gráfico
+Console.js:61 ✅ 50 señales Tablero cargadas
+Console.js:61 📊 Cargando velas para EURJPY-OTC (M5)...
+Console.js:61 🎯 Cargando señales Tablero para EURJPY-OTC (M5)...
+Console.js:61 ✅ 50 señales agregadas al gráfico
+Console.js:61 ✅ 50 señales Tablero cargadas
+Console.js:61 ✅ Cargados 12 pares OTC y 10 pares REAL
+Console.js:61 📊 Cargando velas para EURUSD-OTC (M5)...
+Console.js:61 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+Console.js:61 ✅ 50 señales agregadas al gráfico
+Console.js:61 ✅ 50 señales Tablero cargadas
+Console.js:61 📊 Cargando velas para EURUSD-OTC (M5)...
+Console.js:61 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+Console.js:61 ✅ 50 señales agregadas al gráfico
+Console.js:61 ✅ 50 señales Tablero cargadas
+Console.js:61 📊 Cargando velas para EURUSD-OTC (M5)...
+Console.js:61 💰 Balance: $0.00 (PRACTICE)
+Console.js:61 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+Console.js:61 💰 Balance: $0.00 (PRACTICE)
+Console.js:61 ✅ 50 señales agregadas al gráfico
+Console.js:61 ✅ 50 señales Tablero cargadas
+Console.js:61 💰 Balance: $0.00 (PRACTICE)
+Console.js:61 📊 Cargando velas para EURUSD-OTC (M5)...
+Console.js:61 🆕 Nueva vela detectada en 4:45:00 p.m.
+Console.js:61 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+Console.js:61 🔔 Señal de COMPRA detectada (AUDIO SILENCIADO): {confidence: 0.52, direction: 'CALL', gale_level: 0, is_gale: false, pattern: 'Alcista', …}
+Console.js:61 ✅ 50 señales agregadas al gráfico
+Console.js:61 ✅ 50 señales Tablero cargadas
+Console.js:61 💰 Balance: $0.00 (PRACTICE)
+Console.js:61 📊 Cargando velas para EURUSD-OTC (M5)...
+Console.js:61 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+Console.js:61 ✅ 50 señales agregadas al gráfico
+Console.js:61 ✅ 50 señales Tablero cargadas
+Console.js:61 📊 Cargando velas para EURUSD-OTC (M5)...
+Console.js:61 💰 Balance: $0.00 (PRACTICE)
+Console.js:61 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+Console.js:61 ✅ 50 señales agregadas al gráfico
+Console.js:61 ✅ 50 señales Tablero cargadas
+Console.js:61 📊 Cargando velas para EURUSD-OTC (M5)...
+Console.js:61 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+Console.js:61 ✅ 50 señales agregadas al gráfico
+Console.js:61 ✅ 50 señales Tablero cargadas
+Console.js:61 📊 Cargando velas para EURUSD-OTC (M5)...
+Console.js:61 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+Console.js:61 ✅ 50 señales agregadas al gráfico
+Console.js:61 ✅ 50 señales Tablero cargadas
+Console.js:61 📊 Cargando velas para EURUSD-OTC (M5)...
+Console.js:61 💰 Balance: $0.00 (PRACTICE)
+Console.js:61 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+Console.js:61 ✅ 50 señales agregadas al gráfico
+Console.js:61 ✅ 50 señales Tablero cargadas
+Console.js:61 📊 Cargando velas para EURUSD-OTC (M5)...
+Console.js:61 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+Console.js:61 ✅ 50 señales agregadas al gráfico
+Console.js:61 ✅ 50 señales Tablero cargadas
+Console.js:61 📊 Cargando velas para EURUSD-OTC (M5)...
+Console.js:61 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+Console.js:61 ✅ 50 señales agregadas al gráfico
+Console.js:61 ✅ 50 señales Tablero cargadas
+Console.js:61 ✅ Cargados 12 pares OTC y 10 pares REAL
+Console.js:61 📊 Cargando velas para EURUSD-OTC (M5)...
+Console.js:61 💰 Balance: $0.00 (PRACTICE)
+Console.js:61 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+Console.js:61 ✅ 50 señales agregadas al gráfico
+Console.js:61 ✅ 50 señales Tablero cargadas
+Console.js:61 📊 Cargando velas para EURUSD-OTC (M5)...
+Console.js:61 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+Console.js:61 ✅ 50 señales agregadas al gráfico
+Console.js:61 ✅ 50 señales Tablero cargadas
+Console.js:61 📊 Cargando velas para EURUSD-OTC (M5)...
+Console.js:61 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+Console.js:61 ✅ 50 señales agregadas al gráfico
+Console.js:61 ✅ 50 señales Tablero cargadas
+Console.js:61 📊 Cargando velas para EURUSD-OTC (M5)...
+Console.js:61 💰 Balance: $0.00 (PRACTICE)
+Console.js:61 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+Console.js:61 ✅ 50 señales agregadas al gráfico
+Console.js:61 ✅ 50 señales Tablero cargadas
+Console.js:61 📊 Cargando velas para EURUSD-OTC (M5)...
+Console.js:61 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+Console.js:61 ✅ 50 señales agregadas al gráfico
+Console.js:61 ✅ 50 señales Tablero cargadas
+Console.js:61 💰 Balance: $0.00 (PRACTICE)
+Console.js:61 📊 Cargando velas para EURUSD-OTC (M5)...
+Console.js:61 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+Console.js:61 ✅ 50 señales agregadas al gráfico
+Console.js:61 ✅ 50 señales Tablero cargadas
+Console.js:61 📊 Cargando velas para EURUSD-OTC (M5)...
+Console.js:61 💰 Balance: $0.00 (PRACTICE)
+Console.js:61 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+Console.js:61 ✅ 50 señales agregadas al gráfico
+Console.js:61 ✅ 50 señales Tablero cargadas
+Console.js:61 📊 Cargando velas para EURUSD-OTC (M5)...
+Console.js:61 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+Console.js:61 ✅ 50 señales agregadas al gráfico
+Console.js:61 ✅ 50 señales Tablero cargadas
+Console.js:61 💰 Balance: $0.00 (PRACTICE)
+Console.js:61 📊 Cargando velas para EURUSD-OTC (M5)...
+Console.js:61 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+Console.js:61 ✅ 50 señales agregadas al gráfico
+Console.js:61 ✅ 50 señales Tablero cargadas
+Console.js:61 📊 Cargando velas para EURUSD-OTC (M5)...
+Console.js:61 💰 Balance: $0.00 (PRACTICE)
+Console.js:61 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+Console.js:61 ✅ 50 señales agregadas al gráfico
+Console.js:61 ✅ 50 señales Tablero cargadas
+Console.js:61 ✅ Cargados 12 pares OTC y 10 pares REAL
+Console.js:61 📊 Cargando velas para EURJPY-OTC (M5)...
+Console.js:61 🎯 Cargando señales Tablero para EURJPY-OTC (M5)...
+Console.js:61 ✅ 50 señales agregadas al gráfico
+Console.js:61 ✅ 50 señales Tablero cargadas
+Console.js:61 📊 Cargando velas para EURJPY-OTC (M5)...
+Console.js:61 🎯 Cargando señales Tablero para EURJPY-OTC (M5)...
+Console.js:61 ✅ 50 señales agregadas al gráfico
+Console.js:61 ✅ 50 señales Tablero cargadas
+Console.js:61 📊 Cargando velas para EURJPY-OTC (M5)...
+Console.js:61 🎯 Cargando señales Tablero para EURJPY-OTC (M5)...
+Console.js:61 ✅ 50 señales agregadas al gráfico
+Console.js:61 ✅ 50 señales Tablero cargadas
+Console.js:61 📊 Cargando velas para EURJPY-OTC (M5)...
+Console.js:61 💰 Balance: $0.00 (PRACTICE)
+Console.js:61 🎯 Cargando señales Tablero para EURJPY-OTC (M5)...
+Console.js:61 ✅ 50 señales agregadas al gráfico
+Console.js:61 ✅ 50 señales Tablero cargadas
+Console.js:61 📊 Cargando velas para EURJPY-OTC (M5)...
+Console.js:61 🎯 Cargando señales Tablero para EURJPY-OTC (M5)...
+Console.js:61 ✅ 50 señales agregadas al gráfico
+Console.js:61 ✅ 50 señales Tablero cargadas
+Console.js:61 📊 Cargando velas para EURJPY-OTC (M5)...
+Console.js:61 🎯 Cargando señales Tablero para EURJPY-OTC (M5)...
+Console.js:61 ✅ 50 señales agregadas al gráfico
+Console.js:61 ✅ 50 señales Tablero cargadas
+Console.js:61 📊 Cargando velas para USDJPY-OTC (M5)...
+Console.js:61 🎯 Cargando señales Tablero para USDJPY-OTC (M5)...
+Console.js:61 🔔 Señal de VENTA detectada (AUDIO SILENCIADO): {confidence: 0.51, direction: 'PUT', gale_level: 0, is_gale: false, pattern: 'Bajista', …}
+Console.js:61 ✅ 50 señales agregadas al gráfico
+Console.js:61 ✅ 50 señales Tablero cargadas
+Console.js:61 📊 Cargando velas para USDJPY-OTC (M5)...
+Console.js:61 💰 Balance: $0.00 (PRACTICE)
+Console.js:61 🎯 Cargando señales Tablero para USDJPY-OTC (M5)...
+Console.js:61 ✅ 50 señales agregadas al gráfico
+Console.js:61 ✅ 50 señales Tablero cargadas
+Console.js:61 💰 Balance: $0.00 (PRACTICE)
+Console.js:61 📊 Cargando velas para USDJPY-OTC (M5)...
+Console.js:61 🎯 Cargando señales Tablero para USDJPY-OTC (M5)...
+Console.js:61 ✅ 50 señales agregadas al gráfico
+Console.js:61 ✅ 50 señales Tablero cargadas
+Console.js:61 📊 Cargando velas para USDJPY-OTC (M5)...
+Console.js:61 🎯 Cargando señales Tablero para USDJPY-OTC (M5)...
+Console.js:61 ✅ 50 señales agregadas al gráfico
+Console.js:61 ✅ 50 señales Tablero cargadas
+Console.js:61 📊 Cargando velas para EURUSD-OTC (M5)...
+Console.js:61 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+Console.js:61 ✅ 50 señales agregadas al gráfico
+Console.js:61 ✅ 50 señales Tablero cargadas
+Console.js:61 📊 Cargando velas para EURUSD-OTC (M5)...
+Console.js:61 💰 Balance: $0.00 (PRACTICE)
+Console.js:61 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+Console.js:61 ✅ 50 señales agregadas al gráfico
+Console.js:61 ✅ 50 señales Tablero cargadas
+Console.js:61 💰 Balance: $0.00 (PRACTICE)
+Console.js:61 📊 Cargando velas para GBPUSD-OTC (M5)...
+Console.js:61 🎯 Cargando señales Tablero para GBPUSD-OTC (M5)...
+Console.js:61 ✅ 50 señales agregadas al gráfico
+Console.js:61 ✅ 50 señales Tablero cargadas
+Console.js:61 📊 Cargando velas para GBPUSD-OTC (M5)...
+Console.js:61 🎯 Cargando señales Tablero para GBPUSD-OTC (M5)...
+Console.js:61 ✅ 50 señales agregadas al gráfico
+Console.js:61 ✅ 50 señales Tablero cargadas
+Console.js:61 💰 Balance: $0.00 (PRACTICE)
+Console.js:61 📊 Cargando velas para GBPUSD-OTC (M5)...
+Console.js:61 🎯 Cargando señales Tablero para GBPUSD-OTC (M5)...
+Console.js:61 ✅ 50 señales agregadas al gráfico
+Console.js:61 ✅ 50 señales Tablero cargadas
+Console.js:61 📊 Cargando velas para USDJPY-OTC (M5)...
+Console.js:61 🎯 Cargando señales Tablero para USDJPY-OTC (M5)...
+Console.js:61 ✅ 50 señales agregadas al gráfico
+Console.js:61 ✅ 50 señales Tablero cargadas
+Console.js:61 📊 Cargando velas para USDJPY-OTC (M5)...
+Console.js:61 📊 Cargando velas para EURJPY-OTC (M5)...
+Console.js:61 💰 Balance: $0.00 (PRACTICE)
+Console.js:61 💰 Balance: $0.00 (PRACTICE)
+Console.js:61 🎯 Cargando señales Tablero para USDJPY-OTC (M5)...
+Console.js:61 🎯 Cargando señales Tablero para EURJPY-OTC (M5)...
+Console.js:61 ✅ 50 señales agregadas al gráfico
+Console.js:61 ✅ 50 señales Tablero cargadas
+Console.js:61 ✅ 50 señales agregadas al gráfico
+Console.js:61 ✅ 50 señales Tablero cargadas
+Console.js:61 📊 Cargando velas para EURJPY-OTC (M5)...
+Console.js:61 🎯 Cargando señales Tablero para EURJPY-OTC (M5)...
+Console.js:61 ✅ 50 señales agregadas al gráfico
+Console.js:61 ✅ 50 señales Tablero cargadas
+Console.js:61 📊 Cargando velas para AUDUSD-OTC (M5)...
+Console.js:61 📊 Cargando velas para AUDUSD-OTC (M5)...
+Console.js:61 📊 Cargando velas para AUDUSD-OTC (M5)...
+Console.js:61 💰 Balance: $0.00 (PRACTICE)
+Console.js:61 📊 Cargando velas para AUDUSD-OTC (M5)...
+Console.js:61 📊 Cargando velas para AUDUSD-OTC (M5)...
+Console.js:61 📊 Cargando velas para AUDUSD-OTC (M5)...
+Console.js:61 💰 Balance: $0.00 (PRACTICE)
+Console.js:61 📊 Cargando velas para AUDUSD-OTC (M5)...
+Console.js:61 🆕 Nueva vela detectada en 4:48:05 p.m.
+Console.js:61 🎯 Cargando señales Tablero para AUDUSD-OTC (M5)...
+Console.js:61 🆕 Nueva vela detectada en 4:48:06 p.m.
+Console.js:61 🎯 Cargando señales Tablero para AUDUSD-OTC (M5)...
+Console.js:61 🆕 Nueva vela detectada en 4:48:08 p.m.
+Console.js:61 🎯 Cargando señales Tablero para AUDUSD-OTC (M5)...
+Console.js:61 🎯 Cargando señales Tablero para AUDUSD-OTC (M5)...
+Console.js:61 📊 Cargando velas para AUDUSD-OTC (M5)...
+Console.js:61 📊 Cargando velas para AUDUSD-OTC (M5)...
+Console.js:61 💰 Balance: $0.00 (PRACTICE)
+injected.js:278  GET https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/signals/tablero?symbol=AUDUSD-OTC&timeframe=M5 400 (Bad Request)
+window.fetch @ Network.js:219
+apply @ injected.js:278
+loadTableroSignals @ dashboard:1175
+loadCandles @ dashboard:1157
+await in loadCandles
+(anonymous) @ dashboard:1466
+handleMouseUp_ @ unknown
+Console.js:61 ℹ️ No hay señales Tablero disponibles
+Console.js:61 📊 Cargando velas para AUDUSD-OTC (M5)...
+Console.js:61 🆕 Nueva vela detectada en 4:48:21 p.m.
+Console.js:61 🎯 Cargando señales Tablero para AUDUSD-OTC (M5)...
+Console.js:61 📊 Cargando velas para AUDUSD-OTC (M5)...
+injected.js:278  GET https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/signals/tablero?symbol=AUDUSD-OTC&timeframe=M5 400 (Bad Request)
+window.fetch @ Network.js:219
+apply @ injected.js:278
+loadTableroSignals @ dashboard:1175
+loadCandles @ dashboard:1157
+await in loadCandles
+(anonymous) @ dashboard:1323
+Console.js:61 ℹ️ No hay señales Tablero disponibles
+Console.js:61 🆕 Nueva vela detectada en 4:48:29 p.m.
+Console.js:61 🎯 Cargando señales Tablero para AUDUSD-OTC (M5)...
+Console.js:61 📊 Cargando velas para AUDUSD-OTC (M5)...
+Console.js:61 💰 Balance: $0.00 (PRACTICE)
+Console.js:61 🆕 Nueva vela detectada en 4:48:30 p.m.
+Console.js:61 🎯 Cargando señales Tablero para AUDUSD-OTC (M5)...
+Console.js:61 ✅ 50 señales agregadas al gráfico
+Console.js:61 ✅ 50 señales Tablero cargadas
+Console.js:61 ✅ 49 señales agregadas al gráfico
+Console.js:61 ✅ 49 señales Tablero cargadas
+Console.js:61 ✅ 42 señales agregadas al gráfico
+Console.js:61 ✅ 42 señales Tablero cargadas
+Console.js:61 🆕 Nueva vela detectada en 4:48:33 p.m.
+Console.js:61 🎯 Cargando señales Tablero para AUDUSD-OTC (M5)...
+Console.js:61 📊 Cargando velas para AUDUSD-OTC (M5)...
+Console.js:61 📊 Cargando velas para AUDUSD-OTC (M5)...
+Console.js:61 ✅ 50 señales agregadas al gráfico
+Console.js:61 ✅ 50 señales Tablero cargadas

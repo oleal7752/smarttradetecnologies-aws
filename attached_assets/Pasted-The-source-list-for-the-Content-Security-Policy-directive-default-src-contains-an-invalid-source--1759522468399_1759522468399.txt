@@ -1,0 +1,463 @@
+The source list for the Content Security Policy directive 'default-src' contains an invalid source: ''unsafe-dynamic''. It will be ignored.
+The source list for the Content Security Policy directive 'default-src' contains an invalid source: ''unsafe-dynamic''. It will be ignored.
+The source list for the Content Security Policy directive 'default-src' contains an invalid source: ''unsafe-dynamic''. It will be ignored.
+The source list for the Content Security Policy directive 'default-src' contains an invalid source: ''unsafe-dynamic''. It will be ignored.
+The source list for the Content Security Policy directive 'default-src' contains an invalid source: ''unsafe-dynamic''. It will be ignored.
+The source list for the Content Security Policy directive 'default-src' contains an invalid source: ''unsafe-dynamic''. It will be ignored.
+The source list for the Content Security Policy directive 'default-src' contains an invalid source: ''unsafe-dynamic''. It will be ignored.
+The source list for the Content Security Policy directive 'default-src' contains an invalid source: ''unsafe-dynamic''. It will be ignored.
+The source list for the Content Security Policy directive 'default-src' contains an invalid source: ''unsafe-dynamic''. It will be ignored.
+The source list for the Content Security Policy directive 'default-src' contains an invalid source: ''unsafe-dynamic''. It will be ignored.
+The source list for the Content Security Policy directive 'default-src' contains an invalid source: ''unsafe-dynamic''. It will be ignored.
+The Content-Security-Policy directive 'default-src' contains 'report-uri' as a source expression. Did you want to add it as a directive and forget a semicolon?
+The Content-Security-Policy directive 'default-src' contains 'report-uri' as a source expression. Did you want to add it as a directive and forget a semicolon?
+The Content-Security-Policy directive 'default-src' contains 'report-uri' as a source expression. Did you want to add it as a directive and forget a semicolon?
+The Content-Security-Policy directive 'default-src' contains 'report-uri' as a source expression. Did you want to add it as a directive and forget a semicolon?
+The Content-Security-Policy directive 'default-src' contains 'report-uri' as a source expression. Did you want to add it as a directive and forget a semicolon?
+The Content-Security-Policy directive 'default-src' contains 'report-uri' as a source expression. Did you want to add it as a directive and forget a semicolon?
+The Content-Security-Policy directive 'default-src' contains 'report-uri' as a source expression. Did you want to add it as a directive and forget a semicolon?
+The Content-Security-Policy directive 'default-src' contains 'report-uri' as a source expression. Did you want to add it as a directive and forget a semicolon?
+The Content-Security-Policy directive 'default-src' contains 'report-uri' as a source expression. Did you want to add it as a directive and forget a semicolon?
+The Content-Security-Policy directive 'default-src' contains 'report-uri' as a source expression. Did you want to add it as a directive and forget a semicolon?
+The Content-Security-Policy directive 'default-src' contains 'report-uri' as a source expression. Did you want to add it as a directive and forget a semicolon?
+The source list for Content Security Policy directive 'default-src' contains a source with an invalid path: '/api/4509669501698048/security/?sentry_key=7eb3d90eb4660416caf507087367e67e'. The query component, including the '?', will be ignored.
+The source list for Content Security Policy directive 'default-src' contains a source with an invalid path: '/api/4509669501698048/security/?sentry_key=7eb3d90eb4660416caf507087367e67e'. The query component, including the '?', will be ignored.
+The source list for Content Security Policy directive 'default-src' contains a source with an invalid path: '/api/4509669501698048/security/?sentry_key=7eb3d90eb4660416caf507087367e67e'. The query component, including the '?', will be ignored.
+The source list for Content Security Policy directive 'default-src' contains a source with an invalid path: '/api/4509669501698048/security/?sentry_key=7eb3d90eb4660416caf507087367e67e'. The query component, including the '?', will be ignored.
+The source list for Content Security Policy directive 'default-src' contains a source with an invalid path: '/api/4509669501698048/security/?sentry_key=7eb3d90eb4660416caf507087367e67e'. The query component, including the '?', will be ignored.
+The source list for Content Security Policy directive 'default-src' contains a source with an invalid path: '/api/4509669501698048/security/?sentry_key=7eb3d90eb4660416caf507087367e67e'. The query component, including the '?', will be ignored.
+The source list for Content Security Policy directive 'default-src' contains a source with an invalid path: '/api/4509669501698048/security/?sentry_key=7eb3d90eb4660416caf507087367e67e'. The query component, including the '?', will be ignored.
+The source list for Content Security Policy directive 'default-src' contains a source with an invalid path: '/api/4509669501698048/security/?sentry_key=7eb3d90eb4660416caf507087367e67e'. The query component, including the '?', will be ignored.
+The source list for Content Security Policy directive 'default-src' contains a source with an invalid path: '/api/4509669501698048/security/?sentry_key=7eb3d90eb4660416caf507087367e67e'. The query component, including the '?', will be ignored.
+The source list for Content Security Policy directive 'default-src' contains a source with an invalid path: '/api/4509669501698048/security/?sentry_key=7eb3d90eb4660416caf507087367e67e'. The query component, including the '?', will be ignored.
+The source list for Content Security Policy directive 'default-src' contains a source with an invalid path: '/api/4509669501698048/security/?sentry_key=7eb3d90eb4660416caf507087367e67e'. The query component, including the '?', will be ignored.
+The source list for the Content Security Policy directive 'default-src' contains an invalid source: ''unsafe-dynamic''. It will be ignored.
+The Content-Security-Policy directive 'default-src' contains 'report-uri' as a source expression. Did you want to add it as a directive and forget a semicolon?
+The source list for Content Security Policy directive 'default-src' contains a source with an invalid path: '/api/4509669501698048/security/?sentry_key=7eb3d90eb4660416caf507087367e67e'. The query component, including the '?', will be ignored.
+SmartTradeAcademy:1 The source list for the Content Security Policy directive 'default-src' contains an invalid source: ''unsafe-dynamic''. It will be ignored.
+SmartTradeAcademy:1 The Content-Security-Policy directive 'default-src' contains 'report-uri' as a source expression. Did you want to add it as a directive and forget a semicolon?
+SmartTradeAcademy:1 The source list for Content Security Policy directive 'default-src' contains a source with an invalid path: '/api/4509669501698048/security/?sentry_key=7eb3d90eb4660416caf507087367e67e'. The query component, including the '?', will be ignored.
+_app-9bde717bf69fbb0b.js:34 
+      /////////////////////
+   ///////////////////////////
+  ////////@@@@@@@//////////////
+  ////////@@@@@@@//////////////
+  ////////@@@@@@@//////////////        Curious and driven?
+  ///////////////@@@@@@@///////        Work with us!
+  ///////////////@@@@@@@///////
+  ///////////////@@@@@@@///////        https://join.replit.com/hack.with.us
+  ////////@@@@@@@//////////////
+  ////////@@@@@@@//////////////
+  ////////@@@@@@#//////////////
+   ///////////////////////////
+      /////////////////////
+      
+_app-9bde717bf69fbb0b.js:34 [LaunchDarkly] LaunchDarkly client initialized
+framework-948003f217fb3673.js:1 Error while parsing the 'sandbox' attribute: 'allow-downloads-without-user-activation' is an invalid sandbox flag.
+_ @ framework-948003f217fb3673.js:1
+(anonymous) @ framework-948003f217fb3673.js:1
+uD @ framework-948003f217fb3673.js:1
+uI @ framework-948003f217fb3673.js:1
+uM @ framework-948003f217fb3673.js:1
+uS @ framework-948003f217fb3673.js:1
+C @ framework-948003f217fb3673.js:1
+z @ framework-948003f217fb3673.js:1
+framework-948003f217fb3673.js:1 Unrecognized feature: 'ambient-light-sensor'.
+_ @ framework-948003f217fb3673.js:1
+(anonymous) @ framework-948003f217fb3673.js:1
+uD @ framework-948003f217fb3673.js:1
+uI @ framework-948003f217fb3673.js:1
+uM @ framework-948003f217fb3673.js:1
+uS @ framework-948003f217fb3673.js:1
+C @ framework-948003f217fb3673.js:1
+z @ framework-948003f217fb3673.js:1
+framework-948003f217fb3673.js:1 Unrecognized feature: 'battery'.
+_ @ framework-948003f217fb3673.js:1
+(anonymous) @ framework-948003f217fb3673.js:1
+uD @ framework-948003f217fb3673.js:1
+uI @ framework-948003f217fb3673.js:1
+uM @ framework-948003f217fb3673.js:1
+uS @ framework-948003f217fb3673.js:1
+C @ framework-948003f217fb3673.js:1
+z @ framework-948003f217fb3673.js:1
+framework-948003f217fb3673.js:1 Unrecognized feature: 'execution-while-not-rendered'.
+_ @ framework-948003f217fb3673.js:1
+(anonymous) @ framework-948003f217fb3673.js:1
+uD @ framework-948003f217fb3673.js:1
+uI @ framework-948003f217fb3673.js:1
+uM @ framework-948003f217fb3673.js:1
+uS @ framework-948003f217fb3673.js:1
+C @ framework-948003f217fb3673.js:1
+z @ framework-948003f217fb3673.js:1
+framework-948003f217fb3673.js:1 Unrecognized feature: 'execution-while-out-of-viewport'.
+_ @ framework-948003f217fb3673.js:1
+(anonymous) @ framework-948003f217fb3673.js:1
+uD @ framework-948003f217fb3673.js:1
+uI @ framework-948003f217fb3673.js:1
+uM @ framework-948003f217fb3673.js:1
+uS @ framework-948003f217fb3673.js:1
+C @ framework-948003f217fb3673.js:1
+z @ framework-948003f217fb3673.js:1
+framework-948003f217fb3673.js:1 Unrecognized feature: 'layout-animations'.
+_ @ framework-948003f217fb3673.js:1
+(anonymous) @ framework-948003f217fb3673.js:1
+uD @ framework-948003f217fb3673.js:1
+uI @ framework-948003f217fb3673.js:1
+uM @ framework-948003f217fb3673.js:1
+uS @ framework-948003f217fb3673.js:1
+C @ framework-948003f217fb3673.js:1
+z @ framework-948003f217fb3673.js:1
+framework-948003f217fb3673.js:1 Unrecognized feature: 'legacy-image-formats'.
+_ @ framework-948003f217fb3673.js:1
+(anonymous) @ framework-948003f217fb3673.js:1
+uD @ framework-948003f217fb3673.js:1
+uI @ framework-948003f217fb3673.js:1
+uM @ framework-948003f217fb3673.js:1
+uS @ framework-948003f217fb3673.js:1
+C @ framework-948003f217fb3673.js:1
+z @ framework-948003f217fb3673.js:1
+framework-948003f217fb3673.js:1 Unrecognized feature: 'navigation-override'.
+_ @ framework-948003f217fb3673.js:1
+(anonymous) @ framework-948003f217fb3673.js:1
+uD @ framework-948003f217fb3673.js:1
+uI @ framework-948003f217fb3673.js:1
+uM @ framework-948003f217fb3673.js:1
+uS @ framework-948003f217fb3673.js:1
+C @ framework-948003f217fb3673.js:1
+z @ framework-948003f217fb3673.js:1
+framework-948003f217fb3673.js:1 Unrecognized feature: 'oversized-images'.
+_ @ framework-948003f217fb3673.js:1
+(anonymous) @ framework-948003f217fb3673.js:1
+uD @ framework-948003f217fb3673.js:1
+uI @ framework-948003f217fb3673.js:1
+uM @ framework-948003f217fb3673.js:1
+uS @ framework-948003f217fb3673.js:1
+C @ framework-948003f217fb3673.js:1
+z @ framework-948003f217fb3673.js:1
+framework-948003f217fb3673.js:1 Unrecognized feature: 'publickey-credentials'.
+_ @ framework-948003f217fb3673.js:1
+(anonymous) @ framework-948003f217fb3673.js:1
+uD @ framework-948003f217fb3673.js:1
+uI @ framework-948003f217fb3673.js:1
+uM @ framework-948003f217fb3673.js:1
+uS @ framework-948003f217fb3673.js:1
+C @ framework-948003f217fb3673.js:1
+z @ framework-948003f217fb3673.js:1
+framework-948003f217fb3673.js:1 Unrecognized feature: 'speaker-selection'.
+_ @ framework-948003f217fb3673.js:1
+(anonymous) @ framework-948003f217fb3673.js:1
+uD @ framework-948003f217fb3673.js:1
+uI @ framework-948003f217fb3673.js:1
+uM @ framework-948003f217fb3673.js:1
+uS @ framework-948003f217fb3673.js:1
+C @ framework-948003f217fb3673.js:1
+z @ framework-948003f217fb3673.js:1
+framework-948003f217fb3673.js:1 Unrecognized feature: 'unoptimized-images'.
+_ @ framework-948003f217fb3673.js:1
+(anonymous) @ framework-948003f217fb3673.js:1
+uD @ framework-948003f217fb3673.js:1
+uI @ framework-948003f217fb3673.js:1
+uM @ framework-948003f217fb3673.js:1
+uS @ framework-948003f217fb3673.js:1
+C @ framework-948003f217fb3673.js:1
+z @ framework-948003f217fb3673.js:1
+framework-948003f217fb3673.js:1 Unrecognized feature: 'unsized-media'.
+_ @ framework-948003f217fb3673.js:1
+(anonymous) @ framework-948003f217fb3673.js:1
+uD @ framework-948003f217fb3673.js:1
+uI @ framework-948003f217fb3673.js:1
+uM @ framework-948003f217fb3673.js:1
+uS @ framework-948003f217fb3673.js:1
+C @ framework-948003f217fb3673.js:1
+z @ framework-948003f217fb3673.js:1
+framework-948003f217fb3673.js:1 Unrecognized feature: 'pointer-lock'.
+_ @ framework-948003f217fb3673.js:1
+(anonymous) @ framework-948003f217fb3673.js:1
+uD @ framework-948003f217fb3673.js:1
+uI @ framework-948003f217fb3673.js:1
+uM @ framework-948003f217fb3673.js:1
+uS @ framework-948003f217fb3673.js:1
+C @ framework-948003f217fb3673.js:1
+z @ framework-948003f217fb3673.js:1
+framework-948003f217fb3673.js:1 Allow attribute will take precedence over 'allowfullscreen'.
+_ @ framework-948003f217fb3673.js:1
+(anonymous) @ framework-948003f217fb3673.js:1
+uD @ framework-948003f217fb3673.js:1
+uI @ framework-948003f217fb3673.js:1
+uM @ framework-948003f217fb3673.js:1
+uS @ framework-948003f217fb3673.js:1
+C @ framework-948003f217fb3673.js:1
+z @ framework-948003f217fb3673.js:1
+framework-948003f217fb3673.js:1 Allow attribute will take precedence over 'allowpaymentrequest'.
+_ @ framework-948003f217fb3673.js:1
+(anonymous) @ framework-948003f217fb3673.js:1
+uD @ framework-948003f217fb3673.js:1
+uI @ framework-948003f217fb3673.js:1
+uM @ framework-948003f217fb3673.js:1
+uS @ framework-948003f217fb3673.js:1
+C @ framework-948003f217fb3673.js:1
+z @ framework-948003f217fb3673.js:1
+Error while parsing the 'sandbox' attribute: 'allow-downloads-without-user-activation' is an invalid sandbox flag.
+Error while parsing the 'sandbox' attribute: 'allow-downloads-without-user-activation' is an invalid sandbox flag.
+Error while parsing the 'sandbox' attribute: 'allow-downloads-without-user-activation' is an invalid sandbox flag.
+Error while parsing the 'sandbox' attribute: 'allow-downloads-without-user-activation' is an invalid sandbox flag.
+Error while parsing the 'sandbox' attribute: 'allow-downloads-without-user-activation' is an invalid sandbox flag.
+Error while parsing the 'sandbox' attribute: 'allow-downloads-without-user-activation' is an invalid sandbox flag.
+Error while parsing the 'sandbox' attribute: 'allow-downloads-without-user-activation' is an invalid sandbox flag.
+Error while parsing the 'sandbox' attribute: 'allow-downloads-without-user-activation' is an invalid sandbox flag.
+Error while parsing the 'sandbox' attribute: 'allow-downloads-without-user-activation' is an invalid sandbox flag.
+Error while parsing the 'sandbox' attribute: 'allow-downloads-without-user-activation' is an invalid sandbox flag.
+Error while parsing the 'sandbox' attribute: 'allow-downloads-without-user-activation' is an invalid sandbox flag.
+Error while parsing the 'sandbox' attribute: 'allow-downloads-without-user-activation' is an invalid sandbox flag.
+Error while parsing the 'sandbox' attribute: 'allow-downloads-without-user-activation' is an invalid sandbox flag.
+Error while parsing the 'sandbox' attribute: 'allow-downloads-without-user-activation' is an invalid sandbox flag.
+Error while parsing the 'sandbox' attribute: 'allow-downloads-without-user-activation' is an invalid sandbox flag.
+Error while parsing the 'sandbox' attribute: 'allow-downloads-without-user-activation' is an invalid sandbox flag.
+Unrecognized feature: 'ambient-light-sensor'.
+Unrecognized feature: 'ambient-light-sensor'.
+Unrecognized feature: 'ambient-light-sensor'.
+Unrecognized feature: 'ambient-light-sensor'.
+Unrecognized feature: 'ambient-light-sensor'.
+Unrecognized feature: 'ambient-light-sensor'.
+Unrecognized feature: 'battery'.
+Unrecognized feature: 'battery'.
+Unrecognized feature: 'battery'.
+Unrecognized feature: 'battery'.
+Unrecognized feature: 'battery'.
+Unrecognized feature: 'battery'.
+Unrecognized feature: 'execution-while-not-rendered'.
+Unrecognized feature: 'execution-while-not-rendered'.
+Unrecognized feature: 'execution-while-not-rendered'.
+Unrecognized feature: 'execution-while-not-rendered'.
+Unrecognized feature: 'execution-while-not-rendered'.
+Unrecognized feature: 'execution-while-not-rendered'.
+Unrecognized feature: 'execution-while-out-of-viewport'.
+Unrecognized feature: 'execution-while-out-of-viewport'.
+Unrecognized feature: 'execution-while-out-of-viewport'.
+Unrecognized feature: 'execution-while-out-of-viewport'.
+Unrecognized feature: 'execution-while-out-of-viewport'.
+Unrecognized feature: 'execution-while-out-of-viewport'.
+Unrecognized feature: 'layout-animations'.
+Unrecognized feature: 'layout-animations'.
+Unrecognized feature: 'layout-animations'.
+Unrecognized feature: 'layout-animations'.
+Unrecognized feature: 'layout-animations'.
+Unrecognized feature: 'layout-animations'.
+Unrecognized feature: 'legacy-image-formats'.
+Unrecognized feature: 'legacy-image-formats'.
+Unrecognized feature: 'legacy-image-formats'.
+Unrecognized feature: 'legacy-image-formats'.
+Unrecognized feature: 'legacy-image-formats'.
+Unrecognized feature: 'legacy-image-formats'.
+Unrecognized feature: 'navigation-override'.
+Unrecognized feature: 'navigation-override'.
+Unrecognized feature: 'navigation-override'.
+Unrecognized feature: 'navigation-override'.
+Unrecognized feature: 'navigation-override'.
+Unrecognized feature: 'navigation-override'.
+Unrecognized feature: 'oversized-images'.
+Unrecognized feature: 'oversized-images'.
+Unrecognized feature: 'oversized-images'.
+Unrecognized feature: 'oversized-images'.
+Unrecognized feature: 'oversized-images'.
+Unrecognized feature: 'oversized-images'.
+Unrecognized feature: 'publickey-credentials'.
+Unrecognized feature: 'publickey-credentials'.
+Unrecognized feature: 'publickey-credentials'.
+Unrecognized feature: 'publickey-credentials'.
+Unrecognized feature: 'publickey-credentials'.
+Unrecognized feature: 'publickey-credentials'.
+Unrecognized feature: 'speaker-selection'.
+Unrecognized feature: 'speaker-selection'.
+Unrecognized feature: 'speaker-selection'.
+Unrecognized feature: 'speaker-selection'.
+Unrecognized feature: 'speaker-selection'.
+Unrecognized feature: 'speaker-selection'.
+Unrecognized feature: 'unoptimized-images'.
+Unrecognized feature: 'unoptimized-images'.
+Unrecognized feature: 'unoptimized-images'.
+Unrecognized feature: 'unoptimized-images'.
+Unrecognized feature: 'unoptimized-images'.
+Unrecognized feature: 'unoptimized-images'.
+Unrecognized feature: 'unsized-media'.
+Unrecognized feature: 'unsized-media'.
+Unrecognized feature: 'unsized-media'.
+Unrecognized feature: 'unsized-media'.
+Unrecognized feature: 'unsized-media'.
+Unrecognized feature: 'unsized-media'.
+Allow attribute will take precedence over 'allowfullscreen'.
+Allow attribute will take precedence over 'allowfullscreen'.
+Allow attribute will take precedence over 'allowfullscreen'.
+Allow attribute will take precedence over 'allowfullscreen'.
+Allow attribute will take precedence over 'allowfullscreen'.
+Allow attribute will take precedence over 'allowfullscreen'.
+Allow attribute will take precedence over 'allowpaymentrequest'.
+Allow attribute will take precedence over 'allowpaymentrequest'.
+Allow attribute will take precedence over 'allowpaymentrequest'.
+Allow attribute will take precedence over 'allowpaymentrequest'.
+Allow attribute will take precedence over 'allowpaymentrequest'.
+Allow attribute will take precedence over 'allowpaymentrequest'.
+SmartTradeAcademy:1 Banner not shown: beforeinstallpromptevent.preventDefault() called. The page must call beforeinstallpromptevent.prompt() to show the banner.
+eruda.js:2 📋 STC Trading Dashboard script cargado
+eruda.js:2 🌐 DOM cargado, iniciando aplicación...
+eruda.js:2 🚀 STC Trading System - gráficos automáticos activos
+eruda.js:2 🚀 Iniciando STC Chart Manager...
+eruda.js:2 ✅ STC Chart Manager - usando STCChartFix automático
+eruda.js:2 🚀 Iniciando STC Trading Dashboard...
+eruda.js:2 ✅ Gráfico inicializado correctamente
+eruda.js:2 🎛️ Event handlers configurados
+eruda.js:2 🔄 Auto-update iniciado
+eruda.js:2 ✅ Dashboard inicializado
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 🔔 Señal de COMPRA detectada (AUDIO SILENCIADO): {confidence: 0.5, direction: 'CALL', gale_level: 0, is_gale: false, pattern: 'Alcista', …}
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 💰 Balance: $0.00 (PRACTICE)
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+eruda.js:2 📊 Cargando velas para EURUSD-OTC (M5)...
+eruda.js:2 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+eruda.js:2 ✅ 50 señales agregadas al gráfico
+eruda.js:2 ✅ 50 señales Tablero cargadas
+framework-948003f217fb3673.js:1 Error while parsing the 'sandbox' attribute: 'allow-downloads-without-user-activation' is an invalid sandbox flag.
+_ @ framework-948003f217fb3673.js:1
+(anonymous) @ framework-948003f217fb3673.js:1
+uD @ framework-948003f217fb3673.js:1
+uI @ framework-948003f217fb3673.js:1
+uM @ framework-948003f217fb3673.js:1
+uS @ framework-948003f217fb3673.js:1
+C @ framework-948003f217fb3673.js:1
+z @ framework-948003f217fb3673.js:1

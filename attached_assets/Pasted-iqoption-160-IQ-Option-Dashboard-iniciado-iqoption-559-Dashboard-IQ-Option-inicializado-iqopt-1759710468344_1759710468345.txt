@@ -1,0 +1,51 @@
+iqoption:160 📋 IQ Option Dashboard iniciado
+iqoption:559 ✅ Dashboard IQ Option inicializado
+iqoption:167 🎯 Inicializando gráfico IQ Option...
+stc_chart_fix.js?v=3:30 🎯 Inicializando STCChartFix con config: {containerId: 'chart', endpoint: '/api/iq/candles?symbol=EURUSD-OTC&timeframe=M5&limit=200', timeframe: 'M5', pollMs: 3000, max: 200}
+stc_chart_fix.js?v=3:100 ✅ Gráfico LightweightCharts inicializado
+stc_chart_fix.js?v=3:108 📊 Cargando datos iniciales desde: /api/iq/candles?symbol=EURUSD-OTC&timeframe=M5&limit=200
+stc_chart_fix.js?v=3:231 🔄 Polling iniciado cada 3000ms
+stc_chart_fix.js?v=3:117 📈 Datos recibidos: (200) [{…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, …]
+stc_chart_fix.js?v=3:172 🎨 Pintando velas en el gráfico...
+stc_chart_fix.js?v=3:173 📊 Primera vela: {time: 1759644900, open: 1.193305, high: 1.194075, low: 1.191375, close: 1.192895}
+stc_chart_fix.js?v=3:174 📊 Última vela: {time: 1759710300, open: 1.174175, high: 1.174175, low: 1.174175, close: 1.174175}
+stc_chart_fix.js?v=3:175 📊 Total velas: 200
+stc_chart_fix.js?v=3:181 ✅ Gráfico LISTO con 200 velas pintadas
+stc_chart_fix.js?v=3:121 ✅ Cargadas 200 velas iniciales
+favicon.ico:1  GET https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/favicon.ico 404 (Not Found)
+iqoption:435 ✅ Cargados 4 símbolos permitidos (3 abiertos, 1 cerrados)
+stc_chart_fix.js?v=3:172 🎨 Pintando velas en el gráfico...
+stc_chart_fix.js?v=3:173 📊 Primera vela: {time: 1759644900, open: 1.193305, high: 1.194075, low: 1.191375, close: 1.192895}
+stc_chart_fix.js?v=3:174 📊 Última vela: {time: 1759710300, open: 1.174175, high: 1.174175, low: 1.174175, close: 1.174175}
+stc_chart_fix.js?v=3:175 📊 Total velas: 200
+stc_chart_fix.js?v=3:194 ⚡ Actualización suave: última vela 1759710300
+stc_chart_fix.js?v=3:172 🎨 Pintando velas en el gráfico...
+stc_chart_fix.js?v=3:173 📊 Primera vela: {time: 1759644900, open: 1.193305, high: 1.194075, low: 1.191375, close: 1.192895}
+stc_chart_fix.js?v=3:174 📊 Última vela: {time: 1759710300, open: 1.174175, high: 1.174175, low: 1.174175, close: 1.174175}
+stc_chart_fix.js?v=3:175 📊 Total velas: 200
+stc_chart_fix.js?v=3:194 ⚡ Actualización suave: última vela 1759710300
+stc_chart_fix.js?v=3:172 🎨 Pintando velas en el gráfico...
+stc_chart_fix.js?v=3:173 📊 Primera vela: {time: 1759644900, open: 1.193305, high: 1.194075, low: 1.191375, close: 1.192895}
+stc_chart_fix.js?v=3:174 📊 Última vela: {time: 1759710300, open: 1.174175, high: 1.174175, low: 1.174175, close: 1.174175}
+stc_chart_fix.js?v=3:175 📊 Total velas: 200
+stc_chart_fix.js?v=3:194 ⚡ Actualización suave: última vela 1759710300
+stc_chart_fix.js?v=3:172 🎨 Pintando velas en el gráfico...
+stc_chart_fix.js?v=3:173 📊 Primera vela: {time: 1759644900, open: 1.193305, high: 1.194075, low: 1.191375, close: 1.192895}
+stc_chart_fix.js?v=3:174 📊 Última vela: {time: 1759710300, open: 1.174175, high: 1.174175, low: 1.174175, close: 1.174175}
+stc_chart_fix.js?v=3:175 📊 Total velas: 200
+stc_chart_fix.js?v=3:194 ⚡ Actualización suave: última vela 1759710300
+stc_chart_fix.js?v=3:172 🎨 Pintando velas en el gráfico...
+stc_chart_fix.js?v=3:173 📊 Primera vela: {time: 1759644900, open: 1.193305, high: 1.194075, low: 1.191375, close: 1.192895}
+stc_chart_fix.js?v=3:174 📊 Última vela: {time: 1759710300, open: 1.174175, high: 1.174175, low: 1.174175, close: 1.174175}
+stc_chart_fix.js?v=3:175 📊 Total velas: 200
+stc_chart_fix.js?v=3:194 ⚡ Actualización suave: última vela 1759710300
+stc_chart_fix.js?v=3:172 🎨 Pintando velas en el gráfico...
+stc_chart_fix.js?v=3:173 📊 Primera vela: {time: 1759644900, open: 1.193305, high: 1.194075, low: 1.191375, close: 1.192895}
+stc_chart_fix.js?v=3:174 📊 Última vela: {time: 1759710300, open: 1.174175, high: 1.174175, low: 1.174175, close: 1.174175}
+stc_chart_fix.js?v=3:175 📊 Total velas: 200
+stc_chart_fix.js?v=3:194 ⚡ Actualización suave: última vela 1759710300
+stc_chart_fix.js?v=3:172 🎨 Pintando velas en el gráfico...
+stc_chart_fix.js?v=3:173 📊 Primera vela: {time: 1759644900, open: 1.193305, high: 1.194075, low: 1.191375, close: 1.192895}
+stc_chart_fix.js?v=3:174 📊 Última vela: {time: 1759710300, open: 1.174175, high: 1.174175, low: 1.174175, close: 1.174175}
+stc_chart_fix.js?v=3:175 📊 Total velas: 200
+stc_chart_fix.js?v=3:194 ⚡ Actualización suave: última vela 1759710300

@@ -1,0 +1,93 @@
+iqoption:160 📋 IQ Option Dashboard iniciado
+iqoption:559 ✅ Dashboard IQ Option inicializado
+iqoption:167 🎯 Inicializando gráfico IQ Option...
+stc_chart_fix.js?v=3:30 🎯 Inicializando STCChartFix con config: {containerId: 'chart', endpoint: '/api/iq/candles?symbol=EURUSD-OTC&timeframe=M5&limit=200', timeframe: 'M5', pollMs: 3000, max: 200}
+stc_chart_fix.js?v=3:100 ✅ Gráfico LightweightCharts inicializado
+stc_chart_fix.js?v=3:108 📊 Cargando datos iniciales desde: /api/iq/candles?symbol=EURUSD-OTC&timeframe=M5&limit=200
+stc_chart_fix.js?v=3:228 🔄 Polling iniciado cada 3000ms
+iqoption:435 ✅ Cargados 2 símbolos permitidos (0 abiertos, 2 cerrados)
+stc_chart_fix.js?v=3:117 📈 Datos recibidos: (200) [{…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, …]
+stc_chart_fix.js?v=3:172 🎨 Pintando velas en el gráfico...
+stc_chart_fix.js?v=3:173 📊 Primera vela: {time: 1759638000, open: 1.192975, high: 1.193775, low: 1.191315, close: 1.192525}
+stc_chart_fix.js?v=3:174 📊 Última vela: {time: 1759698000, open: 1.167505, high: 1.167605, low: 1.167255, close: 1.167265}
+stc_chart_fix.js?v=3:175 📊 Total velas: 200
+stc_chart_fix.js?v=3:190 ✅ Gráfico LISTO con 200 velas pintadas
+stc_chart_fix.js?v=3:121 ✅ Cargadas 200 velas iniciales
+favicon.ico:1  GET https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/favicon.ico 404 (Not Found)
+stc_chart_fix.js?v=3:172 🎨 Pintando velas en el gráfico...
+stc_chart_fix.js?v=3:173 📊 Primera vela: {time: 1759638000, open: 1.192975, high: 1.193775, low: 1.191315, close: 1.192525}
+stc_chart_fix.js?v=3:174 📊 Última vela: {time: 1759698000, open: 1.167505, high: 1.167605, low: 1.167255, close: 1.167265}
+stc_chart_fix.js?v=3:175 📊 Total velas: 200
+stc_chart_fix.js?v=3:192 🔄 Actualización: 200 velas
+iqoption:192 🔐 Intentando auto-conectar usando secrets...
+stc_chart_fix.js?v=3:172 🎨 Pintando velas en el gráfico...
+stc_chart_fix.js?v=3:173 📊 Primera vela: {time: 1759638000, open: 1.192975, high: 1.193775, low: 1.191315, close: 1.192525}
+stc_chart_fix.js?v=3:174 📊 Última vela: {time: 1759698000, open: 1.167505, high: 1.167605, low: 1.167255, close: 1.167265}
+stc_chart_fix.js?v=3:175 📊 Total velas: 200
+stc_chart_fix.js?v=3:192 🔄 Actualización: 200 velas
+stc_chart_fix.js?v=3:172 🎨 Pintando velas en el gráfico...
+stc_chart_fix.js?v=3:173 📊 Primera vela: {time: 1759638000, open: 1.192975, high: 1.193775, low: 1.191315, close: 1.192525}
+stc_chart_fix.js?v=3:174 📊 Última vela: {time: 1759698000, open: 1.167505, high: 1.167605, low: 1.167255, close: 1.167265}
+stc_chart_fix.js?v=3:175 📊 Total velas: 200
+stc_chart_fix.js?v=3:192 🔄 Actualización: 200 velas
+iqoption:260 🔗 Intentando conectar a IQ Option (PRACTICE)...
+stc_chart_fix.js?v=3:172 🎨 Pintando velas en el gráfico...
+stc_chart_fix.js?v=3:173 📊 Primera vela: {time: 1759638000, open: 1.192975, high: 1.193775, low: 1.191315, close: 1.192525}
+stc_chart_fix.js?v=3:174 📊 Última vela: {time: 1759698000, open: 1.167505, high: 1.167605, low: 1.167255, close: 1.167265}
+stc_chart_fix.js?v=3:175 📊 Total velas: 200
+stc_chart_fix.js?v=3:192 🔄 Actualización: 200 velas
+stc_chart_fix.js?v=3:172 🎨 Pintando velas en el gráfico...
+stc_chart_fix.js?v=3:173 📊 Primera vela: {time: 1759638000, open: 1.192975, high: 1.193775, low: 1.191315, close: 1.192525}
+stc_chart_fix.js?v=3:174 📊 Última vela: {time: 1759698000, open: 1.167505, high: 1.167605, low: 1.167255, close: 1.167265}
+stc_chart_fix.js?v=3:175 📊 Total velas: 200
+stc_chart_fix.js?v=3:192 🔄 Actualización: 200 velas
+stc_chart_fix.js?v=3:172 🎨 Pintando velas en el gráfico...
+stc_chart_fix.js?v=3:173 📊 Primera vela: {time: 1759638000, open: 1.192975, high: 1.193775, low: 1.191315, close: 1.192525}
+stc_chart_fix.js?v=3:174 📊 Última vela: {time: 1759698000, open: 1.167505, high: 1.167605, low: 1.167255, close: 1.167265}
+stc_chart_fix.js?v=3:175 📊 Total velas: 200
+stc_chart_fix.js?v=3:192 🔄 Actualización: 200 velas
+iqoption:197  POST https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/auto-connect 401 (Unauthorized)
+(anonymous) @ iqoption:197
+iqoption:233 ❌ Error de auto-conexión: Error: Error al conectar con IQ Option. Verifica tus credenciales en secrets.
+    at HTMLButtonElement.<anonymous> (iqoption:230:17)
+(anonymous) @ iqoption:233
+stc_chart_fix.js?v=3:172 🎨 Pintando velas en el gráfico...
+stc_chart_fix.js?v=3:173 📊 Primera vela: {time: 1759638000, open: 1.192975, high: 1.193775, low: 1.191315, close: 1.192525}
+stc_chart_fix.js?v=3:174 📊 Última vela: {time: 1759698000, open: 1.167505, high: 1.167605, low: 1.167255, close: 1.167265}
+stc_chart_fix.js?v=3:175 📊 Total velas: 200
+stc_chart_fix.js?v=3:192 🔄 Actualización: 200 velas
+stc_chart_fix.js?v=3:172 🎨 Pintando velas en el gráfico...
+stc_chart_fix.js?v=3:173 📊 Primera vela: {time: 1759638000, open: 1.192975, high: 1.193775, low: 1.191315, close: 1.192525}
+stc_chart_fix.js?v=3:174 📊 Última vela: {time: 1759698000, open: 1.167505, high: 1.167605, low: 1.167255, close: 1.167265}
+stc_chart_fix.js?v=3:175 📊 Total velas: 200
+stc_chart_fix.js?v=3:192 🔄 Actualización: 200 velas
+iqoption:265  POST https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/connect 401 (Unauthorized)
+(anonymous) @ iqoption:265
+iqoption:308 ❌ Error de conexión: Error: Error al conectar con IQ Option. Verifica tus credenciales.
+    at HTMLButtonElement.<anonymous> (iqoption:305:17)
+(anonymous) @ iqoption:308
+stc_chart_fix.js?v=3:172 🎨 Pintando velas en el gráfico...
+stc_chart_fix.js?v=3:173 📊 Primera vela: {time: 1759638000, open: 1.192975, high: 1.193775, low: 1.191315, close: 1.192525}
+stc_chart_fix.js?v=3:174 📊 Última vela: {time: 1759698000, open: 1.167505, high: 1.167605, low: 1.167255, close: 1.167265}
+stc_chart_fix.js?v=3:175 📊 Total velas: 200
+stc_chart_fix.js?v=3:192 🔄 Actualización: 200 velas
+stc_chart_fix.js?v=3:172 🎨 Pintando velas en el gráfico...
+stc_chart_fix.js?v=3:173 📊 Primera vela: {time: 1759638000, open: 1.192975, high: 1.193775, low: 1.191315, close: 1.192525}
+stc_chart_fix.js?v=3:174 📊 Última vela: {time: 1759698000, open: 1.167505, high: 1.167605, low: 1.167255, close: 1.167265}
+stc_chart_fix.js?v=3:175 📊 Total velas: 200
+stc_chart_fix.js?v=3:192 🔄 Actualización: 200 velas
+stc_chart_fix.js?v=3:172 🎨 Pintando velas en el gráfico...
+stc_chart_fix.js?v=3:173 📊 Primera vela: {time: 1759638000, open: 1.192975, high: 1.193775, low: 1.191315, close: 1.192525}
+stc_chart_fix.js?v=3:174 📊 Última vela: {time: 1759698000, open: 1.167505, high: 1.167605, low: 1.167255, close: 1.167265}
+stc_chart_fix.js?v=3:175 📊 Total velas: 200
+stc_chart_fix.js?v=3:192 🔄 Actualización: 200 velas
+stc_chart_fix.js?v=3:172 🎨 Pintando velas en el gráfico...
+stc_chart_fix.js?v=3:173 📊 Primera vela: {time: 1759638000, open: 1.192975, high: 1.193775, low: 1.191315, close: 1.192525}
+stc_chart_fix.js?v=3:174 📊 Última vela: {time: 1759698000, open: 1.167505, high: 1.167605, low: 1.167255, close: 1.167265}
+stc_chart_fix.js?v=3:175 📊 Total velas: 200
+stc_chart_fix.js?v=3:192 🔄 Actualización: 200 velas
+stc_chart_fix.js?v=3:172 🎨 Pintando velas en el gráfico...
+stc_chart_fix.js?v=3:173 📊 Primera vela: {time: 1759638000, open: 1.192975, high: 1.193775, low: 1.191315, close: 1.192525}
+stc_chart_fix.js?v=3:174 📊 Última vela: {time: 1759698000, open: 1.167505, high: 1.167605, low: 1.167255, close: 1.167265}
+stc_chart_fix.js?v=3:175 📊 Total velas: 200
+stc_chart_fix.js?v=3:192 🔄 Actualización: 200 velas

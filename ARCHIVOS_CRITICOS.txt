@@ -1,0 +1,171 @@
+# ========================================
+# ARCHIVOS CRÍTICOS - smarttradetecnologies-ar
+# Lista completa para backup en AWS
+# ========================================
+
+# =============== SERVIDORES PRINCIPALES ===============
+dashboard_server.py                 # ⭐ Servidor principal (Port 5000)
+start_realtime_server.py           # ⭐ Servidor tiempo real (Port 8000)
+start_production.py                # ⭐ Script inicio producción
+populate_production.py             # ⭐ Población datos producción
+
+# =============== AUTENTICACIÓN Y SEGURIDAD ===============
+auth_routes.py                     # ⭐ Sistema de autenticación completo
+email_service.py                   # ⭐ Emails Gmail SMTP
+admin_routes.py                    # ⭐ Panel administración + CRUD usuarios
+bot_routes.py                      # ⭐ API de bots
+
+# =============== BASE DE DATOS ===============
+database.py                        # ⭐ Modelos SQLAlchemy (todas las tablas)
+init_admin.py                      # ⭐ Inicialización admin + tablas
+
+# =============== TRADING Y ESTRATEGIAS ===============
+auto_trading_bot.py                # ⭐ Bot de trading automatizado
+strategy_engine.py                 # ⭐ Motor de 8 estrategias
+dual_gale_manager.py               # Sistema Martingala dual
+dual_gale_bot.py                   # Bot con Martingala
+backtesting_engine.py              # Motor de backtesting
+
+# =============== MARKET DATA ===============
+candles_store.py                   # Almacenamiento de velas
+iq_client.py                       # Cliente IQ Option
+iq_routes_redis_patch.py           # API IQ Option con Redis
+
+# =============== SERVICIOS ===============
+services/
+  └── candle_service.py            # Servicio de velas
+
+# =============== SERVIDOR TIEMPO REAL ===============
+realtime_trading/
+  └── realtime_server.py           # FastAPI WebSocket server
+
+# =============== BACKTEST SYSTEM ===============
+backtest/
+  ├── backtest_server.py           # Servidor Flask backtest
+  ├── backtest_dashboard.html      # Dashboard 3D glassmorphism
+  └── INSTRUCCIONES.md             # Guía de uso
+
+# =============== TEMPLATES HTML ===============
+templates/
+  ├── landing.html                 # Landing page principal
+  ├── login.html                   # Página de login
+  ├── trading_charts.html          # Pantalla Venezuela
+  ├── forgot_password.html         # Recuperación password
+  ├── reset_password.html          # Reset password
+  ├── dashboard_pro.html           # Dashboard profesional
+  ├── bot_manager.html             # Gestión de bots
+  ├── signals_panel.html           # Panel señales multi-par
+  ├── dashboard_realtime.html      # Dashboard tiempo real
+  ├── welcome.html                 # Bienvenida
+  ├── admin/
+  │   ├── users.html               # ⭐ CRUD Usuarios
+  │   ├── dashboard.html           # Dashboard admin
+  │   ├── promo_codes.html         # Códigos promocionales
+  │   ├── bots.html                # Gestión bots admin
+  │   ├── strategies.html          # Estrategias de trading
+  │   ├── payments.html            # Pagos
+  │   └── pricing.html             # Precios
+  └── auth/
+      └── verify_result.html       # Resultado verificación email
+
+# =============== STATIC FILES (PWA) ===============
+static/
+  ├── sw.js                        # ⭐ Service Worker v3-admin-crud
+  ├── manifest.json                # PWA Manifest
+  ├── venezuela-flag.jpg           # Bandera Venezuela (8 estrellas)
+  ├── icons/                       # Todos los iconos PWA (8 tamaños)
+  │   ├── icon-72x72.png
+  │   ├── icon-96x96.png
+  │   ├── icon-128x128.png
+  │   ├── icon-144x144.png
+  │   ├── icon-152x152.png
+  │   ├── icon-192x192.png
+  │   ├── icon-384x384.png
+  │   └── icon-512x512.png
+  └── js/
+      ├── stc-charts.js            # Gráficos profesionales
+      ├── lightweight-charts.js    # Librería de gráficos
+      ├── notifications.js
+      └── dashboard/
+          ├── index.js             # Dashboard principal
+          ├── services/
+          │   └── apiClient.js     # Cliente API
+          ├── components/
+          │   ├── countdownTimer.js
+          │   ├── timeframeSelector.js
+          │   ├── symbolSelector.js
+          │   └── infoPanel.js
+          └── modules/
+              ├── chart.js         # Módulo de gráficos
+              └── state.js         # Gestión de estado
+
+# =============== UTILIDADES ===============
+memory_redis_server.py             # Servidor Redis en memoria
+backfill_candles.py                # Rellenar velas históricas
+fill_market_data.py                # Poblar market data
+create_admin.py                    # Crear admin manual
+verify_user_production.py          # Verificar usuario manual
+test_password_recovery.py          # ⭐ Tests password recovery
+
+# =============== CONFIGURACIÓN ===============
+requirements.txt                   # ⭐ Dependencias Python
+replit.nix                         # Configuración Nix
+.replit                            # Config Replit
+pyproject.toml                     # Config Python project
+
+# =============== DOCUMENTACIÓN ===============
+replit.md                          # ⭐ Arquitectura y preferencias del sistema
+SISTEMA_COMPLETO.md                # ⭐ Documentación técnica detallada
+RECUPERACION_CONTRASENA.md         # Sistema password recovery
+ADMIN_CRUD_PRODUCCION.md           # CRUD usuarios troubleshooting
+BACKUP_AWS.md                      # Instrucciones backup AWS
+ARCHIVOS_CRITICOS.txt              # Este archivo
+
+# =============== TESTS (OPCIONAL) ===============
+tests/
+  ├── test_complete_system.py
+  ├── test_iq_connection.py
+  └── test_candles.py
+
+# ========================================
+# ARCHIVOS QUE NO DEBEN INCLUIRSE
+# ========================================
+# __pycache__/                     # Cache Python
+# .pythonlibs/                     # Librerías instaladas
+# node_modules/                    # Dependencias Node
+# attached_assets/                 # Screenshots temporales
+# *.pyc                            # Archivos compilados
+# .git/                            # Git (opcional)
+# venv/                            # Virtual env
+# .env                             # Variables locales (usar secrets en AWS)
+
+# ========================================
+# VARIABLES DE ENTORNO REQUERIDAS (AWS)
+# ========================================
+# DATABASE_URL                     # PostgreSQL URL
+# GMAIL_USER                       # Email Gmail
+# GMAIL_APP_PASSWORD               # Password app Gmail
+# IQ_EMAIL                         # Email IQ Option
+# IQ_PASSWORD                      # Password IQ Option
+# IQ_BALANCE_TYPE                  # PRACTICE o REAL
+# TWELVEDATA_API_KEY               # API Twelve Data
+# FINNHUB_API_KEY                  # API Finnhub
+# REPLIT_DEPLOYMENT=1              # Indica producción
+
+# ========================================
+# BACKUP DE BASE DE DATOS
+# ========================================
+# IMPORTANTE: Hacer dump de PostgreSQL antes del backup
+# Comando: pg_dump $DATABASE_URL > backup_database.sql
+# Incluir archivo backup_database.sql en el backup
+
+# ========================================
+# TOTAL ARCHIVOS CRÍTICOS
+# ========================================
+# Python Core: ~30 archivos
+# Templates HTML: ~25 archivos
+# JavaScript: ~15 archivos
+# Configuración: ~5 archivos
+# Documentación: ~6 archivos
+# Static (iconos, imágenes): ~10 archivos
+# TOTAL: ~91 archivos + carpetas

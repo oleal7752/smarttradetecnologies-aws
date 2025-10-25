@@ -1,0 +1,64 @@
+22:43:09.982 Uncaught (in promise) TypeError: can't access property "classList", tickLight is null
+    updateLiveCandle https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/static/demo/candlestick.html:737
+    init https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/static/demo/candlestick.html:1316
+    setInterval handler*init https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/static/demo/candlestick.html:1313
+    async* https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/static/demo/candlestick.html:1412
+7 candlestick.html:737:13
+22:43:22.189 🔄 Cambiando a EUR/USD... candlestick.html:1384:29
+22:43:22.189 🔄 Cargando velas de EUR/USD... candlestick.html:889:25
+22:43:22.380 🔍 Primeras 3 velas: 
+Array(3) [ 1761110700, 1761111000, 1761111300 ]
+candlestick.html:876:25
+22:43:22.381 🔍 Últimas 3 velas: 
+Array(3) [ 1761139800, 1761140100, 1761140400 ]
+candlestick.html:877:25
+22:43:22.547 🔍 Primeras 3 velas: 
+Array(3) [ 1761110700, 1761111000, 1761111300 ]
+candlestick.html:876:25
+22:43:22.547 🔍 Últimas 3 velas: 
+Array(3) [ 1761139800, 1761140100, 1761140400 ]
+candlestick.html:877:25
+22:43:22.547 ✅ 100 velas históricas + 0 velas actuales candlestick.html:949:25
+22:43:22.547 📊 Primera vela: 
+Object { time: 1761110700, open: 1.16038, high: 1.1605, low: 1.16037, close: 1.16047 }
+candlestick.html:950:25
+22:43:22.547 📊 Última vela (ACTUAL): 
+Object { time: 1761140400, open: 1.1608, high: 1.16097, low: 1.1608, close: 1.16096 }
+candlestick.html:951:25
+22:43:22.549 🎯 2 señales CALL/PUT generadas (Estrategia: Análisis de Probabilidades) candlestick.html:1243:21
+22:43:22.549 ✅ 100 velas cargadas candlestick.html:979:25
+22:43:24.043 Uncaught (in promise) TypeError: can't access property "classList", tickLight is null
+    updateLiveCandle https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/static/demo/candlestick.html:737
+    init https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/static/demo/candlestick.html:1316
+    setInterval handler*init https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/static/demo/candlestick.html:1313
+    async* https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/static/demo/candlestick.html:1412
+candlestick.html:737:13
+22:43:24.093 🔄 Cambiando a EUR/JPY... candlestick.html:1384:29
+22:43:24.093 🔄 Cargando velas de EUR/JPY... candlestick.html:889:25
+22:43:24.262 🔍 Primeras 3 velas: 
+Array(3) [ 1761110700, 1761111000, 1761111300 ]
+candlestick.html:876:25
+22:43:24.262 🔍 Últimas 3 velas: 
+Array(3) [ 1761139800, 1761140100, 1761140400 ]
+candlestick.html:877:25
+22:43:24.407 🔍 Primeras 3 velas: 
+Array(3) [ 1761110700, 1761111000, 1761111300 ]
+candlestick.html:876:25
+22:43:24.408 🔍 Últimas 3 velas: 
+Array(3) [ 1761139800, 1761140100, 1761140400 ]
+candlestick.html:877:25
+22:43:24.408 ✅ 100 velas históricas + 0 velas actuales candlestick.html:949:25
+22:43:24.408 📊 Primera vela: 
+Object { time: 1761110700, open: 176.284, high: 176.304, low: 176.28101, close: 176.28999 }
+candlestick.html:950:25
+22:43:24.408 📊 Última vela (ACTUAL): 
+Object { time: 1761140400, open: 175.996, high: 176.029007, low: 175.996, close: 176.0079956 }
+candlestick.html:951:25
+22:43:24.410 🎯 26 señales CALL/PUT generadas (Estrategia: Análisis de Probabilidades) candlestick.html:1243:21
+22:43:24.410 ✅ 100 velas cargadas candlestick.html:979:25
+22:43:26.048 Uncaught (in promise) TypeError: can't access property "classList", tickLight is null
+    updateLiveCandle https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/static/demo/candlestick.html:737
+    init https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/static/demo/candlestick.html:1316
+    setInterval handler*init https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/static/demo/candlestick.html:1313
+    async* https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/static/demo/candlestick.html:1412
+2 candlestick.html:737:13

@@ -1,0 +1,1376 @@
+eruda.js:2 🚀 Iniciando STC Trading Dashboard...
+eruda.js:2 ✅ Gráfico inicializado correctamente
+workspace_iframe.html?initialPath=%2F&id=%3Ari9%3A:1 Unrecognized feature: 'ambient-light-sensor'.
+workspace_iframe.html?initialPath=%2F&id=%3Ari9%3A:1 Unrecognized feature: 'battery'.
+workspace_iframe.html?initialPath=%2F&id=%3Ari9%3A:1 Unrecognized feature: 'execution-while-not-rendered'.
+workspace_iframe.html?initialPath=%2F&id=%3Ari9%3A:1 Unrecognized feature: 'execution-while-out-of-viewport'.
+workspace_iframe.html?initialPath=%2F&id=%3Ari9%3A:1 Unrecognized feature: 'layout-animations'.
+workspace_iframe.html?initialPath=%2F&id=%3Ari9%3A:1 Unrecognized feature: 'legacy-image-formats'.
+workspace_iframe.html?initialPath=%2F&id=%3Ari9%3A:1 Unrecognized feature: 'navigation-override'.
+workspace_iframe.html?initialPath=%2F&id=%3Ari9%3A:1 Unrecognized feature: 'oversized-images'.
+workspace_iframe.html?initialPath=%2F&id=%3Ari9%3A:1 Unrecognized feature: 'publickey-credentials'.
+workspace_iframe.html?initialPath=%2F&id=%3Ari9%3A:1 Unrecognized feature: 'speaker-selection'.
+workspace_iframe.html?initialPath=%2F&id=%3Ari9%3A:1 Unrecognized feature: 'unoptimized-images'.
+workspace_iframe.html?initialPath=%2F&id=%3Ari9%3A:1 Unrecognized feature: 'unsized-media'.
+workspace_iframe.html?initialPath=%2F&id=%3Ari9%3A:1 Allow attribute will take precedence over 'allowfullscreen'.
+workspace_iframe.html?initialPath=%2F&id=%3Ari9%3A:1 Allow attribute will take precedence over 'allowpaymentrequest'.
+eruda.js:2 🎛️ Event handlers configurados
+eruda.js:2 📊 Cargando símbolo inicial: BTCUSD
+eruda.js:2 📊 Cargando velas para BTCUSD (M5)...
+eruda.js:2 📊 Cargando velas desde: Finnhub (Real)
+eruda.js:2 🔄 Auto-update iniciado
+eruda.js:2 ✅ Dashboard inicializado
+eruda.js:2 🔄 Cambiando fuente de datos a: olymptrade
+eruda.js:2 🔄 Cambiando fuente de datos a: iq
+eruda.js:2 🔄 Cambiando fuente de datos a: finnhub
+eruda.js:2 🔄 Cambiando fuente de datos a: olymptrade
+eruda.js:2 🔄 Cambiando fuente de datos a: iq
+eruda.js:2 🔄 Cambiando fuente de datos a: finnhub
+eruda.js:2 💰 Balance: $10000.00 (PRACTICE)
+eruda.js:2 📊 Cargando velas para BTCUSD (M5)...
+eruda.js:2 📊 Cargando velas desde: Finnhub (Real)
+eruda.js:2 💰 Balance: $10000.00 (PRACTICE)
+eruda.js:2 💰 Balance: $10000.00 (PRACTICE)
+eruda.js:2 📊 Cargando velas para BTCUSD (M5)...
+eruda.js:2 📊 Cargando velas desde: Finnhub (Real)
+eruda.js:2 💰 Balance: $10000.00 (PRACTICE)
+eruda.js:2 🔄 Cambiando fuente de datos a: iq
+eruda.js:2 🔄 Cambiando fuente de datos a: olymptrade
+eruda.js:2 💰 Balance: $10000.00 (PRACTICE)
+eruda.js:2 📊 Cargando velas para BTCUSD (M5)...
+eruda.js:2 📊 Cargando velas desde: OlympTrade
+eruda.js:2  GET https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/olymptrade/candles?symbol=BTCUSD&timeframe=M5&limit=200 404 (Not Found)
+window.fetch @ VM733 eruda.js:2
+apply @ VM735 injected.js:278
+request @ VM753 dashboard:504
+getCandles @ VM753 dashboard:556
+loadCandles @ VM753 dashboard:675
+(anonymous) @ VM753 dashboard:857
+setInterval
+startAutoUpdate @ VM753 dashboard:855
+initApp @ VM753 dashboard:621
+setTimeout
+(anonymous) @ VM753 dashboard:1106
+eruda.js:2 ❌ API Error /api/olymptrade/candles?symbol=BTCUSD&timeframe=M5&limit=200: HTTP 404: Not Found
+Mt.forEach.n.<computed> @ VM733 eruda.js:2
+request @ VM753 dashboard:519
+await in request
+getCandles @ VM753 dashboard:556
+loadCandles @ VM753 dashboard:675
+(anonymous) @ VM753 dashboard:857
+setInterval
+startAutoUpdate @ VM753 dashboard:855
+initApp @ VM753 dashboard:621
+setTimeout
+(anonymous) @ VM753 dashboard:1106
+eruda.js:2 ⚠️ Velas no disponibles: HTTP 404: Not Found
+Mt.forEach.n.<computed> @ VM733 eruda.js:2
+getCandles @ VM753 dashboard:559
+await in getCandles
+loadCandles @ VM753 dashboard:675
+(anonymous) @ VM753 dashboard:857
+setInterval
+startAutoUpdate @ VM753 dashboard:855
+initApp @ VM753 dashboard:621
+setTimeout
+(anonymous) @ VM753 dashboard:1106
+eruda.js:2 💰 Balance: $10000.00 (PRACTICE)
+content-all.js:1 Uncaught (in promise) Error: Could not establish connection. Receiving end does not exist.
+    at y (content-all.js:1:56614)
+y @ content-all.js:1
+eruda.js:2 💰 Balance: $10000.00 (PRACTICE)
+eruda.js:2 📊 Cargando velas para BTCUSD (M5)...
+eruda.js:2 📊 Cargando velas desde: OlympTrade
+eruda.js:2  GET https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/olymptrade/candles?symbol=BTCUSD&timeframe=M5&limit=200 404 (Not Found)
+window.fetch @ VM733 eruda.js:2
+apply @ VM735 injected.js:278
+request @ VM753 dashboard:504
+getCandles @ VM753 dashboard:556
+loadCandles @ VM753 dashboard:675
+(anonymous) @ VM753 dashboard:857
+setInterval
+startAutoUpdate @ VM753 dashboard:855
+initApp @ VM753 dashboard:621
+setTimeout
+(anonymous) @ VM753 dashboard:1106
+eruda.js:2 ❌ API Error /api/olymptrade/candles?symbol=BTCUSD&timeframe=M5&limit=200: HTTP 404: Not Found
+Mt.forEach.n.<computed> @ VM733 eruda.js:2
+request @ VM753 dashboard:519
+await in request
+getCandles @ VM753 dashboard:556
+loadCandles @ VM753 dashboard:675
+(anonymous) @ VM753 dashboard:857
+setInterval
+startAutoUpdate @ VM753 dashboard:855
+initApp @ VM753 dashboard:621
+setTimeout
+(anonymous) @ VM753 dashboard:1106
+eruda.js:2 ⚠️ Velas no disponibles: HTTP 404: Not Found
+Mt.forEach.n.<computed> @ VM733 eruda.js:2
+getCandles @ VM753 dashboard:559
+await in getCandles
+loadCandles @ VM753 dashboard:675
+(anonymous) @ VM753 dashboard:857
+setInterval
+startAutoUpdate @ VM753 dashboard:855
+initApp @ VM753 dashboard:621
+setTimeout
+(anonymous) @ VM753 dashboard:1106
+eruda.js:2 💰 Balance: $10000.00 (PRACTICE)
+eruda.js:2 💰 Balance: $10000.00 (PRACTICE)
+eruda.js:2 📊 Cargando velas para BTCUSD (M5)...
+eruda.js:2 📊 Cargando velas desde: OlympTrade
+eruda.js:2 💰 Balance: $10000.00 (PRACTICE)
+eruda.js:2  GET https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/olymptrade/candles?symbol=BTCUSD&timeframe=M5&limit=200 404 (Not Found)
+window.fetch @ VM733 eruda.js:2
+apply @ VM735 injected.js:278
+request @ VM753 dashboard:504
+getCandles @ VM753 dashboard:556
+loadCandles @ VM753 dashboard:675
+(anonymous) @ VM753 dashboard:857
+setInterval
+startAutoUpdate @ VM753 dashboard:855
+initApp @ VM753 dashboard:621
+setTimeout
+(anonymous) @ VM753 dashboard:1106
+eruda.js:2 ❌ API Error /api/olymptrade/candles?symbol=BTCUSD&timeframe=M5&limit=200: HTTP 404: Not Found
+Mt.forEach.n.<computed> @ VM733 eruda.js:2
+request @ VM753 dashboard:519
+await in request
+getCandles @ VM753 dashboard:556
+loadCandles @ VM753 dashboard:675
+(anonymous) @ VM753 dashboard:857
+setInterval
+startAutoUpdate @ VM753 dashboard:855
+initApp @ VM753 dashboard:621
+setTimeout
+(anonymous) @ VM753 dashboard:1106
+eruda.js:2 ⚠️ Velas no disponibles: HTTP 404: Not Found
+Mt.forEach.n.<computed> @ VM733 eruda.js:2
+getCandles @ VM753 dashboard:559
+await in getCandles
+loadCandles @ VM753 dashboard:675
+(anonymous) @ VM753 dashboard:857
+setInterval
+startAutoUpdate @ VM753 dashboard:855
+initApp @ VM753 dashboard:621
+setTimeout
+(anonymous) @ VM753 dashboard:1106
+eruda.js:2 💰 Balance: $10000.00 (PRACTICE)
+eruda.js:2 📊 Cargando velas para BTCUSD (M5)...
+eruda.js:2 📊 Cargando velas desde: OlympTrade
+eruda.js:2  GET https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/olymptrade/candles?symbol=BTCUSD&timeframe=M5&limit=200 404 (Not Found)
+window.fetch @ VM733 eruda.js:2
+apply @ VM735 injected.js:278
+request @ VM753 dashboard:504
+getCandles @ VM753 dashboard:556
+loadCandles @ VM753 dashboard:675
+(anonymous) @ VM753 dashboard:857
+setInterval
+startAutoUpdate @ VM753 dashboard:855
+initApp @ VM753 dashboard:621
+setTimeout
+(anonymous) @ VM753 dashboard:1106
+eruda.js:2 ❌ API Error /api/olymptrade/candles?symbol=BTCUSD&timeframe=M5&limit=200: HTTP 404: Not Found
+Mt.forEach.n.<computed> @ VM733 eruda.js:2
+request @ VM753 dashboard:519
+await in request
+getCandles @ VM753 dashboard:556
+loadCandles @ VM753 dashboard:675
+(anonymous) @ VM753 dashboard:857
+setInterval
+startAutoUpdate @ VM753 dashboard:855
+initApp @ VM753 dashboard:621
+setTimeout
+(anonymous) @ VM753 dashboard:1106
+eruda.js:2 ⚠️ Velas no disponibles: HTTP 404: Not Found
+Mt.forEach.n.<computed> @ VM733 eruda.js:2
+getCandles @ VM753 dashboard:559
+await in getCandles
+loadCandles @ VM753 dashboard:675
+(anonymous) @ VM753 dashboard:857
+setInterval
+startAutoUpdate @ VM753 dashboard:855
+initApp @ VM753 dashboard:621
+setTimeout
+(anonymous) @ VM753 dashboard:1106
+eruda.js:2 💰 Balance: $10000.00 (PRACTICE)
+eruda.js:2 💰 Balance: $10000.00 (PRACTICE)
+eruda.js:2 📊 Cargando velas para BTCUSD (M5)...
+eruda.js:2 📊 Cargando velas desde: OlympTrade
+eruda.js:2 💰 Balance: $10000.00 (PRACTICE)
+eruda.js:2  GET https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/olymptrade/candles?symbol=BTCUSD&timeframe=M5&limit=200 404 (Not Found)
+window.fetch @ VM733 eruda.js:2
+apply @ VM735 injected.js:278
+request @ VM753 dashboard:504
+getCandles @ VM753 dashboard:556
+loadCandles @ VM753 dashboard:675
+(anonymous) @ VM753 dashboard:857
+setInterval
+startAutoUpdate @ VM753 dashboard:855
+initApp @ VM753 dashboard:621
+setTimeout
+(anonymous) @ VM753 dashboard:1106
+eruda.js:2 ❌ API Error /api/olymptrade/candles?symbol=BTCUSD&timeframe=M5&limit=200: HTTP 404: Not Found
+Mt.forEach.n.<computed> @ VM733 eruda.js:2
+request @ VM753 dashboard:519
+await in request
+getCandles @ VM753 dashboard:556
+loadCandles @ VM753 dashboard:675
+(anonymous) @ VM753 dashboard:857
+setInterval
+startAutoUpdate @ VM753 dashboard:855
+initApp @ VM753 dashboard:621
+setTimeout
+(anonymous) @ VM753 dashboard:1106
+eruda.js:2 ⚠️ Velas no disponibles: HTTP 404: Not Found
+Mt.forEach.n.<computed> @ VM733 eruda.js:2
+getCandles @ VM753 dashboard:559
+await in getCandles
+loadCandles @ VM753 dashboard:675
+(anonymous) @ VM753 dashboard:857
+setInterval
+startAutoUpdate @ VM753 dashboard:855
+initApp @ VM753 dashboard:621
+setTimeout
+(anonymous) @ VM753 dashboard:1106
+eruda.js:2 💰 Balance: $10000.00 (PRACTICE)
+eruda.js:2 📊 Cargando velas para BTCUSD (M5)...
+eruda.js:2 📊 Cargando velas desde: OlympTrade
+eruda.js:2  GET https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/olymptrade/candles?symbol=BTCUSD&timeframe=M5&limit=200 404 (Not Found)
+window.fetch @ VM733 eruda.js:2
+apply @ VM735 injected.js:278
+request @ VM753 dashboard:504
+getCandles @ VM753 dashboard:556
+loadCandles @ VM753 dashboard:675
+(anonymous) @ VM753 dashboard:857
+setInterval
+startAutoUpdate @ VM753 dashboard:855
+initApp @ VM753 dashboard:621
+setTimeout
+(anonymous) @ VM753 dashboard:1106
+eruda.js:2 ❌ API Error /api/olymptrade/candles?symbol=BTCUSD&timeframe=M5&limit=200: HTTP 404: Not Found
+Mt.forEach.n.<computed> @ VM733 eruda.js:2
+request @ VM753 dashboard:519
+await in request
+getCandles @ VM753 dashboard:556
+loadCandles @ VM753 dashboard:675
+(anonymous) @ VM753 dashboard:857
+setInterval
+startAutoUpdate @ VM753 dashboard:855
+initApp @ VM753 dashboard:621
+setTimeout
+(anonymous) @ VM753 dashboard:1106
+eruda.js:2 ⚠️ Velas no disponibles: HTTP 404: Not Found
+Mt.forEach.n.<computed> @ VM733 eruda.js:2
+getCandles @ VM753 dashboard:559
+await in getCandles
+loadCandles @ VM753 dashboard:675
+(anonymous) @ VM753 dashboard:857
+setInterval
+startAutoUpdate @ VM753 dashboard:855
+initApp @ VM753 dashboard:621
+setTimeout
+(anonymous) @ VM753 dashboard:1106
+eruda.js:2 💰 Balance: $10000.00 (PRACTICE)
+eruda.js:2 💰 Balance: $10000.00 (PRACTICE)
+eruda.js:2 🔄 Cambiando fuente de datos a: finnhub
+eruda.js:2 📊 Cargando velas para BTCUSD (M5)...
+eruda.js:2 📊 Cargando velas desde: Finnhub (Real)
+eruda.js:2 💰 Balance: $10000.00 (PRACTICE)
+eruda.js:2 💰 Balance: $10000.00 (PRACTICE)
+eruda.js:2 📊 Cargando velas para BTCUSD (M5)...
+eruda.js:2 📊 Cargando velas desde: Finnhub (Real)
+eruda.js:2 💰 Balance: $10000.00 (PRACTICE)
+eruda.js:2 💰 Balance: $10000.00 (PRACTICE)
+eruda.js:2 📊 Cargando velas para BTCUSD (M5)...
+eruda.js:2 📊 Cargando velas desde: Finnhub (Real)
+eruda.js:2 💰 Balance: $10000.00 (PRACTICE)
+eruda.js:2 💰 Balance: $10000.00 (PRACTICE)
+eruda.js:2 📊 Cargando velas para BTCUSD (M5)...
+eruda.js:2 📊 Cargando velas desde: Finnhub (Real)
+eruda.js:2 💰 Balance: $10000.00 (PRACTICE)
+eruda.js:2 💰 Balance: $10000.00 (PRACTICE)
+eruda.js:2 📊 Cargando velas para BTCUSD (M5)...
+eruda.js:2 📊 Cargando velas desde: Finnhub (Real)
+eruda.js:2 💰 Balance: $10000.00 (PRACTICE)
+eruda.js:2 💰 Balance: $10000.00 (PRACTICE)
+eruda.js:2 📊 Cargando velas para BTCUSD (M5)...
+eruda.js:2 📊 Cargando velas desde: Finnhub (Real)
+eruda.js:2 💰 Balance: $10000.00 (PRACTICE)
+eruda.js:2 💰 Balance: $10000.00 (PRACTICE)
+eruda.js:2 📊 Cargando velas para BTCUSD (M5)...
+eruda.js:2 📊 Cargando velas desde: Finnhub (Real)
+eruda.js:2 💰 Balance: $10000.00 (PRACTICE)
+eruda.js:2 💰 Balance: $10000.00 (PRACTICE)
+eruda.js:2 📊 Cargando velas para BTCUSD (M5)...
+eruda.js:2 📊 Cargando velas desde: Finnhub (Real)
+eruda.js:2 💰 Balance: $10000.00 (PRACTICE)
+eruda.js:2 💰 Balance: $10000.00 (PRACTICE)
+eruda.js:2 📊 Cargando velas para BTCUSD (M5)...
+eruda.js:2 📊 Cargando velas desde: Finnhub (Real)
+eruda.js:2 💰 Balance: $10000.00 (PRACTICE)
+eruda.js:2 💰 Balance: $10000.00 (PRACTICE)
+eruda.js:2 📊 Cargando velas para BTCUSD (M5)...
+eruda.js:2 📊 Cargando velas desde: Finnhub (Real)
+eruda.js:2 💰 Balance: $10000.00 (PRACTICE)
+eruda.js:2 💰 Balance: $10000.00 (PRACTICE)
+_app-f5d9360b2d085e62.js:34 [Coframe] Error initializing SDK Error: Timeout waiting for command after 3600000ms for:
+e=>!("pageHydrated"!==e.emit)
+    at cf.js?config=%257B%2522projectId%2522%253A%252268c9ad4d4cddb58cf3a1f93d%2522%252C%2522startTime%2522%253A1759670992188%252C%2522timeoutMs%2522%253A1000%252C%2522currentUrl%2522%253A%2522https%253A%252F%252Freplit.com%252F%2540oleal7752%252FSmartTradeAcademy%2522%252C%2522waitForHydration%2522%253Atrue%252C%2522trackingOnly%2522%253Atrue%257D:10:2345
+    at n (_app-f5d9360b2d085e62.js:34:2959)
+(anonymous) @ _app-f5d9360b2d085e62.js:34
+(anonymous) @ cf.js?config=%257B%2522projectId%2522%253A%252268c9ad4d4cddb58cf3a1f93d%2522%252C%2522startTime%2522%253A1759670992188%252C%2522timeoutMs%2522%253A1000%252C%2522currentUrl%2522%253A%2522https%253A%252F%252Freplit.com%252F%2540oleal7752%252FSmartTradeAcademy%2522%252C%2522waitForHydration%2522%253Atrue%252C%2522trackingOnly%2522%253Atrue%257D:10
+recaptcha__es_419.js:483 The source list for the Content Security Policy directive 'default-src' contains an invalid source: ''unsafe-dynamic''. It will be ignored.
+(anonymous) @ recaptcha__es_419.js:483
+rkP.render @ recaptcha__es_419.js:1529
+(anonymous) @ recaptcha__es_419.js:202
+(anonymous) @ recaptcha__es_419.js:668
+(anonymous) @ recaptcha__es_419.js:190
+J.F @ recaptcha__es_419.js:1546
+Y.W @ recaptcha__es_419.js:255
+(anonymous) @ recaptcha__es_419.js:255
+(anonymous) @ recaptcha__es_419.js:752
+k.next @ recaptcha__es_419.js:667
+P @ recaptcha__es_419.js:753
+Promise.then
+H @ recaptcha__es_419.js:754
+(anonymous) @ recaptcha__es_419.js:754
+(anonymous) @ recaptcha__es_419.js:754
+(anonymous) @ recaptcha__es_419.js:329
+(anonymous) @ recaptcha__es_419.js:255
+(anonymous) @ recaptcha__es_419.js:641
+pD @ recaptcha__es_419.js:1015
+D @ recaptcha__es_419.js:466
+n @ _app-f5d9360b2d085e62.js:34
+recaptcha__es_419.js:483 The Content-Security-Policy directive 'default-src' contains 'report-uri' as a source expression. Did you want to add it as a directive and forget a semicolon?
+(anonymous) @ recaptcha__es_419.js:483
+rkP.render @ recaptcha__es_419.js:1529
+(anonymous) @ recaptcha__es_419.js:202
+(anonymous) @ recaptcha__es_419.js:668
+(anonymous) @ recaptcha__es_419.js:190
+J.F @ recaptcha__es_419.js:1546
+Y.W @ recaptcha__es_419.js:255
+(anonymous) @ recaptcha__es_419.js:255
+(anonymous) @ recaptcha__es_419.js:752
+k.next @ recaptcha__es_419.js:667
+P @ recaptcha__es_419.js:753
+Promise.then
+H @ recaptcha__es_419.js:754
+(anonymous) @ recaptcha__es_419.js:754
+(anonymous) @ recaptcha__es_419.js:754
+(anonymous) @ recaptcha__es_419.js:329
+(anonymous) @ recaptcha__es_419.js:255
+(anonymous) @ recaptcha__es_419.js:641
+pD @ recaptcha__es_419.js:1015
+D @ recaptcha__es_419.js:466
+n @ _app-f5d9360b2d085e62.js:34
+recaptcha__es_419.js:483 The source list for Content Security Policy directive 'default-src' contains a source with an invalid path: '/api/4509669501698048/security/?sentry_key=7eb3d90eb4660416caf507087367e67e'. The query component, including the '?', will be ignored.
+(anonymous) @ recaptcha__es_419.js:483
+rkP.render @ recaptcha__es_419.js:1529
+(anonymous) @ recaptcha__es_419.js:202
+(anonymous) @ recaptcha__es_419.js:668
+(anonymous) @ recaptcha__es_419.js:190
+J.F @ recaptcha__es_419.js:1546
+Y.W @ recaptcha__es_419.js:255
+(anonymous) @ recaptcha__es_419.js:255
+(anonymous) @ recaptcha__es_419.js:752
+k.next @ recaptcha__es_419.js:667
+P @ recaptcha__es_419.js:753
+Promise.then
+H @ recaptcha__es_419.js:754
+(anonymous) @ recaptcha__es_419.js:754
+(anonymous) @ recaptcha__es_419.js:754
+(anonymous) @ recaptcha__es_419.js:329
+(anonymous) @ recaptcha__es_419.js:255
+(anonymous) @ recaptcha__es_419.js:641
+pD @ recaptcha__es_419.js:1015
+D @ recaptcha__es_419.js:466
+n @ _app-f5d9360b2d085e62.js:34
+recaptcha__es_419.js:540 The source list for the Content Security Policy directive 'default-src' contains an invalid source: ''unsafe-dynamic''. It will be ignored.
+(anonymous) @ recaptcha__es_419.js:540
+(anonymous) @ recaptcha__es_419.js:739
+(anonymous) @ recaptcha__es_419.js:697
+(anonymous) @ recaptcha__es_419.js:752
+k.next @ recaptcha__es_419.js:667
+(anonymous) @ recaptcha__es_419.js:754
+(anonymous) @ recaptcha__es_419.js:754
+(anonymous) @ recaptcha__es_419.js:329
+(anonymous) @ recaptcha__es_419.js:697
+(anonymous) @ recaptcha__es_419.js:607
+(anonymous) @ recaptcha__es_419.js:752
+k.next @ recaptcha__es_419.js:667
+(anonymous) @ recaptcha__es_419.js:754
+(anonymous) @ recaptcha__es_419.js:754
+(anonymous) @ recaptcha__es_419.js:329
+(anonymous) @ recaptcha__es_419.js:607
+(anonymous) @ recaptcha__es_419.js:256
+Promise.then
+(anonymous) @ recaptcha__es_419.js:256
+(anonymous) @ recaptcha__es_419.js:752
+k.next @ recaptcha__es_419.js:667
+P @ recaptcha__es_419.js:753
+Promise.then
+H @ recaptcha__es_419.js:754
+(anonymous) @ recaptcha__es_419.js:754
+(anonymous) @ recaptcha__es_419.js:754
+(anonymous) @ recaptcha__es_419.js:329
+(anonymous) @ recaptcha__es_419.js:255
+(anonymous) @ recaptcha__es_419.js:641
+pD @ recaptcha__es_419.js:1015
+D @ recaptcha__es_419.js:466
+n @ _app-f5d9360b2d085e62.js:34
+recaptcha__es_419.js:540 The Content-Security-Policy directive 'default-src' contains 'report-uri' as a source expression. Did you want to add it as a directive and forget a semicolon?
+(anonymous) @ recaptcha__es_419.js:540
+(anonymous) @ recaptcha__es_419.js:739
+(anonymous) @ recaptcha__es_419.js:697
+(anonymous) @ recaptcha__es_419.js:752
+k.next @ recaptcha__es_419.js:667
+(anonymous) @ recaptcha__es_419.js:754
+(anonymous) @ recaptcha__es_419.js:754
+(anonymous) @ recaptcha__es_419.js:329
+(anonymous) @ recaptcha__es_419.js:697
+(anonymous) @ recaptcha__es_419.js:607
+(anonymous) @ recaptcha__es_419.js:752
+k.next @ recaptcha__es_419.js:667
+(anonymous) @ recaptcha__es_419.js:754
+(anonymous) @ recaptcha__es_419.js:754
+(anonymous) @ recaptcha__es_419.js:329
+(anonymous) @ recaptcha__es_419.js:607
+(anonymous) @ recaptcha__es_419.js:256
+Promise.then
+(anonymous) @ recaptcha__es_419.js:256
+(anonymous) @ recaptcha__es_419.js:752
+k.next @ recaptcha__es_419.js:667
+P @ recaptcha__es_419.js:753
+Promise.then
+H @ recaptcha__es_419.js:754
+(anonymous) @ recaptcha__es_419.js:754
+(anonymous) @ recaptcha__es_419.js:754
+(anonymous) @ recaptcha__es_419.js:329
+(anonymous) @ recaptcha__es_419.js:255
+(anonymous) @ recaptcha__es_419.js:641
+pD @ recaptcha__es_419.js:1015
+D @ recaptcha__es_419.js:466
+n @ _app-f5d9360b2d085e62.js:34
+recaptcha__es_419.js:540 The source list for Content Security Policy directive 'default-src' contains a source with an invalid path: '/api/4509669501698048/security/?sentry_key=7eb3d90eb4660416caf507087367e67e'. The query component, including the '?', will be ignored.
+(anonymous) @ recaptcha__es_419.js:540
+(anonymous) @ recaptcha__es_419.js:739
+(anonymous) @ recaptcha__es_419.js:697
+(anonymous) @ recaptcha__es_419.js:752
+k.next @ recaptcha__es_419.js:667
+(anonymous) @ recaptcha__es_419.js:754
+(anonymous) @ recaptcha__es_419.js:754
+(anonymous) @ recaptcha__es_419.js:329
+(anonymous) @ recaptcha__es_419.js:697
+(anonymous) @ recaptcha__es_419.js:607
+(anonymous) @ recaptcha__es_419.js:752
+k.next @ recaptcha__es_419.js:667
+(anonymous) @ recaptcha__es_419.js:754
+(anonymous) @ recaptcha__es_419.js:754
+(anonymous) @ recaptcha__es_419.js:329
+(anonymous) @ recaptcha__es_419.js:607
+(anonymous) @ recaptcha__es_419.js:256
+Promise.then
+(anonymous) @ recaptcha__es_419.js:256
+(anonymous) @ recaptcha__es_419.js:752
+k.next @ recaptcha__es_419.js:667
+P @ recaptcha__es_419.js:753
+Promise.then
+H @ recaptcha__es_419.js:754
+(anonymous) @ recaptcha__es_419.js:754
+(anonymous) @ recaptcha__es_419.js:754
+(anonymous) @ recaptcha__es_419.js:329
+(anonymous) @ recaptcha__es_419.js:255
+(anonymous) @ recaptcha__es_419.js:641
+pD @ recaptcha__es_419.js:1015
+D @ recaptcha__es_419.js:466
+n @ _app-f5d9360b2d085e62.js:34
+recaptcha__es_419.js:540 The source list for the Content Security Policy directive 'default-src' contains an invalid source: ''unsafe-dynamic''. It will be ignored.
+(anonymous) @ recaptcha__es_419.js:540
+(anonymous) @ recaptcha__es_419.js:739
+(anonymous) @ recaptcha__es_419.js:697
+(anonymous) @ recaptcha__es_419.js:752
+k.next @ recaptcha__es_419.js:667
+(anonymous) @ recaptcha__es_419.js:754
+(anonymous) @ recaptcha__es_419.js:754
+(anonymous) @ recaptcha__es_419.js:329
+(anonymous) @ recaptcha__es_419.js:697
+(anonymous) @ recaptcha__es_419.js:607
+(anonymous) @ recaptcha__es_419.js:752
+k.next @ recaptcha__es_419.js:667
+(anonymous) @ recaptcha__es_419.js:754
+(anonymous) @ recaptcha__es_419.js:754
+(anonymous) @ recaptcha__es_419.js:329
+(anonymous) @ recaptcha__es_419.js:607
+(anonymous) @ recaptcha__es_419.js:256
+Promise.then
+(anonymous) @ recaptcha__es_419.js:256
+(anonymous) @ recaptcha__es_419.js:752
+k.next @ recaptcha__es_419.js:667
+P @ recaptcha__es_419.js:753
+Promise.then
+H @ recaptcha__es_419.js:754
+(anonymous) @ recaptcha__es_419.js:754
+(anonymous) @ recaptcha__es_419.js:754
+(anonymous) @ recaptcha__es_419.js:329
+(anonymous) @ recaptcha__es_419.js:255
+(anonymous) @ recaptcha__es_419.js:641
+pD @ recaptcha__es_419.js:1015
+D @ recaptcha__es_419.js:466
+n @ _app-f5d9360b2d085e62.js:34
+recaptcha__es_419.js:540 The Content-Security-Policy directive 'default-src' contains 'report-uri' as a source expression. Did you want to add it as a directive and forget a semicolon?
+(anonymous) @ recaptcha__es_419.js:540
+(anonymous) @ recaptcha__es_419.js:739
+(anonymous) @ recaptcha__es_419.js:697
+(anonymous) @ recaptcha__es_419.js:752
+k.next @ recaptcha__es_419.js:667
+(anonymous) @ recaptcha__es_419.js:754
+(anonymous) @ recaptcha__es_419.js:754
+(anonymous) @ recaptcha__es_419.js:329
+(anonymous) @ recaptcha__es_419.js:697
+(anonymous) @ recaptcha__es_419.js:607
+(anonymous) @ recaptcha__es_419.js:752
+k.next @ recaptcha__es_419.js:667
+(anonymous) @ recaptcha__es_419.js:754
+(anonymous) @ recaptcha__es_419.js:754
+(anonymous) @ recaptcha__es_419.js:329
+(anonymous) @ recaptcha__es_419.js:607
+(anonymous) @ recaptcha__es_419.js:256
+Promise.then
+(anonymous) @ recaptcha__es_419.js:256
+(anonymous) @ recaptcha__es_419.js:752
+k.next @ recaptcha__es_419.js:667
+P @ recaptcha__es_419.js:753
+Promise.then
+H @ recaptcha__es_419.js:754
+(anonymous) @ recaptcha__es_419.js:754
+(anonymous) @ recaptcha__es_419.js:754
+(anonymous) @ recaptcha__es_419.js:329
+(anonymous) @ recaptcha__es_419.js:255
+(anonymous) @ recaptcha__es_419.js:641
+pD @ recaptcha__es_419.js:1015
+D @ recaptcha__es_419.js:466
+n @ _app-f5d9360b2d085e62.js:34
+recaptcha__es_419.js:540 The source list for Content Security Policy directive 'default-src' contains a source with an invalid path: '/api/4509669501698048/security/?sentry_key=7eb3d90eb4660416caf507087367e67e'. The query component, including the '?', will be ignored.
+(anonymous) @ recaptcha__es_419.js:540
+(anonymous) @ recaptcha__es_419.js:739
+(anonymous) @ recaptcha__es_419.js:697
+(anonymous) @ recaptcha__es_419.js:752
+k.next @ recaptcha__es_419.js:667
+(anonymous) @ recaptcha__es_419.js:754
+(anonymous) @ recaptcha__es_419.js:754
+(anonymous) @ recaptcha__es_419.js:329
+(anonymous) @ recaptcha__es_419.js:697
+(anonymous) @ recaptcha__es_419.js:607
+(anonymous) @ recaptcha__es_419.js:752
+k.next @ recaptcha__es_419.js:667
+(anonymous) @ recaptcha__es_419.js:754
+(anonymous) @ recaptcha__es_419.js:754
+(anonymous) @ recaptcha__es_419.js:329
+(anonymous) @ recaptcha__es_419.js:607
+(anonymous) @ recaptcha__es_419.js:256
+Promise.then
+(anonymous) @ recaptcha__es_419.js:256
+(anonymous) @ recaptcha__es_419.js:752
+k.next @ recaptcha__es_419.js:667
+P @ recaptcha__es_419.js:753
+Promise.then
+H @ recaptcha__es_419.js:754
+(anonymous) @ recaptcha__es_419.js:754
+(anonymous) @ recaptcha__es_419.js:754
+(anonymous) @ recaptcha__es_419.js:329
+(anonymous) @ recaptcha__es_419.js:255
+(anonymous) @ recaptcha__es_419.js:641
+pD @ recaptcha__es_419.js:1015
+D @ recaptcha__es_419.js:466
+n @ _app-f5d9360b2d085e62.js:34
+eruda.js:2 📊 Cargando velas para BTCUSD (M5)...
+eruda.js:2 📊 Cargando velas desde: Finnhub (Real)
+eruda.js:2 💰 Balance: $10000.00 (PRACTICE)
+framework-128c2e8d3d27a68c.js:1 Error while parsing the 'sandbox' attribute: 'allow-downloads-without-user-activation' is an invalid sandbox flag.
+_ @ framework-128c2e8d3d27a68c.js:1
+(anonymous) @ framework-128c2e8d3d27a68c.js:1
+uD @ framework-128c2e8d3d27a68c.js:1
+uI @ framework-128c2e8d3d27a68c.js:1
+uM @ framework-128c2e8d3d27a68c.js:1
+uS @ framework-128c2e8d3d27a68c.js:1
+C @ framework-128c2e8d3d27a68c.js:1
+z @ framework-128c2e8d3d27a68c.js:1
+framework-128c2e8d3d27a68c.js:1 Unrecognized feature: 'ambient-light-sensor'.
+_ @ framework-128c2e8d3d27a68c.js:1
+(anonymous) @ framework-128c2e8d3d27a68c.js:1
+uD @ framework-128c2e8d3d27a68c.js:1
+uI @ framework-128c2e8d3d27a68c.js:1
+uM @ framework-128c2e8d3d27a68c.js:1
+uS @ framework-128c2e8d3d27a68c.js:1
+C @ framework-128c2e8d3d27a68c.js:1
+z @ framework-128c2e8d3d27a68c.js:1
+framework-128c2e8d3d27a68c.js:1 Unrecognized feature: 'battery'.
+_ @ framework-128c2e8d3d27a68c.js:1
+(anonymous) @ framework-128c2e8d3d27a68c.js:1
+uD @ framework-128c2e8d3d27a68c.js:1
+uI @ framework-128c2e8d3d27a68c.js:1
+uM @ framework-128c2e8d3d27a68c.js:1
+uS @ framework-128c2e8d3d27a68c.js:1
+C @ framework-128c2e8d3d27a68c.js:1
+z @ framework-128c2e8d3d27a68c.js:1
+framework-128c2e8d3d27a68c.js:1 Unrecognized feature: 'execution-while-not-rendered'.
+_ @ framework-128c2e8d3d27a68c.js:1
+(anonymous) @ framework-128c2e8d3d27a68c.js:1
+uD @ framework-128c2e8d3d27a68c.js:1
+uI @ framework-128c2e8d3d27a68c.js:1
+uM @ framework-128c2e8d3d27a68c.js:1
+uS @ framework-128c2e8d3d27a68c.js:1
+C @ framework-128c2e8d3d27a68c.js:1
+z @ framework-128c2e8d3d27a68c.js:1
+framework-128c2e8d3d27a68c.js:1 Unrecognized feature: 'execution-while-out-of-viewport'.
+_ @ framework-128c2e8d3d27a68c.js:1
+(anonymous) @ framework-128c2e8d3d27a68c.js:1
+uD @ framework-128c2e8d3d27a68c.js:1
+uI @ framework-128c2e8d3d27a68c.js:1
+uM @ framework-128c2e8d3d27a68c.js:1
+uS @ framework-128c2e8d3d27a68c.js:1
+C @ framework-128c2e8d3d27a68c.js:1
+z @ framework-128c2e8d3d27a68c.js:1
+framework-128c2e8d3d27a68c.js:1 Unrecognized feature: 'layout-animations'.
+_ @ framework-128c2e8d3d27a68c.js:1
+(anonymous) @ framework-128c2e8d3d27a68c.js:1
+uD @ framework-128c2e8d3d27a68c.js:1
+uI @ framework-128c2e8d3d27a68c.js:1
+uM @ framework-128c2e8d3d27a68c.js:1
+uS @ framework-128c2e8d3d27a68c.js:1
+C @ framework-128c2e8d3d27a68c.js:1
+z @ framework-128c2e8d3d27a68c.js:1
+framework-128c2e8d3d27a68c.js:1 Unrecognized feature: 'legacy-image-formats'.
+_ @ framework-128c2e8d3d27a68c.js:1
+(anonymous) @ framework-128c2e8d3d27a68c.js:1
+uD @ framework-128c2e8d3d27a68c.js:1
+uI @ framework-128c2e8d3d27a68c.js:1
+uM @ framework-128c2e8d3d27a68c.js:1
+uS @ framework-128c2e8d3d27a68c.js:1
+C @ framework-128c2e8d3d27a68c.js:1
+z @ framework-128c2e8d3d27a68c.js:1
+framework-128c2e8d3d27a68c.js:1 Unrecognized feature: 'navigation-override'.
+_ @ framework-128c2e8d3d27a68c.js:1
+(anonymous) @ framework-128c2e8d3d27a68c.js:1
+uD @ framework-128c2e8d3d27a68c.js:1
+uI @ framework-128c2e8d3d27a68c.js:1
+uM @ framework-128c2e8d3d27a68c.js:1
+uS @ framework-128c2e8d3d27a68c.js:1
+C @ framework-128c2e8d3d27a68c.js:1
+z @ framework-128c2e8d3d27a68c.js:1
+framework-128c2e8d3d27a68c.js:1 Unrecognized feature: 'oversized-images'.
+_ @ framework-128c2e8d3d27a68c.js:1
+(anonymous) @ framework-128c2e8d3d27a68c.js:1
+uD @ framework-128c2e8d3d27a68c.js:1
+uI @ framework-128c2e8d3d27a68c.js:1
+uM @ framework-128c2e8d3d27a68c.js:1
+uS @ framework-128c2e8d3d27a68c.js:1
+C @ framework-128c2e8d3d27a68c.js:1
+z @ framework-128c2e8d3d27a68c.js:1
+framework-128c2e8d3d27a68c.js:1 Unrecognized feature: 'publickey-credentials'.
+_ @ framework-128c2e8d3d27a68c.js:1
+(anonymous) @ framework-128c2e8d3d27a68c.js:1
+uD @ framework-128c2e8d3d27a68c.js:1
+uI @ framework-128c2e8d3d27a68c.js:1
+uM @ framework-128c2e8d3d27a68c.js:1
+uS @ framework-128c2e8d3d27a68c.js:1
+C @ framework-128c2e8d3d27a68c.js:1
+z @ framework-128c2e8d3d27a68c.js:1
+framework-128c2e8d3d27a68c.js:1 Unrecognized feature: 'speaker-selection'.
+_ @ framework-128c2e8d3d27a68c.js:1
+(anonymous) @ framework-128c2e8d3d27a68c.js:1
+uD @ framework-128c2e8d3d27a68c.js:1
+uI @ framework-128c2e8d3d27a68c.js:1
+uM @ framework-128c2e8d3d27a68c.js:1
+uS @ framework-128c2e8d3d27a68c.js:1
+C @ framework-128c2e8d3d27a68c.js:1
+z @ framework-128c2e8d3d27a68c.js:1
+framework-128c2e8d3d27a68c.js:1 Unrecognized feature: 'unoptimized-images'.
+_ @ framework-128c2e8d3d27a68c.js:1
+(anonymous) @ framework-128c2e8d3d27a68c.js:1
+uD @ framework-128c2e8d3d27a68c.js:1
+uI @ framework-128c2e8d3d27a68c.js:1
+uM @ framework-128c2e8d3d27a68c.js:1
+uS @ framework-128c2e8d3d27a68c.js:1
+C @ framework-128c2e8d3d27a68c.js:1
+z @ framework-128c2e8d3d27a68c.js:1
+framework-128c2e8d3d27a68c.js:1 Unrecognized feature: 'unsized-media'.
+_ @ framework-128c2e8d3d27a68c.js:1
+(anonymous) @ framework-128c2e8d3d27a68c.js:1
+uD @ framework-128c2e8d3d27a68c.js:1
+uI @ framework-128c2e8d3d27a68c.js:1
+uM @ framework-128c2e8d3d27a68c.js:1
+uS @ framework-128c2e8d3d27a68c.js:1
+C @ framework-128c2e8d3d27a68c.js:1
+z @ framework-128c2e8d3d27a68c.js:1
+framework-128c2e8d3d27a68c.js:1 Unrecognized feature: 'pointer-lock'.
+_ @ framework-128c2e8d3d27a68c.js:1
+(anonymous) @ framework-128c2e8d3d27a68c.js:1
+uD @ framework-128c2e8d3d27a68c.js:1
+uI @ framework-128c2e8d3d27a68c.js:1
+uM @ framework-128c2e8d3d27a68c.js:1
+uS @ framework-128c2e8d3d27a68c.js:1
+C @ framework-128c2e8d3d27a68c.js:1
+z @ framework-128c2e8d3d27a68c.js:1
+framework-128c2e8d3d27a68c.js:1 Allow attribute will take precedence over 'allowfullscreen'.
+_ @ framework-128c2e8d3d27a68c.js:1
+(anonymous) @ framework-128c2e8d3d27a68c.js:1
+uD @ framework-128c2e8d3d27a68c.js:1
+uI @ framework-128c2e8d3d27a68c.js:1
+uM @ framework-128c2e8d3d27a68c.js:1
+uS @ framework-128c2e8d3d27a68c.js:1
+C @ framework-128c2e8d3d27a68c.js:1
+z @ framework-128c2e8d3d27a68c.js:1
+framework-128c2e8d3d27a68c.js:1 Allow attribute will take precedence over 'allowpaymentrequest'.
+_ @ framework-128c2e8d3d27a68c.js:1
+(anonymous) @ framework-128c2e8d3d27a68c.js:1
+uD @ framework-128c2e8d3d27a68c.js:1
+uI @ framework-128c2e8d3d27a68c.js:1
+uM @ framework-128c2e8d3d27a68c.js:1
+uS @ framework-128c2e8d3d27a68c.js:1
+C @ framework-128c2e8d3d27a68c.js:1
+z @ framework-128c2e8d3d27a68c.js:1
+framework-128c2e8d3d27a68c.js:1 The source list for the Content Security Policy directive 'default-src' contains an invalid source: ''unsafe-dynamic''. It will be ignored.
+e @ framework-128c2e8d3d27a68c.js:1
+e @ framework-128c2e8d3d27a68c.js:1
+e @ framework-128c2e8d3d27a68c.js:1
+oK @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+framework-128c2e8d3d27a68c.js:1 The Content-Security-Policy directive 'default-src' contains 'report-uri' as a source expression. Did you want to add it as a directive and forget a semicolon?
+e @ framework-128c2e8d3d27a68c.js:1
+e @ framework-128c2e8d3d27a68c.js:1
+e @ framework-128c2e8d3d27a68c.js:1
+oK @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+framework-128c2e8d3d27a68c.js:1 The source list for Content Security Policy directive 'default-src' contains a source with an invalid path: '/api/4509669501698048/security/?sentry_key=7eb3d90eb4660416caf507087367e67e'. The query component, including the '?', will be ignored.
+e @ framework-128c2e8d3d27a68c.js:1
+e @ framework-128c2e8d3d27a68c.js:1
+e @ framework-128c2e8d3d27a68c.js:1
+oK @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+oQ @ framework-128c2e8d3d27a68c.js:1
+oq @ framework-128c2e8d3d27a68c.js:1
+workspace_iframe.html?initialPath=%2F&id=%3Arle%3A:32 Error while parsing the 'sandbox' attribute: 'allow-downloads-without-user-activation' is an invalid sandbox flag.
+workspace_iframe.html?initialPath=%2F&id=%3Arle%3A:32 Unrecognized feature: 'ambient-light-sensor'.
+workspace_iframe.html?initialPath=%2F&id=%3Arle%3A:32 Unrecognized feature: 'battery'.
+workspace_iframe.html?initialPath=%2F&id=%3Arle%3A:32 Unrecognized feature: 'execution-while-not-rendered'.
+workspace_iframe.html?initialPath=%2F&id=%3Arle%3A:32 Unrecognized feature: 'execution-while-out-of-viewport'.
+workspace_iframe.html?initialPath=%2F&id=%3Arle%3A:32 Unrecognized feature: 'layout-animations'.
+workspace_iframe.html?initialPath=%2F&id=%3Arle%3A:32 Unrecognized feature: 'legacy-image-formats'.
+workspace_iframe.html?initialPath=%2F&id=%3Arle%3A:32 Unrecognized feature: 'navigation-override'.
+workspace_iframe.html?initialPath=%2F&id=%3Arle%3A:32 Unrecognized feature: 'oversized-images'.
+workspace_iframe.html?initialPath=%2F&id=%3Arle%3A:32 Unrecognized feature: 'publickey-credentials'.
+workspace_iframe.html?initialPath=%2F&id=%3Arle%3A:32 Unrecognized feature: 'speaker-selection'.
+workspace_iframe.html?initialPath=%2F&id=%3Arle%3A:32 Unrecognized feature: 'unoptimized-images'.
+workspace_iframe.html?initialPath=%2F&id=%3Arle%3A:32 Unrecognized feature: 'unsized-media'.
+workspace_iframe.html?initialPath=%2F&id=%3Arle%3A:32 Allow attribute will take precedence over 'allowfullscreen'.
+workspace_iframe.html?initialPath=%2F&id=%3Arle%3A:32 Allow attribute will take precedence over 'allowpaymentrequest'.
+Console.js:61 📋 Finnhub Dashboard iniciado
+Console.js:61 🎯 DOM listo, inicializando STC Charts...
+Console.js:61 🎯 Inicializando gráfico con fuente: finnhub
+Console.js:61 🎯 Inicializando STCChartFix con config: {containerId: 'chart', endpoint: '/api/finnhub/candles?symbol=BTCUSD&timeframe=M5&limit=200', timeframe: 'M5', pollMs: 2000, max: 200}
+Console.js:61 ❌ Container no encontrado: chart
+Mt.forEach.n.<computed> @ Console.js:61
+initChart @ stc_chart_fix.js:41
+init @ stc_chart_fix.js:30
+(anonymous) @ stc_chart_fix.js:290
+Console.js:61 📊 Cargando datos iniciales desde: /api/finnhub/candles?symbol=BTCUSD&timeframe=M5&limit=200
+Console.js:61 🔄 Polling iniciado cada 2000ms
+Console.js:61 🌐 DOM cargado, iniciando gráfico Finnhub...
+Console.js:61 📈 Datos recibidos: []
+Console.js:61 ⚠️ No hay datos de velas disponibles
+Mt.forEach.n.<computed> @ Console.js:61
+loadInitialData @ stc_chart_fix.js:112
+await in loadInitialData
+init @ stc_chart_fix.js:31
+(anonymous) @ stc_chart_fix.js:290
+Console.js:61 📊 Cambiando a M1
+Console.js:61 📊 Cambiando a M5
+Console.js:61 📊 Cambiando a M15
+Console.js:61 📊 Cambiando a M30
+Console.js:61 📊 Cambiando a H1

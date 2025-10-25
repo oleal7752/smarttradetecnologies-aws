@@ -1,0 +1,39 @@
+# ============================================
+# CONFIGURACIÓN CORRECTA PARA EL NUEVO REPL
+# ============================================
+
+ARCHIVO: .replit
+CONTENIDO COMPLETO (copia todo):
+
+entrypoint = "start_system.py"
+
+modules = ["python-3.11"]
+
+[nix]
+channel = "stable-24_05"
+
+[[ports]]
+localPort = 5000
+externalPort = 80
+
+[[ports]]
+localPort = 5002
+
+[[ports]]
+localPort = 8000
+
+[deployment]
+deploymentTarget = "vm"
+run = ["sh", "-c", "python populate_production.py && python start_system.py"]
+
+[workflows.metadata]
+name = "Dashboard"
+author = "agent"
+
+[workflows.workflow.tasks]
+task = "shell.exec"
+args = "python start_system.py"
+waitForPort = 5000
+
+[workflows.workflow.metadata]
+outputType = "webview"

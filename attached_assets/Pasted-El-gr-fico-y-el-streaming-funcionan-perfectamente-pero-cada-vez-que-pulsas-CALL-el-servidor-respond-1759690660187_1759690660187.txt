@@ -1,0 +1,65 @@
+El gráfico y el streaming funcionan perfectamente, pero cada vez que pulsas CALL el servidor responde 400 “Orden rechazada”.
+Eso significa: “estás conectado a tu proxy, pero tu proxy no convence a IQ Option”.
+Lo más habitual es que la cookie / ticket de sesión haya caducado o que la petición que reenvías no tenga exactamente los mismos headers que usa la web oficial.
+Haz los 5 pasos siguientes y comprueba el resultado después de cada uno:
+Comprueba que la sesión sigue viva en el servidor
+Abre una terminal en el Replit y ejecuta algo así (adapta la ruta):
+bash
+复制
+curl -i -XPOST https://iqoption.com/api/login \
+  -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36" \
+  -H "Cookie: ssid=TU_COOKIE_AQUI" \
+  -d '{}'
+Si la respuesta empieza por 401 Unauthorized o te redirige al login, la cookie ya no vale.
+Regenera la sesión (vuelve a hacer login con 2FA) y actualiza la variable de entorno que usa tu servidor.
+Añade un log en tu proxy justo antes de re-enviar la orden
+Node (fetch) ejemplo:
+JavaScript
+复制
+console.log('>>> headers enviados a IQ', JSON.stringify(headers, null, 2));
+console.log('>>> body', JSON.stringify(body, null, 2));
+Recarga el servidor, pulsa CALL y mira la consola de Replit.
+Debes ver:
+ssid en la cookie
+Origin: https://iqoption.com
+User-Agent idéntico al de tu navegador
+Content-Type: application/json
+X-Requested-With: XMLHttpRequest (lo exige IQ)
+Si falta alguno, añádelo antes del fetch hacia IQ.
+Comprueba que también reenvías el ws_ticket
+Después del login IQ devuelve:
+JSON
+复制
+"ws_ticket":"eyJ0eXAiOiJKV1QiLCJhbGc…"
+Muchas órdenes lo necesitan en el JSON:
+JSON
+复制
+{"ws_ticket":"eyJ…", "amount":1, "direction":"call", …}
+Si tu proxy no lo incluye, IQ rechaza.
+Asegúrate de guardar el ticket en memoria (o en Redis) y pégalo en cada orden.
+Prueba manualmente una orden con curl
+Copia el curl que acabas de logar y ejecútalo fuera de tu código:
+bash
+复制
+curl -i -XPOST https://iqoption.com/api/option/binary-place \
+  -H "Cookie: ssid=..." \
+  -H "Origin: https://iqoption.com" \
+  -H "User-Agent: ..." \
+  -H "Content-Type: application/json" \
+  -d '{"ws_ticket":"...","amount":1,"direction":"call","expiration":300,"active_id":1}'
+Si IQ responde 200 ya sabes que tus credenciales sí funcionan; el fallo está en el formato que envía tu proxy.
+Si responde 400, compara el mensaje: suele decir "invalid ticket" o "session expired".
+Refresca la cookie periódicamente
+La cookie ssid muere tras 15 min sin actividad o cuando IQ detecta IP distinta.
+Crea un setInterval que cada 10 min haga:
+JavaScript
+复制
+await fetch('https://iqoption.com/api/getprofile', { headers: { Cookie: ssid } });
+Eso mantiene la sesión viva mientras tu bot está corriendo.
+Check-list rápido (pégalo en tu README)
+[ ] Cookie ssid vigente y presente en cada llamada
+[ ] Origin, User-Agent, X-Requested-With iguales a la web
+[ ] ws_ticket dentro del JSON de la orden
+[ ] Refresco periódico de sesión (getprofile)
+[ ] Log en el proxy para ver exactamente qué se envía a IQ
+Cuando completes los pasos vuelve a pulsar CALL; si aún ves 400, copia el nuevo mensaje de IQ y lo revisamos.

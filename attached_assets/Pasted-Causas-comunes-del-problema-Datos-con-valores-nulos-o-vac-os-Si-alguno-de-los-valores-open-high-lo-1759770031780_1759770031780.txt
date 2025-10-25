@@ -1,0 +1,62 @@
+Causas comunes del problema
+Datos con valores nulos o vacíos
+Si alguno de los valores open, high, low, close o timestamp está vacío o es null, la librería no puede dibujar la vela correctamente y la representa como un punto.
+
+Intervalo (timeframe) incorrecto
+Si el timeframe de las velas no coincide con los datos (por ejemplo, datos de 1 minuto pero graficas en 5 minutos), se crean gaps y velas dispersas.
+
+Formato incorrecto de los datos
+El formato debe ser consistente: cada vela debe tener timestamp, open, high, low, close. Revísalo con un print antes de graficar.
+
+Datos duplicados o fuera de orden
+Si hay timestamps duplicados o los datos no están ordenados cronológicamente, pueden aparecer velas superpuestas o fuera de lugar.
+
+Problemas de la librería (ejemplo: TradingView, Plotly, ApexCharts, lightweight-charts, etc.)
+Algunas librerías requieren configuración especial si los datos tienen gaps.
+
+Solución paso a paso
+Verifica tus datos antes de graficar
+Haz un print/log de los datos que pasas al gráfico. Ejemplo en Python:
+
+Python
+for candle in candles:
+    print(candle)
+Debes ver algo así:
+
+Code
+{'timestamp': ..., 'open': 1.170, 'high': 1.175, 'low': 1.168, 'close': 1.174}
+Filtra datos nulos o incompletos
+
+Python
+candles = [c for c in candles if None not in c.values() and '' not in c.values()]
+Ordena los datos por timestamp
+
+Python
+candles.sort(key=lambda x: x['timestamp'])
+Asegúrate de usar el mismo timeframe que los datos
+
+Si los datos son de 1 minuto, grafica en 1 minuto.
+Si usas una librería JS, revisa la configuración del timeframe.
+Configura la librería para ignorar gaps
+
+Algunas tienen opciones como connectNulls: true o similar.
+Ejemplo de código (Python + Plotly)
+Python
+import plotly.graph_objects as go
+
+# Filtra y ordena tus datos
+candles = [c for c in candles if None not in c.values() and '' not in c.values()]
+candles.sort(key=lambda x: x['timestamp'])
+
+fig = go.Figure(data=[go.Candlestick(
+    x=[c['timestamp'] for c in candles],
+    open=[c['open'] for c in candles],
+    high=[c['high'] for c in candles],
+    low=[c['low'] for c in candles],
+    close=[c['close'] for c in candles]
+)])
+fig.show()
+Si usas JavaScript (lightweight-charts, ApexCharts, etc.)
+Revisa que el array de velas esté completo.
+Ordena y filtra antes de graficar.
+Configura el timeframe acorde a tus datos.

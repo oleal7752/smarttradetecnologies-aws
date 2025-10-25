@@ -1,0 +1,151 @@
+workspace_iframe.html?initialPath=%2F&id=%3Arki%3A:1 Unrecognized feature: 'ambient-light-sensor'.
+workspace_iframe.html?initialPath=%2F&id=%3Arki%3A:1 Unrecognized feature: 'battery'.
+workspace_iframe.html?initialPath=%2F&id=%3Arki%3A:1 Unrecognized feature: 'execution-while-not-rendered'.
+workspace_iframe.html?initialPath=%2F&id=%3Arki%3A:1 Unrecognized feature: 'execution-while-out-of-viewport'.
+workspace_iframe.html?initialPath=%2F&id=%3Arki%3A:1 Unrecognized feature: 'layout-animations'.
+workspace_iframe.html?initialPath=%2F&id=%3Arki%3A:1 Unrecognized feature: 'legacy-image-formats'.
+workspace_iframe.html?initialPath=%2F&id=%3Arki%3A:1 Unrecognized feature: 'navigation-override'.
+workspace_iframe.html?initialPath=%2F&id=%3Arki%3A:1 Unrecognized feature: 'oversized-images'.
+workspace_iframe.html?initialPath=%2F&id=%3Arki%3A:1 Unrecognized feature: 'publickey-credentials'.
+workspace_iframe.html?initialPath=%2F&id=%3Arki%3A:1 Unrecognized feature: 'speaker-selection'.
+workspace_iframe.html?initialPath=%2F&id=%3Arki%3A:1 Unrecognized feature: 'unoptimized-images'.
+workspace_iframe.html?initialPath=%2F&id=%3Arki%3A:1 Unrecognized feature: 'unsized-media'.
+workspace_iframe.html?initialPath=%2F&id=%3Arki%3A:1 Allow attribute will take precedence over 'allowfullscreen'.
+workspace_iframe.html?initialPath=%2F&id=%3Arki%3A:1 Allow attribute will take precedence over 'allowpaymentrequest'.
+Console.js:61 📋 IQ Option Dashboard iniciado
+Console.js:61 ✅ Dashboard IQ Option inicializado
+Console.js:61 🎯 Inicializando gráfico IQ Option...
+Console.js:61 🎯 Inicializando STCChartFix con config: {containerId: 'chart', endpoint: '/api/iq/candles?symbol=EURUSD-OTC&timeframe=M5&limit=200', timeframe: 'M5', pollMs: 3000, max: 200}
+Console.js:61 ✅ Gráfico LightweightCharts inicializado
+Console.js:61 📊 Cargando datos iniciales desde: /api/iq/candles?symbol=EURUSD-OTC&timeframe=M5&limit=200
+Console.js:61 🔄 Polling iniciado cada 3000ms
+Console.js:61 📈 Datos recibidos: (200) [{…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, …]
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759636500, open: 1.193225, high: 1.193795, low: 1.191325, close: 1.193465}
+Console.js:61 📊 Última vela: {time: 1759696500, open: 1.165685, high: 1.165785, low: 1.165555, close: 1.165785}
+Console.js:61 📊 Total velas: 200
+Console.js:61 ✅ Gráfico LISTO con 200 velas pintadas
+Console.js:61 ✅ Cargadas 200 velas iniciales
+Console.js:61 ✅ Cargados 2 símbolos permitidos (2 abiertos, 0 cerrados): EURJPY-OTC, EURUSD-OTC
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759636500, open: 1.193225, high: 1.193795, low: 1.191325, close: 1.193465}
+Console.js:61 📊 Última vela: {time: 1759696500, open: 1.165685, high: 1.165785, low: 1.165555, close: 1.165785}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🔗 Intentando conectar a IQ Option (PRACTICE)...
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759636500, open: 1.193225, high: 1.193795, low: 1.191325, close: 1.193465}
+Console.js:61 📊 Última vela: {time: 1759696500, open: 1.165685, high: 1.165785, low: 1.165555, close: 1.165785}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 ✅ Conexión exitosa a IQ Option
+Console.js:61 ⏹️ Polling detenido
+Console.js:61 ⏸️ Polling histórico detenido - usando solo streaming en tiempo real
+Console.js:61 ⚡ Polling de vela actual iniciado cada 1s para EURJPY-OTC
+Console.js:61 ⚡ Streaming en tiempo real iniciado
+Console.js:61 🔄 Recargando velas después de conectar...
+Console.js:61 🔄 Refrescando datos del gráfico...
+Console.js:61 📊 Cargando datos iniciales desde: /api/iq/candles?symbol=EURUSD-OTC&timeframe=M5&limit=200
+Console.js:61 📈 Datos recibidos: (200) [{…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, …]
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759636500, open: 1.193225, high: 1.193795, low: 1.191325, close: 1.193465}
+Console.js:61 📊 Última vela: {time: 1759696500, open: 1.165685, high: 1.165785, low: 1.165555, close: 1.165785}
+Console.js:61 📊 Total velas: 200
+Console.js:61 ✅ Gráfico LISTO con 200 velas pintadas
+Console.js:61 ✅ Cargadas 200 velas iniciales
+Console.js:61 ⚡ Vela actual actualizada: {time: 1759696500, open: 173.660295, high: 173.672895, low: 173.618505, close: 173.631915, …}
+Console.js:61 ⚡ Vela actual actualizada: {time: 1759696500, open: 173.660295, high: 173.672895, low: 173.618505, close: 173.631915, …}
+Console.js:61 ⚡ Vela actual actualizada: {time: 1759696500, open: 173.660295, high: 173.672895, low: 173.618505, close: 173.631915, …}
+Console.js:61 ⚡ Vela actual actualizada: {time: 1759696500, open: 173.660295, high: 173.672895, low: 173.618505, close: 173.632705, …}
+Console.js:61 ⚡ Vela actual actualizada: {time: 1759696500, open: 173.660295, high: 173.672895, low: 173.618505, close: 173.630255, …}
+Console.js:61 ⚡ Vela actual actualizada: {time: 1759696500, open: 173.660295, high: 173.672895, low: 173.618505, close: 173.629035, …}
+Console.js:61 ⚡ Vela actual actualizada: {time: 1759696500, open: 173.660295, high: 173.672895, low: 173.618505, close: 173.629985, …}
+Console.js:61 ⚡ Vela actual actualizada: {time: 1759696500, open: 173.660295, high: 173.672895, low: 173.618505, close: 173.627425, …}
+Console.js:61 ⚡ Vela actual actualizada: {time: 1759696500, open: 173.660295, high: 173.672895, low: 173.618505, close: 173.627295, …}
+Console.js:61 ⚡ Vela actual actualizada: {time: 1759696500, open: 173.660295, high: 173.672895, low: 173.618505, close: 173.631265, …}
+Console.js:61 ⚡ Vela actual actualizada: {time: 1759696500, open: 173.660295, high: 173.672895, low: 173.618505, close: 173.631155, …}
+Console.js:61 ⚡ Vela actual actualizada: {time: 1759696500, open: 173.660295, high: 173.672895, low: 173.618505, close: 173.630125, …}
+Console.js:61 ⚡ Vela actual actualizada: {time: 1759696500, open: 173.660295, high: 173.672895, low: 173.618505, close: 173.631655, …}
+Console.js:61 ⚡ Vela actual actualizada: {time: 1759696500, open: 173.660295, high: 173.672895, low: 173.618505, close: 173.632435, …}
+Console.js:61 ⚡ Vela actual actualizada: {time: 1759696500, open: 173.660295, high: 173.672895, low: 173.618505, close: 173.632025, …}
+Console.js:61 ⚡ Vela actual actualizada: {time: 1759696500, open: 173.660295, high: 173.672895, low: 173.618505, close: 173.631645, …}
+Console.js:61 ⚡ Vela actual actualizada: {time: 1759696500, open: 173.660295, high: 173.672895, low: 173.618505, close: 173.635035, …}
+Console.js:61 ⚡ Vela actual actualizada: {time: 1759696500, open: 173.660295, high: 173.672895, low: 173.618505, close: 173.635365, …}
+Console.js:61 ⚡ Vela actual actualizada: {time: 1759696500, open: 173.660295, high: 173.672895, low: 173.618505, close: 173.635855, …}
+Console.js:61 ⚡ Vela actual actualizada: {time: 1759696500, open: 173.660295, high: 173.672895, low: 173.618505, close: 173.635685, …}
+Console.js:61 ⚡ Vela actual actualizada: {time: 1759696500, open: 173.660295, high: 173.672895, low: 173.618505, close: 173.634955, …}
+Console.js:61 ⚡ Vela actual actualizada: {time: 1759696500, open: 173.660295, high: 173.672895, low: 173.618505, close: 173.635175, …}
+Console.js:61 ⚡ Vela actual actualizada: {time: 1759696500, open: 173.660295, high: 173.672895, low: 173.618505, close: 173.629375, …}
+Console.js:61 ⚡ Vela actual actualizada: {time: 1759696500, open: 173.660295, high: 173.672895, low: 173.618505, close: 173.628545, …}
+Console.js:61 ⚡ Vela actual actualizada: {time: 1759696500, open: 173.660295, high: 173.672895, low: 173.618505, close: 173.631775, …}
+Console.js:61 ⚡ Vela actual actualizada: {time: 1759696500, open: 173.660295, high: 173.672895, low: 173.618505, close: 173.631605, …}
+Console.js:61 ⚡ Vela actual actualizada: {time: 1759696500, open: 173.660295, high: 173.672895, low: 173.618505, close: 173.631585, …}
+Console.js:61 ⚡ Vela actual actualizada: {time: 1759696500, open: 173.660295, high: 173.672895, low: 173.618505, close: 173.632305, …}
+Console.js:61 ⚡ Vela actual actualizada: {time: 1759696500, open: 173.660295, high: 173.672895, low: 173.618505, close: 173.631495, …}
+Console.js:61 ⚡ Vela actual actualizada: {time: 1759696500, open: 173.660295, high: 173.672895, low: 173.618505, close: 173.640985, …}
+Console.js:61 ⚡ Vela actual actualizada: {time: 1759696500, open: 173.660295, high: 173.672895, low: 173.618505, close: 173.639965, …}
+Console.js:61 ⚡ Vela actual actualizada: {time: 1759696500, open: 173.660295, high: 173.672895, low: 173.618505, close: 173.637935, …}
+Console.js:61 ⚡ Vela actual actualizada: {time: 1759696500, open: 173.660295, high: 173.672895, low: 173.618505, close: 173.634615, …}
+Console.js:61 ⚡ Vela actual actualizada: {time: 1759696500, open: 173.660295, high: 173.672895, low: 173.618505, close: 173.635345, …}
+Console.js:61 ⚡ Vela actual actualizada: {time: 1759696500, open: 173.660295, high: 173.672895, low: 173.618505, close: 173.635615, …}
+Console.js:61 ⚡ Vela actual actualizada: {time: 1759696500, open: 173.660295, high: 173.672895, low: 173.618505, close: 173.635815, …}
+Console.js:61 ⚡ Vela actual actualizada: {time: 1759696500, open: 173.660295, high: 173.672895, low: 173.618505, close: 173.632325, …}
+Console.js:61 ⚡ Vela actual actualizada: {time: 1759696500, open: 173.660295, high: 173.672895, low: 173.618505, close: 173.632095, …}
+Console.js:61 ⚡ Vela actual actualizada: {time: 1759696500, open: 173.660295, high: 173.672895, low: 173.618505, close: 173.631165, …}
+Console.js:61 ⚡ Vela actual actualizada: {time: 1759696500, open: 173.660295, high: 173.672895, low: 173.618505, close: 173.630555, …}
+Console.js:61 🟢 CALL: EURJPY-OTC, $1, 5min
+Console.js:61 ⚡ Vela actual actualizada: {time: 1759696500, open: 173.660295, high: 173.672895, low: 173.618505, close: 173.634575, …}
+Console.js:61 ⚡ Vela actual actualizada: {time: 1759696500, open: 173.660295, high: 173.672895, low: 173.618505, close: 173.634025, …}
+Console.js:61 ⚡ Vela actual actualizada: {time: 1759696500, open: 173.660295, high: 173.672895, low: 173.618505, close: 173.634035, …}
+Console.js:61 ⚡ Vela actual actualizada: {time: 1759696500, open: 173.660295, high: 173.672895, low: 173.618505, close: 173.630845, …}
+Console.js:61 ⚡ Vela actual actualizada: {time: 1759696500, open: 173.660295, high: 173.672895, low: 173.618505, close: 173.630255, …}
+Console.js:61 ⚡ Vela actual actualizada: {time: 1759696500, open: 173.660295, high: 173.672895, low: 173.618505, close: 173.630255, …}
+Console.js:61 ⚡ Vela actual actualizada: {time: 1759696500, open: 173.660295, high: 173.672895, low: 173.618505, close: 173.629455, …}
+Console.js:61 ⚡ Vela actual actualizada: {time: 1759696500, open: 173.660295, high: 173.672895, low: 173.618505, close: 173.629755, …}
+Console.js:61 ⚡ Vela actual actualizada: {time: 1759696500, open: 173.660295, high: 173.672895, low: 173.618505, close: 173.629425, …}
+Console.js:61 ⚡ Vela actual actualizada: {time: 1759696500, open: 173.660295, high: 173.672895, low: 173.618505, close: 173.628795, …}
+Console.js:61 ⚡ Vela actual actualizada: {time: 1759696500, open: 173.660295, high: 173.672895, low: 173.618505, close: 173.634985, …}
+Console.js:61 ⚡ Vela actual actualizada: {time: 1759696500, open: 173.660295, high: 173.672895, low: 173.618505, close: 173.635455, …}
+Console.js:61 🟢 CALL: EURJPY-OTC, $1, 5min
+Console.js:61 ⚡ Vela actual actualizada: {time: 1759696500, open: 173.660295, high: 173.672895, low: 173.618505, close: 173.635415, …}
+Console.js:61 ⚡ Vela actual actualizada: {time: 1759696500, open: 173.660295, high: 173.672895, low: 173.618505, close: 173.635815, …}
+Console.js:61 ⚡ Vela actual actualizada: {time: 1759696500, open: 173.660295, high: 173.672895, low: 173.618505, close: 173.635815, …}
+Console.js:61 ⚡ Vela actual actualizada: {time: 1759696500, open: 173.660295, high: 173.672895, low: 173.618505, close: 173.635255, …}
+Console.js:61 ⚡ Vela actual actualizada: {time: 1759696500, open: 173.660295, high: 173.672895, low: 173.618505, close: 173.635575, …}
+Console.js:61 ⚡ Vela actual actualizada: {time: 1759696500, open: 173.660295, high: 173.672895, low: 173.618505, close: 173.635575, …}
+Console.js:61 ⚡ Vela actual actualizada: {time: 1759696500, open: 173.660295, high: 173.672895, low: 173.618505, close: 173.634355, …}
+Console.js:61 ⚡ Vela actual actualizada: {time: 1759696500, open: 173.660295, high: 173.672895, low: 173.618505, close: 173.632935, …}
+Console.js:61 ⚡ Vela actual actualizada: {time: 1759696500, open: 173.660295, high: 173.672895, low: 173.618505, close: 173.633655, …}
+Console.js:61 🔴 PUT: EURJPY-OTC, $1, 5min
+Console.js:61 ⚡ Vela actual actualizada: {time: 1759696500, open: 173.660295, high: 173.672895, low: 173.618505, close: 173.633655, …}
+Console.js:61 ⚡ Vela actual actualizada: {time: 1759696500, open: 173.660295, high: 173.672895, low: 173.618505, close: 173.630465, …}
+Console.js:61 ⚡ Vela actual actualizada: {time: 1759696500, open: 173.660295, high: 173.672895, low: 173.618505, close: 173.624365, …}
+Console.js:61 ⚡ Vela actual actualizada: {time: 1759696500, open: 173.660295, high: 173.672895, low: 173.618505, close: 173.624365, …}
+Console.js:61 ⚡ Vela actual actualizada: {time: 1759696500, open: 173.660295, high: 173.672895, low: 173.618505, close: 173.623405, …}
+Console.js:61 🔴 PUT: EURJPY-OTC, $1, 5min
+Console.js:61 🔴 PUT: EURJPY-OTC, $1, 5min
+Console.js:61 🔴 PUT: EURJPY-OTC, $1, 5min
+Console.js:61 🔴 PUT: EURJPY-OTC, $1, 5min
+Console.js:61 🟢 CALL: EURJPY-OTC, $1, 5min
+injected.js:278  POST https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/trade 503 (Service Unavailable)
+window.fetch @ Network.js:219
+apply @ injected.js:278
+(anonymous) @ iqoption:419
+Console.js:61 ❌ Error del servidor: {details: "HTTPConnectionPool(host='localhost', port=5002): Read timed out. (read timeout=30)", error: 'API not available'}
+Mt.forEach.n.<computed> @ Console.js:61
+(anonymous) @ iqoption:435
+Console.js:61 ⚡ Vela actual actualizada: {time: 1759696500, open: 173.660295, high: 173.672895, low: 173.618505, close: 173.626495, …}
+injected.js:278  POST https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/trade 503 (Service Unavailable)
+window.fetch @ Network.js:219
+apply @ injected.js:278
+(anonymous) @ iqoption:419
+Console.js:61 ❌ Error del servidor: {details: "HTTPConnectionPool(host='localhost', port=5002): Read timed out. (read timeout=30)", error: 'API not available'}
+Mt.forEach.n.<computed> @ Console.js:61
+(anonymous) @ iqoption:435
+injected.js:278  POST https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/trade 503 (Service Unavailable)
+window.fetch @ Network.js:219
+apply @ injected.js:278
+(anonymous) @ iqoption:458
+Console.js:61 ❌ Error del servidor: {details: "HTTPConnectionPool(host='localhost', port=5002): Read timed out. (read timeout=30)", error: 'API not available'}
+Mt.forEach.n.<computed> @ Console.js:61
+(anonymous) @ iqoption:474

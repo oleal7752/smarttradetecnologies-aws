@@ -1,0 +1,1762 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>STC - Panel de Señales Pro</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Courier New', monospace;
+      background: #000000;
+      color: #00ffff;
+      overflow-x: hidden;
+      perspective: 1500px;
+      min-height: 100vh;
+    }
+
+    .header {
+      padding: 20px;
+      text-align: center;
+      background: rgba(0, 255, 255, 0.05);
+      border-bottom: 1px solid rgba(0, 255, 255, 0.3);
+      backdrop-filter: blur(30px);
+    }
+
+    .header h1 {
+      font-size: 24px;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      text-shadow: 0 0 20px rgba(0, 255, 255, 0.8);
+    }
+
+    .header p {
+      margin-top: 10px;
+      font-size: 12px;
+      opacity: 0.7;
+    }
+
+    /* Panel de Configuración de Saldo */
+    .config-panel {
+      padding: 25px;
+      background: rgba(0, 255, 255, 0.03);
+      border-bottom: 1px solid rgba(0, 255, 255, 0.3);
+    }
+
+    .config-title {
+      text-align: center;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 20px;
+      opacity: 0.8;
+    }
+
+    .config-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .config-input-group {
+      background: rgba(0, 255, 255, 0.05);
+      border: 1px solid rgba(0, 255, 255, 0.3);
+      border-radius: 12px;
+      padding: 15px;
+      backdrop-filter: blur(20px);
+      transform: translateZ(10px);
+    }
+
+    .config-label {
+      font-size: 12px;
+      opacity: 0.7;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .config-input {
+      width: 100%;
+      padding: 12px;
+      background: rgba(0, 0, 0, 0.5);
+      border: 1px solid rgba(0, 255, 255, 0.4);
+      border-radius: 8px;
+      color: #00ffff;
+      font-family: 'Courier New', monospace;
+      font-size: 18px;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .config-input:focus {
+      outline: none;
+      border-color: rgba(0, 255, 255, 0.8);
+      box-shadow: 0 0 20px rgba(0, 255, 255, 0.4);
+    }
+
+    .config-result {
+      background: rgba(0, 255, 136, 0.08);
+      border: 2px solid rgba(0, 255, 136, 0.4);
+      border-radius: 12px;
+      padding: 15px;
+      text-align: center;
+      transform: translateZ(15px);
+    }
+
+    .config-result-label {
+      font-size: 12px;
+      opacity: 0.7;
+      margin-bottom: 8px;
+    }
+
+    .config-result-value {
+      font-size: 24px;
+      font-weight: bold;
+      color: #00ff88;
+      text-shadow: 0 0 20px rgba(0, 255, 136, 0.6);
+    }
+
+    .config-warning {
+      background: rgba(255, 165, 0, 0.1);
+      border: 1px solid rgba(255, 165, 0, 0.5);
+      border-radius: 8px;
+      padding: 12px;
+      margin-top: 15px;
+      text-align: center;
+      color: #ffa500;
+      font-size: 13px;
+      display: none;
+    }
+
+    .config-warning.active {
+      display: block;
+    }
+
+    .config-info {
+      background: rgba(0, 200, 255, 0.1);
+      border: 1px solid rgba(0, 200, 255, 0.5);
+      border-radius: 8px;
+      padding: 12px;
+      margin-top: 15px;
+      text-align: center;
+      color: #00c8ff;
+      font-size: 13px;
+      display: none;
+    }
+
+    .config-info.active {
+      display: block;
+    }
+
+    .adjust-stake-btn {
+      width: 100%;
+      padding: 15px;
+      background: rgba(0, 255, 136, 0.15);
+      border: 2px solid rgba(0, 255, 136, 0.5);
+      border-radius: 10px;
+      color: #00ff88;
+      font-family: 'Courier New', monospace;
+      font-size: 14px;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      backdrop-filter: blur(20px);
+      margin-top: 15px;
+    }
+
+    .adjust-stake-btn:hover {
+      background: rgba(0, 255, 136, 0.25);
+      border-color: rgba(0, 255, 136, 0.8);
+      box-shadow: 0 4px 20px rgba(0, 255, 136, 0.4);
+      transform: translateY(-2px);
+    }
+
+    .adjust-stake-btn:active {
+      transform: translateY(0);
+    }
+
+    /* Botón de Inicio del Bot */
+    .bot-control-section {
+      padding: 30px;
+      text-align: center;
+      background: rgba(0, 255, 255, 0.02);
+      border-bottom: 1px solid rgba(0, 255, 255, 0.2);
+    }
+
+    .start-bot-btn {
+      position: relative;
+      padding: 25px 60px;
+      background: linear-gradient(135deg, rgba(0, 255, 136, 0.15), rgba(0, 200, 255, 0.15));
+      border: 3px solid rgba(0, 255, 136, 0.5);
+      border-radius: 20px;
+      color: #00ff88;
+      font-family: 'Courier New', monospace;
+      font-size: 20px;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      cursor: pointer;
+      transition: all 0.4s ease;
+      backdrop-filter: blur(30px);
+      transform: translateZ(30px);
+      box-shadow: 
+        0 8px 32px rgba(0, 255, 136, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    }
+
+    .start-bot-btn:hover {
+      background: linear-gradient(135deg, rgba(0, 255, 136, 0.25), rgba(0, 200, 255, 0.25));
+      border-color: rgba(0, 255, 136, 0.8);
+      transform: translateZ(40px) scale(1.05);
+      box-shadow: 
+        0 12px 48px rgba(0, 255, 136, 0.5),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+      cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><text y="20" font-size="20">👆</text></svg>'), pointer;
+    }
+
+    .start-bot-btn:active {
+      transform: translateZ(35px) scale(1.02);
+    }
+
+    .start-bot-btn.active {
+      background: linear-gradient(135deg, rgba(255, 68, 102, 0.15), rgba(255, 100, 50, 0.15));
+      border-color: rgba(255, 68, 102, 0.5);
+      color: #ff4466;
+      animation: pulse-active 2s infinite;
+    }
+
+    .start-bot-btn.active:hover {
+      background: linear-gradient(135deg, rgba(255, 68, 102, 0.25), rgba(255, 100, 50, 0.25));
+      border-color: rgba(255, 68, 102, 0.8);
+      box-shadow: 
+        0 12px 48px rgba(255, 68, 102, 0.5),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    }
+
+    @keyframes pulse-active {
+      0%, 100% {
+        box-shadow: 
+          0 8px 32px rgba(255, 68, 102, 0.3),
+          inset 0 1px 0 rgba(255, 255, 255, 0.1);
+      }
+      50% {
+        box-shadow: 
+          0 8px 32px rgba(255, 68, 102, 0.6),
+          inset 0 1px 0 rgba(255, 255, 255, 0.2);
+      }
+    }
+
+    .bot-status-message {
+      margin-top: 20px;
+      padding: 15px;
+      background: rgba(0, 255, 136, 0.1);
+      border: 1px solid rgba(0, 255, 136, 0.3);
+      border-radius: 12px;
+      color: #00ff88;
+      font-size: 14px;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      backdrop-filter: blur(20px);
+    }
+
+    .bot-status-message.active {
+      opacity: 1;
+    }
+
+    .bot-status-message .scanning-dots::after {
+      content: '...';
+      animation: dots 1.5s infinite;
+    }
+
+    @keyframes dots {
+      0%, 20% { content: '.'; }
+      40% { content: '..'; }
+      60%, 100% { content: '...'; }
+    }
+
+    .gale-cycle-info {
+      margin-top: 15px;
+      padding: 15px;
+      background: rgba(0, 200, 255, 0.08);
+      border: 1px solid rgba(0, 200, 255, 0.4);
+      border-radius: 12px;
+      display: none;
+      backdrop-filter: blur(20px);
+    }
+
+    .gale-cycle-info.active {
+      display: block;
+    }
+
+    .gale-cycle-info .cycle-label {
+      font-size: 12px;
+      opacity: 0.7;
+      margin-bottom: 5px;
+    }
+
+    .gale-cycle-info .cycle-value {
+      font-size: 18px;
+      font-weight: bold;
+      color: #00c8ff;
+    }
+
+    /* Selector de Estrategia */
+    .strategy-selector {
+      padding: 25px;
+      background: rgba(0, 255, 255, 0.02);
+      border-bottom: 1px solid rgba(0, 255, 255, 0.2);
+    }
+
+    .strategy-selector-title {
+      text-align: center;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 15px;
+      opacity: 0.8;
+    }
+
+    .strategy-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .strategy-card {
+      padding: 15px;
+      background: rgba(0, 255, 255, 0.05);
+      border: 1px solid rgba(0, 255, 255, 0.3);
+      border-radius: 10px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      backdrop-filter: blur(20px);
+      transform: translateZ(10px);
+    }
+
+    .strategy-card:hover {
+      background: rgba(0, 255, 255, 0.1);
+      border-color: rgba(0, 255, 255, 0.5);
+      transform: translateZ(20px) scale(1.02);
+      box-shadow: 0 4px 20px rgba(0, 255, 255, 0.3);
+    }
+
+    .strategy-card.active {
+      background: rgba(0, 255, 255, 0.2);
+      border-color: rgba(0, 255, 255, 0.8);
+      border-width: 2px;
+      box-shadow: 
+        0 4px 30px rgba(0, 255, 255, 0.5),
+        inset 0 0 20px rgba(0, 255, 255, 0.2);
+      transform: translateZ(25px);
+    }
+
+    .strategy-name {
+      font-size: 16px;
+      font-weight: bold;
+      margin-bottom: 8px;
+      color: #00ffff;
+    }
+
+    .strategy-description {
+      font-size: 11px;
+      opacity: 0.7;
+      line-height: 1.4;
+    }
+
+    /* Selector de Símbolos */
+    .symbol-selector {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      padding: 25px;
+      background: rgba(0, 255, 255, 0.02);
+      border-bottom: 1px solid rgba(0, 255, 255, 0.2);
+    }
+
+    .symbol-btn {
+      padding: 12px 30px;
+      background: rgba(0, 255, 255, 0.08);
+      border: 1px solid rgba(0, 255, 255, 0.3);
+      border-radius: 10px;
+      color: #00ffff;
+      font-family: 'Courier New', monospace;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      backdrop-filter: blur(20px);
+      transform: translateZ(10px);
+      letter-spacing: 2px;
+    }
+
+    .symbol-btn:hover {
+      background: rgba(0, 255, 255, 0.15);
+      border-color: rgba(0, 255, 255, 0.6);
+      transform: translateZ(20px) scale(1.05);
+      box-shadow: 0 4px 20px rgba(0, 255, 255, 0.4);
+    }
+
+    .symbol-btn.active {
+      background: rgba(0, 255, 255, 0.25);
+      border-color: rgba(0, 255, 255, 0.8);
+      box-shadow: 
+        0 4px 30px rgba(0, 255, 255, 0.6),
+        inset 0 0 20px rgba(0, 255, 255, 0.2);
+      transform: translateZ(30px);
+    }
+
+    .symbol-btn.no-signal {
+      opacity: 0.4;
+      border-style: dashed;
+    }
+
+    /* Contenedor Principal */
+    .main-container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    /* Tarjeta de Señal Principal */
+    .signal-main-card {
+      background: rgba(0, 255, 255, 0.05);
+      border: 2px solid rgba(0, 255, 255, 0.4);
+      border-radius: 20px;
+      padding: 40px;
+      backdrop-filter: blur(40px);
+      transform: translateZ(30px);
+      box-shadow: 
+        0 8px 40px rgba(0, 255, 255, 0.3),
+        inset 0 2px 0 rgba(255, 255, 255, 0.1);
+      transition: all 0.3s ease;
+    }
+
+    .signal-main-card.no-signal {
+      opacity: 0.6;
+      border-style: dashed;
+      border-width: 1px;
+    }
+
+    /* Header del Par */
+    .pair-header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .pair-symbol {
+      font-size: 48px;
+      font-weight: bold;
+      text-shadow: 0 0 30px rgba(0, 255, 255, 0.8);
+      margin-bottom: 15px;
+      letter-spacing: 4px;
+    }
+
+    .pair-direction {
+      display: inline-block;
+      padding: 15px 40px;
+      border-radius: 12px;
+      font-size: 32px;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      margin-bottom: 10px;
+    }
+
+    .pair-direction.call {
+      background: rgba(0, 255, 100, 0.2);
+      color: #00ff64;
+      border: 2px solid rgba(0, 255, 100, 0.5);
+      box-shadow: 0 0 30px rgba(0, 255, 100, 0.4);
+    }
+
+    .pair-direction.put {
+      background: rgba(255, 68, 102, 0.2);
+      color: #ff4466;
+      border: 2px solid rgba(255, 68, 102, 0.5);
+      box-shadow: 0 0 30px rgba(255, 68, 102, 0.4);
+    }
+
+    .pair-confidence {
+      font-size: 18px;
+      opacity: 0.8;
+      margin-top: 10px;
+    }
+
+    .pair-strategy {
+      font-size: 14px;
+      opacity: 0.6;
+      margin-top: 5px;
+    }
+
+    /* Información de Precios */
+    .price-info {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin: 30px 0;
+      padding: 25px;
+      background: rgba(0, 0, 0, 0.3);
+      border-radius: 12px;
+      border: 1px solid rgba(0, 255, 255, 0.2);
+    }
+
+    .price-box {
+      text-align: center;
+    }
+
+    .price-label {
+      font-size: 14px;
+      opacity: 0.7;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .price-value {
+      font-size: 28px;
+      font-weight: bold;
+      color: #00ffff;
+      text-shadow: 0 0 15px rgba(0, 255, 255, 0.6);
+    }
+
+    .price-value.winning {
+      color: #00ff88;
+      text-shadow: 0 0 15px rgba(0, 255, 136, 0.6);
+    }
+
+    .price-value.losing {
+      color: #ff4466;
+      text-shadow: 0 0 15px rgba(255, 68, 102, 0.6);
+    }
+
+    /* Vela M5 OHLC */
+    .candle-ohlc {
+      margin: 25px 0;
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.4);
+      border-radius: 12px;
+      border: 1px solid rgba(0, 255, 255, 0.15);
+    }
+
+    .ohlc-title {
+      text-align: center;
+      font-size: 16px;
+      color: #00ffff;
+      margin-bottom: 15px;
+      font-weight: bold;
+      text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+    }
+
+    .ohlc-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+    }
+
+    .ohlc-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 15px;
+      background: rgba(0, 0, 0, 0.3);
+      border-radius: 8px;
+      border: 1px solid rgba(0, 255, 255, 0.1);
+    }
+
+    .ohlc-label {
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.6);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .ohlc-value {
+      font-size: 18px;
+      font-weight: bold;
+      color: #00ffff;
+      text-shadow: 0 0 10px rgba(0, 255, 255, 0.4);
+    }
+
+    .ohlc-value.high {
+      color: #00ff88;
+      text-shadow: 0 0 10px rgba(0, 255, 136, 0.4);
+    }
+
+    .ohlc-value.low {
+      color: #ff4466;
+      text-shadow: 0 0 10px rgba(255, 68, 102, 0.4);
+    }
+
+    .candle-green {
+      color: #00ff88;
+      font-weight: bold;
+      text-shadow: 0 0 15px rgba(0, 255, 136, 0.6);
+      margin-left: 10px;
+    }
+
+    .candle-red {
+      color: #ff4466;
+      font-weight: bold;
+      text-shadow: 0 0 15px rgba(255, 68, 102, 0.6);
+      margin-left: 10px;
+    }
+
+    /* Instrucción de Ejecución */
+    .execution-instruction {
+      text-align: center;
+      padding: 20px;
+      margin: 20px 0;
+      background: rgba(0, 255, 255, 0.1);
+      border: 2px solid rgba(0, 255, 255, 0.4);
+      border-radius: 12px;
+      font-size: 20px;
+      font-weight: bold;
+      letter-spacing: 2px;
+      animation: pulse-glow 2s infinite;
+    }
+
+    @keyframes pulse-glow {
+      0%, 100% { 
+        box-shadow: 0 0 20px rgba(0, 255, 255, 0.4);
+      }
+      50% { 
+        box-shadow: 0 0 40px rgba(0, 255, 255, 0.8);
+      }
+    }
+
+    .execution-instruction.gale {
+      background: rgba(255, 165, 0, 0.1);
+      border-color: rgba(255, 165, 0, 0.5);
+      color: #ffa500;
+    }
+
+    /* Stake Actual */
+    .current-stake {
+      text-align: center;
+      margin: 25px 0;
+      padding: 20px;
+      background: rgba(0, 255, 136, 0.08);
+      border: 2px solid rgba(0, 255, 136, 0.3);
+      border-radius: 12px;
+    }
+
+    .stake-label {
+      font-size: 14px;
+      opacity: 0.7;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+    }
+
+    .stake-amount {
+      font-size: 42px;
+      font-weight: bold;
+      color: #00ff88;
+      text-shadow: 0 0 25px rgba(0, 255, 136, 0.8);
+    }
+
+    .stake-balance-info {
+      font-size: 13px;
+      margin-top: 10px;
+      opacity: 0.7;
+    }
+
+    /* Historial de Gale */
+    .gale-history {
+      margin-top: 30px;
+      padding-top: 30px;
+      border-top: 1px solid rgba(0, 255, 255, 0.2);
+    }
+
+    .gale-history-title {
+      font-size: 16px;
+      margin-bottom: 20px;
+      opacity: 0.8;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    .gale-entry {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 15px;
+      margin-bottom: 10px;
+      background: rgba(0, 0, 0, 0.3);
+      border-radius: 8px;
+      border-left: 4px solid;
+    }
+
+    .gale-entry.win {
+      border-left-color: #00ff88;
+      background: rgba(0, 255, 136, 0.05);
+    }
+
+    .gale-entry.loss {
+      border-left-color: #ff4466;
+      background: rgba(255, 68, 102, 0.05);
+    }
+
+    .gale-entry-info {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .gale-entry-label {
+      font-weight: bold;
+      min-width: 100px;
+    }
+
+    .gale-entry-result {
+      font-size: 14px;
+      opacity: 0.8;
+    }
+
+    .gale-entry-stake {
+      font-size: 18px;
+      font-weight: bold;
+      color: #00ffff;
+    }
+
+    /* Progreso de Operación Actual */
+    .current-operation {
+      margin: 25px 0;
+      padding: 20px;
+      background: rgba(0, 255, 255, 0.05);
+      border: 1px solid rgba(0, 255, 255, 0.3);
+      border-radius: 12px;
+    }
+
+    .operation-label {
+      font-size: 14px;
+      margin-bottom: 12px;
+      opacity: 0.8;
+      text-transform: uppercase;
+    }
+
+    .progress-bar-container {
+      height: 40px;
+      background: rgba(0, 0, 0, 0.5);
+      border-radius: 20px;
+      overflow: hidden;
+      position: relative;
+      border: 1px solid rgba(0, 255, 255, 0.2);
+    }
+
+    .progress-bar {
+      height: 100%;
+      transition: width 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 16px;
+      position: relative;
+    }
+
+    .progress-bar.call {
+      background: linear-gradient(90deg, rgba(0, 255, 100, 0.3), rgba(0, 255, 100, 0.6));
+      color: #00ff64;
+    }
+
+    .progress-bar.put {
+      background: linear-gradient(90deg, rgba(255, 68, 102, 0.3), rgba(255, 68, 102, 0.6));
+      color: #ff4466;
+    }
+
+    .progress-bar.candle-bar-green {
+      background: linear-gradient(90deg, rgba(0, 255, 136, 0.3), rgba(0, 255, 136, 0.6));
+      color: #00ff88;
+      box-shadow: 0 0 20px rgba(0, 255, 136, 0.4);
+    }
+
+    .progress-bar.candle-bar-red {
+      background: linear-gradient(90deg, rgba(255, 68, 102, 0.3), rgba(255, 68, 102, 0.6));
+      color: #ff4466;
+      box-shadow: 0 0 20px rgba(255, 68, 102, 0.4);
+    }
+
+    /* Time Sync Display */
+    .time-sync-display {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      margin: 20px 0;
+      padding: 15px;
+      background: rgba(0, 255, 255, 0.03);
+      border: 1px solid rgba(0, 255, 255, 0.2);
+      border-radius: 12px;
+      backdrop-filter: blur(15px);
+    }
+    
+    .time-box {
+      flex: 1;
+      text-align: center;
+    }
+    
+    .time-label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: rgba(0, 255, 255, 0.6);
+      margin-bottom: 8px;
+      font-weight: 600;
+    }
+    
+    .time-value {
+      font-size: 24px;
+      font-weight: bold;
+      font-family: 'Courier New', monospace;
+      letter-spacing: 2px;
+    }
+    
+    .time-value.clock-time {
+      color: #00ff88;
+      text-shadow: 0 0 15px rgba(0, 255, 136, 0.6);
+    }
+    
+    .time-value.candle-time {
+      color: #00ffff;
+      text-shadow: 0 0 15px rgba(0, 255, 255, 0.6);
+    }
+    
+    .time-separator {
+      font-size: 28px;
+      color: rgba(0, 255, 255, 0.4);
+      font-weight: bold;
+    }
+
+    /* Countdown */
+    .countdown {
+      text-align: center;
+      font-size: 56px;
+      font-weight: bold;
+      margin-top: 25px;
+      color: #00ffff;
+      text-shadow: 0 0 30px rgba(0, 255, 255, 0.8);
+      letter-spacing: 4px;
+    }
+
+    /* Estado Sin Señal */
+    .no-signal-state {
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    .no-signal-icon {
+      font-size: 72px;
+      margin-bottom: 20px;
+      opacity: 0.5;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 0.3; }
+      50% { opacity: 0.6; }
+    }
+
+    .no-signal-text {
+      font-size: 20px;
+      opacity: 0.7;
+    }
+
+    /* Status Bar */
+    .status-bar {
+      position: fixed;
+      top: 0;
+      right: 0;
+      padding: 10px 20px;
+      background: rgba(0, 255, 255, 0.1);
+      border-bottom-left-radius: 10px;
+      border: 1px solid rgba(0, 255, 255, 0.3);
+      border-top: none;
+      border-right: none;
+      backdrop-filter: blur(20px);
+      z-index: 1000;
+    }
+
+    .connection-status {
+      font-size: 12px;
+      font-weight: bold;
+    }
+
+    .connection-status.connected {
+      color: #00ff88;
+    }
+
+    .connection-status.disconnected {
+      color: #ff4466;
+    }
+  </style>
+</head>
+<body>
+  {% set action = "logout" %}
+  {% set label = "SALIR" %}
+  {% include "partials/floating_menu_button.html" %}
+
+  <div class="header">
+    <h1>🤖 STC TRADING - PANEL DE SEÑALES PRO</h1>
+    <p>Sistema Multi-Estrategia • Gestión de Gale Automática • M5</p>
+  </div>
+
+  <div class="status-bar">
+    <div id="connectionStatus" class="connection-status">⚪ Conectando...</div>
+  </div>
+
+  <!-- Configuración de Saldo -->
+  <div class="config-panel">
+    <div class="config-title">💰 Configuración de Saldo y Martingale</div>
+    <div class="config-grid">
+      <div class="config-input-group">
+        <div class="config-label">💵 Saldo Disponible</div>
+        <input type="number" id="balanceInput" class="config-input" value="100" min="1" step="1">
+      </div>
+      
+      <div class="config-input-group">
+        <div class="config-label">🎯 Stake Inicial</div>
+        <input type="number" id="stakeInput" class="config-input" value="10" min="1" step="1">
+      </div>
+
+      <div class="config-input-group">
+        <div class="config-label">📊 Multiplicador</div>
+        <input type="number" id="multiplierInput" class="config-input" value="2.0" min="1.5" max="3.0" step="0.1">
+      </div>
+      
+      <div class="config-input-group">
+        <div class="config-label">🔄 Gales Deseados</div>
+        <input type="number" id="desiredGalesInput" class="config-input" value="7" min="1" max="10" step="1">
+      </div>
+      
+      <div class="config-result">
+        <div class="config-result-label">✅ Gales Disponibles</div>
+        <div id="maxGalesDisplay" class="config-result-value">-</div>
+      </div>
+    </div>
+    
+    <button id="adjustStakeBtn" class="adjust-stake-btn">
+      🎯 Ajustar Stake Ideal para <span id="galesTargetSpan">7</span> Gales
+    </button>
+    
+    <div id="configInfo" class="config-info"></div>
+    <div id="configWarning" class="config-warning"></div>
+  </div>
+
+  <!-- Paso 1: Selector de Estrategia -->
+  <div class="strategy-selector">
+    <div class="strategy-selector-title">📊 Paso 1: Selecciona tu Estrategia</div>
+    <div class="strategy-grid" id="strategyGrid">
+      <div class="strategy-card active" data-strategy="tablero_binarias">
+        <div class="strategy-name">🎲 Tablero Binarias</div>
+        <div class="strategy-description">Análisis de 5 patrones probabilísticos con confirmación de vela</div>
+      </div>
+      <div class="strategy-card" data-strategy="probability_gale">
+        <div class="strategy-name">📈 Probability Gale</div>
+        <div class="strategy-description">Probabilidades de patrones con sistema Martingale integrado</div>
+      </div>
+      <div class="strategy-card" data-strategy="rsi">
+        <div class="strategy-name">📊 RSI</div>
+        <div class="strategy-description">Oscilador RSI clásico con niveles de sobrecompra/sobreventa</div>
+      </div>
+      <div class="strategy-card" data-strategy="macd">
+        <div class="strategy-name">⚡ MACD</div>
+        <div class="strategy-description">Cruce de medias móviles MACD con señales de momentum</div>
+      </div>
+      <div class="strategy-card" data-strategy="bollinger">
+        <div class="strategy-name">📉 Bollinger Bands</div>
+        <div class="strategy-description">Bandas de Bollinger con estrategia de rebote</div>
+      </div>
+      <div class="strategy-card" data-strategy="smart_trade">
+        <div class="strategy-name">🎯 Smart Trade Academy</div>
+        <div class="strategy-description">Estrategia contrarian con lógica inversa avanzada</div>
+      </div>
+      <div class="strategy-card" data-strategy="kolmogorov">
+        <div class="strategy-name">🧬 Kolmogorov-Markov</div>
+        <div class="strategy-description">Cadenas de Markov con teoría de Kolmogorov</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Selector de Par (PRIMERO - más visible) -->
+  <div class="symbol-selector-header">
+    <div class="selector-title">📊 SELECCIONA UN PAR PARA OPERAR</div>
+  </div>
+  <div class="symbol-selector" id="symbolSelector">
+    <button class="symbol-btn active" data-symbol="EURUSD">EUR/USD</button>
+    <button class="symbol-btn" data-symbol="EURJPY">EUR/JPY</button>
+  </div>
+
+  <!-- Control del Bot -->
+  <div class="bot-control-section">
+    <button id="startBotBtn" class="start-bot-btn">
+      🤖 INICIAR SISTEMA DE SEÑALES
+    </button>
+    <div id="botStatusMessage" class="bot-status-message">
+      <span class="scanning-dots">🔍 Sistema Iniciado - Escaneando Mercado</span>
+    </div>
+    <div id="galeCycleInfo" class="gale-cycle-info">
+      <div class="cycle-label">📊 Ciclo Actual</div>
+      <div class="cycle-value" id="cycleInfoText">Entrada Inicial - Stake: $10.00</div>
+    </div>
+  </div>
+
+  <!-- Paso 3: Vista de Señales -->
+  <div class="main-container">
+    <div id="signalCard" class="signal-main-card">
+      <!-- Contenido dinámico -->
+    </div>
+  </div>
+
+  <script>
+    // Usar rutas relativas - mismo puerto que el Dashboard (proxy interno)
+    const protocol = window.location.protocol === 'https:' ? 'https:' : 'http:';
+    const wsProtocol = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
+    const host = window.location.host; // Incluye puerto si existe
+    
+    const API_BASE = `${protocol}//${host}`;
+    const WS_URL = `${wsProtocol}//${host}/ws/live`;
+    
+    let ws = null;
+    let signals = {
+      'EURUSD': null,
+      'EURJPY': null
+    };
+    let candlesM5 = {
+      'EURUSD': null,
+      'EURJPY': null
+    };
+    let selectedSymbol = 'EURUSD';
+    let selectedStrategy = null;  // Sin estrategia por defecto - usuario debe seleccionar
+    
+    // Configuración de Martingale
+    let userBalance = 100;
+    let initialStake = 10;
+    let multiplier = 2.0;
+    let maxGalesAvailable = 0;
+
+    // Estado del Bot
+    let botActive = false;
+    let currentGaleLevel = 0;
+    let currentStake = 0;
+    let inGaleCycle = false;
+    let lastSignalResult = null;
+    let cycleHistory = [];
+
+    // Sincronización de tiempo con servidor
+    let serverTimeOffset = 0; // Diferencia entre servidor y cliente (ms)
+    let lastServerSync = 0; // Timestamp de última sincronización
+
+    console.log('🔗 WebSocket URL:', WS_URL);
+    console.log('🔗 API URL:', `${API_BASE}/api/signals/live`);
+
+    // Obtener tiempo sincronizado del servidor
+    function getServerTime() {
+      if (serverTimeOffset === 0) {
+        // Si no hay sincronización aún, usar tiempo local como fallback
+        return Date.now();
+      }
+      // Tiempo del servidor = tiempo local + offset
+      return Date.now() + serverTimeOffset;
+    }
+
+    // Sincronizar reloj con servidor (llamado cada vez que se recibe server_time)
+    function syncWithServer(serverTimeMs) {
+      const clientTimeMs = Date.now();
+      const newOffset = serverTimeMs - clientTimeMs;
+      
+      // Actualizar offset (usar promedio móvil para suavizar)
+      if (lastServerSync === 0) {
+        serverTimeOffset = newOffset;
+      } else {
+        serverTimeOffset = serverTimeOffset * 0.7 + newOffset * 0.3;
+      }
+      
+      lastServerSync = clientTimeMs;
+      
+      // Log solo en primera sincronización o cambios significativos (>500ms)
+      if (Math.abs(newOffset - serverTimeOffset) > 500 || lastServerSync === clientTimeMs) {
+        console.log(`🕐 Sincronización: Offset=${Math.round(serverTimeOffset)}ms`);
+      }
+    }
+
+    // Calcular Gales disponibles
+    function calculateMaxGales() {
+      const balance = parseFloat(document.getElementById('balanceInput').value) || 100;
+      const stake = parseFloat(document.getElementById('stakeInput').value) || 10;
+      const mult = parseFloat(document.getElementById('multiplierInput').value) || 2.0;
+      
+      userBalance = balance;
+      initialStake = stake;
+      multiplier = mult;
+      
+      let remainingBalance = balance;
+      let currentStake = stake;
+      let galesCount = 0;
+      
+      // Calcular cuántos Gales puede hacer
+      while (remainingBalance >= currentStake && galesCount < 10) {
+        remainingBalance -= currentStake;
+        galesCount++;
+        currentStake = stake * Math.pow(mult, galesCount);
+      }
+      
+      maxGalesAvailable = galesCount - 1; // El primero es la entrada inicial
+      
+      // Actualizar display
+      document.getElementById('maxGalesDisplay').textContent = maxGalesAvailable;
+      
+      // Mostrar advertencia si es necesario
+      const warning = document.getElementById('configWarning');
+      if (maxGalesAvailable < 1) {
+        warning.textContent = '⚠️ Saldo insuficiente para hacer Gales. Aumenta tu saldo o reduce el stake inicial.';
+        warning.classList.add('active');
+      } else if (maxGalesAvailable < 3) {
+        warning.textContent = `⚠️ Solo puedes hacer ${maxGalesAvailable} Gale(s). Se recomienda tener saldo para al menos 3 Gales.`;
+        warning.classList.add('active');
+      } else {
+        warning.classList.remove('active');
+      }
+      
+      console.log(`💰 Saldo: $${balance} | Stake: $${stake} | Mult: ${mult}x | Max Gales: ${maxGalesAvailable}`);
+    }
+
+    // Calcular stake ideal para N Gales
+    function calculateIdealStake() {
+      const balance = parseFloat(document.getElementById('balanceInput').value) || 100;
+      const mult = parseFloat(document.getElementById('multiplierInput').value) || 2.0;
+      const desiredGales = parseInt(document.getElementById('desiredGalesInput').value) || 7;
+      
+      // Fórmula: balance = stake * (1 + mult + mult^2 + ... + mult^(n-1))
+      // Suma geométrica: S = stake * (mult^n - 1) / (mult - 1)
+      // stake = balance * (mult - 1) / (mult^n - 1)
+      
+      let sumMultipliers = 0;
+      for (let i = 0; i < desiredGales; i++) {
+        sumMultipliers += Math.pow(mult, i);
+      }
+      
+      const idealStake = balance / sumMultipliers;
+      
+      // Actualizar el input de stake
+      document.getElementById('stakeInput').value = idealStake.toFixed(2);
+      
+      // Recalcular Gales disponibles
+      calculateMaxGales();
+      
+      // Mostrar información
+      const info = document.getElementById('configInfo');
+      info.textContent = `✅ Stake ajustado a $${idealStake.toFixed(2)} para hacer exactamente ${desiredGales} Gales con $${balance.toFixed(2)} de saldo (multiplicador ${mult}x)`;
+      info.classList.add('active');
+      
+      // Ocultar advertencia
+      document.getElementById('configWarning').classList.remove('active');
+      
+      console.log(`🎯 Stake ideal calculado: $${idealStake.toFixed(2)} para ${desiredGales} Gales`);
+    }
+
+    // API Key para autenticación (renderizada desde backend)
+    const BOT_API_KEY = "{{ api_key }}";
+
+    // Cargar estado inicial del bot
+    async function loadInitialBotState() {
+      try {
+        const response = await fetch('/api/bot/status');
+        const data = await response.json();
+        
+        if (data.status === 'ok' && data.bot) {
+          botActive = data.bot.scanning_active;
+          updateBotUI();
+          console.log(`📊 Estado inicial del bot cargado: ${botActive ? 'ACTIVO' : 'INACTIVO'}`);
+        }
+      } catch (error) {
+        console.error('❌ Error cargando estado del bot:', error);
+      }
+    }
+
+    // Actualizar UI del botón según estado
+    function updateBotUI() {
+      const btn = document.getElementById('startBotBtn');
+      const statusMsg = document.getElementById('botStatusMessage');
+      const cycleInfo = document.getElementById('galeCycleInfo');
+      
+      if (botActive) {
+        btn.classList.add('active');
+        btn.innerHTML = '🛑 DETENER SISTEMA';
+        statusMsg.classList.add('active');
+        cycleInfo.classList.add('active');
+        
+        // Resetear ciclo
+        currentGaleLevel = 0;
+        currentStake = initialStake;
+        inGaleCycle = false;
+        
+        updateCycleInfo();
+      } else {
+        btn.classList.remove('active');
+        btn.innerHTML = '🤖 INICIAR SISTEMA DE SEÑALES';
+        statusMsg.classList.remove('active');
+        cycleInfo.classList.remove('active');
+        
+        // Resetear estado
+        currentGaleLevel = 0;
+        currentStake = 0;
+        inGaleCycle = false;
+      }
+    }
+
+    // Control del Bot (con sincronización backend)
+    async function toggleBot() {
+      const btn = document.getElementById('startBotBtn');
+      btn.disabled = true; // Deshabilitar durante la operación
+      
+      try {
+        if (!botActive) {
+          // Iniciar bot
+          const response = await fetch('/api/bot/start', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'Authorization': `Bearer ${BOT_API_KEY}`
+            }
+          });
+          
+          const data = await response.json();
+          
+          if (data.status === 'ok') {
+            botActive = true;
+            updateBotUI();
+            console.log('🤖 Bot activado - Escaneando mercado...');
+          } else {
+            console.error('❌ Error iniciando bot:', data.message);
+            alert('Error al iniciar el sistema: ' + (data.message || 'Error desconocido'));
+          }
+        } else {
+          // Detener bot
+          const response = await fetch('/api/bot/stop', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'Authorization': `Bearer ${BOT_API_KEY}`
+            }
+          });
+          
+          const data = await response.json();
+          
+          if (data.status === 'ok') {
+            botActive = false;
+            updateBotUI();
+            console.log('🛑 Bot detenido');
+          } else {
+            console.error('❌ Error deteniendo bot:', data.message);
+            alert('Error al detener el sistema: ' + (data.message || 'Error desconocido'));
+          }
+        }
+      } catch (error) {
+        console.error('❌ Error en toggleBot:', error);
+        alert('Error de conexión con el servidor');
+      } finally {
+        btn.disabled = false;
+      }
+    }
+
+    // Actualizar información del ciclo
+    function updateCycleInfo() {
+      const cycleInfoText = document.getElementById('cycleInfoText');
+      
+      if (currentGaleLevel === 0) {
+        cycleInfoText.innerHTML = `🎯 Entrada Inicial - Stake: $${currentStake.toFixed(2)}`;
+      } else {
+        cycleInfoText.innerHTML = `🔄 Gale ${currentGaleLevel}/${maxGalesAvailable - 1} - Stake: $${currentStake.toFixed(2)}`;
+      }
+    }
+
+    // Iniciar nuevo ciclo de Gales
+    function startNewCycle() {
+      currentGaleLevel = 0;
+      currentStake = initialStake;
+      inGaleCycle = false;
+      updateCycleInfo();
+      console.log('🔄 Nuevo ciclo iniciado - Stake: $' + currentStake);
+    }
+
+    // Continuar ciclo de Gales
+    function continueGaleCycle() {
+      if (currentGaleLevel >= maxGalesAvailable - 1) {
+        console.log('❌ Máximo de Gales alcanzado - Reiniciando ciclo');
+        startNewCycle();
+        return;
+      }
+      
+      currentGaleLevel++;
+      currentStake = initialStake * Math.pow(multiplier, currentGaleLevel);
+      inGaleCycle = true;
+      updateCycleInfo();
+      
+      console.log(`🔄 Gale ${currentGaleLevel}/${maxGalesAvailable - 1} - Stake: $${currentStake.toFixed(2)}`);
+    }
+
+    // Procesar resultado de operación (simulado)
+    function processTradeResult(won) {
+      if (won) {
+        console.log('✅ Operación ganada - Iniciando nuevo ciclo');
+        startNewCycle();
+      } else {
+        console.log('❌ Operación perdida - Continuando con Gale');
+        continueGaleCycle();
+      }
+    }
+
+    // Event listeners para inputs
+    document.getElementById('balanceInput').addEventListener('input', calculateMaxGales);
+    document.getElementById('stakeInput').addEventListener('input', calculateMaxGales);
+    document.getElementById('multiplierInput').addEventListener('input', calculateMaxGales);
+    
+    document.getElementById('desiredGalesInput').addEventListener('input', (e) => {
+      const desiredGales = e.target.value;
+      document.getElementById('galesTargetSpan').textContent = desiredGales;
+    });
+    
+    // Event listener para botón de ajuste
+    document.getElementById('adjustStakeBtn').addEventListener('click', calculateIdealStake);
+
+    // Event listener para botón de inicio del bot
+    document.getElementById('startBotBtn').addEventListener('click', toggleBot);
+
+    // Calcular al cargar
+    calculateMaxGales();
+
+    // Selector de estrategia
+    document.querySelectorAll('.strategy-card').forEach(card => {
+      card.addEventListener('click', () => {
+        document.querySelectorAll('.strategy-card').forEach(c => c.classList.remove('active'));
+        card.classList.add('active');
+        selectedStrategy = card.dataset.strategy;
+        console.log(`📊 Estrategia seleccionada: ${selectedStrategy}`);
+        loadInitialSignals();
+      });
+    });
+
+    // Selector de símbolo
+    document.querySelectorAll('.symbol-btn').forEach(btn => {
+      btn.addEventListener('click', async () => {
+        document.querySelectorAll('.symbol-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const newSymbol = btn.dataset.symbol;
+        selectedSymbol = newSymbol;
+        
+        // Notificar al backend que cambiamos el símbolo activo
+        try {
+          const response = await fetch(`${API_BASE}/api/bot/change-symbol`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ symbol: newSymbol })
+          });
+          const data = await response.json();
+          if (data.status === 'ok') {
+            console.log(`✅ Símbolo activo cambiado a: ${newSymbol}`);
+          }
+        } catch (err) {
+          console.error('❌ Error cambiando símbolo:', err);
+        }
+        
+        renderSignal();
+      });
+    });
+
+    // Conectar WebSocket
+    function connectWebSocket() {
+      ws = new WebSocket(WS_URL);
+      
+      ws.onopen = () => {
+        console.log('✅ WebSocket conectado');
+        updateConnectionStatus(true);
+      };
+      
+      ws.onmessage = (event) => {
+        try {
+          const data = JSON.parse(event.data);
+          
+          // Sincronizar reloj con servidor si el mensaje incluye server_time
+          if (data.server_time) {
+            syncWithServer(data.server_time);
+          }
+          
+          if (data.type === 'signal') {
+            console.log(`🔔 Señal recibida: ${data.symbol} ${data.direction} (${data.confidence * 100}%)`);
+            signals[data.symbol] = data;
+            updateSymbolButtons();
+            renderSignal();
+          } else if (data.type === 'gale_result') {
+            console.log(`🎯 Ciclo Gale completado: ${data.symbol} - ${data.result}`);
+            // Actualizar señal con resultado final
+            if (signals[data.symbol]) {
+              signals[data.symbol] = data.signal;
+              renderSignal();
+            }
+            // Limpiar señal después de 5 segundos
+            setTimeout(() => {
+              signals[data.symbol] = null;
+              updateSymbolButtons();
+              renderSignal();
+            }, 5000);
+          } else if (data.type === 'gale_continue') {
+            console.log(`🔄 Gale ${data.gale_level} iniciado: ${data.symbol}`);
+            // Actualizar señal con nuevo gale
+            if (signals[data.symbol]) {
+              signals[data.symbol] = data.signal;
+              renderSignal();
+            }
+          } else if (data.type === 'signal_cleared') {
+            console.log(`🧹 Señal limpiada: ${data.symbol}`);
+            // Limpiar señal del símbolo
+            signals[data.symbol] = null;
+            updateSymbolButtons();
+            renderSignal();
+          } else if (data.type === 'candle' && data.timeframe === '5m') {
+            // Guardar vela M5 actual
+            candlesM5[data.symbol] = data.data;
+            renderSignal();
+          }
+        } catch (error) {
+          console.error('❌ Error procesando WebSocket:', error);
+        }
+      };
+      
+      ws.onerror = (error) => {
+        console.error('❌ WebSocket error:', error);
+        updateConnectionStatus(false);
+      };
+      
+      ws.onclose = () => {
+        console.log('📴 WebSocket desconectado');
+        updateConnectionStatus(false);
+        setTimeout(connectWebSocket, 3000);
+      };
+    }
+
+    // Cargar señales iniciales
+    async function loadInitialSignals() {
+      try {
+        const response = await fetch(`${API_BASE}/api/signals/live`);
+        const data = await response.json();
+        
+        if (data.status === 'ok' && data.signals) {
+          data.signals.forEach(signal => {
+            signals[signal.symbol] = signal;
+          });
+          updateSymbolButtons();
+          renderSignal();
+        }
+      } catch (error) {
+        console.error('❌ Error cargando señales:', error);
+      }
+    }
+
+    // Actualizar botones de símbolos
+    function updateSymbolButtons() {
+      document.querySelectorAll('.symbol-btn').forEach(btn => {
+        const symbol = btn.dataset.symbol;
+        const hasSignal = signals[symbol] !== null;
+        
+        if (hasSignal) {
+          btn.classList.remove('no-signal');
+        } else {
+          btn.classList.add('no-signal');
+        }
+      });
+    }
+
+    // Generar HTML del OHLC de la vela M5 actual
+    function getCandleOHLCHTML(symbol) {
+      // Priorizar datos en vivo desde signal.current_ohlc (vela en formación)
+      const signal = signals[symbol];
+      let candle = signal?.current_ohlc || candlesM5[symbol];
+      
+      if (!candle) return '';
+      
+      // Determinar color de la vela
+      const isGreen = candle.close > candle.open;
+      const candleColor = isGreen ? '🟢 VERDE' : '🔴 ROJA';
+      const candleClass = isGreen ? 'candle-green' : 'candle-red';
+      
+      return `
+        <div class="candle-ohlc">
+          <div class="ohlc-title">📊 Vela M5 Actual <span class="${candleClass}">${candleColor}</span></div>
+          <div class="ohlc-grid">
+            <div class="ohlc-item">
+              <span class="ohlc-label">Open:</span>
+              <span class="ohlc-value">${candle.open.toFixed(5)}</span>
+            </div>
+            <div class="ohlc-item">
+              <span class="ohlc-label">High:</span>
+              <span class="ohlc-value high">${candle.high.toFixed(5)}</span>
+            </div>
+            <div class="ohlc-item">
+              <span class="ohlc-label">Low:</span>
+              <span class="ohlc-value low">${candle.low.toFixed(5)}</span>
+            </div>
+            <div class="ohlc-item">
+              <span class="ohlc-label">Close:</span>
+              <span class="ohlc-value">${candle.close.toFixed(5)}</span>
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
+    // Renderizar señal del símbolo seleccionado
+    function renderSignal() {
+      const signal = signals[selectedSymbol];
+      const card = document.getElementById('signalCard');
+      
+      if (!signal) {
+        card.className = 'signal-main-card no-signal';
+        const ohlcHTML = getCandleOHLCHTML(selectedSymbol);
+        card.innerHTML = `
+          <div class="no-signal-state">
+            <div class="no-signal-icon">⏳</div>
+            <div class="no-signal-text">Esperando señal para ${selectedSymbol}...</div>
+            ${ohlcHTML}
+          </div>
+        `;
+        return;
+      }
+
+      card.className = 'signal-main-card';
+      
+      // SINCRONIZACIÓN PERFECTA: Calcular tiempo restante hasta CIERRE DE OPERACIÓN
+      // Usar expires_at del backend (tiempo exacto de cierre)
+      const nowMs = getServerTime();
+      const expiresAtMs = signal.expires_at * 1000; // Convertir de segundos a milisegundos
+      const generatedAtMs = signal.generated_at * 1000;
+      
+      // Calcular tiempo restante hasta el cierre de la operación
+      const msLeft = expiresAtMs - nowMs;
+      const timeRemaining = Math.max(0, Math.floor(msLeft / 1000));
+      
+      // Calcular progreso de la operación
+      const totalDuration = Math.floor((expiresAtMs - generatedAtMs) / 1000); // Duración total en segundos
+      const timeElapsed = Math.floor((nowMs - generatedAtMs) / 1000);
+      const progressPercent = Math.min(100, Math.max(0, (timeElapsed / totalDuration) * 100));
+      
+      const minutes = Math.floor(timeRemaining / 60);
+      const seconds = timeRemaining % 60;
+      const timeStr = `${minutes}:${seconds.toString().padStart(2, '0')}`;
+      
+      // Formatear horas para display en UTC-4 (zona horaria del mercado)
+      // Usar tiempo del servidor sincronizado, convertir de UTC a UTC-4
+      const nowDate = new Date(nowMs - (4 * 60 * 60 * 1000)); // Restar 4 horas para UTC-4
+      const clockHour = nowDate.getUTCHours().toString().padStart(2, '0');
+      const clockMin = nowDate.getUTCMinutes().toString().padStart(2, '0');
+      const clockSec = nowDate.getUTCSeconds().toString().padStart(2, '0');
+      const clockTime = `${clockHour}:${clockMin}:${clockSec}`;
+      
+      // Mostrar hora de cierre de la operación (expires_at en UTC-4)
+      const candleCloseDate = new Date(expiresAtMs - (4 * 60 * 60 * 1000));
+      const candleHour = candleCloseDate.getUTCHours().toString().padStart(2, '0');
+      const candleMin = candleCloseDate.getUTCMinutes().toString().padStart(2, '0');
+      const candleSec = candleCloseDate.getUTCSeconds().toString().padStart(2, '0');
+      const candleCloseTime = `${candleHour}:${candleMin}:${candleSec}`;
+      
+      const directionClass = signal.direction.toLowerCase();
+      const entryPrice = signal.entry_price ? signal.entry_price.toFixed(5) : '—';
+      const currentPrice = signal.current_price ? signal.current_price.toFixed(5) : '—';
+      const isWinning = signal.is_winning !== undefined ? signal.is_winning : true;
+      
+      // Determinar color de la barra según la vela actual
+      const candle = candlesM5[selectedSymbol];
+      const candleColorClass = candle && candle.close > candle.open ? 'candle-bar-green' : 'candle-bar-red';
+      
+      // Usar el stake del ciclo actual del bot si está activo
+      let displayGaleLevel = currentGaleLevel;
+      let displayStake = currentStake || initialStake;
+      
+      // Si el bot no está activo, usar información de la señal
+      if (!botActive) {
+        displayGaleLevel = signal.gale_cycle ? signal.gale_cycle.length : 0;
+        displayStake = initialStake * Math.pow(multiplier, displayGaleLevel);
+      }
+      
+      // Calcular saldo restante después de esta operación
+      let totalSpent = 0;
+      for (let i = 0; i <= displayGaleLevel; i++) {
+        totalSpent += initialStake * Math.pow(multiplier, i);
+      }
+      const remainingBalance = userBalance - totalSpent;
+      
+      // Verificar si puede continuar con Gales
+      const nextStake = initialStake * Math.pow(multiplier, displayGaleLevel + 1);
+      const canContinue = remainingBalance >= nextStake;
+      
+      // Obtener nombre de estrategia
+      const strategyNames = {
+        'tablero_binarias': 'Tablero Binarias',
+        'probability_gale': 'Probability Gale',
+        'rsi': 'RSI',
+        'macd': 'MACD',
+        'bollinger': 'Bollinger Bands',
+        'smart_trade': 'Smart Trade Academy',
+        'kolmogorov': 'Kolmogorov-Markov'
+      };
+      const strategyName = strategyNames[selectedStrategy] || 'Tablero Binarias';
+      
+      // Generar instrucción
+      let instructionHTML;
+      if (displayGaleLevel === 0) {
+        instructionHTML = `
+          <div class="execution-instruction">
+            🎯 EJECUTA ${signal.direction} EN LA PRÓXIMA VELA (5M)
+          </div>
+        `;
+      } else {
+        if (canContinue && displayGaleLevel < maxGalesAvailable) {
+          instructionHTML = `
+            <div class="execution-instruction gale">
+              🔄 GALE ${displayGaleLevel}/${maxGalesAvailable - 1} - EJECUTA ${signal.direction} (5M)
+            </div>
+          `;
+        } else {
+          instructionHTML = `
+            <div class="execution-instruction gale">
+              ⛔ GALE ${displayGaleLevel}/${maxGalesAvailable - 1} - ÚLTIMA OPORTUNIDAD (5M)
+            </div>
+          `;
+        }
+      }
+      
+      // Historial de Gale
+      let historyHTML = '';
+      if (signal.gale_cycle && signal.gale_cycle.length > 0) {
+        historyHTML = `
+          <div class="gale-history">
+            <div class="gale-history-title">📊 Historial de Operaciones</div>
+        `;
+        
+        signal.gale_cycle.forEach((gale, index) => {
+          const galeClass = gale.result === 'WIN' ? 'win' : 'loss';
+          const galeIcon = gale.result === 'WIN' ? '✅' : '❌';
+          const galeLabel = index === 0 ? 'Entrada Inicial' : `Gale #${index}`;
+          const galeResult = gale.result === 'WIN' ? 'GANADO' : 'PERDIDO';
+          const galeStake = (initialStake * Math.pow(multiplier, index)).toFixed(2);
+          
+          historyHTML += `
+            <div class="gale-entry ${galeClass}">
+              <div class="gale-entry-info">
+                <span class="gale-entry-label">${galeIcon} ${galeLabel}</span>
+                <span class="gale-entry-result">${galeResult} • ${gale.time_str}</span>
+              </div>
+              <div class="gale-entry-stake">$${galeStake}</div>
+            </div>
+          `;
+        });
+        
+        historyHTML += '</div>';
+      }
+      
+      // Operación actual
+      let currentOpHTML = '';
+      if (!signal.completed) {
+        const currentLabel = displayGaleLevel === 0 ? 'Entrada Inicial' : `Gale #${displayGaleLevel}`;
+        currentOpHTML = `
+          <div class="current-operation">
+            <div class="operation-label">${currentLabel} en curso... (Vencimiento: 5 Minutos)</div>
+            <div class="progress-bar-container">
+              <div class="progress-bar ${candleColorClass}" style="width: ${progressPercent}%">
+                ${Math.round(progressPercent)}%
+              </div>
+            </div>
+          </div>
+        `;
+      }
+      
+      // Info de saldo
+      const balanceWarning = !canContinue && displayGaleLevel < maxGalesAvailable ? 
+        `<br><span style="color: #ff4466;">⚠️ Saldo insuficiente para continuar</span>` : '';
+      
+      card.innerHTML = `
+        <div class="pair-header">
+          <div class="pair-symbol">${selectedSymbol}</div>
+          <div class="pair-direction ${directionClass}">
+            ${signal.direction === 'CALL' ? '🟢' : '🔴'} ${signal.direction}
+          </div>
+          <div class="pair-confidence">Confianza: ${Math.round(signal.confidence * 100)}%</div>
+          <div class="pair-strategy">Estrategia: ${strategyName}</div>
+        </div>
+
+        <div class="price-info">
+          <div class="price-box">
+            <div class="price-label">Precio Entrada</div>
+            <div class="price-value">${entryPrice}</div>
+          </div>
+          <div class="price-box">
+            <div class="price-label">Precio Actual</div>
+            <div class="price-value ${isWinning ? 'winning' : 'losing'}">${currentPrice}</div>
+          </div>
+        </div>
+        
+        ${getCandleOHLCHTML(selectedSymbol)}
+
+        ${instructionHTML}
+
+        <div class="current-stake">
+          <div class="stake-label">💰 Monto a Invertir</div>
+          <div class="stake-amount">$${displayStake.toFixed(2)}</div>
+          <div class="stake-balance-info">
+            Saldo restante: $${remainingBalance.toFixed(2)}
+            ${balanceWarning}
+          </div>
+        </div>
+
+        ${currentOpHTML}
+        ${historyHTML}
+
+        <div class="time-sync-display">
+          <div class="time-box">
+            <div class="time-label">🕐 Hora Actual (UTC-4)</div>
+            <div class="time-value clock-time">${clockTime}</div>
+          </div>
+          <div class="time-separator">→</div>
+          <div class="time-box">
+            <div class="time-label">📊 Cierre Vela M5</div>
+            <div class="time-value candle-time">${candleCloseTime}</div>
+          </div>
+        </div>
+
+        <div class="countdown">${timeStr}</div>
+      `;
+    }
+
+    // Actualizar estado de conexión
+    function updateConnectionStatus(connected) {
+      const status = document.getElementById('connectionStatus');
+      
+      if (connected) {
+        status.textContent = '🟢 Conectado';
+        status.className = 'connection-status connected';
+      } else {
+        status.textContent = '🔴 Desconectado';
+        status.className = 'connection-status disconnected';
+      }
+    }
+
+    // Inicializar
+    loadInitialBotState(); // Cargar estado del bot desde backend
+    connectWebSocket();
+    loadInitialSignals();
+    setInterval(renderSignal, 1000); // Actualizar cada segundo
+
+    console.log('🚀 Panel de Señales Pro Inicializado');
+  </script>
+</body>
+</html>

@@ -1,0 +1,978 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🤖 Panel de Bots - STC Trading</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Courier New', Consolas, Monaco, monospace;
+      background: #000000;
+      color: #00ffff;
+      min-height: 100vh;
+      perspective: 1500px;
+      padding: 30px;
+      overflow-x: hidden;
+    }
+
+    .container {
+      max-width: 1800px;
+      margin: 0 auto;
+    }
+
+    .header {
+      background: rgba(0, 255, 255, 0.03);
+      border: 2px solid rgba(0, 255, 255, 0.2);
+      border-radius: 20px;
+      padding: 30px;
+      backdrop-filter: blur(40px);
+      transform: translateZ(30px);
+      margin-bottom: 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 
+        0 0 30px rgba(0, 255, 255, 0.1),
+        inset 0 0 20px rgba(0, 255, 255, 0.05);
+    }
+
+    .main-title {
+      font-size: 1.8rem;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      text-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+    }
+
+    .back-btn {
+      background: rgba(0, 255, 255, 0.1);
+      border: 2px solid rgba(0, 255, 255, 0.3);
+      color: #00ffff;
+      padding: 12px 30px;
+      border-radius: 50px;
+      cursor: pointer;
+      text-decoration: none;
+      font-family: 'Courier New', Consolas, Monaco, monospace;
+      text-transform: uppercase;
+      transition: all 0.3s;
+      box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
+    }
+
+    .back-btn:hover {
+      background: rgba(0, 255, 255, 0.2);
+      box-shadow: 0 0 25px rgba(0, 255, 255, 0.4);
+      transform: translateY(-2px);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+      gap: 25px;
+      margin-bottom: 30px;
+    }
+
+    .card {
+      background: rgba(0, 255, 255, 0.02);
+      border: 2px solid rgba(0, 255, 255, 0.2);
+      border-radius: 20px;
+      padding: 25px;
+      backdrop-filter: blur(40px);
+      transform: translateZ(20px);
+      transition: all 0.3s;
+      box-shadow: 
+        0 0 30px rgba(0, 255, 255, 0.05),
+        inset 0 0 20px rgba(0, 255, 255, 0.03);
+    }
+
+    .card:hover {
+      border-color: rgba(0, 255, 255, 0.4);
+      box-shadow: 
+        0 0 40px rgba(0, 255, 255, 0.15),
+        inset 0 0 30px rgba(0, 255, 255, 0.05);
+      transform: translateZ(30px);
+    }
+
+    .card-title {
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-shadow: 0 0 15px rgba(0, 255, 255, 0.4);
+    }
+
+    .form-group {
+      margin-bottom: 18px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: rgba(0, 255, 255, 0.8);
+    }
+
+    .form-group input,
+    .form-group select {
+      width: 100%;
+      padding: 12px 15px;
+      background: rgba(0, 255, 255, 0.05);
+      border: 1px solid rgba(0, 255, 255, 0.3);
+      border-radius: 10px;
+      color: #00ffff;
+      font-size: 0.95rem;
+      font-family: 'Courier New', Consolas, Monaco, monospace;
+      transition: all 0.3s;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus {
+      outline: none;
+      border-color: rgba(0, 255, 255, 0.6);
+      box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
+      background: rgba(0, 255, 255, 0.08);
+    }
+
+    .form-group input::placeholder {
+      color: rgba(0, 255, 255, 0.4);
+    }
+
+    .btn {
+      padding: 12px 20px;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      font-weight: 700;
+      transition: all 0.3s;
+      font-family: 'Courier New', Consolas, Monaco, monospace;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .btn-primary {
+      background: rgba(0, 100, 255, 0.3);
+      border: 2px solid rgba(0, 150, 255, 0.5);
+      color: #00d4ff;
+      box-shadow: 0 0 20px rgba(0, 150, 255, 0.3);
+    }
+
+    .btn-primary:hover {
+      background: rgba(0, 100, 255, 0.5);
+      box-shadow: 0 0 30px rgba(0, 150, 255, 0.5);
+      transform: translateY(-2px);
+    }
+
+    .btn-success {
+      background: rgba(0, 255, 100, 0.2);
+      border: 2px solid rgba(0, 255, 100, 0.4);
+      color: #00ff64;
+      box-shadow: 0 0 20px rgba(0, 255, 100, 0.3);
+    }
+
+    .btn-success:hover {
+      background: rgba(0, 255, 100, 0.3);
+      box-shadow: 0 0 30px rgba(0, 255, 100, 0.5);
+      transform: translateY(-2px);
+    }
+
+    .btn-danger {
+      background: rgba(255, 50, 50, 0.2);
+      border: 2px solid rgba(255, 50, 50, 0.4);
+      color: #ff3232;
+      box-shadow: 0 0 20px rgba(255, 50, 50, 0.3);
+    }
+
+    .btn-danger:hover {
+      background: rgba(255, 50, 50, 0.3);
+      box-shadow: 0 0 30px rgba(255, 50, 50, 0.5);
+      transform: translateY(-2px);
+    }
+
+    .btn-small {
+      padding: 8px 15px;
+      font-size: 0.75rem;
+    }
+
+    .strategy-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      max-height: 400px;
+      overflow-y: auto;
+    }
+
+    .strategy-list::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    .strategy-list::-webkit-scrollbar-track {
+      background: rgba(0, 255, 255, 0.05);
+      border-radius: 10px;
+    }
+
+    .strategy-list::-webkit-scrollbar-thumb {
+      background: rgba(0, 255, 255, 0.3);
+      border-radius: 10px;
+    }
+
+    .strategy-item {
+      padding: 15px;
+      background: rgba(0, 255, 255, 0.05);
+      border: 1px solid rgba(0, 255, 255, 0.2);
+      border-radius: 12px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: all 0.3s;
+    }
+
+    .strategy-item:hover {
+      background: rgba(0, 255, 255, 0.08);
+      border-color: rgba(0, 255, 255, 0.4);
+      transform: translateX(5px);
+    }
+
+    .strategy-item.active {
+      border-color: rgba(0, 255, 100, 0.5);
+      background: rgba(0, 255, 100, 0.05);
+    }
+
+    .bot-list {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      max-height: 600px;
+      overflow-y: auto;
+    }
+
+    .bot-list::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    .bot-list::-webkit-scrollbar-track {
+      background: rgba(0, 255, 255, 0.05);
+      border-radius: 10px;
+    }
+
+    .bot-list::-webkit-scrollbar-thumb {
+      background: rgba(0, 255, 255, 0.3);
+      border-radius: 10px;
+    }
+
+    .bot-item {
+      padding: 20px;
+      background: rgba(0, 255, 255, 0.03);
+      border: 2px solid rgba(0, 255, 255, 0.15);
+      border-radius: 15px;
+      transition: all 0.3s;
+    }
+
+    .bot-item:hover {
+      border-color: rgba(0, 255, 255, 0.3);
+      background: rgba(0, 255, 255, 0.05);
+      transform: translateX(5px);
+    }
+
+    .bot-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 12px;
+    }
+
+    .bot-name {
+      font-weight: 700;
+      font-size: 1.1rem;
+      letter-spacing: 1px;
+    }
+
+    .bot-status {
+      padding: 6px 15px;
+      border-radius: 20px;
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .bot-status.running {
+      background: rgba(0, 255, 100, 0.2);
+      border: 1px solid rgba(0, 255, 100, 0.4);
+      color: #00ff64;
+      box-shadow: 0 0 15px rgba(0, 255, 100, 0.3);
+    }
+
+    .bot-status.stopped {
+      background: rgba(255, 50, 50, 0.2);
+      border: 1px solid rgba(255, 50, 50, 0.4);
+      color: #ff3232;
+      box-shadow: 0 0 15px rgba(255, 50, 50, 0.3);
+    }
+
+    .bot-status.paused {
+      background: rgba(255, 200, 0, 0.2);
+      border: 1px solid rgba(255, 200, 0, 0.4);
+      color: #ffc800;
+      box-shadow: 0 0 15px rgba(255, 200, 0, 0.3);
+    }
+
+    .bot-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin: 15px 0;
+    }
+
+    .stat-item {
+      text-align: center;
+      padding: 12px;
+      background: rgba(0, 255, 255, 0.05);
+      border-radius: 10px;
+      border: 1px solid rgba(0, 255, 255, 0.15);
+    }
+
+    .stat-value {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: #00ff64;
+      text-shadow: 0 0 10px rgba(0, 255, 100, 0.5);
+    }
+
+    .stat-label {
+      color: rgba(0, 255, 255, 0.6);
+      font-size: 0.7rem;
+      margin-top: 5px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .bot-controls {
+      display: flex;
+      gap: 10px;
+      margin-top: 15px;
+    }
+
+    .backtest-results {
+      background: rgba(0, 255, 255, 0.05);
+      padding: 20px;
+      border-radius: 15px;
+      margin-top: 20px;
+      border: 1px solid rgba(0, 255, 255, 0.2);
+    }
+
+    .metrics-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 15px;
+      margin-top: 15px;
+    }
+
+    .metric {
+      text-align: center;
+      padding: 15px;
+      background: rgba(0, 255, 255, 0.05);
+      border-radius: 10px;
+      border: 1px solid rgba(0, 255, 255, 0.15);
+    }
+
+    .metric-value {
+      font-size: 1.4rem;
+      font-weight: 700;
+      text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+    }
+
+    .metric-label {
+      font-size: 0.7rem;
+      color: rgba(0, 255, 255, 0.6);
+      margin-top: 5px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .badge {
+      padding: 4px 12px;
+      border-radius: 15px;
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .badge-success {
+      background: rgba(0, 255, 100, 0.2);
+      border: 1px solid rgba(0, 255, 100, 0.4);
+      color: #00ff64;
+    }
+
+    .badge-danger {
+      background: rgba(255, 50, 50, 0.2);
+      border: 1px solid rgba(255, 50, 50, 0.4);
+      color: #ff3232;
+    }
+
+    .loading {
+      text-align: center;
+      padding: 40px;
+      color: rgba(0, 255, 255, 0.5);
+      font-size: 1.1rem;
+      letter-spacing: 2px;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 0.4; }
+      50% { opacity: 1; }
+    }
+
+    .loading::after {
+      content: '...';
+      animation: pulse 1.5s infinite;
+    }
+
+    @media (max-width: 768px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .header {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="main-title">🤖 PANEL DE CONTROL DE BOTS</div>
+      <a href="/admin" class="back-btn">⬅ VOLVER AL ADMIN</a>
+    </div>
+    
+    <div class="grid">
+      <div class="card">
+        <div class="card-title">📊 ESTRATEGIAS DISPONIBLES</div>
+        <div id="strategiesList" class="strategy-list"></div>
+      </div>
+
+      <div class="card">
+        <div class="card-title">📥 DATOS DE MERCADO (YFINANCE)</div>
+        <div style="margin-bottom: 15px; font-size: 0.85rem; color: rgba(0, 255, 255, 0.7); line-height: 1.6;">
+          Descarga datos históricos reales para backtesting:<br>
+          • GOLD (XAUUSD) • EURUSD • EURJPY<br>
+          • Intervalo M5 (5 minutos)<br>
+          • Máximo 60 días de histórico
+        </div>
+        <div class="form-group">
+          <label>Días a Descargar</label>
+          <input type="number" id="fillDataDays" value="60" min="1" max="60" />
+        </div>
+        <button onclick="fillMarketData()" class="btn btn-primary" style="width: 100%;">
+          📥 LLENAR BASE DE DATOS
+        </button>
+        <div id="fillDataStatus" style="margin-top: 15px; font-size: 0.85rem; text-align: center;"></div>
+      </div>
+      
+      <div class="card">
+        <div class="card-title">➕ CREAR NUEVO BOT</div>
+        <form id="createBotForm">
+          <div class="form-group">
+            <label>Nombre del Bot</label>
+            <input type="text" id="botName" required placeholder="Ej: RSI Bot EURUSD">
+          </div>
+          <div class="form-group">
+            <label>Estrategia</label>
+            <select id="botStrategy" required>
+              <option value="">Seleccionar...</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Símbolo</label>
+            <select id="botSymbol" required>
+              <option value="">Cargando símbolos...</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Temporalidad</label>
+            <select id="botTimeframe" required>
+              <option value="M1">M1 (1 min)</option>
+              <option value="M5" selected>M5 (5 min)</option>
+              <option value="M15">M15 (15 min)</option>
+              <option value="M30">M30 (30 min)</option>
+              <option value="H1">H1 (1 hora)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Monto por Trade ($)</label>
+            <input type="number" id="botAmount" value="1" min="1" step="0.5" required>
+          </div>
+          <div class="form-group">
+            <label>Duración (minutos)</label>
+            <input type="number" id="botDuration" value="1" min="1" max="15" required>
+          </div>
+          <div class="form-group">
+            <label>Pérdida Máxima Diaria ($)</label>
+            <input type="number" id="botMaxLoss" value="10" min="1" step="1" required>
+          </div>
+          <div class="form-group">
+            <label>Máx Trades por Día</label>
+            <input type="number" id="botMaxTrades" value="20" min="1" max="100" required>
+          </div>
+          <button type="submit" class="btn btn-success" style="width: 100%;">🚀 CREAR BOT</button>
+        </form>
+      </div>
+      
+      <div class="card">
+        <div class="card-title">🧪 BACKTEST DE ESTRATEGIAS</div>
+        <form id="backtestForm">
+          <div class="form-group">
+            <label>Estrategia</label>
+            <select id="backtestStrategy" required>
+              <option value="">Seleccionar...</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Símbolo</label>
+            <select id="backtestSymbol" required>
+              <option value="">Cargando símbolos...</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Rango de Fechas Disponibles</label>
+            <div id="dateRangeInfo" style="font-size: 0.85em; color: #00ffff; margin-top: 5px; margin-bottom: 10px;">
+              Selecciona un símbolo para ver fechas disponibles
+            </div>
+          </div>
+          <div class="form-group">
+            <label>📅 Fecha Inicio</label>
+            <input type="date" id="backtestDateFrom" required 
+              style="background: rgba(0, 255, 255, 0.05); border: 1px solid #00ffff; color: #00ffff; padding: 10px; border-radius: 8px; width: 100%; font-family: 'Courier New', monospace;">
+          </div>
+          <div class="form-group">
+            <label>📅 Fecha Fin</label>
+            <input type="date" id="backtestDateTo" required
+              style="background: rgba(0, 255, 255, 0.05); border: 1px solid #00ffff; color: #00ffff; padding: 10px; border-radius: 8px; width: 100%; font-family: 'Courier New', monospace;">
+          </div>
+          <div class="form-group">
+            <label>Balance Inicial ($)</label>
+            <input type="number" id="backtestBalance" value="1000" min="100" step="100" required>
+          </div>
+          <div class="form-group">
+            <label>Monto por Trade ($)</label>
+            <input type="number" id="backtestAmount" value="1" min="0.5" step="0.5" required>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width: 100%;">▶️ EJECUTAR BACKTEST</button>
+        </form>
+        <div id="backtestResults"></div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <div class="card-title">🤖 BOTS DE TRADING</div>
+      <div id="botsList" class="bot-list">
+        <div class="loading">NO HAY BOTS CREADOS</div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const API_BASE = '';
+    
+    async function loadStrategies() {
+      try {
+        const res = await fetch(`${API_BASE}/api/strategies/list`);
+        const data = await res.json();
+        
+        if (data.success) {
+          const container = document.getElementById('strategiesList');
+          const selectBot = document.getElementById('botStrategy');
+          const selectBacktest = document.getElementById('backtestStrategy');
+          
+          container.innerHTML = '';
+          selectBot.innerHTML = '<option value="">Seleccionar...</option>';
+          selectBacktest.innerHTML = '<option value="">Seleccionar...</option>';
+          
+          data.strategies.forEach(strategy => {
+            const div = document.createElement('div');
+            div.className = `strategy-item ${strategy.active ? 'active' : ''}`;
+            div.innerHTML = `
+              <span>${strategy.name}</span>
+              <span class="badge ${strategy.active ? 'badge-success' : 'badge-danger'}">${strategy.active ? 'ACTIVA' : 'INACTIVA'}</span>
+            `;
+            container.appendChild(div);
+            
+            const option1 = document.createElement('option');
+            option1.value = strategy.name;
+            option1.textContent = strategy.name;
+            selectBot.appendChild(option1);
+            
+            const option2 = document.createElement('option');
+            option2.value = strategy.name;
+            option2.textContent = strategy.name;
+            selectBacktest.appendChild(option2);
+          });
+        }
+      } catch (error) {
+        console.error('Error loading strategies:', error);
+      }
+    }
+    
+    let symbolsData = [];
+    
+    async function loadSymbols() {
+      try {
+        const res = await fetch(`${API_BASE}/api/symbols/available`);
+        const data = await res.json();
+        
+        if (data.success) {
+          symbolsData = data.symbols;
+          const selectBot = document.getElementById('botSymbol');
+          const selectBacktest = document.getElementById('backtestSymbol');
+          
+          selectBot.innerHTML = '<option value="">Seleccionar símbolo...</option>';
+          selectBacktest.innerHTML = '<option value="">Seleccionar símbolo...</option>';
+          
+          data.symbols.forEach(symbolInfo => {
+            const displayText = `${symbolInfo.symbol} (${symbolInfo.total_candles} velas - ${symbolInfo.source})`;
+            
+            const option1 = document.createElement('option');
+            option1.value = symbolInfo.symbol;
+            option1.textContent = displayText;
+            option1.dataset.source = symbolInfo.source;
+            option1.dataset.dateFrom = symbolInfo.date_from;
+            option1.dataset.dateTo = symbolInfo.date_to;
+            selectBot.appendChild(option1);
+            
+            const option2 = document.createElement('option');
+            option2.value = symbolInfo.symbol;
+            option2.textContent = displayText;
+            option2.dataset.source = symbolInfo.source;
+            option2.dataset.dateFrom = symbolInfo.date_from;
+            option2.dataset.dateTo = symbolInfo.date_to;
+            selectBacktest.appendChild(option2);
+          });
+        }
+      } catch (error) {
+        console.error('Error loading symbols:', error);
+      }
+    }
+    
+    document.getElementById('backtestSymbol').addEventListener('change', function(e) {
+      const selectedOption = e.target.selectedOptions[0];
+      const dateRangeInfo = document.getElementById('dateRangeInfo');
+      const dateFromInput = document.getElementById('backtestDateFrom');
+      const dateToInput = document.getElementById('backtestDateTo');
+      
+      if (selectedOption && selectedOption.dataset.dateFrom) {
+        const dateFromStr = selectedOption.dataset.dateFrom.split('T')[0];
+        const dateToStr = selectedOption.dataset.dateTo.split('T')[0];
+        
+        const dateFrom = new Date(dateFromStr).toLocaleDateString('es-ES');
+        const dateTo = new Date(dateToStr).toLocaleDateString('es-ES');
+        dateRangeInfo.innerHTML = `📅 Datos disponibles: <strong>${dateFrom}</strong> hasta <strong>${dateTo}</strong>`;
+        dateRangeInfo.style.color = '#00ff64';
+        
+        dateFromInput.min = dateFromStr;
+        dateFromInput.max = dateToStr;
+        dateFromInput.value = dateFromStr;
+        
+        dateToInput.min = dateFromStr;
+        dateToInput.max = dateToStr;
+        dateToInput.value = dateToStr;
+      } else {
+        dateRangeInfo.innerHTML = 'Selecciona un símbolo para ver fechas disponibles';
+        dateRangeInfo.style.color = '#00ffff';
+        dateFromInput.value = '';
+        dateToInput.value = '';
+      }
+    });
+    
+    async function loadBots() {
+      try {
+        const res = await fetch(`${API_BASE}/api/bots/list`);
+        const data = await res.json();
+        
+        if (data.success) {
+          const container = document.getElementById('botsList');
+          
+          if (data.bots.length === 0) {
+            container.innerHTML = '<div class="loading">NO HAY BOTS CREADOS</div>';
+            return;
+          }
+          
+          container.innerHTML = '';
+          
+          data.bots.forEach(bot => {
+            const config = bot.config;
+            const stats = bot.stats;
+            const running = bot.running;
+            
+            const div = document.createElement('div');
+            div.className = 'bot-item';
+            div.innerHTML = `
+              <div class="bot-header">
+                <div class="bot-name">${config.name}</div>
+                <div class="bot-status ${stats.status}">${stats.status.toUpperCase()}</div>
+              </div>
+              <div style="font-size: 0.85rem; color: rgba(0, 255, 255, 0.6); margin-bottom: 10px; letter-spacing: 1px;">
+                ${config.strategy_name} • ${config.symbol} • ${config.timeframe}
+              </div>
+              <div class="bot-stats">
+                <div class="stat-item">
+                  <div class="stat-value">${stats.total_trades}</div>
+                  <div class="stat-label">TRADES</div>
+                </div>
+                <div class="stat-item">
+                  <div class="stat-value" style="color: ${stats.win_rate >= 50 ? '#00ff64' : '#ff3232'};">${stats.win_rate.toFixed(1)}%</div>
+                  <div class="stat-label">WIN RATE</div>
+                </div>
+                <div class="stat-item">
+                  <div class="stat-value" style="color: ${stats.total_profit >= 0 ? '#00ff64' : '#ff3232'};">$${stats.total_profit.toFixed(2)}</div>
+                  <div class="stat-label">PROFIT</div>
+                </div>
+              </div>
+              <div class="bot-controls">
+                ${running ? 
+                  `<button class="btn btn-danger btn-small" onclick="stopBot('${config.bot_id}')">⏸ DETENER</button>` :
+                  `<button class="btn btn-success btn-small" onclick="startBot('${config.bot_id}')">▶️ INICIAR</button>`
+                }
+                <button class="btn btn-danger btn-small" onclick="deleteBot('${config.bot_id}')">🗑️ ELIMINAR</button>
+              </div>
+            `;
+            container.appendChild(div);
+          });
+        }
+      } catch (error) {
+        console.error('Error loading bots:', error);
+      }
+    }
+    
+    async function createBot(e) {
+      e.preventDefault();
+      
+      const botData = {
+        name: document.getElementById('botName').value,
+        strategy_name: document.getElementById('botStrategy').value,
+        symbol: document.getElementById('botSymbol').value,
+        timeframe: document.getElementById('botTimeframe').value,
+        trade_amount: parseFloat(document.getElementById('botAmount').value),
+        trade_duration: parseInt(document.getElementById('botDuration').value),
+        max_daily_loss: parseFloat(document.getElementById('botMaxLoss').value),
+        max_daily_trades: parseInt(document.getElementById('botMaxTrades').value)
+      };
+      
+      try {
+        const res = await fetch(`${API_BASE}/api/bots/create`, {
+          method: 'POST',
+          headers: {'Content-Type': 'application/json'},
+          body: JSON.stringify(botData)
+        });
+        
+        const data = await res.json();
+        
+        if (data.success) {
+          alert('✅ BOT CREADO EXITOSAMENTE!');
+          document.getElementById('createBotForm').reset();
+          loadBots();
+        } else {
+          alert('❌ ERROR: ' + data.error);
+        }
+      } catch (error) {
+        alert('❌ ERROR CREANDO BOT: ' + error.message);
+      }
+    }
+    
+    async function startBot(botId) {
+      try {
+        const res = await fetch(`${API_BASE}/api/bots/start/${botId}`, {
+          method: 'POST',
+          headers: {'Content-Type': 'application/json'},
+          body: JSON.stringify({})
+        });
+        const data = await res.json();
+        if (data.success) {
+          loadBots();
+        }
+      } catch (error) {
+        alert('ERROR: ' + error.message);
+      }
+    }
+    
+    async function stopBot(botId) {
+      try {
+        const res = await fetch(`${API_BASE}/api/bots/stop/${botId}`, {
+          method: 'POST',
+          headers: {'Content-Type': 'application/json'},
+          body: JSON.stringify({})
+        });
+        const data = await res.json();
+        if (data.success) {
+          loadBots();
+        }
+      } catch (error) {
+        alert('ERROR: ' + error.message);
+      }
+    }
+    
+    async function deleteBot(botId) {
+      if (!confirm('¿ELIMINAR ESTE BOT?')) return;
+      
+      try {
+        const res = await fetch(`${API_BASE}/api/bots/delete/${botId}`, {method: 'DELETE'});
+        const data = await res.json();
+        if (data.success) {
+          loadBots();
+        }
+      } catch (error) {
+        alert('ERROR: ' + error.message);
+      }
+    }
+    
+    async function runBacktest(e) {
+      e.preventDefault();
+      
+      const resultsDiv = document.getElementById('backtestResults');
+      resultsDiv.innerHTML = '<div class="loading">⏳ EJECUTANDO BACKTEST</div>';
+      
+      try {
+        const symbol = document.getElementById('backtestSymbol').value;
+        const dateFrom = document.getElementById('backtestDateFrom').value;
+        const dateTo = document.getElementById('backtestDateTo').value;
+        
+        let candlesUrl = `${API_BASE}/api/candles/backtest?symbol=${symbol}&timeframe=M5&limit=5000`;
+        if (dateFrom && dateTo) {
+          candlesUrl += `&date_from=${dateFrom}&date_to=${dateTo}`;
+        }
+        
+        const candlesRes = await fetch(candlesUrl);
+        const candles = await candlesRes.json();
+        
+        if (!Array.isArray(candles) || candles.length === 0) {
+          resultsDiv.innerHTML = '<div style="color: #ff3232; padding: 15px;">❌ ERROR: No hay velas disponibles para este símbolo en el rango de fechas seleccionado</div>';
+          return;
+        }
+        
+        const backtestData = {
+          strategy_name: document.getElementById('backtestStrategy').value,
+          symbol: symbol,
+          timeframe: 'M5',
+          candles: candles,
+          initial_balance: parseFloat(document.getElementById('backtestBalance').value),
+          trade_amount: parseFloat(document.getElementById('backtestAmount').value),
+          payout_percent: 85,
+          trade_duration: 1
+        };
+        
+        const res = await fetch(`${API_BASE}/api/backtest/run`, {
+          method: 'POST',
+          headers: {'Content-Type': 'application/json'},
+          body: JSON.stringify(backtestData)
+        });
+        
+        const data = await res.json();
+        
+        if (data.success) {
+          const r = data.result;
+          resultsDiv.innerHTML = `
+            <div class="backtest-results">
+              <div style="font-weight: 700; margin-bottom: 15px; font-size: 1.1rem; letter-spacing: 2px; text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);">📊 RESULTADOS DEL BACKTEST</div>
+              <div class="metrics-grid">
+                <div class="metric">
+                  <div class="metric-value" style="color: ${r.return_percent >= 0 ? '#00ff64' : '#ff3232'};">${r.return_percent}%</div>
+                  <div class="metric-label">RETORNO</div>
+                </div>
+                <div class="metric">
+                  <div class="metric-value">${r.win_rate}%</div>
+                  <div class="metric-label">WIN RATE</div>
+                </div>
+                <div class="metric">
+                  <div class="metric-value">${r.total_trades}</div>
+                  <div class="metric-label">TRADES</div>
+                </div>
+                <div class="metric">
+                  <div class="metric-value">${r.profit_factor}</div>
+                  <div class="metric-label">PROFIT FACTOR</div>
+                </div>
+                <div class="metric">
+                  <div class="metric-value" style="color: #ff3232;">${r.max_drawdown_percent}%</div>
+                  <div class="metric-label">MAX DRAWDOWN</div>
+                </div>
+                <div class="metric">
+                  <div class="metric-value">${r.sharpe_ratio}</div>
+                  <div class="metric-label">SHARPE RATIO</div>
+                </div>
+              </div>
+              <div style="margin-top: 15px; padding-top: 15px; border-top: 1px solid rgba(0, 255, 255, 0.2); font-size: 0.85rem; color: rgba(0, 255, 255, 0.7); letter-spacing: 1px;">
+                BALANCE FINAL: <span style="color: ${r.final_balance >= r.initial_balance ? '#00ff64' : '#ff3232'}; font-weight: 700;">$${r.final_balance}</span> •
+                GANANCIAS: <span style="color: #00ff64; font-weight: 700;">$${r.total_profit}</span> •
+                PÉRDIDAS: <span style="color: #ff3232; font-weight: 700;">$${r.total_loss}</span>
+              </div>
+            </div>
+          `;
+        } else {
+          resultsDiv.innerHTML = '<div class="loading" style="color: #ff3232;">❌ ERROR: ' + data.error + '</div>';
+        }
+      } catch (error) {
+        resultsDiv.innerHTML = '<div class="loading" style="color: #ff3232;">❌ ERROR: ' + error.message + '</div>';
+      }
+    }
+    
+    async function fillMarketData() {
+      const statusDiv = document.getElementById('fillDataStatus');
+      const days = parseInt(document.getElementById('fillDataDays').value) || 60;
+      
+      if (days < 1 || days > 60) {
+        statusDiv.innerHTML = '<span style="color: #ff3232;">❌ DÍAS DEBE ESTAR ENTRE 1 Y 60</span>';
+        return;
+      }
+      
+      statusDiv.innerHTML = '<span style="color: #00d4ff;">⏳ DESCARGANDO DATOS HISTÓRICOS...</span>';
+      
+      try {
+        const res = await fetch('/api/admin/fill-market-data', {
+          method: 'POST',
+          headers: {'Content-Type': 'application/json'},
+          body: JSON.stringify({days: days})
+        });
+        
+        const data = await res.json();
+        
+        if (data.success) {
+          statusDiv.innerHTML = `
+            <div style="color: #00ff64; line-height: 1.6;">
+              ✅ ${data.message}<br>
+              📊 ${data.symbols.join(' • ')}<br>
+              ⏱️ ${data.interval}<br>
+              <span style="font-size: 0.75rem; color: rgba(0,255,255,0.6);">
+                (Revisa los logs del servidor para ver el progreso)
+              </span>
+            </div>
+          `;
+        } else {
+          statusDiv.innerHTML = '<span style="color: #ff3232;">❌ ERROR: ' + data.error + '</span>';
+        }
+      } catch (error) {
+        statusDiv.innerHTML = '<span style="color: #ff3232;">❌ ERROR: ' + error.message + '</span>';
+      }
+    }
+    
+    document.getElementById('createBotForm').addEventListener('submit', createBot);
+    document.getElementById('backtestForm').addEventListener('submit', runBacktest);
+    
+    loadStrategies();
+    loadSymbols();
+    loadBots();
+    
+    setInterval(loadBots, 5000);
+  </script>
+</body>
+</html>

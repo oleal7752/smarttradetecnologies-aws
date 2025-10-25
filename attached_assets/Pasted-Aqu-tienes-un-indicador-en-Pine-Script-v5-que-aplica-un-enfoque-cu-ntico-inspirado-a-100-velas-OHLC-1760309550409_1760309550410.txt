@@ -1,0 +1,101 @@
+Aquí tienes un indicador en Pine Script v5 que aplica un enfoque cuántico-inspirado a 100 velas OHLC para generar señales CALL/PUT/NEUTRO.
+
+ //@version=5
+ indicator("Quantum-Inspired OHLC Regime (100)", overlay=true, timeframe="", timeframe_gaps=true)
+
+ // Inputs
+ len = input.int(100, "Window (candles)", minval=20)
+ thr = input.float(0.02, "Threshold (p_up - p_down)", step=0.001)
+ minPur = input.float(0.15, "Min purity", step=0.01)
+
+ // Features
+ ret = math.log(close / nz(close[1], close))
+ rng = (high - low) / nz(close, 1)
+ body = math.abs(close - open) / nz(close, 1)
+ vol = volume
+
+ // Volume z-score
+ smaV = ta.sma(vol, len)
+ sdV = ta.stdev(vol, len)
+ zvol = sdV != 0 ? (vol - smaV) / sdV : 0.0
+
+ // State vector |psi_t>
+ x1 = ret
+ x2 = rng
+ x3 = body
+ x4 = zvol
+ nrm = math.sqrt(x1*x1 + x2*x2 + x3*x3 + x4*x4)
+ psi1 = nrm != 0 ? x1/nrm : 0.0
+ psi2 = nrm != 0 ? x2/nrm : 0.0
+ psi3 = nrm != 0 ? x3/nrm : 0.0
+ psi4 = nrm != 0 ? x4/nrm : 0.0
+
+ // Density matrix rho = avg(|psi><psi|) over window
+ r11 = ta.sma(psi1*psi1, len)
+ r12 = ta.sma(psi1*psi2, len)
+ r13 = ta.sma(psi1*psi3, len)
+ r14 = ta.sma(psi1*psi4, len)
+ r21 = ta.sma(psi2*psi1, len)
+ r22 = ta.sma(psi2*psi2, len)
+ r23 = ta.sma(psi2*psi3, len)
+ r24 = ta.sma(psi2*psi4, len)
+ r31 = ta.sma(psi3*psi1, len)
+ r32 = ta.sma(psi3*psi2, len)
+ r33 = ta.sma(psi3*psi3, len)
+ r34 = ta.sma(psi3*psi4, len)
+ r41 = ta.sma(psi4*psi1, len)
+ r42 = ta.sma(psi4*psi2, len)
+ r43 = ta.sma(psi4*psi3, len)
+ r44 = ta.sma(psi4*psi4, len)
+
+ // Purity Tr(rho^2) = sum_ij rho_ij^2 (rho ~ Hermitiana real)
+ purity = r11*r11 + r12*r12 + r13*r13 + r14*r14 +
+          r21*r21 + r22*r22 + r23*r23 + r24*r24 +
+          r31*r31 + r32*r32 + r33*r33 + r34*r34 +
+          r41*r41 + r42*r42 + r43*r43 + r44*r44
+
+ // Projectors via directions w: p = (w^T rho w) / ||w||^2
+ // Momentum projector (CALL)
+ w1u = 1.0, w2u = 0.5, w3u = 0.5, w4u = 0.2
+ normWu2 = w1u*w1u + w2u*w2u + w3u*w3u + w4u*w4u
+ upRw1 = w1u*r11 + w2u*r21 + w3u*r31 + w4u*r41
+ upRw2 = w1u*r12 + w2u*r22 + w3u*r32 + w4u*r42
+ upRw3 = w1u*r13 + w2u*r23 + w3u*r33 + w4u*r43
+ upRw4 = w1u*r14 + w2u*r24 + w3u*r34 + w4u*r44
+ p_up = (w1u*upRw1 + w2u*upRw2 + w3u*upRw3 + w4u*upRw4) / normWu2
+
+ // Mean-reversion projector (PUT)
+ w1d = -1.0, w2d = 0.7, w3d = 0.3, w4d = 0.2
+ normWd2 = w1d*w1d + w2d*w2d + w3d*w3d + w4d*w4d
+ dnRw1 = w1d*r11 + w2d*r21 + w3d*r31 + w4d*r41
+ dnRw2 = w1d*r12 + w2d*r22 + w3d*r32 + w4d*r42
+ dnRw3 = w1d*r13 + w2d*r23 + w3d*r33 + w4d*r43
+ dnRw4 = w1d*r14 + w2d*r24 + w3d*r34 + w4d*r44
+ p_down = (w1d*dnRw1 + w2d*dnRw2 + w3d*dnRw3 + w4d*dnRw4) / normWd2
+
+ edge = p_up - p_down
+ ready = ta.barssince(na(smaV)) > 0 and ta.barssince(na(sdV)) > 0 and ta.barssince(na(r11)) > 0
+
+ // Signal
+ isCall = ready and purity > minPur and edge > thr
+ isPut  = ready and purity > minPur and edge < -thr
+ isFlat = not isCall and not isPut
+
+ // Visuals
+ colBg = isCall ? color.new(color.lime, 85) : isPut ? color.new(color.red, 85) : color.new(color.gray, 90)
+ bgcolor(colBg)
+
+ plotshape(isCall, title="CALL", style=shape.triangleup, color=color.lime, location=location.belowbar, size=size.tiny, text="CALL")
+ plotshape(isPut,  title="PUT",  style=shape.triangledown, color=color.red, location=location.abovebar, size=size.tiny, text="PUT")
+
+ // Overlay diagnostics
+ plot(ready ? edge : na, title="Edge (p_up - p_down)", color=color.new(color.aqua, 0), linewidth=2)
+ plot(ready ? purity : na, title="Purity", color=color.new(color.fuchsia, 0), linewidth=2)
+
+ // Label on last bar
+ if barstate.islast
+     txt = "p_up: " + str.tostring(p_up, format.mintick) + " | p_down: " + str.tostring(p_down, format.mintick) +
+           " | edge: " + str.tostring(edge, format.mintick) + " | purity: " + str.tostring(purity, format.mintick)
+     label.delete(label.new(bar_index, high, txt, style=label.style_label_upper_right, textcolor=color.white, bgcolor=color.new(color.black, 0)))
+
+Ajusta len, thr y minPur según tu activo/timeframe.

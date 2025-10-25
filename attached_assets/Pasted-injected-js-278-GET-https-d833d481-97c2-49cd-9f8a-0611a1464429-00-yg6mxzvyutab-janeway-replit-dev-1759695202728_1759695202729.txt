@@ -1,0 +1,293 @@
+injected.js:278  GET https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/current-candle?symbol=AIG-OTC&timeframe=M5 500 (Internal Server Error)
+window.fetch @ Network.js:219
+apply @ injected.js:278
+(anonymous) @ stc_chart_fix.js?v=3:261
+setInterval
+startRealtimePolling @ stc_chart_fix.js?v=3:259
+(anonymous) @ iqoption:238
+Console.js:61 ⚠️ Error HTTP 500 en streaming
+Mt.forEach.n.<computed> @ Console.js:61
+(anonymous) @ stc_chart_fix.js?v=3:300
+setInterval
+startRealtimePolling @ stc_chart_fix.js?v=3:259
+(anonymous) @ iqoption:238
+injected.js:278  GET https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/current-candle?symbol=AIG-OTC&timeframe=M5 500 (Internal Server Error)
+window.fetch @ Network.js:219
+apply @ injected.js:278
+(anonymous) @ stc_chart_fix.js?v=3:261
+setInterval
+startRealtimePolling @ stc_chart_fix.js?v=3:259
+(anonymous) @ iqoption:238
+Console.js:61 ⚠️ Error HTTP 500 en streaming
+Mt.forEach.n.<computed> @ Console.js:61
+(anonymous) @ stc_chart_fix.js?v=3:300
+setInterval
+startRealtimePolling @ stc_chart_fix.js?v=3:259
+(anonymous) @ iqoption:238
+injected.js:278  GET https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/current-candle?symbol=AIG-OTC&timeframe=M5 500 (Internal Server Error)
+window.fetch @ Network.js:219
+apply @ injected.js:278
+(anonymous) @ stc_chart_fix.js?v=3:261
+setInterval
+startRealtimePolling @ stc_chart_fix.js?v=3:259
+(anonymous) @ iqoption:238
+Console.js:61 ⚠️ Error HTTP 500 en streaming
+Mt.forEach.n.<computed> @ Console.js:61
+(anonymous) @ stc_chart_fix.js?v=3:300
+setInterval
+startRealtimePolling @ stc_chart_fix.js?v=3:259
+(anonymous) @ iqoption:238
+injected.js:278  GET https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/current-candle?symbol=AIG-OTC&timeframe=M5 500 (Internal Server Error)
+window.fetch @ Network.js:219
+apply @ injected.js:278
+(anonymous) @ stc_chart_fix.js?v=3:261
+setInterval
+startRealtimePolling @ stc_chart_fix.js?v=3:259
+(anonymous) @ iqoption:238
+Console.js:61 ⚠️ Error HTTP 500 en streaming
+Mt.forEach.n.<computed> @ Console.js:61
+(anonymous) @ stc_chart_fix.js?v=3:300
+setInterval
+startRealtimePolling @ stc_chart_fix.js?v=3:259
+(anonymous) @ iqoption:238
+injected.js:278  GET https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/balance 503 (Service Unavailable)
+window.fetch @ Network.js:219
+apply @ injected.js:278
+updateBalance @ iqoption:320
+setInterval
+(anonymous) @ iqoption:488
+injected.js:278  GET https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/current-candle?symbol=AIG-OTC&timeframe=M5 500 (Internal Server Error)
+window.fetch @ Network.js:219
+apply @ injected.js:278
+(anonymous) @ stc_chart_fix.js?v=3:261
+setInterval
+startRealtimePolling @ stc_chart_fix.js?v=3:259
+(anonymous) @ iqoption:238
+Console.js:61 ⚠️ Error HTTP 500 en streaming
+Mt.forEach.n.<computed> @ Console.js:61
+(anonymous) @ stc_chart_fix.js?v=3:300
+setInterval
+startRealtimePolling @ stc_chart_fix.js?v=3:259
+(anonymous) @ iqoption:238
+injected.js:278  GET https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/current-candle?symbol=AIG-OTC&timeframe=M5 500 (Internal Server Error)
+window.fetch @ Network.js:219
+apply @ injected.js:278
+(anonymous) @ stc_chart_fix.js?v=3:261
+setInterval
+startRealtimePolling @ stc_chart_fix.js?v=3:259
+(anonymous) @ iqoption:238
+Console.js:61 ⚠️ Error HTTP 500 en streaming
+Mt.forEach.n.<computed> @ Console.js:61
+(anonymous) @ stc_chart_fix.js?v=3:300
+setInterval
+startRealtimePolling @ stc_chart_fix.js?v=3:259
+(anonymous) @ iqoption:238
+Console.js:61 🟢 CALL: EURUSD-OTC, $1, 5min
+injected.js:278  GET https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/current-candle?symbol=AIG-OTC&timeframe=M5 500 (Internal Server Error)
+window.fetch @ Network.js:219
+apply @ injected.js:278
+(anonymous) @ stc_chart_fix.js?v=3:261
+setInterval
+startRealtimePolling @ stc_chart_fix.js?v=3:259
+(anonymous) @ iqoption:238
+Console.js:61 ⚠️ Error HTTP 500 en streaming
+Mt.forEach.n.<computed> @ Console.js:61
+(anonymous) @ stc_chart_fix.js?v=3:300
+setInterval
+startRealtimePolling @ stc_chart_fix.js?v=3:259
+(anonymous) @ iqoption:238
+injected.js:278  GET https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/current-candle?symbol=AIG-OTC&timeframe=M5 500 (Internal Server Error)
+window.fetch @ Network.js:219
+apply @ injected.js:278
+(anonymous) @ stc_chart_fix.js?v=3:261
+setInterval
+startRealtimePolling @ stc_chart_fix.js?v=3:259
+(anonymous) @ iqoption:238
+Console.js:61 ⚠️ Error HTTP 500 en streaming
+Mt.forEach.n.<computed> @ Console.js:61
+(anonymous) @ stc_chart_fix.js?v=3:300
+setInterval
+startRealtimePolling @ stc_chart_fix.js?v=3:259
+(anonymous) @ iqoption:238
+injected.js:278  GET https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/current-candle?symbol=AIG-OTC&timeframe=M5 500 (Internal Server Error)
+window.fetch @ Network.js:219
+apply @ injected.js:278
+(anonymous) @ stc_chart_fix.js?v=3:261
+setInterval
+startRealtimePolling @ stc_chart_fix.js?v=3:259
+(anonymous) @ iqoption:238
+Console.js:61 ⚠️ Error HTTP 500 en streaming
+Mt.forEach.n.<computed> @ Console.js:61
+(anonymous) @ stc_chart_fix.js?v=3:300
+setInterval
+startRealtimePolling @ stc_chart_fix.js?v=3:259
+(anonymous) @ iqoption:238
+Console.js:61 🔌 Desconectando de IQ Option...
+injected.js:278  GET https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/current-candle?symbol=AIG-OTC&timeframe=M5 500 (Internal Server Error)
+window.fetch @ Network.js:219
+apply @ injected.js:278
+(anonymous) @ stc_chart_fix.js?v=3:261
+setInterval
+startRealtimePolling @ stc_chart_fix.js?v=3:259
+(anonymous) @ iqoption:238
+Console.js:61 ⚠️ Error HTTP 500 en streaming
+Mt.forEach.n.<computed> @ Console.js:61
+(anonymous) @ stc_chart_fix.js?v=3:300
+setInterval
+startRealtimePolling @ stc_chart_fix.js?v=3:259
+(anonymous) @ iqoption:238
+Console.js:61 ✅ Desconectado exitosamente del servidor
+Console.js:61 ⏹️ Polling de vela actual detenido
+Console.js:61 🔄 Polling iniciado cada 3000ms
+Console.js:61 ▶️ Polling histórico reiniciado
+Console.js:61 ⏹️ Streaming en tiempo real detenido
+Console.js:61 🔌 Desconectado de IQ Option
+injected.js:278  GET https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/current-candle?symbol=AIG-OTC&timeframe=M5 401 (Unauthorized)
+window.fetch @ Network.js:219
+apply @ injected.js:278
+(anonymous) @ stc_chart_fix.js?v=3:261
+setInterval
+startRealtimePolling @ stc_chart_fix.js?v=3:259
+(anonymous) @ iqoption:238
+Console.js:61 ⚠️ No hay conexión a IQ Option - deteniendo streaming en tiempo real
+Console.js:61 🔗 Intentando conectar a IQ Option (PRACTICE)...
+injected.js:278  GET https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/current-candle?symbol=AIG-OTC&timeframe=M5 500 (Internal Server Error)
+window.fetch @ Network.js:219
+apply @ injected.js:278
+(anonymous) @ stc_chart_fix.js?v=3:261
+setInterval
+startRealtimePolling @ stc_chart_fix.js?v=3:259
+(anonymous) @ iqoption:238
+Console.js:61 ⚠️ Error HTTP 500 en streaming
+Mt.forEach.n.<computed> @ Console.js:61
+(anonymous) @ stc_chart_fix.js?v=3:300
+setInterval
+startRealtimePolling @ stc_chart_fix.js?v=3:259
+(anonymous) @ iqoption:238
+injected.js:278  GET https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/current-candle?symbol=AIG-OTC&timeframe=M5 401 (Unauthorized)
+window.fetch @ Network.js:219
+apply @ injected.js:278
+(anonymous) @ stc_chart_fix.js?v=3:261
+setInterval
+startRealtimePolling @ stc_chart_fix.js?v=3:259
+(anonymous) @ iqoption:238
+Console.js:61 ⚠️ No hay conexión a IQ Option - deteniendo streaming en tiempo real
+injected.js:278  GET https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/current-candle?symbol=AIG-OTC&timeframe=M5 401 (Unauthorized)
+window.fetch @ Network.js:219
+apply @ injected.js:278
+(anonymous) @ stc_chart_fix.js?v=3:261
+setInterval
+startRealtimePolling @ stc_chart_fix.js?v=3:259
+(anonymous) @ iqoption:238
+Console.js:61 ⚠️ No hay conexión a IQ Option - deteniendo streaming en tiempo real
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759634700, open: 1.189545, high: 1.193395, low: 1.189185, close: 1.193395}
+Console.js:61 📊 Última vela: {time: 1759694700, open: 1.171175, high: 1.171575, low: 1.171075, close: 1.171075}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+injected.js:278  GET https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/current-candle?symbol=AIG-OTC&timeframe=M5 401 (Unauthorized)
+window.fetch @ Network.js:219
+apply @ injected.js:278
+(anonymous) @ stc_chart_fix.js?v=3:261
+setInterval
+startRealtimePolling @ stc_chart_fix.js?v=3:259
+(anonymous) @ iqoption:238
+Console.js:61 ⚠️ No hay conexión a IQ Option - deteniendo streaming en tiempo real
+injected.js:278  GET https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/current-candle?symbol=AIG-OTC&timeframe=M5 401 (Unauthorized)
+window.fetch @ Network.js:219
+apply @ injected.js:278
+(anonymous) @ stc_chart_fix.js?v=3:261
+setInterval
+startRealtimePolling @ stc_chart_fix.js?v=3:259
+(anonymous) @ iqoption:238
+Console.js:61 ⚠️ No hay conexión a IQ Option - deteniendo streaming en tiempo real
+injected.js:278  GET https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/current-candle?symbol=AIG-OTC&timeframe=M5 401 (Unauthorized)
+window.fetch @ Network.js:219
+apply @ injected.js:278
+(anonymous) @ stc_chart_fix.js?v=3:261
+setInterval
+startRealtimePolling @ stc_chart_fix.js?v=3:259
+(anonymous) @ iqoption:238
+Console.js:61 ⚠️ No hay conexión a IQ Option - deteniendo streaming en tiempo real
+injected.js:278  GET https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/current-candle?symbol=AIG-OTC&timeframe=M5 401 (Unauthorized)
+window.fetch @ Network.js:219
+apply @ injected.js:278
+(anonymous) @ stc_chart_fix.js?v=3:261
+setInterval
+startRealtimePolling @ stc_chart_fix.js?v=3:259
+(anonymous) @ iqoption:238
+Console.js:61 ⚠️ No hay conexión a IQ Option - deteniendo streaming en tiempo real
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759634700, open: 1.189545, high: 1.193395, low: 1.189185, close: 1.193395}
+Console.js:61 📊 Última vela: {time: 1759694700, open: 1.171175, high: 1.171575, low: 1.171075, close: 1.171075}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+injected.js:278  GET https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/current-candle?symbol=AIG-OTC&timeframe=M5 401 (Unauthorized)
+window.fetch @ Network.js:219
+apply @ injected.js:278
+(anonymous) @ stc_chart_fix.js?v=3:261
+setInterval
+startRealtimePolling @ stc_chart_fix.js?v=3:259
+(anonymous) @ iqoption:238
+Console.js:61 ⚠️ No hay conexión a IQ Option - deteniendo streaming en tiempo real
+injected.js:278  GET https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/current-candle?symbol=AIG-OTC&timeframe=M5 401 (Unauthorized)
+window.fetch @ Network.js:219
+apply @ injected.js:278
+(anonymous) @ stc_chart_fix.js?v=3:261
+setInterval
+startRealtimePolling @ stc_chart_fix.js?v=3:259
+(anonymous) @ iqoption:238
+Console.js:61 ⚠️ No hay conexión a IQ Option - deteniendo streaming en tiempo real
+injected.js:278  GET https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/current-candle?symbol=AIG-OTC&timeframe=M5 401 (Unauthorized)
+window.fetch @ Network.js:219
+apply @ injected.js:278
+(anonymous) @ stc_chart_fix.js?v=3:261
+setInterval
+startRealtimePolling @ stc_chart_fix.js?v=3:259
+(anonymous) @ iqoption:238
+Console.js:61 ⚠️ No hay conexión a IQ Option - deteniendo streaming en tiempo real
+injected.js:278  GET https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/current-candle?symbol=AIG-OTC&timeframe=M5 401 (Unauthorized)
+window.fetch @ Network.js:219
+apply @ injected.js:278
+(anonymous) @ stc_chart_fix.js?v=3:261
+setInterval
+startRealtimePolling @ stc_chart_fix.js?v=3:259
+(anonymous) @ iqoption:238
+Console.js:61 ⚠️ No hay conexión a IQ Option - deteniendo streaming en tiempo real
+injected.js:278  GET https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/current-candle?symbol=AIG-OTC&timeframe=M5 401 (Unauthorized)
+window.fetch @ Network.js:219
+apply @ injected.js:278
+(anonymous) @ stc_chart_fix.js?v=3:261
+setInterval
+startRealtimePolling @ stc_chart_fix.js?v=3:259
+(anonymous) @ iqoption:238
+Console.js:61 ⚠️ No hay conexión a IQ Option - deteniendo streaming en tiempo real
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759634700, open: 1.189545, high: 1.193395, low: 1.189185, close: 1.193395}
+Console.js:61 📊 Última vela: {time: 1759694700, open: 1.171175, high: 1.171575, low: 1.171075, close: 1.171075}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+injected.js:278  GET https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/current-candle?symbol=AIG-OTC&timeframe=M5 401 (Unauthorized)
+window.fetch @ Network.js:219
+apply @ injected.js:278
+(anonymous) @ stc_chart_fix.js?v=3:261
+setInterval
+startRealtimePolling @ stc_chart_fix.js?v=3:259
+(anonymous) @ iqoption:238
+Console.js:61 ⚠️ No hay conexión a IQ Option - deteniendo streaming en tiempo real
+injected.js:278  GET https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/current-candle?symbol=AIG-OTC&timeframe=M5 401 (Unauthorized)
+window.fetch @ Network.js:219
+apply @ injected.js:278
+(anonymous) @ stc_chart_fix.js?v=3:261
+setInterval
+startRealtimePolling @ stc_chart_fix.js?v=3:259
+(anonymous) @ iqoption:238
+Console.js:61 ⚠️ No hay conexión a IQ Option - deteniendo streaming en tiempo real
+injected.js:278  GET https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/current-candle?symbol=AIG-OTC&timeframe=M5 401 (Unauthorized)
+window.fetch @ Network.js:219
+apply @ injected.js:278
+(anonymous) @ stc_chart_fix.js?v=3:261
+setInterval
+startRealtimePolling @ stc_chart_fix.js?v=3:259
+(anonymous) @ iqoption:238
+Console.js:61 ⚠️ No hay conexión a IQ Option - deteniendo streaming en tiempo real

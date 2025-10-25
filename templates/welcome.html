@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenido - smarttradetecnologies-ar</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Courier New', Consolas, Monaco, monospace;
+            background: #000000;
+            color: #00ffff;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            perspective: 1500px;
+            overflow: hidden;
+        }
+
+        .welcome-container {
+            background: rgba(0, 255, 255, 0.02);
+            border: 2px solid rgba(0, 255, 255, 0.3);
+            border-radius: 30px;
+            padding: 60px;
+            backdrop-filter: blur(40px);
+            transform-style: preserve-3d;
+            transform: translateZ(50px);
+            text-align: center;
+            max-width: 700px;
+            animation: fadeInScale 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 
+                0 0 80px rgba(0, 255, 255, 0.2),
+                inset 0 0 50px rgba(0, 255, 255, 0.05);
+        }
+
+        @keyframes fadeInScale {
+            from {
+                opacity: 0;
+                transform: translateZ(0px) scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: translateZ(50px) scale(1);
+            }
+        }
+
+        .welcome-icon {
+            font-size: 5rem;
+            margin-bottom: 30px;
+            text-shadow: 0 0 40px rgba(0, 255, 255, 0.6);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+        }
+
+        .welcome-title {
+            font-size: 3rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #00ffff 0%, #0099ff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+
+        .welcome-subtitle {
+            font-size: 1.3rem;
+            color: rgba(0, 255, 255, 0.8);
+            margin-bottom: 15px;
+        }
+
+        .user-info {
+            font-size: 1.1rem;
+            color: rgba(0, 255, 255, 0.6);
+            margin-bottom: 40px;
+        }
+
+        .access-info {
+            background: rgba(0, 255, 255, 0.05);
+            border: 1px solid rgba(0, 255, 255, 0.2);
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 40px;
+        }
+
+        .access-type {
+            font-size: 1.2rem;
+            color: #00ff64;
+            font-weight: 700;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        .access-details {
+            color: rgba(0, 255, 255, 0.7);
+            font-size: 0.95rem;
+        }
+
+        .btn-dashboard {
+            background: linear-gradient(135deg, #00ffff 0%, #0099ff 100%);
+            color: #000;
+            border: none;
+            padding: 18px 60px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1.2rem;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: all 0.3s;
+            font-family: 'Courier New', Consolas, Monaco, monospace;
+            display: inline-block;
+            text-decoration: none;
+        }
+
+        .btn-dashboard:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 15px 40px rgba(0, 255, 255, 0.5);
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .feature {
+            background: rgba(0, 255, 255, 0.03);
+            border: 1px solid rgba(0, 255, 255, 0.15);
+            border-radius: 10px;
+            padding: 15px;
+            transition: all 0.3s;
+        }
+
+        .feature:hover {
+            transform: translateZ(20px);
+            border-color: #00ffff;
+        }
+
+        .feature-icon {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .feature-text {
+            font-size: 0.9rem;
+            color: rgba(0, 255, 255, 0.7);
+        }
+
+        .countdown {
+            font-size: 0.9rem;
+            color: #ff0064;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="welcome-container">
+        <div class="welcome-icon">🚀</div>
+        <h1 class="welcome-title">¡BIENVENIDO!</h1>
+        <div class="welcome-subtitle">ACCESO CONCEDIDO</div>
+        <div class="user-info" id="user-info">Cargando...</div>
+
+        <div class="access-info">
+            <div class="access-type" id="access-type">CARGANDO...</div>
+            <div class="access-details" id="access-details">Verificando acceso...</div>
+        </div>
+
+        <div class="features">
+            <div class="feature">
+                <div class="feature-icon">📊</div>
+                <div class="feature-text">Gráficos en Tiempo Real</div>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">🤖</div>
+                <div class="feature-text">8 Estrategias de Trading</div>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">⚡</div>
+                <div class="feature-text">Sistema Dual-Gale</div>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">🎯</div>
+                <div class="feature-text">Señales Automáticas</div>
+            </div>
+        </div>
+
+        <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+            <a href="/signals" class="btn-dashboard" style="background: linear-gradient(135deg, #00ff64 0%, #00cc50 100%);">
+                🎯 PANEL DE SEÑALES
+            </a>
+            <a href="/trading-charts" class="btn-dashboard" style="background: linear-gradient(135deg, #ffcc00 0%, #ff9900 100%);">
+                🇻🇪 GRÁFICOS PROFESIONALES
+            </a>
+            <a href="/select-broker" class="btn-dashboard">
+                📊 DASHBOARD DE TRADING
+            </a>
+        </div>
+    </div>
+
+    <script>
+        async function loadUserInfo() {
+            try {
+                const response = await fetch('/api/auth/check-access');
+                const data = await response.json();
+
+                if (!data.has_access) {
+                    // Mostrar advertencia pero NO redirigir (navegación 100% manual)
+                    document.getElementById('access-type').textContent = 'VERIFICANDO ACCESO...';
+                    document.getElementById('access-details').textContent = 'Puedes usar los botones para continuar';
+                    return;
+                }
+
+                // Mostrar información del usuario
+                const userInfo = document.getElementById('user-info');
+                userInfo.textContent = `${data.user.first_name} ${data.user.last_name}`;
+
+                // Mostrar tipo de acceso
+                const accessType = document.getElementById('access-type');
+                const accessDetails = document.getElementById('access-details');
+
+                if (data.access_via === 'subscription') {
+                    accessType.textContent = `PLAN ${data.subscription.plan}`;
+                    const daysRemaining = Math.ceil((new Date(data.subscription.end_date) - new Date()) / (1000 * 60 * 60 * 24));
+                    accessDetails.textContent = `${daysRemaining} días restantes`;
+                } else if (data.access_via === 'promo_code') {
+                    accessType.textContent = 'CÓDIGO PROMOCIONAL ACTIVO';
+                    const hoursRemaining = Math.ceil((new Date(data.promo_code.expires_at) - new Date()) / (1000 * 60 * 60));
+                    
+                    if (hoursRemaining < 24) {
+                        accessDetails.innerHTML = `
+                            <span>${hoursRemaining} horas restantes</span>
+                            <div class="countdown">⏰ Renovar pronto</div>
+                        `;
+                    } else {
+                        const daysRemaining = Math.ceil(hoursRemaining / 24);
+                        accessDetails.textContent = `${daysRemaining} días restantes`;
+                    }
+                }
+
+                // NO auto-redirect - Usuario elige manualmente con los botones
+
+            } catch (error) {
+                console.error('Error cargando información:', error);
+                // Mostrar mensaje de error pero permitir navegación manual
+                document.getElementById('user-info').textContent = 'Error al cargar información';
+                document.getElementById('access-type').textContent = 'VERIFICANDO...';
+                document.getElementById('access-details').textContent = 'Los botones siguen funcionando';
+            }
+        }
+
+        loadUserInfo();
+    </script>
+</body>
+</html>

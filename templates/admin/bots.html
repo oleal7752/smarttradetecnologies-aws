@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Bots - Admin</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Courier New', Consolas, Monaco, monospace;
+            background: #000000;
+            color: #00ffff;
+            min-height: 100vh;
+            perspective: 1500px;
+            padding: 40px;
+        }
+
+        .container {
+            max-width: 1800px;
+            margin: 0 auto;
+        }
+
+        .header {
+            background: rgba(0, 255, 255, 0.03);
+            border: 2px solid rgba(0, 255, 255, 0.2);
+            border-radius: 20px;
+            padding: 30px;
+            backdrop-filter: blur(40px);
+            transform: translateZ(30px);
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .title {
+            font-size: 1.8rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+
+        .back-btn {
+            background: rgba(0, 255, 255, 0.1);
+            border: 2px solid rgba(0, 255, 255, 0.3);
+            color: #00ffff;
+            padding: 12px 30px;
+            border-radius: 50px;
+            cursor: pointer;
+            text-decoration: none;
+            font-family: 'Courier New', Consolas, Monaco, monospace;
+            text-transform: uppercase;
+            transition: all 0.3s;
+        }
+
+        .table-container {
+            background: rgba(0, 255, 255, 0.02);
+            border: 2px solid rgba(0, 255, 255, 0.2);
+            border-radius: 20px;
+            padding: 30px;
+            backdrop-filter: blur(40px);
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th {
+            text-align: left;
+            padding: 15px;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            border-bottom: 2px solid rgba(0, 255, 255, 0.3);
+        }
+
+        td {
+            padding: 15px;
+            border-bottom: 1px solid rgba(0, 255, 255, 0.1);
+        }
+
+        tr:hover {
+            background: rgba(0, 255, 255, 0.05);
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+        }
+
+        .badge-active {
+            background: rgba(0, 255, 100, 0.1);
+            border: 1px solid rgba(0, 255, 100, 0.3);
+            color: #00ff64;
+        }
+
+        .badge-inactive {
+            background: rgba(255, 50, 50, 0.1);
+            border: 1px solid rgba(255, 50, 50, 0.3);
+            color: #ff3232;
+        }
+
+        .btn-toggle {
+            padding: 8px 15px;
+            border-radius: 8px;
+            border: 1px solid rgba(0, 255, 255, 0.4);
+            background: transparent;
+            color: #00ffff;
+            cursor: pointer;
+            font-family: 'Courier New', Consolas, Monaco, monospace;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            transition: all 0.3s;
+        }
+
+        .btn-toggle:hover {
+            background: rgba(0, 255, 255, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="title">🤖 GESTIÓN DE BOTS</div>
+            <a href="/admin" class="back-btn">⬅ VOLVER</a>
+        </div>
+
+        <div class="table-container">
+            <div id="content">Cargando bots...</div>
+        </div>
+    </div>
+
+    <script>
+        async function loadBots() {
+            try {
+                const response = await fetch('/api/admin/bots/list');
+                const data = await response.json();
+
+                if (data.success && data.bots.length > 0) {
+                    const tableHTML = `
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Nombre</th>
+                                    <th>Usuario</th>
+                                    <th>Estrategia</th>
+                                    <th>Par</th>
+                                    <th>Timeframe</th>
+                                    <th>Monto</th>
+                                    <th>Max Gale</th>
+                                    <th>Estado</th>
+                                    <th>Creado</th>
+                                    <th>Acción</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                ${data.bots.map(bot => `
+                                    <tr>
+                                        <td>${bot.name}</td>
+                                        <td>${bot.user_email}</td>
+                                        <td>${bot.strategy}</td>
+                                        <td>${bot.symbol}</td>
+                                        <td>${bot.timeframe}</td>
+                                        <td>$${bot.amount}</td>
+                                        <td>${bot.max_gale}</td>
+                                        <td>
+                                            <span class="badge ${bot.is_active ? 'badge-active' : 'badge-inactive'}">
+                                                ${bot.is_active ? 'ACTIVO' : 'INACTIVO'}
+                                            </span>
+                                        </td>
+                                        <td>${new Date(bot.created_at).toLocaleDateString('es-ES')}</td>
+                                        <td>
+                                            <button class="btn-toggle" onclick="toggleBot('${bot.id}', ${bot.is_active})">
+                                                ${bot.is_active ? 'DESACTIVAR' : 'ACTIVAR'}
+                                            </button>
+                                        </td>
+                                    </tr>
+                                `).join('')}
+                            </tbody>
+                        </table>
+                    `;
+                    document.getElementById('content').innerHTML = tableHTML;
+                } else {
+                    document.getElementById('content').innerHTML = '<div style="text-align:center;padding:40px;color:rgba(0,255,255,0.4)">No hay bots creados</div>';
+                }
+            } catch (error) {
+                console.error('Error:', error);
+            }
+        }
+
+        async function toggleBot(botId, isActive) {
+            try {
+                const response = await fetch(`/api/admin/bots/${botId}/toggle`, {
+                    method: 'POST'
+                });
+                const data = await response.json();
+
+                if (data.success) {
+                    alert(data.message);
+                    loadBots();
+                } else {
+                    alert('Error: ' + data.error);
+                }
+            } catch (error) {
+                alert('Error de conexión');
+            }
+        }
+
+        loadBots();
+        setInterval(loadBots, 30000);
+    </script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+La documentación (y los ejemplos reales) de la librería iqoptionapi muestran que IQ Option nunca usa la barra “/” ni espacios en los nombres de activo.
+En la práctica los identificados que realmente se envían en las órdenes son:
+复制
+EURUSD-OTC  
+GBPUSD-OTC  
+USDJPY-OTC  
+USDCHF-OTC  
+AUDUSD-OTC  
+USDCAD-OTC  
+EURGBP-OTC  
+GBPJPY-OTC  
+…
+es decir:
+BASE + QUOTE + “-OTC” todo en mayúsculas y sin barras.
+Por eso cuando tú envías
+"EUR/JPY (OTC)" o "EURJPY-OTC"
+el servidor responde 400 / “Orden rechazada”; el formato correcto es:
+EURJPY-OTC
+Cómo comprobarlo tú mismo (y listar TODOS los pares OTC que tu cuenta ve)
+Python
+复制
+from iqoptionapi.stable_api import IQ_Option
+
+api = IQ_Option("tu_email", "tu_pass")
+api.connect()
+
+# 1. Todos los activos y su estado
+activos = api.get_all_open_time()
+
+# 2. Filtra solo binarias OTC
+otc = [(k, v["open"]) for k, v in activos["binary"].items() if k.endswith("-OTC")]
+
+for par, abierto in otc:
+    print(par, "abierto" if abierto else "cerrado")
+Salida real (puede variar según el horario):
+复制
+EURUSD-OTC abierto
+GBPUSD-OTC abierto
+USDJPY-OTC cerrado
+USDCHF-OTC abierto
+AUDUSD-OTC abierto
+USDCAD-OTC cerrado
+EURGBP-OTC abierto
+EURJPY-OTC abierto   <-- aquí está el tuyo
+GBPJPY-OTC cerrado
+...
+Resumen rápido
+Nombre exacto que debe ir en active de tu orden:
+EURJPY-OTC (sin barra, sin espacios, sin paréntesis).
+Comprueba que esté en estado "open": true antes de lanzar la orden; de lo contrario IQ también devolverá 400.
+Si vas a mostrarlo “bonito” en pantalla puedes hacer un mapping:
+JavaScript
+复制
+const pretty = {
+  "EURJPY-OTC": "EUR/JPY (OTC)",
+  "GBPUSD-OTC": "GBP/USD (OTC)",
+  ...
+};
+pero SIEMPRE usa la clave sin formato al llamar a la API.
+Con ese cambio tu petición pasará de:
+JSON
+复制
+{"active": "EUR/JPY (OTC)", "amount": 1, "direction": "CALL", ...}
+a:
+JSON
+复制
+{"active": "EURJPY-OTC", "amount": 1, "direction": "CALL", ...}
+y el 400 “Orden rechazada” desaparecerá (siempre que la sesión y el ws_ticket sigan vigentes).

@@ -1,0 +1,235 @@
+workspace_iframe.html?initialPath=%2F&id=%3Ar76%3A:1 Unrecognized feature: 'ambient-light-sensor'.
+workspace_iframe.html?initialPath=%2F&id=%3Ar76%3A:1 Unrecognized feature: 'battery'.
+workspace_iframe.html?initialPath=%2F&id=%3Ar76%3A:1 Unrecognized feature: 'execution-while-not-rendered'.
+workspace_iframe.html?initialPath=%2F&id=%3Ar76%3A:1 Unrecognized feature: 'execution-while-out-of-viewport'.
+workspace_iframe.html?initialPath=%2F&id=%3Ar76%3A:1 Unrecognized feature: 'layout-animations'.
+workspace_iframe.html?initialPath=%2F&id=%3Ar76%3A:1 Unrecognized feature: 'legacy-image-formats'.
+workspace_iframe.html?initialPath=%2F&id=%3Ar76%3A:1 Unrecognized feature: 'navigation-override'.
+workspace_iframe.html?initialPath=%2F&id=%3Ar76%3A:1 Unrecognized feature: 'oversized-images'.
+workspace_iframe.html?initialPath=%2F&id=%3Ar76%3A:1 Unrecognized feature: 'publickey-credentials'.
+workspace_iframe.html?initialPath=%2F&id=%3Ar76%3A:1 Unrecognized feature: 'speaker-selection'.
+workspace_iframe.html?initialPath=%2F&id=%3Ar76%3A:1 Unrecognized feature: 'unoptimized-images'.
+workspace_iframe.html?initialPath=%2F&id=%3Ar76%3A:1 Unrecognized feature: 'unsized-media'.
+workspace_iframe.html?initialPath=%2F&id=%3Ar76%3A:1 Allow attribute will take precedence over 'allowfullscreen'.
+workspace_iframe.html?initialPath=%2F&id=%3Ar76%3A:1 Allow attribute will take precedence over 'allowpaymentrequest'.
+Console.js:61 📋 IQ Option Dashboard iniciado
+Console.js:61 ✅ Dashboard IQ Option inicializado
+Console.js:61 🎯 Inicializando gráfico IQ Option...
+Console.js:61 🎯 Inicializando STCChartFix con config: {containerId: 'chart', endpoint: '/api/iq/candles?symbol=EURUSD-OTC&timeframe=M5&limit=200', timeframe: 'M5', pollMs: 3000, max: 200}
+Console.js:61 ✅ Gráfico LightweightCharts inicializado
+Console.js:61 📊 Cargando datos iniciales desde: /api/iq/candles?symbol=EURUSD-OTC&timeframe=M5&limit=200
+Console.js:61 🔄 Polling iniciado cada 3000ms
+Console.js:61 📈 Datos recibidos: (200) [{…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, …]
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759631100, open: 1.186605, high: 1.188395, low: 1.184235, close: 1.185375}
+Console.js:61 📊 Última vela: {time: 1759691100, open: 1.176635, high: 1.176635, low: 1.176635, close: 1.176635}
+Console.js:61 📊 Total velas: 200
+Console.js:61 ✅ Gráfico LISTO con 200 velas pintadas
+Console.js:61 ✅ Cargadas 200 velas iniciales
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759631100, open: 1.186605, high: 1.188395, low: 1.184235, close: 1.185375}
+Console.js:61 📊 Última vela: {time: 1759691100, open: 1.176635, high: 1.176635, low: 1.176635, close: 1.176635}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759631100, open: 1.186605, high: 1.188395, low: 1.184235, close: 1.185375}
+Console.js:61 📊 Última vela: {time: 1759691100, open: 1.176635, high: 1.176635, low: 1.176635, close: 1.176635}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🟢 CALL: EURUSD-OTC, $1, 5min
+injected.js:278  POST https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/trade 403 (Forbidden)
+window.fetch @ Network.js:219
+apply @ injected.js:278
+(anonymous) @ iqoption:357
+Console.js:61 ❌ Error del servidor: {error: 'NO_ACCOUNT_CONNECTED', message: 'Debes conectar tu cuenta de IQ Option antes de operar', success: false}
+Mt.forEach.n.<computed> @ Console.js:61
+(anonymous) @ iqoption:373
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759631100, open: 1.186605, high: 1.188395, low: 1.184235, close: 1.185375}
+Console.js:61 📊 Última vela: {time: 1759691100, open: 1.176635, high: 1.176635, low: 1.176635, close: 1.176635}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759631100, open: 1.186605, high: 1.188395, low: 1.184235, close: 1.185375}
+Console.js:61 📊 Última vela: {time: 1759691100, open: 1.176635, high: 1.176635, low: 1.176635, close: 1.176635}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 🔗 Intentando conectar a IQ Option (PRACTICE)...
+Console.js:61 ✅ Conexión exitosa a IQ Option
+Console.js:61 ⏹️ Polling detenido
+Console.js:61 ⏸️ Polling histórico detenido - usando solo streaming en tiempo real
+Console.js:61 ⚡ Polling de vela actual iniciado cada 1s para EURUSD-OTC
+Console.js:61 ⚡ Streaming en tiempo real iniciado
+Console.js:61 🔄 Recargando velas después de conectar...
+Console.js:61 🔄 Refrescando datos del gráfico...
+Console.js:61 📊 Cargando datos iniciales desde: /api/iq/candles?symbol=EURUSD-OTC&timeframe=M5&limit=200
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759631100, open: 1.186605, high: 1.188395, low: 1.184235, close: 1.185375}
+Console.js:61 📊 Última vela: {time: 1759691100, open: 1.176635, high: 1.176635, low: 1.176635, close: 1.176635}
+Console.js:61 📊 Total velas: 200
+Console.js:61 ✅ Gráfico LISTO con 200 velas pintadas
+Console.js:61 📈 Datos recibidos: (200) [{…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, …]
+Console.js:61 🎨 Pintando velas en el gráfico...
+Console.js:61 📊 Primera vela: {time: 1759631100, open: 1.186605, high: 1.188395, low: 1.184235, close: 1.185375}
+Console.js:61 📊 Última vela: {time: 1759691100, open: 1.176635, high: 1.176635, low: 1.176635, close: 1.176635}
+Console.js:61 📊 Total velas: 200
+Console.js:61 🔄 Actualización: 200 velas
+Console.js:61 ✅ Cargadas 200 velas iniciales
+Console.js:61 ⚡ Vela actual actualizada: {time: 1759691100, open: 1.176635, high: 1.177415, low: 1.174955, close: 1.175085, …}
+Console.js:61 ⚡ Vela actual actualizada: {time: 1759691100, open: 1.176635, high: 1.177415, low: 1.174955, close: 1.175085, …}
+Console.js:61 ⚡ Vela actual actualizada: {time: 1759691100, open: 1.176635, high: 1.177415, low: 1.174955, close: 1.174965, …}
+Console.js:61 ⚡ Vela actual actualizada: {time: 1759691100, open: 1.176635, high: 1.177415, low: 1.174955, close: 1.175075, …}
+Console.js:61 ⚡ Vela actual actualizada: {time: 1759691100, open: 1.176635, high: 1.177415, low: 1.174955, close: 1.174965, …}
+Console.js:61 ⚡ Vela actual actualizada: {time: 1759691100, open: 1.176635, high: 1.177415, low: 1.174955, close: 1.175045, …}
+Console.js:61 ⚡ Vela actual actualizada: {time: 1759691100, open: 1.176635, high: 1.177415, low: 1.174875, close: 1.174875, …}
+Console.js:61 ⚡ Vela actual actualizada: {time: 1759691100, open: 1.176635, high: 1.177415, low: 1.174865, close: 1.174865, …}
+Console.js:61 ⚡ Vela actual actualizada: {time: 1759691100, open: 1.176635, high: 1.177415, low: 1.174865, close: 1.174865, …}
+Console.js:61 ⚡ Vela actual actualizada: {time: 1759691100, open: 1.176635, high: 1.177415, low: 1.174865, close: 1.174875, …}
+Console.js:61 🟢 CALL: EURUSD-OTC, $1, 5min
+injected.js:278  POST https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/trade 400 (Bad Request)
+window.fetch @ Network.js:219
+apply @ injected.js:278
+(anonymous) @ iqoption:357
+Console.js:61 ❌ Error del servidor: {message: 'Orden rechazada por IQ Option. Respuesta: Cannot purchase an option (active is suspended)', success: false}message: "Orden rechazada por IQ Option. Respuesta: Cannot purchase an option (active is suspended)"success: false[[Prototype]]: Object
+Mt.forEach.n.<computed> @ Console.js:61
+(anonymous) @ iqoption:373
+Console.js:61 ⚡ Vela actual actualizada: {time: 1759691100, open: 1.176635, high: 1.177415, low: 1.174845, close: 1.174845, …}
+Console.js:61 ⚡ Vela actual actualizada: {time: 1759691100, open: 1.176635, high: 1.177415, low: 1.174805, close: 1.174805, …}
+Console.js:61 ⚡ Vela actual actualizada: {time: 1759691100, open: 1.176635, high: 1.177415, low: 1.174645, close: 1.174645, …}
+Console.js:61 ⚡ Vela actual actualizada: {time: 1759691100, open: 1.176635, high: 1.177415, low: 1.174645, close: 1.174955, …}
+Console.js:61 ⚡ Vela actual actualizada: {time: 1759691100, open: 1.176635, high: 1.177415, low: 1.174645, close: 1.174725, …}
+Console.js:61 ⚡ Vela actual actualizada: {time: 1759691100, open: 1.176635, high: 1.177415, low: 1.174645, close: 1.174725, …}
+Console.js:61 ⚡ Vela actual actualizada: {time: 1759691100, open: 1.176635, high: 1.177415, low: 1.174645, close: 1.174805, …}
+Console.js:61 ⚡ Vela actual actualizada: {time: 1759691100, open: 1.176635, high: 1.177415, low: 1.174645, close: 1.174815, …}
+Console.js:61 ⚡ Vela actual actualizada: {time: 1759691100, open: 1.176635, high: 1.177415, low: 1.174645, close: 1.174785, …}
+Console.js:61 ⚡ Vela actual actualizada: {time: 1759691100, open: 1.176635, high: 1.177415, low: 1.174645, close: 1.174735, …}
+Console.js:61 ⚡ Vela actual actualizada: {time: 1759691100, open: 1.176635, high: 1.177415, low: 1.174645, close: 1.174815, …}
+Console.js:61 ⚡ Vela actual actualizada: {time: 1759691100, open: 1.176635, high: 1.177415, low: 1.174645, close: 1.174795, …}
+Console.js:61 ⚡ Vela actual actualizada: {time: 1759691100, open: 1.176635, high: 1.177415, low: 1.174645, close: 1.174975, …}
+Console.js:61 ⚡ Vela actual actualizada: {time: 1759691100, open: 1.176635, high: 1.177415, low: 1.174645, close: 1.175025, …}
+Console.js:61 ⚡ Vela actual actualizada: {time: 1759691100, open: 1.176635, high: 1.177415, low: 1.174645, close: 1.174965, …}
+Console.js:61 ⚡ Vela actual actualizada: {time: 1759691100, open: 1.176635, high: 1.177415, low: 1.174645, close: 1.174965, …}
+Console.js:61 ⚡ Vela actual actualizada: {time: 1759691100, open: 1.176635, high: 1.177415, low: 1.174645, close: 1.174935, …}
+Console.js:61 ⚡ Vela actual actualizada: {time: 1759691100, open: 1.176635, high: 1.177415, low: 1.174645, close: 1.174915, …}
+Console.js:61 ⚡ Vela actual actualizada: {time: 1759691100, open: 1.176635, high: 1.177415, low: 1.174645, close: 1.174695, …}
+Console.js:61 ⚡ Vela actual actualizada: {time: 1759691100, open: 1.176635, high: 1.177415, low: 1.174595, close: 1.174595, …}
+Console.js:61 ⚡ Vela actual actualizada: {time: 1759691100, open: 1.176635, high: 1.177415, low: 1.174595, close: 1.174595, …}
+Console.js:61 🟢 CALL: EURUSD-OTC, $1, 5min
+Console.js:61 🟢 CALL: EURUSD-OTC, $1, 5min
+injected.js:278  POST https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/trade 400 (Bad Request)
+window.fetch @ Network.js:219
+apply @ injected.js:278
+(anonymous) @ iqoption:357
+Console.js:61 ❌ Error del servidor: {message: 'Orden rechazada por IQ Option. Respuesta: Cannot purchase an option (active is suspended)', success: false}
+Mt.forEach.n.<computed> @ Console.js:61
+(anonymous) @ iqoption:373
+Console.js:61 🟢 CALL: EURUSD-OTC, $1, 5min
+Console.js:61 ⚡ Vela actual actualizada: {time: 1759691100, open: 1.176635, high: 1.177415, low: 1.174595, close: 1.174645, …}
+Console.js:61 🟢 CALL: EURUSD-OTC, $1, 5min
+injected.js:278  POST https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/trade 400 (Bad Request)
+window.fetch @ Network.js:219
+apply @ injected.js:278
+(anonymous) @ iqoption:357
+Console.js:61 ❌ Error del servidor: {message: 'Orden rechazada por IQ Option. Respuesta: Cannot purchase an option (active is suspended)', success: false}
+Mt.forEach.n.<computed> @ Console.js:61
+(anonymous) @ iqoption:373
+injected.js:278  POST https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/trade 400 (Bad Request)
+window.fetch @ Network.js:219
+apply @ injected.js:278
+(anonymous) @ iqoption:357
+Console.js:61 ❌ Error del servidor: {message: 'Orden rechazada por IQ Option. Respuesta: Cannot purchase an option (active is suspended)', success: false}
+Mt.forEach.n.<computed> @ Console.js:61
+(anonymous) @ iqoption:373
+Console.js:61 🟢 CALL: EURUSD-OTC, $1, 5min
+Console.js:61 🟢 CALL: EURUSD-OTC, $1, 5min
+injected.js:278  POST https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/trade 400 (Bad Request)
+window.fetch @ Network.js:219
+apply @ injected.js:278
+(anonymous) @ iqoption:357
+Console.js:61 ❌ Error del servidor: {message: 'Orden rechazada por IQ Option. Respuesta: Cannot purchase an option (active is suspended)', success: false}
+Mt.forEach.n.<computed> @ Console.js:61
+(anonymous) @ iqoption:373
+injected.js:278  POST https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/trade 400 (Bad Request)
+window.fetch @ Network.js:219
+apply @ injected.js:278
+(anonymous) @ iqoption:357
+Console.js:61 ❌ Error del servidor: {message: 'Orden rechazada por IQ Option. Respuesta: Cannot purchase an option (active is suspended)', success: false}
+Mt.forEach.n.<computed> @ Console.js:61
+(anonymous) @ iqoption:373
+Console.js:61 🟢 CALL: EURUSD-OTC, $1, 5min
+injected.js:278  POST https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/trade 400 (Bad Request)
+window.fetch @ Network.js:219
+apply @ injected.js:278
+(anonymous) @ iqoption:357
+Console.js:61 ❌ Error del servidor: {message: 'Orden rechazada por IQ Option. Respuesta: Cannot purchase an option (active is suspended)', success: false}
+Mt.forEach.n.<computed> @ Console.js:61
+(anonymous) @ iqoption:373
+injected.js:278  POST https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/trade 400 (Bad Request)
+window.fetch @ Network.js:219
+apply @ injected.js:278
+(anonymous) @ iqoption:357
+Console.js:61 ❌ Error del servidor: {message: 'Orden rechazada por IQ Option. Respuesta: Cannot purchase an option (active is suspended)', success: false}
+Mt.forEach.n.<computed> @ Console.js:61
+(anonymous) @ iqoption:373
+Console.js:61 🟢 CALL: EURUSD-OTC, $1, 5min
+injected.js:278  POST https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/trade 400 (Bad Request)
+window.fetch @ Network.js:219
+apply @ injected.js:278
+(anonymous) @ iqoption:357
+Console.js:61 ❌ Error del servidor: {message: 'Orden rechazada por IQ Option. Respuesta: Cannot purchase an option (active is suspended)', success: false}
+Mt.forEach.n.<computed> @ Console.js:61
+(anonymous) @ iqoption:373
+Console.js:61 🟢 CALL: EURUSD-OTC, $1, 5min
+Console.js:61 🟢 CALL: EURUSD-OTC, $1, 5min
+Console.js:61 ⚡ Vela actual actualizada: {time: 1759691100, open: 1.176635, high: 1.177415, low: 1.174595, close: 1.174615, …}
+Console.js:61 🟢 CALL: EURUSD-OTC, $1, 5min
+Console.js:61 🟢 CALL: EURUSD-OTC, $1, 5min
+injected.js:278  POST https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/trade 400 (Bad Request)
+window.fetch @ Network.js:219
+apply @ injected.js:278
+(anonymous) @ iqoption:357
+injected.js:278  POST https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/trade 400 (Bad Request)
+window.fetch @ Network.js:219
+apply @ injected.js:278
+(anonymous) @ iqoption:357
+injected.js:278  POST https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/trade 400 (Bad Request)
+window.fetch @ Network.js:219
+apply @ injected.js:278
+(anonymous) @ iqoption:357
+Console.js:61 ❌ Error del servidor: {message: 'Orden rechazada por IQ Option. Respuesta: Cannot purchase an option (active is suspended)', success: false}
+Mt.forEach.n.<computed> @ Console.js:61
+(anonymous) @ iqoption:373
+Console.js:61 ❌ Error del servidor: {message: 'Orden rechazada por IQ Option. Respuesta: Cannot purchase an option (active is suspended)', success: false}
+Mt.forEach.n.<computed> @ Console.js:61
+(anonymous) @ iqoption:373
+Console.js:61 ❌ Error del servidor: {message: 'Orden rechazada por IQ Option. Respuesta: Cannot purchase an option (active is suspended)', success: false}
+Mt.forEach.n.<computed> @ Console.js:61
+(anonymous) @ iqoption:373
+injected.js:278  POST https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/trade 400 (Bad Request)
+window.fetch @ Network.js:219
+apply @ injected.js:278
+(anonymous) @ iqoption:357
+Console.js:61 ❌ Error del servidor: {message: 'Orden rechazada por IQ Option. Respuesta: Cannot purchase an option (active is suspended)', success: false}
+Mt.forEach.n.<computed> @ Console.js:61
+(anonymous) @ iqoption:373
+Console.js:61 ⚡ Vela actual actualizada: {time: 1759691100, open: 1.176635, high: 1.177415, low: 1.174595, close: 1.174655, …}
+Console.js:61 ⚡ Vela actual actualizada: {time: 1759691100, open: 1.176635, high: 1.177415, low: 1.174465, close: 1.174465, …}
+Console.js:61 ⚡ Vela actual actualizada: {time: 1759691100, open: 1.176635, high: 1.177415, low: 1.174435, close: 1.174435, …}
+Console.js:61 ⚡ Vela actual actualizada: {time: 1759691100, open: 1.176635, high: 1.177415, low: 1.174385, close: 1.174385, …}
+Console.js:61 ⚡ Vela actual actualizada: {time: 1759691100, open: 1.176635, high: 1.177415, low: 1.174385, close: 1.174475, …}
+Console.js:61 ⚡ Vela actual actualizada: {time: 1759691100, open: 1.176635, high: 1.177415, low: 1.174385, close: 1.174425, …}
+Console.js:61 ⚡ Vela actual actualizada: {time: 1759691100, open: 1.176635, high: 1.177415, low: 1.174385, close: 1.174445, …}
+Console.js:61 ⚡ Vela actual actualizada: {time: 1759691100, open: 1.176635, high: 1.177415, low: 1.174385, close: 1.174445, …}
+Console.js:61 ⚡ Vela actual actualizada: {time: 1759691100, open: 1.176635, high: 1.177415, low: 1.174365, close: 1.174365, …}
+Console.js:61 ⚡ Vela actual actualizada: {time: 1759691100, open: 1.176635, high: 1.177415, low: 1.174365, close: 1.174365, …}
+Console.js:61 ⚡ Vela actual actualizada: {time: 1759691100, open: 1.176635, high: 1.177415, low: 1.174365, close: 1.174365, …}
+Console.js:61 ⚡ Vela actual actualizada: {time: 1759691100, open: 1.176635, high: 1.177415, low: 1.174365, close: 1.174475, …}
+Console.js:61 ⚡ Vela actual actualizada: {time: 1759691100, open: 1.176635, high: 1.177415, low: 1.174365, close: 1.174475, …}
+Console.js:61 ⚡ Vela actual actualizada: {time: 1759691100, open: 1.176635, high: 1.177415, low: 1.174365, close: 1.174375, …}
+Console.js:61 ⚡ Vela actual actualizada: {time: 1759691100, open: 1.176635, high: 1.177415, low: 1.174365, close: 1.174375, …}
+Console.js:61 ⚡ Vela actual actualizada: {time: 1759691100, open: 1.176635, high: 1.177415, low: 1.174365, close: 1.174375, …}
+Console.js:61 ⚡ Vela actual actualizada: {time: 1759691100, open: 1.176635, high: 1.177415, low: 1.174365, close: 1.174485, …}
+Console.js:61 ⚡ Vela actual actualizada: {time: 1759691100, open: 1.176635, high: 1.177415, low: 1.174365, close: 1.174515, …}
+Console.js:61 ⚡ Vela actual actualizada: {time: 1759691100, open: 1.176635, high: 1.177415, low: 1.174365, close: 1.174615, …}
+Console.js:61 ⚡ Vela actual actualizada: {time: 1759691100, open: 1.176635, high: 1.177415, low: 1.174365, close: 1.174565, …}
+Console.js:61 ⚡ Vela actual actualizada: {time: 1759691100, open: 1.176635, high: 1.177415, low: 1.174365, close: 1.174485, …}

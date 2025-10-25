@@ -1,0 +1,64 @@
+{
+  "name": "STC - Workflow 1: Captura Velas M1 (Twelve Data)",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [{"field": "minutes", "minutesInterval": 1}]
+        }
+      },
+      "id": "schedule-trigger",
+      "name": "Every 1 Minute",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [240, 300]
+    },
+    {
+      "parameters": {
+        "url": "https://api.twelvedata.com/time_series",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {"name": "symbol", "value": "BTC/USD"},
+            {"name": "interval", "value": "1min"},
+            {"name": "outputsize", "value": "1"},
+            {"name": "apikey", "value": "eab9925ad9e8488b88d5334a47ca0e98"}
+          ]
+        }
+      },
+      "id": "http-request",
+      "name": "Twelve Data API",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [460, 300]
+    },
+    {
+      "parameters": {
+        "jsCode": "const data = $input.item.json;\nif (!data.values || data.values.length === 0) {\n  throw new Error('No data from Twelve Data');\n}\nconst candle = data.values[0];\nreturn {\n  symbol: 'BTCUSD',\n  timeframe: '1min',\n  timestamp: candle.datetime,\n  open: parseFloat(candle.open),\n  high: parseFloat(candle.high),\n  low: parseFloat(candle.low),\n  close: parseFloat(candle.close),\n  volume: parseInt(candle.volume) || 0,\n  source: 'twelvedata'\n};"
+      },
+      "id": "code-node",
+      "name": "Process Candle",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [680, 300]
+    },
+    {
+      "parameters": {
+        "operation": "executeQuery",
+        "query": "INSERT INTO candles (symbol, timeframe, timestamp, open, high, low, close, volume, source) VALUES ('{{ $json.symbol }}', '{{ $json.timeframe }}', '{{ $json.timestamp }}', {{ $json.open }}, {{ $json.high }}, {{ $json.low }}, {{ $json.close }}, {{ $json.volume }}, '{{ $json.source }}') ON CONFLICT (symbol, timeframe, timestamp) DO UPDATE SET open = EXCLUDED.open, high = EXCLUDED.high, low = EXCLUDED.low, close = EXCLUDED.close, volume = EXCLUDED.volume RETURNING id, symbol, timestamp, close;"
+      },
+      "id": "postgres-node",
+      "name": "Save to Database",
+      "type": "n8n-nodes-base.postgres",
+      "typeVersion": 2.4,
+      "position": [900, 300],
+      "credentials": {"postgres": {"id": "1", "name": "PostgreSQL Trading DB"}}
+    }
+  ],
+  "connections": {
+    "Every 1 Minute": {"main": [[{"node": "Twelve Data API", "type": "main", "index": 0}]]},
+    "Twelve Data API": {"main": [[{"node": "Process Candle", "type": "main", "index": 0}]]},
+    "Process Candle": {"main": [[{"node": "Save to Database", "type": "main", "index": 0}]]}
+  },
+  "active": false
+}

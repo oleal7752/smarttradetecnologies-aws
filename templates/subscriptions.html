@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suscripciones - Smart Trade Academy</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 100%);
+            color: #ffffff;
+            min-height: 100vh;
+            padding: 2rem 0;
+        }
+
+        .container-custom {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .logo {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #00c851;
+            margin-bottom: 1rem;
+        }
+
+        .pricing-card {
+            background: #1a1f3a;
+            border-radius: 20px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-10px);
+            border-color: #00c851;
+        }
+
+        .pricing-card.featured {
+            border: 2px solid #00c851;
+        }
+
+        .badge-featured {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: linear-gradient(135deg, #0066cc 0%, #00c851 100%);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-weight: 600;
+        }
+
+        .plan-name {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .plan-price {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #00c851;
+            margin-bottom: 0.5rem;
+        }
+
+        .plan-period {
+            color: #b0b8c1;
+            margin-bottom: 1.5rem;
+        }
+
+        .features-list {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 2rem;
+        }
+
+        .features-list li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .features-list li i {
+            color: #00c851;
+            margin-right: 0.5rem;
+        }
+
+        .btn-subscribe {
+            background: linear-gradient(135deg, #0066cc 0%, #00c851 100%);
+            border: none;
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s;
+            width: 100%;
+        }
+
+        .btn-subscribe:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0, 200, 81, 0.4);
+        }
+
+        .current-subscription {
+            background: rgba(0, 200, 81, 0.1);
+            border: 2px solid #00c851;
+            padding: 1rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+        }
+
+        .alert-custom {
+            border-radius: 10px;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-custom">
+        <div class="header">
+            <div class="logo">📈 Smart Trade Academy</div>
+            <h1>Elige tu Plan de Suscripción</h1>
+            <p class="text-secondary">Accede a nuestros bots de trading profesionales</p>
+        </div>
+
+        <div id="alert-container"></div>
+
+        <div id="current-subscription-container"></div>
+
+        <div id="loading-state" class="text-center">
+            <div class="spinner-border text-primary" role="status">
+                <span class="visually-hidden">Cargando...</span>
+            </div>
+            <p class="mt-3">Cargando planes disponibles...</p>
+        </div>
+
+        <div id="plans-container" style="display: none;" class="row">
+            <div class="col-md-6 col-lg-3">
+                <div class="pricing-card">
+                    <div class="plan-name">Mensual</div>
+                    <div class="plan-price">$200</div>
+                    <div class="plan-period">por mes</div>
+                    <ul class="features-list">
+                        <li><i class="bi bi-check-circle-fill"></i> 3 Bots activos</li>
+                        <li><i class="bi bi-check-circle-fill"></i> 8 Estrategias</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Soporte 24/7</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Actualizaciones</li>
+                    </ul>
+                    <button class="btn btn-subscribe" onclick="selectPlan('monthly', 200)">
+                        Suscribirse
+                    </button>
+                    <div class="mt-3 text-center">
+                        <small class="text-secondary">o</small>
+                        <div class="input-group mt-2">
+                            <input type="text" class="form-control" id="promo-monthly" placeholder="Código Promocional" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: white;">
+                            <button class="btn btn-outline-success" onclick="activatePromo('promo-monthly')">
+                                <i class="bi bi-check2"></i> Canjear
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3">
+                <div class="pricing-card">
+                    <div class="plan-name">Trimestral</div>
+                    <div class="plan-price">$500</div>
+                    <div class="plan-period">3 meses</div>
+                    <ul class="features-list">
+                        <li><i class="bi bi-check-circle-fill"></i> 3 Bots activos</li>
+                        <li><i class="bi bi-check-circle-fill"></i> 8 Estrategias</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Soporte 24/7</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Ahorra $100</li>
+                    </ul>
+                    <button class="btn btn-subscribe" onclick="selectPlan('quarterly', 500)">
+                        Suscribirse
+                    </button>
+                    <div class="mt-3 text-center">
+                        <small class="text-secondary">o</small>
+                        <div class="input-group mt-2">
+                            <input type="text" class="form-control" id="promo-quarterly" placeholder="Código Promocional" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: white;">
+                            <button class="btn btn-outline-success" onclick="activatePromo('promo-quarterly')">
+                                <i class="bi bi-check2"></i> Canjear
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3">
+                <div class="pricing-card featured">
+                    <span class="badge-featured">Popular</span>
+                    <div class="plan-name">Semestral</div>
+                    <div class="plan-price">$999</div>
+                    <div class="plan-period">6 meses</div>
+                    <ul class="features-list">
+                        <li><i class="bi bi-check-circle-fill"></i> 3 Bots activos</li>
+                        <li><i class="bi bi-check-circle-fill"></i> 8 Estrategias</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Soporte 24/7</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Ahorra $201</li>
+                    </ul>
+                    <button class="btn btn-subscribe" onclick="selectPlan('biannual', 999)">
+                        Suscribirse
+                    </button>
+                    <div class="mt-3 text-center">
+                        <small class="text-secondary">o</small>
+                        <div class="input-group mt-2">
+                            <input type="text" class="form-control" id="promo-biannual" placeholder="Código Promocional" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: white;">
+                            <button class="btn btn-outline-success" onclick="activatePromo('promo-biannual')">
+                                <i class="bi bi-check2"></i> Canjear
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3">
+                <div class="pricing-card">
+                    <div class="plan-name">Anual</div>
+                    <div class="plan-price">$1,999</div>
+                    <div class="plan-period">12 meses</div>
+                    <ul class="features-list">
+                        <li><i class="bi bi-check-circle-fill"></i> 3 Bots activos</li>
+                        <li><i class="bi bi-check-circle-fill"></i> 8 Estrategias</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Soporte 24/7</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Ahorra $401</li>
+                    </ul>
+                    <button class="btn btn-subscribe" onclick="selectPlan('annual', 1999)">
+                        Suscribirse
+                    </button>
+                    <div class="mt-3 text-center">
+                        <small class="text-secondary">o</small>
+                        <div class="input-group mt-2">
+                            <input type="text" class="form-control" id="promo-annual" placeholder="Código Promocional" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: white;">
+                            <button class="btn btn-outline-success" onclick="activatePromo('promo-annual')">
+                                <i class="bi bi-check2"></i> Canjear
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Pago -->
+    <div class="modal fade" id="paymentModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content" style="background: #1a1f3a; color: white;">
+                <div class="modal-header">
+                    <h5 class="modal-title">Procesar Pago</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="payment-details"></div>
+                    <p class="mt-3 text-secondary">
+                        <i class="bi bi-info-circle"></i> 
+                        Este es un sistema de pago simulado para demostración.
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn" style="background: #00c851; color: white;" onclick="processPayment()">
+                        <i class="bi bi-credit-card me-2"></i>
+                        Pagar Ahora
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        let selectedPlan = null;
+        let selectedAmount = 0;
+
+        async function loadCurrentSubscription() {
+            try {
+                const response = await fetch('/api/subscriptions/current');
+                const result = await response.json();
+
+                document.getElementById('loading-state').style.display = 'none';
+                document.getElementById('plans-container').style.display = 'flex';
+
+                if (result.success && result.subscription) {
+                    const sub = result.subscription;
+                    const container = document.getElementById('current-subscription-container');
+                    const daysLeft = Math.ceil((new Date(sub.end_date) - new Date()) / (1000 * 60 * 60 * 24));
+                    
+                    container.innerHTML = `
+                        <div class="current-subscription">
+                            <h5><i class="bi bi-check-circle-fill text-success me-2"></i>Suscripción Activa</h5>
+                            <p class="mb-1">Plan: <strong class="text-capitalize">${sub.plan}</strong></p>
+                            <p class="mb-0">Vence en: <strong>${daysLeft} días</strong> (${new Date(sub.end_date).toLocaleDateString('es-ES')})</p>
+                        </div>
+                    `;
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                showAlert('Error al cargar datos de suscripción', 'danger');
+                document.getElementById('loading-state').style.display = 'none';
+                document.getElementById('plans-container').style.display = 'flex';
+            }
+        }
+
+        function selectPlan(plan, amount) {
+            selectedPlan = plan;
+            selectedAmount = amount;
+
+            const planNames = {
+                'monthly': 'Mensual',
+                'quarterly': 'Trimestral',
+                'biannual': 'Semestral',
+                'annual': 'Anual'
+            };
+
+            document.getElementById('payment-details').innerHTML = `
+                <h6>Plan seleccionado:</h6>
+                <p><strong>${planNames[plan]}</strong></p>
+                <h4 class="text-success">Total: $${amount} USD</h4>
+            `;
+
+            const modal = new bootstrap.Modal(document.getElementById('paymentModal'));
+            modal.show();
+        }
+
+        async function processPayment() {
+            try {
+                const response = await fetch('/api/subscriptions/purchase', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        plan: selectedPlan
+                    })
+                });
+
+                const result = await response.json();
+
+                if (result.success) {
+                    bootstrap.Modal.getInstance(document.getElementById('paymentModal')).hide();
+                    showAlert(`¡Suscripción activada exitosamente! Factura: ${result.invoice_number}`, 'success');
+                    setTimeout(() => {
+                        window.location.href = '/dashboard';
+                    }, 2000);
+                } else {
+                    showAlert(result.error || 'Error al procesar el pago', 'danger');
+                }
+            } catch (error) {
+                showAlert('Error de conexión. Intenta de nuevo.', 'danger');
+            }
+        }
+
+        function showAlert(message, type) {
+            const alertContainer = document.getElementById('alert-container');
+            alertContainer.innerHTML = `
+                <div class="alert alert-${type} alert-custom alert-dismissible fade show" role="alert">
+                    ${message}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                </div>
+            `;
+        }
+
+        async function activatePromo(inputId) {
+            const inputElement = document.getElementById(inputId);
+            const code = inputElement.value.trim().toUpperCase();
+            
+            if (!code) {
+                showAlert('Por favor ingresa un código promocional', 'warning');
+                return;
+            }
+
+            try {
+                const response = await fetch('/api/promo/activate', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ code: code })
+                });
+
+                const result = await response.json();
+
+                if (result.success) {
+                    showAlert(`✅ ¡Código activado exitosamente! Acceso válido por ${result.promo_code.duration_hours} horas`, 'success');
+                    setTimeout(() => {
+                        window.location.href = '/dashboard';
+                    }, 2000);
+                } else {
+                    showAlert(result.error || 'Código inválido', 'danger');
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                showAlert('Error al validar código. Intenta de nuevo.', 'danger');
+            }
+        }
+
+        loadCurrentSubscription();
+    </script>
+</body>
+</html>

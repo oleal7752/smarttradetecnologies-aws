@@ -1,0 +1,116 @@
+GET
+https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/favicon.ico
+[HTTP/1.1 404 Not Found 0ms]
+
+XHRPOST
+https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/trade
+[HTTP/1.1 403 Forbidden 70ms]
+
+❌ Error del servidor: 
+Object { error: "NO_ACCOUNT_CONNECTED", message: "Debes conectar tu cuenta de IQ Option antes de operar", success: false }
+iqoption:494:19
+XHRPOST
+https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/trade
+[HTTP/1.1 400 Bad Request 433ms]
+
+❌ Error del servidor: 
+Object { message: "Orden rechazada por IQ Option. Respuesta: Cannot purchase an option (active is suspended)", success: false }
+iqoption:494:19
+XHRPOST
+https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/trade
+[HTTP/1.1 400 Bad Request 229ms]
+
+❌ Error del servidor: 
+Object { message: "Orden rechazada por IQ Option. Respuesta: Cannot purchase an option (active is suspended)", success: false }
+iqoption:494:19
+XHRPOST
+https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/trade
+[HTTP/1.1 400 Bad Request 239ms]
+
+❌ Error del servidor: 
+Object { message: "Orden rechazada por IQ Option. Respuesta: Cannot purchase an option (active is suspended)", success: false }
+iqoption:494:19
+XHRPOST
+https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/trade
+[HTTP/1.1 400 Bad Request 426ms]
+
+XHRPOST
+https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/trade
+[HTTP/1.1 400 Bad Request 234ms]
+
+❌ Error del servidor: 
+Object { message: "Orden rechazada por IQ Option. Respuesta: Cannot purchase an option (active is suspended)", success: false }
+iqoption:494:19
+❌ Error del servidor: 
+Object { message: "Orden rechazada por IQ Option. Respuesta: Cannot purchase an option (active is suspended)", success: false }
+iqoption:494:19
+XHRPOST
+https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/trade
+[HTTP/1.1 400 Bad Request 451ms]
+
+XHRPOST
+https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/trade
+[HTTP/1.1 400 Bad Request 204ms]
+
+❌ Error del servidor: 
+Object { message: "Orden rechazada por IQ Option. Respuesta: Cannot purchase an option (active is suspended)", success: false }
+iqoption:494:19
+❌ Error del servidor: 
+Object { message: "Orden rechazada por IQ Option. Respuesta: Cannot purchase an option (active is suspended)", success: false }
+iqoption:494:19
+XHRPOST
+https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/trade
+[HTTP/1.1 400 Bad Request 397ms]
+
+XHRPOST
+https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/trade
+[HTTP/1.1 400 Bad Request 221ms]
+
+XHRPOST
+https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/trade
+[HTTP/1.1 400 Bad Request 269ms]
+
+❌ Error del servidor: 
+Object { message: "Orden rechazada por IQ Option. Respuesta: Cannot purchase an option (active is suspended)", success: false }
+iqoption:494:19
+❌ Error del servidor: 
+Object { message: "Orden rechazada por IQ Option. Respuesta: Cannot purchase an option (active is suspended)", success: false }
+iqoption:494:19
+XHRPOST
+https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/trade
+[HTTP/1.1 400 Bad Request 247ms]
+
+❌ Error del servidor: 
+Object { message: "Orden rechazada por IQ Option. Respuesta: Cannot purchase an option (active is suspended)", success: false }
+iqoption:494:19
+XHRPOST
+https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/trade
+[HTTP/1.1 400 Bad Request 241ms]
+
+❌ Error del servidor: 
+Object { message: "Orden rechazada por IQ Option. Respuesta: Cannot purchase an option (active is suspended)", success: false }
+iqoption:494:19
+XHRPOST
+https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/trade
+[HTTP/1.1 400 Bad Request 434ms]
+
+❌ Error del servidor: 
+Object { message: "Orden rechazada por IQ Option. Respuesta: Cannot purchase an option (active is suspended)", success: false }
+iqoption:494:19
+XHRPOST
+https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/trade
+[HTTP/1.1 400 Bad Request 265ms]
+
+XHRPOST
+https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/trade
+[HTTP/1.1 400 Bad Request 275ms]
+
+❌ Error del servidor: 
+Object { message: "Orden rechazada por IQ Option. Respuesta: Cannot purchase an option (active is suspended)", success: false }
+iqoption:494:19
+❌ Error del servidor: 
+Object { message: "Orden rechazada por IQ Option. Respuesta: Cannot purchase an option (active is suspended)", success: false }
+iqoption:494:19
+❌ Error del servidor: 
+Object { message: "Orden rechazada por IQ Option. Respuesta: You are trying to open too many deals per second", success: false }
+iqoption:494:19

@@ -1,0 +1,151 @@
+SOLUCIÓN: Las estrategias están definidas en otro lugar
+Pregúntale al agente de Replit:
+
+📝 PREGUNTA PARA REPLIT:
+Code
+¿Dónde están las implementaciones de las estrategias RSIStrategy, MACDStrategy, BollingerStrategy, ProbabilityGaleStrategy y KolmogorovMarkovStrategy?
+
+Busca en todos los archivos del proyecto estas clases.
+🔍 O TAMBIÉN PUEDES PREGUNTAR:
+Code
+Busca en qué archivo están definidas estas clases:
+- RSIStrategy
+- MACDStrategy  
+- BollingerStrategy
+- ProbabilityGaleStrategy
+- KolmogorovMarkovStrategy
+
+Muéstrame el contenido de ese archivo.
+💡 MIENTRAS TANTO, ALTERNATIVA TEMPORAL:
+Puedo crear un archivo strategies.py básico para que la aplicación arranque, usando las funciones de strategy_engine.py:
+
+bash
+cat > strategies.py << 'EOF'
+"""
+Implementaciones de Estrategias - STC Trading System
+"""
+
+from strategy_engine import *
+
+
+class RSIStrategy(Strategy):
+    """Estrategia basada en RSI"""
+    def __init__(self, period=14, oversold=30, overbought=70):
+        super().__init__('RSI')
+        self.period = period
+        self.oversold = oversold
+        self.overbought = overbought
+        
+    def calculate_indicators(self, candles):
+        closes = np.array([c.close for c in candles])
+        rsi = calculate_rsi(closes, self.period)
+        return {'rsi': rsi}
+        
+    def generate_signal(self, candles, indicators):
+        rsi = indicators['rsi'][-1]
+        
+        if rsi < self.oversold:
+            return Signal(
+                symbol='', direction='CALL', timeframe='',
+                timestamp=candles[-1].time, confidence=0.7,
+                indicators={'rsi': rsi}, strategy_name=self.name
+            )
+        elif rsi > self.overbought:
+            return Signal(
+                symbol='', direction='PUT', timeframe='',
+                timestamp=candles[-1].time, confidence=0.7,
+                indicators={'rsi': rsi}, strategy_name=self.name
+            )
+        return None
+
+
+class MACDStrategy(Strategy):
+    """Estrategia basada en MACD"""
+    def __init__(self, fast=12, slow=26, signal=9):
+        super().__init__('MACD')
+        self.fast = fast
+        self.slow = slow
+        self.signal = signal
+        
+    def calculate_indicators(self, candles):
+        closes = np.array([c.close for c in candles])
+        return calculate_macd(closes, self.fast, self.slow, self.signal)
+        
+    def generate_signal(self, candles, indicators):
+        macd = indicators['macd'][-1]
+        signal = indicators['signal'][-1]
+        
+        if macd > signal:
+            return Signal(
+                symbol='', direction='CALL', timeframe='',
+                timestamp=candles[-1].time, confidence=0.75,
+                indicators={'macd': macd, 'signal': signal}, strategy_name=self.name
+            )
+        elif macd < signal:
+            return Signal(
+                symbol='', direction='PUT', timeframe='',
+                timestamp=candles[-1].time, confidence=0.75,
+                indicators={'macd': macd, 'signal': signal}, strategy_name=self.name
+            )
+        return None
+
+
+class BollingerStrategy(Strategy):
+    """Estrategia basada en Bandas de Bollinger"""
+    def __init__(self, period=20, std_dev=2.0):
+        super().__init__('Bollinger')
+        self.period = period
+        self.std_dev = std_dev
+        
+    def calculate_indicators(self, candles):
+        closes = np.array([c.close for c in candles])
+        return calculate_bollinger_bands(closes, self.period, self.std_dev)
+        
+    def generate_signal(self, candles, indicators):
+        price = candles[-1].close
+        upper = indicators['upper'][-1]
+        lower = indicators['lower'][-1]
+        
+        if price < lower:
+            return Signal(
+                symbol='', direction='CALL', timeframe='',
+                timestamp=candles[-1].time, confidence=0.8,
+                indicators={'price': price, 'lower': lower}, strategy_name=self.name
+            )
+        elif price > upper:
+            return Signal(
+                symbol='', direction='PUT', timeframe='',
+                timestamp=candles[-1].time, confidence=0.8,
+                indicators={'price': price, 'upper': upper}, strategy_name=self.name
+            )
+        return None
+
+
+class ProbabilityGaleStrategy(Strategy):
+    """Estrategia Gale con probabilidades"""
+    def __init__(self):
+        super().__init__('ProbabilityGale')
+        
+    def calculate_indicators(self, candles):
+        return {}
+        
+    def generate_signal(self, candles, indicators):
+        return None
+
+
+class KolmogorovMarkovStrategy(Strategy):
+    """Estrategia Kolmogorov-Markov"""
+    def __init__(self):
+        super().__init__('KolmogorovMarkov')
+        
+    def calculate_indicators(self, candles):
+        return {}
+        
+    def generate_signal(self, candles, indicators):
+        return None
+EOF
+¿Quieres que:
+
+✅ Creemos este archivo temporal para que arranque la app
+✅ Preguntemos a Replit dónde están las estrategias completas
+Dime cuál prefieres y seguimos. 🚀

@@ -1,0 +1,194 @@
+/**
+ * STC Trading Dashboard - Componentes UI
+ * Estilos para paneles de información, selectores, etc.
+ */
+
+/* Panel de información */
+.info-panel {
+  padding: var(--spacing-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.info-panel-title {
+  font-family: var(--font-mono);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-primary);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: var(--spacing-sm);
+}
+
+.info-panel-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--font-mono);
+  font-size: 13px;
+}
+
+.info-label {
+  color: var(--color-text-dim);
+}
+
+.info-value {
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+.info-value-large {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--color-primary);
+  text-align: center;
+  padding: var(--spacing-md) 0;
+}
+
+/* Selector de símbolo */
+.symbol-selector {
+  padding: var(--spacing-lg);
+}
+
+.symbol-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-sm);
+  margin-top: var(--spacing-md);
+}
+
+.symbol-button {
+  padding: var(--spacing-md);
+  text-align: center;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 600;
+  border: none;
+}
+
+.symbol-button.active {
+  background: rgba(0, 245, 255, 0.15);
+  border-color: var(--color-primary);
+  box-shadow: var(--shadow-glow);
+}
+
+/* Selector de timeframe */
+.timeframe-selector {
+  padding: var(--spacing-lg);
+}
+
+.timeframe-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--spacing-sm);
+  margin-top: var(--spacing-md);
+}
+
+.timeframe-button {
+  padding: var(--spacing-sm);
+  text-align: center;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 600;
+  border: none;
+}
+
+.timeframe-button.active {
+  background: rgba(0, 245, 255, 0.15);
+  border-color: var(--color-primary);
+  box-shadow: var(--shadow-glow);
+}
+
+/* Countdown timer */
+.countdown-panel {
+  padding: var(--spacing-lg);
+  text-align: center;
+}
+
+.countdown-label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--color-text-dim);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: var(--spacing-sm);
+}
+
+.countdown-timer {
+  font-family: var(--font-mono);
+  font-size: 48px;
+  font-weight: 700;
+  color: var(--color-primary);
+  line-height: 1;
+  text-shadow: 0 0 20px rgba(0, 245, 255, 0.5);
+}
+
+.countdown-timer.warning {
+  color: var(--color-warning);
+  animation: pulse-glow 1s infinite;
+}
+
+/* Panel de fuente de datos */
+.data-source-panel {
+  padding: var(--spacing-lg);
+}
+
+.data-source-indicator {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-md);
+  background: rgba(0, 208, 156, 0.1);
+  border: 1px solid var(--color-success);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-mono);
+  font-size: 12px;
+}
+
+.data-source-indicator::before {
+  content: '●';
+  color: var(--color-success);
+  font-size: 16px;
+  animation: pulse-glow 2s infinite;
+}
+
+/* Loading skeleton */
+.skeleton {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.02) 25%,
+    rgba(255, 255, 255, 0.05) 50%,
+    rgba(255, 255, 255, 0.02) 75%
+  );
+  background-size: 200% 100%;
+  animation: skeleton-loading 1.5s infinite;
+  border-radius: var(--radius-sm);
+}
+
+@keyframes skeleton-loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* Error message */
+.error-message {
+  padding: var(--spacing-md);
+  background: rgba(255, 91, 90, 0.1);
+  border: 1px solid var(--color-danger);
+  border-radius: var(--radius-sm);
+  color: var(--color-danger);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  text-align: center;
+}

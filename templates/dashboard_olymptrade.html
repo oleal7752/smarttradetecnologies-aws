@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <title>OlympTrade - Dashboard Trading | STC Trading</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    :root {
+      --bg: #000000; --panel: #0a0a0a; --text: #e0e7ff; --muted: #94a3b8;
+      --ok: #10b981; --warn: #f59e0b; --err: #ef4444; --line: rgba(0, 102, 255, 0.2);
+      --buy: #10b981; --sell: #ef4444; --primary: #0066ff;
+      --glass-bg: rgba(10, 10, 20, 0.4);
+      --glass-border: rgba(0, 102, 255, 0.3);
+      --neon-blue: #0066ff;
+      --neon-cyan: #00d4ff;
+    }
+    html, body { height: 100%; margin: 0; background: radial-gradient(circle at 50% 50%, rgba(0, 102, 255, 0.15) 0%, #000000 70%); color: var(--text); font-family: system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,Helvetica,Arial; }
+    .app { display: grid; grid-template-columns: 1fr 360px; grid-template-rows: auto 1fr; gap: 12px; height: 100%; padding: 12px; box-sizing: border-box; }
+    header { grid-column: 1 / span 2; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; background: linear-gradient(135deg, rgba(0, 102, 255, 0.1) 0%, rgba(0, 0, 0, 0.3) 100%); backdrop-filter: blur(10px); padding: 12px; border-radius: 12px; border: 1px solid var(--glass-border); }
+    header h1 { font-size: 16px; font-weight: 600; margin: 0 8px 0 0; }
+    input[type="text"], input[type="password"], select, input[type="number"] { background: rgba(10, 10, 30, 0.6); color: var(--text); border: 1px solid var(--glass-border); padding: 8px 10px; border-radius: 8px; backdrop-filter: blur(10px); transition: all 0.3s; width: 100%; box-sizing: border-box; }
+    input[type="text"]:focus, input[type="password"]:focus, select:focus, input[type="number"]:focus { outline: none; border-color: var(--neon-cyan); box-shadow: 0 0 15px rgba(0, 212, 255, 0.3); }
+    button { background: linear-gradient(135deg, rgba(0, 102, 255, 0.2) 0%, rgba(0, 212, 255, 0.1) 100%); color: var(--text); border: 1px solid var(--glass-border); padding: 10px 16px; border-radius: 8px; cursor: pointer; transition: all 0.3s; backdrop-filter: blur(10px); font-size: 13px; font-weight: 600; }
+    button.primary { background: linear-gradient(135deg, rgba(0, 102, 255, 0.4) 0%, rgba(0, 212, 255, 0.3) 100%); border-color: var(--neon-cyan); box-shadow: 0 4px 15px rgba(0, 102, 255, 0.3); }
+    button.call { background: linear-gradient(135deg, rgba(16, 185, 129, 0.4) 0%, rgba(16, 185, 129, 0.2) 100%); border-color: rgba(16, 185, 129, 0.6); color: white; font-size: 15px; box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3); }
+    button.put { background: linear-gradient(135deg, rgba(239, 68, 68, 0.4) 0%, rgba(239, 68, 68, 0.2) 100%); border-color: rgba(239, 68, 68, 0.6); color: white; font-size: 15px; box-shadow: 0 4px 15px rgba(239, 68, 68, 0.3); }
+    button:hover { opacity: 1; transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0, 212, 255, 0.4); }
+    button:disabled { opacity: .5; cursor: not-allowed; transform: none; }
+    .status { padding: 4px 10px; border-radius: 99px; font-size: 11px; backdrop-filter: blur(10px); }
+    .status.ok { background: rgba(16,185,129,.2); color: var(--ok); border: 1px solid rgba(16,185,129,.5); box-shadow: 0 0 10px rgba(16,185,129,0.3); }
+    .status.warn { background: rgba(245,158,11,.2); color: var(--warn); border: 1px solid rgba(245,158,11,.5); box-shadow: 0 0 10px rgba(245,158,11,0.3); }
+
+    .chart-wrap { background: linear-gradient(145deg, rgba(0, 0, 0, 0.6) 0%, rgba(10, 10, 30, 0.4) 100%); border: 1px solid var(--glass-border); border-radius: 12px; overflow: hidden; position: relative; backdrop-filter: blur(20px); box-shadow: 0 8px 32px rgba(0, 102, 255, 0.15), inset 0 0 60px rgba(0, 102, 255, 0.05); }
+    #chart { width: 100%; height: calc(100vh - 160px); }
+    aside { background: linear-gradient(145deg, rgba(0, 0, 0, 0.5) 0%, rgba(10, 10, 30, 0.3) 100%); border: 1px solid var(--glass-border); border-radius: 12px; padding: 12px; display: flex; flex-direction: column; gap: 12px; overflow-y: auto; backdrop-filter: blur(20px); box-shadow: 0 8px 32px rgba(0, 102, 255, 0.15), inset 0 0 60px rgba(0, 102, 255, 0.05); }
+    .box { background: linear-gradient(135deg, rgba(0, 102, 255, 0.08) 0%, rgba(0, 212, 255, 0.04) 100%); border: 1px solid var(--glass-border); padding: 12px; border-radius: 12px; backdrop-filter: blur(15px); box-shadow: 0 4px 20px rgba(0, 102, 255, 0.1), inset 0 0 30px rgba(0, 102, 255, 0.03); transition: all 0.3s; }
+    .box:hover { border-color: rgba(0, 212, 255, 0.5); box-shadow: 0 6px 25px rgba(0, 212, 255, 0.2), inset 0 0 40px rgba(0, 102, 255, 0.05); }
+    .sep { height: 1px; background: linear-gradient(90deg, transparent 0%, var(--glass-border) 50%, transparent 100%); margin: 10px 0; box-shadow: 0 0 10px rgba(0, 102, 255, 0.2); }
+    .small { font-size: 12px; }
+    .bold { font-weight: 600; }
+
+    .balance-display { background: linear-gradient(135deg, rgba(0, 102, 255, 0.3) 0%, rgba(0, 212, 255, 0.2) 100%); padding: 16px; border-radius: 12px; text-align: center; backdrop-filter: blur(15px); border: 1px solid rgba(0, 212, 255, 0.4); box-shadow: 0 4px 20px rgba(0, 102, 255, 0.3), inset 0 0 30px rgba(0, 102, 255, 0.1); }
+    .balance-amount { font-size: 24px; font-weight: 700; color: #00d4ff; text-shadow: 0 0 15px rgba(0, 212, 255, 0.6); }
+    .balance-type { font-size: 11px; color: rgba(224,231,255,0.7); margin-top: 4px; }
+
+    .timeframe-selector { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; }
+    .timeframe-btn { padding: 10px 4px; font-size: 12px; font-weight: 600; background: linear-gradient(135deg, rgba(0, 102, 255, 0.08) 0%, rgba(0, 0, 0, 0.3) 100%); border: 1px solid var(--glass-border); transition: all 0.3s; border-radius: 8px; backdrop-filter: blur(10px); }
+    .timeframe-btn:hover { background: linear-gradient(135deg, rgba(0, 102, 255, 0.15) 0%, rgba(0, 212, 255, 0.1) 100%); border-color: rgba(0, 212, 255, 0.5); box-shadow: 0 4px 15px rgba(0, 102, 255, 0.2); }
+    .timeframe-btn.active { background: linear-gradient(135deg, rgba(0, 102, 255, 0.4) 0%, rgba(0, 212, 255, 0.3) 100%); border-color: var(--neon-cyan); color: white; box-shadow: 0 4px 20px rgba(0, 212, 255, 0.5), inset 0 0 20px rgba(0, 102, 255, 0.2); }
+
+    .trade-row { display: flex; gap: 8px; align-items: center; margin-bottom: 8px; }
+    .trade-row label { min-width: 65px; font-size: 13px; color: var(--text); }
+    .trade-buttons { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 12px; }
+    .trade-buttons button { padding: 16px; font-size: 15px; }
+
+    @media (max-width: 768px) {
+      .app { grid-template-columns: 1fr; }
+      aside { order: -1; }
+    }
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/lightweight-charts@4.2.0/dist/lightweight-charts.standalone.production.js"></script>
+  <script src="/static/js/notifications.js"></script>
+</head>
+<body>
+  <div class="app">
+    <header>
+      <h1>🏆 OlympTrade Pro</h1>
+      <span class="status ok">Conectado</span>
+      <div style="flex:1"></div>
+      <button class="primary" onclick="window.location.href='/broker/switch'">
+        🔄 Cambiar Broker
+      </button>
+    </header>
+
+    <div class="chart-wrap" style="position: relative;">
+      <div id="chart"></div>
+      
+      <div class="small" style="padding:8px 10px; background: rgba(0,0,0,0.5); color: var(--muted);">
+        💰 <b id="symbolLabel">EURUSD-OTC</b> • ⏰ <b id="timeLabel">M5</b>
+      </div>
+    </div>
+
+    <aside>
+      <!-- Balance -->
+      <div class="balance-display">
+        <div class="balance-amount" id="balanceAmount">$0.00</div>
+        <div class="balance-type">PRACTICE</div>
+      </div>
+
+      <!-- Conexión OlympTrade -->
+      <div class="box">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+          <strong style="font-size: 14px;">🔗 Conexión OlympTrade</strong>
+          <span class="status warn" id="connectionStatus">Desconectado</span>
+        </div>
+        <div class="sep"></div>
+        <input type="text" id="olympEmail" placeholder="Email OlympTrade" style="margin-bottom: 8px;">
+        <input type="password" id="olympPassword" placeholder="Contraseña" style="margin-bottom: 8px;">
+        <select id="accountType" style="margin-bottom: 12px;">
+          <option value="PRACTICE">PRACTICE</option>
+          <option value="REAL">REAL</option>
+        </select>
+        <button class="primary" id="connectBtn" style="width: 100%;">Conectar</button>
+      </div>
+
+      <!-- Temporalidad -->
+      <div class="box">
+        <strong style="font-size: 14px;">📊 Temporalidad</strong>
+        <div class="sep"></div>
+        <div class="timeframe-selector">
+          <button class="timeframe-btn" data-timeframe="M1">M1</button>
+          <button class="timeframe-btn active" data-timeframe="M5">M5</button>
+          <button class="timeframe-btn" data-timeframe="M15">M15</button>
+          <button class="timeframe-btn" data-timeframe="M30">M30</button>
+          <button class="timeframe-btn" data-timeframe="H1">H1</button>
+        </div>
+      </div>
+
+      <!-- Trading Rápido -->
+      <div class="box">
+        <strong style="font-size: 14px;">⚡ Trading Rápido</strong>
+        <span class="small" style="color: var(--muted); margin-left: 8px;">Binario</span>
+        <div class="sep"></div>
+        
+        <div class="trade-row">
+          <label>Símbolo:</label>
+          <select id="tradeSymbol">
+            <option value="EURUSD-OTC">EURUSD-OTC</option>
+            <option value="GBPUSD-OTC">GBPUSD-OTC</option>
+            <option value="USDJPY-OTC">USDJPY-OTC</option>
+            <option value="AUDUSD-OTC">AUDUSD-OTC</option>
+          </select>
+        </div>
+
+        <div class="trade-row">
+          <label>Monto:</label>
+          <input type="number" id="tradeAmount" value="1" min="1" step="1">
+        </div>
+
+        <div class="trade-row">
+          <label>Tiempo:</label>
+          <select id="tradeDuration">
+            <option value="1">1 min</option>
+            <option value="2">2 min</option>
+            <option value="3">3 min</option>
+            <option value="5">5 min</option>
+          </select>
+        </div>
+
+        <div class="trade-buttons">
+          <button class="call" id="callBtn">
+            ✅ CALL
+          </button>
+          <button class="put" id="putBtn">
+            ⛔ PUT
+          </button>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <script src="/static/js/stc_chart_fix.js"></script>
+  <script>
+    console.log('📋 OlympTrade Dashboard iniciado');
+
+    let currentSymbol = 'EURUSD-OTC';
+    let currentTimeframe = 'M5';
+    const dataSource = 'olymptrade';
+
+    // Inicializar gráfico con OlympTrade
+    if (typeof STCChartFix !== 'undefined') {
+      STCChartFix.init({
+        containerId: 'chart',
+        endpoint: '/api/olymptrade/candles?symbol=EURUSD-OTC&timeframe=M5&limit=200',
+        timeframe: 'M5',
+        pollMs: 3000,
+        max: 200
+      });
+    }
+
+    // Actualizar balance cada 15 segundos
+    async function updateBalance() {
+      try {
+        const response = await fetch('/api/olymptrade/balance');
+        const data = await response.json();
+        if (data.balance !== undefined) {
+          document.getElementById('balanceAmount').textContent = 
+            \`$\${parseFloat(data.balance).toFixed(2)}\`;
+        }
+      } catch (error) {
+        console.error('Error actualizando balance:', error);
+      }
+    }
+
+    // Selector de temporalidad
+    document.querySelectorAll('.timeframe-btn').forEach(btn => {
+      btn.addEventListener('click', function() {
+        document.querySelectorAll('.timeframe-btn').forEach(b => b.classList.remove('active'));
+        this.classList.add('active');
+        currentTimeframe = this.dataset.timeframe;
+        document.getElementById('timeLabel').textContent = currentTimeframe;
+        console.log(\`📊 Cambiando a \${currentTimeframe}\`);
+        
+        // Recargar gráfico con nuevo timeframe
+        if (typeof STCChartFix !== 'undefined') {
+          const endpoint = \`/api/olymptrade/candles?symbol=\${currentSymbol}&timeframe=\${currentTimeframe}&limit=200\`;
+          STCChartFix.init({
+            containerId: 'chart',
+            endpoint: endpoint,
+            timeframe: currentTimeframe,
+            pollMs: 3000,
+            max: 200
+          });
+        }
+      });
+    });
+
+    // Selector de símbolo
+    document.getElementById('tradeSymbol').addEventListener('change', function() {
+      currentSymbol = this.value;
+      document.getElementById('symbolLabel').textContent = currentSymbol;
+      console.log(\`💹 Cambiando símbolo a \${currentSymbol}\`);
+      
+      // Recargar gráfico con nuevo símbolo
+      if (typeof STCChartFix !== 'undefined') {
+        const endpoint = \`/api/olymptrade/candles?symbol=\${currentSymbol}&timeframe=\${currentTimeframe}&limit=200\`;
+        STCChartFix.init({
+          containerId: 'chart',
+          endpoint: endpoint,
+          timeframe: currentTimeframe,
+          pollMs: 3000,
+          max: 200
+        });
+      }
+    });
+
+    // Botón CALL
+    document.getElementById('callBtn').addEventListener('click', async function() {
+      const amount = document.getElementById('tradeAmount').value;
+      const duration = document.getElementById('tradeDuration').value;
+      console.log(\`🟢 CALL: \${currentSymbol}, $\${amount}, \${duration}min\`);
+      
+      try {
+        const response = await fetch('/api/olymptrade/trade', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            symbol: currentSymbol,
+            amount: parseFloat(amount),
+            direction: 'call',
+            duration: parseInt(duration)
+          })
+        });
+        const data = await response.json();
+        notify.success(data.message || 'Orden CALL enviada');
+      } catch (error) {
+        notify.error('Error ejecutando CALL: ' + error.message);
+      }
+    });
+
+    // Botón PUT
+    document.getElementById('putBtn').addEventListener('click', async function() {
+      const amount = document.getElementById('tradeAmount').value;
+      const duration = document.getElementById('tradeDuration').value;
+      console.log(\`🔴 PUT: \${currentSymbol}, $\${amount}, \${duration}min\`);
+      
+      try {
+        const response = await fetch('/api/olymptrade/trade', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            symbol: currentSymbol,
+            amount: parseFloat(amount),
+            direction: 'put',
+            duration: parseInt(duration)
+          })
+        });
+        const data = await response.json();
+        notify.success(data.message || 'Orden PUT enviada');
+      } catch (error) {
+        notify.error('Error ejecutando PUT: ' + error.message);
+      }
+    });
+
+    // Actualizar balance inicial y periódicamente
+    updateBalance();
+    setInterval(updateBalance, 15000);
+
+    console.log('✅ Dashboard OlympTrade inicializado');
+  </script>
+</body>
+</html>

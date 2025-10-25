@@ -1,0 +1,851 @@
+The source list for the Content Security Policy directive 'default-src' contains an invalid source: ''unsafe-dynamic''. It will be ignored.
+The source list for the Content Security Policy directive 'default-src' contains an invalid source: ''unsafe-dynamic''. It will be ignored.
+The source list for the Content Security Policy directive 'default-src' contains an invalid source: ''unsafe-dynamic''. It will be ignored.
+The source list for the Content Security Policy directive 'default-src' contains an invalid source: ''unsafe-dynamic''. It will be ignored.
+The source list for the Content Security Policy directive 'default-src' contains an invalid source: ''unsafe-dynamic''. It will be ignored.
+The source list for the Content Security Policy directive 'default-src' contains an invalid source: ''unsafe-dynamic''. It will be ignored.
+The source list for the Content Security Policy directive 'default-src' contains an invalid source: ''unsafe-dynamic''. It will be ignored.
+The source list for the Content Security Policy directive 'default-src' contains an invalid source: ''unsafe-dynamic''. It will be ignored.
+The source list for the Content Security Policy directive 'default-src' contains an invalid source: ''unsafe-dynamic''. It will be ignored.
+The source list for the Content Security Policy directive 'default-src' contains an invalid source: ''unsafe-dynamic''. It will be ignored.
+The Content-Security-Policy directive 'default-src' contains 'report-uri' as a source expression. Did you want to add it as a directive and forget a semicolon?
+The Content-Security-Policy directive 'default-src' contains 'report-uri' as a source expression. Did you want to add it as a directive and forget a semicolon?
+The Content-Security-Policy directive 'default-src' contains 'report-uri' as a source expression. Did you want to add it as a directive and forget a semicolon?
+The Content-Security-Policy directive 'default-src' contains 'report-uri' as a source expression. Did you want to add it as a directive and forget a semicolon?
+The Content-Security-Policy directive 'default-src' contains 'report-uri' as a source expression. Did you want to add it as a directive and forget a semicolon?
+The Content-Security-Policy directive 'default-src' contains 'report-uri' as a source expression. Did you want to add it as a directive and forget a semicolon?
+The Content-Security-Policy directive 'default-src' contains 'report-uri' as a source expression. Did you want to add it as a directive and forget a semicolon?
+The Content-Security-Policy directive 'default-src' contains 'report-uri' as a source expression. Did you want to add it as a directive and forget a semicolon?
+The Content-Security-Policy directive 'default-src' contains 'report-uri' as a source expression. Did you want to add it as a directive and forget a semicolon?
+The Content-Security-Policy directive 'default-src' contains 'report-uri' as a source expression. Did you want to add it as a directive and forget a semicolon?
+The source list for Content Security Policy directive 'default-src' contains a source with an invalid path: '/api/4509669501698048/security/?sentry_key=7eb3d90eb4660416caf507087367e67e'. The query component, including the '?', will be ignored.
+The source list for Content Security Policy directive 'default-src' contains a source with an invalid path: '/api/4509669501698048/security/?sentry_key=7eb3d90eb4660416caf507087367e67e'. The query component, including the '?', will be ignored.
+The source list for Content Security Policy directive 'default-src' contains a source with an invalid path: '/api/4509669501698048/security/?sentry_key=7eb3d90eb4660416caf507087367e67e'. The query component, including the '?', will be ignored.
+The source list for Content Security Policy directive 'default-src' contains a source with an invalid path: '/api/4509669501698048/security/?sentry_key=7eb3d90eb4660416caf507087367e67e'. The query component, including the '?', will be ignored.
+The source list for Content Security Policy directive 'default-src' contains a source with an invalid path: '/api/4509669501698048/security/?sentry_key=7eb3d90eb4660416caf507087367e67e'. The query component, including the '?', will be ignored.
+The source list for Content Security Policy directive 'default-src' contains a source with an invalid path: '/api/4509669501698048/security/?sentry_key=7eb3d90eb4660416caf507087367e67e'. The query component, including the '?', will be ignored.
+The source list for Content Security Policy directive 'default-src' contains a source with an invalid path: '/api/4509669501698048/security/?sentry_key=7eb3d90eb4660416caf507087367e67e'. The query component, including the '?', will be ignored.
+The source list for Content Security Policy directive 'default-src' contains a source with an invalid path: '/api/4509669501698048/security/?sentry_key=7eb3d90eb4660416caf507087367e67e'. The query component, including the '?', will be ignored.
+The source list for Content Security Policy directive 'default-src' contains a source with an invalid path: '/api/4509669501698048/security/?sentry_key=7eb3d90eb4660416caf507087367e67e'. The query component, including the '?', will be ignored.
+The source list for Content Security Policy directive 'default-src' contains a source with an invalid path: '/api/4509669501698048/security/?sentry_key=7eb3d90eb4660416caf507087367e67e'. The query component, including the '?', will be ignored.
+The source list for the Content Security Policy directive 'default-src' contains an invalid source: ''unsafe-dynamic''. It will be ignored.
+The Content-Security-Policy directive 'default-src' contains 'report-uri' as a source expression. Did you want to add it as a directive and forget a semicolon?
+The source list for Content Security Policy directive 'default-src' contains a source with an invalid path: '/api/4509669501698048/security/?sentry_key=7eb3d90eb4660416caf507087367e67e'. The query component, including the '?', will be ignored.
+_app-e40c343e2cfefc96.js:34 
+      /////////////////////
+   ///////////////////////////
+  ////////@@@@@@@//////////////
+  ////////@@@@@@@//////////////
+  ////////@@@@@@@//////////////        Curious and driven?
+  ///////////////@@@@@@@///////        Work with us!
+  ///////////////@@@@@@@///////
+  ///////////////@@@@@@@///////        https://join.replit.com/hack.with.us
+  ////////@@@@@@@//////////////
+  ////////@@@@@@@//////////////
+  ////////@@@@@@#//////////////
+   ///////////////////////////
+      /////////////////////
+      
+stallwart.build.js:1 stallwart: failed ping 1
+SmartTradeAcademy:1 The source list for the Content Security Policy directive 'default-src' contains an invalid source: ''unsafe-dynamic''. It will be ignored.
+SmartTradeAcademy:1 The Content-Security-Policy directive 'default-src' contains 'report-uri' as a source expression. Did you want to add it as a directive and forget a semicolon?
+SmartTradeAcademy:1 The source list for Content Security Policy directive 'default-src' contains a source with an invalid path: '/api/4509669501698048/security/?sentry_key=7eb3d90eb4660416caf507087367e67e'. The query component, including the '?', will be ignored.
+_app-e40c343e2cfefc96.js:34 [LaunchDarkly] LaunchDarkly client initialized
+framework-b34cd9ba57ecbf65.js:1 Error while parsing the 'sandbox' attribute: 'allow-downloads-without-user-activation' is an invalid sandbox flag.
+_ @ framework-b34cd9ba57ecbf65.js:1
+(anonymous) @ framework-b34cd9ba57ecbf65.js:1
+uD @ framework-b34cd9ba57ecbf65.js:1
+uI @ framework-b34cd9ba57ecbf65.js:1
+uM @ framework-b34cd9ba57ecbf65.js:1
+uS @ framework-b34cd9ba57ecbf65.js:1
+C @ framework-b34cd9ba57ecbf65.js:1
+z @ framework-b34cd9ba57ecbf65.js:1
+framework-b34cd9ba57ecbf65.js:1 Unrecognized feature: 'ambient-light-sensor'.
+_ @ framework-b34cd9ba57ecbf65.js:1
+(anonymous) @ framework-b34cd9ba57ecbf65.js:1
+uD @ framework-b34cd9ba57ecbf65.js:1
+uI @ framework-b34cd9ba57ecbf65.js:1
+uM @ framework-b34cd9ba57ecbf65.js:1
+uS @ framework-b34cd9ba57ecbf65.js:1
+C @ framework-b34cd9ba57ecbf65.js:1
+z @ framework-b34cd9ba57ecbf65.js:1
+framework-b34cd9ba57ecbf65.js:1 Unrecognized feature: 'battery'.
+_ @ framework-b34cd9ba57ecbf65.js:1
+(anonymous) @ framework-b34cd9ba57ecbf65.js:1
+uD @ framework-b34cd9ba57ecbf65.js:1
+uI @ framework-b34cd9ba57ecbf65.js:1
+uM @ framework-b34cd9ba57ecbf65.js:1
+uS @ framework-b34cd9ba57ecbf65.js:1
+C @ framework-b34cd9ba57ecbf65.js:1
+z @ framework-b34cd9ba57ecbf65.js:1
+framework-b34cd9ba57ecbf65.js:1 Unrecognized feature: 'execution-while-not-rendered'.
+_ @ framework-b34cd9ba57ecbf65.js:1
+(anonymous) @ framework-b34cd9ba57ecbf65.js:1
+uD @ framework-b34cd9ba57ecbf65.js:1
+uI @ framework-b34cd9ba57ecbf65.js:1
+uM @ framework-b34cd9ba57ecbf65.js:1
+uS @ framework-b34cd9ba57ecbf65.js:1
+C @ framework-b34cd9ba57ecbf65.js:1
+z @ framework-b34cd9ba57ecbf65.js:1
+framework-b34cd9ba57ecbf65.js:1 Unrecognized feature: 'execution-while-out-of-viewport'.
+_ @ framework-b34cd9ba57ecbf65.js:1
+(anonymous) @ framework-b34cd9ba57ecbf65.js:1
+uD @ framework-b34cd9ba57ecbf65.js:1
+uI @ framework-b34cd9ba57ecbf65.js:1
+uM @ framework-b34cd9ba57ecbf65.js:1
+uS @ framework-b34cd9ba57ecbf65.js:1
+C @ framework-b34cd9ba57ecbf65.js:1
+z @ framework-b34cd9ba57ecbf65.js:1
+framework-b34cd9ba57ecbf65.js:1 Unrecognized feature: 'layout-animations'.
+_ @ framework-b34cd9ba57ecbf65.js:1
+(anonymous) @ framework-b34cd9ba57ecbf65.js:1
+uD @ framework-b34cd9ba57ecbf65.js:1
+uI @ framework-b34cd9ba57ecbf65.js:1
+uM @ framework-b34cd9ba57ecbf65.js:1
+uS @ framework-b34cd9ba57ecbf65.js:1
+C @ framework-b34cd9ba57ecbf65.js:1
+z @ framework-b34cd9ba57ecbf65.js:1
+framework-b34cd9ba57ecbf65.js:1 Unrecognized feature: 'legacy-image-formats'.
+_ @ framework-b34cd9ba57ecbf65.js:1
+(anonymous) @ framework-b34cd9ba57ecbf65.js:1
+uD @ framework-b34cd9ba57ecbf65.js:1
+uI @ framework-b34cd9ba57ecbf65.js:1
+uM @ framework-b34cd9ba57ecbf65.js:1
+uS @ framework-b34cd9ba57ecbf65.js:1
+C @ framework-b34cd9ba57ecbf65.js:1
+z @ framework-b34cd9ba57ecbf65.js:1
+framework-b34cd9ba57ecbf65.js:1 Unrecognized feature: 'navigation-override'.
+_ @ framework-b34cd9ba57ecbf65.js:1
+(anonymous) @ framework-b34cd9ba57ecbf65.js:1
+uD @ framework-b34cd9ba57ecbf65.js:1
+uI @ framework-b34cd9ba57ecbf65.js:1
+uM @ framework-b34cd9ba57ecbf65.js:1
+uS @ framework-b34cd9ba57ecbf65.js:1
+C @ framework-b34cd9ba57ecbf65.js:1
+z @ framework-b34cd9ba57ecbf65.js:1
+framework-b34cd9ba57ecbf65.js:1 Unrecognized feature: 'oversized-images'.
+_ @ framework-b34cd9ba57ecbf65.js:1
+(anonymous) @ framework-b34cd9ba57ecbf65.js:1
+uD @ framework-b34cd9ba57ecbf65.js:1
+uI @ framework-b34cd9ba57ecbf65.js:1
+uM @ framework-b34cd9ba57ecbf65.js:1
+uS @ framework-b34cd9ba57ecbf65.js:1
+C @ framework-b34cd9ba57ecbf65.js:1
+z @ framework-b34cd9ba57ecbf65.js:1
+framework-b34cd9ba57ecbf65.js:1 Unrecognized feature: 'publickey-credentials'.
+_ @ framework-b34cd9ba57ecbf65.js:1
+(anonymous) @ framework-b34cd9ba57ecbf65.js:1
+uD @ framework-b34cd9ba57ecbf65.js:1
+uI @ framework-b34cd9ba57ecbf65.js:1
+uM @ framework-b34cd9ba57ecbf65.js:1
+uS @ framework-b34cd9ba57ecbf65.js:1
+C @ framework-b34cd9ba57ecbf65.js:1
+z @ framework-b34cd9ba57ecbf65.js:1
+framework-b34cd9ba57ecbf65.js:1 Unrecognized feature: 'speaker-selection'.
+_ @ framework-b34cd9ba57ecbf65.js:1
+(anonymous) @ framework-b34cd9ba57ecbf65.js:1
+uD @ framework-b34cd9ba57ecbf65.js:1
+uI @ framework-b34cd9ba57ecbf65.js:1
+uM @ framework-b34cd9ba57ecbf65.js:1
+uS @ framework-b34cd9ba57ecbf65.js:1
+C @ framework-b34cd9ba57ecbf65.js:1
+z @ framework-b34cd9ba57ecbf65.js:1
+framework-b34cd9ba57ecbf65.js:1 Unrecognized feature: 'unoptimized-images'.
+_ @ framework-b34cd9ba57ecbf65.js:1
+(anonymous) @ framework-b34cd9ba57ecbf65.js:1
+uD @ framework-b34cd9ba57ecbf65.js:1
+uI @ framework-b34cd9ba57ecbf65.js:1
+uM @ framework-b34cd9ba57ecbf65.js:1
+uS @ framework-b34cd9ba57ecbf65.js:1
+C @ framework-b34cd9ba57ecbf65.js:1
+z @ framework-b34cd9ba57ecbf65.js:1
+framework-b34cd9ba57ecbf65.js:1 Unrecognized feature: 'unsized-media'.
+_ @ framework-b34cd9ba57ecbf65.js:1
+(anonymous) @ framework-b34cd9ba57ecbf65.js:1
+uD @ framework-b34cd9ba57ecbf65.js:1
+uI @ framework-b34cd9ba57ecbf65.js:1
+uM @ framework-b34cd9ba57ecbf65.js:1
+uS @ framework-b34cd9ba57ecbf65.js:1
+C @ framework-b34cd9ba57ecbf65.js:1
+z @ framework-b34cd9ba57ecbf65.js:1
+framework-b34cd9ba57ecbf65.js:1 Unrecognized feature: 'pointer-lock'.
+_ @ framework-b34cd9ba57ecbf65.js:1
+(anonymous) @ framework-b34cd9ba57ecbf65.js:1
+uD @ framework-b34cd9ba57ecbf65.js:1
+uI @ framework-b34cd9ba57ecbf65.js:1
+uM @ framework-b34cd9ba57ecbf65.js:1
+uS @ framework-b34cd9ba57ecbf65.js:1
+C @ framework-b34cd9ba57ecbf65.js:1
+z @ framework-b34cd9ba57ecbf65.js:1
+framework-b34cd9ba57ecbf65.js:1 Allow attribute will take precedence over 'allowfullscreen'.
+_ @ framework-b34cd9ba57ecbf65.js:1
+(anonymous) @ framework-b34cd9ba57ecbf65.js:1
+uD @ framework-b34cd9ba57ecbf65.js:1
+uI @ framework-b34cd9ba57ecbf65.js:1
+uM @ framework-b34cd9ba57ecbf65.js:1
+uS @ framework-b34cd9ba57ecbf65.js:1
+C @ framework-b34cd9ba57ecbf65.js:1
+z @ framework-b34cd9ba57ecbf65.js:1
+framework-b34cd9ba57ecbf65.js:1 Allow attribute will take precedence over 'allowpaymentrequest'.
+_ @ framework-b34cd9ba57ecbf65.js:1
+(anonymous) @ framework-b34cd9ba57ecbf65.js:1
+uD @ framework-b34cd9ba57ecbf65.js:1
+uI @ framework-b34cd9ba57ecbf65.js:1
+uM @ framework-b34cd9ba57ecbf65.js:1
+uS @ framework-b34cd9ba57ecbf65.js:1
+C @ framework-b34cd9ba57ecbf65.js:1
+z @ framework-b34cd9ba57ecbf65.js:1
+workspace_iframe.html?initialPath=%2F&id=%3Ar27%3A:32 Error while parsing the 'sandbox' attribute: 'allow-downloads-without-user-activation' is an invalid sandbox flag.
+d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/__replco/workspace_iframe.html?initialPath=%2F&id=%3Ar27%3A:32 Error while parsing the 'sandbox' attribute: 'allow-downloads-without-user-activation' is an invalid sandbox flag.
+workspace_iframe.html?initialPath=%2F&id=%3Ar27%3A:32 Unrecognized feature: 'ambient-light-sensor'.
+d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/__replco/workspace_iframe.html?initialPath=%2F&id=%3Ar27%3A:32 Unrecognized feature: 'ambient-light-sensor'.
+workspace_iframe.html?initialPath=%2F&id=%3Ar27%3A:32 Unrecognized feature: 'battery'.
+d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/__replco/workspace_iframe.html?initialPath=%2F&id=%3Ar27%3A:32 Unrecognized feature: 'battery'.
+workspace_iframe.html?initialPath=%2F&id=%3Ar27%3A:32 Unrecognized feature: 'execution-while-not-rendered'.
+d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/__replco/workspace_iframe.html?initialPath=%2F&id=%3Ar27%3A:32 Unrecognized feature: 'execution-while-not-rendered'.
+workspace_iframe.html?initialPath=%2F&id=%3Ar27%3A:32 Unrecognized feature: 'execution-while-out-of-viewport'.
+d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/__replco/workspace_iframe.html?initialPath=%2F&id=%3Ar27%3A:32 Unrecognized feature: 'execution-while-out-of-viewport'.
+workspace_iframe.html?initialPath=%2F&id=%3Ar27%3A:32 Unrecognized feature: 'layout-animations'.
+d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/__replco/workspace_iframe.html?initialPath=%2F&id=%3Ar27%3A:32 Unrecognized feature: 'layout-animations'.
+workspace_iframe.html?initialPath=%2F&id=%3Ar27%3A:32 Unrecognized feature: 'legacy-image-formats'.
+d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/__replco/workspace_iframe.html?initialPath=%2F&id=%3Ar27%3A:32 Unrecognized feature: 'legacy-image-formats'.
+workspace_iframe.html?initialPath=%2F&id=%3Ar27%3A:32 Unrecognized feature: 'navigation-override'.
+d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/__replco/workspace_iframe.html?initialPath=%2F&id=%3Ar27%3A:32 Unrecognized feature: 'navigation-override'.
+workspace_iframe.html?initialPath=%2F&id=%3Ar27%3A:32 Unrecognized feature: 'oversized-images'.
+d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/__replco/workspace_iframe.html?initialPath=%2F&id=%3Ar27%3A:32 Unrecognized feature: 'oversized-images'.
+workspace_iframe.html?initialPath=%2F&id=%3Ar27%3A:32 Unrecognized feature: 'publickey-credentials'.
+d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/__replco/workspace_iframe.html?initialPath=%2F&id=%3Ar27%3A:32 Unrecognized feature: 'publickey-credentials'.
+workspace_iframe.html?initialPath=%2F&id=%3Ar27%3A:32 Unrecognized feature: 'speaker-selection'.
+d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/__replco/workspace_iframe.html?initialPath=%2F&id=%3Ar27%3A:32 Unrecognized feature: 'speaker-selection'.
+workspace_iframe.html?initialPath=%2F&id=%3Ar27%3A:32 Unrecognized feature: 'unoptimized-images'.
+d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/__replco/workspace_iframe.html?initialPath=%2F&id=%3Ar27%3A:32 Unrecognized feature: 'unoptimized-images'.
+workspace_iframe.html?initialPath=%2F&id=%3Ar27%3A:32 Unrecognized feature: 'unsized-media'.
+d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/__replco/workspace_iframe.html?initialPath=%2F&id=%3Ar27%3A:32 Unrecognized feature: 'unsized-media'.
+workspace_iframe.html?initialPath=%2F&id=%3Ar27%3A:32 Allow attribute will take precedence over 'allowfullscreen'.
+d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/__replco/workspace_iframe.html?initialPath=%2F&id=%3Ar27%3A:32 Allow attribute will take precedence over 'allowfullscreen'.
+workspace_iframe.html?initialPath=%2F&id=%3Ar27%3A:32 Allow attribute will take precedence over 'allowpaymentrequest'.
+d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/__replco/workspace_iframe.html?initialPath=%2F&id=%3Ar27%3A:32 Allow attribute will take precedence over 'allowpaymentrequest'.
+SmartTradeAcademy:1 Banner not shown: beforeinstallpromptevent.preventDefault() called. The page must call beforeinstallpromptevent.prompt() to show the banner.
+Console.js:61 📋 STC Trading Dashboard script cargado
+Console.js:61 🌐 DOM cargado, iniciando aplicación...
+Console.js:61 🚀 STC Trading System - gráficos automáticos activos
+Console.js:61 🚀 Iniciando STC Chart Manager...
+Console.js:61 ✅ STC Chart Manager - usando STCChartFix automático
+Console.js:61 🚀 Iniciando STC Trading Dashboard...
+Console.js:61 ✅ Gráfico inicializado correctamente
+Console.js:61 🎛️ Event handlers configurados
+Console.js:61 🔄 Auto-update iniciado
+Console.js:61 ✅ Dashboard inicializado
+Console.js:61 📊 Cargando velas para EURUSD-OTC (M5)...
+Console.js:61 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+Console.js:61 🔔 Señal de COMPRA detectada (AUDIO SILENCIADO): {confidence: 0.51, direction: 'CALL', gale_level: 0, is_gale: false, pattern: 'Alcista', …}
+Console.js:61 ✅ 50 señales agregadas al gráfico
+Console.js:61 ✅ 50 señales Tablero cargadas
+Console.js:61 📊 Cargando velas para EURUSD-OTC (M5)...
+Console.js:61 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+Console.js:61 ✅ 50 señales agregadas al gráfico
+Console.js:61 ✅ 50 señales Tablero cargadas
+Console.js:61 📊 Cargando velas para EURUSD-OTC (M5)...
+_app-e40c343e2cfefc96.js:34  POST https://replit.com/graphql 500 (Internal Server Error)
+(anonymous) @ _app-e40c343e2cfefc96.js:34
+(anonymous) @ _app-e40c343e2cfefc96.js:10
+e @ _app-e40c343e2cfefc96.js:4
+t.subscribe @ _app-e40c343e2cfefc96.js:4
+e.consumeQueue @ _app-e40c343e2cfefc96.js:10
+(anonymous) @ _app-e40c343e2cfefc96.js:10
+n @ _app-e40c343e2cfefc96.js:34
+setTimeout
+(anonymous) @ _app-e40c343e2cfefc96.js:34
+e.scheduleQueueConsumption @ _app-e40c343e2cfefc96.js:10
+(anonymous) @ _app-e40c343e2cfefc96.js:10
+e @ _app-e40c343e2cfefc96.js:4
+t.subscribe @ _app-e40c343e2cfefc96.js:4
+(anonymous) @ _app-e40c343e2cfefc96.js:10
+e @ _app-e40c343e2cfefc96.js:4
+t.subscribe @ _app-e40c343e2cfefc96.js:4
+e.try @ _app-e40c343e2cfefc96.js:10
+e.start @ _app-e40c343e2cfefc96.js:10
+t.request @ _app-e40c343e2cfefc96.js:10
+(anonymous) @ _app-e40c343e2cfefc96.js:36
+(anonymous) @ _app-e40c343e2cfefc96.js:36
+(anonymous) @ _app-e40c343e2cfefc96.js:10
+(anonymous) @ _app-e40c343e2cfefc96.js:36
+e.execute @ _app-e40c343e2cfefc96.js:36
+e.getObservableFromLink @ _app-e40c343e2cfefc96.js:4
+e.getResultsFromLink @ _app-e40c343e2cfefc96.js:4
+v @ _app-e40c343e2cfefc96.js:4
+e.fetchQueryByPolicy @ _app-e40c343e2cfefc96.js:4
+v @ _app-e40c343e2cfefc96.js:4
+e.fetchConcastWithInfo @ _app-e40c343e2cfefc96.js:4
+t.fetch @ _app-e40c343e2cfefc96.js:1
+t.reobserveAsConcast @ _app-e40c343e2cfefc96.js:1
+t.reobserve @ _app-e40c343e2cfefc96.js:1
+(anonymous) @ _app-e40c343e2cfefc96.js:1
+e @ _app-e40c343e2cfefc96.js:4
+t.subscribe @ _app-e40c343e2cfefc96.js:4
+(anonymous) @ _app-e40c343e2cfefc96.js:4
+lx @ framework-b34cd9ba57ecbf65.js:1
+oO @ framework-b34cd9ba57ecbf65.js:1
+uB @ framework-b34cd9ba57ecbf65.js:1
+u_ @ framework-b34cd9ba57ecbf65.js:1
+r6 @ framework-b34cd9ba57ecbf65.js:1
+(anonymous) @ framework-b34cd9ba57ecbf65.js:1
+uO @ framework-b34cd9ba57ecbf65.js:1
+uS @ framework-b34cd9ba57ecbf65.js:1
+C @ framework-b34cd9ba57ecbf65.js:1
+z @ framework-b34cd9ba57ecbf65.js:1
+Console.js:61 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+Console.js:61 ✅ 50 señales agregadas al gráfico
+Console.js:61 ✅ 50 señales Tablero cargadas
+Console.js:61 📊 Cargando velas para EURUSD-OTC (M5)...
+Console.js:61 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+Console.js:61 ✅ 50 señales agregadas al gráfico
+Console.js:61 ✅ 50 señales Tablero cargadas
+Console.js:61 📊 Cargando velas para EURUSD-OTC (M5)...
+Console.js:61 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+Console.js:61 ✅ 50 señales agregadas al gráfico
+Console.js:61 ✅ 50 señales Tablero cargadas
+injected.js:278  GET https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/balance 503 (Service Unavailable)
+window.fetch @ Network.js:219
+apply @ injected.js:278
+updateRealBalance @ dashboard:1596
+(anonymous) @ dashboard:1590
+  GET https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/balance 503 (Service Unavailable)
+window.fetch @ eruda.js:2
+apply @ injected.js:278
+updateRealBalance @ dashboard:1596
+(anonymous) @ dashboard:1590
+Console.js:61 📊 Cargando velas para EURUSD-OTC (M5)...
+Console.js:61 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+Console.js:61 ✅ 50 señales agregadas al gráfico
+Console.js:61 ✅ 50 señales Tablero cargadas
+Console.js:61 📊 Cargando velas para EURUSD-OTC (M5)...
+Console.js:61 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+Console.js:61 ✅ 50 señales agregadas al gráfico
+Console.js:61 ✅ 50 señales Tablero cargadas
+Console.js:61 📊 Cargando velas para EURUSD-OTC (M5)...
+Console.js:61 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+Console.js:61 ✅ 50 señales agregadas al gráfico
+Console.js:61 ✅ 50 señales Tablero cargadas
+_app-e40c343e2cfefc96.js:34  POST https://replit.com/graphql 500 (Internal Server Error)
+(anonymous) @ _app-e40c343e2cfefc96.js:34
+(anonymous) @ _app-e40c343e2cfefc96.js:10
+e @ _app-e40c343e2cfefc96.js:4
+t.subscribe @ _app-e40c343e2cfefc96.js:4
+e.consumeQueue @ _app-e40c343e2cfefc96.js:10
+(anonymous) @ _app-e40c343e2cfefc96.js:10
+n @ _app-e40c343e2cfefc96.js:34
+setTimeout
+(anonymous) @ _app-e40c343e2cfefc96.js:34
+e.scheduleQueueConsumption @ _app-e40c343e2cfefc96.js:10
+(anonymous) @ _app-e40c343e2cfefc96.js:10
+e @ _app-e40c343e2cfefc96.js:4
+t.subscribe @ _app-e40c343e2cfefc96.js:4
+(anonymous) @ _app-e40c343e2cfefc96.js:10
+e @ _app-e40c343e2cfefc96.js:4
+t.subscribe @ _app-e40c343e2cfefc96.js:4
+e.try @ _app-e40c343e2cfefc96.js:10
+(anonymous) @ _app-e40c343e2cfefc96.js:10
+n @ _app-e40c343e2cfefc96.js:34
+setTimeout
+(anonymous) @ _app-e40c343e2cfefc96.js:34
+e.scheduleRetry @ _app-e40c343e2cfefc96.js:10
+(anonymous) @ _app-e40c343e2cfefc96.js:10
+(anonymous) @ _app-e40c343e2cfefc96.js:1
+a @ _app-e40c343e2cfefc96.js:1
+Promise.then
+c @ _app-e40c343e2cfefc96.js:1
+(anonymous) @ _app-e40c343e2cfefc96.js:1
+s @ _app-e40c343e2cfefc96.js:1
+onError @ _app-e40c343e2cfefc96.js:10
+v @ _app-e40c343e2cfefc96.js:4
+y @ _app-e40c343e2cfefc96.js:4
+t.error @ _app-e40c343e2cfefc96.js:4
+error @ _app-e40c343e2cfefc96.js:10
+v @ _app-e40c343e2cfefc96.js:4
+y @ _app-e40c343e2cfefc96.js:4
+t.error @ _app-e40c343e2cfefc96.js:4
+(anonymous) @ _app-e40c343e2cfefc96.js:10
+(anonymous) @ _app-e40c343e2cfefc96.js:10
+u @ _app-e40c343e2cfefc96.js:10
+v @ _app-e40c343e2cfefc96.js:4
+y @ _app-e40c343e2cfefc96.js:4
+t.error @ _app-e40c343e2cfefc96.js:4
+(anonymous) @ _app-e40c343e2cfefc96.js:10
+Promise.catch
+(anonymous) @ _app-e40c343e2cfefc96.js:10
+e @ _app-e40c343e2cfefc96.js:4
+t.subscribe @ _app-e40c343e2cfefc96.js:4
+e.consumeQueue @ _app-e40c343e2cfefc96.js:10
+(anonymous) @ _app-e40c343e2cfefc96.js:10
+n @ _app-e40c343e2cfefc96.js:34
+setTimeout
+(anonymous) @ _app-e40c343e2cfefc96.js:34
+e.scheduleQueueConsumption @ _app-e40c343e2cfefc96.js:10
+(anonymous) @ _app-e40c343e2cfefc96.js:10
+e @ _app-e40c343e2cfefc96.js:4
+t.subscribe @ _app-e40c343e2cfefc96.js:4
+(anonymous) @ _app-e40c343e2cfefc96.js:10
+e @ _app-e40c343e2cfefc96.js:4
+t.subscribe @ _app-e40c343e2cfefc96.js:4
+e.try @ _app-e40c343e2cfefc96.js:10
+e.start @ _app-e40c343e2cfefc96.js:10
+t.request @ _app-e40c343e2cfefc96.js:10
+(anonymous) @ _app-e40c343e2cfefc96.js:36
+(anonymous) @ _app-e40c343e2cfefc96.js:36
+(anonymous) @ _app-e40c343e2cfefc96.js:10
+(anonymous) @ _app-e40c343e2cfefc96.js:36
+e.execute @ _app-e40c343e2cfefc96.js:36
+e.getObservableFromLink @ _app-e40c343e2cfefc96.js:4
+e.getResultsFromLink @ _app-e40c343e2cfefc96.js:4
+v @ _app-e40c343e2cfefc96.js:4
+e.fetchQueryByPolicy @ _app-e40c343e2cfefc96.js:4
+v @ _app-e40c343e2cfefc96.js:4
+e.fetchConcastWithInfo @ _app-e40c343e2cfefc96.js:4
+t.fetch @ _app-e40c343e2cfefc96.js:1
+t.reobserveAsConcast @ _app-e40c343e2cfefc96.js:1
+t.reobserve @ _app-e40c343e2cfefc96.js:1
+(anonymous) @ _app-e40c343e2cfefc96.js:1
+e @ _app-e40c343e2cfefc96.js:4
+t.subscribe @ _app-e40c343e2cfefc96.js:4
+(anonymous) @ _app-e40c343e2cfefc96.js:4
+lx @ framework-b34cd9ba57ecbf65.js:1
+oO @ framework-b34cd9ba57ecbf65.js:1
+uB @ framework-b34cd9ba57ecbf65.js:1
+u_ @ framework-b34cd9ba57ecbf65.js:1
+r6 @ framework-b34cd9ba57ecbf65.js:1
+(anonymous) @ framework-b34cd9ba57ecbf65.js:1
+uO @ framework-b34cd9ba57ecbf65.js:1
+uS @ framework-b34cd9ba57ecbf65.js:1
+C @ framework-b34cd9ba57ecbf65.js:1
+z @ framework-b34cd9ba57ecbf65.js:1
+Console.js:61 📊 Cargando velas para EURUSD-OTC (M5)...
+Console.js:61 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+Console.js:61 ✅ 50 señales agregadas al gráfico
+Console.js:61 ✅ 50 señales Tablero cargadas
+Console.js:61 📊 Cargando velas para EURUSD-OTC (M5)...
+Console.js:61 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+Console.js:61 📊 Cargando velas para EURUSD-OTC (M5)...
+injected.js:278  GET https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/balance 503 (Service Unavailable)
+window.fetch @ Network.js:219
+apply @ injected.js:278
+updateRealBalance @ dashboard:1596
+setInterval
+(anonymous) @ dashboard:1591
+  GET https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/balance 503 (Service Unavailable)
+window.fetch @ d833d481-97c2-49cd-9…da/3.2.3/eruda.js:2
+apply @ d833d481-97c2-49cd-9…ols/injected.js:278
+updateRealBalance @ d833d481-97c2-49cd-9….dev/dashboard:1596
+setInterval
+(anonymous) @ d833d481-97c2-49cd-9….dev/dashboard:1591
+injected.js:278  GET https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/balance 503 (Service Unavailable)
+window.fetch @ Network.js:219
+apply @ injected.js:278
+request @ dashboard:995
+getBalance @ dashboard:1017
+loadBalance @ dashboard:1249
+(anonymous) @ dashboard:1330
+setInterval
+startAutoUpdate @ dashboard:1328
+initApp @ dashboard:1086
+setTimeout
+(anonymous) @ dashboard:1573
+  GET https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/balance 503 (Service Unavailable)
+window.fetch @ d833d481-97c2-49cd-9…da/3.2.3/eruda.js:2
+apply @ d833d481-97c2-49cd-9…ols/injected.js:278
+request @ d833d481-97c2-49cd-9…t.dev/dashboard:995
+getBalance @ d833d481-97c2-49cd-9….dev/dashboard:1017
+loadBalance @ d833d481-97c2-49cd-9….dev/dashboard:1249
+(anonymous) @ d833d481-97c2-49cd-9….dev/dashboard:1330
+setInterval
+startAutoUpdate @ d833d481-97c2-49cd-9….dev/dashboard:1328
+initApp @ d833d481-97c2-49cd-9….dev/dashboard:1086
+setTimeout
+(anonymous) @ d833d481-97c2-49cd-9….dev/dashboard:1573
+Console.js:61 ❌ API Error /api/iq/balance: HTTP 503: Service Unavailable
+Mt.forEach.n.<computed> @ Console.js:61
+request @ dashboard:1010
+await in request
+getBalance @ dashboard:1017
+loadBalance @ dashboard:1249
+(anonymous) @ dashboard:1330
+setInterval
+startAutoUpdate @ dashboard:1328
+initApp @ dashboard:1086
+setTimeout
+(anonymous) @ dashboard:1573
+Console.js:61 ⚠️ Balance no disponible: HTTP 503: Service Unavailable
+Mt.forEach.n.<computed> @ Console.js:61
+getBalance @ dashboard:1020
+await in getBalance
+loadBalance @ dashboard:1249
+(anonymous) @ dashboard:1330
+setInterval
+startAutoUpdate @ dashboard:1328
+initApp @ dashboard:1086
+setTimeout
+(anonymous) @ dashboard:1573
+Console.js:61 📊 Cargando velas para EURUSD-OTC (M5)...
+Console.js:61 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+Console.js:61 ✅ 50 señales agregadas al gráfico
+Console.js:61 ✅ 50 señales Tablero cargadas
+Console.js:61 📊 Cargando velas para EURUSD-OTC (M5)...
+injected.js:278  GET https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/balance 503 (Service Unavailable)
+window.fetch @ Network.js:219
+apply @ injected.js:278
+updateRealBalance @ dashboard:1596
+setInterval
+(anonymous) @ dashboard:1591
+  GET https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/balance 503 (Service Unavailable)
+window.fetch @ d833d481-97c2-49cd-9…da/3.2.3/eruda.js:2
+apply @ d833d481-97c2-49cd-9…ols/injected.js:278
+updateRealBalance @ d833d481-97c2-49cd-9….dev/dashboard:1596
+setInterval
+(anonymous) @ d833d481-97c2-49cd-9….dev/dashboard:1591
+Console.js:61 📊 Cargando velas para EURUSD-OTC (M5)...
+_app-e40c343e2cfefc96.js:34  POST https://replit.com/graphql 500 (Internal Server Error)
+(anonymous) @ _app-e40c343e2cfefc96.js:34
+(anonymous) @ _app-e40c343e2cfefc96.js:10
+e @ _app-e40c343e2cfefc96.js:4
+t.subscribe @ _app-e40c343e2cfefc96.js:4
+e.consumeQueue @ _app-e40c343e2cfefc96.js:10
+(anonymous) @ _app-e40c343e2cfefc96.js:10
+n @ _app-e40c343e2cfefc96.js:34
+setTimeout
+(anonymous) @ _app-e40c343e2cfefc96.js:34
+e.scheduleQueueConsumption @ _app-e40c343e2cfefc96.js:10
+(anonymous) @ _app-e40c343e2cfefc96.js:10
+e @ _app-e40c343e2cfefc96.js:4
+t.subscribe @ _app-e40c343e2cfefc96.js:4
+(anonymous) @ _app-e40c343e2cfefc96.js:10
+e @ _app-e40c343e2cfefc96.js:4
+t.subscribe @ _app-e40c343e2cfefc96.js:4
+e.try @ _app-e40c343e2cfefc96.js:10
+(anonymous) @ _app-e40c343e2cfefc96.js:10
+n @ _app-e40c343e2cfefc96.js:34
+setTimeout
+(anonymous) @ _app-e40c343e2cfefc96.js:34
+e.scheduleRetry @ _app-e40c343e2cfefc96.js:10
+(anonymous) @ _app-e40c343e2cfefc96.js:10
+(anonymous) @ _app-e40c343e2cfefc96.js:1
+a @ _app-e40c343e2cfefc96.js:1
+Promise.then
+c @ _app-e40c343e2cfefc96.js:1
+(anonymous) @ _app-e40c343e2cfefc96.js:1
+s @ _app-e40c343e2cfefc96.js:1
+onError @ _app-e40c343e2cfefc96.js:10
+v @ _app-e40c343e2cfefc96.js:4
+y @ _app-e40c343e2cfefc96.js:4
+t.error @ _app-e40c343e2cfefc96.js:4
+error @ _app-e40c343e2cfefc96.js:10
+v @ _app-e40c343e2cfefc96.js:4
+y @ _app-e40c343e2cfefc96.js:4
+t.error @ _app-e40c343e2cfefc96.js:4
+(anonymous) @ _app-e40c343e2cfefc96.js:10
+(anonymous) @ _app-e40c343e2cfefc96.js:10
+u @ _app-e40c343e2cfefc96.js:10
+v @ _app-e40c343e2cfefc96.js:4
+y @ _app-e40c343e2cfefc96.js:4
+t.error @ _app-e40c343e2cfefc96.js:4
+(anonymous) @ _app-e40c343e2cfefc96.js:10
+Console.js:61 📊 Cargando velas para EURUSD-OTC (M5)...
+injected.js:278  POST https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/login 503 (Service Unavailable)
+window.fetch @ Network.js:219
+apply @ injected.js:278
+loginIQ @ dashboard:1689
+(anonymous) @ dashboard:1489
+  POST https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/login 503 (Service Unavailable)
+window.fetch @ d833d481-97c2-49cd-9…da/3.2.3/eruda.js:2
+apply @ d833d481-97c2-49cd-9…ols/injected.js:278
+loginIQ @ d833d481-97c2-49cd-9….dev/dashboard:1689
+(anonymous) @ d833d481-97c2-49cd-9….dev/dashboard:1489
+Console.js:61 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+Console.js:61 ✅ 50 señales agregadas al gráfico
+Console.js:61 ✅ 50 señales Tablero cargadas
+injected.js:278  GET https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/balance 503 (Service Unavailable)
+window.fetch @ Network.js:219
+apply @ injected.js:278
+updateRealBalance @ dashboard:1596
+setInterval
+(anonymous) @ dashboard:1591
+  GET https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/balance 503 (Service Unavailable)
+window.fetch @ d833d481-97c2-49cd-9…da/3.2.3/eruda.js:2
+apply @ d833d481-97c2-49cd-9…ols/injected.js:278
+updateRealBalance @ d833d481-97c2-49cd-9….dev/dashboard:1596
+setInterval
+(anonymous) @ d833d481-97c2-49cd-9….dev/dashboard:1591
+Console.js:61 📊 Cargando velas para EURUSD-OTC (M5)...
+Console.js:61 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+injected.js:278  GET https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/balance 503 (Service Unavailable)
+window.fetch @ Network.js:219
+apply @ injected.js:278
+request @ dashboard:995
+getBalance @ dashboard:1017
+loadBalance @ dashboard:1249
+(anonymous) @ dashboard:1330
+setInterval
+startAutoUpdate @ dashboard:1328
+initApp @ dashboard:1086
+setTimeout
+(anonymous) @ dashboard:1573
+  GET https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/balance 503 (Service Unavailable)
+window.fetch @ d833d481-97c2-49cd-9…da/3.2.3/eruda.js:2
+apply @ d833d481-97c2-49cd-9…ols/injected.js:278
+request @ d833d481-97c2-49cd-9…t.dev/dashboard:995
+getBalance @ d833d481-97c2-49cd-9….dev/dashboard:1017
+loadBalance @ d833d481-97c2-49cd-9….dev/dashboard:1249
+(anonymous) @ d833d481-97c2-49cd-9….dev/dashboard:1330
+setInterval
+startAutoUpdate @ d833d481-97c2-49cd-9….dev/dashboard:1328
+initApp @ d833d481-97c2-49cd-9….dev/dashboard:1086
+setTimeout
+(anonymous) @ d833d481-97c2-49cd-9….dev/dashboard:1573
+Console.js:61 ❌ API Error /api/iq/balance: HTTP 503: Service Unavailable
+Mt.forEach.n.<computed> @ Console.js:61
+request @ dashboard:1010
+await in request
+getBalance @ dashboard:1017
+loadBalance @ dashboard:1249
+(anonymous) @ dashboard:1330
+setInterval
+startAutoUpdate @ dashboard:1328
+initApp @ dashboard:1086
+setTimeout
+(anonymous) @ dashboard:1573
+Console.js:61 ⚠️ Balance no disponible: HTTP 503: Service Unavailable
+Mt.forEach.n.<computed> @ Console.js:61
+getBalance @ dashboard:1020
+await in getBalance
+loadBalance @ dashboard:1249
+(anonymous) @ dashboard:1330
+setInterval
+startAutoUpdate @ dashboard:1328
+initApp @ dashboard:1086
+setTimeout
+(anonymous) @ dashboard:1573
+Console.js:61 📊 Cargando velas para EURUSD-OTC (M5)...
+Console.js:61 ✅ 50 señales agregadas al gráfico
+Console.js:61 ✅ 50 señales Tablero cargadas
+Console.js:61 📊 Cargando velas para EURUSD-OTC (M5)...
+injected.js:278  POST https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/login 503 (Service Unavailable)
+window.fetch @ Network.js:219
+apply @ injected.js:278
+loginIQ @ dashboard:1689
+(anonymous) @ dashboard:1489
+  POST https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/login 503 (Service Unavailable)
+window.fetch @ d833d481-97c2-49cd-9…da/3.2.3/eruda.js:2
+apply @ d833d481-97c2-49cd-9…ols/injected.js:278
+loginIQ @ d833d481-97c2-49cd-9….dev/dashboard:1689
+(anonymous) @ d833d481-97c2-49cd-9….dev/dashboard:1489
+injected.js:278  GET https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/balance 503 (Service Unavailable)
+window.fetch @ Network.js:219
+apply @ injected.js:278
+updateRealBalance @ dashboard:1596
+setInterval
+(anonymous) @ dashboard:1591
+  GET https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/balance 503 (Service Unavailable)
+window.fetch @ d833d481-97c2-49cd-9…da/3.2.3/eruda.js:2
+apply @ d833d481-97c2-49cd-9…ols/injected.js:278
+updateRealBalance @ d833d481-97c2-49cd-9….dev/dashboard:1596
+setInterval
+(anonymous) @ d833d481-97c2-49cd-9….dev/dashboard:1591
+Console.js:61 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+Console.js:61 📊 Cargando velas para EURUSD-OTC (M5)...
+Console.js:61 ✅ 50 señales agregadas al gráfico
+Console.js:61 ✅ 50 señales Tablero cargadas
+Console.js:61 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+injected.js:278  GET https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/balance 503 (Service Unavailable)
+window.fetch @ Network.js:219
+apply @ injected.js:278
+request @ dashboard:995
+getBalance @ dashboard:1017
+loadBalance @ dashboard:1249
+(anonymous) @ dashboard:1330
+setInterval
+startAutoUpdate @ dashboard:1328
+initApp @ dashboard:1086
+setTimeout
+(anonymous) @ dashboard:1573
+  GET https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/balance 503 (Service Unavailable)
+window.fetch @ d833d481-97c2-49cd-9…da/3.2.3/eruda.js:2
+apply @ d833d481-97c2-49cd-9…ols/injected.js:278
+request @ d833d481-97c2-49cd-9…t.dev/dashboard:995
+getBalance @ d833d481-97c2-49cd-9….dev/dashboard:1017
+loadBalance @ d833d481-97c2-49cd-9….dev/dashboard:1249
+(anonymous) @ d833d481-97c2-49cd-9….dev/dashboard:1330
+setInterval
+startAutoUpdate @ d833d481-97c2-49cd-9….dev/dashboard:1328
+initApp @ d833d481-97c2-49cd-9….dev/dashboard:1086
+setTimeout
+(anonymous) @ d833d481-97c2-49cd-9….dev/dashboard:1573
+Console.js:61 ❌ API Error /api/iq/balance: HTTP 503: Service Unavailable
+Mt.forEach.n.<computed> @ Console.js:61
+request @ dashboard:1010
+await in request
+getBalance @ dashboard:1017
+loadBalance @ dashboard:1249
+(anonymous) @ dashboard:1330
+setInterval
+startAutoUpdate @ dashboard:1328
+initApp @ dashboard:1086
+setTimeout
+(anonymous) @ dashboard:1573
+Console.js:61 ⚠️ Balance no disponible: HTTP 503: Service Unavailable
+Mt.forEach.n.<computed> @ Console.js:61
+getBalance @ dashboard:1020
+await in getBalance
+loadBalance @ dashboard:1249
+(anonymous) @ dashboard:1330
+setInterval
+startAutoUpdate @ dashboard:1328
+initApp @ dashboard:1086
+setTimeout
+(anonymous) @ dashboard:1573
+Console.js:61 📊 Cargando velas para EURUSD-OTC (M5)...
+Console.js:61 ✅ 50 señales agregadas al gráfico
+Console.js:61 ✅ 50 señales Tablero cargadas
+Console.js:61 📊 Cargando velas para EURUSD-OTC (M5)...
+Console.js:61 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+injected.js:278  GET https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/balance 503 (Service Unavailable)
+window.fetch @ Network.js:219
+apply @ injected.js:278
+updateRealBalance @ dashboard:1596
+setInterval
+(anonymous) @ dashboard:1591
+  GET https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/balance 503 (Service Unavailable)
+window.fetch @ d833d481-97c2-49cd-9…da/3.2.3/eruda.js:2
+apply @ d833d481-97c2-49cd-9…ols/injected.js:278
+updateRealBalance @ d833d481-97c2-49cd-9….dev/dashboard:1596
+setInterval
+(anonymous) @ d833d481-97c2-49cd-9….dev/dashboard:1591
+Console.js:61 📊 Cargando velas para EURUSD-OTC (M5)...
+Console.js:61 💰 Balance: $9077.02 (PRACTICE)
+injected.js:278  GET https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/balance 503 (Service Unavailable)
+window.fetch @ Network.js:219
+apply @ injected.js:278
+updateRealBalance @ dashboard:1596
+setInterval
+(anonymous) @ dashboard:1591
+  GET https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/balance 503 (Service Unavailable)
+window.fetch @ d833d481-97c2-49cd-9…da/3.2.3/eruda.js:2
+apply @ d833d481-97c2-49cd-9…ols/injected.js:278
+updateRealBalance @ d833d481-97c2-49cd-9….dev/dashboard:1596
+setInterval
+(anonymous) @ d833d481-97c2-49cd-9….dev/dashboard:1591
+Console.js:61 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+Console.js:61 📊 Cargando velas para EURUSD-OTC (M5)...
+Console.js:61 ✅ 50 señales agregadas al gráfico
+Console.js:61 ✅ 50 señales Tablero cargadas
+injected.js:278  GET https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/balance 503 (Service Unavailable)
+window.fetch @ Network.js:219
+apply @ injected.js:278
+request @ dashboard:995
+getBalance @ dashboard:1017
+loadBalance @ dashboard:1249
+(anonymous) @ dashboard:1330
+setInterval
+startAutoUpdate @ dashboard:1328
+initApp @ dashboard:1086
+setTimeout
+(anonymous) @ dashboard:1573
+  GET https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/balance 503 (Service Unavailable)
+window.fetch @ d833d481-97c2-49cd-9…da/3.2.3/eruda.js:2
+apply @ d833d481-97c2-49cd-9…ols/injected.js:278
+request @ d833d481-97c2-49cd-9…t.dev/dashboard:995
+getBalance @ d833d481-97c2-49cd-9….dev/dashboard:1017
+loadBalance @ d833d481-97c2-49cd-9….dev/dashboard:1249
+(anonymous) @ d833d481-97c2-49cd-9….dev/dashboard:1330
+setInterval
+startAutoUpdate @ d833d481-97c2-49cd-9….dev/dashboard:1328
+initApp @ d833d481-97c2-49cd-9….dev/dashboard:1086
+setTimeout
+(anonymous) @ d833d481-97c2-49cd-9….dev/dashboard:1573
+Console.js:61 ❌ API Error /api/iq/balance: HTTP 503: Service Unavailable
+Mt.forEach.n.<computed> @ Console.js:61
+request @ dashboard:1010
+await in request
+getBalance @ dashboard:1017
+loadBalance @ dashboard:1249
+(anonymous) @ dashboard:1330
+setInterval
+startAutoUpdate @ dashboard:1328
+initApp @ dashboard:1086
+setTimeout
+(anonymous) @ dashboard:1573
+Console.js:61 ⚠️ Balance no disponible: HTTP 503: Service Unavailable
+Mt.forEach.n.<computed> @ Console.js:61
+getBalance @ dashboard:1020
+await in getBalance
+loadBalance @ dashboard:1249
+(anonymous) @ dashboard:1330
+setInterval
+startAutoUpdate @ dashboard:1328
+initApp @ dashboard:1086
+setTimeout
+(anonymous) @ dashboard:1573
+Console.js:61 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+Console.js:61 📊 Cargando velas para EURUSD-OTC (M5)...
+Console.js:61 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+Console.js:61 ✅ 50 señales agregadas al gráfico
+Console.js:61 ✅ 50 señales Tablero cargadas
+Console.js:61 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+injected.js:278  GET https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/balance 503 (Service Unavailable)
+window.fetch @ Network.js:219
+apply @ injected.js:278
+updateRealBalance @ dashboard:1596
+setInterval
+(anonymous) @ dashboard:1591
+  GET https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/balance 503 (Service Unavailable)
+window.fetch @ d833d481-97c2-49cd-9…da/3.2.3/eruda.js:2
+apply @ d833d481-97c2-49cd-9…ols/injected.js:278
+updateRealBalance @ d833d481-97c2-49cd-9….dev/dashboard:1596
+setInterval
+(anonymous) @ d833d481-97c2-49cd-9….dev/dashboard:1591
+Console.js:61 📊 Cargando velas para EURUSD-OTC (M5)...
+Console.js:61 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+Console.js:61 ✅ 50 señales agregadas al gráfico
+Console.js:61 ✅ 50 señales Tablero cargadas
+Console.js:61 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+workspace_iframe.html?initialPath=%2Fdashboard&id=%3Ar27%3A:32 Error while parsing the 'sandbox' attribute: 'allow-downloads-without-user-activation' is an invalid sandbox flag.
+Console.js:61 📋 STC Trading Dashboard script cargado
+Console.js:61 🌐 DOM cargado, iniciando aplicación...
+Console.js:61 🚀 STC Trading System - gráficos automáticos activos
+Console.js:61 🚀 Iniciando STC Chart Manager...
+Console.js:61 ✅ STC Chart Manager - usando STCChartFix automático
+Console.js:61 🚀 Iniciando STC Trading Dashboard...
+Console.js:61 ✅ Gráfico inicializado correctamente
+Console.js:61 🎛️ Event handlers configurados
+Console.js:61 🔄 Auto-update iniciado
+Console.js:61 ✅ Dashboard inicializado
+Console.js:61 📊 Cargando velas para EURUSD-OTC (M5)...
+Console.js:61 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+Console.js:61 📊 Cargando velas para EURUSD-OTC (M5)...
+Console.js:61 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+Console.js:61 🔔 Señal de COMPRA detectada (AUDIO SILENCIADO): {confidence: 0.51, direction: 'CALL', gale_level: 0, is_gale: false, pattern: 'Alcista', …}
+Console.js:61 ✅ 50 señales agregadas al gráfico
+Console.js:61 ✅ 50 señales Tablero cargadas
+Console.js:61 📊 Cargando velas para EURUSD-OTC (M5)...
+Console.js:61 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+Console.js:61 ✅ 50 señales agregadas al gráfico
+Console.js:61 ✅ 50 señales Tablero cargadas
+Console.js:61 📊 Cargando velas para EURUSD-OTC (M5)...
+Console.js:61 ✅ 50 señales agregadas al gráfico
+Console.js:61 ✅ 50 señales Tablero cargadas
+Console.js:61 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+Console.js:61 📊 Cargando velas para EURUSD-OTC (M5)...
+Console.js:61 ✅ 50 señales agregadas al gráfico
+Console.js:61 ✅ 50 señales Tablero cargadas
+Console.js:61 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+injected.js:278  GET https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/balance 503 (Service Unavailable)
+window.fetch @ Network.js:219
+apply @ injected.js:278
+updateRealBalance @ dashboard:1596
+(anonymous) @ dashboard:1590
+Console.js:61 📊 Cargando velas para EURUSD-OTC (M5)...
+Console.js:61 ✅ 50 señales agregadas al gráfico
+Console.js:61 ✅ 50 señales Tablero cargadas
+Console.js:61 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...
+Console.js:61 ✅ 50 señales agregadas al gráfico
+Console.js:61 ✅ 50 señales Tablero cargadas
+Console.js:61 📊 Cargando velas para EURUSD-OTC (M5)...
+Console.js:61 🎯 Cargando señales Tablero para EURUSD-OTC (M5)...

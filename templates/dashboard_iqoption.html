@@ -1,0 +1,809 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <title>IQ Option - Dashboard Trading | STC Trading</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    :root {
+      --bg: #000000; --panel: #0a0a0a; --text: #e0e7ff; --muted: #94a3b8;
+      --ok: #10b981; --warn: #f59e0b; --err: #ef4444; --line: rgba(0, 102, 255, 0.2);
+      --buy: #10b981; --sell: #ef4444; --primary: #0066ff;
+      --glass-bg: rgba(10, 10, 20, 0.4);
+      --glass-border: rgba(0, 102, 255, 0.3);
+      --neon-blue: #0066ff;
+      --neon-cyan: #00d4ff;
+    }
+    html, body { height: 100%; margin: 0; background: radial-gradient(circle at 50% 50%, rgba(0, 102, 255, 0.15) 0%, #000000 70%); color: var(--text); font-family: system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,Helvetica,Arial; }
+    .app { display: grid; grid-template-columns: 1fr 360px; grid-template-rows: auto 1fr; gap: 12px; height: 100%; padding: 12px; box-sizing: border-box; }
+    header { grid-column: 1 / span 2; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; background: linear-gradient(135deg, rgba(0, 102, 255, 0.1) 0%, rgba(0, 0, 0, 0.3) 100%); backdrop-filter: blur(10px); padding: 12px; border-radius: 12px; border: 1px solid var(--glass-border); }
+    header h1 { font-size: 16px; font-weight: 600; margin: 0 8px 0 0; }
+    input[type="text"], input[type="password"], select, input[type="number"] { background: rgba(10, 10, 30, 0.6); color: var(--text); border: 1px solid var(--glass-border); padding: 8px 10px; border-radius: 8px; backdrop-filter: blur(10px); transition: all 0.3s; width: 100%; box-sizing: border-box; }
+    input[type="text"]:focus, input[type="password"]:focus, select:focus, input[type="number"]:focus { outline: none; border-color: var(--neon-cyan); box-shadow: 0 0 15px rgba(0, 212, 255, 0.3); }
+    button { background: linear-gradient(135deg, rgba(0, 102, 255, 0.2) 0%, rgba(0, 212, 255, 0.1) 100%); color: var(--text); border: 1px solid var(--glass-border); padding: 10px 16px; border-radius: 8px; cursor: pointer; transition: all 0.3s; backdrop-filter: blur(10px); font-size: 13px; font-weight: 600; }
+    button.primary { background: linear-gradient(135deg, rgba(0, 102, 255, 0.4) 0%, rgba(0, 212, 255, 0.3) 100%); border-color: var(--neon-cyan); box-shadow: 0 4px 15px rgba(0, 102, 255, 0.3); }
+    button.call { background: linear-gradient(135deg, rgba(16, 185, 129, 0.4) 0%, rgba(16, 185, 129, 0.2) 100%); border-color: rgba(16, 185, 129, 0.6); color: white; font-size: 15px; box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3); }
+    button.put { background: linear-gradient(135deg, rgba(239, 68, 68, 0.4) 0%, rgba(239, 68, 68, 0.2) 100%); border-color: rgba(239, 68, 68, 0.6); color: white; font-size: 15px; box-shadow: 0 4px 15px rgba(239, 68, 68, 0.3); }
+    button:hover { opacity: 1; transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0, 212, 255, 0.4); }
+    button:disabled { opacity: .5; cursor: not-allowed; transform: none; }
+    .status { padding: 4px 10px; border-radius: 99px; font-size: 11px; backdrop-filter: blur(10px); }
+    .status.ok { background: rgba(16,185,129,.2); color: var(--ok); border: 1px solid rgba(16,185,129,.5); box-shadow: 0 0 10px rgba(16,185,129,0.3); }
+    .status.warn { background: rgba(245,158,11,.2); color: var(--warn); border: 1px solid rgba(245,158,11,.5); box-shadow: 0 0 10px rgba(245,158,11,0.3); }
+
+    .chart-wrap { background: linear-gradient(145deg, rgba(0, 0, 0, 0.6) 0%, rgba(10, 10, 30, 0.4) 100%); border: 1px solid var(--glass-border); border-radius: 12px; overflow: hidden; position: relative; backdrop-filter: blur(20px); box-shadow: 0 8px 32px rgba(0, 102, 255, 0.15), inset 0 0 60px rgba(0, 102, 255, 0.05); }
+    #chart { width: 100%; height: calc(100vh - 160px); }
+    aside { background: linear-gradient(145deg, rgba(0, 0, 0, 0.5) 0%, rgba(10, 10, 30, 0.3) 100%); border: 1px solid var(--glass-border); border-radius: 12px; padding: 12px; display: flex; flex-direction: column; gap: 12px; overflow-y: auto; backdrop-filter: blur(20px); box-shadow: 0 8px 32px rgba(0, 102, 255, 0.15), inset 0 0 60px rgba(0, 102, 255, 0.05); }
+    .box { background: linear-gradient(135deg, rgba(0, 102, 255, 0.08) 0%, rgba(0, 212, 255, 0.04) 100%); border: 1px solid var(--glass-border); padding: 12px; border-radius: 12px; backdrop-filter: blur(15px); box-shadow: 0 4px 20px rgba(0, 102, 255, 0.1), inset 0 0 30px rgba(0, 102, 255, 0.03); transition: all 0.3s; }
+    .box:hover { border-color: rgba(0, 212, 255, 0.5); box-shadow: 0 6px 25px rgba(0, 212, 255, 0.2), inset 0 0 40px rgba(0, 102, 255, 0.05); }
+    .sep { height: 1px; background: linear-gradient(90deg, transparent 0%, var(--glass-border) 50%, transparent 100%); margin: 10px 0; box-shadow: 0 0 10px rgba(0, 102, 255, 0.2); }
+    .small { font-size: 12px; }
+    .bold { font-weight: 600; }
+
+    .balance-display { background: linear-gradient(135deg, rgba(0, 102, 255, 0.3) 0%, rgba(0, 212, 255, 0.2) 100%); padding: 16px; border-radius: 12px; text-align: center; backdrop-filter: blur(15px); border: 1px solid rgba(0, 212, 255, 0.4); box-shadow: 0 4px 20px rgba(0, 102, 255, 0.3), inset 0 0 30px rgba(0, 102, 255, 0.1); }
+    .balance-amount { font-size: 24px; font-weight: 700; color: #00d4ff; text-shadow: 0 0 15px rgba(0, 212, 255, 0.6); }
+    .balance-type { font-size: 11px; color: rgba(224,231,255,0.7); margin-top: 4px; }
+
+    .trade-row { display: flex; gap: 8px; align-items: center; margin-bottom: 8px; }
+    .trade-row label { min-width: 65px; font-size: 13px; color: var(--text); }
+    .trade-buttons { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 12px; }
+    .trade-buttons button { padding: 16px; font-size: 15px; }
+
+    /* Modal */
+    .modal { display: none; position: fixed; z-index: 9999; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.8); backdrop-filter: blur(10px); align-items: center; justify-content: center; }
+    .modal-content { background: linear-gradient(145deg, rgba(10, 10, 30, 0.95) 0%, rgba(0, 0, 0, 0.95) 100%); border: 1px solid var(--glass-border); border-radius: 16px; padding: 24px; max-width: 90%; max-height: 90%; overflow-y: auto; backdrop-filter: blur(20px); box-shadow: 0 20px 60px rgba(0, 102, 255, 0.4), inset 0 0 60px rgba(0, 102, 255, 0.1); }
+    .status.err { background: rgba(239,68,68,.2); color: var(--err); border: 1px solid rgba(239,68,68,.5); box-shadow: 0 0 10px rgba(239,68,68,0.3); }
+
+    @media (max-width: 768px) {
+      .app { grid-template-columns: 1fr; }
+      aside { order: -1; }
+    }
+  </style>
+  <script src="/static/js/lightweight-charts.js"></script>
+  <script src="/static/js/notifications.js"></script>
+</head>
+<body>
+  <div class="app">
+    <header>
+      <h1>📊 IQ Option Pro</h1>
+      <span class="status ok">Conectado</span>
+      <div style="flex:1"></div>
+      <button class="primary" onclick="window.location.href='/broker/switch'">
+        🔄 Cambiar Broker
+      </button>
+    </header>
+
+    <div class="chart-wrap" style="position: relative;">
+      <div id="chart"></div>
+      
+      <!-- Precio actual en la esquina superior derecha -->
+      <div id="currentPrice" style="position: absolute; top: 10px; right: 10px; z-index: 1000; background: linear-gradient(135deg, rgba(239, 68, 68, 0.4) 0%, rgba(239, 68, 68, 0.2) 100%); padding: 6px 12px; border-radius: 6px; border: 1px solid rgba(239, 68, 68, 0.6); color: #fff; font-weight: 700; font-size: 14px; box-shadow: 0 0 15px rgba(239, 68, 68, 0.4); backdrop-filter: blur(10px);">
+        <span style="font-size: 11px; opacity: 0.7; margin-right: 4px;">EURUSD</span>
+        <span id="priceValue">1,17279</span>
+      </div>
+      
+      <div class="small" style="padding:8px 10px; background: rgba(0,0,0,0.5); color: var(--muted);">
+        💰 <b id="symbolLabel">EURUSD</b> • ⏰ <b id="timeLabel">M5</b>
+      </div>
+    </div>
+
+    <aside>
+      <!-- Balance -->
+      <div class="balance-display">
+        <div class="balance-amount" id="balanceAmount">$0.00</div>
+        <div class="balance-type">PRACTICE</div>
+      </div>
+
+      <!-- Conexión IQ -->
+      <div class="box">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+          <strong style="font-size: 14px;">🔗 Conexión IQ Option</strong>
+          <span class="status warn" id="connectionStatus">Desconectado</span>
+        </div>
+        <div class="sep"></div>
+        <div style="font-size: 12px; color: rgba(255,255,255,0.6); margin-bottom: 12px;">
+          Ingresa tus credenciales de IQ Option para operar:
+        </div>
+        <input type="email" id="iqEmail" placeholder="📧 Email de IQ Option" style="margin-bottom: 8px;">
+        <input type="password" id="iqPassword" placeholder="🔒 Contraseña" style="margin-bottom: 8px;">
+        <select id="accountType" style="margin-bottom: 12px;">
+          <option value="PRACTICE">💰 Cuenta PRACTICE (Demo)</option>
+          <option value="REAL">💵 Cuenta REAL</option>
+        </select>
+        <button class="primary" id="connectBtn" style="width: 100%;">🔐 Conectar a IQ Option</button>
+        <div style="font-size: 11px; color: rgba(255,255,255,0.4); margin-top: 8px; text-align: center;">
+          Solo para órdenes • Las velas son globales
+        </div>
+      </div>
+
+      <!-- Temporalidad Fija M5 con Countdown -->
+      <div class="box">
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+          <strong style="font-size: 14px;">📊 Temporalidad</strong>
+          <div style="background: linear-gradient(135deg, rgba(0, 102, 255, 0.4) 0%, rgba(0, 212, 255, 0.3) 100%); padding: 8px 16px; border-radius: 8px; border: 1px solid var(--neon-cyan); color: white; font-weight: 600; font-size: 14px; box-shadow: 0 4px 20px rgba(0, 212, 255, 0.5), inset 0 0 20px rgba(0, 102, 255, 0.2);">
+            M5 (5 min)
+          </div>
+        </div>
+        <div class="sep"></div>
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 8px;">
+          <div class="small" style="color: var(--muted);">
+            Próxima vela en:
+          </div>
+          <div id="countdown" style="background: linear-gradient(135deg, rgba(0, 212, 255, 0.3) 0%, rgba(0, 102, 255, 0.2) 100%); padding: 6px 12px; border-radius: 6px; border: 1px solid rgba(0, 212, 255, 0.4); color: #00d4ff; font-weight: 700; font-size: 16px; box-shadow: 0 0 15px rgba(0, 212, 255, 0.3); min-width: 80px; text-align: center;">
+            00:00
+          </div>
+        </div>
+      </div>
+
+      <!-- Trading Rápido -->
+      <div class="box">
+        <strong style="font-size: 14px;">⚡ Trading Rápido</strong>
+        <span class="small" style="color: var(--muted); margin-left: 8px;">Binario</span>
+        <div class="sep"></div>
+        
+        <div class="trade-row">
+          <label>Símbolo:</label>
+          <select id="tradeSymbol">
+            <option value="EURUSD">EURUSD</option>
+          </select>
+        </div>
+
+        <div class="trade-row">
+          <label>Monto:</label>
+          <input type="number" id="tradeAmount" value="1" min="1" step="1">
+        </div>
+
+        <div class="trade-row">
+          <label>Duración:</label>
+          <div style="background: linear-gradient(135deg, rgba(0, 102, 255, 0.2) 0%, rgba(0, 212, 255, 0.1) 100%); padding: 8px 12px; border-radius: 8px; border: 1px solid var(--glass-border); color: white; font-weight: 600; font-size: 13px; text-align: center;">
+            5 minutos
+          </div>
+        </div>
+
+        <div class="trade-buttons">
+          <button class="call" id="callBtn">
+            ✅ CALL
+          </button>
+          <button class="put" id="putBtn">
+            ⛔ PUT
+          </button>
+        </div>
+      </div>
+
+      <!-- Seleccionar Bot -->
+      <div class="box">
+        <strong style="font-size: 14px;">🤖 Trading Bot</strong>
+        <div class="sep"></div>
+        <button class="primary" id="selectBotBtn" style="width: 100%; margin-bottom: 8px;">
+          📋 Seleccionar Bot
+        </button>
+        <div id="selectedBotInfo" style="display: none; background: rgba(0, 102, 255, 0.1); padding: 10px; border-radius: 8px; border: 1px solid var(--glass-border); margin-top: 8px;">
+          <div style="font-size: 12px; color: var(--muted); margin-bottom: 6px;">Bot Seleccionado:</div>
+          <div style="font-weight: 600; margin-bottom: 8px;" id="botName">-</div>
+          <div style="display: flex; gap: 8px;">
+            <button class="primary" id="startBotBtn" style="flex: 1; font-size: 12px;">▶️ Iniciar</button>
+            <button id="stopBotBtn" style="flex: 1; font-size: 12px; background: rgba(220, 38, 38, 0.15); border: 2px solid rgba(220, 38, 38, 0.6); color: #ff4444;">⏹️ Detener</button>
+          </div>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <!-- Modal Seleccionar Bot -->
+  <div id="botModal" class="modal" style="display: none;">
+    <div class="modal-content" style="max-width: 500px;">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+        <h2 style="margin: 0; font-size: 18px;">🤖 Seleccionar Bot</h2>
+        <button class="close-btn" id="closeBotModal" style="background: transparent; border: none; color: white; font-size: 24px; cursor: pointer; padding: 0; width: 30px; height: 30px;">&times;</button>
+      </div>
+      <div class="sep"></div>
+      <div id="botsList" style="margin-top: 16px; max-height: 400px; overflow-y: auto;">
+        <!-- Los bots se cargan dinámicamente aquí -->
+      </div>
+      <div style="margin-top: 16px; text-align: center; color: var(--muted); font-size: 12px;">
+        Selecciona un bot para operar automáticamente
+      </div>
+    </div>
+  </div>
+
+  <script src="/static/js/stc_chart_fix.js?v=1759713682"></script>
+  <script>
+    console.log('📋 IQ Option Dashboard iniciado');
+
+    let currentSymbol = 'EURUSD';
+    let currentTimeframe = 'M5';
+
+    // Inicializar gráfico con EURUSD de IQ Option (velas reales M5)
+    document.addEventListener('DOMContentLoaded', function() {
+      console.log('🎯 Inicializando gráfico EURUSD...');
+      
+      if (typeof STCChartFix !== 'undefined') {
+        STCChartFix.init({
+          containerId: 'chart',
+          endpoint: '/api/iq/candles?symbol=EURUSD&timeframe=M5&limit=200',
+          timeframe: 'M5',
+          pollMs: 3000,
+          max: 200
+        });
+        console.log('✅ Gráfico inicializado con datos IQ Option');
+      } else {
+        console.error('❌ STCChartFix no disponible');
+      }
+    });
+
+    // Estado de conexión
+    let isConnected = false;
+
+    // Botón de conexión con credenciales del usuario
+    document.getElementById('connectBtn').addEventListener('click', async function() {
+      if (isConnected) {
+        // Desconectar
+        handleDisconnect();
+        return;
+      }
+      
+      // Conectar
+      const email = document.getElementById('iqEmail').value;
+      const password = document.getElementById('iqPassword').value;
+      const accountType = document.getElementById('accountType').value;
+      
+      if (!email || !password) {
+        notify.error('Por favor ingresa tu email y contraseña de IQ Option');
+        return;
+      }
+      
+      console.log(`🔗 Intentando conectar a IQ Option (${accountType})...`);
+      document.getElementById('connectBtn').disabled = true;
+      document.getElementById('connectBtn').textContent = 'Conectando...';
+      
+      try {
+        const response = await fetch('/api/iq/connect', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            email: email,
+            password: password,
+            account_type: accountType
+          })
+        });
+        
+        const data = await response.json();
+        
+        if (data.success) {
+          isConnected = true;
+          document.getElementById('connectionStatus').textContent = 'Conectado';
+          document.getElementById('connectionStatus').className = 'status ok';
+          
+          // Cambiar botón a modo "Desconectar" (rojo vidrio transparente)
+          const btn = document.getElementById('connectBtn');
+          btn.textContent = '⛔ Desconectar';
+          btn.disabled = false;
+          btn.style.background = 'rgba(220, 38, 38, 0.15)';
+          btn.style.border = '2px solid rgba(220, 38, 38, 0.6)';
+          btn.style.color = '#ff4444';
+          btn.style.backdropFilter = 'blur(10px)';
+          btn.style.boxShadow = '0 0 20px rgba(220, 38, 38, 0.3)';
+          
+          console.log('✅ Conexión exitosa a IQ Option');
+          notify.success('Conectado exitosamente a IQ Option');
+          
+          // Iniciar streaming en tiempo real de vela actual (cada 1 segundo)
+          if (typeof STCChartFix !== 'undefined' && STCChartFix.startRealtimePolling) {
+            STCChartFix.startRealtimePolling(currentSymbol, 'M5');
+            console.log('⚡ Streaming en tiempo real iniciado');
+          }
+          
+          // Actualizar balance inicial e iniciar interval
+          updateBalance();
+          balanceInterval = setInterval(updateBalance, 15000);
+          reloadCandles();
+        } else {
+          throw new Error(data.message || 'Error al conectar');
+        }
+      } catch (error) {
+        console.error('❌ Error de conexión:', error);
+        notify.error('Error al conectar: ' + error.message);
+        document.getElementById('connectBtn').disabled = false;
+        document.getElementById('connectBtn').textContent = 'Conectar';
+        document.getElementById('connectionStatus').textContent = 'Error';
+        document.getElementById('connectionStatus').className = 'status err';
+      }
+    });
+
+    // Función para desconectar
+    async function handleDisconnect() {
+      console.log('🔌 Desconectando de IQ Option...');
+      
+      try {
+        // Llamar al endpoint de desconexión del backend
+        const email = document.getElementById('iqEmail').value;
+        const response = await fetch('/api/iq/disconnect', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email: email })
+        });
+        
+        const data = await response.json();
+        
+        if (data.success) {
+          console.log('✅ Desconectado exitosamente del servidor');
+        } else {
+          console.warn('⚠️  Respuesta de desconexión:', data.message);
+        }
+      } catch (error) {
+        console.error('❌ Error desconectando del servidor:', error);
+      }
+      
+      // Detener streaming en tiempo real
+      if (typeof STCChartFix !== 'undefined' && STCChartFix.stopRealtimePolling) {
+        STCChartFix.stopRealtimePolling();
+        console.log('⏹️ Streaming en tiempo real detenido');
+      }
+      
+      // Actualizar UI independientemente del resultado
+      isConnected = false;
+      document.getElementById('connectionStatus').textContent = 'Desconectado';
+      document.getElementById('connectionStatus').className = 'status err';
+      
+      // Restaurar botón a modo "Conectar" (azul vidrio transparente)
+      const btn = document.getElementById('connectBtn');
+      btn.textContent = 'Conectar';
+      btn.style.background = 'rgba(0, 102, 255, 0.15)';
+      btn.style.border = '2px solid rgba(0, 212, 255, 0.6)';
+      btn.style.color = '#00d4ff';
+      btn.style.backdropFilter = 'blur(10px)';
+      btn.style.boxShadow = '0 0 20px rgba(0, 212, 255, 0.3)';
+      
+      // Detener interval de balance
+      if (balanceInterval) {
+        clearInterval(balanceInterval);
+        balanceInterval = null;
+      }
+      
+      // Resetear balance
+      document.getElementById('balanceAmount').textContent = '$0.00';
+      
+      notify.success('Desconectado de IQ Option');
+      console.log('🔌 Desconectado de IQ Option');
+    }
+
+    // Función para recargar velas
+    function reloadCandles() {
+      if (typeof STCChartFix !== 'undefined' && STCChartFix.refresh) {
+        console.log('🔄 Recargando velas después de conectar...');
+        STCChartFix.refresh();
+      }
+    }
+
+    // Actualizar balance solo cuando usuario está conectado
+    async function updateBalance() {
+      if (!isConnected) {
+        return; // No actualizar si no está conectado
+      }
+      
+      try {
+        const response = await fetch('/api/iq/balance');
+        const data = await response.json();
+        if (data.balance !== undefined) {
+          document.getElementById('balanceAmount').textContent = 
+            `$${parseFloat(data.balance).toFixed(2)}`;
+        }
+      } catch (error) {
+        console.error('Error actualizando balance:', error);
+      }
+    }
+
+    // Cargar símbolos dinámicamente desde IQ Option
+    async function loadSymbols() {
+      try {
+        const response = await fetch('/api/iq/symbols');
+        const data = await response.json();
+        
+        if (data.symbols && data.symbols.length > 0) {
+          const selector = document.getElementById('tradeSymbol');
+          selector.innerHTML = ''; // Limpiar opciones anteriores
+          
+          // Filtrar símbolos permitidos: Solo EURUSD
+          const allowedSymbols = ['EURUSD'];
+          const filteredSymbols = data.symbols.filter(s => allowedSymbols.includes(s.symbol));
+          
+          // Agrupar símbolos: primero abiertos, luego cerrados
+          const openSymbols = filteredSymbols.filter(s => s.active);
+          const closedSymbols = filteredSymbols.filter(s => !s.active);
+          
+          // Agregar símbolos abiertos
+          if (openSymbols.length > 0) {
+            const openGroup = document.createElement('optgroup');
+            openGroup.label = `✅ Abiertos (${openSymbols.length})`;
+            openSymbols.forEach(symbol => {
+              const option = document.createElement('option');
+              option.value = symbol.symbol;
+              option.textContent = symbol.displayName || symbol.symbol;
+              openGroup.appendChild(option);
+            });
+            selector.appendChild(openGroup);
+          }
+          
+          // Agregar símbolos cerrados
+          if (closedSymbols.length > 0) {
+            const closedGroup = document.createElement('optgroup');
+            closedGroup.label = `❌ Cerrados (${closedSymbols.length})`;
+            closedSymbols.forEach(symbol => {
+              const option = document.createElement('option');
+              option.value = symbol.symbol;
+              option.textContent = symbol.displayName || symbol.symbol;
+              option.disabled = true;
+              closedGroup.appendChild(option);
+            });
+            selector.appendChild(closedGroup);
+          }
+          
+          console.log(`✅ Cargados ${filteredSymbols.length} símbolos permitidos (${openSymbols.length} abiertos, ${closedSymbols.length} cerrados)`);
+          
+          // Establecer el primer símbolo abierto como predeterminado
+          if (openSymbols.length > 0) {
+            currentSymbol = openSymbols[0].symbol;
+            selector.value = currentSymbol;
+            document.getElementById('symbolLabel').textContent = currentSymbol;
+          }
+        }
+      } catch (error) {
+        console.error('❌ Error cargando símbolos:', error);
+      }
+    }
+
+    // Selector de símbolo (temporalidad fija en M5)
+    document.getElementById('tradeSymbol').addEventListener('change', function() {
+      currentSymbol = this.value;
+      document.getElementById('symbolLabel').textContent = currentSymbol;
+      console.log(`💹 Cambiando símbolo a ${currentSymbol}`);
+      
+      let candleSymbol = currentSymbol;
+      
+      // Recargar gráfico con símbolo mapeado
+      if (typeof STCChartFix !== 'undefined') {
+        const endpoint = `/api/iq/candles?symbol=${candleSymbol}&timeframe=${currentTimeframe}&limit=200`;
+        STCChartFix.init({
+          containerId: 'chart',
+          endpoint: endpoint,
+          timeframe: currentTimeframe,
+          pollMs: 3000,
+          max: 200
+        });
+      }
+    });
+    
+    // Cargar símbolos al iniciar
+    loadSymbols();
+
+    // Botón CALL (duración fija 5 minutos)
+    document.getElementById('callBtn').addEventListener('click', async function() {
+      const amount = document.getElementById('tradeAmount').value;
+      const duration = 5; // Duración fija M5
+      console.log(`🟢 CALL: ${currentSymbol}, $${amount}, ${duration}min`);
+      
+      try {
+        const response = await fetch('/api/iq/trade', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            symbol: currentSymbol,
+            amount: parseFloat(amount),
+            direction: 'call',
+            duration: parseInt(duration)
+          })
+        });
+        
+        const data = await response.json();
+        
+        if (response.ok && data.success) {
+          notify.success(data.message || 'Orden CALL enviada');
+        } else {
+          console.error('❌ Error del servidor:', data);
+          const errorMsg = data.message || data.error || 'Error ejecutando CALL';
+          
+          // Detectar si el símbolo está cerrado/suspendido
+          if (errorMsg.includes('suspended') || errorMsg.includes('cerrado')) {
+            notify.error(`⚠️ ${currentSymbol} está CERRADO ahora. Prueba con otro símbolo o espera a que abra el mercado.`);
+          } else {
+            notify.error(errorMsg);
+          }
+        }
+      } catch (error) {
+        console.error('❌ Excepción en CALL:', error);
+        notify.error('Error ejecutando CALL: ' + error.message);
+      }
+    });
+
+    // Botón PUT (duración fija 5 minutos)
+    document.getElementById('putBtn').addEventListener('click', async function() {
+      const amount = document.getElementById('tradeAmount').value;
+      const duration = 5; // Duración fija M5
+      console.log(`🔴 PUT: ${currentSymbol}, $${amount}, ${duration}min`);
+      
+      try {
+        const response = await fetch('/api/iq/trade', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            symbol: currentSymbol,
+            amount: parseFloat(amount),
+            direction: 'put',
+            duration: parseInt(duration)
+          })
+        });
+        
+        const data = await response.json();
+        
+        if (response.ok && data.success) {
+          notify.success(data.message || 'Orden PUT enviada');
+        } else {
+          console.error('❌ Error del servidor:', data);
+          const errorMsg = data.message || data.error || 'Error ejecutando PUT';
+          
+          // Detectar si el símbolo está cerrado/suspendido
+          if (errorMsg.includes('suspended') || errorMsg.includes('cerrado')) {
+            notify.error(`⚠️ ${currentSymbol} está CERRADO ahora. Prueba con otro símbolo o espera a que abra el mercado.`);
+          } else {
+            notify.error(errorMsg);
+          }
+        }
+      } catch (error) {
+        console.error('❌ Excepción en PUT:', error);
+        notify.error('Error ejecutando PUT: ' + error.message);
+      }
+    });
+
+    // Balance se actualiza solo cuando usuario conecta
+    // El setInterval se inicia después de la conexión exitosa
+    let balanceInterval = null;
+
+    // ========== COUNTDOWN M5 ==========
+    function updateCountdown() {
+      const now = new Date();
+      const currentMinutes = now.getMinutes();
+      const currentSeconds = now.getSeconds();
+      
+      // Calcular minutos hasta próxima vela M5
+      const minutesToNext = 5 - (currentMinutes % 5);
+      const secondsToNext = 60 - currentSeconds;
+      
+      // Calcular tiempo total en segundos
+      let totalSeconds = (minutesToNext - 1) * 60 + secondsToNext;
+      if (totalSeconds <= 0) totalSeconds = 300; // 5 minutos
+      
+      const minutes = Math.floor(totalSeconds / 60);
+      const seconds = totalSeconds % 60;
+      
+      // Formatear MM:SS
+      const timeString = `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+      document.getElementById('countdown').textContent = timeString;
+    }
+    
+    // Actualizar countdown cada segundo
+    setInterval(updateCountdown, 1000);
+    updateCountdown(); // Ejecutar inmediatamente
+
+    // ========== ACTUALIZAR PRECIO EN TIEMPO REAL ==========
+    async function updateCurrentPrice() {
+      try {
+        const response = await fetch('/api/iq/candles?symbol=EURUSD&timeframe=M5&limit=5');
+        if (!response.ok) return;
+        
+        const candles = await response.json();
+        
+        if (candles && candles.length > 0) {
+          // Obtener la ÚLTIMA vela (más reciente)
+          const candle = candles[candles.length - 1];
+          
+          // Verificar que tenemos el elemento
+          const priceValueEl = document.getElementById('priceValue');
+          const priceElement = document.getElementById('currentPrice');
+          
+          if (!priceValueEl || !priceElement) {
+            console.log('⚠️  Elementos de precio no encontrados');
+            return;
+          }
+          
+          // Formatear precio con 5 decimales y coma decimal
+          const price = parseFloat(candle.close);
+          const formattedPrice = price.toFixed(5).replace('.', ',');
+          priceValueEl.textContent = formattedPrice;
+          
+          // Cambiar color según dirección
+          if (candle.close > candle.open) {
+            // Alcista (verde)
+            priceElement.style.background = 'linear-gradient(135deg, rgba(16, 185, 129, 0.4) 0%, rgba(16, 185, 129, 0.2) 100%)';
+            priceElement.style.borderColor = 'rgba(16, 185, 129, 0.6)';
+            priceElement.style.boxShadow = '0 0 15px rgba(16, 185, 129, 0.4)';
+          } else {
+            // Bajista (rojo)
+            priceElement.style.background = 'linear-gradient(135deg, rgba(239, 68, 68, 0.4) 0%, rgba(239, 68, 68, 0.2) 100%)';
+            priceElement.style.borderColor = 'rgba(239, 68, 68, 0.6)';
+            priceElement.style.boxShadow = '0 0 15px rgba(239, 68, 68, 0.4)';
+          }
+        }
+      } catch (error) {
+        // Silenciar errores
+      }
+    }
+    
+    // Actualizar precio cada segundo (esperar a que DOM esté listo)
+    setTimeout(() => {
+      setInterval(updateCurrentPrice, 1000);
+      updateCurrentPrice();
+    }, 500);
+
+    // ========== AUTO-LOGIN ELIMINADO POR SEGURIDAD ==========
+    // La función autoLoginDemo() fue eliminada porque establecía sesión hardcodeada
+    // sin validación, permitiendo bypass del sistema de autenticación
+    
+    // ========== GESTIÓN DE BOTS ==========
+    let selectedBotId = null;
+    let selectedBotData = null;
+
+    // Abrir modal de selección de bot
+    document.getElementById('selectBotBtn').addEventListener('click', async function() {
+      document.getElementById('botModal').style.display = 'flex';
+      await loadBots();
+    });
+
+    // Cerrar modal
+    document.getElementById('closeBotModal').addEventListener('click', function() {
+      document.getElementById('botModal').style.display = 'none';
+    });
+
+    // Cerrar modal al hacer click fuera
+    document.getElementById('botModal').addEventListener('click', function(e) {
+      if (e.target === this) {
+        this.style.display = 'none';
+      }
+    });
+
+    // Cargar lista de bots del usuario
+    async function loadBots() {
+      try {
+        const response = await fetch('/api/bots/list');
+        const data = await response.json();
+        
+        if (data.success && data.bots) {
+          const botsList = document.getElementById('botsList');
+          
+          if (data.bots.length === 0) {
+            botsList.innerHTML = '<div style="text-align: center; color: var(--muted); padding: 20px;">No tienes bots creados aún</div>';
+            return;
+          }
+          
+          botsList.innerHTML = data.bots.map(bot => `
+            <div class="bot-item" data-bot-id="${bot.id}" style="background: rgba(0, 102, 255, 0.1); padding: 12px; border-radius: 8px; border: 1px solid var(--glass-border); margin-bottom: 10px; cursor: pointer; transition: all 0.3s;">
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <div>
+                  <div style="font-weight: 600; margin-bottom: 4px;">${bot.name}</div>
+                  <div style="font-size: 12px; color: var(--muted);">
+                    ${bot.strategy} • ${bot.symbol} • ${bot.timeframe}
+                  </div>
+                </div>
+                <div style="background: ${bot.running ? 'rgba(16, 185, 129, 0.3)' : 'rgba(220, 38, 38, 0.3)'}; padding: 4px 12px; border-radius: 20px; font-size: 11px; font-weight: 600;">
+                  ${bot.running ? '▶️ Activo' : '⏹️ Detenido'}
+                </div>
+              </div>
+            </div>
+          `).join('');
+          
+          // Agregar event listeners a cada bot
+          document.querySelectorAll('.bot-item').forEach(item => {
+            item.addEventListener('click', function() {
+              const botId = this.getAttribute('data-bot-id');
+              const bot = data.bots.find(b => b.id === botId);
+              selectBot(bot);
+            });
+            
+            // Hover effect
+            item.addEventListener('mouseenter', function() {
+              this.style.background = 'rgba(0, 102, 255, 0.2)';
+              this.style.borderColor = 'var(--neon-cyan)';
+            });
+            
+            item.addEventListener('mouseleave', function() {
+              this.style.background = 'rgba(0, 102, 255, 0.1)';
+              this.style.borderColor = 'var(--glass-border)';
+            });
+          });
+        }
+      } catch (error) {
+        console.error('Error cargando bots:', error);
+        notify.error('Error al cargar bots');
+      }
+    }
+
+    // Seleccionar un bot
+    function selectBot(bot) {
+      selectedBotId = bot.id;
+      selectedBotData = bot;
+      
+      document.getElementById('botName').textContent = bot.name;
+      document.getElementById('selectedBotInfo').style.display = 'block';
+      document.getElementById('botModal').style.display = 'none';
+      
+      // Actualizar estado de botones
+      updateBotButtons(bot.running);
+      
+      notify.success(`Bot seleccionado: ${bot.name}`);
+      console.log('✅ Bot seleccionado:', bot);
+    }
+
+    // Actualizar estado de botones según si está corriendo o no
+    function updateBotButtons(isRunning) {
+      const startBtn = document.getElementById('startBotBtn');
+      const stopBtn = document.getElementById('stopBotBtn');
+      
+      if (isRunning) {
+        startBtn.disabled = true;
+        startBtn.style.opacity = '0.5';
+        stopBtn.disabled = false;
+        stopBtn.style.opacity = '1';
+      } else {
+        startBtn.disabled = false;
+        startBtn.style.opacity = '1';
+        stopBtn.disabled = true;
+        stopBtn.style.opacity = '0.5';
+      }
+    }
+
+    // Iniciar bot
+    document.getElementById('startBotBtn').addEventListener('click', async function() {
+      if (!selectedBotId) {
+        notify.error('No hay bot seleccionado');
+        return;
+      }
+      
+      try {
+        const response = await fetch(`/api/bots/start/${selectedBotId}`, {
+          method: 'POST'
+        });
+        const data = await response.json();
+        
+        if (data.success) {
+          notify.success('Bot iniciado correctamente');
+          updateBotButtons(true);
+          selectedBotData.running = true;
+          console.log('✅ Bot iniciado:', selectedBotId);
+        } else {
+          notify.error(data.error || 'Error al iniciar bot');
+        }
+      } catch (error) {
+        console.error('Error iniciando bot:', error);
+        notify.error('Error al iniciar bot');
+      }
+    });
+
+    // Detener bot
+    document.getElementById('stopBotBtn').addEventListener('click', async function() {
+      if (!selectedBotId) {
+        notify.error('No hay bot seleccionado');
+        return;
+      }
+      
+      try {
+        const response = await fetch(`/api/bots/stop/${selectedBotId}`, {
+          method: 'POST'
+        });
+        const data = await response.json();
+        
+        if (data.success) {
+          notify.success('Bot detenido correctamente');
+          updateBotButtons(false);
+          selectedBotData.running = false;
+          console.log('⏹️ Bot detenido:', selectedBotId);
+        } else {
+          notify.error(data.error || 'Error al detener bot');
+        }
+      } catch (error) {
+        console.error('Error deteniendo bot:', error);
+        notify.error('Error al detener bot');
+      }
+    });
+
+    console.log('✅ Dashboard IQ Option inicializado');
+  </script>
+</body>
+</html>

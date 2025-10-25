@@ -1,0 +1,181 @@
+XHRGET
+https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/candles?symbol=EURUSD&timeframe=M5&limit=5
+[HTTP/1.1 502 Bad Gateway nullms]
+
+XHRGET
+https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/candles?symbol=EURUSD&timeframe=M5&limit=200
+[HTTP/1.1 403 Forbidden 453ms]
+
+❌ Error cargando datos iniciales: Error: HTTP 403: Forbidden
+    loadInitialData stc_chart_fix.js:116
+    init stc_chart_fix.js:36
+    <anonymous> iqoption:221
+    addEventListener Detail.js:76
+    <anonymous> iqoption:217
+eruda.js:2:135516
+Uncaught (in promise) TypeError: NetworkError when attempting to fetch resource.
+Uncaught (in promise) DOMException: The operation was aborted. 
+❌ Error en polling: DOMException: The operation was aborted. eruda.js:2:135516
+XHRGET
+https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/candles?symbol=EURUSD&timeframe=M5&limit=200
+[HTTP/1.1 403 Forbidden 821ms]
+
+XHRGET
+https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/candles?symbol=EURUSD&timeframe=M5&limit=5
+[HTTP/1.1 403 Forbidden 823ms]
+
+❌ Error cargando datos iniciales: Error: HTTP 403: Forbidden
+    loadInitialData stc_chart_fix.js:116
+    init stc_chart_fix.js:36
+    <anonymous> iqoption:221
+    addEventListener Detail.js:76
+    <anonymous> iqoption:217
+eruda.js:2:135516
+XHRGET
+https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/candles?symbol=EURUSD&timeframe=M5&limit=5
+[HTTP/1.1 403 Forbidden 456ms]
+
+XHRGET
+https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/candles?symbol=EURUSD&timeframe=M5&limit=5
+[HTTP/1.1 403 Forbidden 456ms]
+
+XHRGET
+https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/candles?symbol=EURUSD&timeframe=M5&limit=200
+[HTTP/1.1 403 Forbidden 444ms]
+
+XHRGET
+https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/candles?symbol=EURUSD&timeframe=M5&limit=5
+[HTTP/1.1 403 Forbidden 451ms]
+
+XHRGET
+https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/candles?symbol=EURUSD&timeframe=M5&limit=5
+[HTTP/1.1 403 Forbidden 453ms]
+
+XHRGET
+https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/candles?symbol=EURUSD&timeframe=M5&limit=5
+[HTTP/1.1 403 Forbidden 454ms]
+
+XHRGET
+https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/candles?symbol=EURUSD&timeframe=M5&limit=200
+[HTTP/1.1 403 Forbidden 443ms]
+
+XHRGET
+https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/candles?symbol=EURUSD&timeframe=M5&limit=5
+[HTTP/1.1 403 Forbidden 450ms]
+
+XHRGET
+https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/candles?symbol=EURUSD&timeframe=M5&limit=5
+[HTTP/1.1 403 Forbidden 441ms]
+
+XHRGET
+https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/candles?symbol=EURUSD&timeframe=M5&limit=5
+[HTTP/1.1 403 Forbidden 450ms]
+
+XHRGET
+https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/candles?symbol=EURUSD&timeframe=M5&limit=200
+[HTTP/1.1 403 Forbidden 465ms]
+
+XHRGET
+https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/candles?symbol=EURUSD&timeframe=M5&limit=5
+[HTTP/1.1 403 Forbidden 457ms]
+
+XHRGET
+https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/candles?symbol=EURUSD&timeframe=M5&limit=5
+[HTTP/1.1 403 Forbidden 442ms]
+
+XHRGET
+https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/candles?symbol=EURUSD&timeframe=M5&limit=5
+[HTTP/1.1 403 Forbidden 447ms]
+
+XHRGET
+https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/candles?symbol=EURUSD&timeframe=M5&limit=200
+[HTTP/1.1 403 Forbidden 449ms]
+
+XHRGET
+https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/candles?symbol=EURUSD&timeframe=M5&limit=5
+[HTTP/1.1 403 Forbidden 449ms]
+
+XHRGET
+https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/candles?symbol=EURUSD&timeframe=M5&limit=5
+[HTTP/1.1 403 Forbidden 446ms]
+
+XHRGET
+https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/candles?symbol=EURUSD&timeframe=M5&limit=5
+[HTTP/1.1 403 Forbidden 454ms]
+
+XHRGET
+https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/candles?symbol=EURUSD&timeframe=M5&limit=200
+[HTTP/1.1 403 Forbidden 447ms]
+
+XHRGET
+https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/candles?symbol=EURUSD&timeframe=M5&limit=5
+[HTTP/1.1 403 Forbidden 459ms]
+
+XHRGET
+https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/candles?symbol=EURUSD&timeframe=M5&limit=5
+[HTTP/1.1 403 Forbidden 460ms]
+
+XHRGET
+https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/candles?symbol=EURUSD&timeframe=M5&limit=5
+[HTTP/1.1 403 Forbidden 471ms]
+
+XHRGET
+https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/candles?symbol=EURUSD&timeframe=M5&limit=200
+[HTTP/1.1 403 Forbidden 457ms]
+
+XHRGET
+https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/candles?symbol=EURUSD&timeframe=M5&limit=5
+[HTTP/1.1 403 Forbidden 451ms]
+
+XHRGET
+https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/candles?symbol=EURUSD&timeframe=M5&limit=5
+[HTTP/1.1 403 Forbidden 444ms]
+
+XHRGET
+https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/candles?symbol=EURUSD&timeframe=M5&limit=5
+[HTTP/1.1 403 Forbidden 454ms]
+
+XHRGET
+https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/candles?symbol=EURUSD&timeframe=M5&limit=200
+[HTTP/1.1 403 Forbidden 451ms]
+
+XHRGET
+https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/candles?symbol=EURUSD&timeframe=M5&limit=5
+[HTTP/1.1 403 Forbidden 447ms]
+
+XHRGET
+https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/candles?symbol=EURUSD&timeframe=M5&limit=5
+[HTTP/1.1 403 Forbidden 441ms]
+
+XHRGET
+https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/candles?symbol=EURUSD&timeframe=M5&limit=5
+[HTTP/1.1 403 Forbidden 452ms]
+
+XHRGET
+https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/candles?symbol=EURUSD&timeframe=M5&limit=200
+[HTTP/1.1 403 Forbidden 459ms]
+
+XHRGET
+https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/candles?symbol=EURUSD&timeframe=M5&limit=5
+[HTTP/1.1 403 Forbidden 451ms]
+
+XHRGET
+https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/candles?symbol=EURUSD&timeframe=M5&limit=5
+[HTTP/1.1 403 Forbidden 454ms]
+
+XHRGET
+https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/candles?symbol=EURUSD&timeframe=M5&limit=5
+[HTTP/1.1 403 Forbidden 449ms]
+
+XHRGET
+https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/candles?symbol=EURUSD&timeframe=M5&limit=200
+[HTTP/1.1 403 Forbidden 449ms]
+
+XHRGET
+https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/candles?symbol=EURUSD&timeframe=M5&limit=5
+[HTTP/1.1 403 Forbidden 461ms]
+
+XHRGET
+https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/iq/candles?symbol=EURUSD&timeframe=M5&limit=5
+[HTTP/1.1 403 Forbidden nullms]
+

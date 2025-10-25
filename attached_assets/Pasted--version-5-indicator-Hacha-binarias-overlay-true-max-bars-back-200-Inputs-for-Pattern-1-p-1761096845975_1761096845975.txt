@@ -1,0 +1,127 @@
+//@version=5
+indicator("Hacha binarias", overlay=true, max_bars_back=200)
+
+// Inputs for Pattern 1
+pattern1_min_green = input.int(2, "Pattern 1: Min green candles", minval=1, maxval=50)
+
+// Inputs for Pattern 2
+pattern2_min_red = input.int(2, "Pattern 2: Min red candles", minval=1, maxval=50)
+
+// Inputs for Pattern 3
+sma_period = input.int(200, "SMA Period", minval=1)
+
+// Function to count consecutive green candles
+f_has_consecutive_green(min_count) =>
+    int count = 0
+    int i = 1
+    while close[i] > open[i] and not na(close[i]) and not na(open[i]) and i < 10000
+        count := count + 1
+        i := i + 1
+        if count >= min_count
+            break
+    count >= min_count
+
+// Function to count consecutive red candles
+f_has_consecutive_red(min_count) =>
+    int count = 0
+    int i = 1
+    while close[i] < open[i] and not na(close[i]) and not na(open[i]) and i < 10000
+        count := count + 1
+        i := i + 1
+        if count >= min_count
+            break
+    count >= min_count
+
+// ========== PATTERN 1 ==========
+// Pattern 1: Detect bearish reversal (Venta - Rojo)
+bool pattern1_is_pattern = false
+bool pattern1_entry = false
+if f_has_consecutive_green(pattern1_min_green) and close[0] < open[0]
+    // Eliminada la condición de la penúltima vela
+    pattern1_is_pattern := true
+    pattern1_entry := true
+
+// Pattern 1: Visual elements (Venta - Rojo)
+plotshape(pattern1_is_pattern, title="Pattern 1 Detected", location=location.abovebar, color=color.red, style=shape.triangledown, size=size.normal)
+if pattern1_entry
+    // Cambiado a verde como solicitaste
+    label.new(bar_index, high, "E", color=color.rgb(248, 29, 17), style=label.style_label_down, textcolor=color.white)
+
+// Pattern 1: Win/Loss evaluation ("G" verde, "P" rojo)
+if pattern1_entry[3]
+    bool won = close[2] < open[2] or close[1] < open[1] or close[0] < open[0]
+    string label_text = won ? "G" : "P"
+    color textcol = won ? color.green : color.red
+    label.new(bar_index, low, label_text, color=color.white, textcolor=textcol, style=label.style_label_up)
+
+// Pattern 1: Alerts
+alertcondition(pattern1_entry, title="Pattern 1 Sell Signal", message="Pattern 1 detected - Sell in {{ticker}} at {{interval}}")
+alertcondition(pattern1_entry[3] and (close[2] < open[2] or close[1] < open[1] or close[0] < open[0]), title="Pattern 1 Win", message="Pattern 1 Win in {{ticker}} at {{interval}}")
+alertcondition(pattern1_entry[3] and not (close[2] < open[2] or close[1] < open[1] or close[0] < open[0]), title="Pattern 1 Loss", message="Pattern 1 Loss in {{ticker}} at {{interval}}")
+
+// ========== PATTERN 2 ==========
+// Pattern 2: Detect end of bearish impulse (Compra - Verde)
+bool pattern2_is_pattern = false
+bool pattern2_entry = false
+if barstate.isconfirmed and f_has_consecutive_red(pattern2_min_red)
+    float wick_last = math.min(open[1], close[1]) - low[1]
+    float wick_penultimate = math.min(open[2], close[2]) - low[2]
+    if wick_last > wick_penultimate and close[0] > open[0]
+        pattern2_is_pattern := true
+        pattern2_entry := open[0] > close[1]
+
+// Pattern 2: Visual elements (Compra - Verde)
+plotshape(pattern2_is_pattern, title="ENTRADA", location=location.belowbar, color=color.green, style=shape.triangleup, size=size.small)
+if pattern2_entry
+    label.new(bar_index, low, "E", color=color.rgb(243, 16, 4), style=label.style_label_up, textcolor=color.white)
+
+// Pattern 2: Win/Loss evaluation ("G" verde, "P" rojo)
+if pattern2_entry[3]
+    bool won = close[2] > open[2] or close[1] > open[1] or close[0] > open[0]
+    string label_text = won ? "G" : "P"
+    color textcol = won ? color.green : color.red
+    label.new(bar_index, high, label_text, color=color.white, textcolor=textcol, style=label.style_label_down)
+
+// ========== PATTERN 3 ==========
+// Pattern 3: Calculate SMA
+sma200 = ta.sma(close, sma_period)
+
+// Pattern 3: Candle conditions
+isRedCandle = close < open
+isGreenCandle = close > open
+notRedCandle = not isRedCandle
+notGreenCandle = not isGreenCandle
+firstCandleNotRed = notRedCandle[4]
+threeRedCandles = isRedCandle[3] and isRedCandle[2] and isRedCandle[1]
+firstCandleNotGreen = notGreenCandle[4]
+threeGreenCandles = isGreenCandle[3] and isGreenCandle[2] and isGreenCandle[1]
+currentCandleGreen = isGreenCandle
+currentCandleRed = isRedCandle
+
+// Pattern 3: Buy and Sell signals (eliminada referencia a EMA 50)
+bool pattern3_buySignal = firstCandleNotRed and threeRedCandles and currentCandleGreen and close > sma200
+bool pattern3_sellSignal = firstCandleNotGreen and threeGreenCandles and currentCandleRed and close < sma200
+
+// Pattern 3: Plot SMA
+plot(sma200, title="SMA 200", color=color.blue, linewidth=2)
+
+// Pattern 3: Visual elements
+plotshape(pattern3_buySignal, title="Pattern 3 Buy Signal", location=location.belowbar, color=color.green, style=shape.labelup, text="E")
+plotshape(pattern3_sellSignal, title="Pattern 3 Sell Signal", location=location.abovebar, color=color.red, style=shape.labeldown, text="E")
+if pattern3_buySignal
+    label.new(bar_index, low, "E", color=color.rgb(7, 67, 245), style=label.style_label_up, textcolor=color.white)
+if pattern3_sellSignal
+    label.new(bar_index, high, "E", color=color.red, style=label.style_label_down, textcolor=color.white)
+
+// Pattern 3: Win/Loss evaluation
+if pattern3_buySignal[3]
+    bool won = close[2] > open[2] or close[1] > open[1] or close[0] > open[0]
+    string label_text = won ? "G" : "P"
+    color textcol = won ? color.green : color.red
+    label.new(bar_index, high, label_text, color=color.white, textcolor=textcol, style=label.style_label_down)
+
+if pattern3_sellSignal[3]
+    bool won = close[2] < open[2] or close[1] < open[1] or close[0] < open[0]
+    string label_text = won ? "G" : "P"
+    color textcol = won ? color.green : color.red
+    label.new(bar_index, low, label_text, color=color.white, textcolor=textcol, style=label.style_label_up)

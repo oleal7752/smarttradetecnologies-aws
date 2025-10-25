@@ -1,0 +1,118 @@
+instrument { 
+    name = '$ CashmoneY TREND $', 
+    --------- CANAL: TRADING LIONS -------    
+    short_name = 'script_trend', 
+    ------ LINK DE CANAL: https://t.me/TradingLions_Binarias -----     
+    overlay = true 
+} 
+
+-- ========== PARMETROS ORIGINALES ========== --
+MaFast_period = input(5,"Ma Fast period",input.integer,1,1000,1) -- Cambiado de 1 a 5
+MaValue = input(5,"Ma Value", input.string_selection,inputs.titles) 
+MaSlow_period = input(21,"Ma Slow period",input.integer,1,1000,1) -- Cambiado de 34 a 21
+Signal_period = input(9,"Signal period",input.integer,1,1000,1) -- Cambiado de 5 a 9
+
+-- ========== NUEVOS PARMETROS DE TENDENCIA ========== --
+input_group { 
+    " FILTRO DE TENDENCIA", 
+    Trend_period = input(50,"Trend MA Period",input.integer,10,200,1),
+    Trend_strength = input(0.0005,"Trend Strength",input.number,0.0001,0.01,0.0001),
+    Use_trend_filter = input(true,"Use Trend Filter",input.bool)
+}
+
+-- ========== CONFIGURACIN VISUAL ========== --
+input_group { 
+    " COMPRA", 
+    colorBuy = input { default = "#00FF00", type = input.color },  -- Verde ms visible
+    visibleBuy = input { default = true, type = input.plot_visibility } 
+} 
+
+input_group { 
+    " VENDA", 
+    colorSell = input { default = "#FF0000", type = input.color }, -- Rojo ms visible
+    visibleSell = input { default = true, type = input.plot_visibility } 
+} 
+
+local titleValue = inputs[MaValue] 
+
+-- ========== CLCULO DE MEDIAS ORIGINALES ========== --
+-- Media mvil rpida 
+smaFast = sma(titleValue, MaFast_period) 
+
+-- Media mvil lenta 
+smaSlow = sma(titleValue, MaSlow_period) 
+
+-- Clculo diferencial - serie 
+buffer1 = smaFast - smaSlow  
+
+-- Clculo de la media mvil ponderada - serie 
+buffer2 = wma(buffer1, Signal_period) 
+
+-- ========== NUEVO: DETECCIN DE TENDENCIA ========== --
+-- Media mvil para tendencia general
+trendMA = sma(titleValue, Trend_period)
+
+-- Deteccin de tendencia basada en pendiente
+trendDirection = conditional(trendMA > trendMA[5] + Trend_strength, 1,  -- Tendencia alcista
+                conditional(trendMA < trendMA[5] - Trend_strength, -1, -- Tendencia bajista  
+                0)) -- Sin tendencia clara
+
+-- Fuerza de la tendencia (opcional para anlisis)
+trendStrength = math.abs(trendMA - trendMA[10]) / trendMA * 100
+
+-- ========== CONDICIONES ORIGINALES ========== --
+basicBuyCondition = conditional(buffer1 > buffer2 and buffer1[1] <= buffer2[1])
+basicSellCondition = conditional(buffer1 < buffer2 and buffer1[1] >= buffer2[1])
+
+-- ========== NUEVAS CONDICIONES CON FILTRO DE TENDENCIA ========== --
+-- Seales de compra: solo en tendencia alcista o neutra
+buyCondition = conditional(
+    Use_trend_filter and basicBuyCondition and (trendDirection >= 0) or
+    not Use_trend_filter and basicBuyCondition
+)
+
+-- Seales de venta: solo en tendencia bajista o neutra  
+sellCondition = conditional(
+    Use_trend_filter and basicSellCondition and (trendDirection <= 0) or
+    not Use_trend_filter and basicSellCondition
+)
+
+-- ========== CONDICIONES MEJORADAS CON CONFIRMACIN ========== --
+-- Evitar seales contradictorias en la misma vela
+buyConfirmed = conditional(buyCondition and not sellCondition)
+sellConfirmed = conditional(sellCondition and not buyCondition)
+
+-- ========== VISUALIZACIN DE SEALES ========== --
+plot_shape( 
+    (buyConfirmed), 
+    " CALL", 
+    shape_style.triangleup, 
+    shape_size.huge, 
+    colorBuy, 
+    shape_location.belowbar, 
+    -1, 
+    "CALL - Trend: " .. tostring(trendDirection), 
+    "white" 
+)  
+
+plot_shape( 
+    (sellConfirmed), 
+    " PUT", 
+    shape_style.triangledown, 
+    shape_size.huge, 
+    colorSell, 
+    shape_location.abovebar, 
+    -1, 
+    "PUT - Trend: " .. tostring(trendDirection), 
+    "white" 
+)
+
+-- ========== LNEA DE TENDENCIA (OPCIONAL) ========== --
+plot_line(trendMA, "Trend Line", "#FFFF00", 2, line_style.solid, visibleBuy)
+
+-- ========== ZONA DE TENDENCIA (OPCIONAL) ========== --
+upperTrend = trendMA + (trendMA * Trend_strength)
+lowerTrend = trendMA - (trendMA * Trend_strength)
+
+plot_line(upperTrend, "Upper Trend", "#FFFF0050", 1, line_style.dashed, false)
+plot_line(lowerTrend, "Lower Trend", "#FFFF0050", 1, line_style.dashed, false)

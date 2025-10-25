@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <title>Dashboard Trading en Tiempo Real | STC</title>
+  <script>
+    // CRITICAL: Version check MUST run before anything else
+    (function() {
+      const REQUIRED_VERSION = {{ cache_bust }};
+      const currentVersion = sessionStorage.getItem('dashboard_version');
+      
+      if (!currentVersion || parseInt(currentVersion) < REQUIRED_VERSION) {
+        sessionStorage.setItem('dashboard_version', REQUIRED_VERSION);
+        if (currentVersion) {
+          // Force hard reload without cache
+          window.location.reload(true);
+        }
+      }
+    })();
+  </script>
+  <script src="https://unpkg.com/lightweight-charts@4.1.0/dist/lightweight-charts.standalone.production.js"></script>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    :root {
+      --bg-black: #000000;
+      --glass-bg: rgba(0, 245, 255, 0.02);
+      --glass-border: rgba(0, 245, 255, 0.15);
+      --neon-cyan: #00f5ff;
+      --neon-blue: #0066ff;
+      --text-primary: #00f5ff;
+      --text-secondary: rgba(255, 255, 255, 0.7);
+    }
+    
+    body {
+      font-family: 'Courier New', Consolas, monospace;
+      background: #000000;
+      color: var(--text-primary);
+      min-height: 100vh;
+      overflow: hidden;
+    }
+    
+    .dashboard {
+      display: grid;
+      grid-template-columns: 1fr 350px;
+      grid-template-rows: 60px 1fr;
+      gap: 12px;
+      padding: 12px;
+      height: 100vh;
+    }
+    
+    /* Header */
+    .header {
+      grid-column: 1 / -1;
+      background: var(--glass-bg);
+      backdrop-filter: blur(40px);
+      border: 1px solid var(--glass-border);
+      border-radius: 12px;
+      padding: 0 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 0 40px rgba(0, 245, 255, 0.15);
+    }
+    
+    .logo {
+      font-size: 18px;
+      font-weight: 700;
+      text-shadow: 0 0 10px rgba(0, 245, 255, 0.5);
+      letter-spacing: 2px;
+    }
+    
+    .status-badge {
+      padding: 6px 12px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 600;
+      backdrop-filter: blur(10px);
+    }
+    
+    .status-connected {
+      background: rgba(0, 255, 127, 0.1);
+      color: #00ff7f;
+      border: 1px solid rgba(0, 255, 127, 0.3);
+    }
+    
+    .status-disconnected {
+      background: rgba(255, 91, 90, 0.1);
+      color: #ff5b5a;
+      border: 1px solid rgba(255, 91, 90, 0.3);
+    }
+    
+    /* Chart Area */
+    .chart-container {
+      background: var(--glass-bg);
+      backdrop-filter: blur(40px);
+      border: 1px solid var(--glass-border);
+      border-radius: 12px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 0 40px rgba(0, 245, 255, 0.15);
+      min-height: 500px;
+    }
+    
+    .chart-header {
+      padding: 12px;
+      border-bottom: 1px solid var(--glass-border);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    
+    .symbol-display {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--neon-cyan);
+      text-shadow: 0 0 10px rgba(0, 245, 255, 0.5);
+    }
+    
+    .timeframe-selector {
+      display: flex;
+      gap: 4px;
+    }
+    
+    .tf-btn {
+      background: rgba(0, 245, 255, 0.05);
+      border: 1px solid var(--glass-border);
+      color: var(--text-secondary);
+      padding: 6px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 12px;
+      font-weight: 600;
+      transition: all 0.3s;
+    }
+    
+    .tf-btn:hover {
+      background: rgba(0, 245, 255, 0.1);
+      border-color: var(--neon-cyan);
+    }
+    
+    .tf-btn.active {
+      background: rgba(0, 245, 255, 0.2);
+      border-color: var(--neon-cyan);
+      color: var(--neon-cyan);
+      box-shadow: 0 0 15px rgba(0, 245, 255, 0.3);
+    }
+    
+    #chart {
+      flex: 1;
+    }
+    
+    /* Sidebar */
+    .sidebar {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      overflow-y: auto;
+    }
+    
+    .panel {
+      background: var(--glass-bg);
+      backdrop-filter: blur(40px);
+      border: 1px solid var(--glass-border);
+      border-radius: 12px;
+      padding: 16px;
+      box-shadow: 0 0 30px rgba(0, 245, 255, 0.15);
+    }
+    
+    .panel-title {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--neon-cyan);
+      margin-bottom: 12px;
+      text-shadow: 0 0 10px rgba(0, 245, 255, 0.5);
+    }
+    
+    .info-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 8px 0;
+      border-bottom: 1px solid rgba(0, 245, 255, 0.1);
+    }
+    
+    .info-row:last-child {
+      border-bottom: none;
+    }
+    
+    .info-label {
+      font-size: 12px;
+      color: var(--text-secondary);
+    }
+    
+    .info-value {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+    
+    .countdown {
+      text-align: center;
+      padding: 16px;
+      background: linear-gradient(135deg, rgba(0, 245, 255, 0.15) 0%, rgba(0, 102, 255, 0.1) 100%);
+      border-radius: 12px;
+      border: 1px solid rgba(0, 245, 255, 0.3);
+    }
+    
+    .countdown-label {
+      font-size: 11px;
+      color: var(--text-secondary);
+      margin-bottom: 8px;
+    }
+    
+    .countdown-time {
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--neon-cyan);
+      text-shadow: 0 0 15px rgba(0, 245, 255, 0.6);
+    }
+    
+    .warning {
+      color: #ffc107;
+    }
+    
+    /* Responsive */
+    @media (max-width: 1024px) {
+      .dashboard {
+        grid-template-columns: 1fr;
+        grid-template-rows: 60px 1fr auto;
+      }
+      
+      .sidebar {
+        grid-row: 3;
+        flex-direction: row;
+        overflow-x: auto;
+      }
+      
+      .panel {
+        min-width: 250px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="dashboard">
+    <div class="header">
+      <div class="logo">📈 STC TRADING • TIEMPO REAL</div>
+      <div id="connectionStatus" class="status-badge status-disconnected">● Conectando...</div>
+    </div>
+    
+    <div class="chart-container">
+      <div class="chart-header">
+        <span class="symbol-display" id="symbolDisplay">EURUSD</span>
+        <div style="flex: 1"></div>
+        <div class="timeframe-selector">
+          <button class="tf-btn active" data-tf="1m">1m</button>
+          <button class="tf-btn" data-tf="5m">5m</button>
+          <button class="tf-btn" data-tf="15m">15m</button>
+        </div>
+      </div>
+      <div id="chart"></div>
+    </div>
+    
+    <div class="sidebar">
+      <!-- Info Panel -->
+      <div class="panel">
+        <div class="panel-title">📊 INFORMACIÓN</div>
+        <div class="info-row">
+          <span class="info-label">Símbolo</span>
+          <span class="info-value">EURUSD</span>
+        </div>
+        <div class="info-row">
+          <span class="info-label">Timeframe</span>
+          <span class="info-value" id="currentTF">1m</span>
+        </div>
+        <div class="info-row">
+          <span class="info-label">Fuente</span>
+          <span class="info-value">Twelve Data</span>
+        </div>
+        <div class="info-row">
+          <span class="info-label">Velas Cargadas</span>
+          <span class="info-value" id="candleCount">0</span>
+        </div>
+      </div>
+      
+      <!-- Precio Actual -->
+      <div class="panel">
+        <div class="panel-title">💰 PRECIO ACTUAL</div>
+        <div class="info-row">
+          <span class="info-label">Último</span>
+          <span class="info-value" id="currentPrice" style="font-size: 18px; color: #00ff7f;">-</span>
+        </div>
+      </div>
+      
+      <!-- Countdown -->
+      <div class="panel countdown">
+        <div class="countdown-label">Próxima vela en</div>
+        <div class="countdown-time" id="countdown">00:00</div>
+      </div>
+      
+      <!-- Señales de Bots (Próximamente) -->
+      <div class="panel">
+        <div class="panel-title">🤖 SEÑALES DE BOTS</div>
+        <div class="info-row">
+          <span class="info-label">Activos</span>
+          <span class="info-value" id="activeBots">0</span>
+        </div>
+        <div class="info-row">
+          <span class="info-label">Última señal</span>
+          <span class="info-value" id="lastSignal">-</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script>
+    console.log('🚀 Dashboard v3.0 - Refactor completo - Build: {{ cache_bust }}');
+    
+    // Variables globales
+    let chart = null;
+    let candleSeries = null;
+    let ws = null;
+    let currentTimeframe = '1m';
+    let candleData = { '1m': [], '5m': [], '15m': [] };
+    let countdownInterval = null;
+    let bootstrapped = { '1m': false, '5m': false, '15m': false };
+    let lastTime = { '1m': null, '5m': null, '15m': null };
+    let firstErrorLogged = false;
+    
+    // Inicializar chart
+    function initChart() {
+      const chartContainer = document.getElementById('chart');
+      
+      chart = LightweightCharts.createChart(chartContainer, {
+        layout: {
+          background: { type: 'solid', color: '#000000' },
+          textColor: '#00f5ff',
+        },
+        grid: {
+          vertLines: { color: 'rgba(0, 245, 255, 0.1)' },
+          horzLines: { color: 'rgba(0, 245, 255, 0.1)' },
+        },
+        crosshair: {
+          mode: LightweightCharts.CrosshairMode.Normal,
+        },
+        timeScale: {
+          borderColor: 'rgba(0, 245, 255, 0.3)',
+          timeVisible: true,
+          secondsVisible: false,
+        },
+        width: chartContainer.clientWidth,
+        height: chartContainer.clientHeight,
+      });
+      
+      candleSeries = chart.addCandlestickSeries({
+        upColor: '#089981',
+        downColor: '#f23645',
+        borderUpColor: '#089981',
+        borderDownColor: '#f23645',
+        wickUpColor: '#089981',
+        wickDownColor: '#f23645',
+        priceFormat: {
+          type: 'price',
+          precision: 5,
+          minMove: 0.00001,
+        },
+      });
+      
+      // Responsive
+      window.addEventListener('resize', () => {
+        chart.applyOptions({
+          width: chartContainer.clientWidth,
+          height: chartContainer.clientHeight,
+        });
+      });
+    }
+    
+    // Conectar a WebSocket
+    function connectWebSocket() {
+      const protocol = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
+      const host = window.location.hostname;
+      ws = new WebSocket(`${protocol}//${host}:8000/ws/live`);
+      
+      ws.onopen = () => {
+        console.log('✅ WebSocket conectado');
+        document.getElementById('connectionStatus').textContent = '● Conectado';
+        document.getElementById('connectionStatus').className = 'status-badge status-connected';
+      };
+      
+      ws.onmessage = (event) => {
+        try {
+          const message = JSON.parse(event.data);
+          if (message.type !== 'init_candles') {
+            console.log('📨 WebSocket mensaje:', message.type, message.timeframe);
+          }
+          handleMessage(message);
+        } catch (error) {
+          console.error('❌ Error procesando mensaje:', error, event.data);
+        }
+      };
+      
+      ws.onerror = (error) => {
+        console.error('❌ Error WebSocket:', error);
+      };
+      
+      ws.onclose = () => {
+        console.log('🔌 WebSocket desconectado');
+        document.getElementById('connectionStatus').textContent = '● Desconectado';
+        document.getElementById('connectionStatus').className = 'status-badge status-disconnected';
+        
+        // Reconectar en 3 segundos
+        setTimeout(connectWebSocket, 3000);
+      };
+    }
+    
+    // Manejar mensajes del WebSocket
+    function handleMessage(msg) {
+      switch(msg.type) {
+        case 'init_candles':
+          // Bootstrap con velas iniciales
+          bootstrapTimeframe(msg.timeframe, msg.data || []);
+          break;
+          
+        case 'candle':
+        case 'candle_closed':
+          // Actualizar vela en tiempo real
+          if (msg.timeframe === currentTimeframe) {
+            updateCandle(msg.data);
+          } else {
+            // Actualizar también el array local de otros timeframes
+            const candle = sanitizeCandle(msg.data);
+            if (isValidCandle(candle) && bootstrapped[msg.timeframe]) {
+              const data = candleData[msg.timeframe];
+              const idx = data.findIndex(c => c.time === candle.time);
+              if (idx >= 0) {
+                data[idx] = candle;
+              } else {
+                data.push(candle);
+              }
+            }
+          }
+          break;
+          
+        case 'bot_signal':
+          updateBotSignals(msg.data);
+          break;
+      }
+    }
+    
+    // Sanitizar vela: convertir todo a números
+    function sanitizeCandle(raw) {
+      const c = {
+        time: Number(raw.time),
+        open: Number(raw.open),
+        high: Number(raw.high),
+        low: Number(raw.low),
+        close: Number(raw.close)
+      };
+      
+      // Asegurar que time es entero (epoch seconds)
+      if (!Number.isInteger(c.time)) {
+        c.time = Math.floor(c.time);
+      }
+      
+      return c;
+    }
+    
+    // Validar que vela es válida y finita
+    function isValidCandle(c) {
+      return c &&
+        Number.isInteger(c.time) &&
+        typeof c.open === 'number' && Number.isFinite(c.open) &&
+        typeof c.high === 'number' && Number.isFinite(c.high) &&
+        typeof c.low === 'number' && Number.isFinite(c.low) &&
+        typeof c.close === 'number' && Number.isFinite(c.close) &&
+        c.high >= c.low &&
+        c.high >= c.open &&
+        c.high >= c.close &&
+        c.low <= c.open &&
+        c.low <= c.close;
+    }
+    
+    // Bootstrap: cargar velas iniciales (usar setData UNA SOLA VEZ)
+    function bootstrapTimeframe(tf, candles) {
+      console.log(`🔵 Iniciando bootstrap ${tf} con ${candles.length} velas`);
+      
+      // RESET lastTime para evitar warnings de "fuera de orden"
+      lastTime[tf] = null;
+      
+      const sanitized = candles.map(sanitizeCandle).filter(isValidCandle);
+      sanitized.sort((a, b) => a.time - b.time);
+      
+      candleData[tf] = sanitized;
+      lastTime[tf] = sanitized.length > 0 ? sanitized[sanitized.length - 1].time : null;
+      bootstrapped[tf] = true;
+      
+      console.log(`✅ Bootstrap ${tf}: ${sanitized.length} velas cargadas`);
+      console.log(`   - Estado bootstrapped[${tf}]:`, bootstrapped[tf]);
+      console.log(`   - CandleData[${tf}] guardado:`, candleData[tf].length);
+      console.log(`   - lastTime[${tf}] establecido a:`, lastTime[tf]);
+      if (sanitized.length > 0) {
+        console.log(`   - Primera vela: time=${sanitized[0].time}`);
+        console.log(`   - Última vela: time=${sanitized[sanitized.length - 1].time}`);
+      }
+      
+      // Si es el timeframe actual, aplicar al chart
+      if (tf === currentTimeframe && candleSeries) {
+        candleSeries.setData(sanitized);
+        document.getElementById('candleCount').textContent = sanitized.length;
+        
+        // Mostrar precio inicial de la última vela
+        if (sanitized.length > 0) {
+          const lastCandle = sanitized[sanitized.length - 1];
+          const priceEl = document.getElementById('currentPrice');
+          if (priceEl) {
+            priceEl.textContent = lastCandle.close.toFixed(4);
+            priceEl.style.color = lastCandle.close >= lastCandle.open ? '#00ff7f' : '#ff5b5a';
+          }
+        }
+        
+        // Cargar señales del bot para este timeframe
+        loadBotSignals();
+      }
+    }
+    
+    // Actualizar vela: usar update() NO setData()
+    function updateCandle(raw) {
+      try {
+        const tf = currentTimeframe;
+        
+        console.log(`🔄 updateCandle recibido para ${tf}:`, raw);
+        
+        // Solo procesar si ya hicimos bootstrap
+        if (!bootstrapped[tf]) {
+          console.warn(`⚠️ Esperando bootstrap de ${tf}`);
+          return;
+        }
+        
+        const candle = sanitizeCandle(raw);
+        
+        if (!isValidCandle(candle)) {
+          if (!firstErrorLogged) {
+            console.error('❌ VELA INVÁLIDA:', raw, '→ sanitized:', candle);
+            firstErrorLogged = true;
+          }
+          return;
+        }
+        
+        // Verificar orden temporal
+        if (lastTime[tf] !== null && candle.time < lastTime[tf]) {
+          console.warn(`⚠️ Vela fuera de orden: ${candle.time} < ${lastTime[tf]}`);
+          return;
+        }
+        
+        // Usar update() - añade o actualiza automáticamente
+        if (candleSeries && tf === currentTimeframe) {
+          candleSeries.update(candle);
+          lastTime[tf] = candle.time;
+          
+          console.log(`✅ Vela actualizada en gráfico ${tf}:`, candle.close);
+          
+          // Actualizar precio actual
+          const priceEl = document.getElementById('currentPrice');
+          if (priceEl) {
+            priceEl.textContent = candle.close.toFixed(4);
+            priceEl.style.color = candle.close >= candle.open ? '#00ff7f' : '#ff5b5a';
+          }
+          
+          // Actualizar array local
+          const data = candleData[tf];
+          const idx = data.findIndex(c => c.time === candle.time);
+          if (idx >= 0) {
+            data[idx] = candle;
+          } else {
+            data.push(candle);
+            document.getElementById('candleCount').textContent = data.length;
+          }
+        }
+      } catch (error) {
+        if (!firstErrorLogged) {
+          console.error('❌ Error updateCandle:', error, raw);
+          firstErrorLogged = true;
+        }
+      }
+    }
+    
+    // Cambiar timeframe (usar setData solo al cambiar)
+    function switchTimeframe(tf) {
+      currentTimeframe = tf;
+      
+      console.log(`🔄 Intentando cambiar a ${tf}`);
+      console.log(`   - Bootstrapped[${tf}]:`, bootstrapped[tf]);
+      console.log(`   - CandleData[${tf}] length:`, candleData[tf] ? candleData[tf].length : 'undefined');
+      console.log(`   - CandleSeries exists:`, !!candleSeries);
+      
+      if (bootstrapped[tf] && candleSeries) {
+        const data = candleData[tf];
+        candleSeries.setData(data);
+        document.getElementById('candleCount').textContent = data.length;
+        console.log(`📊 Cambiado a ${tf}: ${data.length} velas`);
+        
+        // Actualizar precio actual con la última vela
+        if (data.length > 0) {
+          const lastCandle = data[data.length - 1];
+          const priceEl = document.getElementById('currentPrice');
+          if (priceEl) {
+            priceEl.textContent = lastCandle.close.toFixed(4);
+            priceEl.style.color = lastCandle.close >= lastCandle.open ? '#00ff7f' : '#ff5b5a';
+          }
+        }
+      } else {
+        console.warn(`⚠️ No se puede cambiar a ${tf}:`, {
+          bootstrapped: bootstrapped[tf],
+          hasCandleSeries: !!candleSeries,
+          dataLength: candleData[tf] ? candleData[tf].length : 0
+        });
+      }
+    }
+    
+    // Series para marcadores de señales
+    let signalMarkers = [];
+    
+    // DESHABILITADO: Sistema legacy de señales Tablero Binarias
+    // Nuevo sistema multi-par disponible en /signals
+    /*
+    async function loadBotSignals() {
+      try {
+        const symbol = 'EURUSD-OTC';
+        const timeframe = currentTimeframe === '1m' ? 'M1' : currentTimeframe === '5m' ? 'M5' : 'M15';
+        const response = await fetch(`/api/signals/tablero?symbol=${symbol}&timeframe=${timeframe}`);
+        if (!response.ok) {
+          updateBotSignals([]);
+          return;
+        }
+        const data = await response.json();
+        if (data.success && data.signals && data.signals.length > 0) {
+          updateBotSignals(data.signals);
+        } else {
+          updateBotSignals([]);
+        }
+      } catch (error) {
+        updateBotSignals([]);
+      }
+    }
+    
+    function updateBotSignals(signals) {
+      try {
+        if (!signals || !candleSeries) return;
+        const markers = signals.map(signal => ({
+          time: signal.time,
+          position: signal.direction === 'CALL' ? 'belowBar' : 'aboveBar',
+          color: signal.direction === 'CALL' ? '#089981' : '#f23645',
+          shape: signal.direction === 'CALL' ? 'arrowUp' : 'arrowDown',
+          text: `${signal.direction} ${Math.round(signal.confidence * 100)}%`
+        }));
+        candleSeries.setMarkers(markers);
+        signalMarkers = markers;
+      } catch (error) {
+        console.error('❌ Error updateBotSignals:', error);
+      }
+    }
+    */
+    
+    // Cambiar timeframe
+    document.querySelectorAll('.tf-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const tf = btn.dataset.tf;
+        
+        // Actualizar UI
+        document.querySelectorAll('.tf-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        document.getElementById('currentTF').textContent = tf;
+        
+        // Cambiar timeframe usando setData (una sola vez)
+        switchTimeframe(tf);
+        
+        // Cargar señales para el nuevo timeframe (DESHABILITADO - usar /signals)
+        // loadBotSignals();
+        
+        // Reiniciar countdown
+        updateCountdown();
+      });
+    });
+    
+    // Countdown para próxima vela (UTC)
+    function updateCountdown() {
+      const intervals = { '1m': 60, '5m': 300, '15m': 900 };
+      const intervalSec = intervals[currentTimeframe];
+      
+      if (countdownInterval) clearInterval(countdownInterval);
+      
+      countdownInterval = setInterval(() => {
+        // Obtener tiempo actual en UTC
+        const now = Math.floor(Date.now() / 1000);
+        const secondsLeft = intervalSec - (now % intervalSec);
+        
+        const minutes = Math.floor(secondsLeft / 60);
+        const seconds = secondsLeft % 60;
+        const timeString = `${minutes}:${seconds.toString().padStart(2, '0')}`;
+        
+        const countdownEl = document.getElementById('countdown');
+        countdownEl.textContent = timeString;
+        
+        if (secondsLeft <= 10) {
+          countdownEl.classList.add('warning');
+        } else {
+          countdownEl.classList.remove('warning');
+        }
+      }, 1000);
+    }
+    
+    // Inicializar
+    initChart();
+    connectWebSocket();
+    updateCountdown();
+  </script>
+</body>
+</html>

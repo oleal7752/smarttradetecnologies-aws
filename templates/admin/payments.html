@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagos y Suscripciones - Admin</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Courier New', Consolas, Monaco, monospace;
+            background: #000000;
+            color: #00ffff;
+            min-height: 100vh;
+            perspective: 1500px;
+            padding: 40px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .header {
+            background: rgba(0, 255, 255, 0.03);
+            border: 2px solid rgba(0, 255, 255, 0.2);
+            border-radius: 20px;
+            padding: 30px;
+            backdrop-filter: blur(40px);
+            transform: translateZ(30px);
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .title {
+            font-size: 1.8rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+
+        .back-btn {
+            background: rgba(0, 255, 255, 0.1);
+            border: 2px solid rgba(0, 255, 255, 0.3);
+            color: #00ffff;
+            padding: 12px 30px;
+            border-radius: 50px;
+            cursor: pointer;
+            text-decoration: none;
+            font-family: 'Courier New', Consolas, Monaco, monospace;
+            text-transform: uppercase;
+            transition: all 0.3s;
+        }
+
+        .info-section {
+            background: rgba(0, 255, 255, 0.02);
+            border: 2px solid rgba(0, 255, 255, 0.2);
+            border-radius: 20px;
+            padding: 40px;
+            backdrop-filter: blur(40px);
+            text-align: center;
+        }
+
+        .info-title {
+            font-size: 1.5rem;
+            color: #00ffff;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .info-text {
+            color: rgba(0, 255, 255, 0.6);
+            line-height: 1.8;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .coming-soon {
+            font-size: 4rem;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="title">💳 PAGOS Y SUSCRIPCIONES</div>
+            <a href="/admin" class="back-btn">⬅ VOLVER</a>
+        </div>
+
+        <div class="info-section">
+            <div class="coming-soon">🚧</div>
+            <div class="info-title">SECCIÓN EN DESARROLLO</div>
+            <div class="info-text">
+                Esta sección mostrará el historial completo de pagos, suscripciones activas, 
+                ingresos totales y métricas de conversión. Actualmente, puedes ver los ingresos 
+                totales en el panel principal de administración.
+            </div>
+        </div>
+    </div>
+</body>
+</html>

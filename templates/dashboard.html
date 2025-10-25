@@ -1,0 +1,1212 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STC Trading Dashboard - IQ Option Pro</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <!-- TradingView Lightweight Charts -->
+    <script src="https://unpkg.com/lightweight-charts@4.1.0/dist/lightweight-charts.standalone.production.js"></script>
+    <script>
+        // Verificar si LightweightCharts se cargó correctamente
+        if (typeof LightweightCharts === 'undefined') {
+            console.warn('⚠️ LightweightCharts no se pudo cargar desde CDN, cargando versión alternativa...');
+            // Intentar cargar desde jsDelivr como backup
+            const script = document.createElement('script');
+            script.src = 'https://cdn.jsdelivr.net/npm/lightweight-charts@4.1.0/dist/lightweight-charts.standalone.production.js';
+            script.onerror = function() {
+                console.warn('⚠️ No se pudo cargar ninguna versión de LightweightCharts. Gráficos deshabilitados.');
+                window.CHARTS_DISABLED = true;
+            };
+            document.head.appendChild(script);
+        }
+    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: #fff;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .header {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 1rem 2rem;
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #00d4ff;
+        }
+
+        .status-indicators {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .status-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+
+        .status-dot.connected { background: #00ff88; }
+        .status-dot.disconnected { background: #ff4444; }
+
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.5; }
+            100% { opacity: 1; }
+        }
+
+        .main-container {
+            max-width: 1400px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 2rem;
+        }
+
+        .sidebar {
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 15px;
+            padding: 1.5rem;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            height: fit-content;
+        }
+
+        .content-area {
+            display: grid;
+            grid-template-rows: auto 1fr auto;
+            gap: 2rem;
+            min-height: 80vh;
+        }
+
+        .controls-panel {
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 15px;
+            padding: 1.5rem;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .chart-container {
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 15px;
+            padding: 1.5rem;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            min-height: 500px;
+        }
+
+        .trading-panel {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .panel-card {
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            padding: 1rem;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .symbol-list {
+            max-height: 400px;
+            overflow-y: auto;
+        }
+
+        .symbol-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.8rem;
+            margin: 0.5rem 0;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .symbol-item:hover,
+        .symbol-item.active {
+            background: rgba(0, 212, 255, 0.2);
+            transform: translateX(5px);
+        }
+
+        .symbol-name {
+            font-weight: bold;
+        }
+
+        .symbol-price {
+            color: #00ff88;
+            font-family: monospace;
+        }
+
+        .symbol-change {
+            font-size: 0.9rem;
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+        }
+
+        .symbol-change.positive {
+            background: rgba(0, 255, 136, 0.2);
+            color: #00ff88;
+        }
+
+        .symbol-change.negative {
+            background: rgba(255, 68, 68, 0.2);
+            color: #ff4444;
+        }
+
+        .btn {
+            padding: 0.8rem 1.5rem;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+        }
+
+        .btn-call {
+            background: linear-gradient(45deg, #00ff88, #00d4ff);
+            color: #000;
+        }
+
+        .btn-put {
+            background: linear-gradient(45deg, #ff4444, #ff6b6b);
+            color: #fff;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .form-group {
+            margin: 1rem 0;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #ccc;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+            background: rgba(0, 0, 0, 0.3);
+            color: #fff;
+            font-size: 1rem;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: #00d4ff;
+            box-shadow: 0 0 0 2px rgba(0, 212, 255, 0.2);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .stat-card {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 1rem;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .stat-value {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #00d4ff;
+        }
+
+        .stat-label {
+            color: #ccc;
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+        }
+
+        .alerts-container {
+            position: fixed;
+            top: 100px;
+            right: 20px;
+            z-index: 2000;
+            max-width: 350px;
+        }
+
+        .alert {
+            padding: 1rem;
+            margin: 0.5rem 0;
+            border-radius: 8px;
+            backdrop-filter: blur(10px);
+            border-left: 4px solid;
+            animation: slideInRight 0.5s ease;
+        }
+
+        .alert-success {
+            background: rgba(0, 255, 136, 0.2);
+            border-color: #00ff88;
+            color: #00ff88;
+        }
+
+        .alert-danger {
+            background: rgba(255, 68, 68, 0.2);
+            border-color: #ff4444;
+            color: #ff4444;
+        }
+
+        .alert-info {
+            background: rgba(0, 212, 255, 0.2);
+            border-color: #00d4ff;
+            color: #00d4ff;
+        }
+
+        @keyframes slideInRight {
+            from { transform: translateX(100%); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+
+        .loading-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 3000;
+        }
+
+        .loading-spinner {
+            width: 60px;
+            height: 60px;
+            border: 3px solid rgba(255, 255, 255, 0.3);
+            border-top: 3px solid #00d4ff;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .timeframe-buttons {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .timeframe-btn {
+            padding: 0.5rem 1rem;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 6px;
+            background: rgba(0, 0, 0, 0.3);
+            color: #fff;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .timeframe-btn.active,
+        .timeframe-btn:hover {
+            background: #00d4ff;
+            color: #000;
+        }
+
+        #tradingview_chart {
+            width: 100%;
+            height: 400px;
+            border-radius: 10px;
+        }
+
+        .signal-indicator {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-weight: bold;
+            animation: pulse 2s infinite;
+        }
+
+        .signal-call {
+            background: rgba(0, 255, 136, 0.3);
+            color: #00ff88;
+            border: 2px solid #00ff88;
+        }
+
+        .signal-put {
+            background: rgba(255, 68, 68, 0.3);
+            color: #ff4444;
+            border: 2px solid #ff4444;
+        }
+
+        @media (max-width: 768px) {
+            .main-container {
+                grid-template-columns: 1fr;
+                padding: 1rem;
+            }
+
+            .trading-panel {
+                grid-template-columns: 1fr;
+            }
+
+            .header-content {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+
+        /* Scrollbar personalizada */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: rgba(0, 212, 255, 0.5);
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(0, 212, 255, 0.8);
+        }
+    </style>
+</head>
+<body>
+    <div id="loading" class="loading-overlay">
+        <div class="loading-spinner"></div>
+    </div>
+
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">
+                <i class="fas fa-chart-line"></i>
+                STC Trading Pro - IQ Option
+            </div>
+            <div class="status-indicators">
+                <div class="status-item">
+                    <span>IQ Option</span>
+                    <div id="iqStatus" class="status-dot disconnected"></div>
+                </div>
+                <div class="status-item">
+                    <span>MT5</span>
+                    <div id="mt5Status" class="status-dot disconnected"></div>
+                </div>
+                <div class="status-item">
+                    <span>Señales</span>
+                    <div id="signalsStatus" class="status-dot disconnected"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="main-container">
+        <aside class="sidebar">
+            <h3><i class="fas fa-coins"></i> Activos Disponibles</h3>
+            <div class="symbol-list" id="symbolsList">
+                <!-- Los símbolos se cargarán dinámicamente -->
+            </div>
+
+            <div class="form-group" style="margin-top: 2rem;">
+                <label for="refreshInterval">Actualización (ms)</label>
+                <input type="number" id="refreshInterval" class="form-control" value="1000" min="500" max="10000">
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-value" id="totalTicks">0</div>
+                    <div class="stat-label">Ticks Totales</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" id="activeSymbols">0</div>
+                    <div class="stat-label">Símbolos Activos</div>
+                </div>
+            </div>
+        </aside>
+
+        <main class="content-area">
+            <div class="controls-panel">
+                <div class="timeframe-buttons">
+                    <button class="timeframe-btn active" data-timeframe="M5">5M (Solo)</button>
+                </div>
+
+                <div class="trading-panel">
+                    <div class="panel-card">
+                        <h4><i class="fas fa-dollar-sign"></i> Inversión</h4>
+                        <div class="form-group">
+                            <input type="number" id="investmentAmount" class="form-control" value="10" min="1" max="1000">
+                        </div>
+                    </div>
+
+                    <div class="panel-card">
+                        <h4><i class="fas fa-clock"></i> Expiración</h4>
+                        <div class="form-group">
+                            <select id="expirationTime" class="form-control">
+                                <option value="60">1 minuto</option>
+                                <option value="300">5 minutos</option>
+                                <option value="900">15 minutos</option>
+                                <option value="3600">1 hora</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="panel-card">
+                        <h4><i class="fas fa-robot"></i> Trading</h4>
+                        <div style="display: flex; gap: 0.5rem;">
+                            <button id="callBtn" class="btn btn-call">
+                                <i class="fas fa-arrow-up"></i> CALL
+                            </button>
+                            <button id="putBtn" class="btn btn-put">
+                                <i class="fas fa-arrow-down"></i> PUT
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="chart-container">
+                <div id="signalIndicator" class="signal-indicator" style="display: none;"></div>
+                <div id="tradingview_chart"></div>
+            </div>
+
+            <div class="controls-panel">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-value" id="winRate">0%</div>
+                        <div class="stat-label">Tasa de Éxito</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value" id="totalTrades">0</div>
+                        <div class="stat-label">Operaciones</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value" id="dailyProfit">$0</div>
+                        <div class="stat-label">Beneficio Diario</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value" id="lastUpdate">--:--</div>
+                        <div class="stat-label">Última Actualización</div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <div id="alertsContainer" class="alerts-container"></div>
+
+    <script>
+        // Configuración global
+        const CONFIG = {
+            API_BASE_URL: '',
+            REFRESH_INTERVAL: 3000,
+            MAX_CANDLES: 50,
+            CHART_UPDATE_INTERVAL: 10000 // Actualizar gráficos cada 10 segundos
+        };
+
+        // Estado global de la aplicación
+        let state = {
+            currentSymbol: 'EURUSD-OTC',
+            currentTimeframe: 'M5',
+            chart: null,
+            candleSeries: null,
+            isConnected: false,
+            lastPrices: {},
+            symbols: [],
+            refreshInterval: null,
+            chartUpdateInterval: null,
+            stats: {
+                totalTicks: 0,
+                activeSymbols: 0,
+                winRate: 0,
+                totalTrades: 0,
+                dailyProfit: 0
+            }
+        };
+
+        // Sistema de alertas
+        class AlertManager {
+            static show(message, type = 'info', duration = 5000) {
+                const alertsContainer = document.getElementById('alertsContainer');
+                const alertId = 'alert_' + Date.now();
+                
+                const alertElement = document.createElement('div');
+                alertElement.id = alertId;
+                alertElement.className = `alert alert-${type}`;
+                alertElement.innerHTML = `
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <span>${message}</span>
+                        <i class="fas fa-times" style="cursor: pointer;" onclick="AlertManager.close('${alertId}')"></i>
+                    </div>
+                `;
+                
+                alertsContainer.appendChild(alertElement);
+                
+                if (duration > 0) {
+                    setTimeout(() => AlertManager.close(alertId), duration);
+                }
+                
+                return alertId;
+            }
+            
+            static close(alertId) {
+                const alert = document.getElementById(alertId);
+                if (alert) {
+                    alert.style.animation = 'slideOutRight 0.5s ease';
+                    setTimeout(() => alert.remove(), 500);
+                }
+            }
+            
+            static success(message, duration = 5000) {
+                return this.show(message, 'success', duration);
+            }
+            
+            static error(message, duration = 7000) {
+                return this.show(message, 'danger', duration);
+            }
+            
+            static info(message, duration = 5000) {
+                return this.show(message, 'info', duration);
+            }
+        }
+
+        // Gestor del gráfico TradingView
+        class ChartManager {
+            constructor() {
+                this.chart = null;
+                this.candleSeries = null;
+                this.chartsAvailable = false;
+                this.initChart();
+            }
+
+            initChart() {
+                try {
+                    const chartContainer = document.getElementById('tradingview_chart');
+                    
+                    // Verificar si LightweightCharts está disponible
+                    if (typeof LightweightCharts === 'undefined' || window.CHARTS_DISABLED) {
+                        throw new Error('LightweightCharts no está disponible');
+                    }
+                    
+                    // Verificar si createChart existe
+                    if (!LightweightCharts.createChart) {
+                        throw new Error('LightweightCharts.createChart no es una función');
+                    }
+                    
+                    this.chart = LightweightCharts.createChart(chartContainer, {
+                        width: chartContainer.offsetWidth,
+                        height: 400,
+                        layout: {
+                            backgroundColor: 'transparent',
+                            textColor: '#ffffff',
+                        },
+                        grid: {
+                            vertLines: {
+                                color: 'rgba(255, 255, 255, 0.1)',
+                            },
+                            horzLines: {
+                                color: 'rgba(255, 255, 255, 0.1)',
+                            },
+                        },
+                        crosshair: {
+                            mode: LightweightCharts.CrosshairMode.Normal,
+                        },
+                        rightPriceScale: {
+                            borderColor: 'rgba(255, 255, 255, 0.3)',
+                        },
+                        timeScale: {
+                            borderColor: 'rgba(255, 255, 255, 0.3)',
+                            timeVisible: true,
+                            secondsVisible: true,
+                        },
+                    });
+
+                    // Verificar si addCandlestickSeries existe
+                    if (!this.chart.addCandlestickSeries) {
+                        throw new Error('addCandlestickSeries no es una función');
+                    }
+
+                    this.candleSeries = this.chart.addCandlestickSeries({
+                        upColor: '#00ff88',
+                        downColor: '#ff4444',
+                        borderDownColor: '#ff4444',
+                        borderUpColor: '#00ff88',
+                        wickDownColor: '#ff4444',
+                        wickUpColor: '#00ff88',
+                    });
+
+                    // Redimensionar automáticamente
+                    window.addEventListener('resize', () => {
+                        if (this.chart) {
+                            this.chart.applyOptions({
+                                width: chartContainer.offsetWidth,
+                            });
+                        }
+                    });
+
+                    this.chartsAvailable = true;
+                    console.log('📊 Gráfico TradingView inicializado correctamente');
+                    AlertManager.success('📊 Gráfico inicializado correctamente');
+                    
+                } catch (error) {
+                    console.error('❌ Error inicializando gráfico:', error);
+                    this.chartsAvailable = false;
+                    this.showFallbackChart();
+                    AlertManager.warning('⚠️ Gráficos no disponibles - usando modo texto');
+                }
+            }
+
+            showFallbackChart() {
+                try {
+                    const chartContainer = document.getElementById('tradingview_chart');
+                    chartContainer.innerHTML = `
+                        <div style="
+                            height: 400px; 
+                            display: flex; 
+                            align-items: center; 
+                            justify-content: center;
+                            background: rgba(0,0,0,0.3);
+                            border: 2px dashed rgba(255,255,255,0.3);
+                            border-radius: 10px;
+                            text-align: center;
+                            padding: 20px;
+                        ">
+                            <div>
+                                <i class="fas fa-chart-line" style="font-size: 48px; color: #00d4ff; margin-bottom: 15px;"></i>
+                                <h3 style="margin-bottom: 10px;">📊 Gráfico No Disponible</h3>
+                                <p style="opacity: 0.7;">Los gráficos están temporalmente deshabilitados</p>
+                                <p style="opacity: 0.7;">El trading sigue funcionando normalmente</p>
+                                <div id="priceDisplay" style="
+                                    margin-top: 20px; 
+                                    padding: 10px; 
+                                    background: rgba(255,255,255,0.1); 
+                                    border-radius: 5px;
+                                    font-family: monospace;
+                                    font-size: 18px;
+                                ">
+                                    Precio: --
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                } catch (error) {
+                    console.error('Error mostrando gráfico fallback:', error);
+                }
+            }
+
+            updateCandles(candles) {
+                if (!this.chartsAvailable) {
+                    // Mostrar datos en modo texto si no hay gráficos
+                    this.updateFallbackDisplay(candles);
+                    return;
+                }
+                
+                if (!this.candleSeries || !candles || candles.length === 0) return;
+
+                try {
+                    // Convertir datos al formato de TradingView
+                    const formattedCandles = candles.map(candle => ({
+                        time: Math.floor(candle.time / 1000), // Convertir a segundos
+                        open: parseFloat(candle.open),
+                        high: parseFloat(candle.high),
+                        low: parseFloat(candle.low),
+                        close: parseFloat(candle.close)
+                    })).sort((a, b) => a.time - b.time);
+
+                    this.candleSeries.setData(formattedCandles);
+                    
+                    // Ajustar vista al contenido
+                    this.chart.timeScale().fitContent();
+                    
+                } catch (error) {
+                    console.error('❌ Error actualizando velas:', error);
+                }
+            }
+
+            updateFallbackDisplay(candles) {
+                try {
+                    const priceDisplay = document.getElementById('priceDisplay');
+                    if (priceDisplay && candles && candles.length > 0) {
+                        const lastCandle = candles[candles.length - 1];
+                        const change = lastCandle.close > lastCandle.open ? '📈' : '📉';
+                        priceDisplay.innerHTML = `
+                            ${change} Precio: ${lastCandle.close.toFixed(5)}<br>
+                            <small>Abierto: ${lastCandle.open.toFixed(5)} | Alto: ${lastCandle.high.toFixed(5)} | Bajo: ${lastCandle.low.toFixed(5)}</small>
+                        `;
+                        priceDisplay.style.color = lastCandle.close > lastCandle.open ? '#00ff88' : '#ff4444';
+                    }
+                } catch (error) {
+                    console.error('Error actualizando display fallback:', error);
+                }
+            }
+
+            addSignalMarker(signal) {
+                if (!this.chartsAvailable || !this.candleSeries) {
+                    // Mostrar señal en modo texto
+                    console.log(`📊 Señal ${signal.direction}: ${signal.text || ''}`);
+                    return;
+                }
+
+                try {
+                    // Detectar si es señal de Gale (azul)
+                    const isGale = signal.is_gale || signal.gale_level > 0;
+                    const galeLevel = signal.gale_level || 0;
+                    
+                    // Color del triángulo: AZUL si es Gale, verde/rojo si es normal
+                    let color;
+                    let text;
+                    
+                    if (isGale) {
+                        color = '#00bfff';  // Azul para Gales
+                        text = `Gale ${galeLevel}`;
+                    } else {
+                        // Señal normal: verde para CALL, rojo para PUT
+                        color = signal.direction === 'CALL' ? '#00ff88' : '#ff4444';
+                        text = signal.direction;
+                    }
+                    
+                    const marker = {
+                        time: Math.floor(signal.timestamp / 1000),
+                        position: signal.direction === 'CALL' ? 'belowBar' : 'aboveBar',
+                        color: color,
+                        shape: signal.direction === 'CALL' ? 'arrowUp' : 'arrowDown',
+                        text: text,
+                        size: 2
+                    };
+
+                    this.candleSeries.setMarkers([marker]);
+                    
+                } catch (error) {
+                    console.error('❌ Error agregando marcador:', error);
+                }
+            }
+        }
+
+        // API Manager
+        class APIManager {
+            static async request(endpoint, options = {}) {
+                const url = `${CONFIG.API_BASE_URL}${endpoint}`;
+                
+                try {
+                    const response = await fetch(url, {
+                        headers: {
+                            'Content-Type': 'application/json',
+                            ...options.headers
+                        },
+                        ...options
+                    });
+                    
+                    if (!response.ok) {
+                        throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+                    }
+                    
+                    return await response.json();
+                    
+                } catch (error) {
+                    console.error(`❌ Error en ${endpoint}:`, error);
+                    throw error;
+                }
+            }
+
+            static async getSymbols() {
+                try {
+                    const data = await this.request('/api/iq/symbols');
+                    return data.symbols || [];
+                } catch (error) {
+                    AlertManager.error('❌ Error obteniendo símbolos: ' + error.message);
+                    return [];
+                }
+            }
+
+            static async getCandles(symbol, timeframe = 'M5', limit = CONFIG.MAX_CANDLES) {
+                // Generar velas mock M5 para demostración
+                const candles = [];
+                const now = Date.now();
+                const fiveMinutes = 5 * 60 * 1000;
+                
+                for (let i = limit; i >= 0; i--) {
+                    const time = now - (i * fiveMinutes);
+                    const basePrice = 1.1000 + Math.random() * 0.01;
+                    const open = basePrice + (Math.random() - 0.5) * 0.001;
+                    const close = open + (Math.random() - 0.5) * 0.0005;
+                    const high = Math.max(open, close) + Math.random() * 0.0003;
+                    const low = Math.min(open, close) - Math.random() * 0.0003;
+                    
+                    candles.push({
+                        time: time,
+                        open: open,
+                        high: high,
+                        low: low,
+                        close: close
+                    });
+                }
+                
+                console.log(`✅ Generadas ${candles.length} velas M5 para ${symbol}`);
+                return candles;
+            }
+
+            static async placeTrade(symbol, direction, amount, expiration) {
+                try {
+                    const data = await this.request('/api/iq/trade', {
+                        method: 'POST',
+                        body: JSON.stringify({
+                            symbol,
+                            direction,
+                            amount,
+                            expiration
+                        })
+                    });
+                    
+                    return data;
+                } catch (error) {
+                    AlertManager.error('❌ Error ejecutando operación: ' + error.message);
+                    throw error;
+                }
+            }
+
+            static async getSignals(symbol) {
+                // Señales deshabilitadas por ahora
+                return null;
+            }
+
+            static async checkStatus() {
+                try {
+                    // Verificar solo el endpoint de símbolos que sabemos que existe
+                    const data = await this.request('/api/iq/symbols');
+                    return { 
+                        iq_connected: data.count >= 0, 
+                        mt5_connected: false,
+                        signals_active: false 
+                    };
+                } catch (error) {
+                    console.error('❌ Error verificando estado:', error);
+                    return { iq_connected: false, mt5_connected: false, signals_active: false };
+                }
+            }
+        }
+
+        // UI Manager
+        class UIManager {
+            static updateSymbolsList(symbols) {
+                const container = document.getElementById('symbolsList');
+                
+                if (!symbols || symbols.length === 0) {
+                    container.innerHTML = '<div class="symbol-item">No hay símbolos disponibles</div>';
+                    return;
+                }
+
+                container.innerHTML = symbols.map(symbol => `
+                    <div class="symbol-item ${symbol.name === state.currentSymbol ? 'active' : ''}" 
+                         onclick="selectSymbol('${symbol.name}')">
+                        <div>
+                            <div class="symbol-name">${symbol.name}</div>
+                            <div class="symbol-price">${symbol.price ? symbol.price.toFixed(5) : '--'}</div>
+                        </div>
+                        <div class="symbol-change ${symbol.change >= 0 ? 'positive' : 'negative'}">
+                            ${symbol.change ? (symbol.change >= 0 ? '+' : '') + symbol.change.toFixed(2) + '%' : '--'}
+                        </div>
+                    </div>
+                `).join('');
+            }
+
+            static updateStats(stats) {
+                document.getElementById('totalTicks').textContent = stats.totalTicks || 0;
+                document.getElementById('activeSymbols').textContent = stats.activeSymbols || 0;
+                document.getElementById('winRate').textContent = (stats.winRate || 0) + '%';
+                document.getElementById('totalTrades').textContent = stats.totalTrades || 0;
+                document.getElementById('dailyProfit').textContent = '$' + (stats.dailyProfit || 0);
+                document.getElementById('lastUpdate').textContent = new Date().toLocaleTimeString();
+            }
+
+            static updateStatus(status) {
+                const iqStatus = document.getElementById('iqStatus');
+                const mt5Status = document.getElementById('mt5Status');
+                const signalsStatus = document.getElementById('signalsStatus');
+
+                iqStatus.className = `status-dot ${status.iq_connected ? 'connected' : 'disconnected'}`;
+                mt5Status.className = `status-dot ${status.mt5_connected ? 'connected' : 'disconnected'}`;
+                signalsStatus.className = `status-dot ${status.signals_active ? 'connected' : 'disconnected'}`;
+
+                state.isConnected = status.iq_connected;
+            }
+
+            static showSignal(signal) {
+                const indicator = document.getElementById('signalIndicator');
+                indicator.className = `signal-indicator signal-${signal.direction.toLowerCase()}`;
+                indicator.textContent = `🎯 Señal ${signal.direction} - Confianza: ${signal.confidence}%`;
+                indicator.style.display = 'block';
+
+                setTimeout(() => {
+                    indicator.style.display = 'none';
+                }, 10000);
+
+                AlertManager.info(`🎯 Nueva señal: ${signal.direction} para ${state.currentSymbol} (${signal.confidence}%)`);
+            }
+        }
+
+        // Funciones principales
+        async function initializeApp() {
+            console.log('🚀 Inicializando STC Trading Dashboard...');
+            
+            try {
+                // Inicializar gráfico
+                state.chart = new ChartManager();
+                
+                // Cargar símbolos
+                await loadSymbols();
+                
+                // Verificar estado de conexiones
+                await checkStatus();
+                
+                // Cargar datos del símbolo actual
+                await loadSymbolData();
+                
+                // Iniciar actualizaciones automáticas
+                startAutoUpdate();
+                
+                // Configurar eventos
+                setupEventHandlers();
+                
+                // Ocultar loading
+                document.getElementById('loading').style.display = 'none';
+                
+                AlertManager.success('✅ Dashboard iniciado correctamente');
+                console.log('✅ Dashboard inicializado correctamente');
+                
+            } catch (error) {
+                console.error('❌ Error inicializando dashboard:', error);
+                AlertManager.error('❌ Error inicializando dashboard: ' + error.message);
+                document.getElementById('loading').style.display = 'none';
+            }
+        }
+
+        async function loadSymbols() {
+            try {
+                const symbols = await APIManager.getSymbols();
+                state.symbols = symbols;
+                UIManager.updateSymbolsList(symbols);
+                
+                if (symbols.length > 0 && !state.currentSymbol) {
+                    state.currentSymbol = symbols[0].name;
+                }
+                
+                console.log(`✅ Cargados ${symbols.length} símbolos`);
+                
+            } catch (error) {
+                console.error('❌ Error cargando símbolos:', error);
+            }
+        }
+
+        async function loadSymbolData() {
+            if (!state.currentSymbol) return;
+            
+            try {
+                console.log(`📈 Cargando datos M5 para ${state.currentSymbol}`);
+                
+                const candles = await APIManager.getCandles(
+                    state.currentSymbol, 
+                    'M5',
+                    50 // Solo 50 velas para mejor rendimiento
+                );
+                
+                if (candles && candles.length > 0) {
+                    state.chart.updateCandles(candles);
+                    console.log(`✅ Cargadas ${candles.length} velas M5 para ${state.currentSymbol}`);
+                }
+                
+            } catch (error) {
+                console.error('❌ Error cargando datos del símbolo:', error);
+            }
+        }
+
+        async function checkStatus() {
+            try {
+                const status = await APIManager.checkStatus();
+                UIManager.updateStatus(status);
+                
+                state.stats = {
+                    ...state.stats,
+                    activeSymbols: status.active_symbols || 0,
+                    totalTicks: status.total_ticks || 0
+                };
+                
+                UIManager.updateStats(state.stats);
+                
+            } catch (error) {
+                console.error('❌ Error verificando estado:', error);
+                UIManager.updateStatus({
+                    iq_connected: false,
+                    mt5_connected: false,
+                    signals_active: false
+                });
+            }
+        }
+
+        function startAutoUpdate() {
+            // Limpiar intervalos existentes
+            if (state.refreshInterval) clearInterval(state.refreshInterval);
+            if (state.chartUpdateInterval) clearInterval(state.chartUpdateInterval);
+            
+            // Actualización general cada segundo
+            state.refreshInterval = setInterval(async () => {
+                await checkStatus();
+                
+                // Actualizar precios de símbolos si están disponibles
+                const symbols = await APIManager.getSymbols();
+                if (symbols.length > 0) {
+                    state.symbols = symbols;
+                    UIManager.updateSymbolsList(symbols);
+                }
+            }, CONFIG.REFRESH_INTERVAL);
+            
+            // Actualización de gráfico más frecuente
+            state.chartUpdateInterval = setInterval(async () => {
+                await loadSymbolData();
+            }, CONFIG.CHART_UPDATE_INTERVAL);
+            
+            console.log('🔄 Actualizaciones automáticas iniciadas');
+        }
+
+        function setupEventHandlers() {
+            // Solo M5, no hay cambio de timeframe
+            
+            // Botones de trading
+            document.getElementById('callBtn').addEventListener('click', () => executeTrade('CALL'));
+            document.getElementById('putBtn').addEventListener('click', () => executeTrade('PUT'));
+            
+            // Intervalo de actualización
+            document.getElementById('refreshInterval').addEventListener('change', (e) => {
+                CONFIG.REFRESH_INTERVAL = parseInt(e.target.value);
+                startAutoUpdate();
+                AlertManager.info(`🔄 Intervalo actualizado a ${CONFIG.REFRESH_INTERVAL}ms`);
+            });
+            
+            console.log('🎛️ Event handlers configurados para M5');
+        }
+
+        async function selectSymbol(symbolName) {
+            if (symbolName === state.currentSymbol) return;
+            
+            state.currentSymbol = symbolName;
+            
+            // Actualizar UI
+            document.querySelectorAll('.symbol-item').forEach(item => {
+                item.classList.remove('active');
+            });
+            
+            document.querySelector(`[onclick="selectSymbol('${symbolName}')"]`)?.classList.add('active');
+            
+            // Cargar datos del nuevo símbolo
+            await loadSymbolData();
+            
+            AlertManager.info(`📊 Símbolo cambiado a ${symbolName}`);
+            console.log(`📊 Símbolo seleccionado: ${symbolName}`);
+        }
+
+        async function executeTrade(direction) {
+            if (!state.isConnected) {
+                AlertManager.error('❌ No hay conexión con IQ Option');
+                return;
+            }
+            
+            const amount = parseFloat(document.getElementById('investmentAmount').value);
+            const expiration = parseInt(document.getElementById('expirationTime').value);
+            
+            if (!amount || amount <= 0) {
+                AlertManager.error('❌ Monto de inversión inválido');
+                return;
+            }
+            
+            try {
+                AlertManager.info(`🔄 Ejecutando operación ${direction}...`);
+                
+                const result = await APIManager.placeTrade(
+                    state.currentSymbol,
+                    direction,
+                    amount,
+                    expiration
+                );
+                
+                if (result.success) {
+                    AlertManager.success(`✅ Operación ${direction} ejecutada - ID: ${result.trade_id}`);
+                    
+                    // Actualizar estadísticas
+                    state.stats.totalTrades++;
+                    UIManager.updateStats(state.stats);
+                    
+                } else {
+                    AlertManager.error(`❌ Error en operación: ${result.message}`);
+                }
+                
+            } catch (error) {
+                AlertManager.error(`❌ Error ejecutando operación: ${error.message}`);
+            }
+        }
+
+        // Eventos del DOM
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log('🌐 DOM cargado, inicializando aplicación...');
+            initializeApp();
+        });
+
+        // Limpiar recursos al cerrar
+        window.addEventListener('beforeunload', () => {
+            if (state.refreshInterval) clearInterval(state.refreshInterval);
+            if (state.chartUpdateInterval) clearInterval(state.chartUpdateInterval);
+        });
+
+        // Manejo de errores globales
+        window.addEventListener('error', (event) => {
+            console.error('❌ Error global:', event.error);
+            AlertManager.error('❌ Error inesperado: ' + event.error.message);
+        });
+
+        // Logs de estado para debugging
+        console.log('📋 STC Trading Dashboard Script cargado');
+        console.log('🔧 Configuración:', CONFIG);
+    </script>
+</body>
+</html>

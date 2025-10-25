@@ -1,0 +1,2659 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <title>STC Trading • IQ Option • Dashboard Pro</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    :root {
+      --bg: #000000; --text: #e0e7ff; --muted: #94a3b8;
+      --ok: #10b981; --warn: #f59e0b; --err: #ef4444; 
+      --buy: #10b981; --sell: #ef4444; --primary: #0066ff;
+      --neon-blue: #0066ff; --neon-cyan: #00d4ff;
+      --glass: rgba(255, 255, 255, 0.02);
+      --glass-border: rgba(0, 212, 255, 0.15);
+    }
+    html, body { 
+      height: 100%; margin: 0; 
+      background: #000000; 
+      color: var(--text); 
+      font-family: 'Courier New', 'Consolas', 'Monaco', monospace;
+      perspective: 1500px;
+    }
+    .app { 
+      display: grid; 
+      grid-template-columns: 1fr 380px; 
+      grid-template-rows: auto 1fr; 
+      gap: 16px; 
+      height: 100%; 
+      padding: 16px; 
+      box-sizing: border-box; 
+      transform-style: preserve-3d;
+    }
+    header { 
+      grid-column: 1 / span 2; 
+      display: flex; 
+      align-items: center; 
+      gap: 10px; 
+      flex-wrap: wrap; 
+      background: var(--glass); 
+      backdrop-filter: blur(30px) saturate(150%); 
+      padding: 14px 18px; 
+      border-radius: 16px; 
+      border: 1px solid var(--glass-border); 
+      box-shadow: 
+        0 8px 32px rgba(0, 0, 0, 0.5),
+        0 0 0 1px rgba(0, 212, 255, 0.1) inset,
+        0 20px 40px rgba(0, 102, 255, 0.1);
+      transform: translateZ(20px);
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    header:hover {
+      transform: translateZ(25px) translateY(-2px);
+      box-shadow: 
+        0 12px 48px rgba(0, 0, 0, 0.6),
+        0 0 0 1px rgba(0, 212, 255, 0.3) inset,
+        0 24px 60px rgba(0, 102, 255, 0.2);
+    }
+    header h1 { font-size: 15px; font-weight: 700; margin: 0; letter-spacing: 0.5px; text-transform: uppercase; }
+    
+    input[type="text"], input[type="password"], select, input[type="number"] { 
+      background: var(--glass); 
+      color: var(--text); 
+      border: 1px solid var(--glass-border); 
+      padding: 7px 10px; 
+      border-radius: 10px; 
+      backdrop-filter: blur(30px); 
+      transition: all 0.3s; 
+      font-family: inherit;
+    }
+    input[type="text"]:focus, input[type="password"]:focus, select:focus, input[type="number"]:focus { 
+      outline: none; 
+      border-color: var(--neon-cyan); 
+      box-shadow: 
+        0 0 20px rgba(0, 212, 255, 0.4), 
+        0 0 0 1px rgba(0, 212, 255, 0.2) inset; 
+      transform: translateY(-1px);
+    }
+    
+    button { 
+      background: var(--glass); 
+      color: var(--text); 
+      border: 1px solid var(--glass-border); 
+      padding: 7px 12px; 
+      border-radius: 10px; 
+      cursor: pointer; 
+      transition: all 0.3s; 
+      backdrop-filter: blur(30px); 
+      font-family: inherit;
+      font-weight: 600;
+      text-transform: uppercase;
+      font-size: 11px;
+      letter-spacing: 0.5px;
+    }
+    button.primary { 
+      background: rgba(0, 102, 255, 0.15); 
+      border-color: var(--neon-cyan); 
+      box-shadow: 
+        0 4px 20px rgba(0, 102, 255, 0.3),
+        0 0 0 1px rgba(0, 212, 255, 0.1) inset; 
+    }
+    button.buy { 
+      background: rgba(16, 185, 129, 0.15); 
+      border-color: rgba(16, 185, 129, 0.6); 
+      color: var(--ok); 
+      box-shadow: 
+        0 4px 20px rgba(16, 185, 129, 0.3),
+        0 0 0 1px rgba(16, 185, 129, 0.1) inset; 
+    }
+    button.sell { 
+      background: rgba(239, 68, 68, 0.15); 
+      border-color: rgba(239, 68, 68, 0.6); 
+      color: var(--err); 
+      box-shadow: 
+        0 4px 20px rgba(239, 68, 68, 0.3),
+        0 0 0 1px rgba(239, 68, 68, 0.1) inset; 
+    }
+    button:hover { 
+      transform: translateY(-3px) translateZ(5px); 
+      box-shadow: 
+        0 8px 30px rgba(0, 212, 255, 0.5),
+        0 0 0 1px rgba(0, 212, 255, 0.3) inset; 
+    }
+    button:disabled { opacity: .4; cursor: not-allowed; transform: none; }
+    
+    .status { 
+      padding: 4px 10px; 
+      border-radius: 20px; 
+      font-size: 11px; 
+      backdrop-filter: blur(30px); 
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .status.ok { 
+      background: rgba(16,185,129,.1); 
+      color: var(--ok); 
+      border: 1px solid rgba(16,185,129,.4); 
+      box-shadow: 0 0 15px rgba(16,185,129,0.3), 0 0 0 1px rgba(16,185,129,0.1) inset; 
+    }
+    .status.warn { 
+      background: rgba(245,158,11,.1); 
+      color: var(--warn); 
+      border: 1px solid rgba(245,158,11,.4); 
+      box-shadow: 0 0 15px rgba(245,158,11,0.3), 0 0 0 1px rgba(245,158,11,0.1) inset; 
+    }
+    .status.err { 
+      background: rgba(239,68,68,.1); 
+      color: var(--err); 
+      border: 1px solid rgba(239,68,68,.4); 
+      box-shadow: 0 0 15px rgba(239,68,68,0.3), 0 0 0 1px rgba(239,68,68,0.1) inset; 
+    }
+
+    .chart-wrap { 
+      background: var(--glass); 
+      border: 1px solid var(--glass-border); 
+      border-radius: 20px; 
+      overflow: hidden; 
+      position: relative; 
+      backdrop-filter: blur(40px) saturate(150%); 
+      box-shadow: 
+        0 20px 60px rgba(0, 0, 0, 0.6),
+        0 0 0 1px rgba(0, 212, 255, 0.1) inset,
+        0 30px 80px rgba(0, 102, 255, 0.15);
+      transform: translateZ(30px);
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .chart-wrap:hover {
+      transform: translateZ(40px) translateY(-3px);
+      box-shadow: 
+        0 25px 80px rgba(0, 0, 0, 0.7),
+        0 0 0 1px rgba(0, 212, 255, 0.3) inset,
+        0 35px 100px rgba(0, 102, 255, 0.25);
+    }
+    #chartContainer { width: 100%; height: calc(100vh - 160px); }
+    
+    aside { 
+      background: var(--glass); 
+      border: 1px solid var(--glass-border); 
+      border-radius: 20px; 
+      padding: 14px; 
+      display: flex; 
+      flex-direction: column; 
+      gap: 12px; 
+      overflow-y: auto; 
+      backdrop-filter: blur(40px) saturate(150%); 
+      box-shadow: 
+        0 20px 60px rgba(0, 0, 0, 0.6),
+        0 0 0 1px rgba(0, 212, 255, 0.1) inset,
+        0 30px 80px rgba(0, 102, 255, 0.15);
+      transform: translateZ(30px);
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    aside:hover {
+      transform: translateZ(40px) translateY(-3px);
+      box-shadow: 
+        0 25px 80px rgba(0, 0, 0, 0.7),
+        0 0 0 1px rgba(0, 212, 255, 0.3) inset,
+        0 35px 100px rgba(0, 102, 255, 0.25);
+    }
+    
+    .row { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+    .row .v { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+    
+    .box { 
+      background: rgba(255, 255, 255, 0.01); 
+      border: 1px solid var(--glass-border); 
+      padding: 12px; 
+      border-radius: 14px; 
+      backdrop-filter: blur(25px); 
+      box-shadow: 
+        0 8px 32px rgba(0, 0, 0, 0.4),
+        0 0 0 1px rgba(0, 212, 255, 0.05) inset;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      transform-style: preserve-3d;
+    }
+    .box:hover { 
+      border-color: rgba(0, 212, 255, 0.4); 
+      box-shadow: 
+        0 12px 40px rgba(0, 0, 0, 0.5),
+        0 0 0 1px rgba(0, 212, 255, 0.2) inset,
+        0 0 30px rgba(0, 212, 255, 0.2);
+      transform: translateZ(10px);
+    }
+    
+    .muted { color: var(--muted); }
+    .flex { display: flex; gap: 8px; align-items: center; }
+    .right { justify-content: flex-end; }
+    .sep { 
+      height: 1px; 
+      background: rgba(0, 212, 255, 0.2); 
+      margin: 10px 0; 
+      box-shadow: 0 0 20px rgba(0, 212, 255, 0.3); 
+    }
+    .small { font-size: 11px; }
+    .bold { font-weight: 700; }
+
+    .sig-list { display: flex; flex-direction: column; gap: 6px; max-height: 240px; overflow-y: auto; }
+    .sig { display: grid; grid-template-columns: 56px 1fr; gap: 8px; align-items: center; padding: 6px; border: 1px solid var(--line); border-radius: 6px; }
+    .sig .tag { font-weight: 700; text-align: center; padding: 2px 6px; border-radius: 4px; color: #fff; }
+    .sig.buy .tag { background: var(--buy); }
+    .sig.sell .tag { background: var(--sell); }
+    .sig .info { font-variant-numeric: tabular-nums; }
+
+    .loading-overlay {
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      display: flex; justify-content: center; align-items: center;
+      z-index: 1000;
+    }
+    .loading-spinner {
+      width: 40px; height: 40px;
+      border: 3px solid rgba(255, 255, 255, 0.3);
+      border-top: 3px solid var(--primary);
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+    @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+    
+    @keyframes pulse {
+      0%, 100% { 
+        box-shadow: 0 0 0 0 rgba(0, 208, 156, 0.7); 
+      }
+      50% { 
+        box-shadow: 0 0 0 10px rgba(0, 208, 156, 0); 
+      }
+    }
+    
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    @keyframes signalPulse {
+      0%, 100% { 
+        transform: scale(1); 
+        box-shadow: 0 4px 12px rgba(0,0,0,0.3), 0 0 0 0 currentColor; 
+        opacity: 1;
+      }
+      50% { 
+        transform: scale(1.08); 
+        box-shadow: 0 6px 20px rgba(0,0,0,0.4), 0 0 20px currentColor; 
+        opacity: 0.95;
+      }
+    }
+
+    .alerts { position: fixed; top: 20px; right: 20px; z-index: 2000; max-width: 350px; }
+    .alert { padding: 10px 14px; margin: 6px 0; border-radius: 12px; backdrop-filter: blur(20px); border: 1px solid; animation: slideIn 0.3s ease; font-size: 13px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); }
+    .alert-success { background: rgba(16, 185, 129, 0.2); border-color: rgba(16, 185, 129, 0.6); color: var(--ok); box-shadow: 0 4px 20px rgba(16, 185, 129, 0.3); }
+    .alert-danger { background: rgba(239, 68, 68, 0.2); border-color: rgba(239, 68, 68, 0.6); color: var(--err); box-shadow: 0 4px 20px rgba(239, 68, 68, 0.3); }
+    .alert-info { background: rgba(0, 102, 255, 0.2); border-color: rgba(0, 212, 255, 0.6); color: var(--neon-cyan); box-shadow: 0 4px 20px rgba(0, 102, 255, 0.3); }
+    @keyframes slideIn { from { transform: translateX(100%); opacity: 0; } to { transform: translateX(0); opacity: 1; } }
+
+    .trading-controls { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+    .trading-input { display: grid; grid-template-columns: 80px 1fr; gap: 4px; align-items: center; margin: 4px 0; }
+    .iq-only-controls { display: none; }
+    .balance-display { 
+      background: rgba(0, 102, 255, 0.08); 
+      padding: 14px; 
+      border-radius: 16px; 
+      text-align: center; 
+      backdrop-filter: blur(40px); 
+      border: 1px solid rgba(0, 212, 255, 0.3); 
+      box-shadow: 
+        0 8px 40px rgba(0, 102, 255, 0.4),
+        0 0 0 1px rgba(0, 212, 255, 0.1) inset,
+        0 0 40px rgba(0, 212, 255, 0.2);
+      transform: translateZ(15px);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .balance-display:hover {
+      transform: translateZ(20px) scale(1.02);
+      box-shadow: 
+        0 12px 50px rgba(0, 102, 255, 0.5),
+        0 0 0 1px rgba(0, 212, 255, 0.3) inset,
+        0 0 60px rgba(0, 212, 255, 0.3);
+    }
+    .balance-amount { 
+      font-size: 24px; 
+      font-weight: 900; 
+      color: #00d4ff; 
+      text-shadow: 0 0 30px rgba(0, 212, 255, 0.8), 0 0 60px rgba(0, 212, 255, 0.4); 
+      letter-spacing: 1px;
+    }
+    .balance-type { font-size: 10px; color: rgba(224,231,255,0.6); text-transform: uppercase; letter-spacing: 1px; }
+
+    .chart-fallback {
+      height: 400px; display: flex; align-items: center; justify-content: center;
+      background: rgba(0,0,0,0.3); border: 2px dashed var(--line); border-radius: 10px;
+      text-align: center; padding: 20px;
+    }
+    .price-display {
+      margin-top: 20px; padding: 15px; background: rgba(255,255,255,0.1);
+      border-radius: 8px; font-family: monospace; font-size: 16px;
+    }
+
+    .timeframe-selector { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; }
+    .timeframe-btn { 
+      padding: 10px 6px; 
+      font-size: 11px; 
+      font-weight: 700; 
+      background: rgba(255, 255, 255, 0.02); 
+      border: 1px solid var(--glass-border); 
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); 
+      border-radius: 12px; 
+      backdrop-filter: blur(30px); 
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(0, 212, 255, 0.05) inset;
+      transform: translateZ(5px);
+    }
+    .timeframe-btn:hover { 
+      background: rgba(0, 102, 255, 0.1); 
+      border-color: rgba(0, 212, 255, 0.4); 
+      box-shadow: 
+        0 6px 25px rgba(0, 102, 255, 0.3),
+        0 0 0 1px rgba(0, 212, 255, 0.2) inset; 
+      transform: translateZ(10px) translateY(-2px);
+    }
+    .timeframe-btn.active { 
+      background: rgba(0, 102, 255, 0.2); 
+      border-color: var(--neon-cyan); 
+      color: white; 
+      box-shadow: 
+        0 8px 30px rgba(0, 212, 255, 0.5),
+        0 0 0 1px rgba(0, 212, 255, 0.3) inset,
+        0 0 40px rgba(0, 212, 255, 0.3); 
+      transform: translateZ(15px);
+    }
+
+    .data-source-selector { display: grid; grid-template-columns: repeat(2, 1fr); gap: 6px; }
+    .data-source-btn { 
+      padding: 12px 10px; 
+      font-size: 12px; 
+      font-weight: 700; 
+      background: rgba(255, 255, 255, 0.02); 
+      border: 1px solid var(--glass-border); 
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); 
+      border-radius: 12px; 
+      backdrop-filter: blur(30px); 
+      cursor: pointer; 
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(0, 212, 255, 0.05) inset;
+      transform: translateZ(5px);
+    }
+    .data-source-btn:hover { 
+      background: rgba(0, 102, 255, 0.1); 
+      border-color: rgba(0, 212, 255, 0.4); 
+      box-shadow: 
+        0 6px 25px rgba(0, 102, 255, 0.3),
+        0 0 0 1px rgba(0, 212, 255, 0.2) inset; 
+      transform: translateZ(10px) translateY(-2px);
+    }
+    .data-source-btn.active { 
+      background: rgba(16, 185, 129, 0.15); 
+      border-color: rgba(16, 185, 129, 0.6); 
+      color: var(--ok); 
+      box-shadow: 
+        0 8px 30px rgba(16, 185, 129, 0.5),
+        0 0 0 1px rgba(16, 185, 129, 0.2) inset,
+        0 0 40px rgba(16, 185, 129, 0.3); 
+      transform: translateZ(15px);
+    }
+
+    .symbol-add-btn { width: 32px; height: 32px; font-size: 18px; font-weight: bold; background: var(--primary); border: none; color: white; padding: 0; }
+    .symbol-add-btn:hover { background: #1d4ed8; transform: scale(1.05); }
+
+    .modal { display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); }
+    .modal.show { display: flex; align-items: center; justify-content: center; }
+    .modal-content { background: #0f1419; border: 1px solid var(--line); border-radius: 8px; max-width: 600px; width: 90%; max-height: 80vh; display: flex; flex-direction: column; }
+    .modal-header { display: flex; justify-content: space-between; align-items: center; padding: 16px 20px; border-bottom: 1px solid var(--line); }
+    .modal-header h3 { margin: 0; font-size: 18px; color: #00D09C; }
+    .modal-close { background: none; border: none; color: #888; font-size: 32px; line-height: 24px; cursor: pointer; padding: 0; width: 32px; height: 32px; }
+    .modal-close:hover { color: #fff; }
+    .modal-body { padding: 20px; overflow-y: auto; flex: 1; }
+    .symbols-loading { text-align: center; padding: 40px 20px; color: #888; }
+    .symbols-container { display: flex; flex-direction: column; gap: 24px; }
+    .symbols-section-title { font-size: 14px; font-weight: 600; margin-bottom: 12px; color: #00D09C; }
+    .symbols-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); gap: 8px; }
+    .symbol-item { padding: 12px 8px; background: #1a2332; border: 1px solid var(--line); border-radius: 4px; text-align: center; font-size: 12px; font-weight: 600; cursor: pointer; transition: all 0.2s; }
+    .symbol-item:hover { background: #243247; border-color: var(--primary); transform: translateY(-2px); }
+    .symbol-item.active { background: var(--primary); border-color: #1d4ed8; }
+
+    .logout-modal { 
+      display: none; 
+      position: fixed; 
+      z-index: 2000; 
+      left: 0; 
+      top: 0; 
+      width: 100%; 
+      height: 100%; 
+      background: rgba(0, 0, 0, 0.7); 
+      backdrop-filter: blur(8px);
+      animation: fadeIn 0.3s ease;
+    }
+    .logout-modal.show { display: flex; align-items: center; justify-content: center; }
+    .logout-content { 
+      background: linear-gradient(135deg, rgba(15, 20, 25, 0.95), rgba(26, 35, 50, 0.95)); 
+      border: 1px solid rgba(0, 208, 156, 0.3); 
+      border-radius: 16px; 
+      padding: 32px; 
+      max-width: 400px; 
+      width: 90%; 
+      text-align: center;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5), 0 0 40px rgba(0, 208, 156, 0.1);
+      animation: scaleIn 0.3s ease;
+    }
+    .logout-icon { 
+      font-size: 48px; 
+      margin-bottom: 16px; 
+      animation: bounce 0.6s ease;
+    }
+    .logout-title { 
+      font-size: 22px; 
+      font-weight: 700; 
+      color: #fff; 
+      margin-bottom: 12px; 
+    }
+    .logout-message { 
+      font-size: 14px; 
+      color: rgba(255, 255, 255, 0.7); 
+      margin-bottom: 24px; 
+      line-height: 1.5;
+    }
+    .logout-buttons { 
+      display: flex; 
+      gap: 12px; 
+      justify-content: center; 
+    }
+    .logout-btn { 
+      padding: 12px 28px; 
+      border: none; 
+      border-radius: 8px; 
+      font-size: 14px; 
+      font-weight: 600; 
+      cursor: pointer; 
+      transition: all 0.2s;
+    }
+    .logout-btn-cancel { 
+      background: rgba(255, 255, 255, 0.1); 
+      color: #fff; 
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    .logout-btn-cancel:hover { 
+      background: rgba(255, 255, 255, 0.15); 
+      transform: translateY(-2px);
+    }
+    .logout-btn-confirm { 
+      background: rgba(59, 130, 246, 0.2); 
+      color: var(--primary); 
+      border: 1px solid var(--primary);
+    }
+    .logout-btn-confirm:hover { 
+      background: rgba(59, 130, 246, 0.3); 
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(59, 130, 246, 0.4);
+    }
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    @keyframes scaleIn { from { transform: scale(0.8); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+
+    @media (max-width: 768px) {
+      .app { grid-template-columns: 1fr; }
+      aside { order: -1; }
+    }
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/lightweight-charts@4.2.0/dist/lightweight-charts.standalone.production.js"></script>
+</head>
+<body>
+  {% set action = "logout" %}
+  {% set label = "SALIR" %}
+  {% include "partials/floating_menu_button.html" %}
+
+  <div id="loadingOverlay" class="loading-overlay" style="display: none;">
+    <div class="loading-spinner"></div>
+  </div>
+
+  <div id="alertsContainer" class="alerts"></div>
+
+  <div class="app">
+    <header>
+      <h1>📊 STC Trading • IQ Option Pro</h1>
+      <span id="connStatus" class="status warn">Iniciando...</span>
+      <span id="dataStatus" class="status warn">Sin datos</span>
+      <div id="promoCountdown" style="display:none; margin-left: 16px; padding: 8px 16px; background: linear-gradient(135deg, rgba(0,200,81,0.2), rgba(0,102,204,0.2)); border: 1px solid rgba(0,200,81,0.4); border-radius: 8px; font-family: 'Courier New', monospace;">
+        <span style="color: #00c851; font-weight: 600;">⏰ Acceso Temporal:</span>
+        <span id="promoTimer" style="color: #00d4ff; font-weight: 700; margin-left: 8px;">00h 00m 00s 000ms</span>
+      </div>
+      <div style="flex:1"></div>
+
+      <button id="btnCreateBot" class="primary" style="background: #00D09C;">+ Crear Bot</button>
+      <button id="btnLogout" class="primary" style="background: var(--primary); margin-left: 8px;">🚪 Cerrar Sesión</button>
+    </header>
+
+    <div class="chart-wrap" style="position: relative;">
+      <div id="chartContainer"></div>
+      
+      <!-- Info inferior -->
+      <div class="small muted" style="padding:8px 10px; background: rgba(0,0,0,0.5);">
+        💰 <b id="symbolLabel">-</b> • ⏰ <b id="timeLabel">-</b>
+      </div>
+    </div>
+
+    <aside>
+      <!-- Balance e Info -->
+      <div class="box">
+        <div class="balance-display">
+          <div class="balance-amount" id="balanceAmount">$0.00</div>
+          <div class="balance-type" id="balanceType">PRACTICE</div>
+        </div>
+      </div>
+
+      <!-- Selector de Fuente de Datos -->
+      <div class="box">
+        <div class="flex" style="justify-content:space-between;">
+          <strong>📡 Fuente de Datos</strong>
+          <span id="dataSourceLabel" class="small status ok">BTC Real</span>
+        </div>
+        <div class="sep"></div>
+        
+        <div class="data-source-selector">
+          <button class="data-source-btn active" data-source="finnhub">
+            🪙 BTC/ETH Real
+          </button>
+          <button class="data-source-btn" data-source="iq">
+            📊 IQ Demo
+          </button>
+          <button class="data-source-btn" data-source="olymptrade">
+            🏆 OlympTrade
+          </button>
+        </div>
+        
+        <div class="small muted" style="margin-top: 8px;" id="dataSourceInfo">
+          Datos reales de criptomonedas (Finnhub API)
+        </div>
+      </div>
+
+      <!-- Conexión IQ -->
+      <div class="box">
+        <div class="flex" style="justify-content:space-between;">
+          <strong>🔗 Conexión IQ</strong>
+          <span id="iqStatus" class="small status warn">Desconectado</span>
+        </div>
+        <div class="sep"></div>
+        
+        <div style="display: grid; gap: 4px;">
+          <input id="iqEmail" type="email" placeholder="Email IQ Option" autocomplete="username" />
+          <input id="iqPassword" type="password" placeholder="Contraseña" autocomplete="current-password" />
+          
+          <div class="flex" style="gap: 4px;">
+            <select id="iqBalanceType" style="flex: 1;">
+              <option value="PRACTICE">PRACTICE</option>
+              <option value="REAL">REAL</option>
+            </select>
+            <button id="btnIqLogin" class="primary">Conectar</button>
+          </div>
+        </div>
+        
+        <div id="iqSessionInfo" class="small muted"></div>
+      </div>
+
+      <!-- Selector de Temporalidad -->
+      <div class="box">
+        <strong>📊 Temporalidad</strong>
+        <div class="sep"></div>
+        <div class="timeframe-selector">
+          <button class="timeframe-btn" data-timeframe="M1">M1</button>
+          <button class="timeframe-btn active" data-timeframe="M5">M5</button>
+          <button class="timeframe-btn" data-timeframe="M15">M15</button>
+          <button class="timeframe-btn" data-timeframe="M30">M30</button>
+          <button class="timeframe-btn" data-timeframe="H1">H1</button>
+        </div>
+      </div>
+
+      <!-- Trading Panel -->
+      <div class="box">
+        <div class="flex" style="justify-content:space-between;">
+          <strong>⚡ Trading Rápido</strong>
+          <span class="small muted">Binario</span>
+        </div>
+        <div class="sep"></div>
+
+        <div class="trading-input">
+          <label class="small">Símbolo:</label>
+          <div class="flex" style="gap: 4px;">
+            <select id="symbolSelect" style="font-size: 11px; flex: 1;">
+              <option value="EURUSD" selected>EUR/USD (Twelve Data)</option>
+              <option value="GBPUSD">GBP/USD</option>
+              <option value="USDJPY">USD/JPY</option>
+              <option value="EURJPY">EUR/JPY</option>
+            </select>
+            <button id="btnOpenSymbolsModal" class="symbol-add-btn" title="Cambiar par de trading">+</button>
+          </div>
+        </div>
+
+        <div class="trading-input iq-only-controls">
+          <label class="small">Monto:</label>
+          <input id="tradeAmount" type="number" value="1" min="1" max="1000" step="1" />
+        </div>
+
+        <div class="trading-input iq-only-controls">
+          <label class="small">Tiempo:</label>
+          <select id="tradeDuration">
+            <option value="1">1 min</option>
+            <option value="5">5 min</option>
+            <option value="15">15 min</option>
+          </select>
+        </div>
+
+        <div class="trading-controls iq-only-controls">
+          <button id="btnCallTrade" class="buy">📈 CALL</button>
+          <button id="btnPutTrade" class="sell">📉 PUT</button>
+        </div>
+
+        <div id="tradeStatus" class="small muted" style="margin-top: 8px; text-align: center;"></div>
+      </div>
+
+      
+      <!-- Panel de Señales en Tiempo Real -->
+      <div id="signalsPanel" class="box" style="border: 2px solid var(--glass-border);">
+        <div class="flex" style="justify-content:space-between; align-items: center;">
+          <strong>🎯 Señales del Bot</strong>
+          <span id="signalStatus" class="small status warn">Sin señales</span>
+        </div>
+        <div class="sep"></div>
+        
+        <!-- Selector de Bot (Multi-tenant) -->
+        <div id="botSelector" style="margin-bottom: 10px; display: none;">
+          <label class="small" style="display: block; margin-bottom: 4px; color: var(--muted);">Seleccionar Bot:</label>
+          <select id="selectBotSignals" style="width: 100%; font-size: 12px;">
+            <option value="">-- Sin bot seleccionado --</option>
+          </select>
+        </div>
+        
+        <!-- Última Señal Activa -->
+        <div id="lastSignalContainer" style="display: none;">
+          <div style="background: linear-gradient(135deg, rgba(0, 102, 255, 0.15) 0%, rgba(0, 212, 255, 0.1) 100%); padding: 12px; border-radius: 10px; border: 1px solid var(--glass-border); animation: signalPulse 2s infinite;">
+            <div style="display: flex; align-items: center; gap: 12px;">
+              <div id="signalIcon" style="font-size: 32px;">📊</div>
+              <div style="flex: 1;">
+                <div id="signalDirection" style="font-size: 16px; font-weight: 700; margin-bottom: 4px;">-</div>
+                <div id="signalInfo" style="font-size: 12px; color: var(--muted); line-height: 1.4;">Esperando señal...</div>
+                <div id="signalConfidence" style="font-size: 11px; margin-top: 6px;">Confianza: <span class="bold">-</span></div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Indicadores Adicionales -->
+          <div id="signalIndicators" style="margin-top: 10px; font-size: 11px; color: var(--muted); display: none;">
+            <div class="flex" style="justify-content: space-between; margin: 4px 0;">
+              <span>Patrón:</span>
+              <span id="signalPattern" class="bold">-</span>
+            </div>
+            <div class="flex" style="justify-content: space-between; margin: 4px 0;">
+              <span>Probabilidad:</span>
+              <span id="signalProbability" class="bold">-</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Sin Señales -->
+        <div id="noSignalMessage" style="text-align: center; padding: 20px 10px; color: var(--muted); font-size: 13px;">
+          <div style="font-size: 40px; margin-bottom: 10px; opacity: 0.5;">📡</div>
+          <div>Esperando señales del bot...</div>
+          <div style="font-size: 11px; margin-top: 8px;">Las señales aparecerán aquí en tiempo real</div>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <!-- Modal Selector de Pares - Diseño Futurista -->
+  <div id="symbolsModal" class="modal">
+    <div class="modal-content futuristic-modal">
+      <div class="futuristic-modal-header">
+        <h3 style="font-size: 18px; font-weight: 700; background: linear-gradient(135deg, #0066ff 0%, #00d4ff 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; letter-spacing: 1px;">⚡ SELECCIONAR PAR DE TRADING</h3>
+        <button class="futuristic-close" id="btnCloseSymbolsModal">&times;</button>
+      </div>
+      <div class="modal-body" style="padding: 25px;">
+        <div class="symbols-container" id="symbolsContainer">
+          <!-- OTC Pairs -->
+          <div class="futuristic-section">
+            <div class="futuristic-section-title">
+              <span class="neon-icon">🌐</span>
+              <span>OTC (Over The Counter)</span>
+            </div>
+            <div class="futuristic-grid" id="symbolsOTC"></div>
+          </div>
+          <!-- NO-OTC Pairs -->
+          <div class="futuristic-section" style="margin-top: 25px;">
+            <div class="futuristic-section-title">
+              <span class="neon-icon">📈</span>
+              <span>Mercado Regular</span>
+            </div>
+            <div class="futuristic-grid" id="symbolsRegular"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <style>
+    .futuristic-modal {
+      background: linear-gradient(145deg, #000000 0%, #0a0a0a 50%, #000000 100%) !important;
+      border: 2px solid rgba(0, 102, 255, 0.3) !important;
+      box-shadow: 0 0 40px rgba(0, 102, 255, 0.4), 0 0 80px rgba(0, 212, 255, 0.2), inset 0 0 60px rgba(0, 102, 255, 0.05) !important;
+      border-radius: 16px !important;
+      backdrop-filter: blur(20px) !important;
+      max-width: 700px !important;
+    }
+
+    .futuristic-modal-header {
+      background: linear-gradient(180deg, rgba(0, 102, 255, 0.1) 0%, rgba(0, 0, 0, 0.3) 100%);
+      border-bottom: 2px solid rgba(0, 212, 255, 0.4);
+      padding: 20px 25px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 5px 30px rgba(0, 102, 255, 0.2);
+    }
+
+    .futuristic-close {
+      background: linear-gradient(135deg, rgba(0, 102, 255, 0.2) 0%, rgba(0, 212, 255, 0.2) 100%);
+      border: 1px solid rgba(0, 212, 255, 0.5);
+      color: #00d4ff;
+      font-size: 28px;
+      width: 40px;
+      height: 40px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 0 15px rgba(0, 212, 255, 0.3);
+      line-height: 1;
+      padding: 0;
+    }
+
+    .futuristic-close:hover {
+      background: linear-gradient(135deg, rgba(255, 0, 100, 0.3) 0%, rgba(255, 50, 50, 0.3) 100%);
+      border-color: #ff0066;
+      color: #ff0066;
+      transform: rotate(90deg) scale(1.1);
+      box-shadow: 0 0 25px rgba(255, 0, 100, 0.6);
+    }
+
+    .futuristic-section {
+      margin-bottom: 20px;
+    }
+
+    .futuristic-section-title {
+      font-size: 14px;
+      font-weight: 600;
+      color: #00d4ff;
+      margin-bottom: 15px;
+      padding: 12px 18px;
+      background: linear-gradient(90deg, rgba(0, 102, 255, 0.15) 0%, rgba(0, 0, 0, 0.3) 100%);
+      border-left: 4px solid #0066ff;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 4px 20px rgba(0, 102, 255, 0.2);
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+    }
+
+    .neon-icon {
+      font-size: 20px;
+      filter: drop-shadow(0 0 8px rgba(0, 212, 255, 0.8));
+    }
+
+    .futuristic-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+    }
+
+    .futuristic-pair-btn {
+      background: linear-gradient(135deg, rgba(0, 102, 255, 0.1) 0%, rgba(0, 212, 255, 0.05) 100%);
+      border: 2px solid rgba(0, 102, 255, 0.3);
+      color: #fff;
+      padding: 18px 20px;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      font-weight: 600;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0, 102, 255, 0.15);
+    }
+
+    .futuristic-pair-btn::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 0;
+      height: 0;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(0, 212, 255, 0.4) 0%, transparent 70%);
+      transform: translate(-50%, -50%);
+      transition: width 0.6s, height 0.6s;
+    }
+
+    .futuristic-pair-btn:hover::before {
+      width: 300px;
+      height: 300px;
+    }
+
+    .futuristic-pair-btn:hover {
+      background: linear-gradient(135deg, rgba(0, 102, 255, 0.3) 0%, rgba(0, 212, 255, 0.2) 100%);
+      border-color: #00d4ff;
+      transform: translateY(-3px) scale(1.05);
+      box-shadow: 0 8px 40px rgba(0, 212, 255, 0.4), 0 0 30px rgba(0, 102, 255, 0.3);
+    }
+
+    .futuristic-pair-btn.active {
+      background: linear-gradient(135deg, rgba(0, 212, 255, 0.3) 0%, rgba(0, 102, 255, 0.2) 100%);
+      border-color: #00d4ff;
+      box-shadow: 0 0 30px rgba(0, 212, 255, 0.6), inset 0 0 20px rgba(0, 212, 255, 0.2);
+      color: #00d4ff;
+      font-weight: 700;
+    }
+
+    .futuristic-pair-btn .pair-name {
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .futuristic-pair-btn .pair-label {
+      font-size: 11px;
+      opacity: 0.7;
+      margin-top: 4px;
+      font-weight: 400;
+      position: relative;
+      z-index: 1;
+    }
+
+    @media (max-width: 768px) {
+      .futuristic-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+      }
+      
+      .futuristic-pair-btn {
+        padding: 15px;
+      }
+    }
+  </style>
+
+  <!-- Modal Crear Bot -->
+  <div id="createBotModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3>🤖 Crear Nuevo Bot</h3>
+        <button class="modal-close" id="btnCloseCreateBotModal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <form id="createBotForm" style="display: flex; flex-direction: column; gap: 16px;">
+          <div>
+            <label style="display: block; margin-bottom: 6px; color: #00D09C; font-weight: 600;">Nombre del Bot</label>
+            <input type="text" id="botName" name="name" required 
+                   style="width: 100%; padding: 10px; background: #0f1419; border: 1px solid var(--line); border-radius: 4px; color: white;">
+          </div>
+          
+          <div>
+            <label style="display: block; margin-bottom: 6px; color: #00D09C; font-weight: 600;">Estrategia</label>
+            <select id="botStrategy" name="strategy_name" required
+                    style="width: 100%; padding: 10px; background: #0f1419; border: 1px solid var(--line); border-radius: 4px; color: white;">
+              <option value="RSI Oversold/Overbought">RSI Oversold/Overbought</option>
+              <option value="MACD Crossover">MACD Crossover</option>
+              <option value="Bollinger Bands Bounce">Bollinger Bands Bounce</option>
+              <option value="Probability+Gale">Probability+Gale</option>
+              <option value="Kolmogorov Markov">Kolmogorov Markov</option>
+              <option value="Kolmogorov Complexity">Kolmogorov Complexity</option>
+              <option value="SmartTradeAcademy1">SmartTradeAcademy1</option>
+              <option value="Tablero Binarias">Tablero Binarias</option>
+            </select>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+            <div>
+              <label style="display: block; margin-bottom: 6px; color: #00D09C; font-weight: 600;">Par</label>
+              <input type="text" id="botSymbol" name="symbol" value="EURUSD-OTC" required
+                     style="width: 100%; padding: 10px; background: #0f1419; border: 1px solid var(--line); border-radius: 4px; color: white;">
+            </div>
+            
+            <div>
+              <label style="display: block; margin-bottom: 6px; color: #00D09C; font-weight: 600;">Timeframe</label>
+              <select id="botTimeframe" name="timeframe" 
+                      style="width: 100%; padding: 10px; background: #0f1419; border: 1px solid var(--line); border-radius: 4px; color: white;">
+                <option value="M1">M1</option>
+                <option value="M5" selected>M5</option>
+                <option value="M15">M15</option>
+                <option value="M30">M30</option>
+                <option value="H1">H1</option>
+              </select>
+            </div>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+            <div>
+              <label style="display: block; margin-bottom: 6px; color: #00D09C; font-weight: 600;">Monto Inicial ($)</label>
+              <input type="number" id="botAmount" name="trade_amount" value="1" min="0.1" step="0.1" required
+                     style="width: 100%; padding: 10px; background: #0f1419; border: 1px solid var(--line); border-radius: 4px; color: white;">
+            </div>
+            
+            <div>
+              <label style="display: block; margin-bottom: 6px; color: #00D09C; font-weight: 600;">Duración (min)</label>
+              <input type="number" id="botDuration" name="trade_duration" value="5" min="1" max="60" required
+                     style="width: 100%; padding: 10px; background: #0f1419; border: 1px solid var(--line); border-radius: 4px; color: white;">
+            </div>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+            <div>
+              <label style="display: block; margin-bottom: 6px; color: #00D09C; font-weight: 600;">Pérdida Máx. Diaria ($)</label>
+              <input type="number" id="botMaxLoss" name="max_daily_loss" value="10" min="1" required
+                     style="width: 100%; padding: 10px; background: #0f1419; border: 1px solid var(--line); border-radius: 4px; color: white;">
+            </div>
+            
+            <div>
+              <label style="display: block; margin-bottom: 6px; color: #00D09C; font-weight: 600;">Trades Máx. Diarios</label>
+              <input type="number" id="botMaxTrades" name="max_daily_trades" value="20" min="1" required
+                     style="width: 100%; padding: 10px; background: #0f1419; border: 1px solid var(--line); border-radius: 4px; color: white;">
+            </div>
+          </div>
+
+          <div style="display: flex; align-items: center; gap: 10px; padding: 12px; background: #0f1419; border-radius: 4px;">
+            <input type="checkbox" id="botDualGale" name="use_dual_gale" checked 
+                   style="width: 20px; height: 20px; cursor: pointer;">
+            <label for="botDualGale" style="cursor: pointer; color: #00D09C; font-weight: 600;">Usar Sistema Dual Martingale</label>
+          </div>
+
+          <div style="display: flex; align-items: center; gap: 10px; padding: 12px; background: #0f1419; border-radius: 4px;">
+            <input type="checkbox" id="botAutoRestart" name="auto_restart" checked 
+                   style="width: 20px; height: 20px; cursor: pointer;">
+            <label for="botAutoRestart" style="cursor: pointer; color: #00D09C; font-weight: 600;">Auto-reiniciar después de errores</label>
+          </div>
+
+          <button type="submit" class="primary" 
+                  style="padding: 12px; background: #00D09C; border: none; border-radius: 4px; font-weight: 600; cursor: pointer;">
+            Crear Bot
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Cerrar Sesión -->
+  <div id="logoutModal" class="logout-modal">
+    <div class="logout-content">
+      <div class="logout-icon">🚪✨</div>
+      <div class="logout-title" id="logoutTitle">¿Estás seguro?</div>
+      <div class="logout-message" id="logoutMessage">
+        Cerrarás tu sesión y tendrás que volver a iniciar sesión para acceder al dashboard
+      </div>
+      <div id="logoutProgress" style="display: none; margin: 20px 0;">
+        <div style="background: rgba(255,255,255,0.1); height: 6px; border-radius: 10px; overflow: hidden;">
+          <div id="logoutProgressBar" style="background: var(--primary); height: 100%; width: 0%; transition: width 0.3s;"></div>
+        </div>
+        <div id="logoutProgressText" style="text-align: center; margin-top: 8px; color: var(--primary); font-size: 13px;">Cerrando sesión...</div>
+      </div>
+      <div class="logout-buttons" id="logoutButtons">
+        <button id="btnCancelLogout" class="logout-btn logout-btn-cancel">Cancelar</button>
+        <button id="btnConfirmLogout" class="logout-btn logout-btn-confirm">Cerrar Sesión</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // ====== Configuración Global ======
+    const CONFIG = {
+  API_BASE_URL: '',
+      REFRESH_INTERVAL: 30000,
+      CHART_UPDATE_INTERVAL: 30000,
+      MAX_CANDLES: 80,
+      CURRENT_SYMBOL: 'EURUSD-OTC',
+      CURRENT_TIMEFRAME: 'M5'
+    };
+
+    // ====== Estado Global ======
+    let state = {
+      chart: null,
+      candleSeries: null,
+      currentBid: null,
+      isConnected: false,
+      chartsAvailable: false,
+      refreshTimer: null,
+      stats: { totalTrades: 0, winRate: 0, dailyProfit: 0 }
+    };
+
+    // ====== Sistema de Alertas ======
+    class AlertManager {
+      static show(message, type = 'info', duration = 5000) {
+        const container = document.getElementById('alertsContainer');
+        const alertId = 'alert_' + Date.now();
+        
+        const alert = document.createElement('div');
+        alert.id = alertId;
+        alert.className = `alert alert-${type}`;
+        alert.innerHTML = `${message} <span style="float:right;cursor:pointer;" onclick="AlertManager.close('${alertId}')">&times;</span>`;
+        
+        container.appendChild(alert);
+        
+        if (duration > 0) {
+          setTimeout(() => AlertManager.close(alertId), duration);
+        }
+        
+        return alertId;
+      }
+
+      static close(alertId) {
+        const alert = document.getElementById(alertId);
+        if (alert) alert.remove();
+      }
+
+      static success(msg) { return this.show(msg, 'success'); }
+      static error(msg) { return this.show(msg, 'danger', 7000); }
+      static info(msg) { return this.show(msg, 'info'); }
+    }
+
+    // ====== Gestor de Gráficos Mejorado ======
+    class ChartManager {
+      constructor() {
+        this.chart = null;
+        this.candleSeries = null;
+        this.bidLine = null;
+        this.available = false;
+        this.currentCandles = [];
+        this.liveSignalOverlay = null;
+        this.lastCandleTime = 0;
+        this.init();
+      }
+
+      init() {
+        try {
+          const container = document.getElementById('chartContainer');
+          
+          // Verificar disponibilidad de la librería
+          if (typeof LightweightCharts === 'undefined' || !LightweightCharts.createChart) {
+            throw new Error('LightweightCharts no disponible');
+          }
+
+          // Crear gráfico
+          this.chart = LightweightCharts.createChart(container, {
+            layout: {
+              textColor: '#C3CBDF',
+              background: { type: 'solid', color: '#0f172a' }
+            },
+            rightPriceScale: { 
+              borderColor: '#334155',
+              autoScale: true
+            },
+            timeScale: {
+              borderColor: '#334155',
+              timeVisible: true,
+              secondsVisible: false,
+              rightOffset: 12,
+              barSpacing: 10,
+              fixLeftEdge: false,
+              fixRightEdge: false,
+              lockVisibleTimeRangeOnResize: true,
+              rightBarStaysOnScroll: true,
+              shiftVisibleRangeOnNewBar: true
+            },
+            grid: {
+              vertLines: { color: 'rgba(148,163,184,0.1)' },
+              horzLines: { color: 'rgba(148,163,184,0.1)' }
+            },
+            crosshair: {
+              mode: LightweightCharts.CrosshairMode.Normal,
+              vertLine: {
+                width: 1,
+                color: 'rgba(148,163,184,0.4)',
+                style: LightweightCharts.LineStyle.Dashed,
+                labelBackgroundColor: '#334155'
+              },
+              horzLine: {
+                width: 1,
+                color: 'rgba(148,163,184,0.4)',
+                style: LightweightCharts.LineStyle.Dashed,
+                labelBackgroundColor: '#334155'
+              }
+            }
+          });
+
+          // Verificar que addCandlestickSeries existe
+          if (!this.chart.addCandlestickSeries) {
+            throw new Error('addCandlestickSeries no es una función');
+          }
+
+          // Crear serie de velas
+          this.candleSeries = this.chart.addCandlestickSeries({
+            upColor: '#10b981',
+            downColor: '#ef4444',
+            borderDownColor: '#ef4444',
+            borderUpColor: '#10b981',
+            wickDownColor: '#ef4444',
+            wickUpColor: '#10b981',
+            priceFormat: { type: 'price', precision: 5, minMove: 0.00001 }
+          });
+
+          // Resize automático
+          window.addEventListener('resize', () => {
+            if (this.chart) {
+              const rect = container.getBoundingClientRect();
+              this.chart.applyOptions({
+                width: Math.floor(rect.width),
+                height: Math.floor(rect.height)
+              });
+            }
+          });
+
+          this.available = true;
+          console.log('✅ Gráfico inicializado correctamente');
+          AlertManager.success('📊 Gráfico inicializado');
+          
+          // Iniciar cronómetro regresivo
+          this.initCandleCountdown();
+
+        } catch (error) {
+          console.error('❌ Error inicializando gráfico:', error.message);
+          this.available = false;
+          this.showFallback();
+          AlertManager.error('❌ Error inicializando gráfico: ' + error.message);
+        }
+      }
+
+      showFallback() {
+        const container = document.getElementById('chartContainer');
+        container.innerHTML = `
+          <div class="chart-fallback">
+            <div>
+              <div style="font-size: 48px; margin-bottom: 15px;">📊</div>
+              <h3>Gráfico No Disponible</h3>
+              <p>Los gráficos están temporalmente deshabilitados</p>
+              <p>El trading funciona normalmente</p>
+              <div id="priceDisplay" class="price-display">
+                Esperando datos de precios...
+              </div>
+            </div>
+          </div>
+        `;
+      }
+
+      updateCandles(candles) {
+        if (!this.available) {
+          this.updateFallbackDisplay(candles);
+          return;
+        }
+
+        if (!this.candleSeries || !candles || candles.length === 0) return;
+
+        try {
+          // Formatear velas para TradingView con validación robusta
+          const formatted = candles
+            .map(c => {
+              const time = Math.floor((c.time || c.unix_time || Date.now()/1000));
+              const open = parseFloat(c.open);
+              const high = parseFloat(c.high);
+              const low = parseFloat(c.low);
+              const close = parseFloat(c.close);
+              
+              return { time, open, high, low, close };
+            })
+            .filter(c => {
+              return !isNaN(c.time) && c.time > 0 &&
+                     !isNaN(c.open) && c.open > 0 &&
+                     !isNaN(c.high) && c.high > 0 &&
+                     !isNaN(c.low) && c.low > 0 &&
+                     !isNaN(c.close) && c.close > 0 &&
+                     c.high >= c.low &&
+                     c.high >= c.open &&
+                     c.high >= c.close &&
+                     c.low <= c.open &&
+                     c.low <= c.close;
+            })
+            .sort((a, b) => a.time - b.time);
+
+          if (formatted.length === 0) return;
+
+          // Detectar si hay nueva vela o solo actualización de la última
+          const lastCandle = formatted[formatted.length - 1];
+          const currentTime = lastCandle.time;
+          const isNewCandle = currentTime !== this.lastCandleTime;
+
+          if (isNewCandle || this.currentCandles.length === 0) {
+            // Nueva vela o primera carga: usar setData
+            this.candleSeries.setData(formatted);
+            this.lastCandleTime = currentTime;
+            if (this.currentCandles.length > 0) {
+              console.log(`🆕 Nueva vela detectada en ${new Date(currentTime * 1000).toLocaleTimeString()}`);
+            }
+          } else {
+            // Solo actualizar la última vela: usar update (suave, sin saltos)
+            this.candleSeries.update(lastCandle);
+          }
+
+          this.currentCandles = formatted;
+          
+          // Actualizar línea BID (usando lastCandle ya declarado)
+          this.updateBidLine(lastCandle.close);
+
+        } catch (error) {
+          console.error('❌ Error actualizando velas:', error);
+        }
+      }
+
+      initCandleCountdown() {
+        // Iniciar cronómetro regresivo que se actualiza cada segundo
+        if (this.countdownInterval) {
+          clearInterval(this.countdownInterval);
+        }
+
+        this.countdownInterval = setInterval(async () => {
+          try {
+            await this.updateCandleCountdowns();
+          } catch (error) {
+            // Silenciar errores
+          }
+        }, 1000); // Actualizar cada segundo
+
+        // Primera actualización inmediata
+        this.updateCandleCountdowns();
+      }
+
+      async updateCandleCountdowns() {
+        if (!this.available || !this.candleSeries) return;
+        
+        try {
+          // Obtener el tiempo del servidor
+          const response = await fetch('/api/server_time');
+          const data = await response.json();
+          const serverTimestamp = data.timestamp; // Unix timestamp en UTC-5
+          
+          // Calcular segundos según el timeframe actual
+          const timeframeMap = { 'M1': 60, 'M5': 300, 'M15': 900, 'M30': 1800, 'H1': 3600 };
+          const tiempoVela = timeframeMap[CONFIG.CURRENT_TIMEFRAME] || 300;
+          
+          // Calcular cuenta regresiva
+          const segundosTranscurridos = serverTimestamp % tiempoVela;
+          const cuentaRegresiva = tiempoVela - segundosTranscurridos;
+          
+          // Formatear tiempo M:SS
+          const minutos = Math.floor(cuentaRegresiva / 60);
+          const segundos = cuentaRegresiva % 60;
+          const displayTime = `${minutos}:${segundos.toString().padStart(2, '0')}`;
+          
+          // Determinar color según tiempo restante
+          let color = '#00D09C'; // Verde por defecto
+          if (cuentaRegresiva < 30) {
+            color = '#ef4444'; // Rojo - menos de 30s
+          } else if (cuentaRegresiva < 60) {
+            color = '#FFA500'; // Naranja - menos de 1min
+          }
+          
+          // Mostrar cronómetro flotante sobre el gráfico
+          this.showCandleCountdown(displayTime, color);
+          
+        } catch (error) {
+          // Silenciar errores del cronómetro para no interrumpir el flujo
+        }
+      }
+
+      showCandleCountdown(timeText, color) {
+        const container = document.getElementById('chartContainer');
+        if (!container) return;
+
+        // Actualizar o crear overlay unificado (cronómetro + señal)
+        let unifiedOverlay = document.getElementById('chartUnifiedOverlay');
+        if (!unifiedOverlay) {
+          // Crear nuevo overlay unificado
+          unifiedOverlay = document.createElement('div');
+          unifiedOverlay.id = 'chartUnifiedOverlay';
+          unifiedOverlay.style.cssText = `
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            z-index: 10000;
+            background: rgba(0, 0, 0, 0.85);
+            border-radius: 8px;
+            padding: 12px 16px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+            min-width: 140px;
+          `;
+          
+          container.style.position = 'relative';
+          container.appendChild(unifiedOverlay);
+        }
+        
+        // Guardar referencia al tiempo y color del cronómetro
+        this.currentCountdown = { timeText, color };
+        
+        // Actualizar overlay con cronómetro y señal (si existe)
+        this.updateUnifiedOverlay();
+      }
+      
+      updateUnifiedOverlay() {
+        const overlay = document.getElementById('chartUnifiedOverlay');
+        if (!overlay) return;
+        
+        const { timeText, color } = this.currentCountdown || { timeText: '--:--', color: '#888' };
+        const signal = this.currentLiveSignal;
+        
+        let html = `
+          <div style="text-align: center;">
+            <div style="font-size: 11px; color: #888; margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.5px;">Próxima Vela</div>
+            <div style="font-size: 28px; font-weight: 700; font-family: 'Courier New', monospace; letter-spacing: 1px; color: ${color};">
+              ${timeText}
+            </div>
+        `;
+        
+        // Agregar señal parpadeante si existe
+        if (signal) {
+          const isCall = signal.direction === 'CALL';
+          const signalText = isCall ? 'COMPRA' : 'VENDE';
+          const signalColor = isCall ? '#10b981' : '#ef4444';
+          const arrow = isCall ? '▲' : '▼';
+          
+          html += `
+            <div style="margin-top: 12px; padding-top: 12px; border-top: 1px solid rgba(255,255,255,0.1);">
+              <div style="
+                background: ${signalColor};
+                color: white;
+                padding: 10px 16px;
+                border-radius: 6px;
+                font-weight: bold;
+                font-size: 14px;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+                animation: signalPulse 1.5s ease-in-out infinite;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 8px;
+              ">
+                <span style="font-size: 18px;">${arrow}</span>
+                <span>${signalText}</span>
+              </div>
+            </div>
+          `;
+        }
+        
+        html += '</div>';
+        overlay.innerHTML = html;
+      }
+
+      addSignalMarkers(signals) {
+        if (!this.available || !this.candleSeries || !signals) return;
+
+        try {
+          const lastCandleTime = this.currentCandles.length > 0 
+            ? this.currentCandles[this.currentCandles.length - 1].time 
+            : null;
+
+          const markers = signals.map(signal => {
+            const isCall = signal.direction === 'CALL';
+            const isGale = signal.is_gale || signal.gale_level > 0;
+            const galeLevel = signal.gale_level || 0;
+            
+            // Determinar color y texto según si es Gale o señal normal
+            let color, signalText;
+            
+            if (isGale) {
+              // 🔵 Señales GALE - Triángulo AZUL
+              color = '#00bfff';
+              signalText = `Gale ${galeLevel}`;
+            } else {
+              // 🟢🔴 Señales NORMALES - Verde o Rojo
+              color = isCall ? '#10b981' : '#ef4444';
+              signalText = isCall ? 'COMPRA' : 'VENDE';
+            }
+            
+            return {
+              time: signal.time,
+              position: isCall ? 'belowBar' : 'aboveBar',
+              color: color,
+              shape: isCall ? 'arrowUp' : 'arrowDown',
+              text: signalText,
+              size: 1
+            };
+          });
+
+          this.candleSeries.setMarkers(markers);
+          
+          // Detectar señal en vela en vivo
+          const liveSignal = signals.find(s => s.time === lastCandleTime);
+          if (liveSignal) {
+            this.showLiveSignalIndicator(liveSignal);
+            
+            // Detectar señal (CALL o PUT) y activar audio + alerta
+            if (window.announceSignal) {
+              const signalId = `${liveSignal.time}_${liveSignal.direction}`;
+              window.announceSignal(liveSignal, signalId);
+            }
+          } else {
+            this.hideLiveSignalIndicator();
+          }
+          
+          console.log(`✅ ${markers.length} señales agregadas al gráfico`);
+
+        } catch (error) {
+          console.error('❌ Error agregando marcadores:', error);
+        }
+      }
+
+      updateFallbackDisplay(candles) {
+        const display = document.getElementById('priceDisplay');
+        if (!display || !candles || candles.length === 0) return;
+
+        const last = candles[candles.length - 1];
+        const price = last.close || last.open || 0;
+        const change = price > (last.open || price) ? '📈' : '📉';
+        
+        display.innerHTML = `
+          ${change} <strong>${price.toFixed(5)}</strong><br>
+          <small>Alto: ${(last.high || price).toFixed(5)} | Bajo: ${(last.low || price).toFixed(5)}</small>
+        `;
+        display.style.color = change === '📈' ? '#10b981' : '#ef4444';
+      }
+
+      updateBidLine(price) {
+        if (!this.available || !price) return;
+
+        try {
+          // Remover línea anterior
+          if (this.bidLine) {
+            this.candleSeries.removePriceLine(this.bidLine);
+          }
+
+          // Crear nueva línea de precio actual
+          this.bidLine = this.candleSeries.createPriceLine({
+            price: price,
+            color: '#e91e63',
+            lineWidth: 2,
+            lineStyle: 0,
+            axisLabelVisible: true,
+            title: ''
+          });
+
+        } catch (error) {
+          console.error('❌ Error actualizando línea BID:', error);
+        }
+      }
+
+      showLiveSignalIndicator(signal) {
+        // Guardar señal actual para el overlay unificado
+        this.currentLiveSignal = signal;
+        
+        // Actualizar overlay unificado (cronómetro + señal)
+        this.updateUnifiedOverlay();
+      }
+
+      hideLiveSignalIndicator() {
+        // Limpiar señal actual
+        this.currentLiveSignal = null;
+        
+        // Actualizar overlay unificado (solo cronómetro)
+        this.updateUnifiedOverlay();
+      }
+    }
+
+    // ====== API Manager ======
+    class APIManager {
+      static getBaseUrl() {
+        return CONFIG.API_BASE_URL;
+      }
+
+      static async request(endpoint, options = {}) {
+        const url = `${this.getBaseUrl()}${endpoint}`;
+        
+        try {
+          const response = await fetch(url, {
+            headers: {
+              'Content-Type': 'application/json',
+              ...options.headers
+            },
+            ...options
+          });
+
+          if (!response.ok) {
+            throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+          }
+
+          return await response.json();
+
+        } catch (error) {
+          console.error(`❌ API Error ${endpoint}:`, error.message);
+          throw error;
+        }
+      }
+
+      static async getBalance() {
+        try {
+          const data = await this.request('/api/iq/balance');
+          return data;
+        } catch (error) {
+          console.warn('⚠️ Balance no disponible:', error.message);
+          return null;
+        }
+      }
+
+      static async getCandles(symbol, timeframe = 'M5') {
+        try {
+          // USAR ENDPOINT PÚBLICO - Velas de Twelve Data en tiempo real (sin autenticación)
+          // Las velas son datos públicos del mercado, solo las señales están protegidas
+          const endpoint = `/api/public/candles?symbol=${encodeURIComponent(symbol)}&timeframe=${timeframe}&limit=${CONFIG.MAX_CANDLES}&source=twelvedata`;
+          
+          console.log(`📊 Cargando velas desde: Twelve Data (Público - Tiempo Real)`);
+          
+          const data = await this.request(endpoint);
+          return Array.isArray(data) ? data : [];
+        } catch (error) {
+          console.warn('⚠️ Velas no disponibles:', error.message);
+          return [];
+        }
+      }
+
+      static async placeTrade(symbol, direction, amount, duration) {
+        try {
+          const data = await this.request('/api/iq/trade', {
+            method: 'POST',
+            body: JSON.stringify({
+              symbol,
+              direction: direction.toLowerCase(),
+              amount,
+              expiration: duration
+            })
+          });
+          return data;
+        } catch (error) {
+          throw new Error(`Error ejecutando ${direction}: ${error.message}`);
+        }
+      }
+
+      static async checkHealth() {
+        try {
+          await this.request('/health');
+          return true;
+        } catch (error) {
+          return false;
+        }
+      }
+    }
+
+    // ====== Funciones Principales ======
+    async function initApp() {
+      console.log('🚀 Iniciando STC Trading Dashboard...');
+      
+      try {
+        // Mostrar loading
+        showLoading(true);
+        
+        // Inicializar gráfico
+        state.chart = new ChartManager();
+        
+        // Verificar conexión API (sin requerir IQ Option)
+        try {
+          await checkConnection();
+        } catch (error) {
+          console.log('⚠️ API Backend no disponible, esperando conexión IQ Option...');
+          document.getElementById('connStatus').textContent = 'Sin conectar';
+          document.getElementById('connStatus').className = 'status warn';
+        }
+        
+        // Configurar eventos
+        setupEventHandlers();
+        
+        // Cargar datos iniciales
+        const initialSymbol = document.getElementById('symbolSelect').value;
+        CONFIG.CURRENT_SYMBOL = initialSymbol;
+        console.log(`📊 Cargando símbolo inicial: ${initialSymbol}`);
+        await loadCandles(initialSymbol);
+        
+        // Iniciar timers
+        startAutoUpdate();
+        
+        // Ocultar loading
+        showLoading(false);
+        
+        AlertManager.info('✅ Dashboard listo - Conecta a IQ Option para empezar');
+        console.log('✅ Dashboard inicializado');
+
+      } catch (error) {
+        console.error('❌ Error inicializando:', error);
+        AlertManager.error('❌ Error inicializando: ' + error.message);
+        showLoading(false);
+      }
+    }
+
+    async function checkConnection() {
+      try {
+        const isHealthy = await APIManager.checkHealth();
+        
+        if (isHealthy) {
+          document.getElementById('connStatus').textContent = 'Conectado';
+          document.getElementById('connStatus').className = 'status ok';
+          state.isConnected = true;
+        } else {
+          throw new Error('API no responde');
+        }
+
+      } catch (error) {
+        document.getElementById('connStatus').textContent = 'Error';
+        document.getElementById('connStatus').className = 'status err';
+        state.isConnected = false;
+        throw error;
+      }
+    }
+
+    async function loadInitialData() {
+      const symbol = document.getElementById('symbolSelect').value;
+      CONFIG.CURRENT_SYMBOL = symbol;
+      
+      // Actualizar símbolo en UI
+      document.getElementById('symbolLabel').textContent = symbol;
+      
+      // Cargar velas
+      await loadCandles(symbol);
+      
+      // Cargar balance
+      await loadBalance();
+    }
+
+    async function loadCandles(symbol, timeframe = null) {
+      try {
+        const tf = timeframe || CONFIG.CURRENT_TIMEFRAME;
+        console.log(`📊 Cargando velas para ${symbol} (${tf})...`);
+        
+        const candles = await APIManager.getCandles(symbol, tf);
+        
+        if (candles.length > 0) {
+          state.chart.updateCandles(candles);
+          
+          const lastCandle = candles[candles.length - 1];
+          const lastPrice = lastCandle.close || lastCandle.open || 0;
+          
+          if (lastPrice > 0) {
+            state.currentBid = lastPrice;
+            document.getElementById('timeLabel').textContent = new Date().toLocaleTimeString();
+          }
+          
+          document.getElementById('dataStatus').textContent = 'Velas OK';
+          document.getElementById('dataStatus').className = 'status ok';
+          
+          // Cargar señales de Tablero Binarias
+          await loadTableroSignals(symbol, tf);
+          
+        } else {
+          document.getElementById('dataStatus').textContent = 'Sin velas';
+          document.getElementById('dataStatus').className = 'status warn';
+        }
+
+      } catch (error) {
+        console.error('❌ Error cargando velas:', error);
+        document.getElementById('dataStatus').textContent = 'Error velas';
+        document.getElementById('dataStatus').className = 'status err';
+      }
+    }
+
+    async function loadTableroSignals(symbol, timeframe) {
+      try {
+        console.log(`🎯 Cargando señales Tablero para ${symbol} (${timeframe})...`);
+        
+        const response = await fetch(`/api/signals/tablero?symbol=${symbol}&timeframe=${timeframe}`);
+        const data = await response.json();
+        
+        if (data.success && data.signals && data.signals.length > 0) {
+          state.chart.addSignalMarkers(data.signals);
+          console.log(`✅ ${data.signals.length} señales Tablero cargadas`);
+        } else {
+          console.log('ℹ️ No hay señales Tablero disponibles');
+        }
+        
+      } catch (error) {
+        console.error('❌ Error cargando señales Tablero:', error);
+      }
+    }
+
+
+    // Sistema de anuncios de audio para señales (SILENCIADO)
+    const announcedSignals = new Set();
+    let audioLoopActive = false;
+    let currentSignalType = null;
+    
+    window.announceSignal = function(signal, signalId) {
+      // Evitar duplicados
+      if (announcedSignals.has(signalId)) {
+        return;
+      }
+      
+      announcedSignals.add(signalId);
+      
+      // Determinar tipo de señal
+      const isCall = signal.direction === 'CALL';
+      const signalType = isCall ? 'COMPRA' : 'VENTA';
+      currentSignalType = signalType;
+      
+      console.log(`🔔 Señal de ${signalType} detectada (AUDIO SILENCIADO):`, signal);
+      
+      // AUDIO DESHABILITADO TEMPORALMENTE
+      // Solo log en consola, sin reproducción de audio
+    };
+    
+    // Función para confirmar ejecución (cuando el usuario toca la alerta)
+    window.confirmSignalExecution = function() {
+      console.log('✅ Usuario confirmó ejecución');
+      
+      // Detener bucle de audio
+      audioLoopActive = false;
+      
+      // Cancelar cualquier audio en curso
+      window.speechSynthesis.cancel();
+      
+      // Ocultar alerta
+      const signalAlert = document.getElementById('signalAlert');
+      if (signalAlert) {
+        signalAlert.style.display = 'none';
+      }
+      
+      // Reproducir mensaje de éxito
+      if ('speechSynthesis' in window) {
+        setTimeout(() => {
+          const successMessage = 'Éxito en su inversión';
+          const utterance = new SpeechSynthesisUtterance(successMessage);
+          utterance.lang = 'es-ES';
+          utterance.rate = 0.85;
+          utterance.pitch = 0.7;
+          utterance.volume = 1.0;
+          
+          window.speechSynthesis.speak(utterance);
+          console.log('🎉 Audio de éxito reproducido');
+        }, 300);
+      }
+    };
+
+    async function loadBalance() {
+      try {
+        const balanceData = await APIManager.getBalance();
+        
+        if (balanceData && typeof balanceData.balance === 'number') {
+          const amount = balanceData.balance;
+          const type = balanceData.type || 'PRACTICE';
+          
+          document.getElementById('balanceAmount').textContent = `$${amount.toFixed(2)}`;
+          document.getElementById('balanceType').textContent = type;
+          
+          console.log(`💰 Balance: $${amount.toFixed(2)} (${type})`);
+        } else {
+          document.getElementById('balanceAmount').textContent = '$-.--';
+          document.getElementById('balanceType').textContent = 'Sin conexión';
+        }
+
+      } catch (error) {
+        console.warn('⚠️ Error obteniendo balance:', error.message);
+        document.getElementById('balanceAmount').textContent = '$-.--';
+        document.getElementById('balanceType').textContent = 'Error';
+      }
+    }
+
+    async function executeTrade(direction) {
+      if (!state.isConnected) {
+        AlertManager.error('❌ No hay conexión con la API');
+        return;
+      }
+
+      const symbol = document.getElementById('symbolSelect').value;
+      const amount = parseFloat(document.getElementById('tradeAmount').value);
+      const duration = parseInt(document.getElementById('tradeDuration').value);
+
+      if (!amount || amount <= 0) {
+        AlertManager.error('❌ Monto inválido');
+        return;
+      }
+
+      try {
+        document.getElementById('tradeStatus').textContent = `⏳ Ejecutando ${direction}...`;
+        
+        const result = await APIManager.placeTrade(symbol, direction, amount, duration);
+        
+        if (result.success) {
+          AlertManager.success(`✅ ${direction} ejecutado - ID: ${result.trade_id}`);
+          document.getElementById('tradeStatus').textContent = `✅ ${direction} - ID: ${result.trade_id}`;
+          
+          // Actualizar estadísticas
+          state.stats.totalTrades++;
+          
+          // Recargar balance
+          setTimeout(loadBalance, 2000);
+          
+        } else {
+          AlertManager.error(`❌ Error: ${result.error || result.message || 'Orden falló'}`);
+          document.getElementById('tradeStatus').textContent = `❌ Error: ${result.error || result.message || 'Orden falló'}`;
+        }
+
+      } catch (error) {
+        console.error('❌ Trade Error:', error);
+        AlertManager.error(error.message);
+        document.getElementById('tradeStatus').textContent = `❌ ${error.message}`;
+      }
+    }
+
+    function startAutoUpdate() {
+      // Limpiar timer existente
+      if (state.refreshTimer) {
+        clearInterval(state.refreshTimer);
+      }
+
+      // Timer principal - usa CONFIG.CURRENT_SYMBOL para mantener selección del usuario
+      state.refreshTimer = setInterval(async () => {
+        if (state.isConnected) {
+          await loadCandles(CONFIG.CURRENT_SYMBOL);
+        }
+      }, CONFIG.REFRESH_INTERVAL);
+
+      // Timer para balance (menos frecuente)
+      setInterval(async () => {
+        if (state.isConnected) {
+          await loadBalance();
+        }
+      }, 15000);
+
+      console.log('🔄 Auto-update iniciado');
+    }
+
+    async function changeTimeframe(newTimeframe) {
+      // Actualizar estado
+      CONFIG.CURRENT_TIMEFRAME = newTimeframe;
+      
+      // Actualizar UI de botones
+      document.querySelectorAll('.timeframe-btn').forEach(btn => {
+        if (btn.dataset.timeframe === newTimeframe) {
+          btn.classList.add('active');
+        } else {
+          btn.classList.remove('active');
+        }
+      });
+      
+      // Recargar velas con nuevo timeframe
+      const symbol = CONFIG.CURRENT_SYMBOL;
+      await loadCandles(symbol, newTimeframe);
+      
+      AlertManager.info(`⏱️ Temporalidad cambiada a ${newTimeframe}`);
+      console.log(`⏱️ Timeframe cambiado a ${newTimeframe}`);
+    }
+
+    function openSymbolsModal() {
+      const modal = document.getElementById('symbolsModal');
+      modal.classList.add('show');
+      loadAvailableSymbols();
+    }
+
+    function closeSymbolsModal() {
+      const modal = document.getElementById('symbolsModal');
+      modal.classList.remove('show');
+    }
+
+    async function loadAvailableSymbols() {
+      const otcGridEl = document.getElementById('symbolsOTC');
+      const regularGridEl = document.getElementById('symbolsRegular');
+      
+      // Pares monitoreados (solo los 6 que rastreamos)
+      const monitoredPairs = {
+        OTC: [
+          { name: 'EURUSD-OTC', display: 'EUR/USD (OTC)' },
+          { name: 'EURJPY-OTC', display: 'EUR/JPY (OTC)' },
+          { name: 'USDJPY-OTC', display: 'USD/JPY (OTC)' }
+        ],
+        REAL: [
+          { name: 'EURUSD', display: 'EUR/USD' },
+          { name: 'EURJPY', display: 'EUR/JPY' },
+          { name: 'USDJPY', display: 'USD/JPY' }
+        ]
+      };
+      
+      otcGridEl.innerHTML = '';
+      regularGridEl.innerHTML = '';
+      
+      // Renderizar pares OTC con diseño futurista
+      monitoredPairs.OTC.forEach(symbol => {
+        const btn = document.createElement('button');
+        btn.className = 'futuristic-pair-btn';
+        btn.innerHTML = `
+          <div class="pair-name">${symbol.name.replace('-OTC', '')}</div>
+          <div class="pair-label">OTC</div>
+        `;
+        btn.dataset.symbol = symbol.name;
+        if (symbol.name === CONFIG.CURRENT_SYMBOL) {
+          btn.classList.add('active');
+        }
+        btn.addEventListener('click', () => selectSymbol(symbol.name));
+        otcGridEl.appendChild(btn);
+      });
+      
+      // Renderizar pares REAL con diseño futurista
+      monitoredPairs.REAL.forEach(symbol => {
+        const btn = document.createElement('button');
+        btn.className = 'futuristic-pair-btn';
+        btn.innerHTML = `
+          <div class="pair-name">${symbol.name}</div>
+          <div class="pair-label">Regular</div>
+        `;
+        btn.dataset.symbol = symbol.name;
+        if (symbol.name === CONFIG.CURRENT_SYMBOL) {
+          btn.classList.add('active');
+        }
+        btn.addEventListener('click', () => selectSymbol(symbol.name));
+        regularGridEl.appendChild(btn);
+      });
+      
+      console.log(`✅ Cargados ${monitoredPairs.OTC.length} pares OTC y ${monitoredPairs.REAL.length} pares REAL`);
+    }
+
+    async function selectSymbol(symbol) {
+      CONFIG.CURRENT_SYMBOL = symbol;
+      
+      const selectEl = document.getElementById('symbolSelect');
+      
+      const existingOption = Array.from(selectEl.options).find(opt => opt.value === symbol);
+      if (!existingOption) {
+        const newOption = document.createElement('option');
+        newOption.value = symbol;
+        newOption.textContent = symbol;
+        selectEl.appendChild(newOption);
+      }
+      
+      // Cambiar valor sin disparar el evento 'change'
+      state.ignoreNextSymbolChange = true;
+      selectEl.value = symbol;
+      document.getElementById('symbolLabel').textContent = symbol;
+      
+      closeSymbolsModal();
+      
+      await loadCandles(symbol);
+      AlertManager.info(`📊 Par cambiado a ${symbol}`);
+    }
+
+    function setupEventHandlers() {
+      // Botones de trading
+      document.getElementById('btnCallTrade').addEventListener('click', () => executeTrade('CALL'));
+      document.getElementById('btnPutTrade').addEventListener('click', () => executeTrade('PUT'));
+      
+      // Cambio de símbolo
+      document.getElementById('symbolSelect').addEventListener('change', async (e) => {
+        // Ignorar si el cambio viene de código interno
+        if (state.ignoreNextSymbolChange) {
+          state.ignoreNextSymbolChange = false;
+          return;
+        }
+        
+        const newSymbol = e.target.value;
+        CONFIG.CURRENT_SYMBOL = newSymbol;
+        document.getElementById('symbolLabel').textContent = newSymbol;
+        await loadCandles(newSymbol);
+        AlertManager.info(`📊 Símbolo cambiado a ${newSymbol}`);
+      });
+      
+      // Botones de temporalidad
+      document.querySelectorAll('.timeframe-btn').forEach(btn => {
+        btn.addEventListener('click', async (e) => {
+          const newTimeframe = e.target.dataset.timeframe;
+          await changeTimeframe(newTimeframe);
+        });
+      });
+      
+      // Modal de símbolos
+      document.getElementById('btnOpenSymbolsModal').addEventListener('click', openSymbolsModal);
+      document.getElementById('btnCloseSymbolsModal').addEventListener('click', closeSymbolsModal);
+      document.getElementById('symbolsModal').addEventListener('click', (e) => {
+        if (e.target.id === 'symbolsModal') {
+          closeSymbolsModal();
+        }
+      });
+      
+      // Conexión
+      document.getElementById('btnIqLogin').addEventListener('click', async () => {
+        await loginIQ();
+      });
+
+      // Logout - Abrir modal
+      document.getElementById('btnLogout').addEventListener('click', () => {
+        document.getElementById('logoutModal').classList.add('show');
+      });
+
+      // Cerrar modal de logout
+      document.getElementById('btnCancelLogout').addEventListener('click', () => {
+        document.getElementById('logoutModal').classList.remove('show');
+      });
+
+      // Confirmar logout
+      document.getElementById('btnConfirmLogout').addEventListener('click', async () => {
+        // Ocultar botones y mostrar barra de progreso
+        document.getElementById('logoutButtons').style.display = 'none';
+        document.getElementById('logoutProgress').style.display = 'block';
+        document.getElementById('logoutTitle').textContent = 'Cerrando sesión';
+        document.getElementById('logoutMessage').textContent = 'Espera un momento...';
+        
+        // Textos dinámicos durante el logout
+        const logoutTexts = [
+          'Desconectando credenciales...',
+          'Cerrando gráficos...',
+          'Hasta luego...'
+        ];
+        let textIndex = 0;
+        
+        // Animar barra de progreso y cambiar textos
+        const progressBar = document.getElementById('logoutProgressBar');
+        const progressText = document.getElementById('logoutProgressText');
+        let progress = 0;
+        
+        const interval = setInterval(() => {
+          progress += 10;
+          progressBar.style.width = progress + '%';
+          
+          // Cambiar texto cada 33%
+          if (progress === 33 || progress === 66 || progress === 99) {
+            progressText.textContent = logoutTexts[textIndex];
+            textIndex++;
+          }
+          
+          if (progress >= 100) {
+            clearInterval(interval);
+          }
+        }, 100);
+        
+        // Timeout de seguridad: siempre redirigir después de 3 segundos máximo
+        const safetyTimeout = setTimeout(() => {
+          window.location.href = '/auth/login';
+        }, 3000);
+        
+        try {
+          const response = await fetch('/api/auth/logout', { method: 'POST' });
+          clearTimeout(safetyTimeout);
+          setTimeout(() => window.location.href = '/auth/login', 500);
+        } catch (error) {
+          console.error('Error al cerrar sesión:', error);
+          clearTimeout(safetyTimeout);
+          setTimeout(() => window.location.href = '/auth/login', 500);
+        }
+      });
+
+      // Cerrar modal al hacer click fuera
+      document.getElementById('logoutModal').addEventListener('click', (e) => {
+        if (e.target.id === 'logoutModal') {
+          document.getElementById('logoutModal').classList.remove('show');
+        }
+      });
+
+      console.log('🎛️ Event handlers configurados');
+    }
+
+    function showLoading(show) {
+      document.getElementById('loadingOverlay').style.display = show ? 'flex' : 'none';
+    }
+
+    // ====== Inicio Automático ======
+    document.addEventListener('DOMContentLoaded', () => {
+      console.log('🌐 DOM cargado, iniciando aplicación...');
+      
+      // Esperar un poco para que las librerías se carguen
+      setTimeout(initApp, 300);
+    });
+
+    // Cleanup al cerrar
+    window.addEventListener('beforeunload', () => {
+      if (state.refreshTimer) {
+        clearInterval(state.refreshTimer);
+      }
+    });
+
+    // ====== Selector de Fuente de Datos ======
+    window.dataSource = 'twelvedata'; // Por defecto: Twelve Data (público)
+    
+    document.querySelectorAll('.data-source-btn').forEach(btn => {
+      btn.addEventListener('click', function() {
+        const source = this.dataset.source;
+        window.dataSource = source;
+        
+        // Actualizar botones activos
+        document.querySelectorAll('.data-source-btn').forEach(b => b.classList.remove('active'));
+        this.classList.add('active');
+        
+        // Actualizar label de estado
+        const label = document.getElementById('dataSourceLabel');
+        const info = document.getElementById('dataSourceInfo');
+        
+        if (source === 'finnhub') {
+          label.textContent = 'BTC Real';
+          label.className = 'small status ok';
+          info.textContent = 'Datos reales de criptomonedas (Finnhub API)';
+          
+          // OCULTAR controles de trading (solo ver señales)
+          document.querySelectorAll('.iq-only-controls').forEach(el => {
+            el.style.display = 'none';
+          });
+          
+          // Cambiar símbolos disponibles a cripto
+          const symbolSelect = document.getElementById('symbolSelect');
+          if (symbolSelect) {
+            symbolSelect.innerHTML = `
+              <option value="BTCUSD" selected>Bitcoin USD</option>
+              <option value="ETHUSD">Ethereum USD</option>
+              <option value="EURUSD">EUR/USD</option>
+              <option value="EURJPY">EUR/JPY</option>
+            `;
+          }
+          
+        } else if (source === 'iq') {
+          label.textContent = 'IQ Demo';
+          label.className = 'small status warn';
+          info.textContent = 'Datos simulados de IQ Option';
+          
+          // MOSTRAR controles de trading (operar con binarias)
+          document.querySelectorAll('.iq-only-controls').forEach(el => {
+            el.style.display = '';
+          });
+          
+          // Restablecer símbolos originales IQ
+          const symbolSelect = document.getElementById('symbolSelect');
+          if (symbolSelect) {
+            symbolSelect.innerHTML = `
+              <option value="EURUSD-OTC" selected>EURUSD-OTC</option>
+              <option value="GBPUSD-OTC">GBPUSD-OTC</option>
+              <option value="USDJPY-OTC">USDJPY-OTC</option>
+              <option value="EURJPY-OTC">EURJPY-OTC</option>
+              <option value="AUDUSD-OTC">AUDUSD-OTC</option>
+            `;
+          }
+          
+        } else if (source === 'olymptrade') {
+          label.textContent = 'OlympTrade';
+          label.className = 'small status info';
+          info.textContent = 'Datos de OlympTrade para trading';
+          
+          // MOSTRAR controles de trading
+          document.querySelectorAll('.iq-only-controls').forEach(el => {
+            el.style.display = '';
+          });
+          
+          // Símbolos disponibles en OlympTrade
+          const symbolSelect = document.getElementById('symbolSelect');
+          if (symbolSelect) {
+            symbolSelect.innerHTML = `
+              <option value="EURUSD" selected>EUR/USD</option>
+              <option value="EURJPY">EUR/JPY</option>
+              <option value="GBPUSD">GBP/USD</option>
+              <option value="USDJPY">USD/JPY</option>
+              <option value="BTCUSD">Bitcoin USD</option>
+            `;
+          }
+        }
+        
+        // Recargar gráfico con la nueva fuente
+        console.log(`🔄 Cambiando fuente de datos a: ${source}`);
+        if (window.STCChartFix && window.STCChartFix.loadCandles) {
+          const symbolSelect = document.getElementById('symbolSelect');
+          if (symbolSelect) {
+            window.STCChartFix.loadCandles(symbolSelect.value);
+          }
+        }
+      });
+    });
+
+    console.log('📋 STC Trading Dashboard script cargado');
+  </script>
+
+<script>
+// STCChartFix se inicializa automáticamente al cargar la página
+window.addEventListener('DOMContentLoaded', function () {
+    // Inicializar actualización automática de balance
+    updateRealBalance();
+    setInterval(updateRealBalance, 10000); // Cada 10 segundos
+});
+
+// Función para actualizar balance real
+function updateRealBalance() {
+    fetch('/api/iq/balance')
+        .then(response => response.json())
+        .then(data => {
+            if (data.balance !== undefined) {
+                // Actualizar balance en el dashboard
+                const balanceElement = document.querySelector('[data-balance]');
+                if (balanceElement) {
+                    balanceElement.textContent = `$${data.balance.toFixed(2)}`;
+                }
+                
+                // Actualizar tipo de cuenta
+                const accountTypeElement = document.querySelector('[data-account-type]');
+                if (accountTypeElement) {
+                    accountTypeElement.textContent = data.balance_type;
+                }
+            }
+        })
+        .catch(error => console.error('Error actualizando balance:', error));
+}
+
+// Función para enviar órdenes reales
+function sendRealOrder(direction) {
+    const amount = parseFloat(document.querySelector('[data-amount]')?.value || 1);
+    const duration = parseInt(document.querySelector('[data-duration]')?.value || 1);
+    
+    const orderData = {
+        symbol: symbol,
+        direction: direction,
+        amount: amount,
+        duration: duration
+    };
+    
+    console.log('Enviando orden real:', orderData);
+    
+    fetch('/api/iq/trade', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(orderData)
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log('Respuesta orden:', data);
+        if (data.success) {
+            alert(`✅ Orden ${direction} enviada exitosamente!\nID: ${data.order_id}`);
+        } else {
+            alert(`❌ Error enviando orden: ${data.error}`);
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        alert('❌ Error de conexión');
+    });
+}
+
+// Conectar botones CALL/PUT con órdenes reales
+document.addEventListener('DOMContentLoaded', function() {
+    const callButton = document.querySelector('[data-call-button]');
+    const putButton = document.querySelector('[data-put-button]');
+    
+    if (callButton) {
+        callButton.addEventListener('click', () => sendRealOrder('CALL'));
+    }
+    
+    if (putButton) {
+        putButton.addEventListener('click', () => sendRealOrder('PUT'));
+    }
+});
+</script>
+
+<script>
+// Inicializar el gráfico cuando el DOM esté listo
+window.addEventListener('DOMContentLoaded', function () {
+    console.log('🚀 Iniciando STC Chart Manager...');
+    
+    // El gráfico ya se inicializa automáticamente con STCChartFix
+    // El gráfico ya se inicializa automáticamente con STCChartFix
+    console.log('✅ STC Chart Manager - usando STCChartFix automático');
+});
+
+
+async function loginIQ() {
+  const email = document.getElementById('iqEmail').value.trim();
+  const password = document.getElementById('iqPassword').value.trim();
+  const balanceType = document.getElementById('iqBalanceType').value;
+
+  if (!email || !password) {
+    AlertManager.error('❌ Email y contraseña son obligatorios');
+    return;
+  }
+
+  try {
+    const response = await fetch(`${CONFIG.API_BASE_URL}/api/iq/login`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email, password, balance_type: balanceType })
+    });
+
+    const data = await response.json();
+
+    if (data.success) {
+      AlertManager.success('✅ Conectado a IQ Option');
+      document.getElementById('iqStatus').textContent = 'Conectado';
+      document.getElementById('iqStatus').className = 'status ok';
+      
+      state.isConnected = true;
+      
+      await loadBalance();
+      await loadCandles(CONFIG.CURRENT_SYMBOL);
+    } else {
+      AlertManager.error(`❌ Error: ${data.message || 'Credenciales inválidas'}`);
+    }
+
+  } catch (error) {
+    AlertManager.error('❌ Error de conexión');
+    console.error(error);
+  }
+}
+</script>
+
+<!-- stc-candles-updater.js removido - usando STCChartFix automático -->
+
+<script>
+// Inicialización mejorada
+document.addEventListener('DOMContentLoaded', function() {
+    // STCChartFix ya se inicializa automáticamente
+    console.log('🚀 STC Trading System - gráficos automáticos activos');
+});
+</script>
+</body>
+</html>
+
+<script>
+// Modal de Crear Bot
+document.addEventListener('DOMContentLoaded', function() {
+  const createBotModal = document.getElementById('createBotModal');
+  const btnCreateBot = document.getElementById('btnCreateBot');
+  const btnCloseCreateBotModal = document.getElementById('btnCloseCreateBotModal');
+  const createBotForm = document.getElementById('createBotForm');
+
+  // Abrir modal
+  btnCreateBot.addEventListener('click', function() {
+    createBotModal.style.display = 'flex';
+  });
+
+  // Cerrar modal
+  btnCloseCreateBotModal.addEventListener('click', function() {
+    createBotModal.style.display = 'none';
+  });
+
+  // Cerrar al hacer click fuera
+  createBotModal.addEventListener('click', function(e) {
+    if (e.target === createBotModal) {
+      createBotModal.style.display = 'none';
+    }
+  });
+
+  // Enviar formulario
+  createBotForm.addEventListener('submit', async function(e) {
+    e.preventDefault();
+    
+    const formData = {
+      name: document.getElementById('botName').value,
+      strategy_name: document.getElementById('botStrategy').value,
+      symbol: document.getElementById('botSymbol').value,
+      timeframe: document.getElementById('botTimeframe').value,
+      trade_amount: parseFloat(document.getElementById('botAmount').value),
+      trade_duration: parseInt(document.getElementById('botDuration').value),
+      max_daily_loss: parseFloat(document.getElementById('botMaxLoss').value),
+      max_daily_trades: parseInt(document.getElementById('botMaxTrades').value),
+      use_dual_gale: document.getElementById('botDualGale').checked,
+      auto_restart: document.getElementById('botAutoRestart').checked
+    };
+
+    try {
+      const response = await fetch('/api/bots/create', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        AlertManager.success('✅ Bot creado exitosamente');
+        createBotModal.style.display = 'none';
+        createBotForm.reset();
+        // Recargar la lista de bots si existe
+        if (typeof loadBots === 'function') {
+          loadBots();
+        }
+      } else {
+        AlertManager.error('❌ Error: ' + result.error);
+      }
+    } catch (error) {
+      AlertManager.error('❌ Error de conexión al crear bot');
+      console.error(error);
+    }
+  });
+});
+</script>
+
+<script>
+// Sistema de Señales en Tiempo Real
+(function() {
+  let currentBotId = null;
+  let signalsPollingId = null;
+
+  // Función para actualizar el panel de señales
+  function updateSignalsPanel(signal) {
+    const signalStatus = document.getElementById('signalStatus');
+    const lastSignalContainer = document.getElementById('lastSignalContainer');
+    const noSignalMessage = document.getElementById('noSignalMessage');
+    const signalDirection = document.getElementById('signalDirection');
+    const signalInfo = document.getElementById('signalInfo');
+    const signalConfidence = document.getElementById('signalConfidence');
+    const signalIcon = document.getElementById('signalIcon');
+    const signalIndicators = document.getElementById('signalIndicators');
+    const signalPattern = document.getElementById('signalPattern');
+    const signalProbability = document.getElementById('signalProbability');
+
+    // Mostrar señal
+    lastSignalContainer.style.display = 'block';
+    noSignalMessage.style.display = 'none';
+    signalStatus.textContent = 'Señal Activa';
+    signalStatus.className = 'small status ok';
+
+    // Actualizar dirección y icono
+    const direction = signal.direction.toUpperCase();
+    const isCall = direction === 'CALL';
+    signalDirection.textContent = isCall ? '📈 CALL' : '📉 PUT';
+    signalDirection.style.color = isCall ? '#10b981' : '#ef4444';
+    signalIcon.textContent = isCall ? '🟢' : '🔴';
+
+    // Información de la señal
+    const timestamp = new Date(signal.timestamp * 1000).toLocaleTimeString();
+    signalInfo.textContent = `${signal.symbol} • ${signal.timeframe} • ${timestamp}`;
+
+    // Confianza
+    const confidence = (signal.confidence * 100).toFixed(1);
+    signalConfidence.innerHTML = `Confianza: <span class="bold" style="color: ${confidence >= 70 ? '#10b981' : confidence >= 50 ? '#f59e0b' : '#ef4444'}">${confidence}%</span>`;
+
+    // Indicadores adicionales (si existen)
+    if (signal.indicators && Object.keys(signal.indicators).length > 0) {
+      signalIndicators.style.display = 'block';
+      
+      // Patrón principal
+      const pattern = signal.indicators.patron_principal || signal.indicators.reversal_indicator || '-';
+      signalPattern.textContent = pattern;
+
+      // Probabilidad
+      const probability = signal.indicators.probabilidad ? (signal.indicators.probabilidad * 100).toFixed(1) + '%' : '-';
+      signalProbability.textContent = probability;
+    } else {
+      signalIndicators.style.display = 'none';
+    }
+  }
+
+  // Función para iniciar polling de señales
+  function startSignalsPolling(botId) {
+    if (!botId) return;
+
+    currentBotId = botId;
+    
+    if (signalsPollingId) {
+      clearInterval(signalsPollingId);
+    }
+
+    // Configurar STCChartFix para mostrar marcadores
+    if (window.STCChartFix) {
+      window.STCChartFix.setBotId(botId);
+    }
+
+    signalsPollingId = setInterval(async () => {
+      try {
+        const response = await fetch(`/api/bots/signals/${botId}`);
+        if (response.ok) {
+          const data = await response.json();
+          if (data.success && data.has_signal) {
+            updateSignalsPanel(data.signal);
+          }
+        }
+      } catch (error) {
+        console.error('❌ Error obteniendo señales:', error);
+      }
+    }, 3000); // Cada 3 segundos
+
+    console.log(`📡 Sistema de señales activado para bot ${botId}`);
+  }
+
+  // Función para detener polling
+  function stopSignalsPolling() {
+    if (signalsPollingId) {
+      clearInterval(signalsPollingId);
+      signalsPollingId = null;
+    }
+
+    if (window.STCChartFix) {
+      window.STCChartFix.stopSignalsPolling();
+    }
+
+    // Resetear panel
+    const signalStatus = document.getElementById('signalStatus');
+    const lastSignalContainer = document.getElementById('lastSignalContainer');
+    const noSignalMessage = document.getElementById('noSignalMessage');
+
+    signalStatus.textContent = 'Sin señales';
+    signalStatus.className = 'small status warn';
+    lastSignalContainer.style.display = 'none';
+    noSignalMessage.style.display = 'block';
+  }
+
+  // Cargar lista de bots del usuario (multi-tenant)
+  async function loadUserBots() {
+    try {
+      const response = await fetch('/api/bots/list');
+      if (response.ok) {
+        const data = await response.json();
+        if (data.success && data.bots && data.bots.length > 0) {
+          const botSelector = document.getElementById('botSelector');
+          const selectBotSignals = document.getElementById('selectBotSignals');
+          
+          // Mostrar selector si hay bots
+          botSelector.style.display = 'block';
+          
+          // Limpiar opciones previas
+          selectBotSignals.innerHTML = '<option value="">-- Seleccionar bot --</option>';
+          
+          // Agregar cada bot del usuario
+          data.bots.forEach(bot => {
+            const option = document.createElement('option');
+            option.value = bot.id;
+            option.textContent = `${bot.name} ${bot.running ? '✅' : '⏸️'}`;
+            selectBotSignals.appendChild(option);
+          });
+          
+          // Auto-seleccionar primer bot en ejecución
+          const runningBot = data.bots.find(bot => bot.running);
+          if (runningBot) {
+            selectBotSignals.value = runningBot.id;
+            startSignalsPolling(runningBot.id);
+            console.log(`✅ Bot en ejecución auto-seleccionado: ${runningBot.name}`);
+          }
+        } else {
+          console.log('⚠️ Usuario no tiene bots creados');
+        }
+      } else if (response.status === 401) {
+        console.log('⚠️ Usuario no autenticado - redirigir a login');
+      }
+    } catch (error) {
+      console.error('❌ Error cargando bots del usuario:', error);
+    }
+  }
+
+  // Event listener para cambio de bot
+  document.addEventListener('DOMContentLoaded', function() {
+    const selectBotSignals = document.getElementById('selectBotSignals');
+    if (selectBotSignals) {
+      selectBotSignals.addEventListener('change', function(e) {
+        const botId = e.target.value;
+        if (botId) {
+          stopSignalsPolling();
+          startSignalsPolling(botId);
+          console.log(`🔄 Cambiado a bot: ${botId}`);
+        } else {
+          stopSignalsPolling();
+        }
+      });
+    }
+
+    // Cargar bots del usuario al iniciar
+    loadUserBots();
+  });
+
+  // Exponer funciones globalmente
+  window.startBotSignals = startSignalsPolling;
+  window.stopBotSignals = stopSignalsPolling;
+  window.reloadUserBots = loadUserBots;
+})();
+</script>
+
+<script>
+// ========== RELOJ CUENTA REGRESIVA CÓDIGO PROMOCIONAL ==========
+(function() {
+  let promoExpiresAt = null;
+  let countdownInterval = null;
+
+  async function checkPromoStatus() {
+    try {
+      const response = await fetch('/api/promo/status');
+      const result = await response.json();
+
+      if (result.success && result.has_active_promo) {
+        promoExpiresAt = new Date(result.promo_code.expires_at);
+        document.getElementById('promoCountdown').style.display = 'block';
+        startCountdown();
+      } else {
+        document.getElementById('promoCountdown').style.display = 'none';
+        if (countdownInterval) {
+          clearInterval(countdownInterval);
+        }
+      }
+    } catch (error) {
+      console.error('Error checking promo status:', error);
+    }
+  }
+
+  function startCountdown() {
+    if (countdownInterval) {
+      clearInterval(countdownInterval);
+    }
+
+    countdownInterval = setInterval(() => {
+      const now = new Date();
+      const diff = promoExpiresAt - now;
+
+      if (diff <= 0) {
+        document.getElementById('promoTimer').textContent = '⏰ EXPIRADO';
+        document.getElementById('promoCountdown').style.display = 'none';
+        clearInterval(countdownInterval);
+        return;
+      }
+
+      const hours = Math.floor(diff / (1000 * 60 * 60));
+      const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+      const milliseconds = diff % 1000;
+
+      const formatted = `${String(hours).padStart(2, '0')}h ${String(minutes).padStart(2, '0')}m ${String(seconds).padStart(2, '0')}s ${String(milliseconds).padStart(3, '0')}ms`;
+      document.getElementById('promoTimer').textContent = formatted;
+    }, 10);
+  }
+
+  // Verificar al cargar la página
+  document.addEventListener('DOMContentLoaded', checkPromoStatus);
+})();
+</script>

@@ -1,0 +1,906 @@
+20:10:15.796 🎯 29 señales CALL/PUT generadas (Estrategia: Análisis de Probabilidades) candlestick.html:587:21
+20:10:17.360
+🔥🔥🔥 NUEVA VELA M5 CREADA EN TIEMPO REAL 🔥🔥🔥 candlestick.html:318:29
+20:10:17.360 ⏰ Hora sistema: 20:10:17 (UTC-4) candlestick.html:319:29
+20:10:17.360 📊 Timestamp M5: 1761091800 (Última: 1761061500) candlestick.html:320:29
+20:10:17.360 💰 Precio apertura: 1.160030 candlestick.html:321:29
+20:10:17.360 ✅ VELA SINCRONIZADA CON MERCADO - SIN DELAY
+candlestick.html:322:29
+20:10:25.866 🎯 29 señales CALL/PUT generadas (Estrategia: Análisis de Probabilidades) candlestick.html:587:21
+20:10:27.501
+🔥🔥🔥 NUEVA VELA M5 CREADA EN TIEMPO REAL 🔥🔥🔥 candlestick.html:318:29
+20:10:27.501 ⏰ Hora sistema: 20:10:27 (UTC-4) candlestick.html:319:29
+20:10:27.501 📊 Timestamp M5: 1761091800 (Última: 1761061500) candlestick.html:320:29
+20:10:27.501 💰 Precio apertura: 1.160100 candlestick.html:321:29
+20:10:27.501 ✅ VELA SINCRONIZADA CON MERCADO - SIN DELAY
+candlestick.html:322:29
+20:10:36.195 🎯 29 señales CALL/PUT generadas (Estrategia: Análisis de Probabilidades) candlestick.html:587:21
+20:10:37.593
+🔥🔥🔥 NUEVA VELA M5 CREADA EN TIEMPO REAL 🔥🔥🔥 candlestick.html:318:29
+20:10:37.593 ⏰ Hora sistema: 20:10:37 (UTC-4) candlestick.html:319:29
+20:10:37.593 📊 Timestamp M5: 1761091800 (Última: 1761061500) candlestick.html:320:29
+20:10:37.593 💰 Precio apertura: 1.160100 candlestick.html:321:29
+20:10:37.593 ✅ VELA SINCRONIZADA CON MERCADO - SIN DELAY
+candlestick.html:322:29
+20:10:46.400 🎯 29 señales CALL/PUT generadas (Estrategia: Análisis de Probabilidades) candlestick.html:587:21
+20:10:47.776
+🔥🔥🔥 NUEVA VELA M5 CREADA EN TIEMPO REAL 🔥🔥🔥 candlestick.html:318:29
+20:10:47.777 ⏰ Hora sistema: 20:10:47 (UTC-4) candlestick.html:319:29
+20:10:47.777 📊 Timestamp M5: 1761091800 (Última: 1761061500) candlestick.html:320:29
+20:10:47.777 💰 Precio apertura: 1.160100 candlestick.html:321:29
+20:10:47.777 ✅ VELA SINCRONIZADA CON MERCADO - SIN DELAY
+candlestick.html:322:29
+20:10:56.380 🎯 29 señales CALL/PUT generadas (Estrategia: Análisis de Probabilidades) candlestick.html:587:21
+20:10:58.369
+🔥🔥🔥 NUEVA VELA M5 CREADA EN TIEMPO REAL 🔥🔥🔥 candlestick.html:318:29
+20:10:58.369 ⏰ Hora sistema: 20:10:58 (UTC-4) candlestick.html:319:29
+20:10:58.369 📊 Timestamp M5: 1761091800 (Última: 1761061500) candlestick.html:320:29
+20:10:58.369 💰 Precio apertura: 1.160100 candlestick.html:321:29
+20:10:58.369 ✅ VELA SINCRONIZADA CON MERCADO - SIN DELAY
+candlestick.html:322:29
+20:11:06.527 🎯 29 señales CALL/PUT generadas (Estrategia: Análisis de Probabilidades) candlestick.html:587:21
+20:11:07.883
+🔥🔥🔥 NUEVA VELA M5 CREADA EN TIEMPO REAL 🔥🔥🔥 candlestick.html:318:29
+20:11:07.883 ⏰ Hora sistema: 20:11:07 (UTC-4) candlestick.html:319:29
+20:11:07.883 📊 Timestamp M5: 1761091800 (Última: 1761061500) candlestick.html:320:29
+20:11:07.883 💰 Precio apertura: 1.160100 candlestick.html:321:29
+20:11:07.883 ✅ VELA SINCRONIZADA CON MERCADO - SIN DELAY
+candlestick.html:322:29
+20:11:16.649 🎯 29 señales CALL/PUT generadas (Estrategia: Análisis de Probabilidades) candlestick.html:587:21
+20:11:17.976
+🔥🔥🔥 NUEVA VELA M5 CREADA EN TIEMPO REAL 🔥🔥🔥 candlestick.html:318:29
+20:11:17.977 ⏰ Hora sistema: 20:11:17 (UTC-4) candlestick.html:319:29
+20:11:17.977 📊 Timestamp M5: 1761091800 (Última: 1761061500) candlestick.html:320:29
+20:11:17.977 💰 Precio apertura: 1.160100 candlestick.html:321:29
+20:11:17.977 ✅ VELA SINCRONIZADA CON MERCADO - SIN DELAY
+candlestick.html:322:29
+20:11:26.659 🎯 28 señales CALL/PUT generadas (Estrategia: Análisis de Probabilidades) candlestick.html:587:21
+20:11:28.026
+🔥🔥🔥 NUEVA VELA M5 CREADA EN TIEMPO REAL 🔥🔥🔥 candlestick.html:318:29
+20:11:28.026 ⏰ Hora sistema: 20:11:28 (UTC-4) candlestick.html:319:29
+20:11:28.027 📊 Timestamp M5: 1761091800 (Última: 1761061800) candlestick.html:320:29
+20:11:28.027 💰 Precio apertura: 1.160230 candlestick.html:321:29
+20:11:28.027 ✅ VELA SINCRONIZADA CON MERCADO - SIN DELAY
+candlestick.html:322:29
+20:11:36.696 🎯 28 señales CALL/PUT generadas (Estrategia: Análisis de Probabilidades) candlestick.html:587:21
+20:11:38.198
+🔥🔥🔥 NUEVA VELA M5 CREADA EN TIEMPO REAL 🔥🔥🔥 candlestick.html:318:29
+20:11:38.198 ⏰ Hora sistema: 20:11:38 (UTC-4) candlestick.html:319:29
+20:11:38.198 📊 Timestamp M5: 1761091800 (Última: 1761061800) candlestick.html:320:29
+20:11:38.198 💰 Precio apertura: 1.160230 candlestick.html:321:29
+20:11:38.198 ✅ VELA SINCRONIZADA CON MERCADO - SIN DELAY
+candlestick.html:322:29
+20:11:46.885 🎯 28 señales CALL/PUT generadas (Estrategia: Análisis de Probabilidades) candlestick.html:587:21
+20:11:48.295
+🔥🔥🔥 NUEVA VELA M5 CREADA EN TIEMPO REAL 🔥🔥🔥 candlestick.html:318:29
+20:11:48.295 ⏰ Hora sistema: 20:11:48 (UTC-4) candlestick.html:319:29
+20:11:48.295 📊 Timestamp M5: 1761091800 (Última: 1761061800) candlestick.html:320:29
+20:11:48.296 💰 Precio apertura: 1.160230 candlestick.html:321:29
+20:11:48.296 ✅ VELA SINCRONIZADA CON MERCADO - SIN DELAY
+candlestick.html:322:29
+20:11:50.393 🔄 20:11:50 | Actualizando M5 @ 1761091800 | C:1.160230 H:1.160230 L:1.160230 candlestick.html:360:37
+20:11:57.052 🎯 28 señales CALL/PUT generadas (Estrategia: Análisis de Probabilidades) candlestick.html:587:21
+20:11:58.374
+🔥🔥🔥 NUEVA VELA M5 CREADA EN TIEMPO REAL 🔥🔥🔥 candlestick.html:318:29
+20:11:58.374 ⏰ Hora sistema: 20:11:58 (UTC-4) candlestick.html:319:29
+20:11:58.374 📊 Timestamp M5: 1761091800 (Última: 1761061800) candlestick.html:320:29
+20:11:58.374 💰 Precio apertura: 1.160230 candlestick.html:321:29
+20:11:58.374 ✅ VELA SINCRONIZADA CON MERCADO - SIN DELAY
+candlestick.html:322:29
+20:12:01.539 🔄 20:12:01 | Actualizando M5 @ 1761091800 | C:1.160230 H:1.160230 L:1.160230 candlestick.html:360:37
+20:12:07.833 🎯 28 señales CALL/PUT generadas (Estrategia: Análisis de Probabilidades) candlestick.html:587:21
+20:12:09.343
+🔥🔥🔥 NUEVA VELA M5 CREADA EN TIEMPO REAL 🔥🔥🔥 candlestick.html:318:29
+20:12:09.343 ⏰ Hora sistema: 20:12:09 (UTC-4) candlestick.html:319:29
+20:12:09.343 📊 Timestamp M5: 1761091800 (Última: 1761061800) candlestick.html:320:29
+20:12:09.343 💰 Precio apertura: 1.160230 candlestick.html:321:29
+20:12:09.343 ✅ VELA SINCRONIZADA CON MERCADO - SIN DELAY
+candlestick.html:322:29
+20:12:18.016 🎯 28 señales CALL/PUT generadas (Estrategia: Análisis de Probabilidades) candlestick.html:587:21
+20:12:19.371
+🔥🔥🔥 NUEVA VELA M5 CREADA EN TIEMPO REAL 🔥🔥🔥 candlestick.html:318:29
+20:12:19.371 ⏰ Hora sistema: 20:12:19 (UTC-4) candlestick.html:319:29
+20:12:19.371 📊 Timestamp M5: 1761091800 (Última: 1761061800) candlestick.html:320:29
+20:12:19.371 💰 Precio apertura: 1.160230 candlestick.html:321:29
+20:12:19.371 ✅ VELA SINCRONIZADA CON MERCADO - SIN DELAY
+candlestick.html:322:29
+20:12:29.003 🎯 28 señales CALL/PUT generadas (Estrategia: Análisis de Probabilidades) candlestick.html:587:21
+20:12:30.237
+🔥🔥🔥 NUEVA VELA M5 CREADA EN TIEMPO REAL 🔥🔥🔥 candlestick.html:318:29
+20:12:30.237 ⏰ Hora sistema: 20:12:30 (UTC-4) candlestick.html:319:29
+20:12:30.237 📊 Timestamp M5: 1761091800 (Última: 1761061800) candlestick.html:320:29
+20:12:30.237 💰 Precio apertura: 1.160190 candlestick.html:321:29
+20:12:30.237 ✅ VELA SINCRONIZADA CON MERCADO - SIN DELAY
+candlestick.html:322:29
+20:12:38.102 🎯 28 señales CALL/PUT generadas (Estrategia: Análisis de Probabilidades) candlestick.html:587:21
+20:12:39.649
+🔥🔥🔥 NUEVA VELA M5 CREADA EN TIEMPO REAL 🔥🔥🔥 candlestick.html:318:29
+20:12:39.649 ⏰ Hora sistema: 20:12:39 (UTC-4) candlestick.html:319:29
+20:12:39.649 📊 Timestamp M5: 1761091800 (Última: 1761061800) candlestick.html:320:29
+20:12:39.649 💰 Precio apertura: 1.160190 candlestick.html:321:29
+20:12:39.649 ✅ VELA SINCRONIZADA CON MERCADO - SIN DELAY
+candlestick.html:322:29
+20:12:48.161 🎯 28 señales CALL/PUT generadas (Estrategia: Análisis de Probabilidades) candlestick.html:587:21
+20:12:49.629
+🔥🔥🔥 NUEVA VELA M5 CREADA EN TIEMPO REAL 🔥🔥🔥 candlestick.html:318:29
+20:12:49.629 ⏰ Hora sistema: 20:12:49 (UTC-4) candlestick.html:319:29
+20:12:49.629 📊 Timestamp M5: 1761091800 (Última: 1761061800) candlestick.html:320:29
+20:12:49.629 💰 Precio apertura: 1.160190 candlestick.html:321:29
+20:12:49.629 ✅ VELA SINCRONIZADA CON MERCADO - SIN DELAY
+candlestick.html:322:29
+20:12:58.635 🎯 28 señales CALL/PUT generadas (Estrategia: Análisis de Probabilidades) candlestick.html:587:21
+20:13:00.040
+🔥🔥🔥 NUEVA VELA M5 CREADA EN TIEMPO REAL 🔥🔥🔥 candlestick.html:318:29
+20:13:00.041 ⏰ Hora sistema: 20:13:00 (UTC-4) candlestick.html:319:29
+20:13:00.041 📊 Timestamp M5: 1761091800 (Última: 1761061800) candlestick.html:320:29
+20:13:00.041 💰 Precio apertura: 1.160190 candlestick.html:321:29
+20:13:00.041 ✅ VELA SINCRONIZADA CON MERCADO - SIN DELAY
+candlestick.html:322:29
+20:13:08.656 🎯 28 señales CALL/PUT generadas (Estrategia: Análisis de Probabilidades) candlestick.html:587:21
+20:13:10.149
+🔥🔥🔥 NUEVA VELA M5 CREADA EN TIEMPO REAL 🔥🔥🔥 candlestick.html:318:29
+20:13:10.149 ⏰ Hora sistema: 20:13:10 (UTC-4) candlestick.html:319:29
+20:13:10.149 📊 Timestamp M5: 1761091800 (Última: 1761061800) candlestick.html:320:29
+20:13:10.149 💰 Precio apertura: 1.160190 candlestick.html:321:29
+20:13:10.149 ✅ VELA SINCRONIZADA CON MERCADO - SIN DELAY
+candlestick.html:322:29
+20:13:18.717 🎯 28 señales CALL/PUT generadas (Estrategia: Análisis de Probabilidades) candlestick.html:587:21
+20:13:20.246
+🔥🔥🔥 NUEVA VELA M5 CREADA EN TIEMPO REAL 🔥🔥🔥 candlestick.html:318:29
+20:13:20.246 ⏰ Hora sistema: 20:13:20 (UTC-4) candlestick.html:319:29
+20:13:20.246 📊 Timestamp M5: 1761091800 (Última: 1761061800) candlestick.html:320:29
+20:13:20.246 💰 Precio apertura: 1.160190 candlestick.html:321:29
+20:13:20.246 ✅ VELA SINCRONIZADA CON MERCADO - SIN DELAY
+candlestick.html:322:29
+20:13:28.778 🎯 28 señales CALL/PUT generadas (Estrategia: Análisis de Probabilidades) candlestick.html:587:21
+20:13:30.236
+🔥🔥🔥 NUEVA VELA M5 CREADA EN TIEMPO REAL 🔥🔥🔥 candlestick.html:318:29
+20:13:30.236 ⏰ Hora sistema: 20:13:30 (UTC-4) candlestick.html:319:29
+20:13:30.236 📊 Timestamp M5: 1761091800 (Última: 1761061800) candlestick.html:320:29
+20:13:30.237 💰 Precio apertura: 1.160240 candlestick.html:321:29
+20:13:30.237 ✅ VELA SINCRONIZADA CON MERCADO - SIN DELAY
+candlestick.html:322:29
+20:13:38.895 🎯 28 señales CALL/PUT generadas (Estrategia: Análisis de Probabilidades) candlestick.html:587:21
+20:13:40.381
+🔥🔥🔥 NUEVA VELA M5 CREADA EN TIEMPO REAL 🔥🔥🔥 candlestick.html:318:29
+20:13:40.381 ⏰ Hora sistema: 20:13:40 (UTC-4) candlestick.html:319:29
+20:13:40.381 📊 Timestamp M5: 1761091800 (Última: 1761061800) candlestick.html:320:29
+20:13:40.381 💰 Precio apertura: 1.160240 candlestick.html:321:29
+20:13:40.381 ✅ VELA SINCRONIZADA CON MERCADO - SIN DELAY
+candlestick.html:322:29
+20:13:48.984 🎯 28 señales CALL/PUT generadas (Estrategia: Análisis de Probabilidades) candlestick.html:587:21
+20:13:50.434
+🔥🔥🔥 NUEVA VELA M5 CREADA EN TIEMPO REAL 🔥🔥🔥 candlestick.html:318:29
+20:13:50.434 ⏰ Hora sistema: 20:13:50 (UTC-4) candlestick.html:319:29
+20:13:50.434 📊 Timestamp M5: 1761091800 (Última: 1761061800) candlestick.html:320:29
+20:13:50.434 💰 Precio apertura: 1.160240 candlestick.html:321:29
+20:13:50.434 ✅ VELA SINCRONIZADA CON MERCADO - SIN DELAY
+candlestick.html:322:29
+20:13:59.016 🎯 28 señales CALL/PUT generadas (Estrategia: Análisis de Probabilidades) candlestick.html:587:21
+20:14:00.527
+🔥🔥🔥 NUEVA VELA M5 CREADA EN TIEMPO REAL 🔥🔥🔥 candlestick.html:318:29
+20:14:00.527 ⏰ Hora sistema: 20:14:00 (UTC-4) candlestick.html:319:29
+20:14:00.527 📊 Timestamp M5: 1761091800 (Última: 1761061800) candlestick.html:320:29
+20:14:00.527 💰 Precio apertura: 1.160240 candlestick.html:321:29
+20:14:00.527 ✅ VELA SINCRONIZADA CON MERCADO - SIN DELAY
+candlestick.html:322:29
+20:14:09.073 🎯 28 señales CALL/PUT generadas (Estrategia: Análisis de Probabilidades) candlestick.html:587:21
+20:14:10.543
+🔥🔥🔥 NUEVA VELA M5 CREADA EN TIEMPO REAL 🔥🔥🔥 candlestick.html:318:29
+20:14:10.543 ⏰ Hora sistema: 20:14:10 (UTC-4) candlestick.html:319:29
+20:14:10.543 📊 Timestamp M5: 1761091800 (Última: 1761061800) candlestick.html:320:29
+20:14:10.543 💰 Precio apertura: 1.160240 candlestick.html:321:29
+20:14:10.543 ✅ VELA SINCRONIZADA CON MERCADO - SIN DELAY
+candlestick.html:322:29
+20:14:19.161 🎯 28 señales CALL/PUT generadas (Estrategia: Análisis de Probabilidades) candlestick.html:587:21
+20:14:20.571
+🔥🔥🔥 NUEVA VELA M5 CREADA EN TIEMPO REAL 🔥🔥🔥 candlestick.html:318:29
+20:14:20.571 ⏰ Hora sistema: 20:14:20 (UTC-4) candlestick.html:319:29
+20:14:20.571 📊 Timestamp M5: 1761091800 (Última: 1761061800) candlestick.html:320:29
+20:14:20.571 💰 Precio apertura: 1.160240 candlestick.html:321:29
+20:14:20.571 ✅ VELA SINCRONIZADA CON MERCADO - SIN DELAY
+candlestick.html:322:29
+20:14:29.216 🎯 28 señales CALL/PUT generadas (Estrategia: Análisis de Probabilidades) candlestick.html:587:21
+20:14:30.629
+🔥🔥🔥 NUEVA VELA M5 CREADA EN TIEMPO REAL 🔥🔥🔥 candlestick.html:318:29
+20:14:30.629 ⏰ Hora sistema: 20:14:30 (UTC-4) candlestick.html:319:29
+20:14:30.629 📊 Timestamp M5: 1761091800 (Última: 1761061800) candlestick.html:320:29
+20:14:30.629 💰 Precio apertura: 1.160310 candlestick.html:321:29
+20:14:30.629 ✅ VELA SINCRONIZADA CON MERCADO - SIN DELAY
+candlestick.html:322:29
+20:14:39.283 🎯 28 señales CALL/PUT generadas (Estrategia: Análisis de Probabilidades) candlestick.html:587:21
+20:14:40.867
+🔥🔥🔥 NUEVA VELA M5 CREADA EN TIEMPO REAL 🔥🔥🔥 candlestick.html:318:29
+20:14:40.867 ⏰ Hora sistema: 20:14:40 (UTC-4) candlestick.html:319:29
+20:14:40.867 📊 Timestamp M5: 1761091800 (Última: 1761061800) candlestick.html:320:29
+20:14:40.867 💰 Precio apertura: 1.160310 candlestick.html:321:29
+20:14:40.867 ✅ VELA SINCRONIZADA CON MERCADO - SIN DELAY
+candlestick.html:322:29
+20:14:49.438 🎯 28 señales CALL/PUT generadas (Estrategia: Análisis de Probabilidades) candlestick.html:587:21
+20:14:50.954
+🔥🔥🔥 NUEVA VELA M5 CREADA EN TIEMPO REAL 🔥🔥🔥 candlestick.html:318:29
+20:14:50.954 ⏰ Hora sistema: 20:14:50 (UTC-4) candlestick.html:319:29
+20:14:50.954 📊 Timestamp M5: 1761091800 (Última: 1761061800) candlestick.html:320:29
+20:14:50.954 💰 Precio apertura: 1.160310 candlestick.html:321:29
+20:14:50.954 ✅ VELA SINCRONIZADA CON MERCADO - SIN DELAY
+candlestick.html:322:29
+20:14:59.485 🎯 28 señales CALL/PUT generadas (Estrategia: Análisis de Probabilidades) candlestick.html:587:21
+20:15:00.980
+🔥🔥🔥 NUEVA VELA M5 CREADA EN TIEMPO REAL 🔥🔥🔥 candlestick.html:318:29
+20:15:00.980 ⏰ Hora sistema: 20:15:00 (UTC-4) candlestick.html:319:29
+20:15:00.980 📊 Timestamp M5: 1761092100 (Última: 1761061800) candlestick.html:320:29
+20:15:00.980 💰 Precio apertura: 1.160310 candlestick.html:321:29
+20:15:00.980 ✅ VELA SINCRONIZADA CON MERCADO - SIN DELAY
+candlestick.html:322:29
+20:15:09.734 🎯 28 señales CALL/PUT generadas (Estrategia: Análisis de Probabilidades) candlestick.html:587:21
+20:15:11.096
+🔥🔥🔥 NUEVA VELA M5 CREADA EN TIEMPO REAL 🔥🔥🔥 candlestick.html:318:29
+20:15:11.096 ⏰ Hora sistema: 20:15:11 (UTC-4) candlestick.html:319:29
+20:15:11.096 📊 Timestamp M5: 1761092100 (Última: 1761061800) candlestick.html:320:29
+20:15:11.096 💰 Precio apertura: 1.160310 candlestick.html:321:29
+20:15:11.096 ✅ VELA SINCRONIZADA CON MERCADO - SIN DELAY
+candlestick.html:322:29
+20:15:19.829 🎯 28 señales CALL/PUT generadas (Estrategia: Análisis de Probabilidades) candlestick.html:587:21
+20:15:21.246
+🔥🔥🔥 NUEVA VELA M5 CREADA EN TIEMPO REAL 🔥🔥🔥 candlestick.html:318:29
+20:15:21.246 ⏰ Hora sistema: 20:15:21 (UTC-4) candlestick.html:319:29
+20:15:21.246 📊 Timestamp M5: 1761092100 (Última: 1761061800) candlestick.html:320:29
+20:15:21.246 💰 Precio apertura: 1.160310 candlestick.html:321:29
+20:15:21.246 ✅ VELA SINCRONIZADA CON MERCADO - SIN DELAY
+candlestick.html:322:29
+20:15:29.793 🎯 28 señales CALL/PUT generadas (Estrategia: Análisis de Probabilidades) candlestick.html:587:21
+20:15:31.347
+🔥🔥🔥 NUEVA VELA M5 CREADA EN TIEMPO REAL 🔥🔥🔥 candlestick.html:318:29
+20:15:31.347 ⏰ Hora sistema: 20:15:31 (UTC-4) candlestick.html:319:29
+20:15:31.347 📊 Timestamp M5: 1761092100 (Última: 1761061800) candlestick.html:320:29
+20:15:31.347 💰 Precio apertura: 1.160310 candlestick.html:321:29
+20:15:31.347 ✅ VELA SINCRONIZADA CON MERCADO - SIN DELAY
+candlestick.html:322:29
+20:15:39.805 🎯 28 señales CALL/PUT generadas (Estrategia: Análisis de Probabilidades) candlestick.html:587:21
+20:15:41.357
+🔥🔥🔥 NUEVA VELA M5 CREADA EN TIEMPO REAL 🔥🔥🔥 candlestick.html:318:29
+20:15:41.358 ⏰ Hora sistema: 20:15:41 (UTC-4) candlestick.html:319:29
+20:15:41.358 📊 Timestamp M5: 1761092100 (Última: 1761061800) candlestick.html:320:29
+20:15:41.358 💰 Precio apertura: 1.160310 candlestick.html:321:29
+20:15:41.358 ✅ VELA SINCRONIZADA CON MERCADO - SIN DELAY
+candlestick.html:322:29
+20:15:49.874 🎯 28 señales CALL/PUT generadas (Estrategia: Análisis de Probabilidades) candlestick.html:587:21
+20:15:51.411
+🔥🔥🔥 NUEVA VELA M5 CREADA EN TIEMPO REAL 🔥🔥🔥 candlestick.html:318:29
+20:15:51.411 ⏰ Hora sistema: 20:15:51 (UTC-4) candlestick.html:319:29
+20:15:51.411 📊 Timestamp M5: 1761092100 (Última: 1761061800) candlestick.html:320:29
+20:15:51.411 💰 Precio apertura: 1.160310 candlestick.html:321:29
+20:15:51.411 ✅ VELA SINCRONIZADA CON MERCADO - SIN DELAY
+candlestick.html:322:29
+20:16:00.069 🎯 28 señales CALL/PUT generadas (Estrategia: Análisis de Probabilidades) candlestick.html:587:21
+20:16:01.506
+🔥🔥🔥 NUEVA VELA M5 CREADA EN TIEMPO REAL 🔥🔥🔥 candlestick.html:318:29
+20:16:01.506 ⏰ Hora sistema: 20:16:01 (UTC-4) candlestick.html:319:29
+20:16:01.506 📊 Timestamp M5: 1761092100 (Última: 1761061800) candlestick.html:320:29
+20:16:01.506 💰 Precio apertura: 1.160310 candlestick.html:321:29
+20:16:01.506 ✅ VELA SINCRONIZADA CON MERCADO - SIN DELAY
+candlestick.html:322:29
+20:16:10.204 🎯 28 señales CALL/PUT generadas (Estrategia: Análisis de Probabilidades) candlestick.html:587:21
+20:16:11.561
+🔥🔥🔥 NUEVA VELA M5 CREADA EN TIEMPO REAL 🔥🔥🔥 candlestick.html:318:29
+20:16:11.561 ⏰ Hora sistema: 20:16:11 (UTC-4) candlestick.html:319:29
+20:16:11.561 📊 Timestamp M5: 1761092100 (Última: 1761061800) candlestick.html:320:29
+20:16:11.561 💰 Precio apertura: 1.160310 candlestick.html:321:29
+20:16:11.561 ✅ VELA SINCRONIZADA CON MERCADO - SIN DELAY
+candlestick.html:322:29
+20:16:20.135 🎯 28 señales CALL/PUT generadas (Estrategia: Análisis de Probabilidades) candlestick.html:587:21
+20:16:21.807
+🔥🔥🔥 NUEVA VELA M5 CREADA EN TIEMPO REAL 🔥🔥🔥 candlestick.html:318:29
+20:16:21.807 ⏰ Hora sistema: 20:16:21 (UTC-4) candlestick.html:319:29
+20:16:21.807 📊 Timestamp M5: 1761092100 (Última: 1761061800) candlestick.html:320:29
+20:16:21.807 💰 Precio apertura: 1.160310 candlestick.html:321:29
+20:16:21.807 ✅ VELA SINCRONIZADA CON MERCADO - SIN DELAY
+candlestick.html:322:29
+20:16:30.282 🎯 28 señales CALL/PUT generadas (Estrategia: Análisis de Probabilidades) candlestick.html:587:21
+20:16:31.848
+🔥🔥🔥 NUEVA VELA M5 CREADA EN TIEMPO REAL 🔥🔥🔥 candlestick.html:318:29
+20:16:31.848 ⏰ Hora sistema: 20:16:31 (UTC-4) candlestick.html:319:29
+20:16:31.848 📊 Timestamp M5: 1761092100 (Última: 1761061800) candlestick.html:320:29
+20:16:31.848 💰 Precio apertura: 1.160310 candlestick.html:321:29
+20:16:31.848 ✅ VELA SINCRONIZADA CON MERCADO - SIN DELAY
+candlestick.html:322:29
+20:16:40.384 🎯 28 señales CALL/PUT generadas (Estrategia: Análisis de Probabilidades) candlestick.html:587:21
+20:16:41.817
+🔥🔥🔥 NUEVA VELA M5 CREADA EN TIEMPO REAL 🔥🔥🔥 candlestick.html:318:29
+20:16:41.817 ⏰ Hora sistema: 20:16:41 (UTC-4) candlestick.html:319:29
+20:16:41.817 📊 Timestamp M5: 1761092100 (Última: 1761062100) candlestick.html:320:29
+20:16:41.817 💰 Precio apertura: 1.160460 candlestick.html:321:29
+20:16:41.817 ✅ VELA SINCRONIZADA CON MERCADO - SIN DELAY
+candlestick.html:322:29
+20:16:50.572 🎯 28 señales CALL/PUT generadas (Estrategia: Análisis de Probabilidades) candlestick.html:587:21
+20:16:51.896
+🔥🔥🔥 NUEVA VELA M5 CREADA EN TIEMPO REAL 🔥🔥🔥 candlestick.html:318:29
+20:16:51.897 ⏰ Hora sistema: 20:16:51 (UTC-4) candlestick.html:319:29
+20:16:51.897 📊 Timestamp M5: 1761092100 (Última: 1761062100) candlestick.html:320:29
+20:16:51.897 💰 Precio apertura: 1.160460 candlestick.html:321:29
+20:16:51.897 ✅ VELA SINCRONIZADA CON MERCADO - SIN DELAY
+candlestick.html:322:29
+20:17:00.587 🎯 28 señales CALL/PUT generadas (Estrategia: Análisis de Probabilidades) candlestick.html:587:21
+20:17:01.959
+🔥🔥🔥 NUEVA VELA M5 CREADA EN TIEMPO REAL 🔥🔥🔥 candlestick.html:318:29
+20:17:01.959 ⏰ Hora sistema: 20:17:01 (UTC-4) candlestick.html:319:29
+20:17:01.959 📊 Timestamp M5: 1761092100 (Última: 1761062100) candlestick.html:320:29
+20:17:01.959 💰 Precio apertura: 1.160460 candlestick.html:321:29
+20:17:01.959 ✅ VELA SINCRONIZADA CON MERCADO - SIN DELAY
+candlestick.html:322:29
+20:17:10.636 🎯 28 señales CALL/PUT generadas (Estrategia: Análisis de Probabilidades) candlestick.html:587:21
+20:17:12.160
+🔥🔥🔥 NUEVA VELA M5 CREADA EN TIEMPO REAL 🔥🔥🔥 candlestick.html:318:29
+20:17:12.160 ⏰ Hora sistema: 20:17:12 (UTC-4) candlestick.html:319:29
+20:17:12.160 📊 Timestamp M5: 1761092100 (Última: 1761062100) candlestick.html:320:29
+20:17:12.160 💰 Precio apertura: 1.160460 candlestick.html:321:29
+20:17:12.160 ✅ VELA SINCRONIZADA CON MERCADO - SIN DELAY
+candlestick.html:322:29
+20:17:20.711 🎯 28 señales CALL/PUT generadas (Estrategia: Análisis de Probabilidades) candlestick.html:587:21
+20:17:22.119
+🔥🔥🔥 NUEVA VELA M5 CREADA EN TIEMPO REAL 🔥🔥🔥 candlestick.html:318:29
+20:17:22.119 ⏰ Hora sistema: 20:17:22 (UTC-4) candlestick.html:319:29
+20:17:22.119 📊 Timestamp M5: 1761092100 (Última: 1761062100) candlestick.html:320:29
+20:17:22.119 💰 Precio apertura: 1.160480 candlestick.html:321:29
+20:17:22.119 ✅ VELA SINCRONIZADA CON MERCADO - SIN DELAY
+candlestick.html:322:29
+20:17:30.347 🔄 20:17:30 | Actualizando M5 @ 1761092100 | C:1.160480 H:1.160480 L:1.160480 candlestick.html:360:37
+20:17:30.915 🎯 28 señales CALL/PUT generadas (Estrategia: Análisis de Probabilidades) candlestick.html:587:21
+20:17:32.095 XHRGET
+https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/market/live-candle/EUR/USD
+[HTTP/1.1 500 Internal Server Error 10107ms]
+
+20:17:34.314
+🔥🔥🔥 NUEVA VELA M5 CREADA EN TIEMPO REAL 🔥🔥🔥 candlestick.html:318:29
+20:17:34.314 ⏰ Hora sistema: 20:17:34 (UTC-4) candlestick.html:319:29
+20:17:34.314 📊 Timestamp M5: 1761092100 (Última: 1761062100) candlestick.html:320:29
+20:17:34.314 💰 Precio apertura: 1.160480 candlestick.html:321:29
+20:17:34.314 ✅ VELA SINCRONIZADA CON MERCADO - SIN DELAY
+candlestick.html:322:29
+20:17:40.604 🔄 20:17:40 | Actualizando M5 @ 1761092100 | C:1.160480 H:1.160480 L:1.160480 candlestick.html:360:37
+20:17:40.895 🎯 28 señales CALL/PUT generadas (Estrategia: Análisis de Probabilidades) candlestick.html:587:21
+20:17:42.312
+🔥🔥🔥 NUEVA VELA M5 CREADA EN TIEMPO REAL 🔥🔥🔥 candlestick.html:318:29
+20:17:42.312 ⏰ Hora sistema: 20:17:42 (UTC-4) candlestick.html:319:29
+20:17:42.312 📊 Timestamp M5: 1761092100 (Última: 1761062100) candlestick.html:320:29
+20:17:42.312 💰 Precio apertura: 1.160480 candlestick.html:321:29
+20:17:42.312 ✅ VELA SINCRONIZADA CON MERCADO - SIN DELAY
+candlestick.html:322:29
+20:17:42.376
+🔥🔥🔥 NUEVA VELA M5 CREADA EN TIEMPO REAL 🔥🔥🔥 candlestick.html:318:29
+20:17:42.376 ⏰ Hora sistema: 20:17:42 (UTC-4) candlestick.html:319:29
+20:17:42.376 📊 Timestamp M5: 1761092100 (Última: 1761062100) candlestick.html:320:29
+20:17:42.376 💰 Precio apertura: 1.160480 candlestick.html:321:29
+20:17:42.376 ✅ VELA SINCRONIZADA CON MERCADO - SIN DELAY
+candlestick.html:322:29
+20:17:50.370 🔄 20:17:50 | Actualizando M5 @ 1761092100 | C:1.160480 H:1.160480 L:1.160480 candlestick.html:360:37
+20:17:51.003 🎯 28 señales CALL/PUT generadas (Estrategia: Análisis de Probabilidades) candlestick.html:587:21
+20:17:52.482
+🔥🔥🔥 NUEVA VELA M5 CREADA EN TIEMPO REAL 🔥🔥🔥 candlestick.html:318:29
+20:17:52.482 ⏰ Hora sistema: 20:17:52 (UTC-4) candlestick.html:319:29
+20:17:52.482 📊 Timestamp M5: 1761092100 (Última: 1761062100) candlestick.html:320:29
+20:17:52.482 💰 Precio apertura: 1.160480 candlestick.html:321:29
+20:17:52.482 ✅ VELA SINCRONIZADA CON MERCADO - SIN DELAY
+candlestick.html:322:29
+20:18:00.436 🔄 20:18:00 | Actualizando M5 @ 1761092100 | C:1.160480 H:1.160480 L:1.160480 candlestick.html:360:37
+20:18:01.043 🎯 28 señales CALL/PUT generadas (Estrategia: Análisis de Probabilidades) candlestick.html:587:21
+20:18:02.710
+🔥🔥🔥 NUEVA VELA M5 CREADA EN TIEMPO REAL 🔥🔥🔥 candlestick.html:318:29
+20:18:02.710 ⏰ Hora sistema: 20:18:02 (UTC-4) candlestick.html:319:29
+20:18:02.710 📊 Timestamp M5: 1761092100 (Última: 1761062100) candlestick.html:320:29
+20:18:02.710 💰 Precio apertura: 1.160480 candlestick.html:321:29
+20:18:02.710 ✅ VELA SINCRONIZADA CON MERCADO - SIN DELAY
+candlestick.html:322:29
+20:18:10.573 🔄 20:18:10 | Actualizando M5 @ 1761092100 | C:1.160480 H:1.160480 L:1.160480 candlestick.html:360:37
+20:18:11.252 🎯 28 señales CALL/PUT generadas (Estrategia: Análisis de Probabilidades) candlestick.html:587:21
+20:18:12.590
+🔥🔥🔥 NUEVA VELA M5 CREADA EN TIEMPO REAL 🔥🔥🔥 candlestick.html:318:29
+20:18:12.590 ⏰ Hora sistema: 20:18:12 (UTC-4) candlestick.html:319:29
+20:18:12.590 📊 Timestamp M5: 1761092100 (Última: 1761062100) candlestick.html:320:29
+20:18:12.590 💰 Precio apertura: 1.160480 candlestick.html:321:29
+20:18:12.590 ✅ VELA SINCRONIZADA CON MERCADO - SIN DELAY
+candlestick.html:322:29
+20:18:20.873 🔄 20:18:20 | Actualizando M5 @ 1761092100 | C:1.160480 H:1.160480 L:1.160480 candlestick.html:360:37
+20:18:21.258 🎯 28 señales CALL/PUT generadas (Estrategia: Análisis de Probabilidades) candlestick.html:587:21
+20:18:22.659
+🔥🔥🔥 NUEVA VELA M5 CREADA EN TIEMPO REAL 🔥🔥🔥 candlestick.html:318:29
+20:18:22.660 ⏰ Hora sistema: 20:18:22 (UTC-4) candlestick.html:319:29
+20:18:22.660 📊 Timestamp M5: 1761092100 (Última: 1761062100) candlestick.html:320:29
+20:18:22.660 💰 Precio apertura: 1.160390 candlestick.html:321:29
+20:18:22.660 ✅ VELA SINCRONIZADA CON MERCADO - SIN DELAY
+candlestick.html:322:29
+20:18:30.769 🔄 20:18:30 | Actualizando M5 @ 1761092100 | C:1.160390 H:1.160390 L:1.160390 candlestick.html:360:37
+20:18:31.326 🎯 28 señales CALL/PUT generadas (Estrategia: Análisis de Probabilidades) candlestick.html:587:21
+20:18:32.808
+🔥🔥🔥 NUEVA VELA M5 CREADA EN TIEMPO REAL 🔥🔥🔥 candlestick.html:318:29
+20:18:32.808 ⏰ Hora sistema: 20:18:32 (UTC-4) candlestick.html:319:29
+20:18:32.808 📊 Timestamp M5: 1761092100 (Última: 1761062100) candlestick.html:320:29
+20:18:32.808 💰 Precio apertura: 1.160390 candlestick.html:321:29
+20:18:32.808 ✅ VELA SINCRONIZADA CON MERCADO - SIN DELAY
+candlestick.html:322:29
+20:18:40.818 🔄 20:18:40 | Actualizando M5 @ 1761092100 | C:1.160390 H:1.160390 L:1.160390 candlestick.html:360:37
+20:18:41.396 🎯 28 señales CALL/PUT generadas (Estrategia: Análisis de Probabilidades) candlestick.html:587:21
+20:18:42.972
+🔥🔥🔥 NUEVA VELA M5 CREADA EN TIEMPO REAL 🔥🔥🔥 candlestick.html:318:29
+20:18:42.972 ⏰ Hora sistema: 20:18:42 (UTC-4) candlestick.html:319:29
+20:18:42.972 📊 Timestamp M5: 1761092100 (Última: 1761062100) candlestick.html:320:29
+20:18:42.972 💰 Precio apertura: 1.160390 candlestick.html:321:29
+20:18:42.972 ✅ VELA SINCRONIZADA CON MERCADO - SIN DELAY
+candlestick.html:322:29
+20:18:50.945 🔄 20:18:50 | Actualizando M5 @ 1761092100 | C:1.160390 H:1.160390 L:1.160390 candlestick.html:360:37
+20:18:51.499 🎯 28 señales CALL/PUT generadas (Estrategia: Análisis de Probabilidades) candlestick.html:587:21
+20:18:53.004
+🔥🔥🔥 NUEVA VELA M5 CREADA EN TIEMPO REAL 🔥🔥🔥 candlestick.html:318:29
+20:18:53.004 ⏰ Hora sistema: 20:18:53 (UTC-4) candlestick.html:319:29
+20:18:53.004 📊 Timestamp M5: 1761092100 (Última: 1761062100) candlestick.html:320:29
+20:18:53.004 💰 Precio apertura: 1.160390 candlestick.html:321:29
+20:18:53.004 ✅ VELA SINCRONIZADA CON MERCADO - SIN DELAY
+candlestick.html:322:29
+20:19:01.009 🔄 20:19:01 | Actualizando M5 @ 1761092100 | C:1.160390 H:1.160390 L:1.160390 candlestick.html:360:37
+20:19:01.620 🎯 28 señales CALL/PUT generadas (Estrategia: Análisis de Probabilidades) candlestick.html:587:21
+20:19:03.090
+🔥🔥🔥 NUEVA VELA M5 CREADA EN TIEMPO REAL 🔥🔥🔥 candlestick.html:318:29
+20:19:03.090 ⏰ Hora sistema: 20:19:03 (UTC-4) candlestick.html:319:29
+20:19:03.090 📊 Timestamp M5: 1761092100 (Última: 1761062100) candlestick.html:320:29
+20:19:03.090 💰 Precio apertura: 1.160390 candlestick.html:321:29
+20:19:03.091 ✅ VELA SINCRONIZADA CON MERCADO - SIN DELAY
+candlestick.html:322:29
+20:19:11.212 🔄 20:19:11 | Actualizando M5 @ 1761092100 | C:1.160390 H:1.160390 L:1.160390 candlestick.html:360:37
+20:19:11.728 🎯 28 señales CALL/PUT generadas (Estrategia: Análisis de Probabilidades) candlestick.html:587:21
+20:19:13.200
+🔥🔥🔥 NUEVA VELA M5 CREADA EN TIEMPO REAL 🔥🔥🔥 candlestick.html:318:29
+20:19:13.201 ⏰ Hora sistema: 20:19:13 (UTC-4) candlestick.html:319:29
+20:19:13.201 📊 Timestamp M5: 1761092100 (Última: 1761062100) candlestick.html:320:29
+20:19:13.201 💰 Precio apertura: 1.160390 candlestick.html:321:29
+20:19:13.201 ✅ VELA SINCRONIZADA CON MERCADO - SIN DELAY
+candlestick.html:322:29
+20:19:19.033 XHRGET
+https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/market/live-candle/EUR/USD
+[HTTP/1.1 502 Bad Gateway 88ms]
+
+20:19:19.122 XHRGET
+https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/proxy/twelvedata?symbol=EUR/USD&interval=1min&outputsize=1
+[HTTP/1.1 502 Bad Gateway 76ms]
+
+20:19:21.046 XHRGET
+https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/public/candles?symbol=EURUSD&timeframe=M5&limit=100&source=twelvedata&_t=1761092361044
+[HTTP/1.1 502 Bad Gateway 81ms]
+
+20:19:21.048 XHRGET
+https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/market/live-candle/EUR/USD
+[HTTP/1.1 502 Bad Gateway 88ms]
+
+20:19:21.128 ⚠️ Error al refrescar velas M5 desde BD candlestick.html:597:29
+20:19:21.135 XHRGET
+https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/proxy/twelvedata?symbol=EUR/USD&interval=1min&outputsize=1
+[HTTP/1.1 502 Bad Gateway 76ms]
+
+20:19:23.048 XHRGET
+https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/market/live-candle/EUR/USD
+[HTTP/1.1 502 Bad Gateway 74ms]
+
+20:19:23.128 XHRGET
+https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/proxy/twelvedata?symbol=EUR/USD&interval=1min&outputsize=1
+[HTTP/1.1 502 Bad Gateway 76ms]
+
+20:19:25.139 XHRGET
+https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/market/live-candle/EUR/USD
+[HTTP/1.1 502 Bad Gateway 80ms]
+
+20:19:25.226 XHRGET
+https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/api/proxy/twelvedata?symbol=EUR/USD&interval=1min&outputsize=1
+[HTTP/1.1 502 Bad Gateway 86ms]
+
+20:19:32.234 🎯 28 señales CALL/PUT generadas (Estrategia: Análisis de Probabilidades) candlestick.html:587:21
+20:19:33.977
+🔥🔥🔥 NUEVA VELA M5 CREADA EN TIEMPO REAL 🔥🔥🔥 candlestick.html:318:29
+20:19:33.977 ⏰ Hora sistema: 20:19:33 (UTC-4) candlestick.html:319:29
+20:19:33.977 📊 Timestamp M5: 1761092100 (Última: 1761062100) candlestick.html:320:29
+20:19:33.978 💰 Precio apertura: 1.160430 candlestick.html:321:29
+20:19:33.978 ✅ VELA SINCRONIZADA CON MERCADO - SIN DELAY
+candlestick.html:322:29
+20:19:42.598 🎯 28 señales CALL/PUT generadas (Estrategia: Análisis de Probabilidades) candlestick.html:587:21
+20:19:44.128
+🔥🔥🔥 NUEVA VELA M5 CREADA EN TIEMPO REAL 🔥🔥🔥 candlestick.html:318:29
+20:19:44.128 ⏰ Hora sistema: 20:19:44 (UTC-4) candlestick.html:319:29
+20:19:44.129 📊 Timestamp M5: 1761092100 (Última: 1761062100) candlestick.html:320:29
+20:19:44.129 💰 Precio apertura: 1.160430 candlestick.html:321:29
+20:19:44.129 ✅ VELA SINCRONIZADA CON MERCADO - SIN DELAY
+candlestick.html:322:29
+20:19:52.666 🎯 28 señales CALL/PUT generadas (Estrategia: Análisis de Probabilidades) candlestick.html:587:21
+20:19:54.071
+🔥🔥🔥 NUEVA VELA M5 CREADA EN TIEMPO REAL 🔥🔥🔥 candlestick.html:318:29
+20:19:54.071 ⏰ Hora sistema: 20:19:54 (UTC-4) candlestick.html:319:29
+20:19:54.071 📊 Timestamp M5: 1761092100 (Última: 1761062100) candlestick.html:320:29
+20:19:54.071 💰 Precio apertura: 1.160430 candlestick.html:321:29
+20:19:54.071 ✅ VELA SINCRONIZADA CON MERCADO - SIN DELAY
+candlestick.html:322:29
+20:20:02.166
+🔥🔥🔥 NUEVA VELA M5 CREADA EN TIEMPO REAL 🔥🔥🔥 candlestick.html:318:29
+20:20:02.166 ⏰ Hora sistema: 20:20:02 (UTC-4) candlestick.html:319:29
+20:20:02.166 📊 Timestamp M5: 1761092400 (Última: 1761092100) candlestick.html:320:29
+20:20:02.166 💰 Precio apertura: 1.160430 candlestick.html:321:29
+20:20:02.166 ✅ VELA SINCRONIZADA CON MERCADO - SIN DELAY
+candlestick.html:322:29
+20:20:02.689 🎯 28 señales CALL/PUT generadas (Estrategia: Análisis de Probabilidades) candlestick.html:587:21
+20:20:04.231
+🔥🔥🔥 NUEVA VELA M5 CREADA EN TIEMPO REAL 🔥🔥🔥 candlestick.html:318:29
+20:20:04.231 ⏰ Hora sistema: 20:20:04 (UTC-4) candlestick.html:319:29
+20:20:04.231 📊 Timestamp M5: 1761092400 (Última: 1761062100) candlestick.html:320:29
+20:20:04.231 💰 Precio apertura: 1.160430 candlestick.html:321:29
+20:20:04.231 ✅ VELA SINCRONIZADA CON MERCADO - SIN DELAY
+candlestick.html:322:29
+20:20:11.474 🔄 20:20:11 | Actualizando M5 @ 1761092400 | C:1.160430 H:1.160430 L:1.160430 candlestick.html:360:37
+20:20:13.408 🎯 28 señales CALL/PUT generadas (Estrategia: Análisis de Probabilidades) candlestick.html:587:21
+20:20:14.719
+🔥🔥🔥 NUEVA VELA M5 CREADA EN TIEMPO REAL 🔥🔥🔥 candlestick.html:318:29
+20:20:14.719 ⏰ Hora sistema: 20:20:14 (UTC-4) candlestick.html:319:29
+20:20:14.719 📊 Timestamp M5: 1761092400 (Última: 1761062100) candlestick.html:320:29
+20:20:14.719 💰 Precio apertura: 1.160430 candlestick.html:321:29
+20:20:14.719 ✅ VELA SINCRONIZADA CON MERCADO - SIN DELAY
+candlestick.html:322:29
+20:20:20.886 🔄 20:20:20 | Actualizando M5 @ 1761092400 | C:1.160430 H:1.160430 L:1.160430 candlestick.html:360:37
+20:20:23.729 🎯 28 señales CALL/PUT generadas (Estrategia: Análisis de Probabilidades) candlestick.html:587:21
+20:20:24.837
+🔥🔥🔥 NUEVA VELA M5 CREADA EN TIEMPO REAL 🔥🔥🔥 candlestick.html:318:29
+20:20:24.837 ⏰ Hora sistema: 20:20:24 (UTC-4) candlestick.html:319:29
+20:20:24.837 📊 Timestamp M5: 1761092400 (Última: 1761062100) candlestick.html:320:29
+20:20:24.837 💰 Precio apertura: 1.160530 candlestick.html:321:29
+20:20:24.837 ✅ VELA SINCRONIZADA CON MERCADO - SIN DELAY
+candlestick.html:322:29
+20:20:27.075 Navega a https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/static/demo/candlestick.html
+20:20:27.518 🚀 Iniciando gráfico profesional con Lightweight Charts (TradingView)... candlestick.html:706:21
+20:20:27.768 🔍 Primeras 3 velas: 
+Array(3) [ 1761102000, 1761102300, 1761102600 ]
+candlestick.html:415:25
+20:20:27.769 🔍 Últimas 3 velas: 
+Array(3) [ 1761131100, 1761131400, 1761131700 ]
+candlestick.html:416:25
+20:20:27.769 📊 Primera vela: 
+Object { time: 1761102000, open: 1.16152, high: 1.16242, low: 1.1614, close: 1.16208 }
+candlestick.html:455:25
+20:20:27.769 📊 Última vela: 
+Object { time: 1761131700, open: 1.16058, high: 1.16059, low: 1.16039, close: 1.16053 }
+candlestick.html:456:25
+20:20:27.771 🎯 9 señales CALL/PUT generadas (Estrategia: Análisis de Probabilidades) candlestick.html:629:21
+20:20:27.771 ✅ 100 velas cargadas - Precio real: 1.162890 (Twelve Data: 1.160530) candlestick.html:508:25
+20:20:38.583 🔍 Primeras 3 velas: 
+Array(3) [ 1761032400, 1761032700, 1761033000 ]
+candlestick.html:415:25
+20:20:38.583 🔍 Últimas 3 velas: 
+Array(3) [ 1761061500, 1761061800, 1761062100 ]
+candlestick.html:416:25
+20:20:38.585 🎯 28 señales CALL/PUT generadas (Estrategia: Análisis de Probabilidades) candlestick.html:629:21
+20:20:40.320
+🔥🔥🔥 NUEVA VELA M5 CREADA EN TIEMPO REAL 🔥🔥🔥 candlestick.html:318:29
+20:20:40.320 ⏰ Hora sistema: 20:20:40 (UTC-4) candlestick.html:319:29
+20:20:40.320 📊 Timestamp M5: 1761092400 (Última: 1761062100) candlestick.html:320:29
+20:20:40.321 💰 Precio apertura: 1.160530 candlestick.html:321:29
+20:20:40.321 ✅ VELA SINCRONIZADA CON MERCADO - SIN DELAY
+candlestick.html:322:29
+20:20:40.321 🔍 Primeras 3 velas: 
+Array(3) [ 1761032400, 1761032700, 1761033000 ]
+candlestick.html:415:25
+20:20:40.321 🔍 Últimas 3 velas: 
+Array(3) [ 1761061800, 1761062100, 1761092400 ]
+candlestick.html:416:25
+20:20:48.988 🔍 Primeras 3 velas: 
+Array(3) [ 1761032400, 1761032700, 1761033000 ]
+candlestick.html:415:25
+20:20:48.988 🔍 Últimas 3 velas: 
+Array(3) [ 1761061500, 1761061800, 1761062100 ]
+candlestick.html:416:25
+20:20:48.989 🎯 28 señales CALL/PUT generadas (Estrategia: Análisis de Probabilidades) candlestick.html:629:21
+20:20:50.376
+🔥🔥🔥 NUEVA VELA M5 CREADA EN TIEMPO REAL 🔥🔥🔥 candlestick.html:318:29
+20:20:50.376 ⏰ Hora sistema: 20:20:50 (UTC-4) candlestick.html:319:29
+20:20:50.376 📊 Timestamp M5: 1761092400 (Última: 1761062100) candlestick.html:320:29
+20:20:50.376 💰 Precio apertura: 1.160530 candlestick.html:321:29
+20:20:50.376 ✅ VELA SINCRONIZADA CON MERCADO - SIN DELAY
+candlestick.html:322:29
+20:20:50.377 🔍 Primeras 3 velas: 
+Array(3) [ 1761032400, 1761032700, 1761033000 ]
+candlestick.html:415:25
+20:20:50.377 🔍 Últimas 3 velas: 
+Array(3) [ 1761061800, 1761062100, 1761092400 ]
+candlestick.html:416:25
+20:20:59.031 🔍 Primeras 3 velas: 
+Array(3) [ 1761032400, 1761032700, 1761033000 ]
+candlestick.html:415:25
+20:20:59.031 🔍 Últimas 3 velas: 
+Array(3) [ 1761061500, 1761061800, 1761062100 ]
+candlestick.html:416:25
+20:20:59.032 🎯 28 señales CALL/PUT generadas (Estrategia: Análisis de Probabilidades) candlestick.html:629:21
+20:21:00.476
+🔥🔥🔥 NUEVA VELA M5 CREADA EN TIEMPO REAL 🔥🔥🔥 candlestick.html:318:29
+20:21:00.476 ⏰ Hora sistema: 20:21:00 (UTC-4) candlestick.html:319:29
+20:21:00.476 📊 Timestamp M5: 1761092400 (Última: 1761062100) candlestick.html:320:29
+20:21:00.476 💰 Precio apertura: 1.160530 candlestick.html:321:29
+20:21:00.476 ✅ VELA SINCRONIZADA CON MERCADO - SIN DELAY
+candlestick.html:322:29
+20:21:00.476 🔍 Primeras 3 velas: 
+Array(3) [ 1761032400, 1761032700, 1761033000 ]
+candlestick.html:415:25
+20:21:00.476 🔍 Últimas 3 velas: 
+Array(3) [ 1761061800, 1761062100, 1761092400 ]
+candlestick.html:416:25
+20:21:09.121 🔍 Primeras 3 velas: 
+Array(3) [ 1761032400, 1761032700, 1761033000 ]
+candlestick.html:415:25
+20:21:09.122 🔍 Últimas 3 velas: 
+Array(3) [ 1761061500, 1761061800, 1761062100 ]
+candlestick.html:416:25
+20:21:09.122 🎯 28 señales CALL/PUT generadas (Estrategia: Análisis de Probabilidades) candlestick.html:629:21
+20:21:10.528
+🔥🔥🔥 NUEVA VELA M5 CREADA EN TIEMPO REAL 🔥🔥🔥 candlestick.html:318:29
+20:21:10.528 ⏰ Hora sistema: 20:21:10 (UTC-4) candlestick.html:319:29
+20:21:10.528 📊 Timestamp M5: 1761092400 (Última: 1761062100) candlestick.html:320:29
+20:21:10.528 💰 Precio apertura: 1.160530 candlestick.html:321:29
+20:21:10.528 ✅ VELA SINCRONIZADA CON MERCADO - SIN DELAY
+candlestick.html:322:29
+20:21:10.528 🔍 Primeras 3 velas: 
+Array(3) [ 1761032400, 1761032700, 1761033000 ]
+candlestick.html:415:25
+20:21:10.528 🔍 Últimas 3 velas: 
+Array(3) [ 1761061800, 1761062100, 1761092400 ]
+candlestick.html:416:25
+20:21:19.169 🔍 Primeras 3 velas: 
+Array(3) [ 1761032400, 1761032700, 1761033000 ]
+candlestick.html:415:25
+20:21:19.170 🔍 Últimas 3 velas: 
+Array(3) [ 1761061500, 1761061800, 1761062100 ]
+candlestick.html:416:25
+20:21:19.170 🎯 28 señales CALL/PUT generadas (Estrategia: Análisis de Probabilidades) candlestick.html:629:21
+20:21:20.643
+🔥🔥🔥 NUEVA VELA M5 CREADA EN TIEMPO REAL 🔥🔥🔥 candlestick.html:318:29
+20:21:20.643 ⏰ Hora sistema: 20:21:20 (UTC-4) candlestick.html:319:29
+20:21:20.643 📊 Timestamp M5: 1761092400 (Última: 1761062100) candlestick.html:320:29
+20:21:20.643 💰 Precio apertura: 1.160530 candlestick.html:321:29
+20:21:20.643 ✅ VELA SINCRONIZADA CON MERCADO - SIN DELAY
+candlestick.html:322:29
+20:21:20.643 🔍 Primeras 3 velas: 
+Array(3) [ 1761032400, 1761032700, 1761033000 ]
+candlestick.html:415:25
+20:21:20.644 🔍 Últimas 3 velas: 
+Array(3) [ 1761061800, 1761062100, 1761092400 ]
+candlestick.html:416:25
+20:21:29.425 🔍 Primeras 3 velas: 
+Array(3) [ 1761032400, 1761032700, 1761033000 ]
+candlestick.html:415:25
+20:21:29.425 🔍 Últimas 3 velas: 
+Array(3) [ 1761061500, 1761061800, 1761062100 ]
+candlestick.html:416:25
+20:21:29.426 🎯 28 señales CALL/PUT generadas (Estrategia: Análisis de Probabilidades) candlestick.html:629:21
+20:21:30.886
+🔥🔥🔥 NUEVA VELA M5 CREADA EN TIEMPO REAL 🔥🔥🔥 candlestick.html:318:29
+20:21:30.887 ⏰ Hora sistema: 20:21:30 (UTC-4) candlestick.html:319:29
+20:21:30.887 📊 Timestamp M5: 1761092400 (Última: 1761062100) candlestick.html:320:29
+20:21:30.887 💰 Precio apertura: 1.160530 candlestick.html:321:29
+20:21:30.887 ✅ VELA SINCRONIZADA CON MERCADO - SIN DELAY
+candlestick.html:322:29
+20:21:30.887 🔍 Primeras 3 velas: 
+Array(3) [ 1761032400, 1761032700, 1761033000 ]
+candlestick.html:415:25
+20:21:30.887 🔍 Últimas 3 velas: 
+Array(3) [ 1761061800, 1761062100, 1761092400 ]
+candlestick.html:416:25
+20:21:39.508 🔍 Primeras 3 velas: 
+Array(3) [ 1761032400, 1761032700, 1761033000 ]
+candlestick.html:415:25
+20:21:39.509 🔍 Últimas 3 velas: 
+Array(3) [ 1761061500, 1761061800, 1761062100 ]
+candlestick.html:416:25
+20:21:39.511 🎯 28 señales CALL/PUT generadas (Estrategia: Análisis de Probabilidades) candlestick.html:629:21
+20:21:40.855
+🔥🔥🔥 NUEVA VELA M5 CREADA EN TIEMPO REAL 🔥🔥🔥 candlestick.html:318:29
+20:21:40.856 ⏰ Hora sistema: 20:21:40 (UTC-4) candlestick.html:319:29
+20:21:40.856 📊 Timestamp M5: 1761092400 (Última: 1761062100) candlestick.html:320:29
+20:21:40.856 💰 Precio apertura: 1.160590 candlestick.html:321:29
+20:21:40.856 ✅ VELA SINCRONIZADA CON MERCADO - SIN DELAY
+candlestick.html:322:29
+20:21:40.856 🔍 Primeras 3 velas: 
+Array(3) [ 1761032400, 1761032700, 1761033000 ]
+candlestick.html:415:25
+20:21:40.856 🔍 Últimas 3 velas: 
+Array(3) [ 1761061800, 1761062100, 1761092400 ]
+candlestick.html:416:25
+20:21:49.481 🔍 Primeras 3 velas: 
+Array(3) [ 1761032700, 1761033000, 1761033300 ]
+candlestick.html:415:25
+20:21:49.481 🔍 Últimas 3 velas: 
+Array(3) [ 1761061800, 1761062100, 1761062400 ]
+candlestick.html:416:25
+20:21:49.482 🎯 27 señales CALL/PUT generadas (Estrategia: Análisis de Probabilidades) candlestick.html:629:21
+20:21:50.869
+🔥🔥🔥 NUEVA VELA M5 CREADA EN TIEMPO REAL 🔥🔥🔥 candlestick.html:318:29
+20:21:50.869 ⏰ Hora sistema: 20:21:50 (UTC-4) candlestick.html:319:29
+20:21:50.869 📊 Timestamp M5: 1761092400 (Última: 1761062400) candlestick.html:320:29
+20:21:50.869 💰 Precio apertura: 1.160590 candlestick.html:321:29
+20:21:50.869 ✅ VELA SINCRONIZADA CON MERCADO - SIN DELAY
+candlestick.html:322:29
+20:21:50.869 🔍 Primeras 3 velas: 
+Array(3) [ 1761032700, 1761033000, 1761033300 ]
+candlestick.html:415:25
+20:21:50.869 🔍 Últimas 3 velas: 
+Array(3) [ 1761062100, 1761062400, 1761092400 ]
+candlestick.html:416:25
+20:21:59.560 🔍 Primeras 3 velas: 
+Array(3) [ 1761032700, 1761033000, 1761033300 ]
+candlestick.html:415:25
+20:21:59.560 🔍 Últimas 3 velas: 
+Array(3) [ 1761061800, 1761062100, 1761062400 ]
+candlestick.html:416:25
+20:21:59.561 🎯 27 señales CALL/PUT generadas (Estrategia: Análisis de Probabilidades) candlestick.html:629:21
+20:22:00.992
+🔥🔥🔥 NUEVA VELA M5 CREADA EN TIEMPO REAL 🔥🔥🔥 candlestick.html:318:29
+20:22:00.992 ⏰ Hora sistema: 20:22:00 (UTC-4) candlestick.html:319:29
+20:22:00.992 📊 Timestamp M5: 1761092400 (Última: 1761062400) candlestick.html:320:29
+20:22:00.992 💰 Precio apertura: 1.160590 candlestick.html:321:29
+20:22:00.992 ✅ VELA SINCRONIZADA CON MERCADO - SIN DELAY
+candlestick.html:322:29
+20:22:00.992 🔍 Primeras 3 velas: 
+Array(3) [ 1761032700, 1761033000, 1761033300 ]
+candlestick.html:415:25
+20:22:00.992 🔍 Últimas 3 velas: 
+Array(3) [ 1761062100, 1761062400, 1761092400 ]
+candlestick.html:416:25
+20:22:09.648 🔍 Primeras 3 velas: 
+Array(3) [ 1761032700, 1761033000, 1761033300 ]
+candlestick.html:415:25
+20:22:09.648 🔍 Últimas 3 velas: 
+Array(3) [ 1761061800, 1761062100, 1761062400 ]
+candlestick.html:416:25
+20:22:09.649 🎯 27 señales CALL/PUT generadas (Estrategia: Análisis de Probabilidades) candlestick.html:629:21
+20:22:11.036
+🔥🔥🔥 NUEVA VELA M5 CREADA EN TIEMPO REAL 🔥🔥🔥 candlestick.html:318:29
+20:22:11.036 ⏰ Hora sistema: 20:22:11 (UTC-4) candlestick.html:319:29
+20:22:11.036 📊 Timestamp M5: 1761092400 (Última: 1761062400) candlestick.html:320:29
+20:22:11.036 💰 Precio apertura: 1.160590 candlestick.html:321:29
+20:22:11.036 ✅ VELA SINCRONIZADA CON MERCADO - SIN DELAY
+candlestick.html:322:29
+20:22:11.036 🔍 Primeras 3 velas: 
+Array(3) [ 1761032700, 1761033000, 1761033300 ]
+candlestick.html:415:25
+20:22:11.036 🔍 Últimas 3 velas: 
+Array(3) [ 1761062100, 1761062400, 1761092400 ]
+candlestick.html:416:25
+20:22:19.657 🔍 Primeras 3 velas: 
+Array(3) [ 1761032700, 1761033000, 1761033300 ]
+candlestick.html:415:25
+20:22:19.657 🔍 Últimas 3 velas: 
+Array(3) [ 1761061800, 1761062100, 1761062400 ]
+candlestick.html:416:25
+20:22:19.657 🎯 27 señales CALL/PUT generadas (Estrategia: Análisis de Probabilidades) candlestick.html:629:21
+20:22:21.211
+🔥🔥🔥 NUEVA VELA M5 CREADA EN TIEMPO REAL 🔥🔥🔥 candlestick.html:318:29
+20:22:21.211 ⏰ Hora sistema: 20:22:21 (UTC-4) candlestick.html:319:29
+20:22:21.211 📊 Timestamp M5: 1761092400 (Última: 1761062400) candlestick.html:320:29
+20:22:21.211 💰 Precio apertura: 1.160590 candlestick.html:321:29
+20:22:21.211 ✅ VELA SINCRONIZADA CON MERCADO - SIN DELAY
+candlestick.html:322:29
+20:22:21.211 🔍 Primeras 3 velas: 
+Array(3) [ 1761032700, 1761033000, 1761033300 ]
+candlestick.html:415:25
+20:22:21.211 🔍 Últimas 3 velas: 
+Array(3) [ 1761062100, 1761062400, 1761092400 ]
+candlestick.html:416:25
+20:22:29.731 🔍 Primeras 3 velas: 
+Array(3) [ 1761032700, 1761033000, 1761033300 ]
+candlestick.html:415:25
+20:22:29.731 🔍 Últimas 3 velas: 
+Array(3) [ 1761061800, 1761062100, 1761062400 ]
+candlestick.html:416:25
+20:22:29.732 🎯 27 señales CALL/PUT generadas (Estrategia: Análisis de Probabilidades) candlestick.html:629:21
+20:22:31.164
+🔥🔥🔥 NUEVA VELA M5 CREADA EN TIEMPO REAL 🔥🔥🔥 candlestick.html:318:29
+20:22:31.164 ⏰ Hora sistema: 20:22:31 (UTC-4) candlestick.html:319:29
+20:22:31.164 📊 Timestamp M5: 1761092400 (Última: 1761062400) candlestick.html:320:29
+20:22:31.164 💰 Precio apertura: 1.160680 candlestick.html:321:29
+20:22:31.165 ✅ VELA SINCRONIZADA CON MERCADO - SIN DELAY
+candlestick.html:322:29
+20:22:31.165 🔍 Primeras 3 velas: 
+Array(3) [ 1761032700, 1761033000, 1761033300 ]
+candlestick.html:415:25
+20:22:31.165 🔍 Últimas 3 velas: 
+Array(3) [ 1761062100, 1761062400, 1761092400 ]
+candlestick.html:416:25
+20:22:39.778 🔍 Primeras 3 velas: 
+Array(3) [ 1761032700, 1761033000, 1761033300 ]
+candlestick.html:415:25
+20:22:39.779 🔍 Últimas 3 velas: 
+Array(3) [ 1761061800, 1761062100, 1761062400 ]
+candlestick.html:416:25
+20:22:39.779 🎯 27 señales CALL/PUT generadas (Estrategia: Análisis de Probabilidades) candlestick.html:629:21
+20:22:41.183
+🔥🔥🔥 NUEVA VELA M5 CREADA EN TIEMPO REAL 🔥🔥🔥 candlestick.html:318:29
+20:22:41.184 ⏰ Hora sistema: 20:22:41 (UTC-4) candlestick.html:319:29
+20:22:41.184 📊 Timestamp M5: 1761092400 (Última: 1761062400) candlestick.html:320:29
+20:22:41.184 💰 Precio apertura: 1.160680 candlestick.html:321:29
+20:22:41.184 ✅ VELA SINCRONIZADA CON MERCADO - SIN DELAY
+candlestick.html:322:29
+20:22:41.184 🔍 Primeras 3 velas: 
+Array(3) [ 1761032700, 1761033000, 1761033300 ]
+candlestick.html:415:25
+20:22:41.185 🔍 Últimas 3 velas: 
+Array(3) [ 1761062100, 1761062400, 1761092400 ]
+candlestick.html:416:25
+20:22:49.691 🔍 Primeras 3 velas: 
+Array(3) [ 1761032700, 1761033000, 1761033300 ]
+candlestick.html:415:25
+20:22:49.691 🔍 Últimas 3 velas: 
+Array(3) [ 1761061800, 1761062100, 1761062400 ]
+candlestick.html:416:25
+20:22:49.693 🎯 27 señales CALL/PUT generadas (Estrategia: Análisis de Probabilidades) candlestick.html:629:21
+20:22:51.361
+🔥🔥🔥 NUEVA VELA M5 CREADA EN TIEMPO REAL 🔥🔥🔥 candlestick.html:318:29
+20:22:51.361 ⏰ Hora sistema: 20:22:51 (UTC-4) candlestick.html:319:29
+20:22:51.362 📊 Timestamp M5: 1761092400 (Última: 1761062400) candlestick.html:320:29
+20:22:51.362 💰 Precio apertura: 1.160680 candlestick.html:321:29
+20:22:51.362 ✅ VELA SINCRONIZADA CON MERCADO - SIN DELAY
+candlestick.html:322:29
+20:22:51.362 🔍 Primeras 3 velas: 
+Array(3) [ 1761032700, 1761033000, 1761033300 ]
+candlestick.html:415:25
+20:22:51.362 🔍 Últimas 3 velas: 
+Array(3) [ 1761062100, 1761062400, 1761092400 ]
+candlestick.html:416:25
+20:22:59.675 🔍 Primeras 3 velas: 
+Array(3) [ 1761032700, 1761033000, 1761033300 ]
+candlestick.html:415:25
+20:22:59.675 🔍 Últimas 3 velas: 
+Array(3) [ 1761061800, 1761062100, 1761062400 ]
+candlestick.html:416:25
+20:22:59.676 🎯 27 señales CALL/PUT generadas (Estrategia: Análisis de Probabilidades) candlestick.html:629:21
+20:23:01.419
+🔥🔥🔥 NUEVA VELA M5 CREADA EN TIEMPO REAL 🔥🔥🔥 candlestick.html:318:29
+20:23:01.419 ⏰ Hora sistema: 20:23:01 (UTC-4) candlestick.html:319:29
+20:23:01.419 📊 Timestamp M5: 1761092400 (Última: 1761062400) candlestick.html:320:29
+20:23:01.419 💰 Precio apertura: 1.160680 candlestick.html:321:29
+20:23:01.419 ✅ VELA SINCRONIZADA CON MERCADO - SIN DELAY
+candlestick.html:322:29
+20:23:01.419 🔍 Primeras 3 velas: 
+Array(3) [ 1761032700, 1761033000, 1761033300 ]
+candlestick.html:415:25
+20:23:01.419 🔍 Últimas 3 velas: 
+Array(3) [ 1761062100, 1761062400, 1761092400 ]
+candlestick.html:416:25
+20:23:09.752 🔍 Primeras 3 velas: 
+Array(3) [ 1761032700, 1761033000, 1761033300 ]
+candlestick.html:415:25
+20:23:09.753 🔍 Últimas 3 velas: 
+Array(3) [ 1761061800, 1761062100, 1761062400 ]
+candlestick.html:416:25
+20:23:09.753 🎯 27 señales CALL/PUT generadas (Estrategia: Análisis de Probabilidades) candlestick.html:629:21
+20:23:11.466
+🔥🔥🔥 NUEVA VELA M5 CREADA EN TIEMPO REAL 🔥🔥🔥 candlestick.html:318:29
+20:23:11.466 ⏰ Hora sistema: 20:23:11 (UTC-4) candlestick.html:319:29
+20:23:11.466 📊 Timestamp M5: 1761092400 (Última: 1761062400) candlestick.html:320:29
+20:23:11.467 💰 Precio apertura: 1.160680 candlestick.html:321:29
+20:23:11.467 ✅ VELA SINCRONIZADA CON MERCADO - SIN DELAY
+candlestick.html:322:29
+20:23:11.467 🔍 Primeras 3 velas: 
+Array(3) [ 1761032700, 1761033000, 1761033300 ]
+candlestick.html:415:25
+20:23:11.467 🔍 Últimas 3 velas: 
+Array(3) [ 1761062100, 1761062400, 1761092400 ]
+candlestick.html:416:25
+20:23:19.717 🔍 Primeras 3 velas: 
+Array(3) [ 1761032700, 1761033000, 1761033300 ]
+candlestick.html:415:25
+20:23:19.717 🔍 Últimas 3 velas: 
+Array(3) [ 1761061800, 1761062100, 1761062400 ]
+candlestick.html:416:25
+20:23:19.717 🎯 27 señales CALL/PUT generadas (Estrategia: Análisis de Probabilidades) candlestick.html:629:21
+20:23:21.527
+🔥🔥🔥 NUEVA VELA M5 CREADA EN TIEMPO REAL 🔥🔥🔥 candlestick.html:318:29
+20:23:21.527 ⏰ Hora sistema: 20:23:21 (UTC-4) candlestick.html:319:29
+20:23:21.527 📊 Timestamp M5: 1761092400 (Última: 1761062400) candlestick.html:320:29
+20:23:21.527 💰 Precio apertura: 1.160640 candlestick.html:321:29
+20:23:21.527 ✅ VELA SINCRONIZADA CON MERCADO - SIN DELAY
+candlestick.html:322:29
+20:23:21.527 🔍 Primeras 3 velas: 
+Array(3) [ 1761032700, 1761033000, 1761033300 ]
+candlestick.html:415:25
+20:23:21.527 🔍 Últimas 3 velas: 
+Array(3) [ 1761062100, 1761062400, 1761092400 ]
+candlestick.html:416:25

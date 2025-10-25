@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel Admin - Códigos Promocionales</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Courier New', Consolas, monospace;
+            background: #000000;
+            color: #00f5ff;
+            min-height: 100vh;
+            padding: 2rem;
+            perspective: 1500px;
+        }
+
+        .admin-container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .header {
+            background: rgba(0, 245, 255, 0.02);
+            backdrop-filter: blur(40px);
+            border: 1px solid rgba(0, 245, 255, 0.15);
+            border-radius: 20px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            transform: translateZ(50px);
+            box-shadow: 0 0 40px rgba(0, 245, 255, 0.15),
+                        inset 0 0 20px rgba(0, 245, 255, 0.03);
+        }
+
+        .header h1 {
+            font-size: 2rem;
+            text-shadow: 0 0 10px rgba(0, 245, 255, 0.5);
+            margin-bottom: 0.5rem;
+        }
+
+        .card-3d {
+            background: rgba(0, 245, 255, 0.02);
+            backdrop-filter: blur(40px);
+            border: 1px solid rgba(0, 245, 255, 0.15);
+            border-radius: 15px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            transform: translateZ(30px);
+            box-shadow: 0 0 30px rgba(0, 245, 255, 0.15),
+                        inset 0 0 15px rgba(0, 245, 255, 0.03);
+        }
+
+        .form-control, .form-select {
+            background: rgba(0, 245, 255, 0.02);
+            border: 1px solid rgba(0, 245, 255, 0.2);
+            color: #00f5ff;
+            font-family: 'Courier New', Consolas, monospace;
+            backdrop-filter: blur(10px);
+        }
+
+        .form-control:focus, .form-select:focus {
+            background: rgba(0, 245, 255, 0.05);
+            border-color: #00f5ff;
+            color: #00f5ff;
+            box-shadow: 0 0 20px rgba(0, 245, 255, 0.3);
+        }
+
+        .form-label {
+            color: #00f5ff;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            text-shadow: 0 0 5px rgba(0, 245, 255, 0.3);
+        }
+
+        .btn-create {
+            background: rgba(0, 245, 255, 0.1);
+            border: 2px solid #00f5ff;
+            color: #00f5ff;
+            padding: 0.75rem 2rem;
+            border-radius: 10px;
+            font-weight: bold;
+            transition: all 0.3s;
+            box-shadow: 0 0 20px rgba(0, 245, 255, 0.3);
+        }
+
+        .btn-create:hover {
+            background: rgba(0, 245, 255, 0.2);
+            box-shadow: 0 0 30px rgba(0, 245, 255, 0.5);
+            transform: translateY(-2px);
+            color: #00f5ff;
+        }
+
+        .btn-copy, .btn-email, .btn-delete {
+            border: 1px solid rgba(0, 245, 255, 0.3);
+            backdrop-filter: blur(10px);
+            font-size: 0.9rem;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            transition: all 0.3s;
+        }
+
+        .btn-copy {
+            background: rgba(0, 245, 255, 0.05);
+            color: #00f5ff;
+        }
+
+        .btn-copy:hover {
+            background: rgba(0, 245, 255, 0.15);
+            box-shadow: 0 0 15px rgba(0, 245, 255, 0.3);
+            color: #00f5ff;
+        }
+
+        .btn-email {
+            background: rgba(0, 102, 204, 0.05);
+            color: #0066cc;
+            border-color: rgba(0, 102, 204, 0.3);
+        }
+
+        .btn-email:hover {
+            background: rgba(0, 102, 204, 0.15);
+            box-shadow: 0 0 15px rgba(0, 102, 204, 0.3);
+            color: #0066cc;
+        }
+
+        .btn-delete {
+            background: rgba(255, 91, 90, 0.05);
+            color: #ff5b5a;
+            border-color: rgba(255, 91, 90, 0.3);
+        }
+
+        .btn-delete:hover {
+            background: rgba(255, 91, 90, 0.15);
+            box-shadow: 0 0 15px rgba(255, 91, 90, 0.3);
+            color: #ff5b5a;
+        }
+
+        .code-row {
+            background: rgba(0, 245, 255, 0.02);
+            border: 1px solid rgba(0, 245, 255, 0.1);
+            border-radius: 10px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            transform: translateZ(20px);
+            transition: all 0.3s;
+        }
+
+        .code-row:hover {
+            background: rgba(0, 245, 255, 0.05);
+            border-color: rgba(0, 245, 255, 0.2);
+            box-shadow: 0 0 20px rgba(0, 245, 255, 0.1);
+        }
+
+        .code-display {
+            font-size: 1.5rem;
+            font-weight: bold;
+            letter-spacing: 3px;
+            color: #00f5ff;
+            text-shadow: 0 0 10px rgba(0, 245, 255, 0.5);
+        }
+
+        .badge-type {
+            background: rgba(0, 245, 255, 0.1);
+            color: #00f5ff;
+            border: 1px solid rgba(0, 245, 255, 0.3);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+
+        .badge-status {
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            border: 1px solid;
+        }
+
+        .badge-active {
+            background: rgba(0, 255, 127, 0.1);
+            color: #00ff7f;
+            border-color: rgba(0, 255, 127, 0.3);
+        }
+
+        .badge-used {
+            background: rgba(255, 193, 7, 0.1);
+            color: #ffc107;
+            border-color: rgba(255, 193, 7, 0.3);
+        }
+
+        .modal-content {
+            background: rgba(0, 0, 0, 0.95);
+            border: 1px solid rgba(0, 245, 255, 0.3);
+            backdrop-filter: blur(40px);
+            color: #00f5ff;
+        }
+
+        .modal-header {
+            border-bottom: 1px solid rgba(0, 245, 255, 0.2);
+        }
+
+        .modal-footer {
+            border-top: 1px solid rgba(0, 245, 255, 0.2);
+        }
+
+        .btn-close {
+            filter: invert(1);
+        }
+
+        .success-alert {
+            background: rgba(0, 255, 127, 0.1);
+            border: 1px solid rgba(0, 255, 127, 0.3);
+            color: #00ff7f;
+            padding: 1rem;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+        }
+
+        .table {
+            color: #00f5ff;
+        }
+
+        .table th {
+            border-bottom: 2px solid rgba(0, 245, 255, 0.2);
+        }
+
+        .table td {
+            border-bottom: 1px solid rgba(0, 245, 255, 0.1);
+        }
+
+        option {
+            background: #000000;
+            color: #00f5ff;
+        }
+    </style>
+</head>
+<body>
+    <div class="admin-container">
+        <div class="header">
+            <h1><i class="bi bi-ticket-perforated me-2"></i>PANEL ADMIN - CÓDIGOS PROMOCIONALES</h1>
+            <p style="color: rgba(0, 245, 255, 0.7); margin: 0;">Gestión de códigos de acceso para clientes</p>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-5">
+                <div class="card-3d">
+                    <h3 class="mb-4"><i class="bi bi-plus-circle me-2"></i>CREAR CÓDIGO</h3>
+                    
+                    <div class="mb-3">
+                        <label class="form-label">TIPO DE CÓDIGO</label>
+                        <select class="form-select" id="codeType" onchange="toggleEmailField()">
+                            <option value="cortesia">Cortesía</option>
+                            <option value="revendedor">Revendedor</option>
+                            <option value="agente">Agente</option>
+                            <option value="cortesia_email">Cortesía Email</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3" id="emailFieldContainer" style="display: none;">
+                        <label class="form-label">EMAIL DEL CLIENTE</label>
+                        <input type="email" class="form-control" id="clientEmail" placeholder="cliente@ejemplo.com">
+                        <small style="color: rgba(0, 245, 255, 0.5);">Se enviará automáticamente al generar</small>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">DURACIÓN (HORAS)</label>
+                        <input type="number" class="form-control" id="duration" value="720" min="1">
+                        <small style="color: rgba(0, 245, 255, 0.5);">720 horas = 30 días</small>
+                    </div>
+
+                    <button class="btn btn-create w-100" onclick="createPromoCode()">
+                        <i class="bi bi-lightning-fill me-2"></i>GENERAR CÓDIGO
+                    </button>
+
+                    <div id="successMessage" class="success-alert mt-3" style="display: none;">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <strong><i class="bi bi-check-circle me-2"></i>Código Creado Exitosamente</strong>
+                        </div>
+                        <div class="code-display mb-3" id="generatedCode">-</div>
+                        <div class="d-grid gap-2">
+                            <button class="btn btn-copy" onclick="copyCode()">
+                                <i class="bi bi-clipboard me-2"></i>COPIAR CÓDIGO
+                            </button>
+                            <button class="btn btn-email" onclick="sendEmailDirect()">
+                                <i class="bi bi-envelope me-2"></i>ENVIAR POR EMAIL
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-7">
+                <div class="card-3d">
+                    <div class="d-flex justify-content-between align-items-center mb-4">
+                        <h3><i class="bi bi-list-ul me-2"></i>CÓDIGOS GENERADOS</h3>
+                        <button class="btn btn-copy btn-sm" onclick="loadCodes()">
+                            <i class="bi bi-arrow-clockwise"></i> Actualizar
+                        </button>
+                    </div>
+
+                    <div id="codesContainer">
+                        <div class="text-center py-4">
+                            <div class="spinner-border" style="color: #00f5ff;" role="status">
+                                <span class="visually-hidden">Cargando...</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="emailModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title"><i class="bi bi-envelope me-2"></i>Enviar Código por Email</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label class="form-label">Correo Electrónico del Cliente</label>
+                        <input type="email" class="form-control" id="recipientEmail" placeholder="cliente@ejemplo.com">
+                    </div>
+                    <div class="alert" style="background: rgba(0, 245, 255, 0.05); border: 1px solid rgba(0, 245, 255, 0.2); color: #00f5ff;">
+                        <i class="bi bi-info-circle me-2"></i>
+                        Se enviará un email profesional con el código de acceso y las instrucciones.
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-copy" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-email" onclick="sendEmail()">
+                        <i class="bi bi-send me-2"></i>Enviar Email
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        let currentCode = null;
+        let currentCodeType = null;
+        let currentDuration = null;
+
+        function toggleEmailField() {
+            const type = document.getElementById('codeType').value;
+            const emailContainer = document.getElementById('emailFieldContainer');
+            
+            if (type === 'cortesia_email') {
+                emailContainer.style.display = 'block';
+            } else {
+                emailContainer.style.display = 'none';
+            }
+        }
+
+        async function createPromoCode() {
+            const type = document.getElementById('codeType').value;
+            const duration = parseInt(document.getElementById('duration').value);
+            const clientEmail = document.getElementById('clientEmail').value.trim();
+
+            if (duration <= 0) {
+                alert('La duración debe ser mayor a 0');
+                return;
+            }
+
+            if (type === 'cortesia_email' && !clientEmail) {
+                alert('❌ Por favor ingresa el email del cliente');
+                document.getElementById('clientEmail').focus();
+                return;
+            }
+
+            if (type === 'cortesia_email' && !clientEmail.includes('@')) {
+                alert('❌ Por favor ingresa un email válido');
+                document.getElementById('clientEmail').focus();
+                return;
+            }
+
+            try {
+                const response = await fetch('/api/admin/promo/create', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        type: type === 'cortesia_email' ? 'cortesia' : type,
+                        duration_hours: duration
+                    })
+                });
+
+                const result = await response.json();
+
+                console.log('📦 API Response:', result);
+
+                if (result.success) {
+                    currentCode = result.promo_code.code;
+                    currentCodeType = result.promo_code.type;
+                    currentDuration = result.promo_code.duration_hours;
+
+                    console.log('✅ Código generado:', currentCode);
+
+                    if (type === 'cortesia_email') {
+                        await sendEmailAutomatically(currentCode, clientEmail, currentCodeType, currentDuration);
+                    } else {
+                        document.getElementById('generatedCode').textContent = currentCode;
+                        const successMsg = document.getElementById('successMessage');
+                        successMsg.style.display = 'block';
+                        successMsg.style.position = 'relative';
+                        successMsg.style.zIndex = '9999';
+
+                        alert('✅ Código creado exitosamente: ' + currentCode + '\n\nPuedes copiarlo o enviarlo por email usando los botones verdes.');
+                    }
+
+                    loadCodes();
+                    document.getElementById('clientEmail').value = '';
+                } else {
+                    alert('Error: ' + result.error);
+                }
+            } catch (error) {
+                alert('Error de conexión');
+            }
+        }
+
+        async function sendEmailAutomatically(code, email, type, duration) {
+            console.log('📧 Enviando email automáticamente a:', email);
+            
+            try {
+                const response = await fetch('/api/admin/promo/send-email', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        code: code,
+                        email: email,
+                        type: type,
+                        duration_hours: duration
+                    })
+                });
+
+                const result = await response.json();
+
+                if (result.success) {
+                    alert('✅ Código creado y enviado exitosamente a ' + email + '\n\nCódigo: ' + code);
+                } else {
+                    alert('⚠️ Código creado pero error al enviar email: ' + result.error + '\n\nCódigo: ' + code + '\n\nPuedes encontrarlo en la lista de códigos.');
+                }
+            } catch (error) {
+                alert('⚠️ Código creado pero error de conexión al enviar email\n\nCódigo: ' + code + '\n\nPuedes encontrarlo en la lista de códigos.');
+            }
+        }
+
+        function copyCode() {
+            if (!currentCode) return;
+
+            navigator.clipboard.writeText(currentCode).then(() => {
+                const btn = event.target.closest('button');
+                const originalText = btn.innerHTML;
+                btn.innerHTML = '<i class="bi bi-check-lg me-2"></i>COPIADO';
+                setTimeout(() => {
+                    btn.innerHTML = originalText;
+                }, 2000);
+            });
+        }
+
+        async function sendEmailDirect() {
+            if (!currentCode) {
+                alert('❌ No hay código para enviar');
+                return;
+            }
+            
+            const email = prompt('📧 Ingresa el correo electrónico del cliente:', '');
+            
+            if (!email || email.trim() === '') {
+                return;
+            }
+            
+            if (!email.includes('@')) {
+                alert('❌ Por favor ingresa un email válido');
+                return;
+            }
+            
+            try {
+                alert('⏳ Enviando email a ' + email + '...');
+                
+                const response = await fetch('/api/admin/promo/send-email', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        code: currentCode,
+                        email: email.trim(),
+                        type: currentCodeType,
+                        duration_hours: currentDuration
+                    })
+                });
+
+                const result = await response.json();
+
+                if (result.success) {
+                    alert('✅ Email enviado exitosamente a ' + email);
+                } else {
+                    alert('❌ Error: ' + result.error);
+                }
+            } catch (error) {
+                alert('❌ Error de conexión: ' + error.message);
+            }
+        }
+
+        async function sendEmail() {
+            const email = document.getElementById('recipientEmail').value.trim();
+
+            if (!email) {
+                alert('Por favor ingresa un correo electrónico');
+                return;
+            }
+
+            if (!currentCode) {
+                alert('No hay código para enviar');
+                return;
+            }
+
+            try {
+                const response = await fetch('/api/admin/promo/send-email', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        code: currentCode,
+                        email: email,
+                        type: currentCodeType,
+                        duration_hours: currentDuration
+                    })
+                });
+
+                const result = await response.json();
+
+                if (result.success) {
+                    alert('✅ ' + result.message);
+                    bootstrap.Modal.getInstance(document.getElementById('emailModal')).hide();
+                    document.getElementById('recipientEmail').value = '';
+                } else {
+                    alert('❌ Error: ' + result.error);
+                }
+            } catch (error) {
+                alert('❌ Error de conexión: ' + error.message);
+            }
+        }
+
+        async function loadCodes() {
+            try {
+                const response = await fetch('/api/admin/promo/list');
+                const result = await response.json();
+
+                if (result.success) {
+                    displayCodes(result.promo_codes);
+                } else {
+                    alert('Error: ' + result.error);
+                }
+            } catch (error) {
+                alert('Error de conexión');
+            }
+        }
+
+        function displayCodes(codes) {
+            const container = document.getElementById('codesContainer');
+
+            if (codes.length === 0) {
+                container.innerHTML = `
+                    <div class="text-center py-4" style="color: rgba(0, 245, 255, 0.5);">
+                        <i class="bi bi-inbox" style="font-size: 3rem;"></i>
+                        <p class="mt-3">No hay códigos generados</p>
+                    </div>
+                `;
+                return;
+            }
+
+            container.innerHTML = codes.slice(0, 10).map(code => `
+                <div class="code-row">
+                    <div class="row align-items-center">
+                        <div class="col-md-4">
+                            <div class="code-display" style="font-size: 1.2rem;">${code.code}</div>
+                            <small style="color: rgba(0, 245, 255, 0.5);">
+                                ${new Date(code.created_at).toLocaleString('es-ES')}
+                            </small>
+                        </div>
+                        <div class="col-md-3">
+                            <span class="badge-type">${getTypeName(code.type)}</span>
+                            <div style="color: rgba(0, 245, 255, 0.5); font-size: 0.85rem; margin-top: 0.5rem;">
+                                ${code.duration_hours}h (${Math.floor(code.duration_hours / 24)}d)
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <span class="badge-status ${code.is_used ? 'badge-used' : 'badge-active'}">
+                                ${code.is_used ? 'USADO' : 'ACTIVO'}
+                            </span>
+                        </div>
+                        <div class="col-md-2 text-end">
+                            <button class="btn btn-delete btn-sm" onclick="deleteCode('${code.id}')">
+                                <i class="bi bi-trash"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function getTypeName(type) {
+            const names = {
+                'cortesia': 'CORTESÍA',
+                'revendedor': 'REVENDEDOR',
+                'agente': 'AGENTE',
+                'cortesia_email': 'CORTESÍA EMAIL'
+            };
+            return names[type] || type.toUpperCase();
+        }
+
+        async function deleteCode(codeId) {
+            console.log('🗑️ deleteCode llamado con ID:', codeId);
+            
+            if (!confirm('¿Estás seguro de eliminar este código?')) {
+                console.log('❌ Usuario canceló eliminación');
+                return;
+            }
+
+            console.log('⏳ Enviando DELETE a:', `/api/admin/promo/delete/${codeId}`);
+
+            try {
+                const response = await fetch(`/api/admin/promo/delete/${codeId}`, {
+                    method: 'DELETE',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                });
+
+                console.log('📡 Response status:', response.status);
+                const result = await response.json();
+                console.log('📦 Response data:', result);
+
+                if (result.success) {
+                    alert('✅ Código eliminado exitosamente');
+                    loadCodes();
+                } else {
+                    alert('❌ Error: ' + result.error);
+                }
+            } catch (error) {
+                console.error('❌ Error eliminando:', error);
+                alert('❌ Error de conexión: ' + error.message);
+            }
+        }
+
+        loadCodes();
+    </script>
+</body>
+</html>

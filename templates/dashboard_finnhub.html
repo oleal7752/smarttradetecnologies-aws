@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <title>Finnhub - Visualización de Mercado | STC Trading</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    :root {
+      --bg: #000000; --panel: #0a0a0a; --text: #e0e7ff; --muted: #94a3b8;
+      --ok: #10b981; --warn: #f59e0b; --err: #ef4444; --line: rgba(0, 102, 255, 0.2);
+      --primary: #0066ff;
+      --glass-bg: rgba(10, 10, 20, 0.4);
+      --glass-border: rgba(0, 102, 255, 0.3);
+      --neon-blue: #0066ff;
+      --neon-cyan: #00d4ff;
+    }
+    html, body { height: 100%; margin: 0; background: radial-gradient(circle at 50% 50%, rgba(0, 102, 255, 0.15) 0%, #000000 70%); color: var(--text); font-family: system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,Helvetica,Arial; }
+    .app { display: grid; grid-template-columns: 1fr 360px; grid-template-rows: auto 1fr; gap: 12px; height: 100%; padding: 12px; box-sizing: border-box; }
+    header { grid-column: 1 / span 2; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; background: linear-gradient(135deg, rgba(0, 102, 255, 0.1) 0%, rgba(0, 0, 0, 0.3) 100%); backdrop-filter: blur(10px); padding: 12px; border-radius: 12px; border: 1px solid var(--glass-border); }
+    header h1 { font-size: 16px; font-weight: 600; margin: 0 8px 0 0; }
+    input[type="text"], select { background: rgba(10, 10, 30, 0.6); color: var(--text); border: 1px solid var(--glass-border); padding: 6px 8px; border-radius: 8px; backdrop-filter: blur(10px); transition: all 0.3s; }
+    input[type="text"]:focus, select:focus { outline: none; border-color: var(--neon-cyan); box-shadow: 0 0 15px rgba(0, 212, 255, 0.3); }
+    button { background: linear-gradient(135deg, rgba(0, 102, 255, 0.2) 0%, rgba(0, 212, 255, 0.1) 100%); color: var(--text); border: 1px solid var(--glass-border); padding: 6px 10px; border-radius: 8px; cursor: pointer; transition: all 0.3s; backdrop-filter: blur(10px); }
+    button.primary { background: linear-gradient(135deg, rgba(0, 102, 255, 0.4) 0%, rgba(0, 212, 255, 0.3) 100%); border-color: var(--neon-cyan); box-shadow: 0 4px 15px rgba(0, 102, 255, 0.3); }
+    button:hover { opacity: 1; transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0, 212, 255, 0.4); }
+    .status { padding: 3px 8px; border-radius: 99px; font-size: 12px; backdrop-filter: blur(10px); }
+    .status.ok { background: rgba(16,185,129,.2); color: var(--ok); border: 1px solid rgba(16,185,129,.5); box-shadow: 0 0 10px rgba(16,185,129,0.3); }
+
+    .chart-wrap { background: linear-gradient(145deg, rgba(0, 0, 0, 0.6) 0%, rgba(10, 10, 30, 0.4) 100%); border: 1px solid var(--glass-border); border-radius: 12px; overflow: hidden; position: relative; backdrop-filter: blur(20px); box-shadow: 0 8px 32px rgba(0, 102, 255, 0.15), inset 0 0 60px rgba(0, 102, 255, 0.05); }
+    #chart { width: 100%; height: calc(100vh - 160px); }
+    aside { background: linear-gradient(145deg, rgba(0, 0, 0, 0.5) 0%, rgba(10, 10, 30, 0.3) 100%); border: 1px solid var(--glass-border); border-radius: 12px; padding: 12px; display: flex; flex-direction: column; gap: 10px; overflow-y: auto; backdrop-filter: blur(20px); box-shadow: 0 8px 32px rgba(0, 102, 255, 0.15), inset 0 0 60px rgba(0, 102, 255, 0.05); }
+    .box { background: linear-gradient(135deg, rgba(0, 102, 255, 0.08) 0%, rgba(0, 212, 255, 0.04) 100%); border: 1px solid var(--glass-border); padding: 10px; border-radius: 12px; backdrop-filter: blur(15px); box-shadow: 0 4px 20px rgba(0, 102, 255, 0.1), inset 0 0 30px rgba(0, 102, 255, 0.03); transition: all 0.3s; }
+    .box:hover { border-color: rgba(0, 212, 255, 0.5); box-shadow: 0 6px 25px rgba(0, 212, 255, 0.2), inset 0 0 40px rgba(0, 102, 255, 0.05); }
+    .flex { display: flex; gap: 8px; align-items: center; }
+    .sep { height: 1px; background: linear-gradient(90deg, transparent 0%, var(--glass-border) 50%, transparent 100%); margin: 8px 0; box-shadow: 0 0 10px rgba(0, 102, 255, 0.2); }
+    .small { font-size: 12px; }
+
+    .timeframe-selector { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; }
+    .timeframe-btn { padding: 8px 4px; font-size: 12px; font-weight: 600; background: linear-gradient(135deg, rgba(0, 102, 255, 0.08) 0%, rgba(0, 0, 0, 0.3) 100%); border: 1px solid var(--glass-border); transition: all 0.3s; border-radius: 8px; backdrop-filter: blur(10px); }
+    .timeframe-btn:hover { background: linear-gradient(135deg, rgba(0, 102, 255, 0.15) 0%, rgba(0, 212, 255, 0.1) 100%); border-color: rgba(0, 212, 255, 0.5); box-shadow: 0 4px 15px rgba(0, 102, 255, 0.2); }
+    .timeframe-btn.active { background: linear-gradient(135deg, rgba(0, 102, 255, 0.4) 0%, rgba(0, 212, 255, 0.3) 100%); border-color: var(--neon-cyan); color: white; box-shadow: 0 4px 20px rgba(0, 212, 255, 0.5), inset 0 0 20px rgba(0, 102, 255, 0.2); }
+
+    .info-card { background: linear-gradient(135deg, rgba(0, 212, 255, 0.15) 0%, rgba(0, 102, 255, 0.1) 100%); padding: 12px; border-radius: 12px; text-align: center; border: 1px solid rgba(0, 212, 255, 0.3); }
+    .info-title { font-size: 14px; color: var(--neon-cyan); font-weight: 600; margin-bottom: 8px; }
+    .info-text { font-size: 12px; color: var(--text); }
+
+    @media (max-width: 768px) {
+      .app { grid-template-columns: 1fr; }
+      aside { order: -1; }
+    }
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/lightweight-charts@4.2.0/dist/lightweight-charts.standalone.production.js"></script>
+</head>
+<body>
+  <div class="app">
+    <header>
+      <h1>🪙 Finnhub - Visualización de Mercado</h1>
+      <span id="dataStatus" class="status ok">Datos Reales</span>
+      <div style="flex:1"></div>
+      <button class="primary" onclick="window.location.href='/broker/switch'">
+        🔄 Cambiar Broker
+      </button>
+    </header>
+
+    <div class="chart-wrap" style="position: relative;">
+      <div id="chart"></div>
+      
+      <div class="small" style="padding:8px 10px; background: rgba(0,0,0,0.5); color: var(--muted);">
+        💰 <b id="symbolLabel">-</b> • ⏰ <b id="timeLabel">-</b>
+      </div>
+    </div>
+
+    <aside>
+      <!-- Info Finnhub -->
+      <div class="info-card">
+        <div class="info-title">📊 Finnhub API</div>
+        <div class="info-text">Visualización de datos reales de criptomonedas en tiempo real</div>
+      </div>
+
+      <!-- Selector de Símbolo -->
+      <div class="box">
+        <strong>💹 Símbolo</strong>
+        <div class="sep"></div>
+        <select id="symbolSelect" style="width: 100%;">
+          <option value="BTCUSD" selected>Bitcoin USD</option>
+          <option value="ETHUSD">Ethereum USD</option>
+        </select>
+      </div>
+
+      <!-- Selector de Temporalidad -->
+      <div class="box">
+        <strong>📊 Temporalidad</strong>
+        <div class="sep"></div>
+        <div class="timeframe-selector">
+          <button class="timeframe-btn" data-timeframe="M1">M1</button>
+          <button class="timeframe-btn active" data-timeframe="M5">M5</button>
+          <button class="timeframe-btn" data-timeframe="M15">M15</button>
+          <button class="timeframe-btn" data-timeframe="M30">M30</button>
+          <button class="timeframe-btn" data-timeframe="H1">H1</button>
+        </div>
+      </div>
+
+      <!-- Información -->
+      <div class="box">
+        <div style="text-align: center; padding: 20px; color: var(--muted);">
+          <div style="font-size: 48px; margin-bottom: 12px;">👁️</div>
+          <div style="font-size: 14px; font-weight: 600; margin-bottom: 8px;">Solo Visualización</div>
+          <div style="font-size: 12px; line-height: 1.5;">
+            Este broker es solo para análisis de mercado. Para operar, selecciona IQ Option u OlympTrade.
+          </div>
+          <button class="primary" style="margin-top: 16px; width: 100%;" onclick="window.location.href='/broker/switch'">
+            Cambiar a Trading
+          </button>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <script src="/static/js/stc_chart_fix.js"></script>
+  <script>
+    console.log('📋 Finnhub Dashboard iniciado');
+
+    let currentSymbol = 'BTCUSD';
+    let currentTimeframe = 'M5';
+    const dataSource = 'finnhub';
+
+    document.querySelectorAll('.timeframe-btn').forEach(btn => {
+      btn.addEventListener('click', function() {
+        document.querySelectorAll('.timeframe-btn').forEach(b => b.classList.remove('active'));
+        this.classList.add('active');
+        currentTimeframe = this.dataset.timeframe;
+        console.log(`📊 Cambiando a ${currentTimeframe}`);
+        if (typeof loadCandles === 'function') {
+          loadCandles(currentSymbol, currentTimeframe, dataSource);
+        }
+      });
+    });
+
+    document.getElementById('symbolSelect').addEventListener('change', function() {
+      currentSymbol = this.value;
+      console.log(`💹 Cambiando símbolo a ${currentSymbol}`);
+      if (typeof loadCandles === 'function') {
+        loadCandles(currentSymbol, currentTimeframe, dataSource);
+      }
+    });
+
+    window.addEventListener('DOMContentLoaded', function() {
+      console.log('🌐 DOM cargado, iniciando gráfico Finnhub...');
+      if (typeof loadCandles === 'function') {
+        loadCandles(currentSymbol, currentTimeframe, dataSource);
+      }
+      
+      setInterval(() => {
+        if (typeof loadCandles === 'function') {
+          loadCandles(currentSymbol, currentTimeframe, dataSource);
+        }
+      }, 15000);
+    });
+  </script>
+</body>
+</html>

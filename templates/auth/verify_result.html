@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificación de Email - Smart Trade Academy</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Courier New', Consolas, Monaco, monospace;
+            background: #000000;
+            color: #00ffff;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            perspective: 1500px;
+            padding: 20px;
+        }
+
+        .container {
+            background: rgba(0, 255, 255, 0.05);
+            border: 2px solid rgba(0, 255, 255, 0.3);
+            border-radius: 20px;
+            padding: 60px 40px;
+            backdrop-filter: blur(40px);
+            transform: translateZ(50px);
+            max-width: 600px;
+            width: 100%;
+            text-align: center;
+            box-shadow: 0 0 50px rgba(0, 255, 255, 0.2);
+        }
+
+        .icon {
+            font-size: 5rem;
+            margin-bottom: 30px;
+            {% if success %}
+            filter: drop-shadow(0 0 20px rgba(0, 255, 100, 0.8));
+            {% else %}
+            filter: drop-shadow(0 0 20px rgba(255, 50, 50, 0.8));
+            {% endif %}
+        }
+
+        .title {
+            font-size: 2rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 20px;
+            {% if success %}
+            color: #00ff64;
+            text-shadow: 0 0 20px rgba(0, 255, 100, 0.5);
+            {% else %}
+            color: #ff3232;
+            text-shadow: 0 0 20px rgba(255, 50, 50, 0.5);
+            {% endif %}
+        }
+
+        .message {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 40px;
+            color: rgba(0, 255, 255, 0.8);
+        }
+
+        .btn {
+            display: inline-block;
+            background: rgba(0, 255, 255, 0.1);
+            border: 2px solid rgba(0, 255, 255, 0.4);
+            color: #00ffff;
+            padding: 15px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-family: 'Courier New', Consolas, Monaco, monospace;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background: rgba(0, 255, 255, 0.2);
+            box-shadow: 0 0 30px rgba(0, 255, 255, 0.4);
+            transform: scale(1.05);
+        }
+
+        .branding {
+            margin-top: 40px;
+            font-size: 0.9rem;
+            color: rgba(0, 255, 255, 0.5);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        {% if success %}
+        <div class="icon">✅</div>
+        <div class="title">VERIFICACIÓN EXITOSA</div>
+        {% else %}
+        <div class="icon">❌</div>
+        <div class="title">ERROR DE VERIFICACIÓN</div>
+        {% endif %}
+
+        <div class="message">{{ message }}</div>
+
+        {% if success %}
+        <a href="/auth/login" class="btn">🔐 INICIAR SESIÓN</a>
+        {% else %}
+        <a href="/" class="btn">⬅ VOLVER AL INICIO</a>
+        {% endif %}
+
+        <div class="branding">
+            💰 SMART TRADE ACADEMY IA
+        </div>
+    </div>
+
+    <script>
+        // Redirigir automáticamente después de 5 segundos si fue exitoso
+        {% if success %}
+        setTimeout(() => {
+            window.location.href = '/auth/login';
+        }, 5000);
+        {% endif %}
+    </script>
+</body>
+</html>

@@ -1,0 +1,255 @@
+//@version=5
+indicator("🎯 BINARIAS LIVE - BREAK-EVEN MARTINGALE", overlay=true)
+
+// ═══════════════════════════════════════════════════════════════════════════
+// 💰 CONFIGURACIÓN GESTIÓN DE CAPITAL
+// ═══════════════════════════════════════════════════════════════════════════
+
+capital_inicial = input.float(3500, "💵 Capital Inicial", group="Gestión Capital")
+operacion_base = input.float(3, "💸 Operación Base", group="Gestión Capital")
+gales_max = input.int(7, "🎲 Gales Máximos", minval=1, maxval=10, group="Gestión Capital")
+payout = input.float(0.80, "📈 Payout (%)", minval=0.50, maxval=0.95, step=0.01, group="Gestión Capital")
+
+// ═══════════════════════════════════════════════════════════════════════════
+// 📊 PARÁMETROS INDICADORES
+// ═══════════════════════════════════════════════════════════════════════════
+
+rsi_length = input.int(14, "RSI Periodo", group="Indicadores")
+rsi_os = input.int(30, "RSI Sobreventa", group="Indicadores")
+rsi_ob = input.int(70, "RSI Sobrecompra", group="Indicadores")
+
+// ═══════════════════════════════════════════════════════════════════════════
+// 🔢 CÁLCULO INDICADORES
+// ═══════════════════════════════════════════════════════════════════════════
+
+// RSI
+rsi = ta.rsi(close, rsi_length)
+
+// Tendencia H1 (simplificado con velas M5)
+h1_alcista = close > close[12]  // 1 hora = 12 velas M5
+h1_bajista = close < close[12]
+
+// Color vela actual
+vela_alcista = close > open
+vela_bajista = close < open
+
+// ═══════════════════════════════════════════════════════════════════════════
+// 📡 GENERACIÓN SEÑALES
+// ═══════════════════════════════════════════════════════════════════════════
+
+// Lógica señales
+senal_call = rsi < rsi_os and h1_alcista and vela_alcista
+senal_put = rsi > rsi_ob and h1_bajista and vela_bajista
+
+// Señal actual
+var string senal_actual = "ESPERAR"
+var bool nueva_senal = false
+
+if senal_call and barstate.isconfirmed
+    senal_actual := "CALL"
+    nueva_senal := true
+else if senal_put and barstate.isconfirmed
+    senal_actual := "PUT"
+    nueva_senal := true
+else if barstate.isconfirmed
+    nueva_senal := false
+
+// ═══════════════════════════════════════════════════════════════════════════
+// 💰 GESTIÓN BREAK-EVEN MARTINGALE
+// ═══════════════════════════════════════════════════════════════════════════
+
+var float capital = capital_inicial
+var float capital_maximo = capital_inicial
+var int gale_actual = 0
+var float perdida_acumulada = 0.0
+var int total_ops = 0
+var int wins = 0
+var int losses = 0
+var int secuencias_win = 0
+var int secuencias_loss = 0
+
+// Calcular inversión actual
+calcular_inversion() =>
+    if gale_actual == 0
+        operacion_base
+    else
+        perdida_acumulada / payout
+
+inversion_actual = calcular_inversion()
+
+// Verificar resultado de señal anterior
+var bool verificar_resultado = false
+var string senal_anterior = "ESPERAR"
+var float precio_entrada = 0.0
+
+if nueva_senal and senal_actual != "ESPERAR"
+    verificar_resultado := true
+    senal_anterior := senal_actual
+    precio_entrada := close
+
+// Verificar en siguiente vela
+if verificar_resultado and barstate.isconfirmed
+    
+    // Determinar resultado
+    bool es_win = false
+    
+    if senal_anterior == "CALL"
+        es_win := close > precio_entrada
+    else if senal_anterior == "PUT"
+        es_win := close < precio_entrada
+    
+    total_ops += 1
+    
+    // Procesar resultado
+    if es_win
+        // WIN
+        ganancia = inversion_actual * payout
+        capital += ganancia
+        wins += 1
+        
+        // Actualizar capital máximo
+        if capital > capital_maximo
+            capital_maximo := capital
+        
+        // Reiniciar secuencia
+        if gale_actual > 0
+            secuencias_win += 1
+        
+        gale_actual := 0
+        perdida_acumulada := 0.0
+    else
+        // LOSS
+        capital -= inversion_actual
+        perdida_acumulada += inversion_actual
+        losses += 1
+        gale_actual += 1
+        
+        // Verificar límite gales
+        if gale_actual > gales_max
+            secuencias_loss += 1
+            gale_actual := 0
+            perdida_acumulada := 0.0
+    
+    verificar_resultado := false
+
+// ═══════════════════════════════════════════════════════════════════════════
+// 📊 ESTADÍSTICAS
+// ═══════════════════════════════════════════════════════════════════════════
+
+win_rate = total_ops > 0 ? (wins / total_ops) * 100 : 0
+profit = capital - capital_inicial
+roi = capital_inicial > 0 ? (profit / capital_inicial) * 100 : 0
+drawdown = capital_maximo - capital
+
+// Próxima inversión
+proxima_inversion = gale_actual == 0 ? operacion_base : (perdida_acumulada / payout)
+
+// ═══════════════════════════════════════════════════════════════════════════
+// 🎨 VISUALIZACIÓN
+// ═══════════════════════════════════════════════════════════════════════════
+
+// Marcadores de señales
+plotshape(senal_call, "CALL", shape.triangleup, location.belowbar, color.new(color.lime, 0), size=size.normal, text="CALL")
+plotshape(senal_put, "PUT", shape.triangledown, location.abovebar, color.new(color.red, 0), size=size.normal, text="PUT")
+
+// ═══════════════════════════════════════════════════════════════════════════
+// 📋 TABLA INFORMACIÓN
+// ═══════════════════════════════════════════════════════════════════════════
+
+var table tabla = table.new(position.top_right, 2, 15, 
+     bgcolor=color.new(color.black, 80), 
+     border_width=2, 
+     border_color=color.new(#00f5ff, 50))
+
+if barstate.islast
+    
+    // Header
+    table.cell(tabla, 0, 0, "💰 GESTIÓN BREAK-EVEN", text_color=color.new(#00f5ff, 0), text_size=size.normal, bgcolor=color.new(color.black, 70))
+    table.merge_cells(tabla, 0, 0, 1, 0)
+    
+    // Capital
+    table.cell(tabla, 0, 1, "Capital Actual:", text_color=color.gray, text_size=size.small, bgcolor=color.new(color.black, 90))
+    table.cell(tabla, 1, 1, "$" + str.tostring(capital, "#,###.##"), 
+         text_color=capital >= capital_inicial ? color.lime : color.red, 
+         text_size=size.normal, bgcolor=color.new(color.black, 90))
+    
+    // Profit
+    table.cell(tabla, 0, 2, "Profit:", text_color=color.gray, text_size=size.small, bgcolor=color.new(color.black, 90))
+    table.cell(tabla, 1, 2, (profit >= 0 ? "+" : "") + "$" + str.tostring(profit, "#,###.##"), 
+         text_color=profit >= 0 ? color.lime : color.red, 
+         text_size=size.normal, bgcolor=color.new(color.black, 90))
+    
+    // ROI
+    table.cell(tabla, 0, 3, "ROI:", text_color=color.gray, text_size=size.small, bgcolor=color.new(color.black, 90))
+    table.cell(tabla, 1, 3, (roi >= 0 ? "+" : "") + str.tostring(roi, "#.##") + "%", 
+         text_color=roi >= 0 ? color.lime : color.red, 
+         text_size=size.normal, bgcolor=color.new(color.black, 90))
+    
+    // Línea separadora
+    table.cell(tabla, 0, 4, "───────────────", text_color=color.new(#00f5ff, 50), text_size=size.small, bgcolor=color.new(color.black, 90))
+    table.merge_cells(tabla, 0, 4, 1, 4)
+    
+    // Señal Actual
+    senal_color = senal_actual == "CALL" ? color.lime : senal_actual == "PUT" ? color.red : color.orange
+    table.cell(tabla, 0, 5, "Señal Actual:", text_color=color.gray, text_size=size.small, bgcolor=color.new(color.black, 90))
+    table.cell(tabla, 1, 5, senal_actual, text_color=senal_color, text_size=size.large, bgcolor=color.new(color.black, 90))
+    
+    // Gale Actual
+    table.cell(tabla, 0, 6, "Gale Actual:", text_color=color.gray, text_size=size.small, bgcolor=color.new(color.black, 90))
+    gale_color = gale_actual == 0 ? color.lime : gale_actual <= 3 ? color.orange : color.red
+    table.cell(tabla, 1, 6, str.tostring(gale_actual) + "/" + str.tostring(gales_max), 
+         text_color=gale_color, text_size=size.normal, bgcolor=color.new(color.black, 90))
+    
+    // Próxima Inversión
+    table.cell(tabla, 0, 7, "Próxima Inversión:", text_color=color.gray, text_size=size.small, bgcolor=color.new(color.black, 90))
+    table.cell(tabla, 1, 7, "$" + str.tostring(proxima_inversion, "#.##"), 
+         text_color=gale_actual == 0 ? color.white : color.orange, 
+         text_size=size.normal, bgcolor=color.new(color.black, 90))
+    
+    // Pérdida Acumulada
+    table.cell(tabla, 0, 8, "Pérdida Acum.:", text_color=color.gray, text_size=size.small, bgcolor=color.new(color.black, 90))
+    table.cell(tabla, 1, 8, "$" + str.tostring(perdida_acumulada, "#.##"), 
+         text_color=perdida_acumulada > 0 ? color.red : color.gray, 
+         text_size=size.normal, bgcolor=color.new(color.black, 90))
+    
+    // Línea separadora
+    table.cell(tabla, 0, 9, "───────────────", text_color=color.new(#00f5ff, 50), text_size=size.small, bgcolor=color.new(color.black, 90))
+    table.merge_cells(tabla, 0, 9, 1, 9)
+    
+    // Operaciones
+    table.cell(tabla, 0, 10, "Operaciones:", text_color=color.gray, text_size=size.small, bgcolor=color.new(color.black, 90))
+    table.cell(tabla, 1, 10, str.tostring(total_ops), text_color=color.white, text_size=size.normal, bgcolor=color.new(color.black, 90))
+    
+    // Win Rate
+    table.cell(tabla, 0, 11, "Win Rate:", text_color=color.gray, text_size=size.small, bgcolor=color.new(color.black, 90))
+    wr_color = win_rate >= 80 ? color.lime : win_rate >= 70 ? color.orange : color.red
+    table.cell(tabla, 1, 11, str.tostring(win_rate, "#.#") + "%", 
+         text_color=wr_color, text_size=size.normal, bgcolor=color.new(color.black, 90))
+    
+    // W/L
+    table.cell(tabla, 0, 12, "Wins/Losses:", text_color=color.gray, text_size=size.small, bgcolor=color.new(color.black, 90))
+    table.cell(tabla, 1, 12, str.tostring(wins) + "/" + str.tostring(losses), 
+         text_color=color.white, text_size=size.normal, bgcolor=color.new(color.black, 90))
+    
+    // Secuencias
+    table.cell(tabla, 0, 13, "Secuencias W/L:", text_color=color.gray, text_size=size.small, bgcolor=color.new(color.black, 90))
+    table.cell(tabla, 1, 13, str.tostring(secuencias_win) + "/" + str.tostring(secuencias_loss), 
+         text_color=color.white, text_size=size.normal, bgcolor=color.new(color.black, 90))
+    
+    // Drawdown
+    table.cell(tabla, 0, 14, "Drawdown:", text_color=color.gray, text_size=size.small, bgcolor=color.new(color.black, 90))
+    table.cell(tabla, 1, 14, "$" + str.tostring(drawdown, "#.##"), 
+         text_color=drawdown > 0 ? color.red : color.gray, 
+         text_size=size.normal, bgcolor=color.new(color.black, 90))
+
+// ═══════════════════════════════════════════════════════════════════════════
+// 🔔 ALERTAS
+// ═══════════════════════════════════════════════════════════════════════════
+
+alertcondition(senal_call, "📞 CALL", "SEÑAL CALL - Invertir ${{plot_0}}")
+alertcondition(senal_put, "📉 PUT", "SEÑAL PUT - Invertir ${{plot_0}}")
+alertcondition(gale_actual >= 5, "⚠️ GALE ALTO", "ALERTA: Gale {{plot_0}}/{{plot_1}}")
+
+// Plot invisible para alertas
+plot(proxima_inversion, display=display.none)
+plot(gale_actual, display=display.none)

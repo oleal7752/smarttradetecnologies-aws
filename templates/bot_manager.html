@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STC Trading - Gestión de Operaciones</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Courier New', monospace;
+            background: #000000;
+            color: #00ffff;
+            min-height: 100vh;
+            overflow-x: hidden;
+            perspective: 1500px;
+        }
+
+        /* Encabezado */
+        .header {
+            background: rgba(0, 30, 50, 0.05);
+            backdrop-filter: blur(40px);
+            border-bottom: 1px solid rgba(0, 255, 255, 0.15);
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transform: translateZ(50px);
+        }
+
+        .header h1 {
+            font-size: 1.8rem;
+            text-shadow: 0 0 20px rgba(0, 255, 255, 0.8);
+            letter-spacing: 3px;
+        }
+
+        .status-indicator {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 20px;
+            background: rgba(0, 30, 50, 0.1);
+            backdrop-filter: blur(30px);
+            border: 1px solid rgba(0, 255, 255, 0.2);
+            border-radius: 25px;
+            transform: translateZ(30px);
+        }
+
+        .status-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #ff0066;
+            box-shadow: 0 0 15px #ff0066;
+            animation: pulse 2s infinite;
+        }
+
+        .status-dot.active {
+            background: #00ff00;
+            box-shadow: 0 0 15px #00ff00;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        /* Contenedor principal */
+        .container {
+            max-width: 1400px;
+            margin: 40px auto;
+            padding: 20px;
+            transform-style: preserve-3d;
+        }
+
+        /* Panel glassmorphism 3D */
+        .glass-panel {
+            background: rgba(0, 20, 40, 0.08);
+            backdrop-filter: blur(35px);
+            border: 1px solid rgba(0, 255, 255, 0.12);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 30px;
+            transform: translateZ(40px);
+            box-shadow: 
+                0 8px 32px rgba(0, 255, 255, 0.15),
+                inset 0 1px 0 rgba(255, 255, 255, 0.05),
+                0 0 50px rgba(0, 150, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .glass-panel:hover {
+            transform: translateZ(60px);
+            border-color: rgba(0, 255, 255, 0.3);
+            box-shadow: 
+                0 12px 48px rgba(0, 255, 255, 0.25),
+                inset 0 1px 0 rgba(255, 255, 255, 0.1),
+                0 0 70px rgba(0, 200, 255, 0.2);
+        }
+
+        .panel-title {
+            font-size: 1.4rem;
+            margin-bottom: 25px;
+            color: #00ffff;
+            text-shadow: 0 0 15px rgba(0, 255, 255, 0.6);
+            letter-spacing: 2px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        /* Botones Start/Stop */
+        .control-buttons {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            flex: 1;
+            padding: 18px 30px;
+            border: none;
+            border-radius: 15px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            font-family: 'Courier New', monospace;
+            cursor: pointer;
+            transform: translateZ(20px);
+            transition: all 0.3s ease;
+            letter-spacing: 2px;
+            box-shadow: 0 0 30px rgba(0, 255, 255, 0.3);
+        }
+
+        .btn-start {
+            background: linear-gradient(135deg, rgba(0, 255, 100, 0.15), rgba(0, 200, 100, 0.1));
+            border: 2px solid rgba(0, 255, 100, 0.4);
+            color: #00ff66;
+            text-shadow: 0 0 10px rgba(0, 255, 100, 0.8);
+        }
+
+        .btn-start:hover {
+            transform: translateZ(40px);
+            box-shadow: 0 0 50px rgba(0, 255, 100, 0.6);
+            border-color: rgba(0, 255, 100, 0.8);
+        }
+
+        .btn-stop {
+            background: linear-gradient(135deg, rgba(255, 0, 100, 0.15), rgba(200, 0, 80, 0.1));
+            border: 2px solid rgba(255, 0, 100, 0.4);
+            color: #ff0066;
+            text-shadow: 0 0 10px rgba(255, 0, 100, 0.8);
+        }
+
+        .btn-stop:hover {
+            transform: translateZ(40px);
+            box-shadow: 0 0 50px rgba(255, 0, 100, 0.6);
+            border-color: rgba(255, 0, 100, 0.8);
+        }
+
+        .btn:disabled {
+            opacity: 0.4;
+            cursor: not-allowed;
+        }
+
+        /* Selector de pares */
+        .pairs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .pair-checkbox {
+            background: rgba(0, 30, 50, 0.1);
+            backdrop-filter: blur(30px);
+            border: 1px solid rgba(0, 255, 255, 0.15);
+            border-radius: 12px;
+            padding: 15px 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            transform: translateZ(15px);
+        }
+
+        .pair-checkbox:hover {
+            border-color: rgba(0, 255, 255, 0.4);
+            background: rgba(0, 50, 80, 0.15);
+            transform: translateZ(25px);
+        }
+
+        .pair-checkbox input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+            accent-color: #00ffff;
+        }
+
+        .pair-checkbox label {
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            color: #00ffff;
+            letter-spacing: 1px;
+        }
+
+        /* Configuración Martingale */
+        .config-group {
+            margin-bottom: 25px;
+        }
+
+        .config-label {
+            display: block;
+            margin-bottom: 10px;
+            color: #00ffff;
+            font-size: 0.95rem;
+            letter-spacing: 1px;
+        }
+
+        .config-input {
+            width: 100%;
+            padding: 14px 18px;
+            background: rgba(0, 30, 50, 0.12);
+            border: 1px solid rgba(0, 255, 255, 0.2);
+            border-radius: 10px;
+            color: #00ffff;
+            font-family: 'Courier New', monospace;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            transform: translateZ(10px);
+        }
+
+        .config-input:focus {
+            outline: none;
+            border-color: rgba(0, 255, 255, 0.6);
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+            transform: translateZ(20px);
+        }
+
+        /* Botón guardar configuración */
+        .btn-save {
+            width: 100%;
+            padding: 16px;
+            background: linear-gradient(135deg, rgba(0, 150, 255, 0.15), rgba(0, 100, 200, 0.1));
+            border: 2px solid rgba(0, 150, 255, 0.4);
+            color: #00aaff;
+            border-radius: 12px;
+            font-size: 1.05rem;
+            font-weight: bold;
+            cursor: pointer;
+            font-family: 'Courier New', monospace;
+            letter-spacing: 2px;
+            transition: all 0.3s ease;
+            transform: translateZ(20px);
+            text-shadow: 0 0 10px rgba(0, 150, 255, 0.8);
+        }
+
+        .btn-save:hover {
+            transform: translateZ(35px);
+            box-shadow: 0 0 40px rgba(0, 150, 255, 0.5);
+            border-color: rgba(0, 150, 255, 0.8);
+        }
+
+        /* Mensajes de estado */
+        .message {
+            padding: 15px 20px;
+            border-radius: 10px;
+            margin-top: 15px;
+            font-size: 0.95rem;
+            letter-spacing: 1px;
+            transform: translateZ(25px);
+            display: none;
+        }
+
+        .message.success {
+            background: rgba(0, 255, 100, 0.1);
+            border: 1px solid rgba(0, 255, 100, 0.3);
+            color: #00ff66;
+        }
+
+        .message.error {
+            background: rgba(255, 0, 100, 0.1);
+            border: 1px solid rgba(255, 0, 100, 0.3);
+            color: #ff0066;
+        }
+
+        .message.show {
+            display: block;
+            animation: fadeIn 0.3s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Grid responsivo */
+        .config-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+    </style>
+</head>
+<body>
+    {% set action = "logout" %}
+    {% set label = "SALIR" %}
+    {% include "partials/floating_menu_button.html" %}
+
+    <!-- Encabezado -->
+    <div class="header">
+        <h1>⚙️ GESTIÓN DE OPERACIONES</h1>
+        <div class="status-indicator">
+            <div class="status-dot" id="botStatusDot"></div>
+            <span id="botStatusText">BOT DETENIDO</span>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Panel de control Start/Stop -->
+        <div class="glass-panel">
+            <h2 class="panel-title">🎮 CONTROL DEL BOT</h2>
+            <div class="control-buttons">
+                <button class="btn btn-start" id="btnStart">▶ INICIAR ESCANEO</button>
+                <button class="btn btn-stop" id="btnStop" disabled>⏸ DETENER ESCANEO</button>
+            </div>
+            <div id="controlMessage" class="message"></div>
+        </div>
+
+        <!-- Selección de pares -->
+        <div class="glass-panel">
+            <h2 class="panel-title">📊 PARES PARA OPERAR</h2>
+            <div class="pairs-grid">
+                <div class="pair-checkbox">
+                    <input type="checkbox" id="pair_EURUSD" value="EURUSD" checked>
+                    <label for="pair_EURUSD">EUR/USD</label>
+                </div>
+                <div class="pair-checkbox">
+                    <input type="checkbox" id="pair_GBPUSD" value="GBPUSD" checked>
+                    <label for="pair_GBPUSD">GBP/USD</label>
+                </div>
+                <div class="pair-checkbox">
+                    <input type="checkbox" id="pair_USDJPY" value="USDJPY" checked>
+                    <label for="pair_USDJPY">USD/JPY</label>
+                </div>
+                <div class="pair-checkbox">
+                    <input type="checkbox" id="pair_EURJPY" value="EURJPY" checked>
+                    <label for="pair_EURJPY">EUR/JPY</label>
+                </div>
+            </div>
+        </div>
+
+        <!-- Configuración Martingale -->
+        <div class="glass-panel">
+            <h2 class="panel-title">🎯 CONFIGURACIÓN MARTINGALE</h2>
+            <div class="config-grid">
+                <div class="config-group">
+                    <label class="config-label">Máximo de Gales</label>
+                    <input type="number" id="maxGales" class="config-input" min="0" max="10" value="7">
+                </div>
+                <div class="config-group">
+                    <label class="config-label">Stake Inicial (USD)</label>
+                    <input type="number" id="initialStake" class="config-input" min="1" step="0.01" value="10">
+                </div>
+                <div class="config-group">
+                    <label class="config-label">Multiplicador</label>
+                    <input type="number" id="multiplier" class="config-input" min="1" step="0.1" value="2.0">
+                </div>
+            </div>
+            <button class="btn-save" id="btnSave">💾 GUARDAR CONFIGURACIÓN</button>
+            <div id="configMessage" class="message"></div>
+        </div>
+    </div>
+
+    <script>
+        // Detectar URL base del servidor RealTime (puerto 8000)
+        const protocol = window.location.protocol === 'https:' ? 'https:' : 'http:';
+        const hostname = window.location.hostname;
+        const API_BASE = `${protocol}//${hostname}:8000`;
+        const API_URL = `${API_BASE}/api/bot`;
+        const API_KEY = '{{ api_key }}';  // Renderizado desde backend (variable de entorno BOT_API_KEY)
+
+        // Elementos DOM
+        const btnStart = document.getElementById('btnStart');
+        const btnStop = document.getElementById('btnStop');
+        const btnSave = document.getElementById('btnSave');
+        const botStatusDot = document.getElementById('botStatusDot');
+        const botStatusText = document.getElementById('botStatusText');
+        const controlMessage = document.getElementById('controlMessage');
+        const configMessage = document.getElementById('configMessage');
+
+        // Cargar estado inicial
+        async function loadBotStatus() {
+            try {
+                const response = await fetch(`${API_URL}/status`);
+                const data = await response.json();
+                
+                if (data.status === 'ok') {
+                    const bot = data.bot;
+                    updateBotStatus(bot.scanning_active);
+                    
+                    // Actualizar pares seleccionados
+                    document.querySelectorAll('.pair-checkbox input').forEach(cb => {
+                        cb.checked = bot.selected_symbols.includes(cb.value);
+                    });
+                    
+                    // Actualizar configuración Martingale
+                    document.getElementById('maxGales').value = bot.martingale_config.max_gales;
+                    document.getElementById('initialStake').value = bot.martingale_config.initial_stake;
+                    document.getElementById('multiplier').value = bot.martingale_config.multiplier;
+                }
+            } catch (error) {
+                console.error('Error cargando estado:', error);
+            }
+        }
+
+        // Actualizar UI según estado del bot
+        function updateBotStatus(isActive) {
+            if (isActive) {
+                botStatusDot.classList.add('active');
+                botStatusText.textContent = 'BOT ACTIVO';
+                btnStart.disabled = true;
+                btnStop.disabled = false;
+            } else {
+                botStatusDot.classList.remove('active');
+                botStatusText.textContent = 'BOT DETENIDO';
+                btnStart.disabled = false;
+                btnStop.disabled = true;
+            }
+        }
+
+        // Mostrar mensaje
+        function showMessage(element, text, type) {
+            element.textContent = text;
+            element.className = `message ${type} show`;
+            setTimeout(() => {
+                element.classList.remove('show');
+            }, 3000);
+        }
+
+        // Iniciar bot
+        btnStart.addEventListener('click', async () => {
+            try {
+                const response = await fetch(`${API_URL}/start`, { 
+                    method: 'POST',
+                    headers: { 'Authorization': `Bearer ${API_KEY}` }
+                });
+                const data = await response.json();
+                
+                if (data.status === 'ok') {
+                    updateBotStatus(true);
+                    showMessage(controlMessage, '✅ ' + data.message, 'success');
+                } else {
+                    showMessage(controlMessage, '❌ ' + data.message, 'error');
+                }
+            } catch (error) {
+                showMessage(controlMessage, '❌ Error al iniciar bot', 'error');
+            }
+        });
+
+        // Detener bot
+        btnStop.addEventListener('click', async () => {
+            try {
+                const response = await fetch(`${API_URL}/stop`, { 
+                    method: 'POST',
+                    headers: { 'Authorization': `Bearer ${API_KEY}` }
+                });
+                const data = await response.json();
+                
+                if (data.status === 'ok') {
+                    updateBotStatus(false);
+                    showMessage(controlMessage, '✅ ' + data.message, 'success');
+                } else {
+                    showMessage(controlMessage, '❌ ' + data.message, 'error');
+                }
+            } catch (error) {
+                showMessage(controlMessage, '❌ Error al detener bot', 'error');
+            }
+        });
+
+        // Guardar configuración
+        btnSave.addEventListener('click', async () => {
+            try {
+                // Obtener pares seleccionados
+                const selectedSymbols = Array.from(document.querySelectorAll('.pair-checkbox input:checked'))
+                    .map(cb => cb.value);
+                
+                if (selectedSymbols.length === 0) {
+                    showMessage(configMessage, '❌ Debe seleccionar al menos un par', 'error');
+                    return;
+                }
+                
+                // Obtener configuración Martingale
+                const martingaleConfig = {
+                    max_gales: parseInt(document.getElementById('maxGales').value),
+                    initial_stake: parseFloat(document.getElementById('initialStake').value),
+                    multiplier: parseFloat(document.getElementById('multiplier').value)
+                };
+                
+                const response = await fetch(`${API_URL}/config`, {
+                    method: 'POST',
+                    headers: { 
+                        'Content-Type': 'application/json',
+                        'Authorization': `Bearer ${API_KEY}`
+                    },
+                    body: JSON.stringify({
+                        selected_symbols: selectedSymbols,
+                        martingale_config: martingaleConfig
+                    })
+                });
+                
+                const data = await response.json();
+                
+                if (data.status === 'ok') {
+                    showMessage(configMessage, '✅ ' + data.message, 'success');
+                } else {
+                    showMessage(configMessage, '❌ ' + data.message, 'error');
+                }
+            } catch (error) {
+                showMessage(configMessage, '❌ Error al guardar configuración', 'error');
+            }
+        });
+
+        // Cargar estado al iniciar
+        loadBotStatus();
+        
+        // Actualizar estado cada 5 segundos
+        setInterval(loadBotStatus, 5000);
+    </script>
+</body>
+</html>

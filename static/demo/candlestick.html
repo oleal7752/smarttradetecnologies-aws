@@ -1,0 +1,2344 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="STC-IA">
+    <meta name="theme-color" content="#000000">
+    <meta name="description" content="Sistema profesional de trading con señales en tiempo real para opciones binarias">
+    
+    <!-- PWA Icons -->
+    <link rel="icon" type="image/png" sizes="192x192" href="/static/icons/icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/static/icons/icon-512x512.png">
+    <link rel="apple-touch-icon" sizes="192x192" href="/static/icons/icon-192x192.png">
+    <link rel="apple-touch-icon" sizes="512x512" href="/static/icons/icon-512x512.png">
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="/static/manifest.json">
+    
+    <title>EUR/USD M5 - smarttradetecnologies-ar</title>
+    <script src="https://unpkg.com/lightweight-charts@4.1.1/dist/lightweight-charts.standalone.production.js"></script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background: #000000;
+            font-family: 'Courier New', monospace;
+            color: #00ffff;
+            padding: 0;
+            overflow: hidden;
+        }
+        .container {
+            max-width: 100vw;
+            margin: 0 auto;
+            background: rgba(0, 0, 0, 0.95);
+            overflow: hidden;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        /* Bienvenida Superior */
+        .welcome-header {
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(40px);
+            border-bottom: 2px solid rgba(0, 255, 255, 0.3);
+            padding: 15px 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 8px 32px rgba(0, 255, 255, 0.2),
+                        inset 0 1px 0 rgba(0, 255, 255, 0.1);
+            position: relative;
+        }
+        
+        
+        .welcome-text {
+            font-size: 18px;
+            font-weight: 700;
+            color: #00ffff;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            text-shadow: 0 0 20px rgba(0, 255, 255, 0.8),
+                        0 0 40px rgba(0, 255, 255, 0.4);
+        }
+        
+        .datetime-display {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 99998;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(40px);
+            padding: 12px 25px;
+            border-radius: 50px;
+            border: 2px solid rgba(0, 255, 255, 0.3);
+            font-size: 14px;
+            font-weight: 700;
+            color: #00ffff;
+            letter-spacing: 2px;
+            text-shadow: 0 0 10px rgba(0, 255, 255, 0.6);
+            box-shadow: 0 0 30px rgba(0, 255, 255, 0.2),
+                        inset 0 0 20px rgba(0, 255, 255, 0.05);
+            transition: all 0.3s ease;
+        }
+        
+        .datetime-value {
+            color: #ffffff;
+            text-shadow: 0 0 5px rgba(0, 255, 255, 0.3);
+        }
+        .header {
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(40px);
+            padding: 15px 30px;
+            border-bottom: 2px solid rgba(0, 255, 255, 0.2);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-shrink: 0;
+            gap: 20px;
+            flex-wrap: wrap;
+            box-shadow: 0 4px 20px rgba(0, 255, 255, 0.15);
+        }
+        .symbol-info {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .symbol {
+            font-size: 18px;
+            font-weight: 600;
+            color: #d1d4dc;
+        }
+        .timeframe {
+            background: rgba(0, 255, 255, 0.1);
+            padding: 8px 20px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 700;
+            color: #00ffff;
+            border: 2px solid rgba(0, 255, 255, 0.4);
+            box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+            text-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
+        }
+        /* Precios eliminados */
+        .chart-container {
+            flex: 1;
+            background: #000000;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(0, 255, 255, 0.08);
+        }
+        
+        /* Marca de Agua - Bandera Venezuela en Fondo del Gráfico */
+        .chart-container::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 400px;
+            height: 266px;
+            background-image: url('/static/venezuela-flag.jpg');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            opacity: 0.03;
+            z-index: 0;
+            pointer-events: none;
+        }
+        
+        #chart {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            z-index: 1;
+        }
+        
+        /* ========================================
+           RESPONSIVE DESIGN - MOBILE OPTIMIZATION
+           ======================================== */
+        
+        @media (max-width: 768px) {
+            .welcome-text {
+                font-size: 12px;
+                letter-spacing: 1px;
+            }
+            
+            .datetime-display {
+                font-size: 11px;
+                padding: 6px 12px;
+                letter-spacing: 0.5px;
+            }
+            
+            .header {
+                flex-wrap: wrap;
+                padding: 10px 15px;
+                gap: 10px;
+            }
+            
+            .pair-selector {
+                flex-wrap: wrap;
+                gap: 8px;
+            }
+            
+            .pair-btn,
+            .strategy-btn,
+            .timeframe-btn {
+                min-width: 120px;
+                height: 48px;
+                padding: 12px 20px;
+                font-size: 11px;
+            }
+            
+            .timeframe-btn {
+                min-width: 80px;
+            }
+            
+            .timeframe {
+                font-size: 12px;
+                padding: 8px 16px;
+            }
+            
+            /* Hacer botones más táctiles en móvil */
+            .pair-btn:active,
+            .strategy-btn:active,
+            .timeframe-btn:active {
+                transform: scale(0.95);
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .welcome-header {
+                flex-direction: column;
+                gap: 10px;
+                padding: 10px 15px;
+            }
+            
+            .welcome-text {
+                font-size: 10px;
+                text-align: center;
+            }
+            
+            .datetime-display {
+                font-size: 9px;
+                padding: 5px 10px;
+            }
+            
+            .pair-btn,
+            .strategy-btn,
+            .timeframe-btn {
+                min-width: 100px;
+                height: 42px;
+                font-size: 10px;
+                padding: 10px 15px;
+            }
+            
+            .timeframe-btn {
+                min-width: 70px;
+            }
+            
+        }
+        
+        /* Touch-friendly improvements */
+        @media (hover: none) and (pointer: coarse) {
+            .pair-btn,
+            .strategy-btn,
+            .timeframe-btn {
+                /* Más grande para dedos en dispositivos táctiles */
+                min-height: 50px;
+                touch-action: manipulation;
+            }
+        }
+        
+        /* Landscape mode en móviles */
+        @media (max-width: 896px) and (orientation: landscape) {
+            .welcome-header {
+                padding: 8px 15px;
+            }
+            
+            .welcome-text {
+                font-size: 11px;
+            }
+            
+            .header {
+                padding: 8px 15px;
+            }
+        }
+        .footer {
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(40px);
+            padding: 10px 30px;
+            border-top: 2px solid rgba(0, 255, 255, 0.2);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 12px;
+            color: #00ffff;
+            flex-shrink: 0;
+            box-shadow: 0 -4px 20px rgba(0, 255, 255, 0.15);
+        }
+        .status-indicator {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #26a69a;
+            animation: pulse 1s infinite;
+        }
+        .status-dot.updating {
+            background: #ffb74d;
+            animation: blink 0.5s ease-in-out 3;
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+        @keyframes blink {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.3; transform: scale(1.3); }
+        }
+        .next-update {
+            font-size: 11px;
+            color: #585b66;
+            margin-left: 10px;
+        }
+        .tick-indicator {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 11px;
+            color: #787b86;
+        }
+        .tick-light {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #26a69a;
+            box-shadow: 0 0 8px #26a69a;
+            opacity: 0.3;
+            transition: all 0.2s ease;
+        }
+        .tick-light.active {
+            opacity: 1;
+            box-shadow: 0 0 15px #26a69a, 0 0 25px #26a69a;
+            animation: tickPulse 0.5s ease-out;
+        }
+        @keyframes tickPulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.4); }
+            100% { transform: scale(1); }
+        }
+        
+        /* Glassmorphism Style - Base común para todos los botones */
+        .pair-selector {
+            display: flex;
+            gap: 15px;
+        }
+        
+        /* Estilo base común */
+        .pair-btn,
+        .strategy-btn,
+        .timeframe-btn {
+            background: rgba(0, 0, 0, 0.01);
+            backdrop-filter: blur(40px);
+            border: 2px solid rgba(0, 255, 255, 0.25);
+            border-radius: 16px;
+            padding: 18px 35px;
+            min-width: 200px;
+            height: 60px;
+            font-family: 'Courier New', monospace;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 10px rgba(0, 255, 255, 0.08),
+                        inset 0 1px 0 rgba(255, 255, 255, 0.02);
+        }
+        
+        /* Botones de pares */
+        .pair-btn {
+            color: #00ffff;
+        }
+        
+        .pair-btn:hover {
+            background: rgba(0, 255, 255, 0.08);
+            border-color: rgba(0, 255, 255, 0.6);
+            box-shadow: 0 6px 20px rgba(0, 255, 255, 0.3),
+                        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+            transform: translateY(-2px);
+        }
+        
+        .pair-btn.active {
+            background: rgba(0, 255, 255, 0.05);
+            border-color: rgba(0, 255, 255, 0.6);
+            box-shadow: 0 0 15px rgba(0, 255, 255, 0.2),
+                        0 0 25px rgba(0, 255, 255, 0.1),
+                        inset 0 1px 0 rgba(255, 255, 255, 0.05);
+            color: #00ffff;
+            text-shadow: 0 0 8px rgba(0, 255, 255, 0.5);
+        }
+        
+        /* Botones de Timeframe */
+        .timeframe-btn {
+            color: #00ffff;
+            min-width: 120px;
+        }
+        
+        .timeframe-btn:hover {
+            background: rgba(0, 255, 255, 0.08);
+            border-color: rgba(0, 255, 255, 0.6);
+            box-shadow: 0 6px 20px rgba(0, 255, 255, 0.3),
+                        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+            transform: translateY(-2px);
+        }
+        
+        .timeframe-btn.active {
+            background: rgba(0, 255, 255, 0.05);
+            border-color: rgba(0, 255, 255, 0.6);
+            box-shadow: 0 0 15px rgba(0, 255, 255, 0.2),
+                        0 0 25px rgba(0, 255, 255, 0.1),
+                        inset 0 1px 0 rgba(255, 255, 255, 0.05);
+            color: #00ffff;
+            text-shadow: 0 0 8px rgba(0, 255, 255, 0.5);
+        }
+        
+        /* Botones de Estrategia */
+        .strategy-btn {
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: rgba(255, 255, 255, 0.7);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5),
+                        inset 0 1px 0 rgba(255, 255, 255, 0.05);
+        }
+        
+        .strategy-btn:hover {
+            border-color: rgba(255, 150, 0, 0.6);
+            box-shadow: 0 6px 20px rgba(255, 150, 0, 0.3),
+                        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+            transform: translateY(-2px);
+        }
+        
+        .strategy-btn.active {
+            background: rgba(255, 150, 0, 0.05);
+            border-color: rgba(255, 150, 0, 0.6);
+            box-shadow: 0 0 15px rgba(255, 150, 0, 0.2),
+                        0 0 25px rgba(255, 150, 0, 0.1),
+                        inset 0 1px 0 rgba(255, 255, 255, 0.05);
+            color: #ff9600;
+            text-shadow: 0 0 8px rgba(255, 150, 0, 0.5);
+        }
+        
+        /* Señales en Vivo - Glassmorphism */
+        .live-signals {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .signal-card {
+            background: rgba(0, 0, 0, 0.05);
+            backdrop-filter: blur(40px);
+            border-radius: 16px;
+            padding: 20px 40px;
+            min-width: 220px;
+            text-align: center;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5),
+                        inset 0 1px 0 rgba(255, 255, 255, 0.05);
+            transition: all 0.3s ease;
+        }
+        
+        .signal-card.call {
+            border: 2px solid rgba(38, 166, 154, 0.4);
+            box-shadow: 0 8px 32px rgba(38, 166, 154, 0.2),
+                        0 0 40px rgba(38, 166, 154, 0.15),
+                        inset 0 1px 0 rgba(255, 255, 255, 0.05);
+        }
+        
+        .signal-card.put {
+            border: 2px solid rgba(239, 83, 80, 0.4);
+            box-shadow: 0 8px 32px rgba(239, 83, 80, 0.2),
+                        0 0 40px rgba(239, 83, 80, 0.15),
+                        inset 0 1px 0 rgba(255, 255, 255, 0.05);
+        }
+        
+        .signal-card.active {
+            transform: scale(1.05);
+        }
+        
+        .signal-card.call.active {
+            border-color: rgba(38, 166, 154, 0.8);
+            box-shadow: 0 12px 48px rgba(38, 166, 154, 0.4),
+                        0 0 60px rgba(38, 166, 154, 0.3),
+                        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+        }
+        
+        .signal-card.put.active {
+            border-color: rgba(239, 83, 80, 0.8);
+            box-shadow: 0 12px 48px rgba(239, 83, 80, 0.4),
+                        0 0 60px rgba(239, 83, 80, 0.3),
+                        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+        }
+        
+        .signal-label {
+            font-family: 'Courier New', monospace;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 12px;
+            opacity: 0.7;
+        }
+        
+        .signal-card.call .signal-label {
+            color: #26a69a;
+        }
+        
+        .signal-card.put .signal-label {
+            color: #ef5350;
+        }
+        
+        .signal-status {
+            font-family: 'Courier New', monospace;
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            display: block;
+        }
+        
+        .signal-card.call .signal-status {
+            color: #26a69a;
+            text-shadow: 0 0 20px rgba(38, 166, 154, 0.6);
+        }
+        
+        .signal-card.put .signal-status {
+            color: #ef5350;
+            text-shadow: 0 0 20px rgba(239, 83, 80, 0.6);
+        }
+        
+        .signal-time {
+            font-family: 'Courier New', monospace;
+            font-size: 12px;
+            color: rgba(255, 255, 255, 0.5);
+            display: block;
+        }
+        
+        @keyframes signalPulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.8; transform: scale(1.02); }
+        }
+        
+        .signal-card.active {
+            animation: signalPulse 1.5s ease-in-out infinite;
+        }
+        
+        /* RESPONSIVE DESIGN */
+        @media (max-width: 768px) {
+            body {
+                padding: 5px;
+            }
+            
+            .container {
+                height: calc(100vh - 10px);
+                border-radius: 4px;
+            }
+            
+            .header {
+                padding: 10px;
+                gap: 10px;
+            }
+            
+            .symbol-info {
+                order: 1;
+                width: 100%;
+                justify-content: center;
+            }
+            
+            .symbol {
+                font-size: 14px;
+            }
+            
+            .timeframe {
+                font-size: 10px;
+            }
+            
+            .pair-selector {
+                order: 2;
+                width: 100%;
+                gap: 10px;
+            }
+            
+            .pair-btn {
+                padding: 15px 30px;
+                font-size: 12px;
+                min-width: 0;
+                flex: 1;
+            }
+            
+            .live-signals {
+                order: 3;
+                width: 100%;
+                gap: 10px;
+            }
+            
+            .signal-card {
+                padding: 15px 30px;
+                min-width: 0;
+                flex: 1;
+            }
+            
+            .signal-label {
+                font-size: 10px;
+                margin-bottom: 8px;
+            }
+            
+            .signal-status {
+                font-size: 20px;
+                margin-bottom: 6px;
+            }
+            
+            .signal-time {
+                font-size: 10px;
+            }
+            
+            .price-info {
+                order: 4;
+                width: 100%;
+                justify-content: center;
+            }
+            
+            .current-price {
+                font-size: 16px;
+            }
+            
+            .price-change {
+                font-size: 11px;
+            }
+            
+            .footer {
+                padding: 8px 12px;
+                font-size: 10px;
+                flex-wrap: wrap;
+                gap: 8px;
+            }
+            
+            .status-indicator {
+                gap: 6px;
+                font-size: 10px;
+            }
+            
+            .next-update {
+                font-size: 9px;
+            }
+            
+            .tick-indicator {
+                font-size: 9px;
+                gap: 4px;
+            }
+            
+            .tick-light {
+                width: 8px;
+                height: 8px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            /* Móviles muy pequeños */
+            .header {
+                padding: 8px;
+            }
+            
+            .pair-btn {
+                padding: 12px 20px;
+                font-size: 11px;
+            }
+            
+            .signal-card {
+                padding: 12px 20px;
+            }
+            
+            .signal-label {
+                font-size: 9px;
+            }
+            
+            .signal-status {
+                font-size: 18px;
+            }
+            
+            .signal-time {
+                font-size: 9px;
+            }
+        }
+        
+        @media (min-width: 769px) and (max-width: 1024px) {
+            /* Tablets */
+            .pair-btn {
+                padding: 18px 35px;
+                min-width: 180px;
+            }
+            
+            .signal-card {
+                padding: 18px 35px;
+                min-width: 180px;
+            }
+            
+            .signal-status {
+                font-size: 24px;
+            }
+        }
+        
+        @media (min-width: 1441px) {
+            /* Pantallas grandes */
+            .container {
+                max-width: 2000px;
+            }
+            
+            .header {
+                gap: 25px;
+                padding: 18px 30px;
+            }
+            
+            .pair-btn {
+                padding: 24px 50px;
+                min-width: 260px;
+                font-size: 16px;
+            }
+            
+            .signal-card {
+                padding: 24px 50px;
+                min-width: 260px;
+            }
+            
+            .signal-label {
+                font-size: 15px;
+            }
+            
+            .signal-status {
+                font-size: 32px;
+            }
+            
+            .signal-time {
+                font-size: 14px;
+            }
+        }
+        
+        /* Orientación landscape en móviles */
+        @media (max-height: 500px) and (orientation: landscape) {
+            .header {
+                padding: 6px 10px;
+                gap: 8px;
+            }
+            
+            .footer {
+                padding: 4px 8px;
+            }
+            
+            .pair-btn {
+                padding: 8px 16px;
+                font-size: 11px;
+                min-width: 100px;
+            }
+            
+            .signal-card {
+                padding: 8px 16px;
+                min-width: 100px;
+            }
+            
+            .signal-label {
+                font-size: 8px;
+                margin-bottom: 4px;
+            }
+            
+            .signal-status {
+                font-size: 14px;
+                margin-bottom: 4px;
+            }
+            
+            .signal-time {
+                font-size: 8px;
+            }
+        }
+        
+        /* 🔄 LOADER MODERNO GLASSMORPHISM */
+        .loader-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.85);
+            backdrop-filter: blur(10px);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            animation: fadeIn 0.3s ease;
+        }
+        
+        .loader-overlay.active {
+            display: flex;
+        }
+        
+        .loader-content {
+            background: rgba(0, 255, 255, 0.03);
+            border: 2px solid rgba(0, 255, 255, 0.3);
+            border-radius: 30px;
+            padding: 50px 80px;
+            backdrop-filter: blur(40px);
+            text-align: center;
+            box-shadow: 
+                0 8px 40px rgba(0, 255, 255, 0.3),
+                inset 0 0 30px rgba(0, 255, 255, 0.05);
+            animation: scaleIn 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .loader-spinner {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 25px;
+            border: 4px solid rgba(0, 255, 255, 0.2);
+            border-top: 4px solid #00ffff;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            box-shadow: 
+                0 0 30px rgba(0, 255, 255, 0.6),
+                inset 0 0 20px rgba(0, 255, 255, 0.3);
+        }
+        
+        .loader-text {
+            font-size: 20px;
+            font-weight: 700;
+            color: #00ffff;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            text-shadow: 
+                0 0 20px rgba(0, 255, 255, 0.8),
+                0 0 40px rgba(0, 255, 255, 0.4);
+            animation: pulse 1.5s ease-in-out infinite;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        @keyframes scaleIn {
+            from { 
+                opacity: 0;
+                transform: scale(0.8);
+            }
+            to { 
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.6; }
+        }
+
+        /* === BOTÓN FLOTANTE MENÚ/SALIR === */
+        .stc-float-menu-btn {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 99999;
+        }
+
+        .stc-menu-btn {
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(40px);
+            border: 2px solid rgba(0, 255, 255, 0.3);
+            border-radius: 50px;
+            padding: 12px 25px;
+            color: #00ffff;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 0 30px rgba(0, 255, 255, 0.2),
+                        inset 0 0 20px rgba(0, 255, 255, 0.05);
+            transition: all 0.3s ease;
+            transform: translateZ(50px);
+            text-shadow: 0 0 10px rgba(0, 255, 255, 0.6);
+        }
+
+        .stc-menu-btn:hover {
+            background: rgba(0, 255, 255, 0.1);
+            border-color: rgba(0, 255, 255, 0.6);
+            box-shadow: 0 0 40px rgba(0, 255, 255, 0.4),
+                        inset 0 0 30px rgba(0, 255, 255, 0.1);
+            transform: translateZ(60px) scale(1.05);
+        }
+
+        .stc-menu-btn:active {
+            transform: translateZ(40px) scale(0.95);
+        }
+
+        .stc-menu-btn svg {
+            filter: drop-shadow(0 0 5px rgba(0, 255, 255, 0.5));
+        }
+
+        /* Responsive Mobile */
+        @media (max-width: 768px) {
+            .stc-float-menu-btn {
+                top: 10px;
+                right: 10px;
+            }
+            
+            .stc-menu-btn {
+                padding: 10px 20px;
+                font-size: 12px;
+                letter-spacing: 1px;
+            }
+            
+            .stc-menu-btn svg {
+                width: 16px;
+                height: 16px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .stc-menu-btn span {
+                display: none;
+            }
+            
+            .stc-menu-btn {
+                padding: 12px;
+                border-radius: 50%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 🔄 BOTÓN FLOTANTE SALIR -->
+    <div class="stc-float-menu-btn" data-action="logout">
+        <button class="stc-menu-btn" onclick="handleMenuAction()">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4M16 17l5-5-5-5M21 12H9"/>
+            </svg>
+            <span>SALIR</span>
+        </button>
+    </div>
+
+    <!-- 🔄 LOADER OVERLAY -->
+    <div class="loader-overlay" id="loaderOverlay">
+        <div class="loader-content">
+            <div class="loader-spinner"></div>
+            <div class="loader-text">CARGANDO DATOS...</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Bienvenida y Reloj Superior -->
+        <div class="welcome-header">
+            <div class="datetime-display" id="fullDateTime">
+                --
+            </div>
+            <div class="welcome-text">🚀 BIENVENIDO smarttradetecnologies-ar</div>
+        </div>
+        
+        <!-- Header de Controles -->
+        <div class="header">
+            <div class="symbol-info">
+                <span class="timeframe" id="currentTimeframeDisplay">M5</span>
+            </div>
+            
+            <!-- Selector de Timeframe -->
+            <div class="pair-selector">
+                <button class="timeframe-btn" data-timeframe="M1">M1</button>
+                <button class="timeframe-btn active" data-timeframe="M5">M5</button>
+                <button class="timeframe-btn" data-timeframe="M15">M15</button>
+            </div>
+            
+            <!-- Selector de Estrategia -->
+            <div class="pair-selector">
+                <button class="strategy-btn active" data-strategy="probabilidades">📊 SmartTrade1</button>
+                <button class="strategy-btn" data-strategy="hacha">🪓 SmartTrade2</button>
+                <button class="strategy-btn" data-strategy="tendencial">📈 TENDENCIAL</button>
+            </div>
+            
+            <!-- Selector de Pares -->
+            <div class="pair-selector">
+                <button class="pair-btn active" data-pair="EURUSD">EUR/USD</button>
+                <button class="pair-btn" data-pair="EURJPY">EUR/JPY</button>
+            </div>
+        </div>
+        
+        <div class="chart-container">
+            <div id="chart"></div>
+        </div>
+        
+        <div class="footer">
+            <div class="status-indicator">
+                <span class="status-dot" id="statusDot"></span>
+                <span id="statusText">Conectado a Twelve Data API</span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let chart = null;
+        let candlestickSeries = null;
+        let ema200Series = null; // Serie EMA 200 para TENDENCIAL TRADE
+        let emaAreaBullish = null; // Zona alcista (sobre EMA)
+        let emaAreaBearish = null; // Zona bajista (debajo EMA)
+        const TWELVE_DATA_ENDPOINT = '/api/proxy/twelvedata';
+        let lastCandleData = null; // Guardar datos de la última vela para actualizaciones tick a tick
+        let signalMarkers = []; // Almacenar señales CALL/PUT
+        let candlesData = []; // Array global de velas para mantener estado
+        const UTC_OFFSET = -4; // UTC-4 para el mercado
+        let currentLiveCandleM5 = null; // Vela M5 actual construida con ticks M1
+        let currentPair = 'EURUSD'; // Par actual seleccionado
+        let currentStrategy = 'probabilidades'; // Estrategia actual seleccionada
+        let currentTimeframe = 'M5'; // Timeframe actual seleccionado (M1, M5, M15)
+        let galeCounter = {}; // Contador de Gales por timestamp
+        
+        // ========================================
+        // FUNCIONES LOADER
+        // ========================================
+        function showLoader() {
+            const loader = document.getElementById('loaderOverlay');
+            if (loader) {
+                loader.classList.add('active');
+            }
+        }
+        
+        function hideLoader() {
+            const loader = document.getElementById('loaderOverlay');
+            if (loader) {
+                loader.classList.remove('active');
+            }
+        }
+        
+        // ========================================
+        // SISTEMA DE SONIDOS TECNOLÓGICOS
+        // ========================================
+        
+        // Audio Context para sonidos
+        const AudioContext = window.AudioContext || window.webkitAudioContext;
+        let audioCtx = null;
+        
+        // Inicializar Audio Context
+        function initAudio() {
+            if (!audioCtx) {
+                audioCtx = new AudioContext();
+            }
+        }
+        
+        // Sonido tipo iPhone - Click suave y corto
+        function playCyberClick() {
+            initAudio();
+            const oscillator = audioCtx.createOscillator();
+            const gainNode = audioCtx.createGain();
+            
+            oscillator.connect(gainNode);
+            gainNode.connect(audioCtx.destination);
+            
+            // Frecuencia tipo "tock" del iPhone (1300Hz es similar al click del teclado)
+            oscillator.frequency.setValueAtTime(1300, audioCtx.currentTime);
+            
+            // Envolvente muy corta y suave
+            gainNode.gain.setValueAtTime(0, audioCtx.currentTime);
+            gainNode.gain.linearRampToValueAtTime(0.15, audioCtx.currentTime + 0.001);
+            gainNode.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.03);
+            
+            oscillator.type = 'sine'; // Onda sinusoidal para sonido suave
+            oscillator.start(audioCtx.currentTime);
+            oscillator.stop(audioCtx.currentTime + 0.03);
+        }
+        
+        // Sonido tipo iPhone - Click ligeramente más agudo para estrategias
+        function playFuturisticBeep() {
+            initAudio();
+            const oscillator = audioCtx.createOscillator();
+            const gainNode = audioCtx.createGain();
+            
+            oscillator.connect(gainNode);
+            gainNode.connect(audioCtx.destination);
+            
+            // Frecuencia ligeramente más alta para diferenciar
+            oscillator.frequency.setValueAtTime(1500, audioCtx.currentTime);
+            
+            // Envolvente muy corta y suave
+            gainNode.gain.setValueAtTime(0, audioCtx.currentTime);
+            gainNode.gain.linearRampToValueAtTime(0.15, audioCtx.currentTime + 0.001);
+            gainNode.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.03);
+            
+            oscillator.type = 'sine';
+            oscillator.start(audioCtx.currentTime);
+            oscillator.stop(audioCtx.currentTime + 0.03);
+        }
+        
+        // Sonido de confirmación tipo iPhone
+        function playConfirmSound() {
+            initAudio();
+            const oscillator = audioCtx.createOscillator();
+            const gainNode = audioCtx.createGain();
+            
+            oscillator.connect(gainNode);
+            gainNode.connect(audioCtx.destination);
+            
+            // Doble click suave para confirmación
+            oscillator.frequency.setValueAtTime(1400, audioCtx.currentTime);
+            
+            gainNode.gain.setValueAtTime(0, audioCtx.currentTime);
+            gainNode.gain.linearRampToValueAtTime(0.12, audioCtx.currentTime + 0.001);
+            gainNode.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.04);
+            
+            oscillator.type = 'sine';
+            oscillator.start(audioCtx.currentTime);
+            oscillator.stop(audioCtx.currentTime + 0.04);
+        }
+
+        function createChart() {
+            const chartContainer = document.getElementById('chart');
+            
+            chart = LightweightCharts.createChart(chartContainer, {
+                layout: {
+                    background: { color: '#0a0e17' },
+                    textColor: '#d1d4dc',
+                },
+                grid: {
+                    vertLines: { color: '#1a1e2b' },
+                    horzLines: { color: '#1a1e2b' },
+                },
+                crosshair: {
+                    mode: LightweightCharts.CrosshairMode.Normal,
+                    vertLine: {
+                        color: '#00ffff',
+                        width: 1,
+                        style: LightweightCharts.LineStyle.Dashed,
+                    },
+                    horzLine: {
+                        color: '#00ffff',
+                        width: 1,
+                        style: LightweightCharts.LineStyle.Dashed,
+                    },
+                },
+                rightPriceScale: {
+                    borderColor: '#00ffff',
+                    scaleMargins: {
+                        top: 0.1,
+                        bottom: 0.1,
+                    },
+                },
+                timeScale: {
+                    borderColor: '#00ffff',
+                    timeVisible: true,
+                    secondsVisible: false,
+                    tickMarkFormatter: (time) => {
+                        // Mostrar en UTC-4 (New York timezone)
+                        const date = new Date(time * 1000);
+                        // Restar 4 horas para convertir UTC a UTC-4
+                        const utcMinus4 = new Date(date.getTime() - (4 * 60 * 60 * 1000));
+                        const hours = String(utcMinus4.getUTCHours()).padStart(2, '0');
+                        const minutes = String(utcMinus4.getUTCMinutes()).padStart(2, '0');
+                        return `${hours}:${minutes}`;
+                    },
+                },
+                handleScroll: {
+                    mouseWheel: true,
+                    pressedMouseMove: true,
+                },
+                handleScale: {
+                    axisPressedMouseMove: true,
+                    mouseWheel: true,
+                    pinch: true,
+                },
+            });
+
+            candlestickSeries = chart.addCandlestickSeries({
+                upColor: '#00ff88',
+                downColor: '#ff3366',
+                borderUpColor: '#00ff88',
+                borderDownColor: '#ff3366',
+                wickUpColor: '#00ff88',
+                wickDownColor: '#ff3366',
+                priceFormat: {
+                    type: 'price',
+                    precision: 6,
+                    minMove: 0.000001
+                }
+            });
+
+            // Agregar línea EMA 200 para estrategia TENDENCIAL TRADE
+            ema200Series = chart.addLineSeries({
+                color: '#00ffff',
+                lineWidth: 2,
+                lineStyle: 0, // Solid line
+                crosshairMarkerVisible: true,
+                crosshairMarkerRadius: 4,
+                crosshairMarkerBorderColor: '#00ffff',
+                crosshairMarkerBackgroundColor: '#00ffff',
+                priceLineVisible: false,
+                lastValueVisible: true,
+                title: 'EMA 200'
+            });
+
+            // Agregar zona sombreada ALCISTA (sobre EMA 200)
+            emaAreaBullish = chart.addAreaSeries({
+                topColor: 'rgba(0, 255, 255, 0.15)',
+                bottomColor: 'rgba(0, 255, 255, 0.01)',
+                lineColor: 'rgba(0, 255, 255, 0)',
+                lineWidth: 0,
+                priceLineVisible: false,
+                lastValueVisible: false,
+                crosshairMarkerVisible: false
+            });
+
+            // Agregar zona sombreada BAJISTA (debajo EMA 200)
+            emaAreaBearish = chart.addAreaSeries({
+                topColor: 'rgba(239, 83, 80, 0.15)',
+                bottomColor: 'rgba(239, 83, 80, 0.01)',
+                lineColor: 'rgba(239, 83, 80, 0)',
+                lineWidth: 0,
+                priceLineVisible: false,
+                lastValueVisible: false,
+                crosshairMarkerVisible: false
+            });
+
+            // Auto-resize
+            const resizeObserver = new ResizeObserver(entries => {
+                if (entries.length === 0 || entries[0].target !== chartContainer) {
+                    return;
+                }
+                const newRect = entries[0].contentRect;
+                chart.applyOptions({ 
+                    width: newRect.width, 
+                    height: newRect.height 
+                });
+            });
+
+            resizeObserver.observe(chartContainer);
+        }
+
+        function getCurrentM5CandleTimestamp() {
+            // Obtener timestamp actual M5 (redondear al minuto M5 más cercano)
+            const now = Math.floor(Date.now() / 1000);
+            return Math.floor(now / 300) * 300; // 300 segundos = 5 minutos
+        }
+
+        async function updateLiveCandle() {
+            try {
+                // 1. DETECTAR SI INICIÓ NUEVA VELA M5 (basado en tiempo REAL del sistema)
+                const nowMs = Date.now();
+                const nowSec = Math.floor(nowMs / 1000);
+                const currentM5Time = Math.floor(nowSec / 300) * 300; // Timestamp M5 actual
+                
+                const lastOfficialTime = candlesData.length > 0 ? candlesData[candlesData.length - 1].time : 0;
+                
+                // 2. OBTENER VELA M5 ACTUAL EN TIEMPO REAL desde IQ Option
+                const pairFormatted = currentPair === 'EURUSD' ? 'EUR/USD' : 'EUR/JPY';
+                const liveResponse = await fetch(`/api/market/live-candle/${pairFormatted.replace('/', '/')}`);
+                
+                // Si IQ Option no está disponible, usar Twelve Data como fallback
+                if (!liveResponse.ok) {
+                    const fallbackResponse = await fetch(`${TWELVE_DATA_ENDPOINT}?symbol=${pairFormatted}&interval=1min&outputsize=1`);
+                    if (!fallbackResponse.ok) return;
+                    
+                    const data = await fallbackResponse.json();
+                    if (!data.values || data.values.length === 0) return;
+                    
+                    var currentPrice = parseFloat(data.values[0].close);
+                } else {
+                    const liveData = await liveResponse.json();
+                    var currentPrice = parseFloat(liveData.close);
+                }
+                
+                // Hora actual en UTC-4 para logs
+                const utcMinus4 = new Date(Date.now() - (4 * 60 * 60 * 1000));
+                const timeStr = `${String(utcMinus4.getUTCHours()).padStart(2,'0')}:${String(utcMinus4.getUTCMinutes()).padStart(2,'0')}:${String(utcMinus4.getUTCSeconds()).padStart(2,'0')}`;
+                
+                // 3. SI ES NUEVA VELA M5 → CREARLA INMEDIATAMENTE
+                if (currentM5Time > lastOfficialTime) {
+                    console.log(`\n🔥 NUEVA VELA M5 → ${currentM5Time} (anterior: ${lastOfficialTime})`);
+                    
+                    const newCandle = {
+                        time: Math.floor(currentM5Time), // IMPORTANTE: Asegurar que sea entero
+                        open: parseFloat(currentPrice),
+                        high: parseFloat(currentPrice),
+                        low: parseFloat(currentPrice),
+                        close: parseFloat(currentPrice)
+                    };
+                    
+                    // ✅ Solo AGREGAR la nueva vela, NO recargar todo el gráfico
+                    candlesData.push(newCandle);
+                    lastCandleData = {
+                        time: Math.floor(currentM5Time),
+                        open: parseFloat(currentPrice),
+                        high: parseFloat(currentPrice),
+                        low: parseFloat(currentPrice),
+                        close: parseFloat(currentPrice)
+                    };
+                    currentLiveCandleM5 = {
+                        time: Math.floor(currentM5Time),
+                        open: parseFloat(currentPrice),
+                        high: parseFloat(currentPrice),
+                        low: parseFloat(currentPrice),
+                        close: parseFloat(currentPrice)
+                    };
+                    
+                    // Usar update() en lugar de setData() para evitar saltos
+                    candlestickSeries.update(newCandle);
+                    
+                } else if (currentM5Time === lastOfficialTime) {
+                    // 4. ACTUALIZAR VELA M5 ACTUAL con ticks
+                    if (lastCandleData && typeof lastCandleData.time === 'number') {
+                        const updatedCandle = {
+                            time: Math.floor(lastCandleData.time), // Asegurar que sea entero
+                            open: parseFloat(lastCandleData.open),
+                            high: Math.max(parseFloat(lastCandleData.high), currentPrice),
+                            low: Math.min(parseFloat(lastCandleData.low), currentPrice),
+                            close: currentPrice
+                        };
+                        
+                        candlestickSeries.update(updatedCandle);
+                        lastCandleData = {
+                            time: Math.floor(lastCandleData.time),
+                            open: parseFloat(lastCandleData.open),
+                            high: Math.max(parseFloat(lastCandleData.high), currentPrice),
+                            low: Math.min(parseFloat(lastCandleData.low), currentPrice),
+                            close: currentPrice
+                        };
+                        
+                        // Actualizar en el array
+                        if (candlesData.length > 0) {
+                            candlesData[candlesData.length - 1] = {...updatedCandle};
+                        }
+                        
+                        // Log cada 10 segundos para no saturar consola
+                        if (nowSec % 10 === 0) {
+                            console.log(`🔄 ${timeStr} | Actualizando M5 @ ${currentM5Time} | C:${currentPrice.toFixed(6)} H:${updatedCandle.high.toFixed(6)} L:${updatedCandle.low.toFixed(6)}`);
+                        }
+                    }
+                }
+                
+                // Precio eliminado del display
+                
+            } catch (error) {
+                console.error('❌ Error en updateLiveCandle:', error);
+            }
+        }
+
+        // ========================================
+        // CÁLCULO DE EMA 200 (Exponential Moving Average)
+        // ========================================
+        function calculateEMA(data, period) {
+            if (!data || data.length < period) return [];
+            
+            const emaValues = [];
+            const multiplier = 2 / (period + 1);
+            
+            // Calcular SMA inicial (Simple Moving Average)
+            let sum = 0;
+            for (let i = 0; i < period; i++) {
+                sum += data[i].close;
+            }
+            const sma = sum / period;
+            emaValues.push({ time: data[period - 1].time, value: sma });
+            
+            // Calcular EMA subsiguientes
+            let ema = sma;
+            for (let i = period; i < data.length; i++) {
+                ema = (data[i].close - ema) * multiplier + ema;
+                emaValues.push({ time: data[i].time, value: ema });
+            }
+            
+            return emaValues;
+        }
+
+        // ========================================
+        // ACTUALIZAR EMA 200 Y ZONAS GLASSMORPHISM
+        // ========================================
+        function updateEMA200AndZones(candles) {
+            if (!ema200Series || !emaAreaBullish || !emaAreaBearish) return;
+            if (candles.length < 200) return;
+            
+            // Calcular EMA 200
+            const ema200Data = calculateEMA(candles, 200);
+            
+            // Actualizar línea EMA 200
+            ema200Series.setData(ema200Data);
+            
+            // Crear zonas glassmorphism dinámicas
+            const bullishZone = [];
+            const bearishZone = [];
+            
+            for (let i = 0; i < candles.length; i++) {
+                const candle = candles[i];
+                const emaIndex = ema200Data.findIndex(e => e.time === candle.time);
+                
+                if (emaIndex !== -1) {
+                    const emaValue = ema200Data[emaIndex].value;
+                    const priceClose = candle.close;
+                    
+                    // Zona ALCISTA (precio > EMA): área desde EMA hasta el máximo del precio
+                    if (priceClose > emaValue) {
+                        bullishZone.push({
+                            time: candle.time,
+                            value: Math.max(candle.high, priceClose)
+                        });
+                        bearishZone.push({
+                            time: candle.time,
+                            value: emaValue
+                        });
+                    }
+                    // Zona BAJISTA (precio < EMA): área desde el mínimo del precio hasta EMA
+                    else {
+                        bearishZone.push({
+                            time: candle.time,
+                            value: emaValue
+                        });
+                        bullishZone.push({
+                            time: candle.time,
+                            value: Math.min(candle.low, priceClose)
+                        });
+                    }
+                }
+            }
+            
+            // Actualizar zonas
+            emaAreaBullish.setData(bullishZone);
+            emaAreaBearish.setData(bearishZone);
+            
+            console.log(`📈 EMA 200 actualizada con ${ema200Data.length} puntos`);
+        }
+
+        // ✅ FUNCIÓN DE NORMALIZACIÓN - Unifica todos los formatos de timestamp
+        function normalizeCandles(rawCandles) {
+            const candleMap = new Map();
+            
+            rawCandles.forEach((candle) => {
+                let timestamp;
+                
+                // Detectar y convertir diferentes formatos a epoch seconds
+                if (typeof candle.time === 'string') {
+                    // ISO string: "2025-10-22 01:50:00" o "2025-10-22T01:50:00Z"
+                    const dateStr = candle.time.includes('T') ? candle.time : candle.time.replace(' ', 'T') + 'Z';
+                    timestamp = Math.floor(new Date(dateStr).getTime() / 1000);
+                } else if (candle.time > 1e10) {
+                    // Milliseconds - convertir a seconds
+                    timestamp = Math.floor(candle.time / 1000);
+                } else {
+                    // Ya está en seconds
+                    timestamp = Math.floor(candle.time);
+                }
+                
+                // Eliminar duplicados - el Map mantiene solo el último valor por timestamp
+                candleMap.set(timestamp, {
+                    time: timestamp,
+                    open: parseFloat(candle.open),
+                    high: parseFloat(candle.high),
+                    low: parseFloat(candle.low),
+                    close: parseFloat(candle.close)
+                });
+            });
+            
+            // Convertir Map a array y ordenar
+            const normalized = Array.from(candleMap.values()).sort((a, b) => a.time - b.time);
+            
+            // Debug: mostrar primeras y últimas 3 velas para verificar orden
+            if (normalized.length >= 6) {
+                console.log('🔍 Primeras 3 velas:', normalized.slice(0, 3).map(c => c.time));
+                console.log('🔍 Últimas 3 velas:', normalized.slice(-3).map(c => c.time));
+            }
+            
+            return normalized;
+        }
+
+        // Convertir timeframe a interval para Twelve Data API
+        function timeframeToInterval(timeframe) {
+            const mapping = {
+                'M1': '1min',
+                'M5': '5min',
+                'M15': '15min'
+            };
+            return mapping[timeframe] || '5min';
+        }
+        
+        // Convertir timeframe a segundos para cálculos
+        function timeframeToSeconds(timeframe) {
+            const mapping = {
+                'M1': 60,
+                'M5': 300,
+                'M15': 900
+            };
+            return mapping[timeframe] || 300;
+        }
+
+        async function loadCandles(pair = 'EURUSD', timeframe = 'M5') {
+            try {
+                // Actualizar par y timeframe actuales
+                currentPair = pair;
+                currentTimeframe = timeframe;
+                const pairFormatted = pair === 'EURUSD' ? 'EUR/USD' : 'EUR/JPY';
+                const interval = timeframeToInterval(timeframe);
+                const intervalSec = timeframeToSeconds(timeframe);
+                
+                // Obtener datos primero ANTES de limpiar el gráfico
+                
+                console.log(`🔄 Cargando velas de ${pairFormatted} ${timeframe}...`);
+                
+                // Actualizar display del timeframe
+                const displayEl = document.getElementById('currentTimeframeDisplay');
+                if (displayEl) displayEl.textContent = timeframe;
+                
+                // Actualizar título del documento
+                document.title = `${pairFormatted} ${timeframe} - smarttradetecnologies-ar`;
+                
+                // 1. CARGAR 300 VELAS HISTÓRICAS para contexto y señales (necesario para EMA 200)
+                const response = await fetch(`${TWELVE_DATA_ENDPOINT}?symbol=${pairFormatted}&interval=${interval}&outputsize=300`);
+                
+                if (!response.ok) {
+                    throw new Error(`HTTP ${response.status}`);
+                }
+                
+                const data = await response.json();
+                
+                if (!data.values || data.values.length === 0) {
+                    throw new Error('No hay datos disponibles');
+                }
+                
+                // Convertir al formato de Lightweight Charts
+                const historicalCandles = data.values.map((candle) => {
+                    const dateStr = candle.datetime.replace(' ', 'T') + 'Z';
+                    const timestamp = Math.floor(new Date(dateStr).getTime() / 1000);
+                    
+                    return {
+                        time: timestamp,
+                        open: parseFloat(candle.open),
+                        high: parseFloat(candle.high),
+                        low: parseFloat(candle.low),
+                        close: parseFloat(candle.close)
+                    };
+                });
+                
+                // ✅ CORRECCIÓN AUTOMÁTICA DE DESFASE
+                // Twelve Data puede tener timestamps adelantados, vamos a corregirlos
+                if (historicalCandles.length > 0) {
+                    const lastTwelveDataTime = historicalCandles[historicalCandles.length - 1].time;
+                    const nowSec = Math.floor(Date.now() / 1000);
+                    const currentCandleTime = Math.floor(nowSec / intervalSec) * intervalSec;
+                    const timeOffset = lastTwelveDataTime - currentCandleTime;
+                    
+                    // Si el desfase es mayor a 1 minuto, aplicar corrección
+                    if (Math.abs(timeOffset) > 60) {
+                        console.log(`⚠️ Desfase detectado: ${Math.floor(timeOffset / 60)} minutos. Corrigiendo...`);
+                        
+                        // Corregir todos los timestamps
+                        historicalCandles.forEach(candle => {
+                            candle.time -= timeOffset;
+                        });
+                        
+                        console.log(`✅ Timestamps corregidos a tiempo real`);
+                    }
+                }
+                
+                // ✅ NORMALIZAR velas históricas
+                const normalizedHistorical = normalizeCandles(historicalCandles);
+                
+                // 2. GENERAR VELAS ACTUALES desde la última histórica hasta AHORA (INCLUYENDO vela en progreso)
+                const nowSec = Math.floor(Date.now() / 1000);
+                const currentCandleTime = Math.floor(nowSec / intervalSec) * intervalSec; // Timestamp actual del timeframe
+                const lastHistoricalTime = normalizedHistorical.length > 0 ? normalizedHistorical[normalizedHistorical.length - 1].time : (currentCandleTime - 6000);
+                
+                // Obtener precio actual para generar velas
+                const liveResponse = await fetch(`/api/market/live-candle/${pairFormatted.replace('/', '/')}`);
+                let currentPrice = pair === 'EURUSD' ? 1.163000 : 163.500; // Precio default según par
+                if (liveResponse.ok) {
+                    const liveData = await liveResponse.json();
+                    currentPrice = parseFloat(liveData.close);
+                }
+                
+                // ✅ Generar velas vacías desde la última histórica HASTA e INCLUYENDO la vela actual
+                const realtimeCandles = [];
+                
+                // Si hay gap entre última histórica y vela actual, rellenar con velas intermedias
+                for (let t = lastHistoricalTime + intervalSec; t < currentCandleTime; t += intervalSec) {
+                    realtimeCandles.push({
+                        time: t,
+                        open: currentPrice,
+                        high: currentPrice,
+                        low: currentPrice,
+                        close: currentPrice
+                    });
+                }
+                
+                // ✅ AGREGAR LA VELA ACTUAL (la que está en progreso AHORA)
+                realtimeCandles.push({
+                    time: currentCandleTime,
+                    open: currentPrice,
+                    high: currentPrice,
+                    low: currentPrice,
+                    close: currentPrice
+                });
+                
+                console.log(`📊 Vela actual en tiempo real: ${new Date(currentCandleTime * 1000).toISOString()} - Precio: ${currentPrice}`);
+                
+                // 3. COMBINAR: velas históricas + velas actuales en tiempo real
+                const candles = normalizeCandles([...normalizedHistorical, ...realtimeCandles]);
+                
+                console.log(`✅ ${normalizedHistorical.length} velas históricas + ${realtimeCandles.length} velas actuales`);
+                console.log('📊 Primera vela:', candles[0]);
+                console.log('📊 Última vela (ACTUAL):', candles[candles.length - 1]);
+                
+                // ✅ AHORA SÍ limpiar y guardar nuevas velas (después de obtener los datos)
+                candlesData = candles;
+                
+                // Actualizar el gráfico
+                if (candlestickSeries) {
+                    candlestickSeries.setData(candles);
+                    // Guardar la última vela para actualizaciones tick a tick
+                    lastCandleData = {...candles[candles.length - 1]};
+                    
+                    // Actualizar EMA 200 y zonas glassmorphism
+                    updateEMA200AndZones(candles);
+                    
+                    // Generar y mostrar señales CALL/PUT según estrategia seleccionada
+                    if (currentStrategy === 'hacha') {
+                        generateSignalsHacha(candles);
+                    } else if (currentStrategy === 'tendencial') {
+                        generateSignalsTendencial(candles);
+                    } else {
+                        generateSignals(candles);
+                    }
+                }
+                
+                // Actualizar precio actual con corrección
+                // NOTA: Twelve Data tiene timestamps en el futuro (+10h) y precios desfasados
+                // Vamos a calcular el precio real aproximado basado en la tendencia
+                
+                const latestCandle = candles[candles.length - 1];
+                const prevCandle = candles[candles.length - 2];
+                
+                // Precios eliminados del display
+                
+                console.log(`✅ ${candles.length} velas cargadas`);
+                
+                // ✅ OCULTAR LOADER cuando todo está listo
+                hideLoader();
+                
+                return candles;
+                
+            } catch (error) {
+                console.error('❌ Error:', error);
+                document.getElementById('statusText').textContent = 'Error de conexión';
+                
+                // ✅ OCULTAR LOADER también en caso de error
+                hideLoader();
+                
+                return [];
+            }
+        }
+
+        // ========== FUNCIONES AUXILIARES ESTRATEGIA HACHA ==========
+        
+        // Contar velas verdes consecutivas previas
+        function hasConsecutiveGreen(candles, index, minCount) {
+            let count = 0;
+            let i = index - 1;
+            while (i >= 0 && candles[i].close > candles[i].open) {
+                count++;
+                i--;
+                if (count >= minCount) break;
+            }
+            return count >= minCount;
+        }
+        
+        // Contar velas rojas consecutivas previas
+        function hasConsecutiveRed(candles, index, minCount) {
+            let count = 0;
+            let i = index - 1;
+            while (i >= 0 && candles[i].close < candles[i].open) {
+                count++;
+                i--;
+                if (count >= minCount) break;
+            }
+            return count >= minCount;
+        }
+        
+        // Calcular SMA (Simple Moving Average)
+        function calculateSMA(candles, period, index) {
+            if (index < period - 1) return null;
+            
+            let sum = 0;
+            for (let i = index - period + 1; i <= index; i++) {
+                sum += candles[i].close;
+            }
+            return sum / period;
+        }
+        
+        // ========== ESTRATEGIA HACHA (3 PATRONES) ==========
+        
+        function generateSignalsHacha(candles) {
+            if (!candlestickSeries || candles.length < 50) return;
+            
+            const markers = [];
+            const minGreenPattern1 = 2; // Pattern 1: Min green candles
+            const minRedPattern2 = 2; // Pattern 2: Min red candles
+            const smaPeriod = 50; // Pattern 3: SMA period (ajustado para 100 velas)
+            
+            // Recorrer desde la vela 50 en adelante (necesitamos SMA 50)
+            for (let i = smaPeriod; i < candles.length; i++) {
+                const current = candles[i];
+                const prev1 = candles[i - 1];
+                const prev2 = candles[i - 2];
+                const prev3 = candles[i - 3];
+                const prev4 = candles[i - 4];
+                
+                // ========== PATTERN 1: Reversión Bajista (PUT) ==========
+                // Detecta: X velas verdes consecutivas + vela actual roja
+                const pattern1_hasGreen = hasConsecutiveGreen(candles, i, minGreenPattern1);
+                const pattern1_currentRed = current.close < current.open;
+                
+                if (pattern1_hasGreen && pattern1_currentRed) {
+                    markers.push({
+                        time: current.time,
+                        position: 'aboveBar',
+                        color: '#ef5350',
+                        shape: 'arrowDown',
+                        text: 'PUT'
+                    });
+                }
+                
+                // ========== PATTERN 2: Fin de Impulso Bajista (CALL) ==========
+                // Detecta: X velas rojas + mecha inferior creciente + vela verde
+                const pattern2_hasRed = hasConsecutiveRed(candles, i, minRedPattern2);
+                const pattern2_wickLast = Math.min(prev1.open, prev1.close) - prev1.low;
+                const pattern2_wickPenultimate = Math.min(prev2.open, prev2.close) - prev2.low;
+                const pattern2_currentGreen = current.close > current.open;
+                const pattern2_openAbovePrevClose = current.open > prev1.close;
+                
+                if (pattern2_hasRed && pattern2_wickLast > pattern2_wickPenultimate && 
+                    pattern2_currentGreen && pattern2_openAbovePrevClose) {
+                    markers.push({
+                        time: current.time,
+                        position: 'belowBar',
+                        color: '#26a69a',
+                        shape: 'arrowUp',
+                        text: 'CALL'
+                    });
+                }
+                
+                // ========== PATTERN 3: SMA 200 + Secuencia de Velas ==========
+                const sma200 = calculateSMA(candles, smaPeriod, i);
+                if (sma200 === null) continue;
+                
+                const isRedCandle = current.close < current.open;
+                const isGreenCandle = current.close > current.open;
+                const notRedCandle = !(prev4.close < prev4.open);
+                const notGreenCandle = !(prev4.close > prev4.open);
+                const threeRedCandles = prev3.close < prev3.open && 
+                                       prev2.close < prev2.open && 
+                                       prev1.close < prev1.open;
+                const threeGreenCandles = prev3.close > prev3.open && 
+                                         prev2.close > prev2.open && 
+                                         prev1.close > prev1.open;
+                
+                // Pattern 3 Buy Signal
+                const pattern3_buy = notRedCandle && threeRedCandles && 
+                                    isGreenCandle && current.close > sma200;
+                
+                // Pattern 3 Sell Signal
+                const pattern3_sell = notGreenCandle && threeGreenCandles && 
+                                     isRedCandle && current.close < sma200;
+                
+                if (pattern3_buy) {
+                    markers.push({
+                        time: current.time,
+                        position: 'belowBar',
+                        color: '#26a69a',
+                        shape: 'arrowUp',
+                        text: 'CALL'
+                    });
+                }
+                
+                if (pattern3_sell) {
+                    markers.push({
+                        time: current.time,
+                        position: 'aboveBar',
+                        color: '#ef5350',
+                        shape: 'arrowDown',
+                        text: 'PUT'
+                    });
+                }
+            }
+            
+            // Aplicar los marcadores al gráfico
+            candlestickSeries.setMarkers(markers);
+            signalMarkers = markers;
+            
+            console.log(`🪓 ${markers.length} señales generadas (Estrategia Hacha: 3 Patrones)`);
+        }
+        
+        // ========== ESTRATEGIA DE PROBABILIDADES (ORIGINAL) ==========
+        
+        function generateSignals(candles) {
+            if (!candlestickSeries || candles.length < 50) return;
+            
+            const markers = [];
+            const ventana_analisis = 50; // Analizar últimas 50 velas para cada señal
+            
+            // Recorrer desde la vela 50 en adelante (necesitamos historial previo)
+            for (let i = ventana_analisis; i < candles.length; i++) {
+                // Analizar las últimas 50 velas ANTES de la vela actual
+                const startIdx = i - ventana_analisis;
+                const endIdx = i;
+                
+                let alcistas = 0;
+                let bajistas = 0;
+                let neutras = 0;
+                let martillos = 0;
+                let racha_alcista = 0;
+                
+                // Calcular probabilidades sobre las 50 velas previas
+                for (let j = startIdx; j < endIdx; j++) {
+                    const c = candles[j];
+                    
+                    // Contar velas alcistas/bajistas/neutras
+                    if (c.close > c.open) alcistas++;
+                    else if (c.close < c.open) bajistas++;
+                    else neutras++;
+                    
+                    // Detectar martillos
+                    const cuerpo = Math.abs(c.close - c.open);
+                    const mecha_inf = Math.min(c.open, c.close) - c.low;
+                    const mecha_sup = c.high - Math.max(c.open, c.close);
+                    const rango_total = c.high - c.low;
+                    const es_martillo = cuerpo < rango_total * 0.3 && 
+                                       mecha_inf > cuerpo * 2 && 
+                                       mecha_sup < cuerpo;
+                    if (es_martillo) martillos++;
+                    
+                    // Detectar racha alcista x3
+                    if (j >= startIdx + 2) {
+                        const c1 = candles[j];
+                        const c2 = candles[j-1];
+                        const c3 = candles[j-2];
+                        if (c1.close > c1.open && c2.close > c2.open && c3.close > c3.open) {
+                            racha_alcista++;
+                        }
+                    }
+                }
+                
+                const total_velas = endIdx - startIdx;
+                
+                // Calcular porcentajes
+                const p_alcista = alcistas / total_velas;
+                const p_bajista = bajistas / total_velas;
+                const p_neutra = neutras / total_velas;
+                const p_martillo = martillos / total_velas;
+                const p_racha_alcista = racha_alcista / (total_velas - 2);
+                
+                // Determinar la situación con mayor probabilidad
+                const probs = {
+                    'Alcista': p_alcista,
+                    'Bajista': p_bajista,
+                    'Neutra': p_neutra,
+                    'Martillo': p_martillo,
+                    'Racha Alcista x3': p_racha_alcista
+                };
+                
+                let max_name = 'Alcista';
+                let max_val = p_alcista;
+                
+                for (const [name, val] of Object.entries(probs)) {
+                    if (val > max_val) {
+                        max_val = val;
+                        max_name = name;
+                    }
+                }
+                
+                // La vela actual (donde generamos la señal)
+                const current = candles[i];
+                
+                // ✅ ESTRATEGIA EXACTA DEL PINE SCRIPT:
+                // compra = max_name == "Alcista" and close > open
+                // venta  = max_name == "Bajista" and close < open
+                
+                const compra = max_name === "Alcista" && current.close > current.open;
+                const venta = max_name === "Bajista" && current.close < current.open;
+                
+                if (compra) {
+                    markers.push({
+                        time: current.time,
+                        position: 'belowBar',
+                        color: '#26a69a',
+                        shape: 'arrowUp',
+                        text: 'CALL'
+                    });
+                }
+                
+                if (venta) {
+                    markers.push({
+                        time: current.time,
+                        position: 'aboveBar',
+                        color: '#ef5350',
+                        shape: 'arrowDown',
+                        text: 'PUT'
+                    });
+                }
+            }
+            
+            // Aplicar los marcadores al gráfico
+            candlestickSeries.setMarkers(markers);
+            signalMarkers = markers;
+            
+            console.log(`🎯 ${markers.length} señales CALL/PUT generadas (Estrategia: Análisis de Probabilidades)`);
+        }
+
+        // ========== ESTRATEGIA TENDENCIAL TRADE (EMA 200 + VELAS) ==========
+        
+        function generateSignalsTendencial(candles) {
+            if (!candlestickSeries || candles.length < 200) return;
+            
+            const markers = [];
+            galeCounter = {}; // Resetear contador de Gales
+            
+            // Calcular EMA 200
+            const ema200Data = calculateEMA(candles, 200);
+            if (ema200Data.length === 0) return;
+            
+            // Variables para rastrear Martingala
+            let lastSignal = null;
+            let galeLevel = 0;
+            
+            // Analizar velas y generar señales
+            for (let i = 200; i < candles.length; i++) {
+                const current = candles[i];
+                const prev = candles[i - 1];
+                
+                // Obtener valor de EMA 200 para esta vela
+                const emaIndex = ema200Data.findIndex(e => e.time === current.time);
+                if (emaIndex === -1) continue;
+                
+                const emaValue = ema200Data[emaIndex].value;
+                
+                // Detectar tipo de vela
+                const isGreen = current.close > current.open;
+                const isRed = current.close < current.open;
+                
+                // Verificar posición respecto a EMA
+                const priceAboveEMA = current.close > emaValue;
+                const priceBelowEMA = current.close < emaValue;
+                
+                // Variables para resultado
+                let result = null;
+                
+                // Verificar si la vela anterior cumplía las condiciones
+                if (i > 200) {
+                    const prevEmaIndex = ema200Data.findIndex(e => e.time === prev.time);
+                    if (prevEmaIndex !== -1) {
+                        const prevEmaValue = ema200Data[prevEmaIndex].value;
+                        const prevWasGreen = prev.close > prev.open;
+                        const prevWasRed = prev.close < prev.open;
+                        const prevAboveEMA = prev.close > prevEmaValue;
+                        const prevBelowEMA = prev.close < prevEmaValue;
+                        
+                        // Verificar resultado de señal anterior
+                        if (lastSignal === 'CALL' && prevAboveEMA) {
+                            result = isGreen ? 'WIN' : 'LOSS';
+                        } else if (lastSignal === 'PUT' && prevBelowEMA) {
+                            result = isRed ? 'WIN' : 'LOSS';
+                        }
+                        
+                        // Actualizar nivel de Gale
+                        if (result === 'WIN') {
+                            galeLevel = 0; // Resetear Gale
+                        } else if (result === 'LOSS') {
+                            galeLevel++; // Incrementar Gale
+                        }
+                    }
+                }
+                
+                // Generar señal CALL (vela verde + precio > EMA)
+                if (isGreen && priceAboveEMA) {
+                    const markerText = galeLevel > 0 ? `G${galeLevel}` : 'CALL';
+                    
+                    markers.push({
+                        time: current.time,
+                        position: 'belowBar',
+                        color: '#26a69a',
+                        shape: 'arrowUp',
+                        text: markerText
+                    });
+                    
+                    lastSignal = 'CALL';
+                    
+                    // Si es WIN, resetear Gale
+                    if (result === 'WIN') {
+                        galeLevel = 0;
+                    }
+                }
+                // Generar señal PUT (vela roja + precio < EMA)
+                else if (isRed && priceBelowEMA) {
+                    const markerText = galeLevel > 0 ? `G${galeLevel}` : 'PUT';
+                    
+                    markers.push({
+                        time: current.time,
+                        position: 'aboveBar',
+                        color: '#ef5350',
+                        shape: 'arrowDown',
+                        text: markerText
+                    });
+                    
+                    lastSignal = 'PUT';
+                    
+                    // Si es WIN, resetear Gale
+                    if (result === 'WIN') {
+                        galeLevel = 0;
+                    }
+                }
+            }
+            
+            // Aplicar los marcadores al gráfico
+            candlestickSeries.setMarkers(markers);
+            signalMarkers = markers;
+            
+            console.log(`📈 ${markers.length} señales TENDENCIAL TRADE generadas (EMA 200 + Velas con Gales)`);
+        }
+
+        async function refreshM5Candles() {
+            try {
+                const response = await fetch(`/api/public/candles?symbol=EURUSD&timeframe=M5&limit=300&source=twelvedata&_t=${Date.now()}`);
+                
+                if (!response.ok) return;
+                
+                const candlesFromDB = await response.json();
+                if (!candlesFromDB || candlesFromDB.length === 0) return;
+                
+                // ✅ NORMALIZAR: elimina duplicados, unifica formatos y ordena
+                const freshCandles = normalizeCandles(candlesFromDB);
+                
+                // Verificar si hay NUEVAS velas comparando timestamps
+                const lastCurrentTime = candlesData.length > 0 ? candlesData[candlesData.length - 1].time : 0;
+                const lastFreshTime = freshCandles.length > 0 ? freshCandles[freshCandles.length - 1].time : 0;
+                
+                // ⚠️ SOLO recargar si hay NUEVAS velas REALES
+                if (lastFreshTime > lastCurrentTime) {
+                    console.log(`🔥 BD: Nueva vela ${lastFreshTime} detectada, recargando gráfico...`);
+                    
+                    candlesData = freshCandles;
+                    candlestickSeries.setData(candlesData);
+                    lastCandleData = {...candlesData[candlesData.length - 1]};
+                    
+                    // Actualizar EMA 200 y zonas glassmorphism
+                    updateEMA200AndZones(candlesData);
+                    
+                    // Generar señales con estrategia seleccionada
+                    if (currentStrategy === 'hacha') {
+                        generateSignalsHacha(candlesData);
+                    } else if (currentStrategy === 'tendencial') {
+                        generateSignalsTendencial(candlesData);
+                    } else {
+                        generateSignals(candlesData);
+                    }
+                }
+                // ✅ NO hacer nada si no hay velas nuevas (evita saltos)
+                
+            } catch (error) {
+                console.error('❌ Error en refreshM5Candles:', error);
+            }
+        }
+
+        // Actualizar reloj en tiempo real (todo junto)
+        function updateDateTime() {
+            const now = new Date();
+            
+            // Fecha
+            const year = now.getFullYear();
+            const month = String(now.getMonth() + 1).padStart(2, '0');
+            const day = String(now.getDate()).padStart(2, '0');
+            
+            // Hora:Minuto:Segundo
+            const hours = String(now.getHours()).padStart(2, '0');
+            const minutes = String(now.getMinutes()).padStart(2, '0');
+            const seconds = String(now.getSeconds()).padStart(2, '0');
+            
+            // Milisegundos
+            const ms = String(now.getMilliseconds()).padStart(3, '0');
+            
+            // Todo junto: FECHA: 2025-10-21 HORA: 22:39:34 MS: 720
+            document.getElementById('fullDateTime').textContent = 
+                `FECHA: ${year}-${month}-${day}  HORA: ${hours}:${minutes}:${seconds}  MS: ${ms}`;
+        }
+
+        async function init() {
+            console.log('🚀 Iniciando gráfico profesional con Lightweight Charts (TradingView)...');
+            
+            createChart();
+            
+            // Cargar velas iniciales con timeframe M5 por defecto
+            await loadCandles('EURUSD', 'M5');
+            
+            // Actualizar última vela en tiempo real cada 2 segundos (tick a tick como TradingView)
+            setInterval(async () => {
+                const dot = document.getElementById('statusDot');
+                dot.classList.add('updating');
+                await updateLiveCandle();
+                setTimeout(() => dot.classList.remove('updating'), 400);
+            }, 2000);
+            
+            // ⚠️ DESACTIVADO TEMPORALMENTE - La BD tiene velas antiguas
+            // La BD solo tiene hasta 11:25, no tiene velas actuales
+            // Por ahora usamos SOLO TwelveData API en tiempo real
+            
+            // setInterval(async () => {
+            //     await refreshM5Candles();
+            // }, 10000);
+            
+            // Actualizar reloj en tiempo real
+            updateDateTime();
+            setInterval(updateDateTime, 10); // Actualizar cada 10ms para mostrar milisegundos
+            
+            // Selector de Timeframe
+            setupTimeframeSelector();
+            
+            // Selector de Estrategia
+            setupStrategySelector();
+            
+            // Selector de Pares
+            setupPairSelector();
+            
+            // Actualizar señales en vivo
+            updateLiveSignals();
+            setInterval(updateLiveSignals, 2000);
+        }
+        
+        // Configurar selector de estrategia
+        function setupStrategySelector() {
+            const buttons = document.querySelectorAll('.strategy-btn');
+            buttons.forEach(btn => {
+                btn.addEventListener('click', async () => {
+                    // 🔊 SONIDO: Beep Futurista para cambio de estrategia
+                    playFuturisticBeep();
+                    
+                    const strategy = btn.dataset.strategy;
+                    
+                    // Cambiar botón activo
+                    buttons.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    
+                    // Actualizar estrategia global
+                    currentStrategy = strategy;
+                    
+                    const strategyNames = {
+                        'hacha': '🪓 SmartTrade2',
+                        'probabilidades': '📊 SmartTrade1',
+                        'tendencial': '📈 TENDENCIAL TRADE'
+                    };
+                    const strategyName = strategyNames[strategy] || '📊 SmartTrade1';
+                    console.log(`🔄 Cambiando a estrategia: ${strategyName}`);
+                    
+                    // Regenerar señales con nueva estrategia
+                    if (candlesData && candlesData.length > 0) {
+                        // Actualizar EMA 200 y zonas
+                        updateEMA200AndZones(candlesData);
+                        
+                        if (currentStrategy === 'hacha') {
+                            generateSignalsHacha(candlesData);
+                        } else if (currentStrategy === 'tendencial') {
+                            generateSignalsTendencial(candlesData);
+                        } else {
+                            generateSignals(candlesData);
+                        }
+                    }
+                });
+            });
+        }
+        
+        // Configurar selector de timeframe
+        function setupTimeframeSelector() {
+            const buttons = document.querySelectorAll('.timeframe-btn');
+            buttons.forEach(btn => {
+                btn.addEventListener('click', async () => {
+                    // 🔊 SONIDO: Click Cyber tipo iPhone
+                    playCyberClick();
+                    
+                    const timeframe = btn.dataset.timeframe;
+                    
+                    // Cambiar botón activo
+                    buttons.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    
+                    console.log(`🔄 Cambiando a timeframe ${timeframe}...`);
+                    
+                    // 🔄 MOSTRAR LOADER
+                    showLoader();
+                    
+                    // Limpiar gráfico y señales
+                    signalMarkers = [];
+                    if (candlestickSeries) {
+                        candlestickSeries.setData([]); // Limpia visual del gráfico
+                    }
+                    
+                    // Recargar datos con nuevo timeframe
+                    await loadCandles(currentPair, timeframe);
+                });
+            });
+        }
+        
+        // Configurar selector de pares
+        function setupPairSelector() {
+            const buttons = document.querySelectorAll('.pair-btn');
+            buttons.forEach(btn => {
+                btn.addEventListener('click', async () => {
+                    // 🔊 SONIDO: Click Cyber para cambio de par
+                    playCyberClick();
+                    
+                    const pair = btn.dataset.pair;
+                    
+                    // Cambiar botón activo
+                    buttons.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    
+                    const symbolText = pair === 'EURUSD' ? 'EUR/USD' : 'EUR/JPY';
+                    console.log(`🔄 Cambiando a ${symbolText}...`);
+                    
+                    // 🔄 MOSTRAR LOADER
+                    showLoader();
+                    
+                    // ✅ SOLUCIÓN: Limpiar GRÁFICO visual, pero mantener datos hasta que carguen nuevos
+                    signalMarkers = [];
+                    if (candlestickSeries) {
+                        candlestickSeries.setData([]); // Limpia visual del gráfico
+                    }
+                    
+                    // Recargar datos para el nuevo par con timeframe actual
+                    await loadCandles(pair, currentTimeframe);
+                });
+            });
+        }
+        
+        // Actualizar señales en vivo
+        function updateLiveSignals() {
+            if (!signalMarkers || signalMarkers.length === 0) return;
+            
+            // Obtener las últimas 5 señales
+            const recentSignals = signalMarkers.slice(-5);
+            
+            // Buscar última señal CALL
+            const lastCall = recentSignals.reverse().find(m => m.text === 'CALL');
+            // Buscar última señal PUT
+            const lastPut = recentSignals.find(m => m.text === 'PUT');
+            
+            // Señales mostradas directamente en el gráfico (sin botones de UI)
+        }
+
+        // Iniciar cuando la página cargue
+        window.addEventListener('DOMContentLoaded', init);
+    </script>
+    
+    <!-- PWA Service Worker Registration -->
+    <script>
+        // Registrar Service Worker para PWA
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/static/sw.js')
+                    .then((registration) => {
+                        console.log('✅ PWA Service Worker registrado:', registration.scope);
+                        
+                        // Actualizar automáticamente cuando hay nueva versión
+                        registration.addEventListener('updatefound', () => {
+                            const newWorker = registration.installing;
+                            newWorker.addEventListener('statechange', () => {
+                                if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+                                    console.log('🔄 Nueva versión disponible. Actualizar...');
+                                    newWorker.postMessage({ type: 'SKIP_WAITING' });
+                                    window.location.reload();
+                                }
+                            });
+                        });
+                    })
+                    .catch((error) => {
+                        console.log('❌ Error al registrar Service Worker:', error);
+                    });
+            });
+            
+            // Detectar instalación de PWA
+            window.addEventListener('beforeinstallprompt', (e) => {
+                console.log('📱 PWA disponible para instalar');
+                // Podríamos guardar el evento para mostrar un botón de instalación personalizado
+                window.deferredPrompt = e;
+            });
+            
+            // Detectar cuando se instaló la PWA
+            window.addEventListener('appinstalled', () => {
+                console.log('✅ PWA instalada exitosamente');
+            });
+        }
+
+        // === FUNCIÓN BOTÓN FLOTANTE MENÚ ===
+        function handleMenuAction() {
+            // Reproducir sonido tecnológico
+            if (typeof playSound === 'function') {
+                playSound();
+            } else {
+                // Sonido simple si no hay función existente
+                const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+                const oscillator = audioCtx.createOscillator();
+                const gainNode = audioCtx.createGain();
+                
+                oscillator.connect(gainNode);
+                gainNode.connect(audioCtx.destination);
+                
+                oscillator.frequency.value = 1400;
+                oscillator.type = 'sine';
+                
+                gainNode.gain.setValueAtTime(0.15, audioCtx.currentTime);
+                gainNode.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.035);
+                
+                oscillator.start(audioCtx.currentTime);
+                oscillator.stop(audioCtx.currentTime + 0.035);
+            }
+            
+            // Obtener acción del botón
+            const action = document.querySelector('.stc-float-menu-btn').getAttribute('data-action');
+            
+            if (action === 'logout') {
+                // Cerrar sesión
+                fetch('/api/auth/logout', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                })
+                .then(response => response.json())
+                .then(data => {
+                    window.location.href = '/auth/login';
+                })
+                .catch(error => {
+                    console.error('Error al cerrar sesión:', error);
+                    window.location.href = '/auth/login';
+                });
+            } else if (action === 'menu') {
+                // Volver al menú principal
+                window.location.href = '/';
+            } else if (action === 'trading') {
+                // Volver a trading charts
+                window.location.href = '/trading-charts';
+            }
+        }
+    </script>
+</body>
+</html>

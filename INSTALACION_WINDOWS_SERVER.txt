@@ -1,0 +1,93 @@
+   # ============================================
+# INSTALACIÓN EN WINDOWS SERVER 2012
+# ============================================
+
+## PASO 1: DESCARGAR ARCHIVOS DESDE REPLIT
+1. Descarga STC_BACKUP.tar.gz desde Replit
+2. Extrae con WinRAR/7-Zip en: C:\inetpub\SmartTradeAcademy\
+
+## PASO 2: INSTALAR PYTHON 3.11 EN WINDOWS SERVER
+1. Descarga: https://www.python.org/ftp/python/3.11.0/python-3.11.0-amd64.exe
+2. Instala con estas opciones:
+   ✅ Add Python to PATH
+   ✅ Install for all users
+   Ruta: C:\Python311\
+
+## PASO 3: INSTALAR POSTGRESQL
+1. Descarga: https://www.enterprisedb.com/downloads/postgres-postgresql-downloads
+2. Instala PostgreSQL 15 (puerto 5432)
+3. Usuario: postgres
+4. Contraseña: [la que elijas]
+5. Crear database:
+   - Abrir pgAdmin
+   - Create Database → "stc_production"
+
+## PASO 4: INSTALAR DEPENDENCIAS PYTHON
+Abre PowerShell como Administrador:
+
+cd C:\inetpub\SmartTradeAcademy\
+python -m pip install --upgrade pip
+pip install flask sqlalchemy psycopg2-binary websockets fastapi uvicorn yfinance requests werkzeug python-dotenv
+
+## PASO 5: CONFIGURAR VARIABLES DE ENTORNO
+Crear archivo: C:\inetpub\SmartTradeAcademy\.env
+
+DATABASE_URL=postgresql://postgres:TU_PASSWORD@localhost:5432/stc_production
+TWELVEDATA_API_KEY=tu_api_key
+IQ_EMAIL=tu_email
+IQ_PASSWORD=tu_password
+IQ_BALANCE_TYPE=PRACTICE
+GMAIL_USER=tu_gmail
+GMAIL_APP_PASSWORD=tu_app_password
+FINNHUB_API_KEY=tu_key
+BOT_API_KEY=tu_bot_key
+
+## PASO 6: INICIALIZAR BASE DE DATOS
+cd C:\inetpub\SmartTradeAcademy\
+python populate_production.py
+
+## PASO 7: CONFIGURAR SERVICIOS WINDOWS (CORRER AUTOMÁTICAMENTE)
+Usar NSSM (Non-Sucking Service Manager):
+
+1. Descargar NSSM: https://nssm.cc/download
+2. Extraer en C:\nssm\
+
+3. Crear servicio Dashboard:
+C:\nssm\nssm.exe install STC_Dashboard C:\Python311\python.exe C:\inetpub\SmartTradeAcademy\start_system.py
+C:\nssm\nssm.exe start STC_Dashboard
+
+4. Crear servicio RealTime:
+C:\nssm\nssm.exe install STC_RealTime C:\Python311\python.exe C:\inetpub\SmartTradeAcademy\start_realtime_server.py
+C:\nssm\nssm.exe start STC_RealTime
+
+## PASO 8: CONFIGURAR FIREWALL
+Windows Firewall → Inbound Rules → New Rule:
+- Port: 5000, 5002, 8000
+- Allow connection
+- Domain, Private, Public
+- Name: STC Trading Ports
+
+## PASO 9: CONFIGURAR IIS COMO PROXY (OPCIONAL)
+Si quieres usar puerto 80/443:
+
+1. Instalar URL Rewrite y ARR en IIS
+2. Crear regla de proxy:
+   - Match URL: .*
+   - Rewrite URL: http://localhost:5000/{R:0}
+
+## PASO 10: VERIFICAR
+Abrir navegador:
+http://TU_IP:5000
+
+✅ Debería cargar el dashboard
+
+## COMANDOS ÚTILES:
+# Ver servicios corriendo
+Get-Service | Where-Object {$_.Name -like "STC*"}
+
+# Reiniciar servicios
+Restart-Service STC_Dashboard
+Restart-Service STC_RealTime
+
+# Ver logs
+Get-EventLog -LogName Application -Source STC* -Newest 50

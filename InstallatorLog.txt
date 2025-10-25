@@ -1,0 +1,44 @@
+2024-01-10 22:39:03 - Created log file InstallatorLog.txt
+2024-01-10 22:39:03 - Installer version 2024-01-10 22:39:03
+2024-01-10 22:39:03 - Init app
+2024-01-10 22:39:03 - Program arguments: 1 ['C:\\Users\\stc_l\\DOWNLO~1\\StrategyQuantX_setup.exe']
+2024-01-10 22:39:03 - Recognizing modes from app name: StrategyQuantX_setup.exe
+2024-01-10 22:39:03 - Recognized modes (type=installer, test=False, cn=False)
+2024-01-10 22:39:03 - Installer directory C:\Users\stc_l\Downloads
+2024-01-10 22:39:03 - Downloading config file from server https://cdn.strategyquantcdn.com/install/sq/updates.xml
+2024-01-10 22:39:03 - Config file downloaded successfully
+2024-01-10 22:39:03 - Installer verifier initialized
+2024-01-10 22:39:03 - Installation key: f736a130b03211eeae22e00af664f66c
+2024-01-10 22:39:04 - Displaying window
+2024-01-10 22:39:04 - Loading resource C:\Users\stc_l\AppData\Local\Temp\_MEI539642\resources\sq.ico
+2024-01-10 22:39:04 - Loading resource C:\Users\stc_l\AppData\Local\Temp\_MEI539642\resources\sqheader.gif
+2024-01-10 22:39:09 - Loading resource C:\Users\stc_l\AppData\Local\Temp\_MEI539642\resources\sqheader.gif
+2024-01-10 22:39:09 - Image on progress panel sqheader.gif
+2024-01-10 22:39:09 - Gif frames count 1
+2024-01-10 22:39:09 - Loading resource C:\Users\stc_l\AppData\Local\Temp\_MEI539642\resources\sqheader.gif
+2024-01-10 22:39:09 - Dest directory already exists C:\StrategyQuantX138
+2024-01-10 22:39:09 - Preserve user data
+2024-01-10 22:39:09 - Downloading files... 
+2024-01-10 22:39:09 - Downloading file from https://cdn.strategyquantcdn.com/install/sq/138/install_full.zip000 to C:\StrategyQuantX138\install_full.zip000
+2024-01-10 22:39:09 - Downloading file from https://cdn.strategyquantcdn.com/install/sq/138/install_full.zip001 to C:\StrategyQuantX138\install_full.zip001
+2024-01-10 22:39:09 - Downloading file from https://cdn.strategyquantcdn.com/install/sq/138/install_full.zip002 to C:\StrategyQuantX138\install_full.zip002
+2024-01-10 22:46:36 - Merging downloaded files into one zip C:\StrategyQuantX138\install_full.zip
+2024-01-10 22:46:38 - Removing C:\StrategyQuantX138\install_full.zip000
+2024-01-10 22:46:38 - Removing C:\StrategyQuantX138\install_full.zip001
+2024-01-10 22:46:38 - Removing C:\StrategyQuantX138\install_full.zip002
+2024-01-10 22:46:38 - Checking file checksum C:\StrategyQuantX138\install_full.zip
+2024-01-10 22:46:40 - Extracting files... 
+2024-01-10 22:47:13 - Performing cleanup... 
+2024-01-10 22:47:13 - Removing C:\StrategyQuantX138\install_full.zip
+2024-01-10 22:47:14 - Creating file C:\StrategyQuantX138/internal/run.dat
+2024-01-10 22:47:14 - Checking memory config
+2024-01-10 22:47:14 - Total physical memory 16 GB
+2024-01-10 22:47:14 - Adding memory option 'option -Xmx11g' to C:\StrategyQuantX138\StrategyQuantX_nocheck.config
+2024-01-10 22:47:14 - Creating desktop shortcut appExePath=C:\StrategyQuantX138\StrategyQuantX.exe, linkFile=C:\Users\stc_l\Desktop\StrategyQuant X.lnk
+2024-01-10 22:47:14 - Failed to create desktop shortcut. Exc. [Errno 2] No such file or directory: 'C:\\Users\\stc_l\\Desktop\\StrategyQuant X.lnk'
+2024-01-10 22:47:14 - Exc. Failed to create desktop shortcut.
+2024-01-10 22:47:14 - Loading resource C:\Users\stc_l\AppData\Local\Temp\_MEI539642\resources\sqheader.gif
+2024-01-10 22:47:14 - Error occured Failed to create desktop shortcut.
+2024-01-11 00:45:54 - Closing window
+2024-01-11 00:45:55 - InstallerVerifier - Exc. [Errno 2] No such file or directory
+2024-01-11 00:45:55 - Installer finished with error: Failed to create desktop shortcut.

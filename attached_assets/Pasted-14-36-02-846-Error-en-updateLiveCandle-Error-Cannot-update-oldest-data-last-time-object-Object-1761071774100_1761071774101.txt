@@ -1,0 +1,27 @@
+14:36:02.846 ❌ Error en updateLiveCandle: Error: Cannot update oldest data, last time=[object Object], new time=[object Object]
+    Ib https://unpkg.com/lightweight-charts@4.1.1/dist/lightweight-charts.standalone.production.js:7
+    Qb https://unpkg.com/lightweight-charts@4.1.1/dist/lightweight-charts.standalone.production.js:7
+    update https://unpkg.com/lightweight-charts@4.1.1/dist/lightweight-charts.standalone.production.js:7
+    updateLiveCandle https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/static/demo/candlestick.html:348
+    init https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/static/demo/candlestick.html:660
+    setInterval handler*init https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/static/demo/candlestick.html:657
+    async* https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/static/demo/candlestick.html:675
+candlestick.html:367:25
+14:36:04.958 ❌ Error en updateLiveCandle: Error: Cannot update oldest data, last time=[object Object], new time=[object Object]
+    Ib https://unpkg.com/lightweight-charts@4.1.1/dist/lightweight-charts.standalone.production.js:7
+    Qb https://unpkg.com/lightweight-charts@4.1.1/dist/lightweight-charts.standalone.production.js:7
+    update https://unpkg.com/lightweight-charts@4.1.1/dist/lightweight-charts.standalone.production.js:7
+    updateLiveCandle https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/static/demo/candlestick.html:348
+    init https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/static/demo/candlestick.html:660
+    setInterval handler*init https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/static/demo/candlestick.html:657
+    async* https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/static/demo/candlestick.html:675
+candlestick.html:367:25
+14:36:06.885 ❌ Error en updateLiveCandle: Error: Cannot update oldest data, last time=[object Object], new time=[object Object]
+    Ib https://unpkg.com/lightweight-charts@4.1.1/dist/lightweight-charts.standalone.production.js:7
+    Qb https://unpkg.com/lightweight-charts@4.1.1/dist/lightweight-charts.standalone.production.js:7
+    update https://unpkg.com/lightweight-charts@4.1.1/dist/lightweight-charts.standalone.production.js:7
+    updateLiveCandle https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/static/demo/candlestick.html:348
+    init https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/static/demo/candlestick.html:660
+    setInterval handler*init https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/static/demo/candlestick.html:657
+    async* https://d833d481-97c2-49cd-9f8a-0611a1464429-00-yg6mxzvyutab.janeway.replit.dev/static/demo/candlestick.html:675
+candlestick.html:367:25
